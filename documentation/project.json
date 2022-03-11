@@ -77,7 +77,6 @@
   },
   "libraries": {
     "imports": [
-      "@beyond-js/kernel",
       "@beyond/ui"
     ]
   },
