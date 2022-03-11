@@ -15,7 +15,13 @@
     ]
   },
   "params": {
-    "logs": "./logs"
+    "logs": "./logs",
+    "backend": {
+      "test1": "test2"
+    },
+    "web": {
+      "test2": "test2"
+    }
   },
   "modules": {
     "path": "./modules",

@@ -26,13 +26,22 @@ export function ModuleReview() {
                 <Link href="/processors"> sección configuración manual de modulos</Link>
             </div>
             <p>
-                Al hacer click en el modulo, podemos navegar el sitio haciendo click en el enlace de navegacion, esto
-                nos abrira un tab del dashboard, para poder ver lo que editamos en realtime. Esto por supuesto, depende
-                de la comodidad y preferencia del desarrollador, sin embargo, la idea aca es demostrar la utilidad del
-                dashboard.
-                Nuestra pantalla debe haber quedado asi:
-
+                Ya nuestra página está creada y puede ser navegable, si el puerto agregado fue 7780,
+                podremos verla accediendo a <a href="http://localhost:7880">http://localhost:7880</a>.
             </p>
+            <p>
+                Como hemos mencionado antes, el foco del dashboard es la productividad. Es por esto, que integra
+                la posibilidad de listar los modulos, navegarlos, ver los archivos que contienen y editarlos si es
+                necesario.
+            </p>
+            <p>Si hacemos click en el preaside, en la opción de la aplicación, se desplegará el aside con la lista de
+                modulos. Al hacer click en el icono de navegación del módulo (la flecha), se abrirá a continuación
+                el <strong>board</strong> de detalle del módulo. Este board tiene el link de navegación del módulo, si
+                lo
+                presionamos,
+                estaremos navegando nuestro proyecto adentro del mismo dashboard.</p>
+
+            <BeyondImage src="/home/static/module-board-edited.png" alt="Beyond module board"/>
         </>
     )
 }

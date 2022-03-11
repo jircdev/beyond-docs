@@ -12,21 +12,20 @@ declare global {
     }
 }
 
-export /*bundle*/
-class Widget extends React.Component {
-    render() {
-        return (
+export function Layout() {
+    return (
 
-            <div className="main-widget">
-                <beyond-docs-header/>
-                <div className="docs-page container">
-                    <menu-layout/>
-                    <main>
-                        <beyond-layout-children/>
-                    </main>
-                </div>
+        <div className="main-widget">
+            <beyond-docs-header/>
+            <div className="docs-page container">
+                <menu-layout/>
+                <main>
+                    <beyond-layout-children/>
+                </main>
             </div>
+        </div>
 
-        );
-    }
+    );
 }
+
+export /*bundle*/ const Widget = Layout;
