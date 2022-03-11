@@ -3,7 +3,6 @@
   "scope": "beyond",
   "name": "ui",
   "title": "Beyond components to create web projects",
-  "template": "template/template.json",
   "languages": {
     "default": "en",
     "supported": [

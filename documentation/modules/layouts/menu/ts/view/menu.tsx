@@ -2,10 +2,9 @@ import * as React from "react";
 import {Menu} from "../data";
 import {List} from "./list";
 import {IValue, MenuContext} from "./context";
-import {PerfectScroll} from "@beyond/ui/perfect-scroll/code";
 import {AppManager} from '@beyond/docs/manager/code';
 import {useBinder} from "@beyond/docs/store/code";
-import {BeyondIcon, BeyondIconButton} from "@beyond/ui/icons/code";
+import {BeyondIconButton} from "@beyond/ui/icons/code";
 import {BeyondImage} from '@beyond/ui/image/code';
 
 interface IState {

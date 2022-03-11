@@ -1,6 +1,5 @@
 import * as React from "react";
 import {beyond__styles} from '@beyond/docs/layout/styles/code';
-import {PerfectScroll} from "@beyond/ui/perfect-scroll/code";
 
 declare global {
     namespace JSX {

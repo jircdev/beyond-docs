@@ -3,26 +3,30 @@ import {ErrorImage} from "./error";
 
 
 type IProps = {
-    src?: string;
-    alt: string;
-    graphSrc?: string;
-    size?: string;
-    className?: string;
+    src?: any;
+    alt: any;
+    graphSrc?: any;
+    size?: any;
+    className?: any;
     onClick?: (e: React.SyntheticEvent) => void;
     children?: React.ReactNode;
     loading?: "eager" | "lazy";
     onError?: (e: React.SyntheticEvent) => void;
+    viewBox?: any,
+    disabled?: any,
+    name?: any,
+    value?: any,
 }
 
 interface IState {
-    size: string;
-    error?: boolean;
-    loaded: boolean;
-    url?: string;
-    onload?: undefined;
-    src?: string;
-    htmlLoaded?: boolean;
-    loading?: string;
+    size: any;
+    error?: any;
+    loaded: any;
+    url?: any;
+    onload?: any;
+    src?: any;
+    htmlLoaded?: any;
+    loading?: any;
 }
 
 export /*bundle*/
@@ -89,5 +93,5 @@ function BeyondImage(props: IProps): JSX.Element {
     );
 
 
-};
+}
 

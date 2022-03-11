@@ -58,17 +58,20 @@
         "name": "distribution-web",
         "platform": "web",
         "port": 3500,
-        "default": true
+        "default": true,
+        "environment": "development"
       },
       {
         "name": "backend",
         "platform": "backend",
-        "port": 4600
+        "port": 4600,
+        "environment": "development"
       },
       {
         "name": "backend",
         "platform": "backend",
         "port": 4700,
+        "environment": "development",
         "ts": {
           "compiler": "tsc"
         }
