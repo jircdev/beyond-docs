@@ -1,0 +1,20 @@
+{
+  "code": {
+    "name": "modal",
+    "ts": {
+      "path": "ts",
+      "files": "*"
+    },
+    "scss": {
+      "path": "scss",
+      "files": [
+        "animate/_properties.scss",
+        "animate/_fadeIn.scss",
+        "animate/_fadeOut.scss",
+        "animate/_zoomIn.scss",
+        "animate/_zoomOut.scss",
+        "modal"
+      ]
+    }
+  }
+}

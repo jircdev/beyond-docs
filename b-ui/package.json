@@ -10,7 +10,6 @@
     "perfect-scrollbar": "^1.5.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "socket.io": "^4.3.1",
-    "@beyond-js/kernel": "^0.0.8"
+    "socket.io": "^4.3.1"
   }
 }

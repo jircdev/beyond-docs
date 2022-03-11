@@ -1,0 +1,12 @@
+{
+  "bundle": "page",
+  "layout": "beyond-ui",
+  "route": "/beyond/ui/modals",
+  "jsx": "view.jsx",
+  "js": "page.js",
+  "scss": {
+    "dom": true,
+    "files": "styles.scss"
+  },
+  "imports": "imports.js"
+}
