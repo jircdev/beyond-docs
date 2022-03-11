@@ -1,0 +1,17 @@
+@mixin properties() {
+
+  --primary: red;
+  --primary-dark: #E36152;
+  --primary-light: #FFA789;
+  --primary-accent: #E36152;
+  --text-on-primary: #fff;
+  //secondary colors
+  --secondary: #121F36;
+  --secondary-dark: #121F36;
+  --secondary-light: #313C50;
+  --secondary-accent: #F7C700;
+  --text-on-secondary: #FFFFFF;
+  //background
+  --background: #000;
+  --text-color: #fff;
+}

@@ -1,0 +1,17 @@
+{
+  "name": "icons",
+  "code": {
+    "ts": {
+      "path": "ts",
+      "files": [
+        "*"
+      ]
+    },
+    "scss": {
+      "path": "scss",
+      "files": [
+        "*"
+      ]
+    }
+  }
+}

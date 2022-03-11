@@ -1,0 +1,13 @@
+{
+  "name": "models/contents",
+  "platforms": [
+    "backend",
+    "web"
+  ],
+  "bridge": {
+    "path": "bridge",
+    "files": [
+      "*"
+    ]
+  }
+}

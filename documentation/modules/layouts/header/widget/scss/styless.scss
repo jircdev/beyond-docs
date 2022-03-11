@@ -1,0 +1,51 @@
+.docs-header {
+  display: flex;
+  padding: 15px;
+  border-bottom: 1px solid var(--accent-color);
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--background);
+  //@include shadow-1;
+
+  * {
+    padding: 0;
+    margin: 0;
+  }
+
+  .docs-header__link-icon {
+    display: flex;
+    align-content: center;
+
+    .beyond-icon {
+      height: 20px;
+      width: 20px;
+    }
+  }
+
+  .container {
+    margin: auto;
+  }
+
+  .header-logo {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+
+    .img-logo {
+      height: 25px;
+    }
+  }
+}
+
+[data-beyond-mode="dark"] {
+  .docs-header {
+    .beyond-icon {
+
+      fill: var(--primary);
+      stroke: var(--primary);
+    }
+  }
+}
+

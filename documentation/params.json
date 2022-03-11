@@ -1,0 +1,6 @@
+{
+  "logs": "./logs",
+  "backend": {
+    "test1": "test2"
+  }
+}

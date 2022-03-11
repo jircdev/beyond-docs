@@ -1,0 +1,29 @@
+{
+  "name": "home",
+  "widget": {
+    "hmr": true,
+    "element": {
+      "name": "home-page"
+    },
+    "name": "home",
+    "route": "/${content}",
+    "is": "page",
+    "ts": {
+      "path": "/widget/ts",
+      "files": [
+        "*"
+      ]
+    },
+    "scss": {
+      "path": "widget/scss",
+      "files": [
+        "*"
+      ]
+    }
+  },
+  "static": {
+    "includes": [
+      "./static"
+    ]
+  }
+}

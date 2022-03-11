@@ -1,0 +1,14 @@
+{
+  "name": "database/connector",
+  "platforms": [
+    "backend"
+  ],
+  "ts": {
+    "hmr": true,
+    "name": "database/connector",
+    "path": "/ts",
+    "files": [
+      "*"
+    ]
+  }
+}

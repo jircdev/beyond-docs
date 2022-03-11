@@ -1,0 +1,23 @@
+.docs-menu li {
+  > ul {
+    display: none;
+  }
+
+  &.item--opened {
+    ul {
+      list-style: none;
+      padding: 0;
+      @include d-grid(5px);
+      border-left: 1px solid var(--secondary-light);
+      margin-left: 15px;
+
+      li {
+        padding-left: 15px;
+
+        &.active-item {
+          border-left: 1px solid var(--text-hover-color);
+        }
+      }
+    }
+  }
+}

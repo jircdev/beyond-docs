@@ -1,0 +1,13 @@
+{
+  "name": "manager",
+  "code": {
+    "hmr": true,
+    "name": "manager",
+    "ts": {
+      "path": "/code/ts",
+      "files": [
+        "*"
+      ]
+    }
+  }
+}

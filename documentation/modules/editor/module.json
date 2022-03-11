@@ -1,0 +1,24 @@
+{
+  "name": "editor",
+  "widget": {
+    "hmr": true,
+    "element": {
+      "name": "editor-page"
+    },
+    "name": "editor",
+    "route": "/editor",
+    "is": "page",
+    "ts": {
+      "path": "/widget/ts",
+      "files": [
+        "*"
+      ]
+    },
+    "sass": {
+      "path": "/widget/scss",
+      "files": [
+        "*"
+      ]
+    }
+  }
+}

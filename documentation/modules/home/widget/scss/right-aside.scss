@@ -1,0 +1,43 @@
+.docs__aside-navbar {
+  position: relative;
+
+  .aside__container {
+    position: sticky;
+    top: 80px;
+    padding-top: 15px;
+
+    h4 {
+      margin: 15px;
+
+    }
+  }
+
+  ol, ul {
+    margin: 0;
+    padding: 0;
+    font-size: .9rem;
+
+    li {
+      padding: 3px 15px;
+      list-style: none;
+      border-left: 2px solid transparent;
+
+      &.item--active,
+      &:hover {
+        border-left: 2px solid var(--secondary-accent);
+
+        a {
+          color: var(--text-hover-color);
+        }
+      }
+
+      a {
+        font-size: .9rem;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 200ms ease-in;
+      }
+    }
+
+  }
+}

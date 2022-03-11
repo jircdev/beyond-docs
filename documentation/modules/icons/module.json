@@ -1,0 +1,12 @@
+{
+  "name": "ui/icons",
+  "code": {
+    "hmr": true,
+    "ts": {
+      "path": "/code/ts",
+      "files": [
+        "*"
+      ]
+    }
+  }
+}

@@ -1,0 +1,7 @@
+[
+  "/first-app/project.json",
+  "/b-ui/project.json",
+  "../beyond/lib/client/browser/kernel/project.json",
+  "/documentation/project.json",
+  "/web/project.json"
+]

@@ -1,0 +1,47 @@
+$font-family: 'Roboto', sans-serif;
+$secondary-font-family: 'Roboto', sans-serif;
+$title-font: 'Roboto', sans-serif;
+
+$gray-base: #000000;
+$gray-darker: #333333;
+$gray-dark: #5E5F5C;
+$gray: #82837F;
+$gray-light: #E4E5DC;
+$gray-lighter: #F0F0F0;
+
+$primary: #FF8056;
+$primary-dark: #E36152;
+$primary-light: #FFA789;
+$primary-accent: #E36152;
+$text-on-primary: #fff;
+
+$secondary: lighten(#121F36, 5%);
+$secondary-dark: #121F36;
+$secondary-light: #313C50;
+$secondary-accent: #F7C700;
+$text-on-secondary: #FFFFFF;
+
+$background: $secondary;
+$background-variant: #fff;
+$border: #DDDDDD;
+$border-variant: #eeeeee;
+$text: #fff;
+
+$facebook: #4267B2;
+$facebook-dark: darken(#4267B2, 100%);
+$facebook-light: lighten(#4267B2, 5%);
+$facebook-accent: #4267B2;
+$facebook-contrast: #ffffff;
+
+$element-primary-background: rgba($gray-lighter, .2);
+$element-dark-background: rgba($gray, 1);
+$element-secondary-background: rgba($gray-lighter, .5);
+$element-primary-text: $text-on-primary;
+$element-secondary-text: $gray;
+$element-tertiary-text: $gray-light;
+
+$success: #6AAC7D;
+$warning: #F7C700;
+$error: #f04141;
+$chat-online: #43fc22;
+$preload: $secondary;

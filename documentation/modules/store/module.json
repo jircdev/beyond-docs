@@ -1,0 +1,13 @@
+{
+  "name": "store",
+  "code": {
+    "hmr": true,
+    "name": "store",
+    "ts": {
+      "path": "/code/ts",
+      "files": [
+        "*"
+      ]
+    }
+  }
+}

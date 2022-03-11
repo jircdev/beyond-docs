@@ -1,0 +1,18 @@
+{
+  "name": "layout/styles",
+  "code": {
+    "ts": {
+      "path": "ts",
+      "files": [
+        "*"
+      ]
+    },
+    "scss": {
+      "path": "sass",
+      "files": [
+        "mixins",
+        "*"
+      ]
+    }
+  }
+}

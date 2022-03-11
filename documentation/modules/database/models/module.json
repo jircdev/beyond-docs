@@ -1,0 +1,14 @@
+{
+  "name": "database/models",
+  "platforms": [
+    "backend"
+  ],
+  "ts": {
+    "hmr": true,
+    "name": "database/models",
+    "path": "/ts",
+    "files": [
+      "*"
+    ]
+  }
+}

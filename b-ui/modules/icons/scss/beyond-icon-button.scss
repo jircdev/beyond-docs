@@ -1,0 +1,74 @@
+.beyond-icon-button {
+
+  height: 40px;
+  width: 40px;
+  background: transparent;
+
+  border: none;
+  display: inline-grid;
+  position: relative;
+  outline: none !important;
+  align-items: center;
+  justify-content: center;
+
+  svg.beyond-icon {
+    height: 15px;
+    width: 15px;
+  }
+
+  &.circle {
+    border-radius: 50%;
+
+    > .beyond-ripple {
+      border-radius: 50%;
+      align-self: center;
+    }
+  }
+
+  &.primary {
+    background: $primary;
+    color: $text-on-primary;
+
+    &.dark {
+      background: $primary-dark;
+    }
+
+    &.light {
+      background: $primary-light;
+    }
+
+    svg {
+      fill: $text-on-primary;
+    }
+
+  }
+
+  &.gray {
+    background: $gray-light;
+  }
+
+  &.secondary {
+    background: $secondary;
+    fill: $text-on-secondary;
+    color: $text-on-secondary;
+
+    &.dark {
+      background: $secondary-dark;
+    }
+
+    &.light {
+      background: $secondary-light;
+    }
+  }
+
+  &.small-icon {
+    height: 24px;
+    width: 24px;
+
+    .beyond-icon {
+      height: 12px;
+      width: 12px;
+    }
+  }
+
+}

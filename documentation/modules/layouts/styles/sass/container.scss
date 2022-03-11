@@ -1,0 +1,11 @@
+.container {
+  margin: auto;
+  width: 100%;
+  max-width: 1140px;
+
+  @include set-media('tablet', false, 'max') {
+    padding: 15px;
+    width: calc(100% - 30px);
+  }
+
+}

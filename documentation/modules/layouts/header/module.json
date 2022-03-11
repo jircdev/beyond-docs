@@ -1,0 +1,23 @@
+{
+  "name": "header",
+  "widget": {
+    "hmr": true,
+    "element": {
+      "name": "beyond-docs-header"
+    },
+    "name": "header",
+    "ts": {
+      "path": "/widget/ts",
+      "files": [
+        "*"
+      ]
+    },
+    "scss": {
+      "path": "widget/scss",
+      "files": [
+        "tpl",
+        "*"
+      ]
+    }
+  }
+}

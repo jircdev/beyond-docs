@@ -1,0 +1,36 @@
+.docs-menu > li {
+  display: grid;
+  cursor: pointer;
+  align-items: center;
+
+  * {
+    font-size: .9rem;
+  }
+
+  section:hover span {
+    color: var(--primary-accent)
+  }
+
+  > section {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    accent-color: var(--text-second-color);
+    transition: 300ms all ease-in;
+    padding: 3px 8px;
+
+    .beyond-icon {
+      fill: var(--text-color);
+    }
+
+  }
+
+  &.item--opened {
+
+    .beyond-icon {
+      transform: rotate(90deg);
+    }
+
+  }
+
+}

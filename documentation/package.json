@@ -1,0 +1,42 @@
+{
+  "name": "@beyond/documentation",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@cloudinary/url-gen": "^1.6.0",
+    "@types/escape-html": "^1.0.1",
+    "@types/highlightjs": "^9.12.2",
+    "@types/is-hotkey": "^0.1.7",
+    "@types/react": "^17.0.34",
+    "@types/react-dom": "^17.0.11",
+    "cloudinary-core": "^2.12.3",
+    "dayjs": "^1.10.7",
+    "escape-html": "^1.0.3",
+    "highlight-ts": "^9.12.1-2",
+    "highlight.js": "^11.4.0",
+    "is-hotkey": "^0.2.0",
+    "mysql": "^2.18.1",
+    "mysql-import": "^3.0.6",
+    "mysql2": "^2.2.5",
+    "perfect-scrollbar": "^1.5.5",
+    "prismjs": "^1.27.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-highlight": "^0.14.0",
+    "sequelize": "^6.3.5",
+    "slate-react": "^0.72.9",
+    "socket.io": "^4.3.1",
+    "socket.io-client": "^4.4.1",
+    "@beyond-js/kernel": "^0.0.8"
+  },
+  "devDependencies": {
+    "@types/prop-types": "^15.7.4",
+    "sequelize-auto": "^0.7.11"
+  },
+  "modules": {
+    "path": "./modules",
+    "externals": {}
+  }
+}

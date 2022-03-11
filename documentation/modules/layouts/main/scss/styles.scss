@@ -1,0 +1,19 @@
+
+.layout-container {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main-widget {
+  height: 100%;
+}
+
+.docs-page {
+
+  @include set-media('small-screen', false) {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-gap: 30px;
+    min-height: 100%;
+  }
+}

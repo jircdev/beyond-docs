@@ -1,0 +1,39 @@
+aside {
+  @include set-media('tablet', false, 'max') {
+    position: fixed;
+    left: 0;
+    width: 0;
+    bottom: 0;
+    top: 0;
+    transition: 150ms ease-in all;
+    overflow: hidden;
+    padding: 0;
+    z-index: 101;
+    .menu-mobile-container {
+      background: var(--background);
+      height: 100%;
+      width: 90%;
+    }
+    &.docs__menu--opened {
+      width: 100%;
+      background: rgba(#000, .7);
+
+      .beyond-perfect-scrollbar {
+        width: 80%;
+        height: 100%;
+      }
+    }
+    // the header is hidden on desktop sizes
+    .menu-docs__mobile-header {
+      display: flex;
+      place-items: center;
+      justify-content: space-between;
+      gap: 15px;
+
+      .img-logo {
+        height: 20px;
+        margin-top: 2px;
+      }
+    }
+  }
+}

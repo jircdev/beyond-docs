@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "scope": "beyond",
+  "name": "docs",
+  "title": "Beyond Docs",
+  "description": "Beyond documentation site",
+  "template": "template/template.json",
+  "layout": "main-layout",
+  "backend": {
+  },
+  "languages": {
+    "default": "en",
+    "supported": [
+      "en"
+    ]
+  },
+  "params": {
+    "logs": "./logs"
+  },
+  "modules": {
+    "path": "./modules",
+    "externals": {
+      "slate": {
+        "development": "dist/slate.js",
+        "production": "dist/slate.min.js"
+      },
+      "slate-react": {
+        "development": "dist/slate-react.js",
+        "production": "dist/slate-react.min.js"
+      },
+      "escape-html": {
+        "development": "index.js",
+        "production": "index.js"
+      },
+      "is-hotkey": {
+        "development": "src/index.js",
+        "production": "src/index.js"
+      },
+      "prop-types": {
+        "development": "prop-types.js",
+        "production": "prop-types.min.js"
+      },
+      "perfect-scrollbar": {
+        "development": "dist/perfect-scrollbar.js",
+        "production": "dist/perfect-scrollbar.js"
+      }
+    }
+  },
+  "deployment": {
+    "distributions": [
+      {
+        "name": "distribution-web",
+        "platform": "web",
+        "port": 3500,
+        "default": true
+      },
+      {
+        "name": "backend",
+        "platform": "backend",
+        "port": 4600
+      },
+      {
+        "name": "backend",
+        "platform": "backend",
+        "port": 4700,
+        "ts": {
+          "compiler": "tsc"
+        }
+      }
+    ]
+  },
+  "libraries": {
+    "imports": [
+      "@beyond-js/kernel",
+      "@beyond/ui"
+    ]
+  },
+  "static": {
+    "includes": [
+      "./images"
+    ]
+  }
+}

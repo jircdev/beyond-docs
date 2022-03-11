@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "scope": "beyond",
+  "name": "ui",
+  "title": "Beyond components to create web projects",
+  "template": "template/template.json",
+  "languages": {
+    "default": "en",
+    "supported": [
+      "en"
+    ]
+  },
+  "params": {},
+  "modules": {
+    "path": "./modules",
+    "externals": {
+      "react": {
+        "development": "umd/react.development.js",
+        "production": "umd/react.production.min.js"
+      },
+      "react-dom": {
+        "development": "umd/react-dom.development.js",
+        "production": "umd/react-dom.production.min.js"
+      },
+      "socket.io": {
+        "development": "client-dist/socket.io.js",
+        "production": "client-dist/socket.io.msgpack.min.js"
+      },
+      "perfect-scrollbar": {
+        "development": "dist/perfect-scrollbar.js",
+        "production": "dist/perfect-scrollbar.js"
+      }
+    }
+  },
+  "deployment": {
+    "distributions": [
+      {
+        "name": "distribution-web",
+        "platform": "web",
+        "port": 7880,
+        "default": true
+      }
+    ]
+  }
+}
