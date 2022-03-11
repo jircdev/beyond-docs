@@ -34,9 +34,5 @@
   "devDependencies": {
     "@types/prop-types": "^15.7.4",
     "sequelize-auto": "^0.7.11"
-  },
-  "modules": {
-    "path": "./modules",
-    "externals": {}
   }
 }
