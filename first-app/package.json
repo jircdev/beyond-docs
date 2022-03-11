@@ -1,0 +1,15 @@
+{
+  "name": "@first-app/first-app",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/react": "^17.0.34",
+    "@types/react-dom": "^17.0.11",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "socket.io-client": "^4.4.0",
+    "@beyond-js/kernel": "^0.0.7"
+  }
+}
