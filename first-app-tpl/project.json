@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "scope": "testing",
+  "name": "login",
+  "title": "First App",
+  "description": "first-app",
+  "layout": "main-layout",
+  "template": "template/template.json",
+  "backend": {},
+  "languages": {
+    "default": "en",
+    "supported": [
+      "en"
+    ]
+  },
+  "params": {},
+  "modules": {
+    "path": "./modules",
+    "externals": {
+      "react": {
+        "development": "umd/react.development.js",
+        "production": "umd/react.production.min.js"
+      },
+      "react-dom": {
+        "development": "umd/react-dom.development.js",
+        "production": "umd/react-dom.production.min.js"
+      },
+      "socket.io-client": {
+        "development": "dist/socket.io.js",
+        "production": "dist/socket.io.msgpack.min.js"
+      }
+    }
+  },
+  "deployment": {
+    "distributions": [
+      {
+        "name": "distribution-web",
+        "platform": "web",
+        "port": 7880,
+        "default": true
+      },
+      {
+        "name": "backend",
+        "platform": "backend",
+        "environment": "development",
+        "port": 9092
+      }
+    ]
+  }
+}
