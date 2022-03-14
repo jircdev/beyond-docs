@@ -13,15 +13,7 @@
       "en"
     ]
   },
-  "params": {
-    "development": {
-      "facebook": {
-        "password": "123512"
-      }
-
-    },
-
-  },
+  "params": {},
   "modules": {
     "path": "./modules",
     "externals": {
