@@ -5,6 +5,12 @@
     "element": {
       "name": "main-layout"
     },
+    "scss": {
+      "path": "scss",
+      "files": [
+        "*"
+      ]
+    },
     "ts": {
       "path": "ts",
       "files": [

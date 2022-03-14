@@ -1,0 +1,36 @@
+.beyond-element-modal.image__modal {
+  padding: 0;
+
+  .modal-content {
+    width: 100%;
+    max-width: 1200px;
+    background: none;
+  }
+
+  .close-icon {
+    background: var(--primary);
+    color: var(--text-on-primary);
+    padding: 8px 12px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 200ms ease-in;
+    right: -15px;
+    top: -15px;
+
+    &:hover {
+      background: var(--primary-dark);
+    }
+  }
+
+  .beyond-element-image {
+    height: 100%;
+    margin: 0;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

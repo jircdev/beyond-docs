@@ -1,8 +1,9 @@
 import * as React from 'react';
-import {BeyondImage} from "@beyond/ui/image/code";
+import {ModalImage} from "../modal-image";
 import {CreateProject} from "./create-project";
 import {CreateModule} from "./create-module";
 import {ModuleReview} from "./module-review";
+import {BridgeSection} from "./bridge-section";
 
 export function TutorialPage() {
     return (
@@ -40,11 +41,12 @@ export function TutorialPage() {
                     proyecto. Si existen proyectos beyond en el directorio, el dashboard mostrará una lista, como es
                     primera vez que lo usamos, aparecerá vacio brindando opción para crear un proyecto nuevo.
                 </p>
-                <BeyondImage src="/home/static/empty.png" alt="beyond dashboard empty folder"/>
+                <ModalImage src="/home/static/empty.png" alt="beyond dashboard empty folder"/>
             </section>
             <CreateProject/>
             <CreateModule/>
             <ModuleReview/>
+            <BridgeSection/>
         </div>
     )
 }

@@ -1,5 +1,9 @@
 {
   "name": "home",
+  "platforms": [
+    "backend",
+    "web"
+  ],
   "widget": {
     "hmr": true,
     "element": {

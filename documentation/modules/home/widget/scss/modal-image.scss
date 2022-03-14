@@ -1,0 +1,9 @@
+.beyond-element-image {
+  transition: 200ms ease-in all;
+  cursor: pointer;
+
+  &:hover {
+    opacity: .8;
+
+  }
+}

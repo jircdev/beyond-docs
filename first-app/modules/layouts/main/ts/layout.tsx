@@ -10,14 +10,12 @@ declare global {
 }
 
 export /*bundle*/
-class Widget extends React.Component {
+class Layout extends React.Component {
     render() {
         return (
-            <div className="content">
-                <main>
-                    <beyond-layout-children/>
-                </main>
-            </div>
+            <main>
+                <beyond-layout-children/>
+            </main>
         );
     }
 }

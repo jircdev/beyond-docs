@@ -43,7 +43,6 @@ export function Page({uri, component}): JSX.Element {
             setFetching(true);
             window.setTimeout(() => {
                 window.scrollTo(0, 0);
-                console.log(4)
             }, 200);
         }, 1000);
     }, [content])
@@ -53,7 +52,6 @@ export function Page({uri, component}): JSX.Element {
             setTitles(titles);
         }, 500);
     }, []);
-    console.log(10, content);
     const Control = controls[content];
     return (
         <div className="page__main-container">

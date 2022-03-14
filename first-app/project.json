@@ -1,11 +1,12 @@
 {
   "version": 1,
-  "scope": "first-app",
-  "name": "first-app",
+  "scope": "testing",
+  "name": "login",
   "title": "First App",
   "description": "first-app",
   "layout": "main-layout",
   "template": "template/template.json",
+  "backend": {},
   "languages": {
     "default": "en",
     "supported": [
@@ -37,6 +38,12 @@
         "platform": "web",
         "port": 7880,
         "default": true
+      },
+      {
+        "name": "backend",
+        "platform": "backend",
+        "environment": "development",
+        "port": 9092
       }
     ]
   }

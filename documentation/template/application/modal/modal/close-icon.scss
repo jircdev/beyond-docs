@@ -1,0 +1,29 @@
+.beyond-element-modal {
+
+  .close-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    background: none;
+    display: inline-block;
+    fill: $gray;
+    color: $gray;
+    transition: all 100ms ease-in;
+    outline: none;
+    cursor: pointer;
+
+    &:hover, &:focus {
+      fill: $gray-darker;
+      color: $gray;
+      transition: all 100ms ease-in;
+    }
+
+    svg {
+      height: 10px;
+      width: 10px;
+    }
+
+  }
+
+}

@@ -1,13 +1,13 @@
 import * as React from 'react';
 import {Link} from '@beyond/ui/link/code';
-import {BeyondImage} from '@beyond/ui/image/code';
+import {ModalImage} from '../modal-image';
 
 export function CreateModule() {
     return (
         <section className="content">
             <h2 id="create-module">Crear nuestro primer modulo</h2>
 
-            <BeyondImage src="/home/static/create-module-1.png" alt="Crear modulo en beyond"/>
+            <ModalImage src="/home/static/create-module-1.png" alt="Crear modulo en beyond"/>
             <div className="block__note">
                 Los modulos y bundles se pueden configurar de forma manual de forma simple, sin embargo, como toda tarea
                 de configuración son tareas repetitivas y el foco del dashboard es optimizar estos tiempos de
@@ -15,7 +15,7 @@ export function CreateModule() {
                 Si deseas leer más en detalle acerca de los modulos, <Link href="/modules">Dirigete a la sección de
                 módulos</Link>
             </div>
-            <BeyondImage src="/home/static/create-module-2.png" alt="Crear modulo en beyond"/>
+            <ModalImage src="/home/static/create-module-2.png" alt="Crear modulo en beyond"/>
             <p>
                 Al hacer click en crear modulo, veremos que podemos utilizar una plantilla o crear un modulo en blanco.
                 Nosotros crearemos un modulo en blanco, al seleccionarlo, tendremos que seleccionar el bundle a crear.
@@ -29,7 +29,7 @@ export function CreateModule() {
                 funcionan, si necesitas saber mas, accede a la
                 <Link href="/bundles"> sección de Bundles</Link>
             </div>
-            <BeyondImage src="/home/static/create-module-3.png" alt="Crear modulo en beyond"/>
+            <ModalImage src="/home/static/create-module-3.png" alt="Crear modulo en beyond"/>
             <h4>Llenamos el formulario:</h4>
             <ul>
                 <li><strong>Titulo para el modulo: </strong> home page</li>

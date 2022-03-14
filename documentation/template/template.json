@@ -3,8 +3,16 @@
     "processor": "scss",
     "path": "application",
     "files": [
-      "/custom-properties/",
-      "*"
+      "./custom-properties/",
+      "default.scss",
+      "styles.scss",
+      "./modal/animate/_properties.scss",
+      "./modal/animate/_fadeIn.scss",
+      "./modal/animate/_fadeOut.scss",
+      "./modal/animate/_zoomIn.scss",
+      "./modal/animate/_zoomOut.scss",
+      "./modal/modal",
+      "modal.scss"
     ]
   },
   "global": {
