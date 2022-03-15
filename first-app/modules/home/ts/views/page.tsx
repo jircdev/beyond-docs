@@ -1,5 +1,6 @@
 import * as React from "react";
 import {Auth} from "@testing/login/home/bridge";
+import {routing} from "@beyond-js/kernel/routing/ts";
 
 interface IForm {
     disabled?: boolean;
@@ -28,7 +29,7 @@ function Page(): JSX.Element {
             event.preventDefault();
             const response = await model.login(username, password);
             if (response.data?.valid) {
-                console.log('iniciamos sesion');
+                routing.pushState('/welcome');
                 return;
             }
             setError(response.error);
