@@ -1,5 +1,4 @@
 import * as React from 'react';
-import {ModalImage} from "../modal-image";
 import {CreateProject} from "./create-project";
 import {CreateModule} from "./create-module";
 import {ModuleReview} from "./module-review";

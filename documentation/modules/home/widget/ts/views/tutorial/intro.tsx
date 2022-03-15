@@ -1,5 +1,6 @@
 import * as React from 'react';
 import {ModalImage} from "../modal-image";
+import {Link} from '@beyond/ui/link/code';
 
 export function TutorialIntro() {
     return (
@@ -31,8 +32,10 @@ export function TutorialIntro() {
                 <h2 id="create-project">Crear proyecto</h2>
                 <div className="block__note">
                     Este tutorial propone hacer uso del dashboard de beyond, que es una herramienta muy potente y que se
-                    encuentra en version beta. Por supuesto, puedes hacer la configuración de proyectos, modules y cualquier
-                    cosa necesaria a través de código y podrás encontrar como en <Link href="/docs-list"> La documentación.</Link>
+                    encuentra en version beta. Por supuesto, puedes hacer la configuración de proyectos, modules y
+                    cualquier
+                    cosa necesaria a través de código y podrás encontrar como en <Link href="/docs-list"> La
+                    documentación.</Link>
                 </div>
                 <h3 id="dashboard">El Dashboard</h3>
                 <p>
