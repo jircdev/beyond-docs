@@ -19,11 +19,8 @@ export /*bundle*/
 const BeyondIcon = (props: props): JSX.Element => {
 
     const newItems = props.icons ?? {};
-    console.log(30, newItems, props.icons)
-    console.log(31, props.icons)
     React.useEffect(() => {
         if (!props.title) return
-
         //     this.tippy = await beyond.require('tippy');
         //     if (!this.icon?.current) return;
 
@@ -32,7 +29,6 @@ const BeyondIcon = (props: props): JSX.Element => {
 
     let {icon, className} = props;
     const iconsList: icon = {...BEYOND_ICONS, ...newItems};
-console.log(20, iconsList)
     if (!icon) return <div key="preload"/>;
 
     let viewBox: string = '0 0 24 24';
