@@ -4,15 +4,20 @@ import {CreateModule} from "./create-module";
 import {ModuleReview} from "./module-review";
 import {BridgeSection} from "./bridge-section";
 import {TutorialIntro} from "./intro";
+import {TDashboard} from "./dashboard";
+import {HomeModule} from "./home-module";
+import {TRouting} from "./t-routing";
 
 export function TutorialPage() {
     return (
         <div className="content">
             <TutorialIntro/>
+            <TDashboard/>
             <CreateProject/>
-            <CreateModule/>
+            <HomeModule/>
             <ModuleReview/>
             <BridgeSection/>
+            <TRouting/>
         </div>
     )
 }

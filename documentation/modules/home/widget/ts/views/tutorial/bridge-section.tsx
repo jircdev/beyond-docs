@@ -106,38 +106,6 @@ export function BridgeSection() {
 
             <p>Ahora solo nos falta redirecccionar al usuario a una pantalla de bienvenida.</p>
 
-            <h2>Routing</h2>
-
-            <p>Lo primero que debemos hacer, es crear un nuevo modulo con un bundle de tipo Page, para eso, repetiremos
-                el proceso que ya vimos en el Dashboard:
-                <ol>
-                    <li>Ir al proyecto.</li>
-                    <li>Click en Crear nuevo modulo.</li>
-                    <li>Seleccionar Bundle Page.</li>
-                    <li>Nombre del modulo: Welcome.</li>
-                    <li>Nombre del componente: <span className="inline-code">welcome-page</span></li>
-                    <li>Url del componente: <span className="inline-code">/welcome</span></li>
-                </ol>
-            </p>
-
-            <p>Abrimos el objeto Page creado en el modulo y agregaremos un mensaje simple que
-                diga: <strong>Bienvenido!</strong>
-            </p>
-            <p>A continuación, Haremos los ajustes necesarios, para redireccionar a nuestro modulo de welcome,
-                luego de iniciar sesion. Lo que debemos hacer, es importar el objeto "routing" de beyond, para usar
-                el metodo <span className="code-inline">pushState</span> que provee y navegar a la página de welcome
-            </p>
-            <h4>Importación</h4>
-            <Code language="ts">
-                {`import {routing} from "@beyond-js/kernel/routing/ts";`}
-            </Code>
-            <h4> Navegación en metodo onSubmit</h4>
-            <Code language="ts">
-                {`routing.pushState('/welcome');`}
-            </Code>
-
-            <p>¡Listo! Si volvemos a probar nuestro formulario, podremos iniciar sesión y ver como nos dirigimos a
-                la página de bienvenida.</p>
         </>
     )
 }
