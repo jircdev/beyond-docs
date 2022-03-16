@@ -29,8 +29,7 @@ export function Starting() {
                         de transpilación.
                     </li>
                     <li>Foco en la productividad: Integrar todas las herramientas necesarias para el desarrollo de
-                        manera
-                        eficiente. (Desarrollar)
+                        manera eficiente. (Desarrollar)
                     </li>
                 </ul>
 

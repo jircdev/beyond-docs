@@ -14,20 +14,22 @@ export function BridgeSection() {
                 Como mencionamos antes, en esta parte generalmente cada proyecto tiene su
                 propia lógica para la validación de sesión y no es el foco de este tutorial enfocarse
                 en como debe manejarse esto, lo que haremos será crear un código básico que nos permita
-                conectar nuestro código cliente con el backend node
+                conectar nuestro código cliente con el backend node.
+            </p>
+            <p>Creamos una carpeta bridge dentro de nuestra carpeta home y en ella un archivo index.ts con
+                el siguiente codigo:
             </p>
             <Code language="ts">
                 {bridgeCode}
             </Code>
-            <p>El código es bastante simple, pero hay varios puntos interesantes a destacar</p>
+            <p>El código es bastante simple, pero hay varios puntos interesantes a destacar.</p>
             <ul>
                 <li>
                     El comentario mágico <span className="inline-code">/*bundle*/</span>
                     es utilizado por <span className="beyond">Beyond</span> para identificar
                     que el código a continuación debe ser considerado como código a exportar en el bundle final.
                     Si quieres leer más acerca del funcionamiento de bundles y modulos, te recomendarmos
-                    ir a <Link href="/modules">La sección de módulos</Link> de la documentación
-
+                    ir a <Link href="/modules">La sección de módulos</Link> de la documentación.
                 </li>
                 <li>
                     El comentario mágico <span className="inline-code">/*actions*/</span>
@@ -50,15 +52,15 @@ export function BridgeSection() {
                 El bridge que creamos es un servicio node. Generalmente, para ejecutar un servicio node, es necesario
                 ir a una consola. Sin embargo, en <span className="beyond">BeyondJS </span> estos servicios
                 funcionan como un <Link href="/bee">BEE (Beyond Environment Service)</Link> y para ejecutarlo
-                solo debemos ir al <Link href="/dashboard"> Dashboard</Link> y darle al botón de ejecución
-                dentro del proyecto.
+                podemos debemos ir al <Link href="/dashboard"> Dashboard</Link> y darle al botón de ejecución,
+                hay uno en el listado de proyectos y otro dentro del proyecto.
             </p>
             <ModalImage src="/home/static/bee-button.png" alt="bee service"/>
+            <ModalImage src="/home/static/bee-button-project.png" alt="bee service"/>
             <p>
                 Para poder implementar la funcionalidad de login con nuestro servidor,
                 debemos importar nuestro objeto auth en el código cliente y asociar el
-                evento <span className="inline-code">onSubmit</span> a nuestro
-                formulario.
+                evento <span className="inline-code">onSubmit</span> a nuestro formulario.
             </p>
             <p>
                 <span className="beyond">En beyondJS</span>
@@ -99,8 +101,7 @@ export function BridgeSection() {
                 <li>Creamos un modulo con un widget de tipo page</li>
                 <li>Creamos una conexión con un backend node por medio del bundle bridge</li>
                 <li>Repasamos la estructura de resolución de modulos para importar el bridge Auth y poder agregar la
-                    validación
-                    de inicio de sesión
+                    validación de inicio de sesión
                 </li>
             </ul>
 

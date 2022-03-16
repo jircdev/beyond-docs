@@ -9,17 +9,16 @@ export function CreateProject() {
                 Crear el proyecto
             </h2>
 
-            <p>En el formulario de creacion de proyectos, vamos a seleciconar proyecto <strong>Web</strong>.
+            <p>En el formulario de creacion de proyectos, vamos a seleccionar proyecto <strong>Web</strong>.
                 Esto nos llevará a un formulario donde nos piden los siguientes datos:
             </p>
             <ul>
                 <li><strong>Scope:</strong> colocaremos “testing”.</li>
                 <li><strong>Name </strong>: colocamos “login”.</li>
-                <li><strong>title:</strong> Tutorial beyond.</li>
-                <li><strong>port:</strong> coloquemos el puerto: 6500. Es el puerto que se utilizará para acceder al
+                <li><strong>Title:</strong> Tutorial beyond.</li>
+                <li><strong>Port:</strong> coloquemos el puerto: 6500. Es el puerto que se utilizará para acceder al
                     proyecto, beyond propone uno por defecto y puede ser modificado si se requiere.
                 </li>
-
             </ul>
             <p>Y presionamos crear.</p>
             <div className="block__note">
@@ -63,16 +62,13 @@ export function CreateProject() {
             <p>La pantalla de detalle del proyecto nos permite realizar las siguientes acciones:</p>
             <ul>
                 <li>Listar modulos del proyecto</li>
-                <li>crear nuevos modulos</li>
-                <li> Visualizar errores de código en real time.</li>
+                <li>Crear nuevos modulos</li>
+                <li>Visualizar errores de código en real time.</li>
                 <li>Editar código fuente</li>
                 <li>Agregar archivos estaticos y de template.</li>
                 <li>Realizar configuraciones generales sobre el proyecto.</li>
                 <li>Realizar deployment.</li>
             </ul>
-
-
         </section>
-
     )
 }

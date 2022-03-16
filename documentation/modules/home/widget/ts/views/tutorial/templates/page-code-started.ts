@@ -38,4 +38,5 @@ function Page(): JSX.Element {
                 </div>
             </form>
         </div>
-    );`;
+    );
+}`;
