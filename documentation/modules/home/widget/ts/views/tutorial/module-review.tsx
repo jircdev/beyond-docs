@@ -26,7 +26,7 @@ export function ModuleReview() {
             </p>
             <div className="block__note">
                 NOTA: Los bridges son un feature central y muy poderoso en beyond y en este tutorial solo se muestran de
-                forma superficial. Si quieres conocer más y entender como funcionan, dirigitete a la seccion de bridges
+                forma superficial. Si quieres conocer más y entender como funcionan, dirigite a la seccion de bridges
                 tip: La definición de bundles en el module.json se cubre completamente en la sección module.json de la
                 documentación.
             </div>

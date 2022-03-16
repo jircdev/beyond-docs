@@ -9,7 +9,7 @@ export function CreateProject() {
                 Crear el proyecto
             </h2>
 
-            <p>En el formulario de creacion de proyectos, vamos a seleciconar proyecto <strong>Web</strong>.
+            <p>En el formulario de creacion de proyectos, vamos a seleccionar proyecto <strong>Web</strong>.
                 Esto nos llevará a un formulario donde nos piden los siguientes datos:
             </p>
             <ul>

@@ -8,7 +8,7 @@ export function TDashboard() {
             <h2 id="dashboard">El Dashboard</h2>
             <p>
                 El dashboard se levanta por defecto en el puerto 4000, para acceder a el debes ingresar a
-                <a href="http://localhost:4000" target="_blank">localhost:4000</a>.
+                <a href="http://localhost:4000" target="_blank"> localhost:4000</a>.
             </p>
             <p>
                 Como comentamos antes, <span className="beyond">Beyond</span>
