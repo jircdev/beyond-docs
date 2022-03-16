@@ -1,0 +1,18 @@
+{
+  "name": "test-2",
+  "widget": {
+    "hmr": true,
+    "element": {
+      "name": "test-dos"
+    },
+    "name": "test-2",
+    "route": "/test",
+    "is": "page",
+    "ts": {
+      "path": "/widget/ts",
+      "files": [
+        "*"
+      ]
+    }
+  }
+}
