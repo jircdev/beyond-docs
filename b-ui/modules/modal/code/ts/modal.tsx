@@ -16,6 +16,7 @@ interface IState {
     show?: boolean,
     hideClicked?: boolean,
     container?: any
+    children?: any
 }
 
 export /*bundle*/ function BeyondModal(props: IProps) {

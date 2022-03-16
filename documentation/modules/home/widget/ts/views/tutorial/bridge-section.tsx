@@ -12,13 +12,11 @@ export function BridgeSection() {
 
             <p>
                 Como mencionamos antes, en esta parte generalmente cada proyecto tiene su
-                propia lógica para la validación de sesión y no es el foco de este tutorial enfocarse
+                propia lógica para la validación de sesión, la intención hoy no es enfocarse
                 en como debe manejarse esto, lo que haremos será crear un código básico que nos permita
                 conectar nuestro código cliente con el backend node.
             </p>
-            <p>Creamos una carpeta bridge dentro de nuestra carpeta home y en ella un archivo index.ts con
-                el siguiente codigo:
-            </p>
+
             <Code language="ts">
                 {bridgeCode}
             </Code>

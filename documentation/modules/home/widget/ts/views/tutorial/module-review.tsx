@@ -31,12 +31,12 @@ export function ModuleReview() {
                 documentación.
             </div>
             <p>
-                Para crear nuestro bundle bridge, debemos dirigirnos al archivo de configuración de nuestro modulo, el
-                module.json ubicado adentro de la carpeta home. la ruta, si se siguió este tutorial, deberia ser
-                <span className="inline-code">“proyecto/modules/home/module.json”,</span>
-                allí, debemos agregar la siguiente estructura:
 
+                Para agregar un bundle bridge al modulo, debemos dirigirnos al archivo de configuración (module.json),
+                ubicado adentro de la carpeta home. la ruta, deberia ser
+                <span className="inline-code">“proyecto/modules/home/module.json”</span>
             </p>
+            <p>Allí, debemos agregar la siguiente estructura:</p>
             <Code language="json">
                 {moduleJson.bridge}
             </Code>
@@ -51,18 +51,27 @@ export function ModuleReview() {
             <ul>
                 <li>
                     Como <span className="beyond">BeyondJS</span> es un framework
-                    que garantiza el funcionamiento universal, cada modulo creado puede especificar
+                    que garantiza el funcionamiento universal, cada módulo creado puede especificar
                     que plataformas estan soportadas por el mismo. Con la entrada
                     <span className="inline-code"> platforms</span> le especificamos que queremos que
                     nuestro modulo soporte las plataformas
-                    <span className="inline-code"> web</span> y <span className="inline-code">backend</span>
+                    <span className="inline-code"> web</span> y <span className="inline-code">backend</span>.
                 </li>
                 <li>
-                    Agregamos la configuración para generar un bundle de tipo bridge, que como mencionamos antes
-                    es un bundle especial que maneja acciones en un servicio node y genera el código
-                    para poder consumirlo desde el código cliente.
+                    Agregamos la configuración de un bundle de tipo bridge
+                    para manejar las acciones en un servicio node y la interconexión con el código
+                    cliente.
+                </li>
+                <li>En la entrada <span className="inline-code">Bridge</span>, agregamos
+                    la propiedad "path" que define el directorio relativo en donde se encontrará el código del bundle.
                 </li>
             </ul>
+            <p>A cotinuación, creamos una carpeta con el nombre "bridge" para que <span
+                className="beyond">Beyond</span> consiga el path definido en module.json y, adentro de la carpeta
+                bridge, creamos un archivo <span className="inline-code">index.ts</span> en el cual se
+                agregará la lógica servidor.
+
+            </p>
 
         </>
     )
