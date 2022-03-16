@@ -101,8 +101,7 @@ export function BridgeSection() {
                 <li>Creamos un modulo con un widget de tipo page</li>
                 <li>Creamos una conexión con un backend node por medio del bundle bridge</li>
                 <li>Repasamos la estructura de resolución de modulos para importar el bridge Auth y poder agregar la
-                    validación
-                    de inicio de sesión
+                    validación de inicio de sesión
                 </li>
             </ul>
 
