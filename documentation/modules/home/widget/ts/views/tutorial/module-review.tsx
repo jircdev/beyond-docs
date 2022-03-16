@@ -52,10 +52,10 @@ export function ModuleReview() {
                 <li>
                     Como <span className="beyond">BeyondJS</span> es un framework
                     que garantiza el funcionamiento universal, cada modulo creado puede especificar
-                    que plataformas estan soportadas por el mismo. Con la entrada <span
-                    className="inline-code">platforms</span>
-                    le especificamos que queremos que nuestro modulo soporte las plataformas
-                    <span className="inline-code">web</span> y <span className="inline-code">backend</span>
+                    que plataformas estan soportadas por el mismo. Con la entrada
+                    <span className="inline-code"> platforms</span> le especificamos que queremos que
+                    nuestro modulo soporte las plataformas
+                    <span className="inline-code"> web</span> y <span className="inline-code">backend</span>
                 </li>
                 <li>
                     Agregamos la configuración para generar un bundle de tipo bridge, que como mencionamos antes

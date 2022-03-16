@@ -53,9 +53,12 @@ export function BridgeSection() {
                 ir a una consola. Sin embargo, en <span className="beyond">BeyondJS </span> estos servicios
                 funcionan como un <Link href="/bee">BEE (Beyond Environment Service)</Link> y para ejecutarlo
                 podemos debemos ir al <Link href="/dashboard"> Dashboard</Link> y darle al botón de ejecución,
-                hay uno en el listado de proyectos y otro dentro del proyecto.
+                hay uno en el listado de proyectos:
             </p>
             <ModalImage src="/home/static/bee-button.png" alt="bee service"/>
+            <p>
+                y otro en el detalle del proyecto:
+            </p>
             <ModalImage src="/home/static/bee-button-project.png" alt="bee service"/>
             <p>
                 Para poder implementar la funcionalidad de login con nuestro servidor,
