@@ -11,7 +11,7 @@ export function ModuleReview() {
 
     return (
         <>
-            <h2>Bundle Bridge</h2>
+            <h2 id="bundle-bridge">Bundle Bridge</h2>
 
             <p>
                 Los formularios de inicio de sesion requieren, por naturaleza validar los datos contra un backend que se

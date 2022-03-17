@@ -24,16 +24,18 @@
 }
 
 .page__main-container {
-  display: flex;
-  gap: 30px;
+  display: grid;
+  grid-template-columns: 75% 25%;
+  gap: 15px;
 
   .page__main-content {
-    flex: 1 1 calc(70% - 15px)
+    max-width: 100%;
+    overflow: hidden;
   }
 
-  aside {
-    flex: 1 1 calc(20% - 15px);
-    @include set-media('mobile', false, max) {
+  @include set-media('mobile', false, max) {
+    grid-template-columns: 1fr;
+    aside {
       display: none;
     }
   }

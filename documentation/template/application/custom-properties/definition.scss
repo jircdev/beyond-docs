@@ -2,6 +2,7 @@
 
 @mixin defaultProperties() {
 
+  $secondary-bg: rgba($primary-light, .3);
   --primary: #FF8056;
   --primary-dark: #E36152;
   --primary-light: #FFA789;
@@ -13,6 +14,7 @@
   --secondary-light: #313C50;
   --secondary-accent: #F7C700;
   --text-on-secondary: #FFFFFF;
+  --secondary-background: #{$secondary-bg};
   //background
   --background: #fff;
   --text-color: #5E5F5C;
@@ -27,7 +29,7 @@
 }
 
 @mixin darkProperties() {
-
+  $secondary-bg: rgba($secondary-light, .8);
   --primary: #FF8056;
   --primary-dark: #E36152;
   --primary-light: #FFA789;
@@ -42,6 +44,8 @@
   --secondary-light: #313C50;
   --secondary-accent: #F7C700;
   --text-on-secondary: #FFFFFF;
+
+  --secondary-background: #{$secondary-bg};
   //background
   --background: linear-gradient(#{ darken(#121F36, 0%)}, #{ darken(#121F36, 10%)});
   --text-color: rgba(255, 255, 255, .6);

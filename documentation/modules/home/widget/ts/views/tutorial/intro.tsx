@@ -48,7 +48,7 @@ export function TutorialIntro() {
                 </li>
             </ul>
             <section>
-                <h2>Empezando</h2>
+                <h2 id="starting">Empezando</h2>
                 <p>
                     Lo primero que se debe hacer es inicializar beyond, el mismo debe estar instalado de forma global, a
                     continuación, dirigite por la consola de comando a la carpeta raiz en donde quieras manejar tus

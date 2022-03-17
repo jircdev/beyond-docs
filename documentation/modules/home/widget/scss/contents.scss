@@ -4,8 +4,20 @@
   }
 
   p, ul, li, span, a {
-    font-size: 1.2rem;
-    line-height: 1.8rem;
+    &:not(pre, code) {
+      font-size: 1.1rem;
+      line-height: 1.8rem;
+    }
+  }
+
+  code *, pre * {
+    font-size: 14px;
+  }
+
+  .inline-code {
+    display: inline-flex;
+    padding: 0 5px;
+    background: var(--secondary-background);
   }
 
   .beyond-element-image {

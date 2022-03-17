@@ -22,7 +22,7 @@ export function ProjectJson() {
                 especificar que proyectos queremos visualizar en el dashboard, entre otras cosas.
             </div>
 
-            <h2>Propiedades <span className="file__element">project.json</span></h2>
+            <h2 id="props-projectjson">Propiedades <span className="file__element">project.json</span></h2>
             <ul className="list__elements-doc">
                 <li>
                     <strong>name: {`string [optional]`}</strong>

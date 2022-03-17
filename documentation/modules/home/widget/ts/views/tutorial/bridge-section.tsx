@@ -8,7 +8,7 @@ import {ModalImage} from "../modal-image";
 export function BridgeSection() {
     return (
         <>
-            <h2>Código Bridge</h2>
+            <h2 id="bridge-code">Código Bridge</h2>
 
             <p>
                 Como mencionamos antes, en esta parte generalmente cada proyecto tiene su
@@ -45,7 +45,7 @@ export function BridgeSection() {
                 a levantar el servicio.
             </div>
 
-            <h2>Conectar cliente y servidor</h2>
+            <h2 id="back-client-connection">Conectar cliente y servidor</h2>
             <p>
                 El bridge que creamos es un servicio node. Generalmente, para ejecutar un servicio node, es necesario
                 ir a una consola. Sin embargo, en <span className="beyond">BeyondJS </span> estos servicios

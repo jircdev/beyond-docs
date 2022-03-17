@@ -6,4 +6,13 @@
     opacity: .8;
 
   }
+
+}
+
+.modal-content {
+  .beyond-element-image {
+    @include set-media('tablet', false, max) {
+      max-width: 90%;
+    }
+  }
 }

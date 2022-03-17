@@ -29,11 +29,13 @@
   }
 
   &.btn-theme--dark svg {
+
     fill: rgba(var(--text-color), .8);
     stroke: rgba(var(--text-color), .8);
 
     > circle {
-      fill: rgba(var(--text-color), .8);
+      fill: var(--text-color);
+      stroke: var(--text-color);
     }
 
     .moon > circle {

@@ -8,7 +8,7 @@ import {ModalImage} from "../modal-image";
 export function TRouting() {
     return (
         <div className="section">
-            <h2>Routing</h2>
+            <h2 id="routing">Routing</h2>
 
             <p>Lo primero que debemos hacer, es crear un nuevo modulo con un bundle de tipo Page, esta vez lo haremos
                 desde el <span className="beyond">Dashboard</span>. Para eso, debemos acceder a nuestro dashboard

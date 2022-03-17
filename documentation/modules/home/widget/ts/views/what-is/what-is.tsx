@@ -12,7 +12,7 @@ export function WhatIs() {
 
             </p>
 
-            <h2>Goals</h2>
+            <h2 id="goals">Goals</h2>
             <ul>
                 <li>Crear proyectos compatibles con cualquier entorno, utilizando el mismo criterio de desarrollo.
                 </li>

@@ -5,6 +5,13 @@
     width: 100%;
     max-width: 1200px;
     background: none;
+    @media (max-width: 600px) {
+      .modal-content {
+        width: 90%;
+        margin: auto;
+      }
+
+    }
   }
 
   .close-icon {

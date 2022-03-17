@@ -3,7 +3,7 @@ import {useModel} from '@beyond/docs/store/code';
 import {Example} from "./example";
 
 import {Starting} from "./starting/starting";
-import {RightAside} from "./right-aside";
+import {RightAside} from "./right-aside/index";
 import {useContent} from "./use-content";
 
 export function Page({uri, component}): JSX.Element {

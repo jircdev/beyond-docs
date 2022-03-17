@@ -1,5 +1,6 @@
 import * as React from 'react';
 import {Link} from '@beyond/ui/link/code';
+import {RightAsideItem} from "./item";
 
 interface IProps {
     container: ShadowRoot,
@@ -9,9 +10,8 @@ interface IProps {
 
 export const RightAside = React.memo(({container, titles}: IProps) => {
         const output = titles.map(item => {
-            return <li key={item.innerText} data-id={item.id}>
-                <Link href={`#${item.id}`}>{item.innerText}</Link>
-            </li>
+
+            return <RightAsideItem key={item.id} item={item} container={container}/>
 
         });
 
@@ -21,19 +21,23 @@ export const RightAside = React.memo(({container, titles}: IProps) => {
 
             const callback = (entries) => {
                 const check = item => {
-                    const {target} = item;
-                    const listItem = items.find(item => item.dataset.id === target.id);
-                    if (!item.isIntersecting || item.boundingClientRect.top < 200) return;
-                    const active = items.find(item => item.classList.contains('item--active'));
-                    if (active) active.classList.remove('item--active')
-                    listItem.classList.add('item--active');
+                    const {top} = item.boundingClientRect;
+                    if (top < 500) {
+                        const {target} = item;
+                        const listItem = items.find(item => item.dataset.id === target.id);
+                        const active = items.find(item => item.classList.contains('item--active'));
+                        if (active) active.classList.remove('item--active')
+                        listItem.classList.add('item--active');
+                    }
+
                 };
                 entries.forEach(check);
             };
 
             const observer = new IntersectionObserver(callback, {
                 root: null,
-                rootMargin: '-40px',
+                rootMargin: '-50% 0% -50% 0%',
+
                 threshold: 0
             });
             titles.forEach(item => observer.observe(item))
