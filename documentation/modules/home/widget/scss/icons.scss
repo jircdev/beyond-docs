@@ -1,3 +1,18 @@
 .content .beyond-icon {
   fill: var(--primary-dark);
 }
+
+ul.icon__list {
+  list-style: none;
+
+  li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 15px;
+
+    .beyond-icon {
+      width: 25px;
+    }
+  }
+
+}

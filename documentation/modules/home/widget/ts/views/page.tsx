@@ -7,11 +7,8 @@ import {RightAside} from "./right-aside/index";
 import {useContent} from "./use-content";
 
 export function Page({uri, component}): JSX.Element {
-    const [state, setState] = React.useState();
     const propsContent = uri.vars.get('content');
-
     const contentId = !['', undefined, null].includes(propsContent) ? propsContent : 'what-is-beyond';
-
     const [titles, setTitles] = React.useState([]);
     const [content, fetching] = useContent(contentId);
 
@@ -30,7 +27,6 @@ export function Page({uri, component}): JSX.Element {
         <div className="page__main-container">
             <section className="page__main-content">
                 <Control/>
-
             </section>
             {titles && <RightAside container={component.shadowRoot} titles={titles}/>}
         </div>

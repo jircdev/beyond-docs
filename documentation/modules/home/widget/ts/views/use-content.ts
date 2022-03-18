@@ -7,6 +7,7 @@ import {Concepts} from "./concepts/concepts";
 import {Install} from "./starting/install";
 import {Error404} from "./error-404";
 import {ProjectJson} from "./concepts/project-json/project-json";
+import {DashboardPage} from "./dashboard/dashboard";
 
 interface IControl {
     id: string,
@@ -19,10 +20,11 @@ export function useContent(contentId): [IControl, boolean] {
 
 
     const controls = {
+        'what-is-beyond': WhatIs,
+        dashboard: DashboardPage,
         default: Example,
         Starting: Starting,
         'web-tutorial': TutorialPage,
-        'what-is-beyond': WhatIs,
         concepts: Concepts,
         install: Install,
         error404: Error404,
