@@ -4,17 +4,18 @@ import {useContent, RightAside, hmr} from "@beyond/docs/contents/code";
 
 export function Page({uri, component}): JSX.Element {
     const propsContent = uri.vars.get('content');
-    const [hmrChanged, setHmr] = React.useState(performance.now());
     const sub = uri.vars.get('sub');
-    const contentId = !['', undefined, null].includes(propsContent) ? propsContent : 'intro';
+    const contentId = !['', undefined, null].includes(propsContent) ? propsContent : 'what-is-beyond';
     const [titles, setTitles] = React.useState([]);
-    const [content, fetching] = useContent(contentId, sub, hmrChanged);
 
+    const [hmrChanged, setHmr] = React.useState(performance.now());
+    const [updated, setUpdated] = React.useState();
+    const [content, fetching] = useContent(contentId, sub, hmrChanged);
     React.useEffect(() => {
         window?.setTimeout(() => {
-            const titles = Array.from(component.shadowRoot.querySelectorAll('h1,h2'));
+            const titles = Array.from(component.shadowRoot.querySelectorAll('h1, h2'));
             setTitles(titles);
-        }, 50);
+        }, 500);
         const onChange = () => setHmr(performance.now());
         hmr.on('change', onChange);
         return () => hmr.off('change', onChange)
@@ -27,6 +28,7 @@ export function Page({uri, component}): JSX.Element {
     return (
         <div className="page__main-container">
             <section className="page__main-content">
+
                 <Control/>
             </section>
             {titles && <RightAside container={component.shadowRoot} titles={titles}/>}

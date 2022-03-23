@@ -1,21 +1,23 @@
-.docs-menu li {
+.docs__menu__list li, .docs__menu__sublist li {
+
   > ul {
     display: none;
   }
 
   &.item--opened {
-    ul {
+    > ul {
       list-style: none;
       padding: 0;
       @include d-grid(5px);
-      border-left: 1px solid var(--secondary-light);
+      border-left: 1px solid var(--color-gray-20);
       margin-left: 15px;
 
       li {
         padding-left: 15px;
+        margin-left: -1px;
 
         &.active-item {
-          border-left: 1px solid var(--text-hover-color);
+          border-left: 2px solid var(--text-hover-color);
         }
       }
     }

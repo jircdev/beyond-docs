@@ -19,7 +19,7 @@ interface IProps {
 
 export function List({items, className}: IProps) {
     const output = items.map(item => <MenuItem item={item} key={item.id}/>);
-    const cls = `docs-menu${className ? ` ${className}` : ''}`;
+    const cls = `docs__menu__sublist${className ? ` ${className}` : ''}`;
     return (
         <ul className={cls}>
             {output}
@@ -37,7 +37,7 @@ export function ParentItem({item}) {
             <section onClick={onClick}>
                 <AppIcon icon="chevronRight"/> <span>{item.label}</span>
             </section>
-            <List items={item.children}/>
+            <List items={item.children} level={1}/>
         </li>
     )
 }
@@ -55,11 +55,12 @@ export function MenuItem({item}) {
         const currentActive = container.querySelector('.active-item')
         if (currentActive) currentActive.classList.remove('active-item');
         target.classList.toggle('active-item');
-        routing.pushState(item.link)
+        routing.pushState(`/${item.id}`);
     }
 
+    const cls = `item--opened`;
     return (
-        <li onClick={onClick}>
+        <li onClick={onClick} className={cls}>
             <section>
                 <span>{item.label}</span>
             </section>

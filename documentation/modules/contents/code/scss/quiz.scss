@@ -1,0 +1,31 @@
+.content__quiz {
+  margin-top: 4rem;
+  border-top: var(--color-gray-20) 1px solid;
+  text-align: right;
+  display: grid;
+  padding-top: 1rem;
+  grid-gap: 1rem;
+
+  .quiz__actions {
+    .beyond-icon-button {
+      svg {
+        height: 2rem;
+        stroke-width: 2px;
+        transform: rotate(-10deg);
+      }
+
+      &.to-bottom {
+        svg {
+          transform: rotate(170deg);
+        }
+      }
+
+      cursor: pointer;
+    }
+
+  }
+
+  h4 {
+    margin: 0;
+  }
+}

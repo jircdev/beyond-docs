@@ -1,4 +1,4 @@
-aside {
+aside.docs__menu {
   @include set-media('tablet', false, 'max') {
     position: fixed;
     left: 0;

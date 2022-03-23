@@ -5,6 +5,7 @@
   flex-direction: column;
   border-bottom: 1px solid var(--separator-color);
   align-content: center;
+  margin-bottom: 1rem;
 
   .menu-docs__mobile-header {
     display: none;
@@ -36,7 +37,7 @@
     }
   }
 
-  .docs-menu__btn-close {
+  .docs__menu__list__btn-close {
 
     position: absolute;
     right: 15px;

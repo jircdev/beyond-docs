@@ -1,0 +1,42 @@
+{
+  "name": "contents",
+  "platforms": [
+    "backend",
+    "web"
+  ],
+  "widget": {
+    "hmr": true,
+    "element": {
+      "name": "contents-page"
+    },
+    "name": "home",
+    "route": "/${content}/${sub}",
+    "is": "page",
+    "ts": {
+      "path": "/widget/ts",
+      "files": [
+        "*"
+      ]
+    }
+  },
+  "code": {
+    "hmr": true,
+    "ts": {
+      "path": "/code/ts",
+      "files": [
+        "*"
+      ]
+    },
+    "scss": {
+      "path": "code/scss",
+      "files": [
+        "*"
+      ]
+    }
+  },
+  "static": {
+    "includes": [
+      "./static"
+    ]
+  }
+}

@@ -16,7 +16,10 @@ function Widget() {
     const [selected, setSelected] = React.useState<IState>();
     const [value, setValue] = React.useState<IValue>({selected, setSelected});
     const parent = React.useRef(null)
-    const [opened, toggleMenu] = React.useState(false);
+    const openedLocal = (typeof window !== undefined)
+        ? window.localStorage.getItem('__menu_opened')
+        : true;
+    const [opened] = React.useState([true, 'true'].includes(openedLocal));
 
     React.useEffect(() => {
         setValue({...value, container: parent?.current});
@@ -27,7 +30,9 @@ function Widget() {
     });
     const close = event => {
         event.preventDefault();
+        const isOpened = parent.current.classList.contains('docs__menu--opened');
         parent.current.classList.toggle('docs__menu--opened');
+        window.localStorage.setItem('__menu_opened', `${!isOpened}`);
     }
     const cls = `docs__menu${opened ? ` docs__menu--opened` : ''}`;
     return (
@@ -48,7 +53,7 @@ function Widget() {
 
                         <BeyondIconButton
                             onClick={close}
-                            className="mobile-only docs-menu__btn-close" icon="close"/>
+                            className="mobile-only docs__menu__list__btn-close" icon="close"/>
                     </header>
                     <List items={Menu}/>
                 </div>

@@ -17,17 +17,6 @@
       "files": [
         "*"
       ]
-    },
-    "scss": {
-      "path": "widget/scss",
-      "files": [
-        "*"
-      ]
     }
-  },
-  "static": {
-    "includes": [
-      "./static"
-    ]
   }
 }
