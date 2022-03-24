@@ -3,15 +3,13 @@ import * as React from 'react';
 export function SSRPage() {
     return (
         <div className="content">
-
             <h1>Objeto History</h1>
             <ul>
                 <li>
-                    current: <string> url de navegacion actual
+                    current: url de navegacion actual
                 </li>
                 <li>initial: Hace referencia al indice asociado al historico de la api web del navegador sobre el cual
-                    comienza
-                    la navegacion adentro del proyecto beyond. beyond hace uso del session_storage
+                    comienza la navegacion adentro del proyecto beyond. beyond hace uso del session_storage
                     <ul>
                         <li>__beyond_navigation_position</li>
                         <li>__beyond_navigation_records</li>
@@ -34,13 +32,6 @@ export function SSRPage() {
                 </li>
                 <li>previous: navegacion previa adentro de los registros de beyond.</li>
             </ul>
-
-
-
-
-
-
-
         </div>
-)
+    )
 }
