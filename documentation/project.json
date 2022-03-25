@@ -80,7 +80,8 @@
   },
   "libraries": {
     "imports": [
-      "@beyond/ui"
+      "@beyond/ui",
+      "@beyond-js/kernel"
     ]
   },
   "static": {

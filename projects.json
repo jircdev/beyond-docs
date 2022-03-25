@@ -1,6 +1,6 @@
 [
-  "/prueba-juan/project.json",
   "/first-app/project.json",
   "/b-ui/project.json",
-  "/documentation/project.json"
+  "/documentation/project.json",
+  "../beyond/lib/client/browser/kernel/project.json"
 ]
