@@ -8,7 +8,7 @@ const tpl = `"platforms": [
     "web"
  ]`;
 
-const jsonTpl =`\r{
+const jsonTpl = `\r{
   "name": "home",
   "platforms": [
     "backend",
@@ -66,13 +66,6 @@ export function ModuleConfig() {
 
                 </li>
             </ul>
-
-            <h2>Bundles</h2>
-
-            <p>
-                Como se ha mencioando en otras partes de la web. Un bundle representa a un archivo final compilado,
-                puede estar compuesto por el contenido de múltiples procesadores
-            </p>
         </>
     )
 }

@@ -1,3 +1,12 @@
+code *, pre * {
+  font-size: 14px;
+}
+
+.inline-code, code.inline {
+  display: inline-flex;
+  padding: 0 5px;
+  background: var(--secondary-background);
+}
 .page__main-content {
   h1, h2, h3, h4, h5, h6 {
     color: var(--text-title-color);
@@ -19,15 +28,14 @@
     }
   }
 
-  code *, pre * {
-    font-size: 14px;
+  p, .content {
+    &:first-letter {
+      text-transform: uppercase;
+      //padding-left: 30px;
+    }
   }
 
-  .inline-code {
-    display: inline-flex;
-    padding: 0 5px;
-    background: var(--secondary-background);
-  }
+
 
   .beyond-element-image {
     box-shadow: var(--shadow-4);

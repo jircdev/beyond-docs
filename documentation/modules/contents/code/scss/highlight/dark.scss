@@ -3,13 +3,13 @@
  * Based on https://github.com/chriskempson/tomorrow-theme
  * @author Rose Pritchard
  */
-code, pre {
+code:not(.inline-code, .inline), pre {
   background: #1a1a1a;
   padding: 15px;
 
 }
 
-code[class*="language-"],
+code[class*="language-"]:not(.inline-code),
 pre[class*="language-"] {
   color: #ccc;
   background: none;

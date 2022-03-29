@@ -15,11 +15,16 @@ import {NpmPackages} from "./fundamentals/npm-packages";
 import {ModuleIntro} from "./views/concepts/module/module-intro";
 
 import {WidgetsPage} from "./basic/widgets/widgets";
-import {StylesPage} from "./basic/styles";
+
 import {FetchingDAtaPage} from "./basic/fetching";
 import {SSRPage} from "./basic/ssr";
 import {RoutingPage} from "./basic/routing";
 import {Backend} from "./basic/backend";
+import {Bundle} from "./views/concepts/module/bundle";
+import {BEE} from "./fundamentals/bee";
+import {HMR} from "./fundamentals/hmr";
+import {DeploymentPage} from "./basic/deployment";
+import {TemplatePage} from "./basic/styles/template";
 
 
 interface IReturn {
@@ -29,31 +34,45 @@ interface IReturn {
 
 export const getContent = (contentId: string, sub: string | undefined = undefined): [IReturn] => {
 
-    const contents = {
-        projects: ProjectJson,
-        widgets: WidgetsPage,
-        styles: StylesPage,
-        fetching: FetchingDAtaPage,
-        ssr: SSRPage,
-        routing: RoutingPage,
-        'what-is-beyond': WhatIs,
-        'why-beyond': WhyBeyond,
-        dashboard: DashboardPage,
+
+    const starting = {
         intro: Intro,
-        default: Example,
-        Starting: Starting,
-        backend: Backend,
+        install: Install,
+        dashboard: DashboardPage,
         tutorial: {
             web: TutorialPage
         },
+    }
+    const basics = {
+        projects: ProjectJson,
+        modules: ModuleIntro,
+        bundles: Bundle,
+        widgets: WidgetsPage,
+        routing: RoutingPage,
+        template: TemplatePage,
+        backend: Backend,
+        ssr: SSRPage,
+        deployment: DeploymentPage
+    };
+    const fundations = {
+        bee: BEE,
+        hmr: HMR,
+    }
+    const contents = {
+        ...starting,
+        ...basics,
+        fetching: FetchingDAtaPage,
+        'what-is-beyond': WhatIs,
+        'why-beyond': WhyBeyond,
+        default: Example,
+        Starting: Starting,
+
+
+
         'npm-packages': NpmPackages,
         concepts: {
             basics: Concepts,
-
-
         },
-        modules: ModuleIntro,
-        install: Install,
         error404: Error404,
         module: {
             into: ModuleIntro,

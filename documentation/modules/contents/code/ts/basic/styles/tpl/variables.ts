@@ -1,7 +1,4 @@
-import * as React from 'react';
-import {Code} from "../views/content/code";
-
-const tpl =`--primary: #FF8056;
+export const variablesTPL = `\r--primary: #FF8056;
   --primary-dark: #E36152;
   --primary-light: #FFA789;
   --primary-accent: #FFA789;
@@ -26,19 +23,3 @@ const tpl =`--primary: #FF8056;
   --bg-element: var(--secondary-dark);
   --element-border-color: var(--gray-light);
   --separator-color: var(--gray-lighter);`;
-export function StylesPage() {
-    return (
-        <div className="content">
-            <h1>Manejo de estilos</h1>
-
-            <p>BeyondJS viene con soporte automático para trabajar con el preprocesador SASS</p>
-
-            <p>También trae un conjunto de <span className="inline-code">custom-properties</span> definidas, para
-                agregar estilos y manejar temas de forma sencilla</p>
-
-            <Code>
-                {tpl}
-            </Code>
-        </div>
-    )
-}

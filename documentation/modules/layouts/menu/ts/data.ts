@@ -4,7 +4,7 @@ export const Menu = [
         label: 'Empezando',
         children: [
             {
-                id: 'intro',
+                id: '',
                 label: 'Introducción',
             },
             {
@@ -34,6 +34,10 @@ export const Menu = [
                 label: 'Módulos',
             },
             {
+                id: 'bundles',
+                label: 'Bundles',
+            },
+            {
                 id: 'widgets',
                 label: 'Páginas, layouts y widgets',
             },
@@ -42,8 +46,8 @@ export const Menu = [
                 label: 'Enrutamiento',
             },
             {
-                id: 'styles',
-                label: 'Estilos'
+                id: 'template',
+                label: 'Plantilla'
             },
             {
                 id: 'backend',
@@ -66,7 +70,16 @@ export const Menu = [
             {
                 id: 'npm-packages',
                 label: 'Paquetes Npm',
-            }
+            },
+                 {
+                id: 'hmr',
+                label: 'HMR',
+            },
+                 {
+                id: 'bee',
+                label: 'BEE',
+            },
+
         ]
     },
     {
