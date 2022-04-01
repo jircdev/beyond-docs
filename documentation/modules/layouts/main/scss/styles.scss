@@ -9,11 +9,10 @@
 }
 
 .docs-page {
-
-  padding: 2rem;
+  padding:1.5rem;
   @media (min-width: 1200px) {
     display: grid;
-    grid-template-columns: 240px 1fr;
+    grid-template-columns: 250px 1fr;
     min-height: 100%;
   }
 

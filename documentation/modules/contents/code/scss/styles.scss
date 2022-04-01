@@ -25,9 +25,8 @@
 
 .page__main-container {
   display: grid;
-  grid-template-columns: 80% 20%;
+  grid-template-columns: 1fr 250px;
   gap: 15px;
-  padding: 2rem;
 
   .page__main-content {
     max-width: 100%;
