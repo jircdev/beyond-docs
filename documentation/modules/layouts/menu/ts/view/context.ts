@@ -3,6 +3,7 @@ import * as React from "react";
 export interface IValue {
     selected?: any;
     setSelected?: any;
+    close?: () => void;
     container?: HTMLElement;
 }
 

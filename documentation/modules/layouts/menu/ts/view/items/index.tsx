@@ -45,7 +45,7 @@ export function ParentItem({item}) {
 
 export function MenuItem({item}) {
 
-    const {container} = useMenuContext();
+    const {container, close} = useMenuContext();
 
     if (item.children) return <ParentItem item={item}/>;
 
@@ -56,6 +56,8 @@ export function MenuItem({item}) {
         if (currentActive) currentActive.classList.remove('active-item');
         target.classList.toggle('active-item');
         routing.pushState(`/${item.id}`);
+        close();
+
     }
 
     const cls = `item--opened`;

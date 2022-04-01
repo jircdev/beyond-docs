@@ -9,6 +9,18 @@ const tpl = `\r"bridge": {
     ]
   }`;
 
+const tplBridge = `\rexport /*actions*//*bundle*/
+class Auth {
+
+    async login(user: string, password: string) {
+        if (user !== data.user || password !== data.password) {
+            return {status: true, error: 'Invalid data'};
+        }
+
+        return {status: true, data: {valid: true}}
+    }
+}`
+
 export function Backend() {
     return (
         <>
@@ -30,13 +42,15 @@ export function Backend() {
                 <li><strong>Api backend</strong>: permiten la conexión entre el código backend y el código cliente.</li>
             </ul>
 
-            <h2>Api <strong>Servidor</strong></h2>
+            <h2>Api <strong>Servidor</strong> <br/>Bundle <code className="inline">bridge</code></h2>
             <p>
                 Las APIs servidor en <span className="beyond">BeyondJS</span> representan funciones
                 que ejecutan código en el servidor y pueden ser consumidas desde el código cliente.
                 Manejan la lógica para conectarse a un backend y retornar data. Esto se lógra de forma simple,
                 con la creación de un <Link href="/bundles#bridge">Bundle Bridge</Link>.
             </p>
+
+
             <Code>
                 {tpl}
             </Code>
@@ -46,12 +60,20 @@ export function Backend() {
             </p>
 
             <p>
-                Cómo su nombre lo indica, el bundle de tipo <strong>bridge</strong>, sirve de pueden entre la lógica
+                Cómo su nombre lo indica, el bundle de tipo <strong>bridge</strong>, sirve de puente entre la lógica
                 cliente y la lógica servidor. Generalmente, en el servidor se impmenentan lógicas asociadas al manejo de
-                datos o manipulación de archivos, el <span className="inline">bridge</span> Permite implementar
-                dejar disponibles funcionalidades que se requieran consultar desde el cliente y mantener encapsuladas en
-                el servidor aquellas que no.</p>
+                datos o manipulación de archivos, el <span className="inline">bridge</span> Permite implementar y
+                dejar disponibles funcionalidades que necesiten ser consultadas desde el cliente y mantener encapsuladas
+                en el servidor aquellas que no.</p>
 
+
+            <p>El código de un bundle <code className="inline">bridge</code> luce así: </p>
+
+            <Code>
+                {tplBridge}
+            </Code>
+
+            <p>Un objeto Javascript común y corriente ¿Verdad?</p>
             <p><span className="beyond">BeyondJS</span> genera un objeto cliente que realiza la conexión <code
                 className="inline">web-socket</code> al servidor, ejecuta el código implementado por el desarrollador y
                 deja disponible la respuesta en el código cliente, abstrayendo al programador de la necesidad de
@@ -59,17 +81,24 @@ export function Backend() {
                 parte de un mismo ecosistema.
             </p>
 
-            <p></p>
-
 
             <div className="block__note">En el <Link href="/tutorial/web">Tutorial Web</Link> disponible, se implementa
                 un bridge que permite ver en acción el funcionamiento de las <strong>apis backend</strong> de <div
                     className="beyond">BeyondJS.</div>
             </div>
 
-            <h2>Código Servidor</h2>
+            <h3>Comentarios mágicos</h3>
 
-            <p></p>
+            <h2>bundle <code className="inline">backend</code></h2>
+
+            <p>
+                Los bundles <code className="inline">backend</code> representan código javascript que es ejecutado en el
+                servidor y sólo pueden ser utilizados por módulos que tambien funcionen en el servidor. Dicho en otras
+                palabras, representan cualquier servicio típico de <span className="inline">NodeJS</span>, con la
+                salvedad de que, en entorno de desarrollo, son ejecutados por medio de un BEE o proceso <span
+                className="beyond">BeyondJS</span> lo cual aumenta la productividad al poder trabajar
+                con <strong>HMR</strong> de forma automatizada <i>y sin configuración</i>.
+            </p>
         </>
     )
 }

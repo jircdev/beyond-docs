@@ -5,8 +5,26 @@
 ul.icon__list {
   list-style: none;
 
+  .beyond-icon {
+    background: var(--accent-color);
+    border-radius: 50%;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+
+    *, g {
+      fill: var(--text-on-primary);
+      color: var(--text-on-primary);
+    }
+
+  }
+
   li {
     display: grid;
+    margin: 8px 0;
     grid-template-columns: auto 1fr;
     grid-gap: 15px;
 

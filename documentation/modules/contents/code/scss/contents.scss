@@ -2,12 +2,18 @@ code *, pre * {
   font-size: 14px;
 }
 
-.inline-code, code.inline {
+.inline-code, code.inline, span.inline {
   display: inline-flex;
   padding: 0 5px;
   background: var(--secondary-background);
 }
+
 .page__main-content {
+
+  @include set-media('small-screen', false, max) {
+    padding: 2rem;
+  }
+
   h1, h2, h3, h4, h5, h6 {
     color: var(--text-title-color);
   }
@@ -34,8 +40,6 @@ code *, pre * {
       //padding-left: 30px;
     }
   }
-
-
 
   .beyond-element-image {
     box-shadow: var(--shadow-4);

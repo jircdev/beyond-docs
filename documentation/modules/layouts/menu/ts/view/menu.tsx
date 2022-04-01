@@ -11,6 +11,11 @@ interface IState {
     selected: string;
 }
 
+
+interface IContext {
+    close?: () => void;
+}
+
 export /*bundle*/
 function Widget() {
     const [selected, setSelected] = React.useState<IState>();
@@ -28,17 +33,23 @@ function Widget() {
         parent.current.classList.toggle('docs__menu--opened');
         // toggleMenu(!opened);
     });
-    const close = event => {
-        event.preventDefault();
+    const closeMenu = () => {
         const isOpened = parent.current.classList.contains('docs__menu--opened');
         parent.current.classList.toggle('docs__menu--opened');
         window.localStorage.setItem('__menu_opened', `${!isOpened}`);
+    }
+    const close = event => {
+        event.preventDefault();
+        closeMenu();
     }
     const cls = `docs__menu${opened ? ` docs__menu--opened` : ''}`;
     return (
 
 
-        <MenuContext.Provider value={value}>
+        <MenuContext.Provider value={{
+            container: value.container,
+            close: closeMenu
+        }}>
             <aside ref={parent} className={cls}>
                 <div className="menu-mobile-container">
                     <header className="aside__header pd-15">
@@ -53,7 +64,7 @@ function Widget() {
 
                         <BeyondIconButton
                             onClick={close}
-                            className="mobile-only docs__menu__list__btn-close" icon="close"/>
+                            className="docs__menu__list__btn-close" icon="close"/>
                     </header>
                     <List items={Menu}/>
                 </div>

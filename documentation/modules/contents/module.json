@@ -30,6 +30,7 @@
     "scss": {
       "path": "code/scss",
       "files": [
+        "mixins",
         "*"
       ]
     }

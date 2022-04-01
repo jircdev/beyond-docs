@@ -34,8 +34,13 @@ $medias: (
   } @else if $size == 'small-screen' {
     $min: 769px;
     $max: 1024px;
-  } @else if $size == 'large-screen' {
+  }
+
+  @else if $size == 'md-screen' {
     $min: 1025px;
+    $max: 1376px;
+  } @else if $size == 'large-screen' {
+    $min: 1377px;
     $max: 1400px;
   }
 

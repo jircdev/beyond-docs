@@ -19,8 +19,6 @@ export function Bundle() {
                 <code className="inline">ts</code> y <code className="inline">sass</code>, el primero genera código
                 javascript, el segundo genera código css.
             </p>
-
-
             <p><strong>Un bundle</strong> representa el o los archivos compilados ya listos para ser incluidos en
                 el navegador. Estos archivos se componen por código generado por los procesadores incluidos en la
                 configuración del bundle. Como se explicó anteriormente, la posibilidad de que un bundle genere uno o
@@ -28,14 +26,11 @@ export function Bundle() {
                 es necesarario crear sólo código Javascript se genera un único archivo, si por el contrario se necesita
                 tambien código CSS se generan dos archivos.
             </p>
-
-
             <p>
                 Los bundles estan compuestos por procesadores y <span className="beyond">BeyondJS</span> ofrece la
                 posibilidad a los desarrolladores de poder crear sus propios bundles.
             </p>
-
-            <h2>Bundles Transversales</h2>
+            <h2 id="transversal">Bundles Transversales</h2>
             <p>
                 Los bundles transversales son aquellos que pueden ser definidos en diferentes módulos, pero que, en el
                 proceso de compilación, <span
@@ -43,8 +38,7 @@ export function Bundle() {
                 bundle de tipo <span className="inline-code">start</span> son un ejemplo claro de ello, permiten al
                 programador definir lógica que desea sea ejecutada en el arranque de la aplicación.
             </p>
-
-            <h2>Tipos</h2>
+            <h2 id="id">Tipos</h2>
             <ul>
                 <li><strong>Widget</strong>: Contienen el código de un <code className="inline">web-component</code>.
                     Las páginas y los layouts son manejados como widgets. Puedes leer más acerca de este tipo de bundle

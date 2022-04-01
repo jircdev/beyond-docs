@@ -25,6 +25,8 @@ import {BEE} from "./fundamentals/bee";
 import {HMR} from "./fundamentals/hmr";
 import {DeploymentPage} from "./basic/deployment";
 import {TemplatePage} from "./basic/styles/template";
+import {StylesPage} from "./basic/styles/styles";
+import {ThemesPage} from "./basic/styles/themes";
 
 
 interface IReturn {
@@ -49,7 +51,8 @@ export const getContent = (contentId: string, sub: string | undefined = undefine
         bundles: Bundle,
         widgets: WidgetsPage,
         routing: RoutingPage,
-        template: TemplatePage,
+        styles: StylesPage,
+        themes: ThemesPage,
         backend: Backend,
         ssr: SSRPage,
         deployment: DeploymentPage
@@ -61,14 +64,12 @@ export const getContent = (contentId: string, sub: string | undefined = undefine
     const contents = {
         ...starting,
         ...basics,
+        template: TemplatePage,
         fetching: FetchingDAtaPage,
         'what-is-beyond': WhatIs,
         'why-beyond': WhyBeyond,
         default: Example,
         Starting: Starting,
-
-
-
         'npm-packages': NpmPackages,
         concepts: {
             basics: Concepts,

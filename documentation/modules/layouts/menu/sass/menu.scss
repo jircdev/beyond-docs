@@ -5,7 +5,9 @@
 
 aside.docs__menu {
   flex-direction: column;
-  padding: 15px;
+  @include set-media(tablet, false, 'max') {
+    padding: 15px;
+  }
   border-radius: $border-radius;
 
   * {

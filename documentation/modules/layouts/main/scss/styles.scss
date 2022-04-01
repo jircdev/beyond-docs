@@ -10,10 +10,11 @@
 
 .docs-page {
 
-  @include set-media('small-screen', false) {
+  padding: 2rem;
+  @media (min-width: 1200px) {
     display: grid;
     grid-template-columns: 240px 1fr;
-    grid-gap: 30px;
     min-height: 100%;
   }
+
 }

@@ -46,8 +46,12 @@ export const Menu = [
                 label: 'Enrutamiento',
             },
             {
-                id: 'template',
-                label: 'Plantilla'
+                id: 'styles',
+                label: 'Estilos'
+            },
+            {
+                id: 'themes',
+                label: 'Light & Dark Theme'
             },
             {
                 id: 'backend',
@@ -71,11 +75,11 @@ export const Menu = [
                 id: 'npm-packages',
                 label: 'Paquetes Npm',
             },
-                 {
+            {
                 id: 'hmr',
                 label: 'HMR',
             },
-                 {
+            {
                 id: 'bee',
                 label: 'BEE',
             },
@@ -85,7 +89,12 @@ export const Menu = [
     {
         id: 'configuration',
         label: 'Configuracion',
-        children: []
+        children: [
+            {
+                id: 'template',
+                label: 'Plantilla'
+            },
+        ]
     },
     {
         id: 'reference',

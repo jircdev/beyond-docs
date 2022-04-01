@@ -13,7 +13,7 @@ function Widget() {
         <>
             <Notice/>
             <header className="docs-header">
-                <div className="container flex-container space-between">
+                <div className="container flex-container space-between ph-15">
                     <Hamburger/>
                     <section className="header-logo">
                         <div className="flex-center-y right-col">

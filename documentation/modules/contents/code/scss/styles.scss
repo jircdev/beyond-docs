@@ -25,16 +25,18 @@
 
 .page__main-container {
   display: grid;
-  grid-template-columns: 75% 25%;
+  grid-template-columns: 80% 20%;
   gap: 15px;
+  padding: 2rem;
 
   .page__main-content {
     max-width: 100%;
     overflow: hidden;
   }
 
-  @include set-media('mobile', false, max) {
+  @include set-media('small-screen', false, max) {
     grid-template-columns: 1fr;
+
     aside {
       display: none;
     }

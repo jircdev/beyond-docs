@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {Code} from "../../views/content/code";
-import {variablesTPL} from "./tpl/variables";
 import {Link} from '@beyond/ui/link/code';
+import {variablesTPL} from "./tpl/variables";
 
 
 export function TemplatePage() {
@@ -30,8 +30,13 @@ export function TemplatePage() {
                 <li><strong>Light & Dark Theme</strong> integrados.</li>
             </ul>
 
-            <h2>Configuración</h2>
+            <h2 id="config">Configuración</h2>
 
+            <p>Los <strong>componentes web</strong> proveen un modelo de encapsulamiento de estilos que hace que estos
+                no tengan un alcance global y por tanto, no afecten otros componentes ni se vean afectadoss por estilos
+                globales. Asimismo, todos comparten el acceso a las <strong>custom properties</strong>.</p>
+
+            <p><span className="beyond">BeyondJS</span></p>
             <p>
                 La configuración de la plantilla, al igual que todos los elementos en <span
                 className="beyond">BeyondJS</span>, se maneja por medio de un archivo de configuración, cuyo nombre y
@@ -43,7 +48,23 @@ export function TemplatePage() {
                 se crea un proyecto, ya viene configurada la estructura por defecto para su manejo.
             </p>
 
+            <h2 id="template-application">template.project</h2>
 
+            <p>Las <strong>custom properties</strong> juegan un papel importante en el manejo de los componentes web.
+                Por naturaleza, los componentes webs no se ven afectados por los estilos generales del sitio web. Sin
+                embargo, las propiedades css si pueden ser accedidas y utilizadas. Esta estructura permite realizar
+                componentes web que compartan los colores que necesiten de la aplicación y puedan al mismo tiempo tener
+                estilos propios sin preocuparse porque estos generen colisión con el código de otros componentes.
+            </p>
+
+
+            <p>
+                Es la configuración para elementos de estilo generales que apliquen a todo el proyecto. Teniendo en
+                cuenta que <span className="beyond">BeyondJS</span> trabaja con <strong>Componentes Web</strong>, el uso
+                de <i>custom properties</i> es esencial y este suele ser el lugar apropiado para definirlas, de hecho,
+                por defecto vienen definidas algunas con soporte básico para definir el tema de un proyecto y su
+                impplementación en modo oscuro.
+            </p>
             <Code>
                 {variablesTPL}
             </Code>
