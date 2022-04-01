@@ -39,11 +39,11 @@ export function BridgeSection() {
                 </li>
             </ul>
 
-            <div className="block__note">
-                Momentaneamente, para continuar con el tutorial, es necesario detener el servicio beyond,
-                acceder a la carpeta del proyecto, eliminar la carpeta ".beyond" existente allí y volver
-                a levantar el servicio.
-            </div>
+            {/*<div className="block__note">*/}
+            {/*    Momentaneamente, para continuar con el tutorial, es necesario detener el servicio beyond,*/}
+            {/*    acceder a la carpeta del proyecto, eliminar la carpeta ".beyond" existente allí y volver*/}
+            {/*    a levantar el servicio.*/}
+            {/*</div>*/}
 
             <h2 id="back-client-connection">Conectar cliente y servidor</h2>
             <p>
@@ -69,7 +69,7 @@ export function BridgeSection() {
                 siguen las mismas directrices para espacificación y resolución
                 de nombres y paquetes que npm, de la misma forma que lo hace typescript.
                 Deben tener <strong>nombre</strong> de modulo y pueden manejar un
-                <strong>scope</strong> tambien. En nuestro caso, definimos ambos
+                <strong> scope</strong> tambien. En nuestro caso, definimos ambos
                 al momento de crear nuestro proyecto y modulo respectivamente.
             </p>
             <div className="block__note">
@@ -77,7 +77,7 @@ export function BridgeSection() {
                 a la sección <Link href="/module-resolution">Resolución de modulos</Link>.
             </div>
 
-            <p>A continuación, en nuestro objeto <span className="inline_code">Page</span>
+            <p>A continuación, en nuestro objeto <span className="inline_code">Page </span>
                 Importamos el objeto <span className="inline_code">Auth</span></p>
             <Code language="typescript">
                 {`import {Auth} from "@testing/login/home/bridge";`}

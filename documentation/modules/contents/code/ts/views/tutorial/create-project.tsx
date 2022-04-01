@@ -16,8 +16,12 @@ export function CreateProject() {
                 <li><strong>Scope:</strong> colocaremos “testing”.</li>
                 <li><strong>Name </strong>: colocamos “login”.</li>
                 <li><strong>Title:</strong> Tutorial beyond.</li>
-                <li><strong>Port:</strong> coloquemos el puerto: 6500. Es el puerto que se utilizará para acceder al
-                    proyecto, beyond propone uno por defecto y puede ser modificado si se requiere.
+                <li><strong>Backend:</strong> Habilita el boton backend.</li>
+                <li><strong>Port:</strong> Coloquemos el puerto: 6500. Es el puerto que se utilizará
+                    para acceder al proyecto, beyond propone uno por defecto y puede ser modificado si se requiere.
+                </li>
+                <li><strong>Dependencias:</strong> Al final del formulario hay un boton para instalar
+                    las dependencias por defecto del proyecto.
                 </li>
             </ul>
             <p>Y presionamos crear.</p>
