@@ -18,9 +18,9 @@ aside.docs__menu {
       width: 40%;
 
     }
-    @include set-media('tablet', false, max) {
+    @include set-media('mobile', false, max) {
       .menu-mobile-container {
-        width: 90%;
+        width: 80%;
       }
     }
 

@@ -69,7 +69,7 @@
       },
       {
         "name": "backend",
-        "platform": "backend",
+        "platform": "web",
         "port": 4700,
         "environment": "development",
         "ts": {

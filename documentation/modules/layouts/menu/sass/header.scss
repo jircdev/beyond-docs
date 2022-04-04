@@ -48,6 +48,10 @@
     svg {
       fill: var(--primary-accent)
     }
+
+    @include set-media('md-screen', false, 'min') {
+      display: none;
+    }
   }
 
 }

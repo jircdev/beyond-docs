@@ -1,6 +1,7 @@
 .container {
   margin: auto;
-  width: 100%;
+  padding: 15px;
+  width: calc(100% - 30px);
   max-width: 1376px;
 
   @include set-media('tablet', false, 'max') {
