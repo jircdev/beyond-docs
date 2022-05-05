@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {TypeProperty} from "../views/type-property";
 import {Link} from '@beyond/ui/link/code';
-import {Code} from "../views/content/code";
+import {Code} from "@beyond/docs/code/code";
 
 const tpl = `routing.redirect = async function redirect(uri): Promise<string> {
     return '/';

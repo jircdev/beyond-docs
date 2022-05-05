@@ -3,9 +3,7 @@ import * as React from 'react';
 export function Error404() {
     return (
         <>
-            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                 x="0px" y="0px"
-                 viewBox="0 0 1080 1080">
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1080 1080">
 
                 <line className="svg_404_st0" x1="132.1" y1="824.46" x2="532.33" y2="824.46"/>
                 <line className="svg_404_st0" x1="688.89" y1="824.46" x2="954.49" y2="824.46"/>

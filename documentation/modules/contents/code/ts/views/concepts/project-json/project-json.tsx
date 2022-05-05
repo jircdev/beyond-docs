@@ -79,7 +79,7 @@ export function ProjectJson() {
                     <strong>modules</strong>
                     <TypeProperty type="EOC" href="/glossary#eoc"/>:
                     Recibe un objeto con una entrada <span className="inline-code">path</span>
-                    que permite definir el directorio de los modulos, por defecto es "module"
+                    que permite definir el directorio de los módulos, por defecto es "module"
                 </li>
                 <li>
                     <strong>deployment </strong>

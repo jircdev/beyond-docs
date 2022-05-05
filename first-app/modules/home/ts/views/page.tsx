@@ -7,8 +7,9 @@ interface IForm {
 }
 
 const model = new Auth();
+console.log(model);
 
-export /*bridge*/
+export /*bundle*/
 function Page(): JSX.Element {
     const defaultValues = {username: '', password: '', fetching: false};
     const [values, setValues] = React.useState(defaultValues);

@@ -1,0 +1,131 @@
+@import "~template/sass/mixins/set-media";
+
+.top__header {
+  width: 100%;
+  z-index: 12;
+  border-bottom: 1px solid var(--border-element-color-1);
+
+  .menu-container {
+    border-bottom: 1px solid var(--border-element-color-1);
+  }
+
+  .menu-container {
+    padding: 0;
+  }
+
+  .mobile__header {
+    padding: 0 1rem;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+    .beyond-element-image {
+      height: 60%;
+      margin: 0;
+
+      img {
+        height: 100%;
+      }
+    }
+  }
+
+  @include set-media('tablet', false, 'max') {
+
+    .menu-list__container {
+      position: absolute;
+      width: 100%;
+      top: 59px;
+      left: 0;
+      z-index: 10;
+      height: 0;
+      bottom: 0;
+      &.opened {
+        height: 100%;
+      }
+    }
+    .header__menu {
+      transition: all 300ms ease-in;
+      animation: hideIn ease 300ms forwards;
+
+      &:not(.opened) {
+        display: none;
+      }
+
+      &.opened {
+        transition: all 300ms ease-in;
+        display: flex;
+        height: calc(100% - 59px);
+        flex-direction: column;
+        align-items: start;
+        width: calc(100% - 2rem);
+        gap: 0;
+        padding: 2rem 1rem;
+
+
+
+        background: var(--secondary-background);
+        animation: showIn ease 300ms forwards;
+
+        li {
+          a {
+            font-size: .8rem;
+
+          }
+
+          width: 100%;
+
+          &:before {
+            content: " ";
+            width: calc(100% - 1rem);
+            position: absolute;
+            left: 0;
+            background: transparent;
+            bottom: -5px;
+            border-bottom: 1px solid var(--border-element-color-1);
+          }
+
+          &:hover {
+            &:after {
+              width: 100%;
+            }
+          }
+
+        }
+
+      }
+    }
+  }
+  @include set-media('tablet', false, 'max') {
+    display: flex;
+    justify-content: end;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+}
+
+@keyframes showIn {
+
+  from {
+    opacity: 0;
+    height: 0;
+  }
+  to {
+    opacity: 1;
+    height: 100%;
+  }
+}
+
+@keyframes hideIn {
+
+  from {
+    opacity: 1;
+    height: 100%;
+  }
+  to {
+    display: none;
+    opacity: 0;
+    height: 0;
+  }
+}
+

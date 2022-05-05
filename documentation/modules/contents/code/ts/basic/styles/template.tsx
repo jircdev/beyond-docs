@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Code} from "../../views/content/code";
+import {Code} from "@beyond/docs/code/code";
 import {Link} from '@beyond/ui/link/code';
 import {variablesTPL} from "./tpl/variables";
 

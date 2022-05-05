@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {TypeProperty} from "../../type-property";
 import {Link} from '@beyond/ui/link/code';
-import {Code} from "../../content/code";
+import {Code} from "@beyond/docs/code/code";
 
 const tpl = `"platforms": [
     "backend",
@@ -35,16 +35,16 @@ const jsonTpl = `\r{
 export function ModuleConfig() {
     return (
         <>
-            <h2>Configuracion de modulos </h2>
+            <h2>Configuracion de módulos </h2>
 
-            <p>El archivo de configuracion de modulos es el <code className="inline-code">module.json</code></p>
+            <p>El archivo de configuracion de módulos es el <code className="inline-code">module.json</code></p>
 
             <Code language="json">
                 {jsonTpl}
             </Code>
             <p>Las propiedades de configuración son:</p>
             <ul>
-                <li><strong>name</strong> <TypeProperty type="string"/>: Define el nombre del modulo, necesario para que
+                <li><strong>name</strong> <TypeProperty type="string"/>: Define el nombre del módulo, necesario para que
                     los elementos puedan ser importados.
                 </li>
                 <li>
@@ -60,8 +60,8 @@ export function ModuleConfig() {
 
                 <li><strong>[bundle]</strong> <TypeProperty type="bundle" href="/module#bundle"/>: Refiere al nombre
                     identificador del
-                    tipo de bundle que se desea agregar en el modulo.
-                    Un modulo puede poseer uno o varios bundles. Cada bundle recibe un objeto de configuracíón con los
+                    tipo de bundle que se desea agregar en el módulo.
+                    Un módulo puede poseer uno o varios bundles. Cada bundle recibe un objeto de configuracíón con los
                     procesadores que utiliza y alguna variación inherita del tipo de bundle agregado.
 
                 </li>

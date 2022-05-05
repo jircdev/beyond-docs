@@ -12,7 +12,7 @@ export function HMR() {
 
             </p>
             <p>Para explicarlo mejor, supongamos que se está realizando una lógica de filtrado de elementos de una base
-                de datos en un modulo backend, este modulo realiza los siguientes pasos:
+                de datos en un módulo backend, este módulo realiza los siguientes pasos:
             </p>
             <ul>
                 <li>Realiza el login contra la base de datos.</li>

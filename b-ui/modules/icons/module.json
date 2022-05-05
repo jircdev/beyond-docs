@@ -7,7 +7,7 @@
         "*"
       ]
     },
-    "scss": {
+    "sass": {
       "path": "scss",
       "files": [
         "*"

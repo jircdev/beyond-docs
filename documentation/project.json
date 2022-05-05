@@ -5,7 +5,6 @@
   "title": "Beyond Docs",
   "description": "Beyond documentation site",
   "template": "template/template.json",
-  "layout": "main-layout",
   "backend": {
   },
   "languages": {
@@ -80,8 +79,7 @@
   },
   "libraries": {
     "imports": [
-      "@beyond/ui",
-      "@beyond-js/kernel"
+      "@beyond/ui"
     ]
   },
   "static": {

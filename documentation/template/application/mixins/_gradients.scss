@@ -1,0 +1,7 @@
+@mixin text-gradient($variable) {
+  background: $variable;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+

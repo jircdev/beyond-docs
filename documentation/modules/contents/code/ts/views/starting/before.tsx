@@ -13,7 +13,7 @@ export function Before() {
             <p>El tutorial se divide en las siguientes partes:</p>
             <ul>
                 <li>El dashboard.</li>
-                <li>Creación de primer modulo.</li>
+                <li>Creación de primer módulo.</li>
                 <li>Integración con backend</li>
             </ul>
             <p>

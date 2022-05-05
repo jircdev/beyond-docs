@@ -46,6 +46,10 @@ export const Menu = [
                 label: 'Enrutamiento',
             },
             {
+                id: 'state-management',
+                label: 'Manejo de Estados',
+            },
+            {
                 id: 'styles',
                 label: 'Estilos'
             },

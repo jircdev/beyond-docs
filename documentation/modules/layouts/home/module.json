@@ -1,0 +1,22 @@
+{
+  "name": "layout/home",
+  "widget": {
+    "is": "layout",
+    "element": {
+      "name": "home-layout"
+    },
+    "sass": {
+      "path": "scss",
+      "files": [
+        "tpl",
+        "*"
+      ]
+    },
+    "ts": {
+      "path": "ts",
+      "files": [
+        "*"
+      ]
+    }
+  }
+}

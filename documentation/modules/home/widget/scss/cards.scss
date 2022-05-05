@@ -1,0 +1,45 @@
+@use "~template/sass/mixins";
+
+.cards__container {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  grid-gap: 2rem;
+  padding: 2rem;
+  width: calc(100% - 4rem);
+
+  .docs__card {
+    background: var(--color-gray-90);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    flex-grow: 1;
+    border-radius: var(--border-radius-base);
+    justify-content: space-between;
+    transition: all 200ms ease-in;
+
+    &:hover {
+      background: var(--color-carbon-90);
+    }
+
+    h3 {
+      padding: 0;
+      margin: 0 0 2rem;
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      @include mixins.text-gradient(var(--app-dark-text-gradient));
+
+    }
+
+    .card__action {
+
+    }
+
+  }
+
+  @media(max-width: 800px) {
+    grid-auto-flow: row;
+  }
+}
+

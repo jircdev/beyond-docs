@@ -9,7 +9,9 @@ export function Page({uri, component}): JSX.Element {
     const [hmrChanged, setHmr] = React.useState(performance.now());
 
     React.useEffect(() => {
-        const onChange = () => setHmr(performance.now());
+        const onChange = () => {
+            setHmr(performance.now());
+        }
         hmr.on('change', onChange);
         return () => hmr.off('change', onChange)
     }, []);

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Code} from "../content/code";
+import {Code} from "@beyond/docs/code/code";
 import {Link} from "@beyond/ui/link/code";
 
 import {AppIcon} from "@beyond/docs/ui/icons/code";
@@ -10,7 +10,7 @@ export function TRouting() {
         <div className="section">
             <h2 id="routing">Routing</h2>
 
-            <p>Lo primero que debemos hacer, es crear un nuevo modulo con un bundle de tipo Page, esta vez lo haremos
+            <p>Lo primero que debemos hacer, es crear un nuevo módulo con un bundle de tipo Page, esta vez lo haremos
                 desde el <span className="beyond">Dashboard</span>. Para eso, debemos acceder a nuestro dashboard
                 y seleccionar el proyecto que estamos trabajando, sino lo hemos hecho. Esto habilitará en el
                 <Link rel="stylesheet" href="/dashboard">Preaside</Link> las acciones que podemos realizar sobre el
@@ -18,15 +18,16 @@ export function TRouting() {
             </p>
 
             <ul className="content__list list-icons list-icons--left">
-                <li><AppIcon icon="add"/>Agregar modulos</li>
+                <li><AppIcon icon="add"/>Agregar módulos</li>
                 <li><AppIcon icon="settings"/> Configuración general del proyecto</li>
                 <li><AppIcon icon="static"/>Gestionar archivos estáticos</li>
                 <li><AppIcon icon="folder"/>Gestionar Template</li>
             </ul>
 
-            <p>Hacemos click en el icono para agregar modulos y se abrirá un modal como el siguiente:</p>
+            <p>Hacemos click en el icono para agregar módulos y se abrirá un modal como el siguiente:</p>
             <ModalImage src="/contents/static/create-module-1.png" alt="Create module on beyond project"/>
-            <p>Seleccionamos modulo en blanco. y en la siguiente pantalla, nos pide el bundle, seleccionamos
+            <p>Seleccionamos <span className="inline">módulo en blanco</span>. y en la siguiente pantalla, nos pide el
+                bundle, seleccionamos
                 page: </p>
             <ModalImage src="/contents/static/create-module-2.png" alt="Create module on beyond project"/>
 
@@ -46,12 +47,14 @@ export function TRouting() {
                 <Link href="/web-components"> Sección de Web Components.</Link>
             </div>
 
-            <p>Abrimos el objeto Page creado en el modulo y agregaremos un mensaje simple que
+            <p>Abrimos el objeto Page creado en el módulo y agregaremos un mensaje simple que
                 diga: <strong>Bienvenido!</strong>
             </p>
-            <p>A continuación, Haremos los ajustes necesarios, para redireccionar a nuestro modulo de welcome,
-                luego de iniciar sesion. Lo que debemos hacer, es importar el objeto "routing" de beyond, para usar
-                el metodo <span className="code-inline">pushState</span> que provee y navegar a la página de welcome
+            <p>A continuación, haremos los ajustes necesarios para redireccionar a nuestro módulo de bienvenida,
+                luego de iniciar sesion. Lo que debemos hacer, es importar el objeto "routing" de
+                <span className="beyond">BeyondJS</span> para usar el método
+                <span className="code-inline">pushState</span> que proveey  y navegar a la página de bienvenida que
+                creamos.
             </p>
             <h4>Importación</h4>
             <Code language="ts">
@@ -61,7 +64,6 @@ export function TRouting() {
             <Code language="ts">
                 {`routing.pushState('/welcome');`}
             </Code>
-
             <p>¡Listo! Si volvemos a probar nuestro formulario, podremos iniciar sesión y ver como nos dirigimos a
                 la página de bienvenida.</p>
         </div>

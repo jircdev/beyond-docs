@@ -27,6 +27,7 @@ import {DeploymentPage} from "./basic/deployment";
 import {TemplatePage} from "./basic/styles/template";
 import {StylesPage} from "./basic/styles/styles";
 import {ThemesPage} from "./basic/styles/themes";
+import {StateManagement} from "./basic/state-management";
 
 
 interface IReturn {
@@ -34,7 +35,7 @@ interface IReturn {
     control: () => JSX.Element
 }
 
-export const getContent = (contentId: string, sub: string | undefined = undefined): [IReturn] => {
+export const getContent = (contentId: string, sub: string | undefined = undefined): IReturn => {
 
 
     const starting = {
@@ -50,6 +51,7 @@ export const getContent = (contentId: string, sub: string | undefined = undefine
         modules: ModuleIntro,
         bundles: Bundle,
         widgets: WidgetsPage,
+        stateManagement: StateManagement,
         routing: RoutingPage,
         styles: StylesPage,
         themes: ThemesPage,
@@ -57,13 +59,14 @@ export const getContent = (contentId: string, sub: string | undefined = undefine
         ssr: SSRPage,
         deployment: DeploymentPage
     };
-    const fundations = {
+    const foundations = {
         bee: BEE,
         hmr: HMR,
     }
     const contents = {
         ...starting,
         ...basics,
+        ...foundations,
         template: TemplatePage,
         fetching: FetchingDAtaPage,
         'what-is-beyond': WhatIs,
@@ -86,7 +89,7 @@ export const getContent = (contentId: string, sub: string | undefined = undefine
     };
 
 
-    let Control = contents.hasOwnProperty(contentId) ? contents[contentId] : contents.error404;
+    let Control: () => JSX.Element = contents.hasOwnProperty(contentId) ? contents[contentId] : contents.error404;
     if (sub) {
         Control = Control.hasOwnProperty(sub) ? Control[sub] : contents.error404;
     }

@@ -1,39 +1,70 @@
 import * as React from 'react';
 import {Link} from '@beyond/ui/link/code';
 import {Quiz} from "../quiz";
+import {BeyondImage} from '@beyond/ui/image/code';
 
 export function Intro() {
     return (
         <>
 
-            <h1>Empezando</h1>
+            <h2 id="intro">Bienvenido</h2>
+            <p>
+                Bienvenido a la documentación de <span className="beyond">BeyondJS</span>. En este documento se realiza
+                un repaso sobre que es <span className="beyond">BeyondJS</span> y cuales son sus características
+                princiales. Si deseas ver cómo funciona en cuestión de minutos, te recomendamos realices nuestro <Link
+                href="/tutorial/web">tutorial
+                básico.</Link>
+            </p>
 
-            <p>¡Bienvenido a la documentación de <span className="beyond">BeyondJS</span>!</p>
 
-            <p>El único Framework universal para <span className="link">Javascript</span>.</p>
+            <h3 id="what-is"> ¿Qué es <span className="beyond">BeyondJS</span>?</h3>
+            <p>Es un <strong>meta-framework</strong> para trabajar con proyectos <span
+                className="inline">JavaScript</span> de forma universal y en todos los entornos en los que se encuentra
+                disponible, a saber: Sistemas operativos, código servidor, soluciones web o aplicaciones
+                móviles.
+            </p>
+            <BeyondImage src="/images/tutorials/beyond-environments.png" alt="Beyond environments"/>
 
-            <p>Si deseas ver como funciona <span className="beyond">BeyondJS</span> en cuestión de minutos, te
-                recomendamos realices nuestro <Link href="/tutorial/web">tutorial básico.</Link></p>
+
+            <p><span className="beyond">BeyondJS</span> se enfoca principalmente en tres partes</p>
+            <ul>
+                <li>Creación de proyectos node y Librerias NPM.</li>
+                <li>Aplicaciones Web con SSR o CSR y Mobile.</li>
+                <li>Diseñado para</li>
+            </ul>
+
+            <h3>¿Por qué usarlo?</h3>
 
             <p>
-                ¿Y que es <span className="beyond">BeyondJS?</span> Es un <strong>meta-framework</strong> para trabajar
-                con
-                javascript de forma universal. ¿Pero Javascript no es universal? ¡Por supuesto! pero las herramientas
-                que hoy usamos no lo son y ese es el motivo de existencia de <span
-                className="beyond">BeyondJS:</span> Permitir a los desarrolladores, integrar herramientas y tecnologías
-                para trabajar en todos los entornos donde la tecnología web está disponbile, siempre manteniendo un
-                estandar y ecosistema compatible.
+                Hay tres factores que hacen que el desarrollo de soluciones con <strong>JavaScript</strong> sea bastante
+                sofisticado:
             </p>
-            <h4>Pero, ¿Que significa esto?</h4>
+            <ul>
+                <li>
+                    <p><strong>JavaScript</strong> es un lenguaje sofisticado y en constante evolución, lo cual hace que
+                        incluso quienes tienen años trabajando con el deban seguir estudiandolo.</p>
+                </li>
+                <li>
+                    Si bien el <strong>JavaScript</strong> es un único lenguaje, las APIs provistas para los entornos en
+                    los cuales puede ser usado son diferentes
+                </li>
+                <li>Existe un gran número de librerias y frameworks para cada entorno de desarrollo, en muchas ocasiones
+                    incompatibles entre sí. Esto ha logrado que la comunidad de desarrollo web se mantenga separada en
+                    burbujas de stacks tecnológicos que, en muchas ocasiones <i>complican</i> la posibilidad de un
+                    programador de aprender nuevas herramientas.
+                </li>
 
-            <p>
-                La tecnología web se mantiene en constante crecimiento y evolución, esto ha implicado que con el pasar
-                de los años existan muchas herramientas, frameworks y librerias que propongan diversas formas de
-                trabajo. Por su parte, la intención de <span className="beyond">BeyondJS</span> es enfocarse en la
-                productividad, permitir el uso de herramientas, librerias, frameworks de vistas a las que un equipo
-                pueda estar acostumbrado, pero integradas en un ecosistema que asegure la compatibilidad e integración
-                entre entornos, bien sea <strong>Node, Rhino, aplicaciones moviles, de escritorio o web</strong>.
+            </ul>
+
+            <p><span className="beyond">BeyondJS</span> tiene cómo foco ofrecer una estructura base y estandarizada que
+                permita trabajar en cualquier ecosistema en el que <strong>JavaScript</strong> se encuentre disponible,
+                simplificandole a los desarrolladores el proceso y garantizando la compatibilidad. Asimismo, es
+                compatible con la mayoria de frameworks de vista y suministra medios para integrarlos de manera simple.
             </p>
+            <p><span className="beyond">BeyondJS</span> por su parte, ofrece una estructura de desarrollo estandarizada
+                que pe</p>
+            <h4>Pero, ¿Qué significa esto?</h4>
+
 
             <p> A continuación, listamos algunas de las caracteristicas más relevantes de <span
                 className="beyond">BeyondJS.</span>
@@ -60,7 +91,7 @@ export function Intro() {
                     productividad y rendimiento.
                 </li>
                 <li><strong>HMR</strong> modular y en el código backend de forma automática.</li>
-                <li><strong>Sin Arbol de dependencias</strong> Beyond trabaja bajo un paradigma distinto al que usan
+                <li><strong>Sin árbol de dependencias</strong> Beyond trabaja bajo un paradigma distinto al que usan
                     empaquetadores como <strong>webpack</strong>.
                 </li>
 

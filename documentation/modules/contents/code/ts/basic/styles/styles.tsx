@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Code} from "../../views/content/code";
+import {Code} from "@beyond/docs/code/code";
 import {Link} from '@beyond/ui/link/code';
 import {variablesTPL} from "./tpl/variables";
 import {SASSVAriables} from "./tpl/sass-variables";
@@ -53,7 +53,7 @@ export function StylesPage() {
                 la estructura de archivos que generan el <span className="inline">styles.css</span> general del
                 proyecto, de hecho incorpora una serie de variables por defecto.</p>
 
-            <p>La configuración de la plantilla al igual que los modulos, funciona por medio de procesadores, pero
+            <p>La configuración de la plantilla al igual que los módulos, funciona por medio de procesadores, pero
                 básicamente permite configurar estilos para tres niveles:</p>
             <ul>
                 <li><span className="inline">"application"</span>: Estilos generales de la aplicación</li>
@@ -127,7 +127,7 @@ export function StylesPage() {
             <h3>Importación de estilos de un <span className="inline">bundle</span></h3>
 
             <p>
-                la importación de modulos de estilo es considerada en <span className="beyond">BeyondJS</span> como una
+                la importación de módulos de estilo es considerada en <span className="beyond">BeyondJS</span> como una
                 importación no relativa, por tanto sigue las mismas reglas de importación de un archivo existente en una
                 libreria de npm, pero la ruta de inclusión en este caso, sigue la estructura de nombres de los módulos
                 realizados con el framework, que como hemos visto antes, puede estar compuesta por <span

@@ -18,7 +18,7 @@ export function DashboardPage() {
                 negativas a <strong>su lentitud en el procesamiento</strong>. En este sentido, <span
                 className="beyond">Beyond</span> busca optimizar el trabajo con typescript haciendo uso de su
                 transpilador y su compilador en simultaneo para brindar una experiencia más eficiente al desarrollador,
-                además interpreta los errores, analiza las dependencias de un módulo y los modulos consumidores para
+                además interpreta los errores, analiza las dependencias de un módulo y los módulos consumidores para
                 repasar los posibles errores de código y los notifica por medio del <span
                 className="beyond">Dashboard</span>.
 
@@ -33,8 +33,8 @@ export function DashboardPage() {
             </p>
             <ul>
                 <li><strong>Módulo en desarrollo</strong>: El módulo en el cual se está trabajando</li>
-                <li><strong>Dependencias</strong>: Los modulos importados por el módulo en desarrollo.</li>
-                <li><strong>Consumidores</strong>: Los modulos que consumen el módulo sobre el cual estamos trabajando.
+                <li><strong>Dependencias</strong>: Los módulos importados por el módulo en desarrollo.</li>
+                <li><strong>Consumidores</strong>: Los módulos que consumen el módulo sobre el cual estamos trabajando.
                 </li>
             </ul>
 
@@ -58,12 +58,12 @@ export function DashboardPage() {
                 </li>
                 <li>
                     <AppIcon icon="apps"/>
-                    <span> Detalle informativo de los proyectos y modulos </span></li>
+                    <span> Detalle informativo de los proyectos y módulos </span></li>
                 <li>
                     <AppIcon icon="apps"/>
                     <span>
                         Brinda un ecosistema inteligente que colabora con la detección de errores en
-                    los modulos, las dependencias y en los modulos que consumen otros modulos si el código cambia.
+                    los módulos, las dependencias y en los módulos que consumen otros módulos si el código cambia.
                     </span>
                 </li>
                 <li>
@@ -72,7 +72,7 @@ export function DashboardPage() {
                         className="inline-code">typescript</code>.
                 </span></li>
                 <li><AppIcon icon="bell"/><span>Detección de errores de runtime.</span></li>
-                <li><AppIcon icon="bell"/><span>Manejo de errores en Realtime en procesos <code
+                <li><AppIcon icon="bell"/><span>Manejo de errores en real time en procesos <code
                     className="inline-code">Node</code>
                     por medio de HMR.
                 </span></li>
@@ -116,7 +116,7 @@ export function DashboardPage() {
 
             <p>
                 Cada proyecto tiene un panel informativo en el cual se puede visualizar el directorio en el cual se
-                encuentra, el listado de modulos, los errores generales y el estatus de análisis. Asimismo, el board del
+                encuentra, el listado de módulos, los errores generales y el estatus de análisis. Asimismo, el board del
                 proyecto ofrece las siguientes acciones:
             </p>
 
@@ -124,7 +124,7 @@ export function DashboardPage() {
                 <li>Actualizar dependencias.</li>
                 <li>Validar errores.</li>
                 <li>Compilar proyecto.</li>
-                <li>Acceder al board de un modulo.</li>
+                <li>Acceder al board de un módulo.</li>
             </ul>
 
 

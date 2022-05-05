@@ -1,14 +1,12 @@
-//$gradient-background: linear-gradient(darken($secondary-dark, 10%), darken($secondary-dark, 8%));
-//me[data-beyond-mode="light"] {
-//  $gradient-background: red;
-//}
+@import "~template/sass/mixins/set-media";
+@import "~template/sass/mixins/global";
 
 aside.docs__menu {
   flex-direction: column;
   @include set-media(tablet, false, 'max') {
     padding: 15px;
   }
-  border-radius: $border-radius;
+  border-radius: var(--border-radius-base);
 
   * {
     font-size: .85rem;

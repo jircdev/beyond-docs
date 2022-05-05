@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {Link} from '@beyond/ui/link/code';
-import {Code} from "../../views/content/code";
+import {Code} from "@beyond/docs/code/code";
 import {ModalImage} from "../../views/modal-image";
 
 const tpl = `"widget": {

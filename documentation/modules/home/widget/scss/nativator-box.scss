@@ -1,0 +1,49 @@
+.navigator__box {
+  border: 1 ps solid var(--color-gray-80);
+  display: grid;
+  background: var(--color-gray-80);
+  box-shadow: var(--shadow-1);
+  border-radius: var(--border-radius-base);
+  overflow: hidden;
+  grid-template-rows: auto 1fr;
+
+  header {
+    background: var(--color-gray-70);
+    border-radius: var(--border-radius-base);
+    display: flex;
+    padding: .6rem;
+    flex-grow: 1;
+    gap: 1rem;
+
+    .box__buttons {
+      display: flex;
+      gap: 8px;
+
+      .circle {
+        border-radius: 50%;
+        aspect-ratio: 1/1;
+        height: 1rem;
+
+        &.red {
+          background: red;
+        }
+
+        &.blue {
+          background: var(--color-blue-50);
+        }
+
+        &.green {
+          background: var(--color-green-80);
+        }
+      }
+    }
+  }
+
+  .box__code {
+    pre {
+      height: 100%;
+      padding-top: 0;
+      margin: 0;
+    }
+  }
+}

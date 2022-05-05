@@ -12,7 +12,7 @@
         "*"
       ]
     },
-    "scss": {
+    "sass": {
       "path": "widget/scss",
       "files": [
         "tpl",

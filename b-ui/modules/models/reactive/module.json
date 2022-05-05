@@ -1,0 +1,7 @@
+{
+  "name": "reactive-model",
+  "ts": {
+    "path": "./ts",
+    "files": ["*"]
+  }
+}

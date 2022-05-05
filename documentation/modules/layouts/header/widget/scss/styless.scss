@@ -1,12 +1,12 @@
 .docs-header {
   display: flex;
-  padding: 15px;
+  padding: 5px 15px;
   border-bottom: 1px solid var(--accent-color);
   justify-content: space-between;
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--background);
+  background: var(--bg-header);
   //@include shadow-1;
 
   * {

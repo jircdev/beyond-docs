@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Code} from "../content/code";
+import {Code} from "@beyond/docs/code/code";
 import {bridgeCode} from "./templates/bridge";
 import {Link} from '@beyond/ui/link/code';
 import {PageCode} from "./templates/page-code";
@@ -12,8 +12,8 @@ export function BridgeSection() {
 
             <p>
                 Como mencionamos antes, en esta parte generalmente cada proyecto tiene su
-                propia lógica para la validación de sesión, la intención hoy no es enfocarse
-                en como debe manejarse esto, lo que haremos será crear un código básico que nos permita
+                propia lógica para la validación de sesión. La intención hoy no es enfocarse
+                en cómo debe manejarse esto, lo que haremos será crear un código básico que nos permita
                 conectar nuestro código cliente con el backend node.
             </p>
 
@@ -26,7 +26,7 @@ export function BridgeSection() {
                     El comentario mágico <span className="inline-code">/*bundle*/</span>
                     es utilizado por <span className="beyond">Beyond</span> para identificar
                     que el código a continuación debe ser considerado como código a exportar en el bundle final.
-                    Si quieres leer más acerca del funcionamiento de bundles y modulos, te recomendarmos
+                    Si quieres leer más acerca del funcionamiento de bundles y módulos, te recomendamos
                     ir a <Link href="/modules">La sección de módulos</Link> de la documentación.
                 </li>
                 <li>
@@ -38,12 +38,6 @@ export function BridgeSection() {
                     es un objeto plano que llega con la estructura definida al cliente.
                 </li>
             </ul>
-
-            <div className="block__note">
-                Momentaneamente, para continuar con el tutorial, es necesario detener el servicio beyond,
-                acceder a la carpeta del proyecto, eliminar la carpeta ".beyond" existente allí y volver
-                a levantar el servicio.
-            </div>
 
             <h2 id="back-client-connection">Conectar cliente y servidor</h2>
             <p>
@@ -68,17 +62,18 @@ export function BridgeSection() {
                 los proyectos
                 siguen las mismas directrices para espacificación y resolución
                 de nombres y paquetes que npm, de la misma forma que lo hace typescript.
-                Deben tener <strong>nombre</strong> de modulo y pueden manejar un
+                Deben tener <strong>nombre</strong> de módulo y pueden manejar un
                 <strong>scope</strong> tambien. En nuestro caso, definimos ambos
-                al momento de crear nuestro proyecto y modulo respectivamente.
+                al momento de crear nuestro proyecto y módulo respectivamente.
             </p>
             <div className="block__note">
                 Si quieres saber más acerca del estandar de resolución de nombres, dirigete
-                a la sección <Link href="/module-resolution">Resolución de modulos</Link>.
+                a la sección <Link href="/module-resolution">Resolución de módulos</Link>.
             </div>
 
-            <p>A continuación, en nuestro objeto <span className="inline_code">Page</span>
-                Importamos el objeto <span className="inline_code">Auth</span></p>
+            <p>A continuación, en nuestro componente <span className="inline_code">Page</span> importamos el
+                objeto <span
+                    className="inline_code">Auth</span></p>
             <Code language="typescript">
                 {`import {Auth} from "@testing/login/home/bridge";`}
             </Code>
@@ -89,8 +84,8 @@ export function BridgeSection() {
                 {PageCode}
             </Code>
 
-            <p>Es tiempo de probar nuestro formulario, si agregamos los datos correctos, podremos
-                ver que en la consola del navegador aparece el <span className="inline-code">console.log</span>
+            <p>Es tiempo de probar nuestro formulario. Si agregamos los datos correctos, podremos
+                ver que en la consola del navegador aparece el mensaje
                 que indica que los datos fueron validados y se puede iniciar sesión, si por el contrario,
                 agregamos
                 datos incorrectos, podremos ver como aparece el mensaje de error "Invalid data" el cual
@@ -99,14 +94,14 @@ export function BridgeSection() {
 
             <h4>Hagamos un resumen de lo que hemos visto</h4>
             <ul>
-                <li>Creamos un modulo con un widget de tipo page</li>
+                <li>Creamos un módulo con un widget de tipo page</li>
                 <li>Creamos una conexión con un backend node por medio del bundle bridge</li>
-                <li>Repasamos la estructura de resolución de modulos para importar el bridge Auth y poder agregar la
+                <li>Repasamos la estructura de resolución de módulos para importar el bridge Auth y poder agregar la
                     validación de inicio de sesión
                 </li>
             </ul>
 
-            <p>Ahora solo nos falta redirecccionar al usuario a una pantalla de bienvenida.</p>
+            <p>Ahora sólo nos falta redireccionar al usuario a una pantalla de bienvenida.</p>
 
         </>
     )

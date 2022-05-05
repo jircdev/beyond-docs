@@ -1,0 +1,149 @@
+@import "~template/sass/mixins/set-media";
+@import "relative-absolute";
+
+@mixin relative-absolute() {
+  position: absolute;
+  @content;
+  @include set-media('tablet', false, 'max') {
+    position: relative;
+  }
+}
+
+.block__features {
+  display: grid;
+  border: 1px solid var(--secondary-dark);
+  padding: 2rem;
+  border-radius: var(--border-radius-base);
+  grid-gap: 2rem;
+  position: relative;
+  margin: 2rem auto;
+
+  > .content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+  }
+
+  h3 {
+    padding: 0;
+    margin-top: 1rem;
+  }
+
+  &.two-columns,
+  &.three-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .relative-container {
+    position: relative;
+  }
+
+  .navigator__box {
+    .box__code pre code {
+      font-size: .8rem;
+    }
+  }
+
+  @include set-media('mobile', false, 'max') {
+    p, h1, h2, h3 {
+      text-align: center;
+    }
+  }
+
+  @include set-media('tablet', false, min) {
+
+    &.two-columns {
+      grid-template-columns: 1fr 1fr;
+    }
+    &.three-columns {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    margin: 2rem auto;
+  }
+
+}
+
+.g-container {
+  display: grid;
+
+  &.two-columns,
+  &.three-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .beyond-element-image {
+    img {
+      width: 100%;
+      min-width: 0;
+      min-height: 0;
+      max-width: 100%;
+    }
+
+  }
+
+  @include set-media('tablet', false, min) {
+    &.two-columns {
+      grid-template-columns: 1fr 1fr;
+    }
+    &.three-columns {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+  }
+
+}
+
+.image-over {
+
+  @include relative-absolute {
+    max-width: 50%;
+    width: 50%;
+    top: 20%;
+    left: 3rem;
+  }
+
+  .beyond-element-image {
+    z-index: 2;
+    width: 80%;
+
+    img {
+      width: 100%;
+    }
+
+    &:nth-child(2) {
+      z-index: 1;
+      top: -50%;
+      left: -20%;
+      position: absolute;
+    }
+
+    @include set-media('mobile', false, 'max') {
+      width: 130%;
+      padding: 0;
+      margin: 0;
+
+      &:nth-child(2) {
+        left: 0;
+        top: -30%;
+        left: -40%;
+      }
+    }
+  }
+
+  @include relative-absolute {
+    max-width: 130%;
+    @include set-media('mobile', false, 'max') {
+      & {
+        width: 100%;
+      }
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+

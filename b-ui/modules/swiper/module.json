@@ -1,0 +1,17 @@
+{
+  "name": "swiper",
+  "code": {
+    "ts": {
+      "path": "ts",
+      "files": [
+        "*"
+      ]
+    },
+    "sass": {
+      "path": "scss",
+      "files": [
+        "*"
+      ]
+    }
+  }
+}

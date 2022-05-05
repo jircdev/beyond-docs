@@ -11,7 +11,7 @@
         "*"
       ]
     },
-    "scss": {
+    "sass": {
       "path": "sass",
       "files": [
         "tpl",

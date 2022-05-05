@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Code} from "../../content/code";
+import {Code} from "@beyond/docs/code/code";
 import {ModuleConfig} from "./config";
 import {Link} from "@beyond/ui/link/code";
 
@@ -16,14 +16,14 @@ export function ModuleIntro() {
             <p> En <span className="beyond">BeyondJS</span> los módulos
                 representan la unidad básica de desarrollo y tienen <strong>características</strong> que es necesario
                 tener presente. Para poder entender bien las diferencias y ventajas del
-                ecosistema de modulos de Beyond, es necesario antes repasar como funcionan los modulos de Javascript y
+                ecosistema de módulos de Beyond, es necesario antes repasar como funcionan los módulos de Javascript y
                 como se integran en el proceso de desarrollo en la actualidad.
             </p>
             <p>Un
                 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules" target="_blank">
                     módulo javascript
                 </a>hoy es representado por un único archivo, con tareas independientes y un scope
-                propio, Este modulo puede exportar elementos y ser importado por otros modulos que consumen las
+                propio, Este módulo puede exportar elementos y ser importado por otros módulos que consumen las
                 variables, objetos o funciones que este provee.
             </p>
 
@@ -48,7 +48,7 @@ export function ModuleIntro() {
                 {exportTpl}
             </Code>
             <p>
-                Los modulos internos, pueden ser importados por cualquier otro módulo interno por medio de la ruta
+                Los módulos internos, pueden ser importados por cualquier otro módulo interno por medio de la ruta
                 relativa del archivo.
             </p>
 
@@ -79,9 +79,9 @@ export function ModuleIntro() {
                 por otros proyectos que los importen como bibliotecas.
             </p>
 
-            <p><span className="beyond">BeyondJS</span> gestiona la importación de modulos a través de la
+            <p><span className="beyond">BeyondJS</span> gestiona la importación de módulos a través de la
                 especificación <strong>npm</strong> que permite definir la estructura
-                <code className="inline-code">@scope/nombre-proyecto/nombre-modulo</code>. El <span
+                <code className="inline-code">@scope/nombre-proyecto/nombre-módulo</code>. El <span
                     className="inline-code">scope</span> es un valor opcional y en conjunto con el <span
                     className="inline-code">nombre del proyecto</span> son propiedades definidas en la configuración del
                 proyecto y se encuentran en el <Link href="/project#properties">project.json</Link>.</p>
@@ -92,7 +92,7 @@ export function ModuleIntro() {
                 causa de las importaciones.
             </p>
             <p>Cuando<span className="beyond">BeyondJS</span> levanta el entorno de
-                desarrollo, realiza un mapeo de los modulos existentes e interpreta las rutas de cada módulo para poder
+                desarrollo, realiza un mapeo de los módulos existentes e interpreta las rutas de cada módulo para poder
                 referenciarlas correctamente cuando estos son importados. Posteriormente, en la fase de despliegue, se
                 encarga de armar la estructura necesaria y convertir las importaciones.</p>
 
@@ -117,7 +117,7 @@ export function ModuleIntro() {
                 {`@company/project/login`}
             </Code>
 
-            <p>Ahora bien, los modulos, son contenedores de <span className="inline-code">bundles</span> y los bundles,
+            <p>Ahora bien, los módulos, son contenedores de <span className="inline-code">bundles</span> y los bundles,
                 representan el archivo final incluido. Por tanto, para poder hacer una importación de un
                 <span className="inline-code">bundle</span>, es necesario especificar el bundle a consumir.
             </p>
@@ -125,7 +125,7 @@ export function ModuleIntro() {
             <p>Para ejemplificarlo, supongamos que tenemos un bundle
                 <span className="inline-code">code</span> que disponibiliza un objeto <span
                     className="inline-code">Auth</span>
-                adentro del modulo <span className="inline-code">login</span> que hemos creado. Nuestra importación
+                adentro del módulo <span className="inline-code">login</span> que hemos creado. Nuestra importación
                 quedaría de la siguiente manera:
             </p>
 

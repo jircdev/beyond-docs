@@ -1,3 +1,4 @@
+@import "~template/sass/mixins/set-media";
 h1, .h1 {
   font-size: 3rem;
 }
@@ -22,10 +23,15 @@ h3, h4 {
   color: var(--text-color);
 }
 
-//pre {
-//  padding: 20px;
-//  background: var(--bg-element);
-//  border-radius: 4px;
-//}
-
+@include set-media('mobile', false, 'max') {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+}
 

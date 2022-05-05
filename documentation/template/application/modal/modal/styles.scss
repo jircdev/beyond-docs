@@ -1,3 +1,8 @@
+@import "../../variables";
+@import "../animate/zoomIn";
+@import "../animate/zoomOut";
+@import "mixins";
+
 $beyond-modal-backdrop-bg: rgba(0, 0, 0, 0.4) !default;
 $beyond-modal-default-width: 60% !default;
 $beyond-modal-content-background: #fff !default;

@@ -1,0 +1,38 @@
+import * as React from 'react';
+import {Link} from '@beyond/ui/link/code';
+import {CodeBox} from "./navigator-box";
+
+const tpl = `
+{
+  "name": "code",
+  "code": {
+    "sass": {
+      "path": "sass",
+      "files": [
+        "*"
+      ]
+    },
+    "ts": {
+      "path": "ts",
+      "files": [
+        "*"
+      ]
+    }
+  }
+}
+
+`;
+
+export function Block() {
+    return (
+        <section className="block__features two-columns gradient-one">
+            <div className="conteint">
+
+            </div>
+            <CodeBox title="module.json">
+                {tpl}
+            </CodeBox>
+
+        </section>
+    )
+}

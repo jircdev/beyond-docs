@@ -1,3 +1,4 @@
+
 .beyond-icon {
   height: 20px;
   width: 20px;
@@ -9,7 +10,7 @@
   }
 
   svg {
-    fill: $text-on-primary;
+    fill: var(--text-on-primary);
   }
 
 }

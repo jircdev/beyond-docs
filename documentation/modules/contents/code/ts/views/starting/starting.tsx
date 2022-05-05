@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Code} from "../content/code";
+import {Code} from "@beyond/docs/code/code";
 import {Before} from "./before";
 import {Project} from "./project";
 

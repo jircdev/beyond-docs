@@ -55,7 +55,7 @@ export function MenuItem({item}) {
         const currentActive = container.querySelector('.active-item')
         if (currentActive) currentActive.classList.remove('active-item');
         target.classList.toggle('active-item');
-        routing.pushState(`/${item.id}`);
+        routing.pushState(`/docs/${item.id}`);
         close();
 
     }

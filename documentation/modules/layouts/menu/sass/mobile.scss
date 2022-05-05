@@ -1,3 +1,5 @@
+@import "~template/sass/mixins/set-media";
+
 aside.docs__menu {
 
   @include set-media('md-screen', false, 'max') {

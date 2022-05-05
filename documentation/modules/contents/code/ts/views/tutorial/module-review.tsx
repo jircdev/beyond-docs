@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {Link} from '@beyond/ui/link/code';
 import {ModalImage} from "../modal-image";
-import {Code} from "../content/code";
+import {Code} from "@beyond/docs/code/code";
 import {PageCode} from "./templates/page-code";
 import {pageStyles} from "./templates/page-styles";
 import {PageCodeStarted} from "./templates/page-code-started";
@@ -14,10 +14,10 @@ export function ModuleReview() {
             <h2 id="bundle-bridge">Lógica <strong>Backend</strong></h2>
 
             <p>
-                Los formularios de inicio de sesion requieren, por naturaleza validar los datos contra un backend que se
-                conecte a algún manejador de datos. A continuación vamos a emular la conexión a la base de datos,
-                creando nuestra integración con un servicio node el cual tendrá un usuario y clave predefinidos contra
-                el cual validaremos si la sesión es valida o no. Para lograrlo, haremos uso de websockets.
+                Por su naturaleza, Los formularios de inicio de sesión requieren validar los datos contra un backend que
+                se conecte a algún manejador de datos. A continuación, vamos a emular la conexión a la base de datos,
+                creando nuestra integración con un servicio node, que tendrá un usuario y clave predefinidos y así,
+                podremos revisar si la sesión es válida o no. Para lograrlo, haremos uso de websockets.
             </p>
             <p>
                 Es necesario crear un bundle BRIDGE para crear de forma simple un servicio node y lograr la integración
@@ -25,15 +25,18 @@ export function ModuleReview() {
                 el código cliente y servidor permitiendo manejar el código de manera uniforme.
             </p>
             <div className="block__note">
-                NOTA: Los bridges son un feature central y muy poderoso en beyond y en este tutorial solo se muestran de
-                forma superficial. Si quieres conocer más y entender como funcionan, dirigite a la seccion de bridges
-                tip: La definición de bundles en el module.json se cubre completamente en la sección module.json de la
+                NOTA: Los bridges son un feature central y muy poderoso en <div className="beyond">BeyondJS</div> y en
+                este tutorial solo se muestran de
+                forma superficial. Si quieres conocer más y entender cómo funcionan, dirígite a la seccion de bridges.
+            </div>
+            <div className="block__note">
+                Tip: La definición de bundles en el module.json se cubre completamente en la sección module.json de la
                 documentación.
             </div>
             <p>
 
-                Para agregar un bundle bridge al modulo, debemos dirigirnos al archivo de configuración (module.json),
-                ubicado adentro de la carpeta home. la ruta, deberia ser
+                Para agregar un bundle bridge al módulo, debemos dirigirnos al archivo de configuración (module.json),
+                ubicado dentro de la carpeta home. La ruta debería ser
                 <span className="inline-code">“proyecto/modules/home/module.json”</span>
             </p>
             <p>Allí, debemos agregar la siguiente estructura:</p>
@@ -41,7 +44,7 @@ export function ModuleReview() {
                 {moduleJson.bridge}
             </Code>
             <p>
-                Nuestro module.json final, deberia quedar con la siguiente estructura:
+                Nuestro <span className="inline">module.json</span> final deberia quedar con la siguiente estructura:
             </p>
             <Code language="json">
                 {moduleJson.module}
@@ -54,7 +57,7 @@ export function ModuleReview() {
                     que garantiza el funcionamiento universal, cada módulo creado puede especificar
                     que plataformas estan soportadas por el mismo. Con la entrada
                     <span className="inline-code"> platforms</span> le especificamos que queremos que
-                    nuestro modulo soporte las plataformas
+                    nuestro módulo soporte las plataformas
                     <span className="inline-code"> web</span> y <span className="inline-code">backend</span>.
                 </li>
                 <li>

@@ -1,34 +1,17 @@
 {
   "application": {
-    "processor": "scss",
+    "processor": "sass",
     "path": "application",
-    "files": [
-      "./custom-properties/",
-      "default.scss",
-      "styles.scss",
-      "./modal/animate/_properties.scss",
-      "./modal/animate/_fadeIn.scss",
-      "./modal/animate/_fadeOut.scss",
-      "./modal/animate/_zoomIn.scss",
-      "./modal/animate/_zoomOut.scss",
-      "./modal/modal",
-      "modal.scss"
-    ]
-  },
-  "global": {
-    "processor": "scss",
-    "path": "global",
     "files": [
       "*"
     ]
   },
-  "processors": {
-    "scss": {
-      "path": "scss",
-      "files": [
-        "*"
-      ]
-    }
+  "global": {
+    "processor": "sass",
+    "path": "global",
+    "files": [
+      "*"
+    ]
   },
   "overwrites": "overwrites/overwrites.json"
 }

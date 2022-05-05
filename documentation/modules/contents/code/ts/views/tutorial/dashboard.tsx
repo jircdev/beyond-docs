@@ -11,11 +11,10 @@ export function TDashboard() {
                 <a href="http://localhost:4000" target="_blank"> localhost:4000</a>.
             </p>
             <p>
-                Como comentamos antes, <span className="beyond">Beyond</span>
-                analiza el directorio, validando si existe en el algún proyecto beyond ya
-                configurado, en caso de existir alguno, el dashboard mostrará el proyecto existente, caso contrario,
-                como se ve en la imagen a continuación, indicará que no existe ningún proyecto y brinda la opción de
-                crearlo.
+                Como comentamos antes, <span className="beyond">BeyondJS</span>
+                analiza el directorio validando si existe algún proyecto beyond ya
+                configurado. Caso contrario, como se ve en la imagen a continuación, indicará que no existe ninguno y
+                brinda la opción de crearlo.
             </p>
             <ModalImage src="/contents/static/empty.png" alt="beyond dashboard empty folder"/>
         </>

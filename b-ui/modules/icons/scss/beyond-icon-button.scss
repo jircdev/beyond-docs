@@ -1,3 +1,4 @@
+
 .beyond-icon-button {
 
   height: 40px;
@@ -26,38 +27,38 @@
   }
 
   &.primary {
-    background: $primary;
-    color: $text-on-primary;
+    background: var(--primary);
+    color: var(--text-on-primary);
 
     &.dark {
-      background: $primary-dark;
+      background: var(--primary-dark);
     }
 
     &.light {
-      background: $primary-light;
+      background: var(--primary-light);
     }
 
     svg {
-      fill: $text-on-primary;
+      fill: var(--text-on-primary);
     }
 
   }
 
   &.gray {
-    background: $gray-light;
+    background: var(--gray-light);
   }
 
   &.secondary {
-    background: $secondary;
-    fill: $text-on-secondary;
-    color: $text-on-secondary;
+    background: var(--secondary);
+    fill: var(--text-on-secondary);
+    color: var(--text-on-secondary);
 
     &.dark {
-      background: $secondary-dark;
+      background: var(--secondary-dark);
     }
 
     &.light {
-      background: $secondary-light;
+      background: var(--secondary-light);
     }
   }
 

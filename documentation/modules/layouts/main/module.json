@@ -5,10 +5,9 @@
     "element": {
       "name": "main-layout"
     },
-    "scss": {
+    "sass": {
       "path": "scss",
       "files": [
-        "tpl",
         "*"
       ]
     },

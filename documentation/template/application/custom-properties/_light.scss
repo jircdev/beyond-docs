@@ -1,0 +1,27 @@
+@mixin properties() {
+
+  $secondary-bg: #4B6378;
+  --primary-surface: #fff;
+  --primary: #FF8056;
+  --primary-dark: #E36152;
+  --primary-light: #FFA789;
+  --primary-accent: #FFA789;
+  --text-on-primary: #fff;
+  //secondary colors
+  --secondary: #121F36;
+  --secondary-dark: #121F36;
+  --secondary-light: #313C50;
+  --secondary-accent: #F7C700;
+  --text-on-secondary: #FFFFFF;
+  --secondary-background: #{$secondary-bg};
+  //background
+  --background: #fff;
+  --text-color: #5E5F5C;
+  --text-title-color: var(--secondary-dark);
+  --text-second-color: var(--gray-dark);
+  --text-hover-color: var(--primary);
+  --bg-element: var(--gray-light);
+  --element-bg: var(--gray-light);
+  --element-border-color: var(--gray-light);
+  --separator-color: var(--gray-darker);
+}
