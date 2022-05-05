@@ -1,0 +1,30 @@
+{
+  "name": "prueba-page",
+  "widget": {
+    "hmr": true,
+    "element": {
+      "name": "prueba-vue-page"
+    },
+    "name": "prueba-page",
+    "route": "/prueba-page",
+    "is": "page",
+    "scss": {
+      "path": "/widget/scss",
+      "files": [
+        "*"
+      ]
+    },
+    "vue": {
+      "path": "/widget/vue",
+      "files": [
+        "*"
+      ]
+    },
+    "ts": {
+      "path": "/widget/ts",
+      "files": [
+        "*"
+      ]
+    }
+  }
+}

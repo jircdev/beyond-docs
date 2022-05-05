@@ -1,0 +1,22 @@
+{
+  "name": "test1",
+  "widget": {
+    "hmr": true,
+    "element": {
+      "name": "test-normal-widget"
+    },
+    "name": "test1",
+    "scss": {
+      "path": "/widget/scss",
+      "files": [
+        "*"
+      ]
+    },
+    "ts": {
+      "path": "/widget/ts",
+      "files": [
+        "*"
+      ]
+    }
+  }
+}

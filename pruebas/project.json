@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "scope": "pruebas",
+  "name": "pruebas",
+  "layout": "main-layout",
+  "template": "template/template.json",
+  "languages": {
+    "default": "en",
+    "supported": [
+      "en"
+    ]
+  },
+  "params": {},
+  "modules": {
+    "path": "./modules",
+    "externals": {}
+  },
+  "deployment": {
+    "distributions": [
+      {
+        "name": "distribution-web",
+        "platform": "web",
+        "environment": "development",
+        "port": 7880,
+        "default": true
+      }
+    ]
+  }
+}

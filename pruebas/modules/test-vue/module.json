@@ -1,0 +1,28 @@
+{
+  "name": "test-vue",
+  "widget": {
+    "hmr": true,
+    "element": {
+      "name": "test-vue"
+    },
+    "name": "test-vue",
+    "scss": {
+      "path": "/widget/scss",
+      "files": [
+        "*"
+      ]
+    },
+    "vue": {
+      "path": "/widget/vue",
+      "files": [
+        "*"
+      ]
+    },
+    "ts": {
+      "path": "/widget/ts",
+      "files": [
+        "*"
+      ]
+    }
+  }
+}

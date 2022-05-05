@@ -1,0 +1,21 @@
+.beyond__icon {
+  //border: 1px solid red;
+  z-index: 1000;
+  height: 100%;
+  width: 100%;
+
+
+  svg {
+    position: relative;
+    transition: all ease-in 100ms;
+
+    #beyond-ales path {
+      fill: #B6BDC7;
+    }
+
+    #beyond-circle path {
+      fill: #D9684A;
+    }
+  }
+
+}
