@@ -1,13 +1,11 @@
 {
   "name": "test",
   "widget": {
-    "hmr": true,
+    "is": "page",
+    "route": "/test",
     "element": {
       "name": "beyond-ui-test-page"
     },
-    "name": "test",
-    "route": "/test",
-    "is": "page",
     "ts": {
       "path": "/widget/ts",
       "files": [
