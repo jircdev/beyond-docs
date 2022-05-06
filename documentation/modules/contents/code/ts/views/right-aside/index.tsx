@@ -8,10 +8,10 @@ interface IProps {
     children?: JSX.Element,
 }
 
-export /*bundle*/ const RightAside = React.memo(({container, titles}: IProps) => {
-        const output = titles.map(item => {
-
-            return <RightAsideItem key={item.id} item={item} container={container}/>
+export /*bundle*/
+const RightAside = React.memo(({container, titles}: IProps) => {
+        const output = titles.map((item, i) => {
+            return <RightAsideItem key={`${item.id}.${i}`} item={item} container={container}/>
 
         });
 

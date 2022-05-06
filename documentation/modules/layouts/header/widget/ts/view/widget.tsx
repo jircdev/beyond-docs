@@ -17,9 +17,11 @@ function Widget() {
                     <Hamburger/>
                     <section className="header-logo">
                         <div className="flex-center-y right-col">
-                            <img src="/images/beyond-logo.png"
-                                 className="img-logo"
-                                 alt="Beyond the universal meta framework"/>
+                            <Link href="/">
+                                <img src="/images/beyond-logo.png"
+                                     className="img-logo"
+                                     alt="Beyond the universal meta framework"/>
+                            </Link>
                         </div>
                     </section>
                     <div className="flex-center-y right-content">

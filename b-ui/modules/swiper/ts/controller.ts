@@ -1,7 +1,7 @@
-import * as  Swiper from 'swiper';
+import Swiper from 'swiper';
 import {ReactiveModel} from "@beyond/ui/reactive-model/ts";
 
-const SwiperCasted: typeof Swiper.Swiper = (Swiper as unknown as typeof Swiper.default);
+// const SwiperCasted: typeof Swiper.Swiper = (Swiper as unknown as typeof Swiper.default);
 
 export class Controller extends ReactiveModel {
     #swiper
@@ -27,7 +27,7 @@ export class Controller extends ReactiveModel {
             }
         }
 
-        this.#swiper = new SwiperCasted(element, specs);
+        this.#swiper = new Swiper(element, specs);
         this.#swiper.on("slideChange", () => {
             if (this.#swiper.isEnd) {
                 this.#onEnd = true;

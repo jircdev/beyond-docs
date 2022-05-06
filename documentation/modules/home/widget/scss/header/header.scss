@@ -1,9 +1,9 @@
 header.home__header {
-  background: black;
+  background: var(--background);
   aspect-ratio: 16 / 7;
   overflow: hidden;
   padding: 2rem;
-  margin: auto;
+  margin: 1rem auto auto;
   width: calc(100% - 4rem);
 
   display: grid;

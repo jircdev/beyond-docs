@@ -8,19 +8,29 @@
   padding: 2rem;
   width: calc(100% - 4rem);
 
+  .accent {
+    color: var(--accent-color);
+  }
+  a {
+    text-decoration: none;
+  }
+
   .docs__card {
+    text-decoration: none;
     background: var(--color-gray-90);
     padding: 2rem;
     display: flex;
     flex-direction: column;
     align-content: space-between;
-    flex-grow: 1;
+    //flex-grow: 1;
     border-radius: var(--border-radius-base);
     justify-content: space-between;
     transition: all 200ms ease-in;
 
     &:hover {
       background: var(--color-carbon-90);
+      padding-left: 1.5rem;
+      padding-right: 2.5rem;
     }
 
     h3 {

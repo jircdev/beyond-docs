@@ -26,6 +26,22 @@ p, ul, li {
   line-height: 2rem;
 }
 
+.p2 {
+  line-height: 1.4rem;
+  letter-spacing: .2px;
+}
+
+a {
+  color: var(--accent-color);
+  cursor: pointer;
+  transition: all 200ms linear;
+  text-decoration: none;
+
+  &:hover {
+    color: var(--primary-accent)
+  }
+}
+
 .text-center {
   text-align: center;
 }

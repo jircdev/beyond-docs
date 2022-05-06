@@ -1,3 +1,5 @@
+@use 'mixins';
+@import "~animatewithsass/animate";
 $beyond-modal-backdrop-bg: rgba(0, 0, 0, 0.4) !default;
 $beyond-modal-default-width: 60% !default;
 $beyond-modal-content-background: #fff !default;
@@ -12,7 +14,7 @@ body.body-beyond-modal-opened {
 .beyond-element-modal {
 
   display: none;
-  @include position-absolute(0, 0, 0, 0);
+  @include mixins.position-absolute(0, 0, 0, 0);
   z-index: 1;
 
   overflow: auto;

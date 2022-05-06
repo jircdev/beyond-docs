@@ -2,7 +2,7 @@
   "name": "modal",
   "code": {
     "hmr": true,
-    "scss": {
+    "sass": {
       "path": "code/scss",
       "files": [
         "animate/_properties.scss",

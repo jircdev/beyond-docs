@@ -6,6 +6,8 @@ import {Pulse} from "./pulse";
 import {SVGEventsManager} from "./animation-functions";
 import {StrongTitle} from "./strong-tittle";
 import {Hamburger} from './menu/hamburger';
+import {Notice} from "./notice";
+
 
 
 // import "@beyond/docs/header-animation/widget";
@@ -20,6 +22,10 @@ export function Header() {
 
     return (
         <>
+            <div>
+                <Notice/>
+            </div>
+
             <section className="top__header">
                 <nav className="menu-container container flex-container flex-h-end">
                     <div className="mobile__header">
@@ -28,7 +34,7 @@ export function Header() {
                     </div>
                     <div className="menu-list__container">
                         <ul className="header__menu">
-                            <li><Link href="/docs/tutorial">Tutorial</Link></li>
+                            <li><Link href="/docs/tutorial/web">Tutorial</Link></li>
                             <li><Link href="/docs/intro">Documentation</Link></li>
                             <li><Link href="/examples">Examples</Link></li>
                         </ul>
@@ -47,10 +53,11 @@ export function Header() {
                             <span>para trabajar con</span>
                             <StrongTitle/>
                         </h1>
-                        <span>
-                            BeyondJS permite integrar y mezclar en un mismo proyecto las herramientas y frameworks de vista
-                            que prefieras, priorizando la experiencia de desarrollo y la carga modular sin necesidad de empaquetadores.
-
+                        <span className="p2">
+                            Integra diferentes stacks de desarrollo y trabaja con ellos bajo el mismo paradigma, priorizando
+                            la experiencia de desarrollo y la carga modular, sin necesidad de empaquetadores.
+                            {/*BeyondJS permite integrar y mezclar en un mismo proyecto las herramientas y frameworks de vista*/}
+                            {/*que prefieras, priorizando la experiencia de desarrollo y la carga modular sin necesidad de empaquetadores.*/}
                         </span>
                     </div>
                     <IconLogo/>

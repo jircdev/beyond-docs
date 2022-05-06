@@ -19,9 +19,10 @@ export function Intro() {
 
             <h3 id="what-is"> ¿Qué es <span className="beyond">BeyondJS</span>?</h3>
             <p>Es un <strong>meta-framework</strong> para trabajar con proyectos <span
-                className="inline">JavaScript</span> de forma universal y en todos los entornos en los que se encuentra
-                disponible, a saber: Sistemas operativos, código servidor, soluciones web o aplicaciones
-                móviles.
+                className="inline">JavaScript</span> de forma universal, esto quiere decir que se puede usar para
+                realizar proyectos en cualquier entorno en el que <span className="accent">Javascript</span> se
+                encuentra disponible; a saber: Sistemas operativos, servicios o backend con Node, soluciones web y
+                aplicaciones móviles.
             </p>
             <BeyondImage src="/images/tutorials/beyond-environments.png" alt="Beyond environments"/>
 
@@ -30,40 +31,36 @@ export function Intro() {
             <ul>
                 <li>Creación de proyectos node y Librerias NPM.</li>
                 <li>Aplicaciones Web con SSR o CSR y Mobile.</li>
-                <li>Diseñado para</li>
+                <li>Diseñado para poder integrar librerias de vistas y paquetes <span
+                    className="highlight">npm</span> que esten pensados para ser usados de forma modular.
+                </li>
             </ul>
 
             <h3>¿Por qué usarlo?</h3>
 
-            <p>
-                Hay tres factores que hacen que el desarrollo de soluciones con <strong>JavaScript</strong> sea bastante
-                sofisticado:
-            </p>
+            <p>El desarrollo con tecnologías web es bastante complejo, por diversos motivos que, podriamos sintetizar a
+                grandes rasgos en tres items generales:</p>
             <ul>
                 <li>
-                    <p><strong>JavaScript</strong> es un lenguaje sofisticado y en constante evolución, lo cual hace que
-                        incluso quienes tienen años trabajando con el deban seguir estudiandolo.</p>
+                    Javascript es un lenguaje sofisticado y en constante evolución.
                 </li>
                 <li>
-                    Si bien el <strong>JavaScript</strong> es un único lenguaje, las APIs provistas para los entornos en
-                    los cuales puede ser usado son diferentes
+                    Si bien Javascript es un lenguaje universal, las APIs provistas para los entornos en
+                    donde puede ser usado son diferentes entre sí.
                 </li>
-                <li>Existe un gran número de librerias y frameworks para cada entorno de desarrollo, en muchas ocasiones
-                    incompatibles entre sí. Esto ha logrado que la comunidad de desarrollo web se mantenga separada en
-                    burbujas de stacks tecnológicos que, en muchas ocasiones <i>complican</i> la posibilidad de un
-                    programador de aprender nuevas herramientas.
+                <li>Existe un gran número de librerias y frameworks para cada entorno donde el lenguaje existe, en
+                    muchas ocasiones incompatibles entre sí. Esto ha logrado que la comunidad de desarrollo web se
+                    mantenga separada en burbujas de stacks tecnológicos que, en muchas ocasiones <i>complican</i> la
+                    posibilidad de un programador de aprender nuevas herramientas.
                 </li>
 
             </ul>
 
             <p><span className="beyond">BeyondJS</span> tiene cómo foco ofrecer una estructura base y estandarizada que
                 permita trabajar en cualquier ecosistema en el que <strong>JavaScript</strong> se encuentre disponible,
-                simplificandole a los desarrolladores el proceso y garantizando la compatibilidad. Asimismo, es
-                compatible con la mayoria de frameworks de vista y suministra medios para integrarlos de manera simple.
+                simplificando el proceso y garantizando la compatibilidad entre entornos. Asimismo, es
+                compatible con la mayoria de frameworks de vista y suministra medios para integrar nuevas librerias.
             </p>
-            <p><span className="beyond">BeyondJS</span> por su parte, ofrece una estructura de desarrollo estandarizada
-                que pe</p>
-            <h4>Pero, ¿Qué significa esto?</h4>
 
 
             <p> A continuación, listamos algunas de las caracteristicas más relevantes de <span

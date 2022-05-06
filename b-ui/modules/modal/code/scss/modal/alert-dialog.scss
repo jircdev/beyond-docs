@@ -14,7 +14,7 @@
   }
 
   .actions {
-    border-top: 1px solid $gray-lighter;
+    border-top: 1px solid var(--gray-lighter);
     margin-top: 15px;
     display: grid;
     justify-content: end;

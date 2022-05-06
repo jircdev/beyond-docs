@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {Code} from "@beyond/docs/code/code";
 import {Link} from '@beyond/ui/link/code';
-import {Note} from "../content/note";
+import {Note} from "../views/content/note";
 
 export function Install() {
     return (
@@ -17,20 +17,14 @@ export function Install() {
             </ul>
             <p>Instalamos Beyond:</p>
             <Code language="bash">
-                {`> npm i -g  https://github.com/hello-beyond/beyond.git`}
+                {`> npm i -g  beyond}
             </Code>
 
-            <Note>
-                <span className="beyond">BeyondJS</span> es una dependencia <strong>NPM</strong>, sin embargo, nos
-                encontramos
-                en una versión Beta, por lo cual se recomienda hacer la instalación momentaneamente desde el repositorio
-                en github.
-            </Note>
+           
 
             <p>
-                <span className="beyond">BeyondJS</span> se instala de forma global, lo cual implica que puedes
-                ejecutarlo en donde desees.
-                Ahora, para utilizarlo, sólo necesitas ir a la carpeta en la cual desees trabajar, abrir la consola
+                <span className="beyond">BeyondJS</span> se instala de forma global y puede ser ejecutado en cualquier
+                directorio. Para utilizarlo, sólo necesitas ir a la carpeta en la cual desees trabajar, abrir la consola
                 de comandos y ejecutar "beyond".
             </p>
             <Code language="bash">
@@ -45,8 +39,8 @@ export function Install() {
 
             <div className="next__content link__content">
                 <ul>
-                    <li><Link href="/dashboard">Dashboard</Link></li>
-                    <li><Link href="/tutorial">Tutorial</Link></li>
+                    <li><Link href="/docs/web">Dashboard</Link></li>
+                    <li><Link href="/docs/tutorial/web">Tutorial</Link></li>
                 </ul>
 
             </div>

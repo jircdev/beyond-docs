@@ -10,6 +10,7 @@
       "name": "contents-page"
     },
     "name": "home",
+    "layout": "main-layout",
     "route": "/docs/${content}/${sub}",
     "is": "page",
     "ts": {

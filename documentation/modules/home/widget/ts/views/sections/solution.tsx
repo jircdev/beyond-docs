@@ -4,7 +4,7 @@ export function Solution() {
     return (
         <div className="container">
             <header className="header__section text-center">
-                <h3>Desarrollo centralizado</h3>
+                <h3>Desarrollo universal</h3>
                 <span className="subtitle">El framework enfocado en hacer que las mismas herramientas y técnicas
                             funcionen para múltiples distribuciones  y tecnologías de manera simple.</span>
             </header>

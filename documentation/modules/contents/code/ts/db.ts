@@ -6,7 +6,7 @@ import {Example} from "./views/example";
 import {Starting} from "./views/starting/starting";
 import {TutorialPage} from "./views/tutorial/tutorial-page";
 import {Concepts} from "./views/concepts/concepts";
-import {Install} from "./views/starting/install";
+import {Install} from "./basic/install";
 import {Error404} from "./views/error-404";
 import {ModuleConfig} from "./views/concepts/module/config";
 import {ProjectJson} from "./views/concepts/project-json/project-json";

@@ -9,6 +9,7 @@ import {DX} from "./sections/dx";
 import {Footer} from "./footer";
 import {Technologies} from "./sections/technologies";
 import {Solution} from "./sections/solution";
+import {Elink, Link} from '@beyond/ui/link/code';
 
 export function Page({uri, component}): JSX.Element {
 
@@ -17,22 +18,22 @@ export function Page({uri, component}): JSX.Element {
             <Header/>
             <main>
                 <div className="container cards__container">
-                    <Card title="Node y NPM" href="/docs/intro">
+                    <Card title="Node y NPM" href="/docs/backend">
                         Puedes crear proyectos node y servicios que se comuniquen con aplicaciones
                         clientes o entre ellos, tambien paquetes npm
-
                     </Card>
-                    <Card title="Web Y Móvil" href="/docs/intro">
+                    <Card title="Web Y Móvil" href="/docs/tutorial/web">
                         Listo para desarrollo web con <span className="accent">SSR</span> y <span
-                        className="accent">CSR</span>
+                        className="accent">CSR</span> y webs estaticas. Con capacidad de mezclar estas funcionalidades
+                        por modulo.
 
                     </Card>
-                    <Card title="Frameworks de vistas" href="/docs/intro">
-                        Listo para usar con
-                        <span className="accent">React</span>
-                        <span className="accent">Vue</span> y
-                        <span className="accent">Svelte</span>.
-                        Listo tambien para agregar otros framworks o librerias de gestion de vistas.
+                    <Card title="Frameworks de vistas" href="/docs/widgets">
+                        Listo para usar con&nbsp;
+                        <Elink href="https://reactjs.org" className="accent">React</Elink>,&nbsp;
+                        <Elink href="https://vuejs.org/" className="accent">Vue&nbsp;</Elink> y
+                        <Elink href="https://svelte.dev/" className="accent">&nbsp;Svelte</Elink>.
+                        Pensado para agregar otros framworks o librerias de gestion de vistas.
                     </Card>
                 </div>
 

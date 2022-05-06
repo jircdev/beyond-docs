@@ -52,7 +52,7 @@ function Widget() {
         }}>
             <aside ref={parent} className={cls}>
                 <div className="menu-mobile-container">
-                    <header className="aside__header pd-15">
+                    <header className="aside__header">
                         <div className="">
                             <div className="mobile-only">
                                 <BeyondImage src="/images/beyond-logo.png"
