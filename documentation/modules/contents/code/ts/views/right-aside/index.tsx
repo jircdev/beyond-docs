@@ -15,9 +15,9 @@ const RightAside = React.memo(({container, titles}: IProps) => {
 
         });
 
-        const ref = React.useRef();
+        const ref = React.useRef(null);
         React.useEffect(() => {
-            const items = Array.from(ref.current.querySelectorAll('li'))
+            const items: HTMLElement[] = Array.from(ref.current.querySelectorAll('li'));
 
             const callback = (entries) => {
                 const check = item => {
@@ -37,7 +37,6 @@ const RightAside = React.memo(({container, titles}: IProps) => {
             const observer = new IntersectionObserver(callback, {
                 root: null,
                 rootMargin: '-50% 0% -50% 0%',
-
                 threshold: 0
             });
             titles.forEach(item => observer.observe(item))
