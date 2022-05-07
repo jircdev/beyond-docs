@@ -25,5 +25,4 @@ function Config(env: string = 'development') {
         }
     }
     return config[env];
-
 }

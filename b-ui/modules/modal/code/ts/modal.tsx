@@ -1,14 +1,12 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-
-import {SyntheticEvent} from "react";
 import {Children} from "./children";
 
 interface IProps {
     show?: boolean,
     onClose?: () => Promise<boolean>,
     className?: string,
-
+    children?: any
 }
 
 interface IState {

@@ -12,7 +12,7 @@ export function HomeModule() {
 
             <p>El proyecto trae un módulo <span className="inline">home</span> creado por defecto. Puedes verlo
                 accediendo desde el navegador a
-                <a href="http://localhost:6500" tareget="_blank">localhost:6500 </a> (Si colocaste otro puerto, debes
+                <a href="http://localhost:6500" target="_blank">localhost:6500 </a> (Si colocaste otro puerto, debes
                 cambiarlo).
             </p>
 

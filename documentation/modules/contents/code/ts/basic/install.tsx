@@ -1,7 +1,6 @@
 import * as React from 'react';
 import {Code} from "@beyond/docs/code/code";
 import {Link} from '@beyond/ui/link/code';
-import {Note} from "../views/content/note";
 
 export function Install() {
     return (
@@ -20,22 +19,19 @@ export function Install() {
                 {`> npm i -g  beyond}
             </Code>
 
-           
-
             <p>
                 <span className="beyond">BeyondJS</span> se instala de forma global y puede ser ejecutado en cualquier
                 directorio. Para utilizarlo, sólo necesitas ir a la carpeta en la cual desees trabajar, abrir la consola
                 de comandos y ejecutar "beyond".
             </p>
             <Code language="bash">
-                {`> beyond`}
+                {` > `beyond`}
             </Code>
             <p>Si todo sale bien, aparecerá un mensaje diciendote que beyond se está ejecutando y el puerto de acceso
                 para ir
                 al Dashboard.</p>
             <p>¡Y ya está! ¿Simple verdad?
                 Puedes empezar con tu proyecto utilizando el dashboard y tu IDE de preferencia.</p>
-
 
             <div className="next__content link__content">
                 <ul>

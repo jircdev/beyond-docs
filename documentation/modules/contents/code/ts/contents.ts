@@ -1,9 +1,9 @@
 import {Events, IWidgetStore} from "@beyond-js/kernel/core/ts";
 
 interface IContent {
-    id: string;
+    id: number;
     name: string;
-    content: string;
+    content?: string;
 }
 
 export class Contents extends Events implements IWidgetStore {
@@ -28,7 +28,7 @@ export class Contents extends Events implements IWidgetStore {
         return this.#hydrated;
     }
 
-    #container: any;
+    readonly #container: any;
     get container() {
         return this.#container;
     }
