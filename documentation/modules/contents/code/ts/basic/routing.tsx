@@ -92,9 +92,9 @@ export function RoutingPage() {
                 </li>
             </ul>
 
-            <p>Para este tipo de casos, se puede definir una función asincrona <span
-                className="inline-code">redirect</span> como
-                propiedad del objeto routing. Esta función recibe un ubjeto de tipo
+            <p>Para este tipo de casos, se puede definir una función asincrona
+                <span className="inline-code">redirect</span>
+                como propiedad del objeto routing. Esta función recibe un ubjeto de tipo
                 <TypeProperty type="URI" href="/api/uri"/> que tiene una propiedad <span
                     className="inline-code">pathname
             </span> la cual representa la ruta actual.

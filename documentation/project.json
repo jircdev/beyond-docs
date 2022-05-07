@@ -67,7 +67,7 @@
         "environment": "development"
       },
       {
-        "name": "backend",
+        "name": "web-tsc",
         "platform": "web",
         "port": 4700,
         "environment": "development",

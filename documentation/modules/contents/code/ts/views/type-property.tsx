@@ -5,15 +5,13 @@ interface IProps {
     children?: JSX.Element
     type: string,
     optional?: boolean
-    href?: string
+    href?: string | boolean
 }
 
-export function TypeProperty({type, href = false, optional = false}) {
-
+export function TypeProperty({type, href = false, optional = false}: IProps) {
     const output = href ? <Link href={href}>{`<${type}>`} </Link> : `<${type}> `;
     return (
         <span className="type__property">
-
             {output}
             {
                 optional &&
