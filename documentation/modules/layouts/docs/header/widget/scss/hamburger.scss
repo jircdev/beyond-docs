@@ -145,7 +145,7 @@
 .hamburger-icon-container {
   background: transparent;
   border: none;
-  @include set-media('md-screen', true) {
+  @include set-media('small-screen', true) {
     display: none;
   }
 

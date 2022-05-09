@@ -31,13 +31,13 @@ export function ConfigModule() {
                 <h3 className="text-plg">Mínima Configuración y carga modular</h3>
 
                 <p>
-                    Define lo que utilizas de forma simple, sin empaquetadores y en una estructura modular que asegura
+                    Sin empaquetadores y en una estructura modular que asegura
                     la carga a demanda sin agregar complejidades a medida que el proyecto crece.
                 </p>
 
                 <h3 className="text-slg">Plug & Play</h3>
                 <p>
-                    Se puede realizar reestructua del proyecto,mover los modulos a otro proyecto o agregar nuevos sin
+                    Los modulos pueden reestructurarse y moverse de un proyecto a otro sin necesidad
                     necesidad de configuraciones adicionales.
                 </p>
                 <footer className="action">

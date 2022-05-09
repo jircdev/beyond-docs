@@ -2,7 +2,7 @@
 
 aside.docs__menu {
 
-  @include set-media('md-screen', false, 'max') {
+  @include set-media('tablet', false, 'max') {
     position: fixed;
     left: 0;
     width: 0;

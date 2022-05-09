@@ -9,7 +9,6 @@ import {Hamburger} from './menu/hamburger';
 import {Notice} from "./notice";
 
 
-
 // import "@beyond/docs/header-animation/widget";
 export function Header() {
 
@@ -49,8 +48,8 @@ export function Header() {
                         {/*<BeyondImage className="hidden-mobile" src="/images/beyond-logo.png" alt="beyondjs"/>*/}
                         <h1>
 
-                            <span>El Meta-Framework</span><br/>
-                            <span>para trabajar con</span>
+                            <span>The Full Stack universal <br/>
+                                Typescript Framework</span>
                             <StrongTitle/>
                         </h1>
                         <span className="p2">

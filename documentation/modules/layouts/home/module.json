@@ -8,7 +8,6 @@
     "sass": {
       "path": "scss",
       "files": [
-        "tpl",
         "*"
       ]
     },

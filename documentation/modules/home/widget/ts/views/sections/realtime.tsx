@@ -3,7 +3,7 @@ import {CodeBox} from "../navigator-box";
 import {BeyondImage} from '@beyond/ui/image/code';
 import {BeyondIcon} from '@beyond/ui/icons/code';
 import {SVGS} from "../../icons";
-import {Link} from "@beyond/ui/link/code";
+import {Link, Elink} from "@beyond/ui/link/code";
 
 export function Realtime() {
     return (
@@ -24,19 +24,22 @@ export function Realtime() {
                     </section>
                 </div>
                 <div className="content">
-                    <h3>HMR en Navegador y Node</h3>
+                    <h3>HMR en Navegador y <span className="accent">Node</span></h3>
 
-                    <p>Actualización en tiempo de ejecución del código tanto en el código cliente, como en los servicios
-                        <span className="insight">Node</span>. <span className="insight beyond">BeyondJS</span> gestiona
+                    <p>Actualización en tiempo de ejecución del código cliente y
+                        <span className="accent"> Node</span>. <span className="insight beyond">BeyondJS</span> gestiona
                         los servicios Node para evitar el reinicio de los mismos cuando se realizan cambios y garantizar
                         la mejor experiencia de desarrollo posible.
                     </p>
                     <Link href="/docs/hmr" className="link-more">Leer más</Link>
                 </div>
                 <div className="content">
-                    <h3>Conexión Real-time cliente y servidor</h3>
+                    <h3>Conexión Real-time cliente y servidor/ servidor y servidor</h3>
 
-                    <p>Comunicación de websockets soportada de forma automática para conectar el código cliente de un
+                    <p>Comunicación de
+                        <Elink
+                            href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API"> websockets </Elink>
+                        soportada de forma automática para conectar el código cliente de un
                         proyecto móvil o web con un servidor o servicio node.</p>
                     <Link href="/docs/bridges" className="link-more">Leer más</Link>
                 </div>

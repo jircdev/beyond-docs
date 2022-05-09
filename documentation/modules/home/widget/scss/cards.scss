@@ -35,7 +35,7 @@
 
     h3 {
       padding: 0;
-      margin: 0 0 2rem;
+      margin: 0 0 1rem;
       text-transform: uppercase;
       font-size: 1.2rem;
       @include mixins.text-gradient(var(--app-dark-text-gradient));

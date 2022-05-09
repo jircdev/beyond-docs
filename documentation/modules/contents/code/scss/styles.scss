@@ -1,4 +1,5 @@
 @import "~template/sass/mixins/set-media";
+
 .block__note {
   border: 1px solid var(--color-yellow-90);
   padding: 15px;
@@ -26,19 +27,22 @@
 
 .page__main-container {
   display: grid;
-  grid-template-columns: 1fr 250px;
   gap: 15px;
+  grid-template-columns: 1fr;
+
+  aside {
+    display: none;
+  }
 
   .page__main-content {
     max-width: 100%;
     overflow: hidden;
   }
 
-  @include set-media('small-screen', false, max) {
-    grid-template-columns: 1fr;
-
+  @include set-media('md-screen', false, 'min') {
+    grid-template-columns: 1fr 250px;
     aside {
-      display: none;
+      display: grid;
     }
   }
 

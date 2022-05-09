@@ -7,22 +7,28 @@ export function Solution() {
         <div className="container">
             <header className="header__section text-center">
                 <h3>Desarrollo universal</h3>
-                <span className="subtitle">El framework enfocado en hacer que las mismas herramientas y técnicas
-                            funcionen para múltiples distribuciones  y tecnologías de manera simple.</span>
+                <span className="subtitle">
+                    Enfocado en hacer que las mismas herramientas y técnicas
+                            funcionen para múltiples distribuciones  y tecnologías de manera simple y en  la creación
+                    de micro servicios y micro frontends.
+                </span>
             </header>
 
 
             <div className="container cards__container">
-                <Card title="Universal" href="/docs/backend">
-                    Permite configurar distintas distribuciones para crear servicios <span
-                    className="accent">Node</span>, Backends listos para conectarlos con aplicaciones cliente u otros
-                    backends <span className="accent">Node</span> y paquetes <span
-                    className="highlight">NPM</span> estandarizados.
+                <Card title="Typescript Universal" href="/docs/backend">
+                    Diseñado para crear desde un mismo proyecto, múltiples distribuciones como sitios web,
+                    aplicaciones
+                    <Elink href="https://cordova.apache.org/"> Córdova</Elink>,
+                    <Elink href="https://docs.npmjs.com/packages-and-modules"> paquetes NPM </Elink>
+                    y código <Elink href="https://nodejs.org"> Node</Elink>.
                 </Card>
                 <Card title="Desarrollo Isomorfico" href="/docs/tutorial/web">
-                    Con capacidad de crear sitios con renderizado <span className="accent">SSR</span>, <span
-                    className="accent">CSR</span> o un estaticos, incluso se pueden integrar estas metodologías
-                    simultaneamente por medio de módulos.
+                    Listo para publicar sitios estáticos, <strong>SSR</strong>, <strong>CSR</strong> o arquitecturas
+                    <Elink href="https://jamstack.org/"> Jamstack</Elink> y con posibilidad de
+                    usarlas en conjunto por medio de
+                    <Elink href="https://micro-frontends.org/"> micro frontends</Elink>.
+
 
                 </Card>
                 <Card title="Frameworks de vistas" href="/docs/widgets">
@@ -35,18 +41,6 @@ export function Solution() {
             </div>
 
 
-            <section>
-                <p className="text-center">
-                    Ideal para desarrollar desde paquetes npm, como librerias o widgets hasta la creación de
-                    proyectos webs con arquitectura <a target="_blank"
-                                                       href="https://jamstack.org/">Jamstack</a> o con
-                    Renderizado servidor (SSR), aplicaciones moviles con <a target="_blank"
-                                                                            href="https://cordova.apache.org/">Cordova</a>,
-                    servicios o backends en <a href="https://nodejs.org/en/" target="_blank">NodeJS</a> que
-                    pueden
-                    intercomunicarse entre ellos de forma automática por medio de websockets.
-                </p>
-            </section>
         </div>
     )
 }
