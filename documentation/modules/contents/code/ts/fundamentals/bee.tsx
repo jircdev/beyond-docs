@@ -4,15 +4,29 @@ import {Link, Elink} from '@beyond/ui/link/code';
 export function BEE() {
     return (
         <div className="content">
-            <h1>Node</h1>
+            <h1>Distribuciones</h1>
 
+            <p>Las distribuciones representan el entorno de ejecución de un proyecto. Es necesario configurar una
+                distribución por cada entorno en el que se desee trabajar.
+                <span className="beyond">BeyondJS</span> crea un <strong>Entorno de Ejecución de Beyond
+                    (BEE)</strong> por cada distribución creada. Más adelante se explicará que es exactamente un BEE y
+                las ventajas que ofrece.
+            </p>
+            <h1>Node</h1>
             <p>
                 <span className="beyond">BeyondJS</span> permite realizar proyectos escalables y eficientes con
                 <Elink href="https://nodejs.org">Node.js</Elink> construidos directamente con typescript y buscando
                 mejorar la experiencia de desarrollo, por medio de la integración de HMR.
             </p>
 
-            <p>La configuración de modulos node en <span className="beyond">BeyondJS</span> se hace por medio</p>
+            <p>Para trabajar con node, es necesario crear una distribución de tipo node. A partir de allí, <span
+                className="beyond">BeyondJS</span> se encargará de levantar el entorno de ejecución (BEE) y dejar
+                disponible todos los modulos del proyecto que esten configurados para las plataformas que manejan node.
+            </p>
+            <h3>Distribución</h3>
+
+            <p>La configuración de modulos node en <span className="beyond">BeyondJS</span> se hace por medio de las
+                distribuciones. El desarrollador configura una distribución</p>
             <p>
                 Como se explica en otras partes de esta documentación, un modulo en BeyondJS es un contenedor de
                 bundles, donde puede existir uno o varios <code className="inline-code">bundles</code>.A su vez, cada
@@ -23,14 +37,7 @@ export function BEE() {
                 experiencia.
             </p>
 
-            <h3 id="configure-node">Configurar un modulo para node</h3>
-            <p>Para trabajar con node, es necesario crear alguno de los siguientes bundles:
-                <code className="inline-code">code</code>, <code className="inline-code">ts</code>, <code
-                    className="inline-code">backend</code> o <code className="inline-code">bridge</code>. Asimismo,
-                debe especificarse en el <code className="inline-code">module.json</code> el platform correspondiente,
-                el cual puede ser
-                <code className="inline-code">backend</code> o <code className="inline-code">node</code>
-            </p>
+
             <h2>BEE&nbsp;
                 <small>(Beyond Execution Environment)</small></h2>
             <p>
