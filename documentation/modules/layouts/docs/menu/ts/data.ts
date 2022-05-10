@@ -30,8 +30,18 @@ export const Menu = [
                 label: 'Projectos',
             },
             {
-                id: 'modules',
+
                 label: 'Módulos',
+                children: [
+                    {
+                        id: 'modules/introduction',
+                        label: 'Modulos en Beyond',
+                    },
+                    {
+                        id: 'modules/config',
+                        label: 'Configuración',
+                    }
+                ]
             },
             {
                 id: 'bundles',

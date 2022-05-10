@@ -11,13 +11,10 @@
   .accent {
     color: var(--accent-color);
   }
-  a {
-    text-decoration: none;
-  }
 
   .docs__card {
     text-decoration: none;
-    background: var(--color-gray-90);
+    background: var(--app-element-surface);
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -28,7 +25,7 @@
     transition: all 200ms ease-in;
 
     &:hover {
-      background: var(--color-carbon-90);
+      background: var(--app-element-hover-surface);
       padding-left: 1.5rem;
       padding-right: 2.5rem;
     }

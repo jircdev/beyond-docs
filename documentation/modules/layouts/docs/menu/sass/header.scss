@@ -7,22 +7,8 @@
   border-bottom: 1px solid var(--separator-color);
   align-content: center;
 
-
   .menu-docs__mobile-header {
     display: none;
-  }
-
-  .img-logo {
-    margin: 0;
-    width: 50%;
-    justify-content: left;
-
-    img {
-      width: 100%;
-      height: 30px;
-      object-fit: contain;
-      object-position: left;
-    }
   }
 
   h4 {

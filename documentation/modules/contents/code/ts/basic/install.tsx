@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {Code} from "@beyond/docs/code/code";
 import {Link} from '@beyond/ui/link/code';
+import {NextLinks} from '@beyond/docs/components/next-links/code';
 
 export function Install() {
     return (
@@ -16,7 +17,7 @@ export function Install() {
             </ul>
             <p>Instalamos Beyond:</p>
             <Code language="bash">
-                {`> npm i -g  beyond}
+                {`> npm i -g  beyond`}
             </Code>
 
             <p>
@@ -25,7 +26,7 @@ export function Install() {
                 de comandos y ejecutar "beyond".
             </p>
             <Code language="bash">
-                {` > `beyond`}
+                {` > beyond`}
             </Code>
             <p>Si todo sale bien, aparecerá un mensaje diciendote que beyond se está ejecutando y el puerto de acceso
                 para ir
@@ -33,13 +34,11 @@ export function Install() {
             <p>¡Y ya está! ¿Simple verdad?
                 Puedes empezar con tu proyecto utilizando el dashboard y tu IDE de preferencia.</p>
 
-            <div className="next__content link__content">
-                <ul>
-                    <li><Link href="/docs/web">Dashboard</Link></li>
-                    <li><Link href="/docs/tutorial/web">Tutorial</Link></li>
-                </ul>
+            <NextLinks items={[
+                ['Dashboard', '/docs/web'],
+                ['Tutorial', '/docs/tutorial/we'],
+            ]}/>
 
-            </div>
         </>
     )
 }

@@ -24,6 +24,7 @@ export /*bundle*/ function ContentsPage({component, contentId, sub, hmrChanged})
         });
     });
     if (fetching) return <PreloadPage/>;
+
     const Control = content.control;
     return (
         <div className="page__main-container">

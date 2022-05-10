@@ -54,7 +54,7 @@ class DataModel {
         this.#definition.initModel(db.sequelize);
         this.#ready = true;
         this.#promise = undefined;
-        console.log(16, this.#ready)
+
     }
 
 

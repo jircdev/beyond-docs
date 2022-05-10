@@ -7,10 +7,11 @@ header.header__section {
   flex-direction: column;
   align-items: center;
   max-width: 900px;
-  margin: 2rem auto;
+  margin: 1rem auto;
 
   &.header__left {
     align-items: start;
+    margin: 1rem 0;
   }
 
   h3 {

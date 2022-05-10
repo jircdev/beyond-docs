@@ -101,7 +101,6 @@ export function SVGEventsManager(target) {
         target.addEventListener('mouseleave', this.onMouseLeave)
     }
     this.removeEvents = () => {
-        console.log("AJA");
         target.removeEventListener('mousemove', this.onMouseMove)
         target.removeEventListener('mouseleave', this.onMouseLeave)
     }

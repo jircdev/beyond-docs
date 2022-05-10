@@ -1,4 +1,5 @@
 @import "~template/sass/mixins/set-media";
+
 code *, pre * {
   font-size: 14px;
 }
@@ -6,7 +7,15 @@ code *, pre * {
 .inline-code, code.inline, span.inline {
   display: inline-flex;
   padding: 0 5px;
-  background: var(--secondary-background);
+  color: var(--accent-color);
+
+  &:before {
+    content: "`";
+  }
+
+  &:after {
+    content: "`";
+  }
 }
 
 .page__main-content {

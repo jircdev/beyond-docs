@@ -78,8 +78,8 @@ export const getContent = (contentId: string, sub: string | undefined = undefine
             basics: Concepts,
         },
         error404: Error404,
-        module: {
-            into: ModuleIntro,
+        modules: {
+            introduction: ModuleIntro,
             config: ModuleConfig
         },
         project: {

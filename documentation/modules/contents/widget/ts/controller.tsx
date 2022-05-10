@@ -7,6 +7,7 @@ import {Page} from './views/page';
 export /*bundle*/
 class Controller extends PageReactWidgetController {
     createStore(): IWidgetStore {
+        console.log(1, window.performance.now() / 1000);
         return new Contents(this.body);
     }
 

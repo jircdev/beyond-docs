@@ -4,17 +4,17 @@
   border-bottom: 1px solid var(--accent-color);
   justify-content: space-between;
   position: sticky;
+  height: 60px;
   top: 0;
   z-index: 100;
   background: var(--background);
   //@include shadow-1;
 
-  * {
+  .container, figure, ul {
     padding: 0;
-    margin: 0;
+    margin: auto;
+
   }
-
-
 
   .docs-header__link-icon {
     display: flex;
@@ -30,9 +30,22 @@
     display: flex;
     gap: 15px;
     align-items: center;
+    height: 60%;
+    align-self: center;
 
-    .img-logo {
-      height: 25px;
+    a {
+      display: flex;
+      position: relative;
+      overflow: hidden;
+      height: 60%;
+    }
+
+    .beyond-element-image.img-logo {
+      height: 100%;
+
+      img {
+        height: 34.8px;
+      }
     }
   }
 }

@@ -1,8 +1,8 @@
 import * as React from 'react';
 import {Code} from "@beyond/docs/code/code";
-import {ModuleConfig} from "./config";
-import {Link} from "@beyond/ui/link/code";
 
+import {Link} from "@beyond/ui/link/code";
+import {NextLinks} from '@beyond/docs/components/next-links/code';
 const exportTpl = `
 export /*bundle*/ class Auth {
     //....
@@ -132,7 +132,12 @@ export function ModuleIntro() {
             <Code language="ts">
                 {`import {Auth} from '@company/project/login/code'`}
             </Code>
-            <ModuleConfig/>
+
+            <NextLinks items={[
+                ['Configuración de modulos', '/docs/modules/config'],
+                ['Bundles', '/docs/bundles'],
+            ]}/>
+
 
         </>
     )

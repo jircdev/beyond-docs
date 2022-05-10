@@ -7,7 +7,7 @@ import {SVGEventsManager} from "./animation-functions";
 import {StrongTitle} from "./strong-tittle";
 import {Hamburger} from './menu/hamburger';
 import {Notice} from "./notice";
-
+import {ThemeToggleButton} from "@beyond/docs/components/theme-button/code";
 
 // import "@beyond/docs/header-animation/widget";
 export function Header() {
@@ -33,6 +33,8 @@ export function Header() {
                     </div>
                     <div className="menu-list__container">
                         <ul className="header__menu">
+
+                            <li><ThemeToggleButton/></li>
                             <li><Link href="/docs/tutorial/web">Tutorial</Link></li>
                             <li><Link href="/docs/intro">Documentation</Link></li>
                             <li><Link href="/examples">Examples</Link></li>

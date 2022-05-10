@@ -22,10 +22,8 @@
   --preload: $secondary;
 
   --border-radius-base: 8px;
-  --border-element-color-1: var(--gray-darker);
-  --app-primary-text-gradient: linear-gradient(to right, var(--primary), var(--secondary));
-  --app-secondary-text-gradient: linear-gradient(to right, var(--primary), var(--secondary-light));
-  --app-dark-text-gradient: linear-gradient(var(--color-carbon-70), var(--gray-light));
+
+
 
   @include light.properties();
 

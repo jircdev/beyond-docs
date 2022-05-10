@@ -32,13 +32,19 @@ p, ul, li {
 }
 
 a {
-  color: var(--accent-color);
+  color: var(--app-link-color);
   cursor: pointer;
   transition: all 200ms linear;
   text-decoration: none;
+  position: relative;
+
+  &:not(.link-more) {
+    text-underline-offset: 1.5px;
+    text-decoration: underline;
+  }
 
   &:hover {
-    color: var(--primary-accent)
+    color: var(--app-link-hover-color);
   }
 }
 
@@ -80,7 +86,7 @@ a {
 
 .page__footer {
   padding: 2rem;
-  border-top: 1px solid var(--border-element-color-1);
+  border-top: 1px solid var(--app-element-border-color-1);
   width: calc(100% - 2rem * 2);
   max-width: 1376px;
   margin: auto;

@@ -1,17 +1,14 @@
 import * as React from 'react';
 import {Svg} from "./svg";
-import {finder} from "./finder";
 import {beyond} from '@beyond-js/kernel/core/ts';
 
 const key = '__beyond-mode';
 
-export function Switch() {
+export /*bundle*/ function ThemeToggleButton() {
     const ref = React.useRef(null);
     const defaultTheme = window?.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    let userTheme = window?.localStorage.getItem(key) ?? defaultTheme;
-
+    const userTheme = window?.localStorage.getItem(key) ?? defaultTheme;
     const cls = `btn-theme-toggle btn-theme--${userTheme}`;
-
 
     const setTheme = (theme) => {
         const container = document.querySelector('html');
@@ -21,9 +18,8 @@ export function Switch() {
         ref?.current.classList.add(current);
         beyond.widgets.attributes.add('data-beyond-mode', theme);
         if (ref?.current.classList.contains(another)) ref?.current.classList.remove(another);
+    };
 
-        finder();
-    }
     React.useEffect(() => {
         const defaultTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
         const userTheme = window?.localStorage.getItem(key);

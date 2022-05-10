@@ -27,74 +27,15 @@
 
   }
 
-  .icon-graphic-container {
-
-    @include relative-absolute {
-      top: 50%;
-      transform: translate(0, -50%);
-    }
-
-  }
-
   .icons-graphic {
-    position: relative;
-    width: 100%;
-
-    text-align: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: center;
+    display: flex;
     align-items: center;
+    justify-content: center;
 
-    .icon-mobile {
-      top: -50px;
-      right: 0;
+    .beyond-icon {
+      height: 85%;
+      width: 85%;
     }
-
-    .icon-arrow {
-      height: 60px;
-      padding-top: -30px;
-
-      &.server-to-mobile {
-        transform: rotate(45deg);
-      }
-
-      &.server-to-desktop {
-        transform: rotate(135deg);
-      }
-    }
-
-    .icon-desktop {
-      position: absolute;
-      bottom: -40px;
-      right: 40px;
-    }
-
-  }
-
-  @include set-media('mobile', false, 'max') {
-    .icons-graphic {
-      height: auto;
-
-      .icon-mobile {
-        top: -50px;
-      }
-    }
-    svg {
-      height: 70px;
-      width: 70px;
-    }
-    .icon-arrow {
-
-      &.server-to-mobile {
-        transform: rotate(35deg);
-      }
-
-      &.server-to-desktop {
-        transform: rotate(135deg);
-      }
-    }
-
   }
 
   @include set-media('desktop', false, min) {
@@ -110,9 +51,7 @@
       &:nth-child(3) {
         order: 3;
       }
-      .icon-graphic-container {
 
-      }
     }
   }
   @include set-media('tablet', false, max) {
@@ -122,14 +61,6 @@
       //flex-grow: 0;
       display: grid;
       grid-template-columns: 1fr;
-
-      .icon-graphic-container {
-        position: relative;
-
-        .icons-graphic {
-          height: auto;
-        }
-      }
 
       .relative-container {
         //order: 1;

@@ -18,7 +18,7 @@ interface IProps {
 }
 
 export function List({items, className}: IProps) {
-    const output = items.map(item => <MenuItem item={item} key={item.id}/>);
+    const output = items.map((item, i) => <MenuItem item={item} key={`${item.id}.${i}`}/>);
     const cls = `docs__menu__sublist${className ? ` ${className}` : ''}`;
     return (
         <ul className={cls}>

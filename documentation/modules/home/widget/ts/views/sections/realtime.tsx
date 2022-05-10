@@ -5,23 +5,14 @@ import {BeyondIcon} from '@beyond/ui/icons/code';
 import {SVGS} from "../../icons";
 import {Link, Elink} from "@beyond/ui/link/code";
 
+
 export function Realtime() {
     return (
         <>
             <section className="block__features  three-columns realtime-section">
-
-                <div className="relative-container">
-                    <section className="icon-graphic-container">
-                        <div className="icons icons-graphic">
-                            <BeyondIcon icon={SVGS.server} className="icon-server"/>
-                            <div className="arrows">
-                                <BeyondIcon icon={SVGS.arrow} className="icon-arrow server-to-mobile"/>
-                                <BeyondIcon icon={SVGS.arrow} className="server-to-desktop icon-arrow "/>
-                            </div>
-                            <BeyondIcon icon={SVGS.mobile} className="icon-mobile"/>
-                            <BeyondIcon className="icon-desktop" icon={SVGS.desktop}/>
-                        </div>
-                    </section>
+                <div className="icons icons-graphic">
+                    <BeyondIcon icon={SVGS.realtime.icon} viewBox={SVGS.realtime.viewBox}
+                                alt="beyond realtime connection with hmr"/>
                 </div>
                 <div className="content">
                     <h3>HMR en Navegador y <span className="accent">Node</span></h3>

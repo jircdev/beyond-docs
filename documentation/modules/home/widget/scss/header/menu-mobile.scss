@@ -3,10 +3,10 @@
 .top__header {
   width: 100%;
   z-index: 12;
-  border-bottom: 1px solid var(--border-element-color-1);
+  border-bottom: 1px solid var(--app-element-border-color-1);
 
   .menu-container {
-    border-bottom: 1px solid var(--border-element-color-1);
+    border-bottom: 1px solid var(--app-element-border-color-1);
   }
 
   .menu-container {
@@ -79,7 +79,7 @@
             left: 0;
             background: transparent;
             bottom: -5px;
-            border-bottom: 1px solid var(--border-element-color-1);
+            border-bottom: 1px solid var(--app-element-border-color-1);
           }
 
           &:hover {

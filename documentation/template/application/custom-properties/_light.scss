@@ -7,6 +7,7 @@
   --primary-light: #FFA789;
   --primary-accent: #FFA789;
   --text-on-primary: #fff;
+  --accent-color: var(--primary);
   //secondary colors
   --secondary: #121F36;
   --secondary-dark: #121F36;
@@ -16,7 +17,7 @@
   --secondary-background: #{$secondary-bg};
   //background
   --background: #fff;
-  --text-color: #5E5F5C;
+  --text-color: var(--color-gray-50);
   --text-title-color: var(--secondary-dark);
   --text-second-color: var(--gray-dark);
   --text-hover-color: var(--primary);
@@ -24,4 +25,20 @@
   --element-bg: var(--gray-light);
   --element-border-color: var(--gray-light);
   --separator-color: var(--gray-darker);
+
+  //elements
+
+  --app-element-surface: var(--color-gray-10);
+  --app-element-hover-surface: var(--color-gray-10);
+  --app-element-border-color-1: var(--color-gray-10);
+  --app-primary-text-gradient: linear-gradient(to right, var(--secondary-light), var(--primary-dark));
+  --app-secondary-text-gradient: linear-gradient(to right, var(--primary), var(--secondary-light));
+  --app-dark-text-gradient: linear-gradient(var(--color-carbon-50), var(--secondary));
+  --app-animation-color: var(--gray-light);
+  --app-link-color: var(--secondary);
+  --app-link-hover-color: var(--secondary-dark);
+  /**
+  highlight content
+   */
+  --app-insight-surface: var(--primary-light);
 }

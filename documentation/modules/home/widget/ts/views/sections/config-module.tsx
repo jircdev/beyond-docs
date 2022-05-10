@@ -5,7 +5,7 @@ import {Link} from '@beyond/ui/link/code';
 
 const tpl = `
 {
-  "name": "code",
+  "name": "button-component",
   "code": {
     "sass": {
       "path": "sass",
@@ -41,7 +41,7 @@ export function ConfigModule() {
                     necesidad de configuraciones adicionales.
                 </p>
                 <footer className="action">
-                    <Link className="link-more" href="/docs/module">Leer Más</Link>
+                    <Link className="link-more" href="/docs/modules/introduction">Leer Más</Link>
                 </footer>
             </div>
             <CodeBox title="module.json">

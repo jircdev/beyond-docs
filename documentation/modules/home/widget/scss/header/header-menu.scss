@@ -4,6 +4,7 @@
   display: flex;
   justify-content: end;
   margin: 0 0 -72px;
+  height: 60px;
 
   z-index: 12;
   flex-shrink: 1;
@@ -31,6 +32,7 @@
       list-style: none;
       position: relative;
       padding: 5px;
+      display: flex;
 
       &:after {
         position: absolute;
@@ -46,6 +48,9 @@
 
       a {
         text-decoration: none;
+        &:after {
+          display: none;
+        }
       }
 
       &:hover {

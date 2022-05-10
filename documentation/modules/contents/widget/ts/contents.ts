@@ -41,18 +41,13 @@ export class Contents extends Events implements IWidgetStore {
     async fetch() {
         this.#loading = true;
         this.trigger('change');
-        await new Promise(resolve => setTimeout(resolve, 4000));
-
-        this.#value.push({id: 1, name: 'Pepsi'});
-        this.#value.push({id: 2, name: 'Coca Cola'});
-
         this.#loading = false;
         this.#loaded = true;
         this.trigger('change');
     }
 
     hydrate(cached: IContent[]) {
-        console.log(cached);
+
         this.#loading = false;
         this.#loaded = true;
         cached.forEach(company => this.#value.push(company));

@@ -10,7 +10,8 @@
   "languages": {
     "default": "en",
     "supported": [
-      "en"
+      "en",
+      "es"
     ]
   },
   "params": {
