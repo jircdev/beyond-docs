@@ -1,3 +1,5 @@
+@import "~template/sass/mixins/set-media";
+
 .accent {
   color: var(--accent-color) !important;
 }
@@ -5,4 +7,26 @@
 ul {
   padding: 0;
   margin: 0;
+}
+
+.content-container {
+  display: grid;
+  grid-gap: 1rem;
+  padding: 0;
+
+  .two-columns,
+  .three-columns {
+    grid-template-columns: 1fr;
+  }
+
+  @include set-media('tablet', false, min) {
+
+    &.two-columns {
+      grid-template-columns: 1fr 1fr;
+    }
+    &.three-columns {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    margin: 2rem auto;
+  }
 }

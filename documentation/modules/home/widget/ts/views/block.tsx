@@ -1,5 +1,4 @@
 import * as React from 'react';
-import {Link} from '@beyond/ui/link/code';
 import {CodeBox} from "./navigator-box";
 
 const tpl = `

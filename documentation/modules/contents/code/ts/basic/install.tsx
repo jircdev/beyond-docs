@@ -35,8 +35,8 @@ export function Install() {
                 Puedes empezar con tu proyecto utilizando el dashboard y tu IDE de preferencia.</p>
 
             <NextLinks items={[
-                ['Dashboard', '/docs/web'],
-                ['Tutorial', '/docs/tutorial/we'],
+                ['Dashboard', '/docs/dashboard'],
+                ['Tutorial', '/docs/tutorial/web'],
             ]}/>
 
         </>

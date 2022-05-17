@@ -94,6 +94,10 @@ export const Menu = [
                 label: 'HMR',
             },
             {
+                id: "processors",
+                label: "Procesadores"
+            },
+            {
                 id: 'bee',
                 label: 'BEE',
             },

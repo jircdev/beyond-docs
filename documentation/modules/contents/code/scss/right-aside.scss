@@ -4,6 +4,8 @@
   .aside__container {
     position: sticky;
     top: 80px;
+    display: flex;
+    flex-direction: column;
     padding-top: 15px;
 
     h4 {

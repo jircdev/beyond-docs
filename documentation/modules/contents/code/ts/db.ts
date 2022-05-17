@@ -1,7 +1,7 @@
 import {WhatIs} from "./views/what-is/what-is";
 import {WhyBeyond} from "./fundamentals/why";
 import {DashboardPage} from "./views/dashboard/dashboard";
-import {Intro} from "./views/intro";
+
 import {Example} from "./views/example";
 import {Starting} from "./views/starting/starting";
 import {TutorialPage} from "./views/tutorial/tutorial-page";
@@ -9,15 +9,13 @@ import {Concepts} from "./views/concepts/concepts";
 import {Install} from "./basic/install";
 import {Error404} from "./views/error-404";
 import {ModuleConfig} from "./views/concepts/module/config";
-import {ProjectJson} from "./views/concepts/project-json/project-json";
-import {Server} from "./views/concepts/server/index";
+import {ProjectJson} from "./views/concepts/projects/project-json";
 import {NpmPackages} from "./fundamentals/npm-packages";
 import {ModuleIntro} from "./views/concepts/module/module-intro";
-
+import {Server} from "./views/concepts/server/index";
 import {WidgetsPage} from "./basic/widgets/widgets";
 
 import {FetchingDAtaPage} from "./basic/fetching";
-import {SSRPage} from "./basic/ssr";
 import {RoutingPage} from "./basic/routing";
 import {Backend} from "./basic/backend";
 import {Bundle} from "./views/concepts/module/bundle";
@@ -28,6 +26,9 @@ import {TemplatePage} from "./basic/styles/template";
 import {StylesPage} from "./basic/styles/styles";
 import {ThemesPage} from "./basic/styles/themes";
 import {StateManagement} from "./basic/state-management";
+import {RenderingPage} from "./basic/rendering";
+import {Intro, Projects} from "./basic/intro";
+import {Processors} from "./fundamentals/processors";
 
 
 interface IReturn {
@@ -47,7 +48,7 @@ export const getContent = (contentId: string, sub: string | undefined = undefine
         },
     }
     const basics = {
-        projects: ProjectJson,
+        projects: Projects,
         modules: ModuleIntro,
         bundles: Bundle,
         widgets: WidgetsPage,
@@ -56,12 +57,13 @@ export const getContent = (contentId: string, sub: string | undefined = undefine
         styles: StylesPage,
         themes: ThemesPage,
         backend: Backend,
-        ssr: SSRPage,
+        rendering: RenderingPage,
         deployment: DeploymentPage
     };
     const foundations = {
         bee: BEE,
         hmr: HMR,
+        processors: Processors,
     }
     const contents = {
         ...starting,

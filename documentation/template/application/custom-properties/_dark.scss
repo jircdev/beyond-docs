@@ -15,7 +15,6 @@
   --secondary-light: #313C50;
   --secondary-accent: #F7C700;
   --text-on-secondary: #FFFFFF;
-
   --secondary-background: #{$secondary-bg};
   //background
   //--background: linear-gradient(#{ darken(#121F36, 0%)}, #{ darken(#121F36, 10%)});
@@ -39,6 +38,7 @@
   --app-link-color: var(--primary);
   --app-link-hover-color: var(--primary-dark);
   --app-insight-surface: var(--secondary-light-light);
+  --app-link-hover-bg: #{rgba(#FF8056, .3)};
 }
 
 

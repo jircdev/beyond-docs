@@ -1,5 +1,6 @@
 import * as React from 'react';
 import {Link} from '@beyond/ui/link/code';
+import {BeyondName} from "../../beyond";
 
 export function Bundle() {
     return (
@@ -21,7 +22,9 @@ export function Bundle() {
             </p>
             <p><strong>Un bundle</strong> representa el o los archivos compilados ya listos para ser incluidos en
                 el navegador. Estos archivos se componen por código generado por los procesadores incluidos en la
-                configuración del bundle. Como se explicó anteriormente, la posibilidad de que un bundle genere uno o
+                configuración
+            </p>.
+            <p>Como se explicó anteriormente, la posibilidad de que un bundle genere uno o
                 varios archivos finales, depende básicamente de los procesadores incluidos para su empaquetamiento, si
                 es necesarario crear sólo código Javascript se genera un único archivo, si por el contrario se necesita
                 tambien código CSS se generan dos archivos.
@@ -31,10 +34,10 @@ export function Bundle() {
                 posibilidad a los desarrolladores de poder crear sus propios bundles.
             </p>
             <h2 id="transversal">Bundles Transversales</h2>
+            <p>Los bundles transversales, se definen igual que el resto de bundles, pero tienen una particularidad que
+                ofrece ventajas productivas: el código de un bundle transversal es compilado en un archivo único.</p>
             <p>
-                Los bundles transversales son aquellos que pueden ser definidos en diferentes módulos, pero que, en el
-                proceso de compilación, <span
-                className="beyond">BeyondJS</span>los ubica, integra y unifica en un único bundle o archivo final. Los
+                <BeyondName/> los ubica, integra y unifica en un único bundle o archivo final. Los
                 bundle de tipo <span className="inline-code">start</span> son un ejemplo claro de ello, permiten al
                 programador definir lógica que desea sea ejecutada en el arranque de la aplicación.
             </p>

@@ -2,8 +2,9 @@ import * as React from 'react';
 import {Link} from '@beyond/ui/link/code';
 import {Quiz} from "../quiz";
 import {BeyondImage} from '@beyond/ui/image/code';
+import {BeyondName} from "./beyond";
 
-export function Intro() {
+export function __Intro() {
     return (
         <>
 
@@ -27,16 +28,7 @@ export function Intro() {
             <BeyondImage src="/images/tutorials/beyond-environments.png" alt="Beyond environments"/>
 
 
-            <p><span className="beyond">BeyondJS</span> se enfoca principalmente en tres partes</p>
-            <ul>
-                <li>Creación de proyectos node y Librerias NPM.</li>
-                <li>Aplicaciones Web con SSR o CSR y Mobile.</li>
-                <li>Diseñado para poder integrar librerias de vistas y paquetes <span
-                    className="highlight">npm</span> que esten pensados para ser usados de forma modular.
-                </li>
-            </ul>
-
-            <h3>¿Por qué usarlo?</h3>
+            <h3>¿Por qué usar <BeyondName/>?</h3>
 
             <p>El desarrollo con tecnologías web es bastante complejo, por diversos motivos que, podriamos sintetizar a
                 grandes rasgos en tres items generales:</p>
@@ -63,46 +55,7 @@ export function Intro() {
             </p>
 
 
-            <p> A continuación, listamos algunas de las caracteristicas más relevantes de <span
-                className="beyond">BeyondJS.</span>
-            </p>
 
-            <ul>
-                <li><strong>Despliegue universal</strong>: Un mismo código, cualquier entorno.</li>
-                <li><strong>Carga modular</strong> y a demanda. Esto quiere decir que el código sólo carga una vez,
-                    cuando es requerido.
-                </li>
-                <li><strong>Dashboard</strong> o panel de control muy poderoso para desarrolladores.</li>
-                <li><strong>Plug & play</strong> de módulos.</li>
-                <li><strong>Ecosistema único</strong> de desarrollo
-                    entre <strong>Backend</strong> y <strong>Frontend</strong>.
-                </li>
-                <li><strong>Real Time</strong> listo para implementar con websockets.</li>
-                <li><strong>Integración</strong> automática con frameworks de vistas como
-                    <a href="http://reactjs.org" target="_blank">React</a>,
-                    <a href="https://vuejs.org/" target="_blank">Vue</a>,
-                    <a href="https://svelte.dev/" target="_blank">Svelte</a>.
-                </li>
-
-                <li><strong>Typescript más inteligente</strong>: transpilado y chequeo de tipos en paralelo, para mejor
-                    productividad y rendimiento.
-                </li>
-                <li><strong>HMR</strong> modular y en el código backend de forma automática.</li>
-                <li><strong>Sin árbol de dependencias</strong> Beyond trabaja bajo un paradigma distinto al que usan
-                    empaquetadores como <strong>webpack</strong>.
-                </li>
-
-
-                <li><strong>Jamstack + SSR</strong>.</li>
-                <li>Integración estandarizada con NPM, listo para publicar.</li>
-                <li><strong>Entorno de ejecución </strong> de servicios gestionados por beyond.</li>
-                <li><strong>Web Components</strong> integrados.</li>
-                <li><strong>Multilenguaje</strong> manejado por medio de bundles.</li>
-                <li>Manejo de plantillas y sobreescritura.</li>
-
-
-            </ul>
-            <Quiz id="intro"/>
         </>
     )
 }

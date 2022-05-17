@@ -1,0 +1,17 @@
+{
+  "name": "components/next-links",
+  "code": {
+    "sass": {
+      "path": "/code/scss",
+      "files": [
+        "*"
+      ]
+    },
+    "ts": {
+      "path": "/code/ts",
+      "files": [
+        "*"
+      ]
+    }
+  }
+}

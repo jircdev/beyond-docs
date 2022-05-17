@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {AppIcon} from "@beyond/docs/ui/icons/code";
 import {ModalImage} from "../modal-image";
+import {BeyondName} from "../beyond";
 
 export function DashboardPage() {
     return (
@@ -14,13 +15,12 @@ export function DashboardPage() {
             <h3 id="typescript">Typescript</h3>
             <p>
                 Typescript es un lenguaje que llegó a Javascript y que ha generado opiniones positivas y negativas.
-                Generalmente las positivas están asociadas a la utilidad del tipado de datos y manejo de errores y las
-                negativas a <strong>su lentitud en el procesamiento</strong>. En este sentido, <span
-                className="beyond">Beyond</span> busca optimizar el trabajo con typescript haciendo uso de su
-                transpilador y su compilador en simultaneo para brindar una experiencia más eficiente al desarrollador,
-                además interpreta los errores, analiza las dependencias de un módulo y los módulos consumidores para
-                repasar los posibles errores de código y los notifica por medio del <span
-                className="beyond">Dashboard</span>.
+                Generalmente las positivas están asociadas a la utilidad del tipado de datos y manejo de errores,
+                mientras que las negativas a <strong>su lentitud en el procesamiento</strong>. En este
+                sentido, <BeyondName/> busca optimizar el trabajo con typescript haciendo uso de su
+                transpilador y su compilador en simultáneo para brindar una experiencia más eficiente al desarrollador.
+                Además, interpreta los errores, analiza las dependencias de un módulo y quienes lo consumen para
+                identificar los posibles errores de código y notificarlos en tiempo real.
 
             </p>
             <h3 id="time-dev">Tiempo invertido en el desarrollo</h3>

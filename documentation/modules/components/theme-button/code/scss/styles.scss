@@ -1,0 +1,64 @@
+.btn-theme-toggle {
+  --size: 24px;
+  --icon-fill: #FFF;
+  --icon-fill-hover: hsl(210 10% 15%);
+  background: none;
+  border: none;
+  padding: 0;
+
+  inline-size: var(--size);
+  block-size: var(--size);
+  aspect-ratio: 1;
+  border-radius: 50%;
+
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  outline-offset: 5px;
+  //animation: rotate 1s linear infinite;
+  & > svg {
+    inline-size: 100%;
+    block-size: 100%;
+    stroke-linecap: round;
+    transition: 200ms all var(--ease-out-5);
+
+    * {
+      transition: 200ms all var(--ease-out-5);
+    }
+
+  }
+
+  &.btn-theme--dark svg {
+
+    fill: rgba(var(--text-color), .8);
+    stroke: rgba(var(--text-color), .8);
+
+    > circle {
+      fill: var(--text-color);
+      stroke: var(--text-color);
+    }
+
+    .moon > circle {
+      transform: translate(-7px);
+      transition: all 300ms var(--ease-out-5);
+
+    }
+
+    .sun-beams {
+      display: none;
+    }
+  }
+
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    //transform: rotate(360deg);
+    //transform: rotate(360deg) scale(2, 2);
+    opacity: .1;
+
+  }
+}

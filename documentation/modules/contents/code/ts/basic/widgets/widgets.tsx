@@ -1,7 +1,11 @@
 import * as React from 'react';
-import {Link} from '@beyond/ui/link/code';
+import {Elink, Link} from '@beyond/ui/link/code';
 import {Code} from "@beyond/docs/code/code";
 import {ModalImage} from "../../views/modal-image";
+import {BeyondName} from "../../views/beyond";
+import {Intro} from "./intro";
+import {TypeProperty} from "../../views/type-property";
+
 
 const tpl = `"widget": {
     "hmr": true,
@@ -49,95 +53,128 @@ class Controller extends ReactWidgetController {
 export function WidgetsPage() {
     return (
         <>
-            <h1 id="intro">Widgets</h1>
+            <Intro/>
+            <h2 id="creation">Creación de widgets</h2>
 
-
-            <p>Los <strong>Widgets</strong> representan a un <a
-                href="https://developer.mozilla.org/en-US/docs/Web/Web_Components" target="_blank">Componente
-                Web</a> expuesto de forma directa en el DOM HTML.
-                Las páginas y layouts en <span className="beyond">BeyondJS</span> son widgets que reciben
-                configuraciones particulares, como la url de
-                acceso o el número de parametros en la url.
-
-            </p>
-            <p>Estés o no asociado con los Componentes Web, a continuación explicamos la ventaja de utilizarlos: </p>
+            <div className="block__note">
+                Los widgets son un tipo de bundle, si quieres leer acerca de todos los tipos de bundles existentes,
+                puedes dirigirte a la <Link href="/docs/bundle">sección de bundles</Link>.
+            </div>
+            <p>
+                Existen tres tipos de widgets:</p>
             <ul>
-                <li><span className="beyond">BeyondJS</span> es un meta-framework agnóstico a las tecnologías y está
-                    pensado para poder trabajar los proyectos del lado cliente, con una estructura de
-                    <a href="https://micro-frontends.org/" target="_blank">micro-frontends</a>. Esta estructura permite
-                    integrar diferentes stacks tecnológicos y equipos de trabajo en un mismo proyecto y los
-                    componentes web son esenciales para el encapsulamiento de estas tecnologías.
+                <li><strong>page</strong>: representan páginas web</li>
+                <li><strong>layout</strong>: son contenedores de páginas, permiten definir contenido que deba mantenerse
+                    en
+                    varias páginas.
                 </li>
-                <li>Cada widget puede usar una suite de tecnología distinta sin interferir con el resto. Esto implica,
-                    por ejemplo, que se podría trabajar con React y Vue en un mismo proyecto.
-                </li>
-                <li>
-                    Los componentes web, cargan sus dependencias a demanda y no requieren de funcionalidades externas,
-                    esto permite que queden disponibles para ser incluidos en otros proyectos de forma simple.
+                <li><strong>default</strong>: widgets generales que no requieren una especificación de tipo, son
+                    manejados
+                    como web components igual.
                 </li>
             </ul>
-            <h2 id="creation">Creación de widgets</h2>
-            <p>Crear widgets es sumamente simple, puede hacerse de forma manual o por medio del dashboard. En el
-                dashboard, se puede hacer al momento de crear un módulo o luego de crearlo, en la opción de agregar
-                bundle.</p>
+            <p>Asimismo, requieren de caracter obligatorio disponibilizar una clase <span
+                className="inline">Controller</span>, la cual es descrita más adelante.</p>
+            <p>
+                Los widgets, siguen los línReamientos de cualquier bundle y pueden ser creados desde el dashboard o
+                manualmente.
+            </p>
 
-            <ModalImage src="/contents/static/create-module-widget.png" alt="create widget module beyond"/>
-            <p>La configuración manual, se hace con un ajuste básico en el archivo <Link
-                href="/module/config">module.json</Link> del módulo donde desea agregarse con
-                una estructura simple como la siguiente:</p>
+            <h3><small>Creación manual</small></h3>
+            <p>
+                La configuración manual, se realiza agregando la definición del bundle de tipo widget en el <Link
+                href="/module/config">module.json</Link> del módulo.</p>
             <Code language="json">
                 {tpl}
             </Code>
-            <p>Si se usa el dashboard, este edita los archivos <span className="inline-code">module.json</span> por
-                nosotros y agrega la configuración correspondiente para cada caso.</p>
 
-
-            <h3 id="controller">Controller</h3>
-            <p>Todos los widgets deben poder una clase <span className="inline-code">Controller</span> que exponga un
-                getter <span className="inline-code">widget</span> cuyo valor de retorno debe ser el componente a
-                renderizar
+            <p>
+                El código anterior, define un bundle de tipo <span className="inline">widget</span> con el nombre
+                del web-component como <span className="inline">web-login</span> y con typescript como procesador.
             </p>
+
+            <h3 id="widget-dashboard">Creación con el dashboard</h3>
+
+            <ModalImage src="/contents/static/create-module-widget.png" alt="create widget module beyond"/>
+            <div className="block__note">
+                En el dashboard, todos los bundles se crean desde el formulario de módulos, y los archivos
+                son actualizados automáticamente por <BeyondName/>.
+                se puede conseguir más
+                información al respecto en la sección del dashboard.
+            </div>
+            <h3 id="widget-react">Usando <span className="inline">React</span></h3>
+
+            <p>
+                <span className="inline">React</span> tiene soporte automático por medio de typescript en <BeyondName/>,
+                que utiliza <Elink href="https://babeljs.io/">Babel</Elink> para convertir el código. Por tanto,
+                habiendo agregado el procesador <span className="inline">ts</span> y teniendo instalada la dependencia
+                de <span className="inline">react</span>, tu modulo ya está listo para trabajar con <Elink
+                href="https://reactjs.org"> ReactJS</Elink>.
+            </p>
+
+
+            <h3>Usando <span className="inline">Svelte</span> o <span className="inline">Vue</span></h3>
+            <p>
+                Cada framework tiene su propio <Link href="/docs/processors">procesador</Link>. Si deseas integrar vue
+                debes agregar en la configuración del bundle el procesador <span className="inline">vue</span>, si en
+                cambio, deseas trabajar con svelte, debes agregar en la configuración del bundle el procesador <span
+                className="inline">svelte</span>.
+            </p>
+            <h2 id="controller">Definición del <span className="inline">Controller</span></h2>
+
+
+            <p>Todo widget debe exponer una clase <span className="inline">Controller</span> definida. El objeto
+                Controller es el responsable de la declaración y manejo del web-component que representa al widget. El
+                controller tiene una estructura como la siguiente:</p>
 
             <Code language="ts">
                 {tplController}
             </Code>
-            <h2>Páginas</h2>
-            <Code language="json">
-                {tplPage}
-            </Code>
-            <p>
-                Las páginas se configuran igual que cualquier widget, pero tienen los siguientes parametros adicionales
-                para su configuración:
-            </p>
 
+            <p>
+                En el código anterior, la clase <span className="inline">Controller</span> extiende del objeto <span
+                className="inline">ReactWidgetController</span> que es el controlador base disponibilizado para trabajar
+                con React. <BeyondName/> tiene disponible un controlador para los distintos frameworks de vista. Los
+                objetos son:
+
+            </p>
             <ul>
-                <li><strong>route:</strong> Representa la ruta con la que deseas poder acceder a tu componente</li>
-                <li><strong>layout:</strong> es opcional y define si quieres usar un layout o no en tu página.</li>
-                <li><strong>vdir</strong> es opcional. Permite definir si quieres manejar algún valor dinámico en la url
+                <li><span className="inline">ReactWidgetController</span> y <span
+                    className="inline">ReactPageWidgetController</span>.
+                </li>
+                <li><span className="inline">SvelteWidgetController</span> y <span
+                    className="inline">SveltePageWidgetController</span>.
+                </li>
+                <li><span className="inline">VueWidgetController</span> y <span
+                    className="inline">VuePageWidgetController</span>.
                 </li>
             </ul>
 
-            <h3 id="route-pattern">Patrón de rutas</h3>
-            <p> Se puedenPuedes definir urls con valores dinamicos, para hacerlo, puedes definir la ruta agregando las variables
-                que deseas poder manejar. Para ejemplificarlo, supongamos que tenemos una página de módificación de
-                datos de un usuario
-                y queremos manejar el id por medio de la url. Podriamos definir la ruta de la siguiente forma</p>
-            <Code language="json">
-                {'/user/edit/${userId}'}
-            </Code>
-
             <p>
-                Con esto, podremos acceder a nuestra variable userId desde nuestro widget accediendo al mapa <span
-                className="inline-code">vars</span> disponible en el objeto uri que recibe nuestro widget.
+                Todos los controladores manejan la misma interfaz, pero estan a su vez enfocados en integrar y funcionar
+                con el framework de vista que se esté utilizando.
             </p>
 
-            <h2 id="layouts">Layouts</h2>
+            <h3 id="controller-properties"><small>Propiedades</small></h3>
 
-            <p>Los layouts representan la estructura general de un sitio web, que puede ser compartida entre varias
-                páginas internas.</p>
-            <Code language="json">
-                {tplLayout}
-            </Code>
+            <ul>
+                <li>
+                    <strong><span className="inline">get Widget</span></strong>
+                    <TypeProperty type="object" optional/>:
+                    Se define como un getter y debe retornar el componente de vista principal.
+                </li>
+            </ul>
+
+            <h3 id="controller-methods"><small>Métodos</small></h3>
+            <ul>
+                <li>
+                    <strong><span className="inline">createStore</span></strong>
+                    <TypeProperty type="function" optional/> Permite agregar lógica para el manejo del Estado del
+                    widget, debe retornar un objeto con la interfaz <Link href="/docs/api/IwidgetStore">
+                    <span className="inline">IWidgetStore</span>
+                </Link>
+                </li>
+            </ul>
 
 
         </>

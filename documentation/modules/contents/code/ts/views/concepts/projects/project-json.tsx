@@ -7,27 +7,11 @@ import {ModalImage} from "../../modal-image";
 export function ProjectJson() {
     return (
         <>
-            <h1 id="projects">Proyectos</h1>
 
-            <p>
-                Un proyecto o biblioteca (proyecto hecho en <span className="beyond">BeyondJS</span> que es importado
-                por otro), representa un paquete de funcionalidades disponible para utilizar en los entornos definidos
-                adentro del mismo proyecto, estos entornos pueden ser Node, web, desktop o móvil.
 
-            </p>
-            <ModalImage src="/contents/static/projects-list.png" alt="Beyond's project list view"/>
-            <p>
-                Los proyectos<span className="beyond">BeyondJS</span>siguen la especificación
-                <strong> <a target="_blank" href="https://docs.npmjs.com/cli/v8/using-npm/scope">npm </a></strong>
-                y pueden ser publicados como paquetes de forma simple.
-            </p>
-            <div className="block__note">
-                <span className="beyond">BeyondJS</span> se ejecuta en la carpeta en la cual se corra desde la línea
-                de comandos y no requiere configuración previa para arrancar. Sin embargo, si se desea configurar
-                un proyecto de forma manual, debe hacerse por medio del archivo <code
-                className="inline-code">beyond.json</code>, que permite, entre otras cosas,
-                especificar los proyectos que deben ser levantados por el framework.
-            </div>
+
+            <h2 id="distributions">Distribuciones</h2>
+
 
             <h2 id="properties">Propiedades <span className="file__element">project.json</span></h2>
             <ul className="list__elements-doc">
