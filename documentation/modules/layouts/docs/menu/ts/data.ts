@@ -4,7 +4,7 @@ export const Menu = [
         label: 'Empezando',
         children: [
             {
-                id: '',
+                id: 'intro',
                 label: 'Introducción',
             },
             {
@@ -49,7 +49,30 @@ export const Menu = [
             },
             {
                 id: 'widgets',
-                label: 'Páginas, layouts y widgets',
+                label: 'Widgets',
+                children: [
+                    {
+                        id: "widgets",
+                        label: "Intro"
+                    },
+                    {
+                        id: "widgets/creation",
+                        label: "Creando un widget"
+                    },
+
+                    {
+                        id: "widgets/controller",
+                        label: "Objeto Controller"
+                    },
+                    {
+                        id: "widgets/page",
+                        label: "Page"
+                    },
+                    {
+                        id: "widgets/layout",
+                        label: "Layout"
+                    }
+                ]
             },
             {
                 id: 'routing',
@@ -121,6 +144,10 @@ export const Menu = [
             {
                 id: 'server',
                 label: 'Server',
+            },
+            {
+                id: '/api/uri',
+                label: 'URI'
             },
             {
                 id: 'projects',

@@ -1,0 +1,23 @@
+@use "~template/sass/mixins";
+/**
+ p : primary
+ s : secondary
+ l : light
+ d : dark
+ g : gradient
+ */
+.text-plg {
+  @include mixins.text-gradient(var(--app-primary-text-gradient));
+}
+
+.text-sdg {
+  @include mixins.text-gradient(var(--app-primary-text-gradient));
+}
+
+.text-slg {
+  @include mixins.text-gradient(var(--app-primary-text-gradient));
+}
+
+.text-pdg {
+  @include mixins.text-gradient(var(--app-primary-text-gradient));
+}

@@ -1,11 +1,10 @@
-@import "~template/sass/mixins/set-media";
-
+@use "container";
+@use "~template/sass/mixins/set-media";
 .top__header {
   display: flex;
   justify-content: end;
   margin: 0 0 -72px;
   height: 60px;
-
   z-index: 12;
   flex-shrink: 1;
   align-items: center;
@@ -48,6 +47,7 @@
 
       a {
         text-decoration: none;
+
         &:after {
           display: none;
         }
@@ -60,26 +60,5 @@
 
       }
     }
-  }
-
-  @keyframes exit {
-    from {
-      width: 100%;
-    }
-    to {
-      width: 0;
-      display: none;
-    }
-
-  }
-
-  @keyframes move-to-right {
-    from {
-      width: 0;
-    }
-    to {
-      width: 100%;
-    }
-
   }
 }

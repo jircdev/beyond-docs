@@ -2,6 +2,7 @@ import * as React from 'react';
 import {TypeProperty} from "../../type-property";
 import {Link} from '@beyond/ui/link/code';
 import {Code} from "@beyond/docs/code/code";
+import {NextLinks} from '@beyond/docs/components/next-links/code';
 
 const tpl = `"platforms": [
     "backend",
@@ -35,7 +36,7 @@ const jsonTpl = `\r{
 export function ModuleConfig() {
     return (
         <>
-            <h2>Configuracion de módulos </h2>
+            <h2 id="config">Configuracion de módulos </h2>
 
             <p>El archivo de configuracion de módulos es el <code className="inline-code">module.json</code></p>
 
@@ -66,6 +67,10 @@ export function ModuleConfig() {
 
                 </li>
             </ul>
+            <NextLinks items={[
+                ["Bundles", "/docs/bundles"],
+                ["Widgets", '/docs/widgets']
+            ]}/>
         </>
     )
 }

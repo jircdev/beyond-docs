@@ -1,0 +1,43 @@
+.container {
+  z-index: 2;
+
+  .header__content {
+    width: 70%;
+  }
+
+  .beyond-element-image {
+    margin: 0;
+  }
+
+  > figure {
+
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    width: 30%;
+
+    .beyond__icon {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 800px) {
+    margin-top: 2rem;
+    height: 100%;
+
+    .header__content {
+      width: 100%;
+
+      h1 {
+        font-size: 2rem;
+      }
+    }
+
+    > figure {
+      display: none;
+    }
+  }
+
+}

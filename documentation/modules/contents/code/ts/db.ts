@@ -13,7 +13,7 @@ import {ProjectJson} from "./views/concepts/projects/project-json";
 import {NpmPackages} from "./fundamentals/npm-packages";
 import {ModuleIntro} from "./views/concepts/module/module-intro";
 import {Server} from "./views/concepts/server/index";
-import {WidgetsPage} from "./basic/widgets/widgets";
+import {Widgets} from "./basic/widgets";
 
 import {FetchingDAtaPage} from "./basic/fetching";
 import {RoutingPage} from "./basic/routing";
@@ -29,6 +29,11 @@ import {StateManagement} from "./basic/state-management";
 import {RenderingPage} from "./basic/rendering";
 import {Intro, Projects} from "./basic/intro";
 import {Processors} from "./fundamentals/processors";
+import {WidgetController} from "./basic/widgets/controller";
+import {LayoutWidget} from "./basic/widgets/types/layout";
+import {PageWidget} from "./basic/widgets/types/page";
+import {WidgetCreation} from "./basic/widgets/creation";
+import {APIURI} from "./api/uri";
 
 
 interface IReturn {
@@ -48,27 +53,40 @@ export const getContent = (contentId: string, sub: string | undefined = undefine
         },
     }
     const basics = {
-        projects: Projects,
-        modules: ModuleIntro,
-        bundles: Bundle,
-        widgets: WidgetsPage,
-        stateManagement: StateManagement,
-        routing: RoutingPage,
-        styles: StylesPage,
-        themes: ThemesPage,
-        backend: Backend,
-        rendering: RenderingPage,
-        deployment: DeploymentPage
-    };
+            projects: Projects,
+            modules: ModuleIntro,
+            bundles: Bundle,
+            widgets: {
+                default: Widgets,
+                creation: WidgetCreation,
+                controller: WidgetController,
+                layout: LayoutWidget,
+                page: PageWidget
+            },
+            stateManagement: StateManagement,
+            routing: RoutingPage,
+            styles: StylesPage,
+            themes: ThemesPage,
+            backend: Backend,
+            rendering: RenderingPage,
+            deployment: DeploymentPage
+        }
+    ;
     const foundations = {
         bee: BEE,
         hmr: HMR,
         processors: Processors,
     }
+    const api = {
+        api: {
+            uri: APIURI,
+        }
+    }
     const contents = {
         ...starting,
         ...basics,
         ...foundations,
+        ...api,
         template: TemplatePage,
         fetching: FetchingDAtaPage,
         'what-is-beyond': WhatIs,
@@ -91,9 +109,14 @@ export const getContent = (contentId: string, sub: string | undefined = undefine
     };
 
 
-    let Control: () => JSX.Element = contents.hasOwnProperty(contentId) ? contents[contentId] : contents.error404;
-    if (sub) {
-        Control = Control.hasOwnProperty(sub) ? Control[sub] : contents.error404;
+    if (!contents.hasOwnProperty(contentId) || sub && !contents[contentId].hasOwnProperty(sub)) {
+        return {id: contentId, control: contents.error404};
     }
-    return {id: contentId, control: Control};
+    // the constructor is 'Object' when the contents[contentId] value is a plain object of subitems on contents.
+    if (contents[contentId].constructor.name === 'Object' && !sub) {
+        return {id: contentId, control: contents[contentId].default};
+    }
+
+    return {id: contentId, control: sub ? contents[contentId][sub] : contents[contentId]};
+
 }

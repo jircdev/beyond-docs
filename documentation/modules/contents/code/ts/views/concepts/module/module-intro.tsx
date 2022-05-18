@@ -22,12 +22,12 @@ export function ModuleIntro() {
             <p>Un
                 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules" target="_blank">
                     módulo javascript
-                </a>hoy es representado por un único archivo, con tareas independientes y un scope
+                </a> hoy es representado por un único archivo, con tareas independientes y un scope
                 propio, Este módulo puede exportar elementos y ser importado por otros módulos que consumen las
                 variables, objetos o funciones que este provee.
             </p>
 
-            <p>Los empaquetadores por su parte, suelen utilizar una sintaxis compatible con las imports de ecmascript 6,
+            <p>Los empaquetadores por su parte, suelen utilizar una sintaxis compatible con las imports incluidos en EcmaScript 6,
                 pero son ellos quienes se encargan de analizar el arbol de dependencias, quitando aquellos elementos que
                 no son utilizados en el codigo y
                 <strong> generando un “bundle”</strong> que es a su vez, un contenedor de todos los

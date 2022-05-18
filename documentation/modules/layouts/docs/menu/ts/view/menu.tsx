@@ -11,28 +11,17 @@ interface IState {
     selected: string;
 }
 
-
-interface IContext {
-    close?: () => void;
-}
-
 export /*bundle*/
 function Widget() {
     const [selected, setSelected] = React.useState<IState>();
     const [value, setValue] = React.useState<IValue>({selected, setSelected});
     const parent = React.useRef(null)
     const openedLocal = (typeof window !== undefined)
-        ? window.localStorage.getItem('__menu_opened')
+        ? window?.localStorage.getItem('__menu_opened')
         : true;
     const [opened] = React.useState([true, 'true'].includes(openedLocal));
-
-    React.useEffect(() => {
-        setValue({...value, container: parent?.current});
-    }, []);
-    useBinder([AppManager], () => {
-        parent.current.classList.toggle('docs__menu--opened');
-        // toggleMenu(!opened);
-    });
+    React.useEffect(() => setValue({...value, container: parent?.current}), []);
+    useBinder([AppManager], () => parent.current.classList.toggle('docs__menu--opened'));
     const closeMenu = () => {
         const isOpened = parent.current.classList.contains('docs__menu--opened');
         parent.current.classList.toggle('docs__menu--opened');
@@ -44,27 +33,17 @@ function Widget() {
     }
     const cls = `docs__menu${opened ? ` docs__menu--opened` : ''}`;
     return (
-
-
-        <MenuContext.Provider value={{
-            container: value.container,
-            close: closeMenu
-        }}>
+        <MenuContext.Provider value={{container: value.container, close: closeMenu}}>
             <aside ref={parent} className={cls}>
                 <div className="menu-mobile-container">
                     <header className="aside__header">
-                        <div className="">
-                            <div className="mobile-only">
-                                <BeyondImage src="/images/beyond-logo.png"
-                                             className="img-logo"
-                                             alt="Beyond the universal meta framework"/>
-                            </div>
+                        <div>
+                            <BeyondImage src="/images/beyond-logo.png"
+                                         className="img-logo mobile-only"
+                                         alt="Beyond the universal meta framework"/>
                             <h4>Contents</h4>
                         </div>
-
-                        <BeyondIconButton
-                            onClick={close}
-                            className="docs__menu__list__btn-close" icon="close"/>
+                        <BeyondIconButton onClick={close} className="docs__menu__list__btn-close" icon="close"/>
                     </header>
                     <List items={Menu}/>
                 </div>

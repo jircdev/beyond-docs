@@ -24,6 +24,9 @@
       list-style: none;
       border-left: 2px solid transparent;
 
+      a{
+        color: var(--text-color);
+      }
       &.item--active,
       &:hover {
         border-left: 2px solid var(--secondary-accent);

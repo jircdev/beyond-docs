@@ -31,7 +31,7 @@ export function StrongTitle() {
     }, [])
 
     return (
-        <strong className="text-slg" ref={ref}>{labels[current]}</strong>
+        <strong ref={ref}>{labels[current]}</strong>
     );
 
 }

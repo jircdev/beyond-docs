@@ -11,7 +11,8 @@
 
 .block__features {
   display: grid;
-  border: 1px solid var(--app-element-border-color-1);
+  border: 1px solid var(--secondary-light);
+  background: var(--app-element-surface);
   padding: 2rem;
   border-radius: var(--border-radius-base);
   grid-gap: 2rem;
@@ -124,7 +125,6 @@
       margin: 0;
 
       &:nth-child(2) {
-        left: 0;
         top: -30%;
         left: -40%;
       }
@@ -143,6 +143,10 @@
   ul {
     margin: 0;
     padding: 0;
+  }
+
+  @media(max-width: 1024px) {
+
   }
 }
 

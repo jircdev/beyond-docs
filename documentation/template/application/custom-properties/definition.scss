@@ -1,14 +1,15 @@
 @use 'dark';
 @use 'light';
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@800&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;600&display=swap');
 
 :root {
 
-  --font-family: 'Inter', sans-serif;
+  --font-family: 'Rubik', sans-serif;
   --secondary-font-family: 'Roboto', sans-serif;
-  --title-font: 'Roboto', sans-serif;
-  --header-font: 'Assistant', sans-serif;
+  --title-font: 'Rubik', sans-serif;
+
+  --header-font: 'Rubik', sans-serif;
   --bg-header: var(--secondary-background);
   --gray-base: #000000;
   --gray-darker: #333333;
@@ -22,8 +23,6 @@
   --preload: $secondary;
 
   --border-radius-base: 8px;
-
-
 
   @include light.properties();
 

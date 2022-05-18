@@ -1,0 +1,35 @@
+header.home__header .header__content {
+  max-width: 700px;
+  .main__title {
+    padding: 4rem 0;
+  }
+
+  .pre__title {
+    font-size: 1.6rem;
+    color: var(--primary-light);
+  }
+
+  h1 {
+    margin: 5px 0;
+    font-size: 3.2rem;
+    font-family: var(--header-font);
+    letter-spacing: -0.43px;
+    line-height: .9;
+
+    background: var(--app-primary-text-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    strong {
+      padding: 1.2rem 0 0;
+      display: flex;
+      color: var(--primary);
+    }
+  }
+
+  .header__description {
+    font-size: 1.3rem;
+  }
+
+
+}

@@ -4,6 +4,7 @@ import {hmr, ContentsPage} from "@beyond/docs/contents/code";
 
 export function Page({uri, component}): JSX.Element {
     const propsContent = uri.vars.get('content');
+    console.log(10, uri);
     const [hmrChanded, setHmr] = React.useState(performance.now());
     const sub = uri.vars.get('sub');
     const contentId = !['', undefined, null].includes(propsContent) ? propsContent : 'intro';

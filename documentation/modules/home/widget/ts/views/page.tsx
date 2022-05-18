@@ -16,7 +16,7 @@ export function Page({uri, component}): JSX.Element {
     return (
         <>
             <Header/>
-            <main>
+            <main className="main__home__content">
                 <Solution/>
                 <Technologies/>
                 <div className="container">

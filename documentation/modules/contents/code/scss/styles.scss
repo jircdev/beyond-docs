@@ -17,8 +17,7 @@
 [data-beyond-mode="dark"] {
   .block__note {
     background: var(--secondary-dark);
-    box-shadow: -5px -5px 30px 5px var(--secondary-darker),
-    5px 5px 30px 5px var(--secondary-darker);
+
     color: var(--text-color) !important;
     border: 1px solid var(--secondary-light);
     border-left-width: 8px;

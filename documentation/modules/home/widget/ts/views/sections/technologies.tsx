@@ -7,7 +7,20 @@ import {BeyondSwiperSlider} from '@beyond/ui/swiper/code';
 export function Technologies() {
     return (
 
-        <div className="container">
+        <div className="container technologies__section">
+
+            <section className="">
+                <h3>
+                    <span className="pre__title">A very simple way</span>
+                    Desarrollo universal
+                </h3>
+                <span className="subtitle">
+                    Enfocado en hacer que las mismas herramientas y técnicas
+                            funcionen para múltiples distribuciones  y tecnologías de manera simple y en  la creación
+                    de micro servicios y micro frontends.
+                </span>
+            </section>
+
             <div className="banner__icons">
                 <BeyondIcon icon={SVGS.typescript}/>
                 <BeyondIcon icon={SVGS.node}/>
