@@ -9,7 +9,7 @@ import {Concepts} from "./views/concepts/concepts";
 import {Install} from "./basic/install";
 import {Error404} from "./views/error-404";
 import {ModuleConfig} from "./views/concepts/module/config";
-import {ProjectJson} from "./views/concepts/projects/project-json";
+import {ProjectJson} from "./basic/projects/project-json";
 import {NpmPackages} from "./fundamentals/npm-packages";
 import {ModuleIntro} from "./views/concepts/module/module-intro";
 import {Server} from "./views/concepts/server/index";
@@ -27,13 +27,16 @@ import {StylesPage} from "./basic/styles/styles";
 import {ThemesPage} from "./basic/styles/themes";
 import {StateManagement} from "./basic/state-management";
 import {RenderingPage} from "./basic/rendering";
-import {Intro, Projects} from "./basic/intro";
+import {Intro} from "./basic/intro";
+import {ProjectsPage} from "./basic/projects";
 import {Processors} from "./fundamentals/processors";
 import {WidgetController} from "./basic/widgets/controller";
 import {LayoutWidget} from "./basic/widgets/types/layout";
 import {PageWidget} from "./basic/widgets/types/page";
 import {WidgetCreation} from "./basic/widgets/creation";
 import {APIURI} from "./api/uri";
+
+import {BeyondWidgetApi} from "./api/beyond-widget-api";
 
 
 interface IReturn {
@@ -53,17 +56,19 @@ export const getContent = (contentId: string, sub: string | undefined = undefine
         },
     }
     const basics = {
-            projects: Projects,
+            projects: ProjectsPage,
             modules: ModuleIntro,
             bundles: Bundle,
             widgets: {
                 default: Widgets,
-                creation: WidgetCreation,
+                definition: WidgetCreation,
                 controller: WidgetController,
                 layout: LayoutWidget,
                 page: PageWidget
             },
-            stateManagement: StateManagement,
+            state: {
+                management: StateManagement
+            },
             routing: RoutingPage,
             styles: StylesPage,
             themes: ThemesPage,
@@ -80,6 +85,7 @@ export const getContent = (contentId: string, sub: string | undefined = undefine
     const api = {
         api: {
             uri: APIURI,
+            BeyondWidget: BeyondWidgetApi
         }
     }
     const contents = {

@@ -1,0 +1,23 @@
+{
+  "name": "contents-data",
+  "code": {
+    "hmr": true,
+    "ts": {
+      "path": "/ts",
+      "files": [
+        "*"
+      ]
+    },
+    "sass": {
+      "path": "/scss",
+      "files": [
+        "*"
+      ]
+    }
+  },
+  "static": {
+    "includes": [
+      "./static"
+    ]
+  }
+}

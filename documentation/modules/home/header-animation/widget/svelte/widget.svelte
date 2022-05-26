@@ -59,7 +59,6 @@
 
         const getAngle = value => {
             if (value === 'none') {
-                console.log(10, "nope")
                 return;
             }
             let values = value.split('(')[1];

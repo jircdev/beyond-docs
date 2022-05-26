@@ -9,13 +9,13 @@ interface IProps {
 }
 
 export function TypeProperty({type, href = false, optional = false}: IProps) {
-    const output = href ? <Link href={href}>{`<${type}>`} </Link> : `<${type}> `;
+    const output = href ? <Link href={href}>{`${type}`} </Link> : `${type} `;
     return (
         <span className="type__property">
             {output}
             {
                 optional &&
-                <span className="type__optional">{"[optional] "} </span>
+                <span className="type__optional">{"optional"} </span>
             }
         </span>
     )

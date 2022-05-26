@@ -27,7 +27,6 @@
   --element-border-color: var(--gray-light);
   --separator-color: var(--gray-lighter);
 
-
   --primary-surface: #18253B;
 
   //elements
@@ -46,6 +45,7 @@
 
   --app-insight-surface: var(--secondary-light-light);
   --app-link-hover-bg: #{rgba(#FF8056, .3)};
+  --app-opacity-bg: rgba(0, 0, 0, .3);
 }
 
 

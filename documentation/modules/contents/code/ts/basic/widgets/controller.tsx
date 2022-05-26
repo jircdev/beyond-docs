@@ -4,6 +4,7 @@ import {BeyondName} from "../../views/beyond";
 import {Code} from "@beyond/docs/code/code";
 import {TypeProperty} from "../../views/type-property";
 import {Link} from "@beyond/ui/link/code";
+import {ObjectProperty} from "../../views/object-property";
 
 const tplController =
     `\rimport {ReactWidgetController} from '@beyond-js/kernel/react-widget/ts';
@@ -57,34 +58,36 @@ export function WidgetController() {
 
             <ul>
                 <li>
-                    <strong><span className="inline">Widget</span></strong>
-                    <TypeProperty type="getter"/>:
+                    <ObjectProperty type="getter">Widget</ObjectProperty>
                     Se define como un getter y debe retornar el componente de vista principal.
                 </li>
                 <li>
-                    <strong><span className="inline">uri</span></strong>
-                    <TypeProperty type="URIObject" optional href="/docs/api/uri"/>: Objeto Uri con toda la información
+                    <ObjectProperty type="URIObject" optional href="/docs/api/uri">uri</ObjectProperty> Objeto Uri con
+                    toda la información
                     asociada a la url actual.
+                </li>
+                <li>
+                    <ObjectProperty type="String" href="/docs/api/uri">layout</ObjectProperty>
+                    Nombre del objeto Layout contenedor.
                 </li>
             </ul>
 
             <h3 id="controller-methods"><small>Métodos</small></h3>
             <ul>
                 <li>
-                    <strong><span className="inline">createStore</span></strong>
-                    <TypeProperty type="function" optional/> Permite agregar lógica para el manejo del Estado del
+                    <ObjectProperty type="function" optional>createStore</ObjectProperty>
+                    Permite agregar lógica para el manejo del Estado del
                     widget, debe retornar un objeto con la interfaz <Link href="/docs/api/IwidgetStore">
-                    <span className="inline">IWidgetStore</span>
-                </Link>
+                    <span className="inline">IWidgetStore</span></Link>
                 </li>
                 <li>
-                    <strong><span className="inline">initialise</span></strong>
-                    <TypeProperty type="void" optional/>: Permite agregar lógica a ejecutarse previo al montado del
+                    <ObjectProperty type="void">initialise</ObjectProperty>
+                    Permite agregar lógica a ejecutarse previo al montado del
                     componente web en el DOM HTML.
                 </li>
                 <li>
-                    <strong><span className="inline">hide</span></strong>
-                    <TypeProperty type="void" optional/>: Se ejecuta cuando ha sido renderizada y se oculta, esto sucede
+                    <ObjectProperty type="void">hide</ObjectProperty>
+                    Se ejecuta cuando ha sido renderizada y se oculta, esto sucede
                     cuando se navega de una url a otra.
                 </li>
                 <li>

@@ -23,7 +23,7 @@ export function Bundle() {
             <p><strong>Un bundle</strong> representa el o los archivos compilados ya listos para ser incluidos en
                 el navegador. Estos archivos se componen por código generado por los procesadores incluidos en la
                 configuración
-            </p>.
+            </p>
             <p>Como se explicó anteriormente, la posibilidad de que un bundle genere uno o
                 varios archivos finales, depende básicamente de los procesadores incluidos para su empaquetamiento, si
                 es necesarario crear sólo código Javascript se genera un único archivo, si por el contrario se necesita
