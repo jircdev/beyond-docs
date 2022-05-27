@@ -1,8 +1,6 @@
 import * as React from "react";
-import {Switch} from "./switch";
 import {AppIcon} from "@beyond/docs/ui/icons/code";
 import {Link, Elink} from "@beyond/ui/link/code";
-import {beyond__styles} from '@beyond/docs/layout/styles/code';
 import {Hamburger} from "./hamburger";
 import {Notice} from "./notice";
 import {BeyondImage} from '@beyond/ui/image/code';

@@ -1,6 +1,6 @@
 import {ReactWidgetController} from '@beyond-js/react-widgets/controllers/ts';
 import {Events, IWidgetStore} from "@beyond-js/kernel/core/ts";
-import {Layout} from "../../../main/ts/layout";
+import {Widget} from './view/widget';
 
 class Store extends Events implements IWidgetStore {
     async fetch() {
@@ -25,7 +25,7 @@ export /*bundle*/
 class Controller extends ReactWidgetController {
 
     get Widget() {
-        return Layout;
+        return Widget;
     }
 
     async fetch() {

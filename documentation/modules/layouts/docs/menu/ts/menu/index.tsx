@@ -12,7 +12,7 @@ interface IState {
 }
 
 export /*bundle*/
-function Widget() {
+function WidgetMenu() {
     const [selected, setSelected] = React.useState<IState>();
     const [value, setValue] = React.useState<IValue>({selected, setSelected});
     const parent = React.useRef(null)
