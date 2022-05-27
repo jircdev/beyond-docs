@@ -1,7 +1,6 @@
-import {PageReactWidgetController} from '@beyond-js/kernel/react-widget/ts';
+import {PageReactWidgetController} from '@beyond-js/react-widgets/controllers/ts';
 import {beyond__styles} from '@beyond/docs/layout/styles/code';
 import {IWidgetStore} from "@beyond-js/kernel/core/ts";
-
 import {Page} from './views/page';
 import {Store} from "./store";
 

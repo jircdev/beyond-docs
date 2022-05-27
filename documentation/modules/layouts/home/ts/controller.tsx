@@ -1,7 +1,9 @@
-import {ReactWidgetController} from '@beyond-js/kernel/react-widget/ts';
+import {ReactWidgetController} from '@beyond-js/react-widgets/controllers/ts';
+import Layout from "./layout";
 
 export /*bundle*/
 class Controller extends ReactWidgetController {
-    async fetch() {
+    get Widget() {
+        return Layout;
     }
 }
