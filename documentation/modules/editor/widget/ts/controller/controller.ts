@@ -1,9 +1,8 @@
-import {ReactWidgetController} from '@beyond-js/kernel/react-widget/ts';
+import {PageReactWidgetController} from '@beyond-js/react-widgets/controllers/ts';
 import {BridgeModel} from '@beyond/docs/models/contents/bridge';
 
 export /*bundle*/
-class Controller extends ReactWidgetController {
-
+class Controller extends PageReactWidgetController {
 
     constructor(props) {
         super(props);
@@ -12,6 +11,4 @@ class Controller extends ReactWidgetController {
 
     async fetch() {
     }
-
-
 }
