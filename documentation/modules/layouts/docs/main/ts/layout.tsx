@@ -11,7 +11,7 @@ declare global {
     }
 }
 
-export function Layout() {
+export  /*bundle*/  function Layout() {
     return (
 
         <div className="main-widget">
@@ -27,4 +27,4 @@ export function Layout() {
     );
 }
 
-export /*bundle*/ const Widget = Layout;
+

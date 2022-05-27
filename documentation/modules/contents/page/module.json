@@ -1,0 +1,23 @@
+{
+  "name": "contents-subpage-page",
+  "platforms": [
+    "backend",
+    "web"
+  ],
+  "widget": {
+    "hmr": true,
+    "layout": "main-layout",
+    "element": {
+      "name": "contents-subpage-page"
+    },
+    "name": "home",
+    "route": "/docs/${content}",
+    "is": "page",
+    "ts": {
+      "path": "/widget/ts",
+      "files": [
+        "*"
+      ]
+    }
+  }
+}
