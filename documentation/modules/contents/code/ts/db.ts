@@ -49,6 +49,7 @@ export const getContent = (contentId: string, sub: string | undefined = undefine
 
     const starting = {
         intro: Intro,
+        quickStart:
         install: Install,
         dashboard: DashboardPage,
         tutorial: {
