@@ -1,4 +1,4 @@
-import {ReactWidgetController} from '@beyond-js/kernel/react-widget/ts';
+import {ReactWidgetController} from '@beyond-js/react-widgets/controllers/ts';
 import {IWidgetStore} from '@beyond-js/kernel/core/ts';
 import {beyond__styles} from "@beyond/docs/layout/styles/code";
 

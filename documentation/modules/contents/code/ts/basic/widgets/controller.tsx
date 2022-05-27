@@ -7,7 +7,7 @@ import {Link} from "@beyond/ui/link/code";
 import {ObjectProperty} from "../../views/object-property";
 
 const tplController =
-    `\rimport {ReactWidgetController} from '@beyond-js/kernel/react-widget/ts';
+    `\rimport {ReactWidgetController} from '@beyond-js/react-widgets/controllers/ts';
 import {Page} from './views/page';
 export /*bundle*/
 class Controller extends ReactWidgetController {
@@ -35,17 +35,16 @@ export function WidgetController() {
                 className="inline">ReactWidgetController</span> que es el controlador base disponibilizado para trabajar
                 con React. <BeyondName/> tiene disponible un controlador para los distintos frameworks de vista. Los
                 objetos son:
-
             </p>
             <ul>
                 <li><span className="inline">ReactWidgetController</span>, <span
-                    className="inline">ReactPageWidgetController</span>.
+                    className="inline">PageReactWidgetController</span>.
                 </li>
                 <li><span className="inline">SvelteWidgetController</span> y <span
-                    className="inline">SveltePageWidgetController</span>.
+                    className="inline">PageSvelteWidgetController</span>.
                 </li>
                 <li><span className="inline">VueWidgetController</span> y <span
-                    className="inline">VuePageWidgetController</span>.
+                    className="inline">PageVueWidgetController</span>.
                 </li>
             </ul>
 
