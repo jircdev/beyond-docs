@@ -16,7 +16,7 @@
   "deployment": {
     "distributions": [
       {
-        "name": "distribution-web",
+        "name": "web",
         "platform": "web",
         "port": 7880,
         "default": true

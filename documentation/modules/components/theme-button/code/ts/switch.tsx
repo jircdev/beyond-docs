@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {Svg} from "./svg";
-import {beyond} from '@beyond-js/kernel/core/ts';
+import {widgets} from '@beyond-js/widgets/render/ts';
 
 const key = '__beyond-mode';
 
@@ -16,7 +16,7 @@ export /*bundle*/ function ThemeToggleButton() {
         const current = `btn-theme--${theme}`;
         const another = `btn-theme--${theme === 'dark' ? 'light' : 'dark'}`;
         ref?.current.classList.add(current);
-        beyond.widgets.attributes.add('data-beyond-mode', theme);
+        widgets.attributes.add('data-beyond-mode', theme);
         if (ref?.current.classList.contains(another)) ref?.current.classList.remove(another);
     };
 
