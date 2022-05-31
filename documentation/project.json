@@ -29,7 +29,7 @@
   "deployment": {
     "distributions": [
       {
-        "name": "distribution-web",
+        "name": "web",
         "platform": "web",
         "port": 3500,
         "default": true,
@@ -40,7 +40,6 @@
           "@beyond-js/kernel": "web",
           "@beyond-js/widgets": "web",
           "@beyond-js/react-widgets": "web",
-          "@beyond-js/vue-widgets": "web",
           "@beyond-js/svelte-widgets": "web",
           "@beyond-js/backend": "web",
           "@beyond-js/ssr": "web"
@@ -69,7 +68,6 @@
       "@beyond-js/kernel",
       "@beyond-js/widgets",
       "@beyond-js/react-widgets",
-      "@beyond-js/vue-widgets",
       "@beyond-js/svelte-widgets",
       "@beyond-js/backend",
       "@beyond-js/ssr"
