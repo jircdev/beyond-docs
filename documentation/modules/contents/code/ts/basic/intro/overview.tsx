@@ -7,8 +7,6 @@ export function Overview() {
     return (
         <>
             <h2 id="projects">Manejo de proyectos</h2>
-
-
             <p>Los proyectos en <BeyondName/>, tienen un enfoque de compatibilidad con NPM, lo cual les permite ser
                 pensados como paquetes que podrían eventualmente, ser publicados directamente en NPM y posteriormente
                 utilizados en cualquier otro proyecto, tanto de Beyond como externo.
@@ -27,8 +25,10 @@ export function Overview() {
                 interpretado por las <Link href="/docs/distributions">distribuciones</Link> configuradas en el entorno
                 de desarrollo y al momento de realizar deploy de un proyecto.
             </p>
-
-
+            <div className="block__note note-info">
+                Si quieres conocer más en detalle acerca de esto y sobre cómo crear proyectos en <BeyondName/>
+                te recomendamos ir a la <Link href="/docs/projects/intro">sección de Proyectos</Link>
+            </div>
         </>
     )
 }

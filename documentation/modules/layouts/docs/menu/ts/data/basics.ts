@@ -1,10 +1,20 @@
+import {structureItems} from "./structure-item";
+
+const projects = [
+    ["projects/intro", 'Introducción'],
+    ["projects/create", 'Crear un proyecto'],
+    ["projects/json", 'project.json'],
+    ["projects/import", 'Importar un proyecto'],
+
+]
 export const basics = {
     id: 'concepts',
     label: 'Conceptos Básicos',
     children: [
         {
             id: 'projects',
-            label: 'Projectos',
+            label: 'Proyectos',
+            children: structureItems(projects)
         },
         {
 

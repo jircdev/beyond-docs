@@ -13,7 +13,7 @@ export function Intro() {
             <Features/>
             {/*<Quiz id="intro"/>*/}
             <NextLinks items={[
-                ['Instalación', '/docs/install'],
+                ['Comienzo rápido', '/docs/quick-start'],
                 ['Widgets', '/docs/widgets'],
             ]}/>
         </>

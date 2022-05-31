@@ -1,0 +1,14 @@
+@import '~template/sass/mixins/set-media';
+
+.container {
+  margin: auto;
+  padding: 15px;
+  width: calc(100% - 30px);
+  max-width: 1376px;
+
+  @include set-media('tablet', false, 'max') {
+    padding: 15px;
+    width: calc(100% - 30px);
+  }
+
+}

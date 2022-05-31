@@ -7,7 +7,7 @@ export function Intro() {
 
             <h1 id="projects">Proyectos</h1>
 
-            <p><BeyondName/> ofrece una arquitectura que se basa en proveer una forma eficiente de implementar
+            <p><BeyondName/> ofrece una arquitectura enfocada en proveer una forma eficiente de implementar
                 soluciones basadas en microservicios interconectados con otros microservicios en el
                 backend y con aplicativos con estructuras de microfrontends si hablamos del cliente, esto sin dejar de
                 lado la posibilidad de crear proyectos más sencillos en pocos pasos.
@@ -21,20 +21,20 @@ export function Intro() {
             </p>
             <p>
                 Desde la óptica de <BeyondName/> el servicio de Auth puede ser visto como un proyecto que contiene dos
-                distribuciones, una para generar el código cliente y una para generar el código backend y un único
-                código. El código desplegado de las distribuciones podría disponibilizarse en el cliente y los
-                desarrolladores que lo utilicen, podrian importarlo en cliente y servidor como
-                paquetes <strong>NPM</strong> independiente a que sus proyectos estén o no realizados con <BeyondName/>.
+                distribuciones, una para generar el código cliente y una para generar el código backend, ambas con un
+                único código fuente. El código desplegado de las distribuciones podría disponibilizarse
+                en las dos distribuciones como paquete <strong>NPM</strong> y quedar disponible para ser usados por
+                cualquier programador en proyectos hechos o no con <BeyondName/>.
 
             </p>
             <p>
                 Asimismo, si los proyectos que consumen <span className="inline">Auth</span> son
                 proyectos <BeyondName/> tambien podrían importar a <span className="inline">auth</span> por medio del
-                sistema de importación de módulos de <BeyondName/>
+                sistema de importación de módulos de <BeyondName/>.
 
             </p>
 
-            <h2 id="create">Crear un proyecto</h2>
+
         </>
     )
 }

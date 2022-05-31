@@ -5,7 +5,7 @@ export function Hamburger({onClick}) {
     const showMenu = event => {
         event.preventDefault();
         AppManager.menuOpened = !AppManager.menuOpened;
-        console.log(1, AppManager.menuOpened);
+
     }
 
     return (

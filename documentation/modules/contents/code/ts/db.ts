@@ -37,6 +37,9 @@ import {WidgetCreation} from "./basic/widgets/creation";
 import {APIURI} from "./api/uri";
 
 import {BeyondWidgetApi} from "./api/beyond-widget-api";
+import {QuickStart} from "./basic/quick-start";
+import {ManageProject} from "./basic/projects/manage";
+import {ImportProject} from "./basic/projects/import";
 
 
 interface IReturn {
@@ -49,15 +52,20 @@ export const getContent = (contentId: string, sub: string | undefined = undefine
 
     const starting = {
         intro: Intro,
-        // quickStart:
-        install: Install,
+        'quick-start': QuickStart,
+
         dashboard: DashboardPage,
         tutorial: {
             web: TutorialPage
         },
     }
     const basics = {
-            projects: ProjectsPage,
+            projects: {
+                intro: ProjectsPage,
+                create: ManageProject,
+                json: ProjectJson,
+                import: ImportProject,
+            },
             modules: ModuleIntro,
             bundles: Bundle,
             widgets: {

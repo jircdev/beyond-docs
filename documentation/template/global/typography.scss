@@ -1,0 +1,34 @@
+@import "~template/sass/mixins/set-media";
+
+h1, .h1 {
+  font-size: 3rem;
+}
+
+h2, .h2 {
+  font-size: 2.1rem;
+}
+
+h3, .h3 {
+  font-size: 2rem;
+}
+
+h1, .h1, h2, .h2, {
+  color: var(--text-title-color)
+}
+
+h3, h4 {
+  color: var(--text-color);
+}
+
+@include set-media('mobile', false, 'max') {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+}
+

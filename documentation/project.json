@@ -24,33 +24,7 @@
     }
   },
   "modules": {
-    "path": "./modules",
-    "externals": {
-      "slate": {
-        "development": "dist/slate.js",
-        "production": "dist/slate.min.js"
-      },
-      "slate-react": {
-        "development": "dist/slate-react.js",
-        "production": "dist/slate-react.min.js"
-      },
-      "escape-html": {
-        "development": "index.js",
-        "production": "index.js"
-      },
-      "is-hotkey": {
-        "development": "src/index.js",
-        "production": "src/index.js"
-      },
-      "prop-types": {
-        "development": "prop-types.js",
-        "production": "prop-types.min.js"
-      },
-      "perfect-scrollbar": {
-        "development": "dist/perfect-scrollbar.js",
-        "production": "dist/perfect-scrollbar.js"
-      }
-    }
+    "path": "./modules"
   },
   "deployment": {
     "distributions": [

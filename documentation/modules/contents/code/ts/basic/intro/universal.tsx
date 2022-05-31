@@ -44,9 +44,7 @@ export function Universal() {
                     utilizarse y gestiona la disponibilización del código final en base a ello.
                 </li>
             </ul>
-            <div className="block__note">
-                Puedes leer más sobre los features de beyond <Link href="/docs">aquí</Link>
-            </div>
+
         </>
     )
 }

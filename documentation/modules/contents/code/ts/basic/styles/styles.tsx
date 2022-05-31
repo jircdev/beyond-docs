@@ -3,6 +3,7 @@ import {Code} from "@beyond/docs/code/code";
 import {Link} from '@beyond/ui/link/code';
 import {variablesTPL} from "./tpl/variables";
 import {SASSVAriables} from "./tpl/sass-variables";
+import {BeyondName} from "../../views/beyond";
 
 const tplProcessor = `\r{
     ...
@@ -19,22 +20,22 @@ export function StylesPage() {
         <div className="content">
             <h1>Manejo de estilos</h1>
 
-            <p>El manejo de estilos es parte esencial de todo proyecto con tecnología web. <span
-                className="beyond">BeyondJS</span> maneja varias definiciones a nivel de estructura, que pueden resultar
-                interesantes para el desarrollador. A continuación y cómo introducción, se mencionan los puntos a tener
-                en cuenta.</p>
+            <p><BeyondName/> ofrece diversas formas de integrar archivos de estilos, teniendo siempre en cuenta su
+                arquitectura modular. A continuación se explican las diferentes maneeras de trabajar con archivos de
+                estilos.</p>
 
             <h2 id="module-styles">Estilos en el módulo</h2>
-            <p>Se puede definir estilos en cada módulo/bundle creado. Para esto debe agregarse el procesador de
-                estilo <code className="inline">SASS</code>, el cual viene incluido por defecto en los bundles de
-                tipo <Link href="/bundles#page"><span className="inline">widget</span></Link> y
-                <Link href="/bundles#code"><span className="inline">code</span></Link> si son creados desde el
-                <Link href="/dashboard">Dashboard</Link>.
 
+            <p>Para agregar estilos en un módulo/bundle creado, debe agregarse el <Link href="/docs/processors">
+                procesador</Link> <code className="inline">SASS</code>.
             </p>
-            <p>Si la configuración del bundle se hace de forma manual, el programador debe asegurarse de
-                agregar el procesador en el <Link href="/module/config">archivo de configuración</Link>, con una
-                estructura como la siguiente:
+
+            <div className="block__note">
+                Si se usa el dashboard para la creación de proyectos, el procesador <span
+                className="inline">sass</span> es incluido por defecto en los bundles de
+                tipo <strong>code</strong> y <strong>widget</strong> de cualquier tipo.
+            </div>
+            <p>la configuración estandar de un procesador <span className="inline">sass</span> es la siguiente:
             </p>
             <Code>
                 {tplProcessor}
