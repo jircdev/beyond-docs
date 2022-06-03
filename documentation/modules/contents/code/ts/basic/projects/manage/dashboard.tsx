@@ -1,20 +1,13 @@
 import * as React from 'react';
-import {BeyondName} from "../../views/beyond";
-import {Code} from '@beyond/docs/code/code';
-import {Elink, Link} from '@beyond/ui/link/code';
+import {Elink, Link} from "@beyond/ui/link/code";
+import {Code} from "@beyond/docs/code/code";
 import {BeyondImage} from "@beyond/ui/image/code";
 import {AppIcon} from "@beyond/docs/ui/icons/code";
+import {BeyondName} from "../../../views/beyond";
 
-export function ManageProject() {
+export function DashboardCreateProject() {
     return (
         <>
-            <h2 id="project-management">Gestión de un proyecto</h2>
-
-            <p>
-                Los proyectos pueden crearse de dos maneras, por medio de la interfaz gráfica del dashboard o
-                manualmente.
-            </p>
-
             <h2 id="using-dashboard">Usando el Dashboard</h2>
 
             <p>Para crear un proyecto desde el dashboard, en primer lugar debe asegurarse de que <BeyondName/> esté
@@ -83,20 +76,20 @@ export function ManageProject() {
             </div>
 
             <h3>Datos del Proyecto</h3>
-            <BeyondImage alt="dashboard beyondjs  new project" src="/images/dashboard/create-form-project.png"/>
             <p>
                 Luego de la selección del tipo de proyecto, aparece un formulario que solicita el scope y nombre del
-                proyecto, el puerto sobre el cúal correrá, y un titulo y descripción opcionales. Luego de llenar los
-                datos, el Dashboard se encarga de crear el proyecto con la estructura de archivos necesaria de forma
-                automática.
+                proyecto, el puerto sobre el cúal correrá, y adicionalmente, un titulo y descripción opcionales.
+                Luego de llenar los datos necesarios, el Dashboard se encarga de crear el proyecto con la estructura de
+                archivos y el proyecto queda disponible para ser accedido en el puerto configurado.
             </p>
+            <BeyondImage alt="dashboard beyondjs  new project" src="/images/dashboard/create-form-project.png"/>
+
 
             <div className="block__note">
                 Todos los proyectos tienen dependencias de paquetes npm que pueden opcionalmente ser instalados desde el
                 dashboard. En caso de no haberlo hecho, para que el proyecto funcione es necesario instalar las
                 dependencias manualmente.
             </div>
-
 
         </>
     )

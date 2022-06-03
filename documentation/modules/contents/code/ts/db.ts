@@ -40,6 +40,9 @@ import {BeyondWidgetApi} from "./api/beyond-widget-api";
 import {QuickStart} from "./basic/quick-start";
 import {ManageProject} from "./basic/projects/manage";
 import {ImportProject} from "./basic/projects/import";
+import {ProjectStructure} from "./basic/projects/structure";
+import {ProjectDependencies} from "./basic/projects/dependencies";
+import {DevServer} from "./fundamentals/dev-server";
 
 
 interface IReturn {
@@ -63,8 +66,10 @@ export const getContent = (contentId: string, sub: string | undefined = undefine
             projects: {
                 intro: ProjectsPage,
                 create: ManageProject,
+                structure: ProjectStructure,
                 json: ProjectJson,
                 import: ImportProject,
+                dependencies: ProjectDependencies,
             },
             modules: ModuleIntro,
             bundles: Bundle,
@@ -90,6 +95,7 @@ export const getContent = (contentId: string, sub: string | undefined = undefine
         bee: BEE,
         hmr: HMR,
         processors: Processors,
+        'dev-server': DevServer,
     }
     const api = {
         api: {

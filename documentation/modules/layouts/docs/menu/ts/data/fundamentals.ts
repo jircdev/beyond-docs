@@ -22,6 +22,10 @@ export const fundamentals = {
             id: 'bee',
             label: 'BEE',
         },
+        {
+            id: 'dev-server',
+            label: "Servidor de desarrollo"
+        }
 
     ]
 },

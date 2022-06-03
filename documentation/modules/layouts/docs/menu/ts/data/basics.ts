@@ -3,8 +3,10 @@ import {structureItems} from "./structure-item";
 const projects = [
     ["projects/intro", 'Introducción'],
     ["projects/create", 'Crear un proyecto'],
+    ["projects/structure", 'Estructura'],
     ["projects/json", 'project.json'],
     ["projects/import", 'Importar un proyecto'],
+    ["projects/dependencies", 'Dependencias'],
 
 ]
 export const basics = {
