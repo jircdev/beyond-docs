@@ -66,11 +66,10 @@
     "imports": [
       "@beyond/ui",
       "@beyond-js/kernel",
+      "@beyond-js/backend",
       "@beyond-js/widgets",
       "@beyond-js/react-widgets",
-      "@beyond-js/svelte-widgets",
-      "@beyond-js/backend",
-      "@beyond-js/ssr"
+      "@beyond-js/svelte-widgets"
     ]
   },
   "static": {

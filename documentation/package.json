@@ -5,7 +5,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@beyond-js/kernel": "^0.0.15",
     "@cloudinary/url-gen": "^1.6.0",
     "@types/escape-html": "^1.0.1",
     "@types/highlightjs": "^9.12.2",
