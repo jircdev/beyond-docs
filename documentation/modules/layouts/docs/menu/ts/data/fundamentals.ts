@@ -2,14 +2,7 @@ export const fundamentals = {
     id: 'fundamentals',
     label: 'Fundamentos',
     children: [
-        {
-            id: 'why-beyond',
-            label: '¿Porque Beyond?',
-        },
-        {
-            id: 'npm-packages',
-            label: 'Paquetes Npm',
-        },
+        {id: 'ssr', label: 'Server side rendering'},
         {
             id: 'hmr',
             label: 'HMR',
@@ -28,4 +21,4 @@ export const fundamentals = {
         }
 
     ]
-},
+};

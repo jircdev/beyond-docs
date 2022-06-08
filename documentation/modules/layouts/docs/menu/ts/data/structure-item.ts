@@ -1,2 +1,2 @@
-export const structureItems = data => data.map(([id, label]) => ({id, label}));
+export const structureItems = data => data.map(([id, label, children = undefined]) => ({id, label, children}));
 

@@ -3,7 +3,7 @@ import {Link} from '@beyond/ui/link/code';
 
 import {ObjectProperty} from "../../../views/object-property";
 
-export function Index() {
+export function ProjectJson() {
     return (
         <>
 

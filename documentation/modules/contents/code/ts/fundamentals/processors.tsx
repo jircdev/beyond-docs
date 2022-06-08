@@ -3,7 +3,6 @@ import {BeyondName} from "../views/beyond";
 import {Link} from '@beyond/ui/link/code';
 import {TypeProperty} from "../views/type-property";
 import {CodeBox} from "@beyond/docs/code/code";
-import {Code} from "../../../../components/code/ts/code";
 
 const tpl = `
 {

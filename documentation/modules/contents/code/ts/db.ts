@@ -1,48 +1,64 @@
 import {WhatIs} from "./views/what-is/what-is";
-import {WhyBeyond} from "./fundamentals/why";
-import {DashboardPage} from "./views/dashboard/dashboard";
+import {Concepts} from "./views/concepts/concepts";
+import {Error404} from "./views/error-404";
 
 import {Example} from "./views/example";
-import {Starting} from "./views/starting/starting";
-import {TutorialPage} from "./views/tutorial/tutorial-page";
-import {Concepts} from "./views/concepts/concepts";
-import {Install} from "./basic/install";
-import {Error404} from "./views/error-404";
-import {ModuleConfig} from "./views/concepts/module/config";
-import {ProjectJson} from "./basic/projects/project-json";
-import {NpmPackages} from "./fundamentals/npm-packages";
-import {ModuleIntro} from "./views/concepts/module/module-intro";
 import {Server} from "./views/concepts/server/index";
-import {Widgets} from "./basic/widgets";
+/*starting*/
+import {Intro} from "./starting/intro";
+import {QuickStart} from "./starting/quick-start";
+import {TutorialPage} from "./starting/tutorial/tutorial-page";
+import {DashboardPage} from "./starting/dashboard";
 
-import {FetchingDAtaPage} from "./basic/fetching";
-import {RoutingPage} from "./basic/routing";
-import {Backend} from "./basic/backend";
-import {Bundle} from "./views/concepts/module/bundle";
-import {BEE} from "./fundamentals/bee";
-import {HMR} from "./fundamentals/hmr";
-import {DeploymentPage} from "./basic/deployment";
-import {TemplatePage} from "./basic/styles/template";
-import {StylesPage} from "./basic/styles/styles";
-import {ThemesPage} from "./basic/styles/themes";
-import {StateManagement} from "./basic/state-management";
-import {RenderingPage} from "./basic/rendering";
-import {Intro} from "./basic/intro";
+/*basic*/
+//projects
 import {ProjectsPage} from "./basic/projects";
-import {Processors} from "./fundamentals/processors";
-import {WidgetController} from "./basic/widgets/controller";
-import {LayoutWidget} from "./basic/widgets/types/layout";
-import {PageWidget} from "./basic/widgets/types/page";
-import {WidgetCreation} from "./basic/widgets/creation";
-import {APIURI} from "./api/uri";
-
-import {BeyondWidgetApi} from "./api/beyond-widget-api";
-import {QuickStart} from "./basic/quick-start";
+import {ProjectJson} from "./basic/projects/project-json";
 import {ManageProject} from "./basic/projects/manage";
 import {ImportProject} from "./basic/projects/import";
 import {ProjectStructure} from "./basic/projects/structure";
 import {ProjectDependencies} from "./basic/projects/dependencies";
+// modules
+import {ModuleIntro} from "./basic/modules/intro";
+import {ModuleConfig} from "./basic/modules/config";
+import {Bundle} from "./basic/modules/bundle";
+
+//widgets
+import {Widgets} from "./basic/widgets";
+import {LayoutWidget} from "./basic/widgets/types/layout";
+import {PageWidget} from "./basic/widgets/types/page";
+import {WidgetCreation} from "./basic/widgets/creation";
+import {WidgetController} from "./basic/widgets/controller";
+
+import {Backend} from "./basic/backend";
+import {FetchingDAtaPage} from "./basic/fetching";
+import {RoutingPage} from "./basic/routing";
+import {DeploymentPage} from "./basic/deployment";
+//styles
+import {TemplatePage} from "./basic/projects/template";
+import {StylesPage} from "./basic/styles";
+import {ThemesPage} from "./basic/styles/themes";
+
+
+import {StateManagement} from "./basic/state-management";
+import {RenderingPage} from "./basic/rendering";
+
+
+/*fundamentals*/
+import {WhyBeyond} from "./fundamentals/why";
+import {BEE} from "./fundamentals/bee";
+import {HMR} from "./fundamentals/hmr";
+import {Processors} from "./fundamentals/processors";
 import {DevServer} from "./fundamentals/dev-server";
+import {NpmPackages} from "./fundamentals/npm-packages";
+
+
+/*API*/
+import {APIURI} from "./api/uri";
+import {BeyondWidgetApi} from "./api/beyond-widget-api";
+import {ModulesCreate} from "./basic/modules/create";
+import {StylesImports} from "./basic/styles/imports";
+import {StylesModules} from "./basic/styles/tpl/modules";
 
 
 interface IReturn {
@@ -56,7 +72,6 @@ export const getContent = (contentId: string, sub: string | undefined = undefine
     const starting = {
         intro: Intro,
         'quick-start': QuickStart,
-
         dashboard: DashboardPage,
         tutorial: {
             web: TutorialPage
@@ -71,7 +86,11 @@ export const getContent = (contentId: string, sub: string | undefined = undefine
                 import: ImportProject,
                 dependencies: ProjectDependencies,
             },
-            modules: ModuleIntro,
+            modules: {
+                introduction: ModuleIntro,
+                create: ModulesCreate,
+                json: ModuleConfig
+            },
             bundles: Bundle,
             widgets: {
                 default: Widgets,
@@ -83,9 +102,15 @@ export const getContent = (contentId: string, sub: string | undefined = undefine
             state: {
                 management: StateManagement
             },
+            styles: {
+                template: StylesPage,
+                module: StylesModules,
+                imports: StylesImports,
+                themes: ThemesPage,
+            },
             routing: RoutingPage,
-            styles: StylesPage,
-            themes: ThemesPage,
+
+
             backend: Backend,
             rendering: RenderingPage,
             deployment: DeploymentPage
@@ -113,16 +138,13 @@ export const getContent = (contentId: string, sub: string | undefined = undefine
         'what-is-beyond': WhatIs,
         'why-beyond': WhyBeyond,
         default: Example,
-        Starting: Starting,
+
         'npm-packages': NpmPackages,
         concepts: {
             basics: Concepts,
         },
         error404: Error404,
-        modules: {
-            introduction: ModuleIntro,
-            config: ModuleConfig
-        },
+
         project: {
             config: ProjectJson
         },

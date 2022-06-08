@@ -38,5 +38,6 @@ html[data-beyond-mode="light"] {
 
 html[data-beyond-mode="dark"] {
   @include dark.properties();
+
 }
 

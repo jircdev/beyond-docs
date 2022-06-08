@@ -1,32 +1,55 @@
-.docs__menu__list > li, .docs__menu__sublist > li {
-  display: grid;
-  cursor: pointer;
-  align-items: center;
+.docs__menu__list {
+  a {
+    text-decoration: none;
+    color: var(--text-color);
 
-  section:hover span {
-    color: var(--primary-accent)
+    &:hover {
+      color: #fff;
+    }
   }
 
-  > section {
-    display: flex;
-    gap: 5px;
+  > .menu__item--parent > section a {
+    color: var(--primary);
+    margin-bottom: .5rem;
+  }
+}
+
+.docs__menu__list {
+
+  li {
+    display: grid;
+    cursor: pointer;
     align-items: center;
-    accent-color: var(--text-second-color);
-    transition: 300ms all ease-in;
-    padding: 4px 0;
 
-    .beyond-icon {
-      fill: var(--text-color);
+    > section {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      accent-color: var(--text-second-color);
+      transition: 300ms all ease-in;
+      padding: 4px 0;
+      justify-content: space-between;
+
+      .beyond-icon {
+        fill: var(--text-color);
+      }
+
     }
 
+    &.item--opened {
+      .beyond-icon {
+        transform: rotate(90deg);
+      }
+    }
   }
 
-  &.item--opened {
-
-    .beyond-icon {
-      transform: rotate(90deg);
+  > li {
+    &.menu__item--parent {
+      > section > svg {
+        display: none;
+      }
     }
-
   }
 
 }
+

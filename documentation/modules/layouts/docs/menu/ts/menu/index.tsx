@@ -34,7 +34,9 @@ function WidgetMenu() {
     const cls = `docs__menu${opened ? ` docs__menu--opened` : ''}`;
     return (
         <MenuContext.Provider value={{container: value.container, close: closeMenu}}>
+
             <aside ref={parent} className={cls}>
+
                 <div className="menu-mobile-container">
                     <header className="aside__header">
                         <div>
@@ -49,6 +51,7 @@ function WidgetMenu() {
                 </div>
 
             </aside>
+
         </MenuContext.Provider>
 
     );

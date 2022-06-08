@@ -8,15 +8,13 @@ interface IProps {
     href?: string | boolean
 }
 
-export function TypeProperty({type, href = false, optional = false}: IProps) {
+export function TypeProperty({children, type, href = false, optional = false}: IProps) {
     const output = href ? <Link href={href}>{`${type}`} </Link> : `${type} `;
     return (
-        <span className="type__property">
-            {output}
-            {
-                optional &&
-                <span className="type__optional">{"optional"} </span>
-            }
-        </span>
+        <>
+            {children && <strong>{children}</strong>} <span className="type__property">{output}</span>
+            {optional && <span className="type__optional">{"&nbsp;optional"} </span>}:
+        </>
+
     )
 }
