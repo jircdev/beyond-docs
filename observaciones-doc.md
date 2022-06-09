@@ -51,8 +51,13 @@ Hay que especificar que esa funcion va en un modulo con un bundle de tipo start
 
 http://localhost:3500/docs/backend
 
-Aqui habria que hablar que si se va a trabajar desde el cliente hay que agregar un modulo start para inicializar el
-backend
+Aqui habria que hablar que si se va a trabajar desde el cliente
+
+la Definicion del backend y la inicializacion
+
+- Definicion agregar distribuciones web y backend
+- y en la distribucion web definicar una propiedad "backend":"name.distribution.backend.a.usar"
+- Inicializacion agregar modulo con bundle start para inicializar el backend
 
 #### Codigo ejemplo
 
