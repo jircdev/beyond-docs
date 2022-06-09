@@ -5,10 +5,11 @@ export function HMR() {
         <div className="content">
             <h1>HMR</h1>
             <p>
-                Todos los bundles exponen de forma automática un objeto hmr que le permite al desarrollador suscribirse
-                a los cambios de código y persistir de esta forma el estado de la aplicación en el cual se encuentra la
-                misma, optimizando así el proceso de desarrollo al evitar tener que realizar un flujo completo
-                nuevamente para volver al estadio en el proyecto sobre el cual se está desarrollando.
+                Todos los bundles exponen de forma automática un objeto <span className="inline">hmr</span> que le
+                permite que el desarrollador pueda suscribirse
+                a los cambios de código y persistir de esta forma el estado del proyecto en el que se encuentre,
+                optimizando el proceso de desarrollo, pues se evita la necesidad de repetir nuevamente
+                los flujos para llegar al estado actual.
 
             </p>
             <p>Para explicarlo mejor, supongamos que se está realizando una lógica de filtrado de elementos de una base

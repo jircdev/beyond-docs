@@ -2,6 +2,17 @@ import * as React from 'react';
 import {Code} from "@beyond/docs/code/code";
 import {Link} from '@beyond/ui/link/code';
 import {variablesTPL} from "../styles/tpl/variables";
+
+const tplConfig = `
+"application": {
+    "processor": "sass",
+    "path": "application",
+    "files": [
+      "*"
+    ]
+  }
+`;
+
 //
 // <p>Los proyectos en <span className="beyond">BeyondJS</span>, vienen con una estructura de plantilla por
 //     defecto, la misma se puede encontrar en la carpeta <span className="inline">template</span> en la raiz
@@ -27,8 +38,8 @@ export function TemplatePage() {
         <div className="content">
             <h1>Plantilla de un protecto</h1>
             <p>
-                <span className="beyond">BeyondJS</span> brinda una arquitectura robusta para el manejo de plantillas en
-                los proyectos, la cual cuenta con las siguientes caracteristicas:
+                <span className="beyond">BeyondJS</span> brinda una arquitectura simple pero robusta para el manejo de
+                plantillas en los proyectos, la cual cuenta con las siguientes caracteristicas:
             </p>
 
             <ul>
@@ -48,42 +59,57 @@ export function TemplatePage() {
 
             <h2 id="config">Configuración</h2>
 
-            <p>Los <strong>componentes web</strong> proveen un modelo de encapsulamiento de estilos que hace que estos
-                no tengan un alcance global y por tanto, no afecten otros componentes ni se vean afectadoss por estilos
-                globales. Asimismo, todos comparten el acceso a las <strong>custom properties</strong>.</p>
-
-            <p><span className="beyond">BeyondJS</span></p>
             <p>
                 La configuración de la plantilla, al igual que todos los elementos en <span
-                className="beyond">BeyondJS</span>, se maneja por medio de un archivo de configuración, cuyo nombre y
-                ubicación es definido en el <Link href="/project/config">project.json</Link>. En general, por convención
-                el nombre suele ser <span className="inline-code">template.json</span>
+                className="beyond">BeyondJS</span>, se maneja por medio de un archivo de configuración, cuyo nombre, por
+                convención es <span className="inline">template.json</span> y se ubica en la carpeta <span
+                className="inline">template</span> en la raiz del proyecto. Sin embargo, tanto el nombre como la
+                ubicación son valores configurables en el <Link href="/project/config">project.json</Link>.
             </p>
 
-            <p>La plantilla puede ser manejada desde el <strong>Dashboard</strong> y cuando
-                se crea un proyecto, ya viene configurada la estructura por defecto para su manejo.
+            <div className="block__note">La plantilla puede ser manejada desde el <Link
+                href="/docs/dashboard">Dashboard</Link> y cuando
+                se crea un proyecto ya viene configurada la estructura por defecto para su manejo.
+            </div>
+
+            <p>A continuación se explican las propiedades de configuración</p>
+
+            <h2 id="template-application">template.application</h2>
+
+            <p>Las <strong>custom properties</strong> juegan un papel importante en el manejo de los widgets.
+                Los componentes webs con Shadow DOM no se ven afectados por los estilos generales del sitio web en donde
+                están incluidos. Sin
+                embargo, las propiedades css si pueden ser accedidas y utilizadas.
             </p>
+            <p>La propiedad de configuración <span className="inline">application</span> representa al archivo de
+                estilos generales del proyecto y tiene como foco principal ser el lugar en donde se definan las
+                propiedades css personalizadas y cualquier estilo que se requiera aplicar al documento general, externo
+                a los widgets.</p>
 
-            <h2 id="template-application">template.project</h2>
-
-            <p>Las <strong>custom properties</strong> juegan un papel importante en el manejo de los componentes web.
-                Por naturaleza, los componentes webs no se ven afectados por los estilos generales del sitio web. Sin
-                embargo, las propiedades css si pueden ser accedidas y utilizadas. Esta estructura permite realizar
-                componentes web que compartan los colores que necesiten de la aplicación y puedan al mismo tiempo tener
-                estilos propios sin preocuparse porque estos generen colisión con el código de otros componentes.
-            </p>
-
-
-            <p>
-                Es la configuración para elementos de estilo generales que apliquen a todo el proyecto. Teniendo en
-                cuenta que <span className="beyond">BeyondJS</span> trabaja con <strong>Componentes Web</strong>, el uso
-                de <i>custom properties</i> es esencial y este suele ser el lugar apropiado para definirlas, de hecho,
-                por defecto vienen definidas algunas con soporte básico para definir el tema de un proyecto y su
-                impplementación en modo oscuro.
-            </p>
+            <div className="block__note">
+                El manejo de estilos puede verse en detalle en la sección de <Link href="/docs/styles/template">Estilos
+                en la plantilla</Link>.
+            </div>
+            <p>la configuración de <span className="inline">template.application</span> recibe un objeto con las
+                siguientes propiedades: </p>
             <Code>
-                {variablesTPL}
+                {tplConfig}
             </Code>
+
+            <p>Cómo se puede ver en el código anterior, se puede definir tres propiedades</p>
+            <ul>
+                <li><span className="inline">processor</span> Procesador a utilizar. Soporta <span
+                    className="inline">sass</span> y <span className="inline">less</span></li>
+                <li><span className="inline">path</span> Directorio donde se encuentran los archivos, sino se define se
+                    buscaran todos los archivos relativos a la ubicación del archivo de configuración.
+                </li>
+                <li><span className="inline">files</span>, el <span className="inline">*</span> indica que se debe tomar
+                    en cuenta cualquier archivo adentro del path definido. Si se específican archivos por nombre, sólo
+                    se tomara en cuenta los archivos indicados.
+                </li>
+            </ul>
+
+
         </div>
     )
 }

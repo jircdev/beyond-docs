@@ -1,35 +1,16 @@
+import {structureItems} from "./structure-item";
+
+const children = [
+    ['server', 'Server'],
+    ['/api/uri', 'URI'],
+    ["/api/BeyondWidget", "Objeto widget"],
+    ['projects', 'Configuración de proyectos'],
+    ['modules', 'Modules'],
+    ['bundles', 'Bundles'],
+
+];
 export const api = {
     id: 'reference',
     label: 'API',
-    children: [
-        {
-            id: 'server',
-            label: 'Server',
-        },
-        {
-            id: '/api/uri',
-            label: 'URI'
-        },
-        {
-            id: "/api/BeyondWidget",
-            label: "Objeto widget"
-        },
-        {
-            id: 'projects',
-            label: 'Configuración de proyectos',
-
-        },
-        {
-            id: 'modules',
-            label: 'Modules',
-        },
-        {
-            id: 'bundles',
-            label: 'Bundles',
-        },
-        {
-            id: 'processors',
-            label: 'Processors',
-        },
-    ]
+    children: structureItems(children)
 };

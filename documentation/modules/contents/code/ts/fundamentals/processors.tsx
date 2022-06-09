@@ -3,6 +3,7 @@ import {BeyondName} from "../views/beyond";
 import {Link} from '@beyond/ui/link/code';
 import {TypeProperty} from "../views/type-property";
 import {CodeBox} from "@beyond/docs/code/code";
+import {NextLinks} from "@beyond/docs/components/next-links/code";
 
 const tpl = `
 {
@@ -27,19 +28,23 @@ const tpl = `
 
 export function Processors() {
     return (
-        <div className="content">
+        <>
             <h1 id="processors">Procesadores</h1>
-            <p>Muchas de las herramientas o lenguajes utilizados en el entorno web no son soportados de forma directa en
-                los navegadores y requieren ser procesadas para poder ser integradas en un sitio web, este es el trabajo
-                que realizan los procesadores. <BeyondName/> ofrece una serie de procesadores integrados, que permiten
-                utilizar las principales tecnologías de la industria web. Asimismo, ofrece la posibilidad de crear
-                nuevos procesadores, en caso de que se desee integrar una herramienta que no este soportada por los
-                procesadores existentes.
+            <p>Muchas de las herramientas o lenguajes utilizados en el entorno web requieren un procesamiento previo
+                para
+                ser interpretados por los navegadores o entornos de ejecución, este es el trabajo
+                que realizan los procesadores.
+            </p>
+            <p>
+                <BeyondName/> ofrece una serie de procesadores integrados, que permiten
+                utilizar las principales tecnologías de la industria web y brinda soporte para que puedan integrarse
+                nuevos procesadores en caso de que se requiera.
             </p>
 
             <div className="block__note">
-                <BeyondName/> no funciona como los empaquetadores como Webpack o parcel. No necesita evaluar grafo de
-                dependencias ni aplicar técnicas para separación de código o tree shaking. Gracias a su naturaleza
+                <BeyondName/> trabaja distinto a empaquetadores como Webpack o Parcel. No necesita evaluar el arbol de
+                dependencias de un proyecto, ni aplicar técnicas para separación de código o tree shaking. Gracias a su
+                naturaleza
                 módular y por medio de los procesadores, el empaquetado de código se hace a nivel de bundles.
             </div>
             <p> Los procesadores son componentes de <BeyondName/> que permiten interpretar, parsear, transpilar o
@@ -71,15 +76,16 @@ export function Processors() {
             <p>Todos los procesadores cuentan con las siguientes propiedades:</p>
             <ul>
                 <li>
-                    <strong>path: </strong>
-                    <TypeProperty type="string" optional/>: Permite definir el <span
+
+                    <TypeProperty type="string" optional>path </TypeProperty> Permite definir el <span
                     className="inline">directorio</span> en donde se encuentran los archivos del procesador. Si se
                     agrega un valor, el mismo es interpretado como un directorio de posición relativa a la ubicación
                     del <span className="inline">module.json</span> definido.
                 </li>
                 <li>
-                    <strong>files: </strong>
-                    <TypeProperty type="array" optional/>: Permite definir la lista de archivos o carpetas incluidos en
+
+                    <TypeProperty type="array" optional>files</TypeProperty> Permite definir la lista de archivos o
+                    carpetas incluidos en
                     el procesador. Si la propiedad <span className="inline">path</span> se encuentra definida, los
                     archivos serán buscados adentro del directorio especificado, caso contrario, serán buscados de forma
                     relativa a la ubicación del <span className="inline">module.json</span>. Se puede pasar como valor
@@ -112,7 +118,11 @@ export function Processors() {
                     {tpl}
                 </CodeBox>
             </div>
+            <NextLinks items={[
+                ['Crear un módulo', '/docs/modules/create'],
+                ['Bundles', '/docs/bundles']
+            ]}/>
+        </>
 
-        </div>
     )
 }

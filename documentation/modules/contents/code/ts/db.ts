@@ -110,7 +110,7 @@ export const getContent = (contentId: string, sub: string | undefined = undefine
             },
             routing: RoutingPage,
 
-
+            template: TemplatePage,
             backend: Backend,
             rendering: RenderingPage,
             deployment: DeploymentPage
@@ -133,22 +133,8 @@ export const getContent = (contentId: string, sub: string | undefined = undefine
         ...basics,
         ...foundations,
         ...api,
-        template: TemplatePage,
         fetching: FetchingDAtaPage,
-        'what-is-beyond': WhatIs,
-        'why-beyond': WhyBeyond,
-        default: Example,
-
-        'npm-packages': NpmPackages,
-        concepts: {
-            basics: Concepts,
-        },
         error404: Error404,
-
-        project: {
-            config: ProjectJson
-        },
-        server: Server,
     };
 
 
