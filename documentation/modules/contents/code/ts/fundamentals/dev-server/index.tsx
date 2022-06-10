@@ -1,6 +1,14 @@
 import * as React from 'react';
 import {BeyondName} from "../../views/beyond";
 import {Link, Elink} from "@beyond/ui/link/code";
+import {Code} from "@beyond/docs/code/code";
+import {TypeProperty} from "../../views/type-property";
+
+const tpl1 = `{
+  "applications": "projects.json",
+  "bundles": {},
+  "libraries": []
+}`;
 
 export function DevServer() {
     return (
@@ -18,6 +26,29 @@ export function DevServer() {
             <p>Cuando el servidor de desarrollo se levanta, el Dashboard queda disponible para ser accedido desde <Elink
                 href="http://localhost:4000">http://localhost:4000</Elink> y este genera y edita el archivo <span
                 className="inline">beyond.json</span> cuando se crea, edita o elimina algún proyecto.</p>
+            <h2><code className="inline-code">beyond.json</code></h2>
+
+            <Code language="json">
+                {tpl1}
+            </Code>
+
+            <h3>Propiedades</h3>
+
+            <ul>
+                <li>
+                    <TypeProperty type="AOC" href="/aoc">applications</TypeProperty>
+                    Recibe un arreglo con la lista de proyectos o aplicaciones
+                    configuradas para que <span className="beyond">Beyond</span> pueda leearlas y levantarlas. Este
+                    archivo, es gestionado por <span className="beyond">Beyond</span> si se hace uso del dashboard.
+                </li>
+                <li><TypeProperty type="object">bundles</TypeProperty> Permite configurar la inclusión de bundles
+                    creados por el programador.
+                </li>
+                <li>
+                    <TypeProperty type="AOC" href="/aoc">libraries</TypeProperty> Arreglo de configuración de
+                    librerias <span className="beyond">Beyond</span> a utilizar.
+                </li>
+            </ul>
         </>
     )
 }

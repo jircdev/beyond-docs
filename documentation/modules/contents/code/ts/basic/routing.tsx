@@ -58,7 +58,8 @@ export function RoutingPage() {
             <p>Con la finalidad de mantener compatibilidad con las APIs Conocidas, el objeto <span
                 className="inline">Routing</span> tiene métodos homólogos a los
                 métodos de la API del historial del navegador y básicamente cubren las mismas necesidades pero a la vez,
-                se encargan de unificar los comportamientos entre las plataformas y actualizar los elementos del historico de <span
+                se encargan de unificar los comportamientos entre las plataformas y actualizar los elementos del
+                historico de <span
                     className="beyond">BeyondJS.</span></p>
             <p>Los métodos disponibles son:</p>
             <h4><span className="inline-code">routing.pushState</span></h4>
@@ -91,13 +92,20 @@ export function RoutingPage() {
                 </li>
             </ul>
 
-            <p>Para este tipo de casos, se puede definir una función asincrona
+            <p>Para este tipo de casos,
+                se puede definir una función asincrona
                 <span className="inline-code">redirect</span>
                 como propiedad del objeto routing. Esta función recibe un ubjeto de tipo
                 <TypeProperty type="URI" href="/api/uri"/> que tiene una propiedad <span
                     className="inline-code">pathname
             </span> la cual representa la ruta actual.
             </p>
+
+            <div className="block__note">La definición del método <span className="inline">routing</span> debe hacerse
+                en un bundle de tipo <span
+                    className="inline">start</span> a fin de que pueda ejecutarse al comienzo del proyecto, antes de
+                cualquier solicitud http.
+            </div>
 
             <p>
                 La función redirect puede retornar una ruta diferente, en cuyo caso <span

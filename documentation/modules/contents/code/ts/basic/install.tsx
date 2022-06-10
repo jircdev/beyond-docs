@@ -1,6 +1,4 @@
 import * as React from 'react';
-import {Code} from "@beyond/docs/code/code";
-import {Link} from '@beyond/ui/link/code';
 import {NextLinks} from '@beyond/docs/components/next-links/code';
 
 export function Install() {

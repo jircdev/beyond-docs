@@ -1,24 +1,15 @@
+import {structureItems} from "./structure-item";
+
 export const fundamentals = {
     id: 'fundamentals',
     label: 'Fundamentos',
-    children: [
-        {id: 'ssr', label: 'Server side rendering'},
-        {
-            id: 'hmr',
-            label: 'HMR',
-        },
-        {
-            id: "processors",
-            label: "Procesadores"
-        },
-        {
-            id: 'bee',
-            label: 'BEE',
-        },
-        {
-            id: 'dev-server',
-            label: "Servidor de desarrollo"
-        }
-
-    ]
+    children: structureItems([
+        ['ssr', 'Server side rendering'],
+        ['hmr', 'HMR'],
+        ["processors", "Procesadores"],
+        ['bee', 'BEE'],
+        ['dev-server', "Servidor de desarrollo"],
+        ['multilanguage', 'Multilenguaje'],
+        ['glossary', 'Glosario']
+    ]);
 };

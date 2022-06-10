@@ -55,6 +55,9 @@ export function DashboardCreateProject() {
                 <li><strong>Library</strong> Ideal para crear proyectos que esten pensados para ser distribuidos como
                     paquetes <strong>NPM</strong>.
                 </li>
+                <li>
+                    <strong>web - backend</strong> Genera un proyecto web con una distribución backend.
+                </li>
 
             </ul>
             <h3 id="template-types">Tipos de plantillas</h3>

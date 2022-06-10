@@ -1,9 +1,8 @@
 import * as React from 'react';
 
-export function TemplateOverwrites() {
+export function BundlesExample() {
     return (
         <>
-
         </>
     )
 }

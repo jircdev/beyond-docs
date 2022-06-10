@@ -8,7 +8,7 @@ export function ProjectsPage() {
             <Intro/>
             <NextLinks items={[
                 ['Crear un proyecto', '/docs/projects/create'],
-                ['Distribuciones', '/docs/projects/distributions'],
+                ['Estructura de un proyecto', '/docs/projects/structure'],
                 ['project.json', '/docs/projects/json'],
             ]}/>
         </>

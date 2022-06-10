@@ -1,9 +1,6 @@
-import {WhatIs} from "./views/what-is/what-is";
-import {Concepts} from "./views/concepts/concepts";
 import {Error404} from "./views/error-404";
 
-import {Example} from "./views/example";
-import {Server} from "./views/concepts/server/index";
+
 /*starting*/
 import {Intro} from "./starting/intro";
 import {QuickStart} from "./starting/quick-start";
@@ -21,7 +18,7 @@ import {ProjectDependencies} from "./basic/projects/dependencies";
 // modules
 import {ModuleIntro} from "./basic/modules/intro";
 import {ModuleConfig} from "./basic/modules/config";
-import {Bundle} from "./basic/modules/bundle";
+import {Bundles} from "./basic/modules/bundles";
 
 //widgets
 import {Widgets} from "./basic/widgets";
@@ -35,7 +32,7 @@ import {FetchingDAtaPage} from "./basic/fetching";
 import {RoutingPage} from "./basic/routing";
 import {DeploymentPage} from "./basic/deployment";
 //styles
-import {TemplatePage} from "./basic/projects/template";
+import {TemplatePage} from "./basic/template";
 import {StylesPage} from "./basic/styles";
 import {ThemesPage} from "./basic/styles/themes";
 
@@ -59,6 +56,9 @@ import {BeyondWidgetApi} from "./api/beyond-widget-api";
 import {ModulesCreate} from "./basic/modules/create";
 import {StylesImports} from "./basic/styles/imports";
 import {StylesModules} from "./basic/styles/tpl/modules";
+import {Glossary} from "./views/concepts/glossary/glossary";
+import {IWidgetStore} from "./api/i-widget-store";
+import {MultiLanguage} from "./fundamentals/multilanguage";
 
 
 interface IReturn {
@@ -91,7 +91,7 @@ export const getContent = (contentId: string, sub: string | undefined = undefine
                 create: ModulesCreate,
                 json: ModuleConfig
             },
-            bundles: Bundle,
+            bundles: Bundles,
             widgets: {
                 default: Widgets,
                 definition: WidgetCreation,
@@ -113,7 +113,8 @@ export const getContent = (contentId: string, sub: string | undefined = undefine
             template: TemplatePage,
             backend: Backend,
             rendering: RenderingPage,
-            deployment: DeploymentPage
+            deployment: DeploymentPage,
+
         }
     ;
     const foundations = {
@@ -121,11 +122,14 @@ export const getContent = (contentId: string, sub: string | undefined = undefine
         hmr: HMR,
         processors: Processors,
         'dev-server': DevServer,
+        glossary: Glossary,
+        multilanguage: MultiLanguage,
     }
     const api = {
         api: {
             uri: APIURI,
-            BeyondWidget: BeyondWidgetApi
+            BeyondWidget: BeyondWidgetApi,
+            iWidgetStore: IWidgetStore
         }
     }
     const contents = {
@@ -140,6 +144,10 @@ export const getContent = (contentId: string, sub: string | undefined = undefine
 
     if (!contents.hasOwnProperty(contentId) || sub && !contents[contentId].hasOwnProperty(sub)) {
         return {id: contentId, control: contents.error404};
+    }
+    if (!contents[contentId]) {
+        console.log('error', contents[contentId], contentId, contents)
+        return Error404;
     }
     // the constructor is 'Object' when the contents[contentId] value is a plain object of subitems on contents.
     if (contents[contentId].constructor.name === 'Object' && !sub) {

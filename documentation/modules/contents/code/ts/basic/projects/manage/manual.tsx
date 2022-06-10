@@ -24,9 +24,7 @@ const tplBeyond = `
 {
   "applications": [
     "path-to-project/project.json"
-  ],
-  "bundles": {},
-  "libraries": []
+  ]
 }
 `;
 
@@ -57,7 +55,7 @@ export function ManualCreation() {
 
             <div className="block__note">
                 Puedes leer más sobre las opciones de configuración de <BeyondName/> en entorno de desarrollo en la
-                sección del <Link href="/docs/fundamentals/dev-server">Servidor de desarrollo</Link>
+                sección del <Link href="/docs/dev-server">Servidor de desarrollo</Link>
             </div>
 
         </>

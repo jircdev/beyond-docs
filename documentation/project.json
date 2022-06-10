@@ -74,7 +74,8 @@
   },
   "static": {
     "includes": [
-      "./images"
+      "./images",
+      "favicon.png"
     ]
   }
 }

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {BeyondName} from "../../views/beyond";
 import {Link} from '@beyond/ui/link/code';
+import {NextLinks} from "@beyond/docs/components/next-links/code";
 
 export function ProjectDependencies() {
     return (
@@ -33,11 +34,14 @@ export function ProjectDependencies() {
                 Requerida en los proyectos de tipo <strong>node</strong> y <strong>backend</strong>.
             </p>
             <h3 id="beyond-kernel"><span className="inline">@beyond/ssr</span></h3>
-            <p>Se encarga de proveer las apis para poder acceder a la información de renderizado de los widgets y disponibilizar el renderizado servidor.</p>
+            <p>Se encarga de proveer las apis para poder acceder a la información de renderizado de los widgets y
+                disponibilizar el renderizado servidor.</p>
             <h3 id="beyond-kernel">Librerias para widgets</h3>
 
-            <p><BeyondName/> ofrece librerias que brindan soporte al manejo de widgets para `react`, `vue` y `svelte`.
-                Son requeridas en la medida en que se desee trabajar con estas tecnologías. Las librerias son
+            <p>
+                Para trabajar con widgets es necesario tener instalada la dependencia <span
+                className="inline">@beyond/widgets</span> y adicionalmente, según el framework que se desee utilizar,
+                <BeyondName/> ofrece las siguientes librerias:
             </p>
             <ul>
                 <li><span className="inline">@beyond/react-widget</span></li>
@@ -45,6 +49,16 @@ export function ProjectDependencies() {
                 <li><span className="inline">@beyond/svelte-widget</span></li>
             </ul>
 
+            <div className="block__note">
+                Todas las librerias mencionadas se pueden instalar por medio del comando <span className="inline">npm i library</span> donde
+                "library" sería el nombre de la libreria a instalar.
+            </div>
+
+
+            <NextLinks items={[
+                ['Widgets', '/docs/widgets'],
+                ['Crear un módulo', '/docs/modules/create']]}
+            />
         </>
     )
 }

@@ -8,26 +8,15 @@ import {TemplateApplication} from "./application";
 import {TemplateGlobal} from "./global";
 import {TemplateOverwrites} from "./overwrites";
 
-const tplConfig = `
-"application": {
-    "processor": "sass",
-    "path": "application",
-    "files": [
-      "*"
-    ]
-  }
-`;
 
 export function TemplatePage() {
     return (
         <>
-        <TemplateIntro/>
-        <TemplateConfig/>
-        <TemplateApplication/>
-        <TemplateGlobal/>
-        <TemplateOverwrites/>
+            <TemplateIntro/>
+            <TemplateConfig/>
+            <TemplateApplication/>
 
-
+            <TemplateOverwrites/>
         </>
     )
 }

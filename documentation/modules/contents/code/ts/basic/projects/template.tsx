@@ -33,7 +33,7 @@ const tplConfig = `
 //     </li>
 //     <li><span className="inline">template.json</span>: Archivo de configuración de la plantilla.</li>
 // </ul>
-export function TemplatePage() {
+export function _TemplatePage() {
     return (
         <div className="content">
             <h1>Plantilla de un protecto</h1>

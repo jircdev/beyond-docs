@@ -3,6 +3,7 @@ import {Link} from '@beyond/ui/link/code';
 import {DashboardCreateProject} from "./dashboard";
 import {BeyondName} from "../../../views/beyond";
 import {ManualCreation} from "./manual";
+import {NextLinks} from "@beyond/docs/components/next-links/code";
 
 export function ManageProject() {
     return (
@@ -23,8 +24,11 @@ export function ManageProject() {
             </p>
             <DashboardCreateProject/>
             <ManualCreation/>
-
-
+            <NextLinks items={[
+                ['Crear un proyecto', '/docs/projects/create'],
+                ['Distribuciones', '/docs/projects/distributions'],
+                ['project.json', '/docs/projects/json'],
+            ]}/>
         </>
     )
 }

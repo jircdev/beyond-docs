@@ -1,6 +1,7 @@
 import * as React from 'react';
-import {Link} from '@beyond/ui/link/code';
+import {Link} from "@beyond/ui/link/code";
 import {Code} from "@beyond/docs/code/code";
+import {BeyondName} from "../../views/beyond";
 
 const tpl = `\r"bridge": {
     "path": "bridge",
@@ -19,28 +20,15 @@ class Auth {
         return {status: true, data: {valid: true}}
     }
 }`
+const tplStart = `
+import {listen} from '@beyond-js/backend/listen/ts';
 
-export function Backend() {
+listen();
+`;
+
+export function BackendBridge() {
     return (
         <>
-            <h1>Código <strong>Backend</strong></h1>
-
-            <p>
-                <span className="beyond">BeyondJS</span> disponibiliza un entorno seguro y eficiente pare crear código
-                backend, bien sea que se requiera para trabajar con servicios independientes, encargados de tareas
-                específicas o que busque implementar una conexión de un proyecto cliente con una api backend.
-            </p>
-            <p>Para efectos de <span className="beyond">BeyondJS</span>, podemos clasificar estas estructuras de código
-                en dos tipos:
-            </p>
-
-            <ul>
-                <li><strong>Servicios Backend:</strong> Código node que representa un servicio en ejecución en el
-                    backend y sólo puede ser utilizado por módulos que tambien se ejecuten en el backend.
-                </li>
-                <li><strong>Api backend</strong>: permiten la conexión entre el código backend y el código cliente.</li>
-            </ul>
-
             <h2>Api <strong>Servidor</strong> <br/>Bundle <code className="inline">bridge</code></h2>
             <p>
                 Las APIs servidor en <span className="beyond">BeyondJS</span> representan funciones
@@ -49,6 +37,12 @@ export function Backend() {
                 con la creación de un <Link href="/bundles#bridge">Bundle Bridge</Link>.
             </p>
 
+            <div className="block__note">
+                Para que se pueda ejecutar código Backend en <BeyondName/> es necesario tener configuradas las
+                distribuciones necesarias. Si el proyecto se creo a partir del tipo de proyecto <span
+                className="inline">web-backend</span>, la misma ya se encuentra configurada. Puedes encontrar más
+                información en <Link href="/docs/distributions">La sección de distribuciones</Link>.
+            </div>
 
             <Code>
                 {tpl}
@@ -73,31 +67,27 @@ export function Backend() {
             </Code>
 
             <p>Un objeto Javascript común y corriente ¿Verdad?</p>
+
+
             <p><span className="beyond">BeyondJS</span> genera un objeto cliente que realiza la conexión <code
                 className="inline">web-socket</code> al servidor, ejecuta el código implementado por el desarrollador y
                 deja disponible la respuesta en el código cliente, abstrayendo al programador de la necesidad de
                 procuparse por la conexión entre las capas cliente y servidor y permitiendo que el código funcione como
                 parte de un mismo ecosistema.
             </p>
-
+            <p>
+                Ahora sólo es necesario inicializar el servidor. Para ello es necesario crear un módulo con un
+                bundle <span className="inline">start</span> que se encargue de iniciar el <Link
+                href="/docs/bee">BEE</Link>. El código del bundle <span className="inline">start</span> es el siguiente:
+            </p>
+            <Code>
+                {tplStart}
+            </Code>
 
             <div className="block__note">En el <Link href="/tutorial/web">Tutorial Web</Link> disponible, se implementa
                 un bridge que permite ver en acción el funcionamiento de las <strong>apis backend</strong> de <div
                     className="beyond">BeyondJS.</div>
             </div>
-
-            <h3>Comentarios mágicos</h3>
-
-            <h2>bundle <code className="inline">backend</code></h2>
-
-            <p>
-                Los bundles <code className="inline">backend</code> representan código javascript que es ejecutado en el
-                servidor y sólo pueden ser utilizados por módulos que tambien funcionen en el servidor. Dicho en otras
-                palabras, representan cualquier servicio típico de <span className="inline">NodeJS</span>, con la
-                salvedad de que, en entorno de desarrollo, son ejecutados por medio de un BEE o proceso <span
-                className="beyond">BeyondJS</span> lo cual aumenta la productividad al poder trabajar
-                con <strong>HMR</strong> de forma automatizada <i>y sin configuración</i>.
-            </p>
         </>
     )
 }

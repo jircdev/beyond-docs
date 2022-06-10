@@ -1,12 +1,10 @@
 import {structureItems} from "./structure-item";
 
 const children = [
-    ['server', 'Server'],
-    ['/api/uri', 'URI'],
-    ["/api/BeyondWidget", "Objeto widget"],
-    ['projects', 'Configuración de proyectos'],
-    ['modules', 'Modules'],
-    ['bundles', 'Bundles'],
+
+    ['api/uri', 'URI'],
+    ["api/BeyondWidget", "Objeto widget"],
+    ["api/IWidgetStore", "IWidgetStore"],
 
 ];
 export const api = {
