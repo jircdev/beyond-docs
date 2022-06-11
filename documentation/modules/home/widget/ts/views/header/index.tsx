@@ -4,7 +4,8 @@ import {Pulse} from "./pulse";
 import {SVGEventsManager} from "./animation-functions";
 import {Notice} from "./notice";
 import {HeaderContent} from "./header-content";
-import {TopHeader} from "./top-header";
+import {TopHeader} from "./header-menu";
+ import "@beyond/docs/header-menu/widget";
 
 export function Header() {
 
@@ -13,7 +14,7 @@ export function Header() {
     return (
         <>
             <Notice/>
-            <TopHeader/>
+            <docs-header-menu/>
             <header className="home__header" ref={container}>
                 {/*<header-animation/>*/}
                 <div className="container flex-container flex-center">

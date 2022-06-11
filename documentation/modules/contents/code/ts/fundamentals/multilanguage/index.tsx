@@ -15,7 +15,14 @@ const tpl = `
 `;
 
 const tpl2=`
-import type {Texts} from '@beyond-js/kernel/texts/ts';
+import {module} from "beyond_context";
+
+/**
+resource: module.resource // nombre del modulo como recurso
+multilanguage: boolean
+*/
+this.#texts = new CurrentTexts(module.resource, true);
+this.#texts.bind('change', this.triggerEvent);
 `;
 export function MultiLanguage() {
     return (

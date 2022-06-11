@@ -1,0 +1,9 @@
+{
+  "menu": {
+    "tutorial": "Tutorial",
+    "documentation": "Documentation",
+    "examples": "Examples",
+    "languages": "Languages",
+    "theme": "Theme"
+  }
+}

@@ -1,0 +1,66 @@
+.beyond-element-modal.modal-languages {
+
+  .modal-content {
+
+    width: 100%;
+    max-width: 500px;
+    padding: 2rem;
+
+    ul {
+      list-style: none;
+      display: flex;
+
+      li {
+        padding: 1rem;
+        transition: 300ms all ease-in;
+        display: grid;
+        font-size: 2rem;
+        cursor: pointer;
+
+        .current-name {
+          font-size: 1rem;
+        }
+
+        &:hover {
+          background: var(--app-link-hover-bg);
+        }
+
+        &.item-selected {
+          background: var(--primary-light);
+        }
+      }
+    }
+
+    .actions {
+      display: flex;
+      justify-content: end;
+      border-top: 1px solid var(--element-border-color);
+      margin-top: 1rem;
+      padding-top: 1rem;
+    }
+
+    .btn {
+      padding: .5rem 1rem;
+      border-radius: var(--border-radius-base);
+      border: 1px solid var(--color-gray-10);
+      transition: all 200ms ease-in;
+      cursor: pointer;
+
+      &.btn-primary {
+        background: var(--primary);
+        color: var(--text-on-primary);
+        border: 1px solid var(--primary-dark);
+
+        &:disabled {
+          background: var(--color-gray-10);
+          border-color: var(--color-gray-10);
+          cursor: none;
+        }
+
+        &:hover {
+          background: var(--primary-dark);
+        }
+      }
+    }
+  }
+}

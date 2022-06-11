@@ -4,12 +4,13 @@ export const fundamentals = {
     id: 'fundamentals',
     label: 'Fundamentos',
     children: structureItems([
-        ['ssr', 'Server side rendering'],
-        ['hmr', 'HMR'],
-        ["processors", "Procesadores"],
-        ['bee', 'BEE'],
         ['dev-server', "Servidor de desarrollo"],
+        ['distributions', 'Distribuciones'],
+        ["processors", "Procesadores"],
+        ['hmr', 'HMR'],
+        ['bee', 'BEE'],
+        ['ssr', 'SSR'],
         ['multilanguage', 'Multilenguaje'],
         ['glossary', 'Glosario']
-    ]);
+    ])
 };

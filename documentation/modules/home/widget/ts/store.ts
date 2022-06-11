@@ -1,4 +1,6 @@
 import {Events, IWidgetStore} from "@beyond-js/kernel/core/ts";
+import {CurrentTexts} from '@beyond-js/kernel/texts/ts';
+
 
 interface IContent {
     id: string;
@@ -12,7 +14,6 @@ export class Store extends Events implements IWidgetStore {
     get loading() {
         return this.#loading;
     }
-
 
 
     #value: IContent[] = [];
@@ -30,14 +31,26 @@ export class Store extends Events implements IWidgetStore {
         return this.#container;
     }
 
+    get ready() {
+
+    }
+
+    #texts;
+    get texts() {
+        return this.#texts.value;
+    }
+
     constructor(container) {
         super();
         this.#container = container;
+        // this.#texts = new CurrentTexts(module.resource, true);
+        // this.#texts.bind('change', this.triggerEvent);
     }
 
     async fetch() {
 
     }
+
 
     hydrate(cached: IContent[]) {
 

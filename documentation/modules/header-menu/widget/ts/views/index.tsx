@@ -1,8 +1,9 @@
 import * as React from 'react';
 import {BeyondImage} from "@beyond/ui/image/code";
-import {Hamburger} from "./menu/hamburger";
+import {Hamburger} from "./hamburger";
 import {ThemeToggleButton} from "@beyond/docs/components/theme-button/code";
 import {Link} from "@beyond/ui/link/code";
+import {LanguageAction} from "./language-action";
 
 export function TopHeader() {
     return (
@@ -15,6 +16,7 @@ export function TopHeader() {
                 <div className="menu-list__container">
                     <ul className="header__menu">
                         <li><ThemeToggleButton/></li>
+                        <li><LanguageAction/></li>
                         <li><Link href="/docs/tutorial/web">Tutorial</Link></li>
                         <li><Link href="/docs/intro">Documentation</Link></li>
                         <li><Link href="/examples">Examples</Link></li>
