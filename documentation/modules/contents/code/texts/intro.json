@@ -1,0 +1,42 @@
+{
+  "en": {
+  },
+  "es": {
+    "intro": {
+      "title": "¿Qué es BeyondJS?",
+      "p1": "BeyondJS es un meta-framework basado en typescript, diseñado para crear proyectos que funcionen en diferentes entornos de ejecución JavaScript, manteniendo el foco en garantizar al programador una experiencia universal de desarrollo. Lo hace manteniéndose agnóstico a las librerías y tecnologías existentes, buscando dejar un camino estandarizado que permita su integración.",
+      "p2": "Los factores que garantizan una experiencia de desarrollo homogénea, sin importar el entorno para el que se trabaje son:",
+      "items": [
+        "HMR en código cliente y código Node: de forma automática, sin configuraciones adicionales. Además, brinda una API al desarrollador que permite definir cuando y que desea actualizar.",
+        "Desarrollo modular: BeyondJS tiene una filosofía de generación de bundles pequeños que son cargados a demanda en el momento en que son requeridos. No trabaja con un árbol de dependencias y por tanto no requiere de empaquetadores cómo webpack o parcel.",
+        "Gestión de distribuciones: BeyondJS permite definir distribuciones para las plataformas de desarrollo que desean utilizarse y gestiona la, disponibilización del código final en base a ello."
+      ]
+    },
+    "management": {
+      "title": "Manejo de proyectos",
+      "p1": "Los proyectos en BeyondJS, tienen un enfoque de compatibilidad con NPM, lo cual les permite ser pensados como paquetes que podrían eventualmente, ser publicados directamente en NPM y posteriormente utilizados en cualquier otro proyecto, tanto de BeyondJS como externo.",
+      "p2": "Un proyecto es definido por medio de la especificación de su scope, nombre y de al menos una distribución. Las distribuciones permiten identificar el entorno de ejecución sobre el cual se espera funcione el proyecto y algunos datos adicionales que pueden resultar relevantes para el proceso de compilación y deployment. Asimismo, se puede configurar múltiples distribuciones en simultáneo, brindándole al desarrollador la flexibilidad de validar el comportamiento de su proyecto en los diferentes ecosistemas configurados.",
+      "p3": "Los proyectos contienen módulos, estos representan la unidad mínima de desarrollo en BeyondJS y tienen la capacidad de definir sobre que plataforma funcionan. Dato que es interpretado por las distribuciones configuradas en el entorno de desarrollo y al momento de realizar deploy de un proyecto."
+    },
+    "features": {
+      "p1": "A continuación, listamos algunas de las características más relevantes de BeyondJS.",
+      "items": [
+        "<strong>Universal deployment</strong>: Un mismo código, cualquier entorno.",
+        "<strong>Carga modular y a demanda</strong>: Esto quiere decir que el código sólo carga una vez, cuando es requerido.",
+        "<strong>Dashboard</strong>  o panel de control muy poderoso para desarrolladores.",
+        "<strong>Plug & play</strong> de módulos.",
+        "<strong>Ecosistema</strong> único de desarrollo entre Backend y Frontend. ",
+        "<strong>Real Time</strong>  listo para implementar con web sockets.",
+        "<strong>Integración automática</strong> con frameworks de vistas como React, Vue, Svelte.",
+        "<strong>Typescript más inteligente</strong>: transpilado y chequeo de tipos en paralelo, para mejor productividad y rendimiento.",
+        "<strong>HMR</strong>  modular y en el código backend de forma automática.",
+        "<strong>Sin árbol de dependencias</strong> BeyondJS trabaja bajo un paradigma distinto al que usan empaquetadores como webpack.",
+        "<strong>Jamstack + SSR.</strong>",
+        "Entorno de ejecución de servicios gestionados por BeyondJS.",
+        "Web Components integrados.",
+        "<strong>Multilenguaje</strong> manejado por medio de bundles.",
+        "Manejo de plantillas y sobreescritura."
+      ]
+    }
+  }
+}

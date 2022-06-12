@@ -1,5 +1,5 @@
 {
-  "name": "contents",
+  "name": "contents-subpage",
   "platforms": [
     "backend",
     "web"
@@ -7,7 +7,7 @@
   "widget": {
     "hmr": true,
     "element": {
-      "name": "contents-page"
+      "name": "contents-subpage"
     },
     "name": "docs-page",
     "layout": "main-layout",

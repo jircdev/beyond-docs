@@ -1,5 +1,6 @@
 import * as React from 'react';
 import {BeyondModal} from "@beyond/ui/modal/code";
+import {beyond} from '@beyond-js/kernel/core/ts';
 
 interface IDisabled {
     disabled?: boolean
@@ -8,6 +9,8 @@ interface IDisabled {
 export function LanguagesModal({onClose}) {
     const [selected, setSelected] = React.useState(undefined);
     const onConfirm = event => {
+        console.log(2, 'selected', selected);
+        beyond.languages.current = selected;
         onClose();
     }
     const onClick = event => {

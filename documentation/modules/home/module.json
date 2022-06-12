@@ -22,11 +22,13 @@
       "files": [
         "*"
       ]
-    },
-    "txt": {
-      "multilanguage": true,
-      "path": "texts",
-      "files": ["*"]
     }
+  },
+  "txt": {
+    "multilanguage": true,
+    "path": "texts",
+    "files": [
+      "*"
+    ]
   }
 }

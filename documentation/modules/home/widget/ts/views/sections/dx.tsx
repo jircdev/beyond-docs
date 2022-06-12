@@ -1,7 +1,11 @@
 import * as React from 'react';
 import {BeyondImage} from "@beyond/ui/image/code";
+import {useHomeContext} from "../context";
 
 export function DX() {
+    const {texts: {experience, readMore}} = useHomeContext();
+
+    const output = experience.texts.map((item, index) => <li key={`${item}.${index}`}>{item}</li>);
     return (
         <>
             <article className="block__features gradient-one two-columns mv-200">
@@ -14,15 +18,10 @@ export function DX() {
                 <div/>
                 <div className="content content-40">
                     <header className="header__section header__left">
-                        <h3>Experiencia de desarrollo</h3>
+                        <h3>{experience.title}</h3>
                     </header>
-
                     <ul>
-                        <li>Proyectos en simultáneo.</li>
-                        <li>Edición de código.</li>
-                        <li>Deployment.</li>
-                        <li>Creación de módulos.</li>
-                        <li>Gestión de plataformas y servicios.</li>
+                        {output}
                     </ul>
                 </div>
 

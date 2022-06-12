@@ -1,5 +1,5 @@
 {
-  "name": "contents-subpage-page",
+  "name": "contents-page",
   "platforms": [
     "backend",
     "web"
@@ -8,7 +8,7 @@
     "hmr": true,
     "layout": "main-layout",
     "element": {
-      "name": "contents-subpage-page"
+      "name": "contents-page"
     },
     "name": "home",
     "route": "/docs/${content}",
