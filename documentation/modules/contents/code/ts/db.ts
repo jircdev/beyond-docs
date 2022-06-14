@@ -21,11 +21,15 @@ import {ModuleConfig} from "./basic/modules/config";
 import {Bundles} from "./basic/modules/bundles";
 
 //widgets
-import {Widgets} from "./basic/widgets";
-import {LayoutWidget} from "./basic/widgets/types/layout";
-import {PageWidget} from "./basic/widgets/types/page";
-import {WidgetCreation} from "./basic/widgets/creation";
-import {WidgetController} from "./basic/widgets/controller";
+import {
+    LayoutWidget,
+    WidgetCreation,
+    PageWidget,
+    Widgets,
+    WidgetController
+} from "@beyond/docs/docs/basic/widgets/intro/code";
+
+import {RenderingPage} from "@beyond/docs/docs/basic/widgets/rendering/code";
 
 import {Backend} from "./basic/backend";
 import {FetchingDAtaPage} from "./basic/fetching";
@@ -38,7 +42,7 @@ import {ThemesPage} from "./basic/styles/themes";
 
 
 import {StateManagement} from "./basic/state-management";
-import {RenderingPage} from "./basic/rendering";
+
 
 
 /*fundamentals*/

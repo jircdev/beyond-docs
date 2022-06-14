@@ -1,70 +1,28 @@
 @import "~template/sass/mixins/set-media";
 
-@mixin relative-absolute() {
-  position: absolute;
-  @content ;
-  @include set-media('tablet', false, 'max') {
-    position: relative;
-  }
-}
+.realtime-section {
 
-.block__features.realtime-section {
+  .top-img {
 
-  .flex-container {
-    display: flex;
-    flex-direction: column;
-  }
+    .beyond-element-image {
+      min-height: 150px;
 
-  .flex-vertical {
-    display: flex;
-    flex-direction: row;
-  }
-
-  svg {
-    height: 100px;
-    width: 100px;
-    aspect-ratio: 1/1;
-
-  }
-
-  .icons-graphic {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    .beyond-icon {
-      height: 85%;
-      width: 85%;
+      img {
+        object-fit: contain;
+        min-height: 150px;
+        object-position: center;
+      }
     }
   }
 
-  @include set-media('desktop', false, min) {
-    & > div {
-      &:nth-child(1) {
-        order: 2;
-      }
-
-      &:nth-child(2) {
-        order: 1;
-      }
-
-      &:nth-child(3) {
-        order: 3;
-      }
-
+  @media(max-width: 600px) {
+    .top-img {
+      width: 100% !important;
+      padding: 0;
+      margin: 0;
     }
-  }
-  @include set-media('tablet', false, max) {
-    & {
-      //display: flex !important;
-      //flex-shrink: 1;
-      //flex-grow: 0;
-      display: grid;
-      grid-template-columns: 1fr;
-
-      .relative-container {
-        //order: 1;
-      }
+    .content {
+      padding-top: 0 !important;
     }
   }
 }

@@ -6,10 +6,6 @@
   border-bottom: 1px solid var(--app-element-border-color-1);
 
   .menu-container {
-    border-bottom: 1px solid var(--app-element-border-color-1);
-  }
-
-  .menu-container {
     padding: 0;
   }
 
@@ -31,15 +27,21 @@
   }
 
   @include set-media('tablet', false, 'max') {
+    display: flex;
+    justify-content: end;
+    flex-grow: 0;
+    flex-shrink: 0;
 
     .menu-list__container {
       position: absolute;
       width: 100%;
-      top: 59px;
+      top: 90px;
       left: 0;
       z-index: 10;
       height: 0;
+
       bottom: 0;
+
       &.opened {
         height: 100%;
       }
@@ -55,7 +57,7 @@
       &.opened {
         transition: all 300ms ease-in;
         display: flex;
-        height: calc(100% - 59px);
+        height: calc(100% - 80px);
         flex-direction: column;
         align-items: start;
         width: calc(100% - 2rem);
@@ -65,9 +67,20 @@
         animation: showIn ease 300ms forwards;
 
         li {
+          &:nth-child(1) {
+            order: 10;
+            padding: 15px;
+            width: calc(100% - 30px);
+          }
+          &:nth-child(2) {
+            order: 9;
+            padding: 15px;
+            width: calc(100% - 30px);
+          }
           a {
+            display: flex;
+            padding: 15px;
             font-size: .8rem;
-
           }
 
           width: 100%;
@@ -93,12 +106,7 @@
       }
     }
   }
-  @include set-media('tablet', false, 'max') {
-    display: flex;
-    justify-content: end;
-    flex-grow: 0;
-    flex-shrink: 0;
-  }
+
 }
 
 @keyframes showIn {

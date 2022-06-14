@@ -21,7 +21,9 @@
     ]
   },
   "txt": {
-    "files": "*",
+    "files": [
+      "*"
+    ],
     "path": "texts",
     "multilanguage": true
   }

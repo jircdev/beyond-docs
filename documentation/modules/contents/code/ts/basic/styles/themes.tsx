@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {NextLinks} from "@beyond/docs/components/next-links/code";
-import {BeyondName} from "../../views/beyond";
+import {BeyondName} from "@beyond/docs/components/html/code";
 import {Code, CodeBox} from "@beyond/docs/code/code";
 
 

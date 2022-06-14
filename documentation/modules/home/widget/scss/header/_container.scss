@@ -1,42 +1,16 @@
-.container {
+.home__header {
   z-index: 2;
 
-  .header__content {
-    width: 70%;
-  }
+  .header-content__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
 
-  .beyond-element-image {
-    margin: 0;
-  }
-
-  > figure {
-
-    display: flex;
-    justify-content: center;
-    flex-grow: 1;
-    width: 30%;
-
-    .beyond__icon {
-      display: flex;
-      width: 100%;
-      justify-content: center;
+    @media (max-width: 800px) {
+      grid-template-columns: 60% auto;
     }
-  }
-
-  @media (max-width: 800px) {
-    margin-top: 2rem;
-    height: 100%;
-
-    .header__content {
-      width: 100%;
-
-      h1 {
-        font-size: 2rem;
-      }
-    }
-
-    > figure {
-      display: none;
+    @media (max-width: 400px) {
+      grid-template-columns: 1fr;
     }
   }
 

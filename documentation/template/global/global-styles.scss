@@ -1,5 +1,8 @@
-@import "~template/sass/mixins/set-media";
+@import "~template/sass/mixins";
+@import "general";
 @import "separator";
+@import "typography";
+@import "container";
 .accent {
   color: var(--accent-color) !important;
 }

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {Link} from "@beyond/ui/link/code";
 import {Code} from "@beyond/docs/code/code";
-import {BeyondName} from "../../../views/beyond";
+import {BeyondName} from "@beyond/docs/components/html/code";
 
 export function Modules() {
     return (

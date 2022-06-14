@@ -7,21 +7,26 @@ import {CHtml} from "@beyond/docs/components/html/code";
 export function Solution() {
     const {texts: {solution: {universalTs, jamStack, frameworks}}} = useHomeContext();
     return (
-        <div className="container cards__container">
-            <Card title={universalTs.title} href="/docs/intro">
+        <div className="container cards__container no-mv">
+            <Card title={universalTs.title}  img="universal-ts" href="/docs/intro">
                 <CHtml>{universalTs.description.one}</CHtml> <Elink
                 href="https://cordova.apache.org/">{universalTs.description.cordova}</Elink>, <Elink
                 href="https://docs.npmjs.com/packages-and-modules">{universalTs.description.npm}</Elink>
                 {universalTs.description.two} <Elink href="https://nodejs.org">{universalTs.description.node}</Elink>.
             </Card>
-            <Card title={jamStack.title} href="/docs/rendering">
+            <Card title={jamStack.title}
+                  img="isomorphic"
+                  href="/docs/rendering">
                 <CHtml>{jamStack.one}</CHtml>
                 <Elink href="https://jamstack.org/">{jamStack.jamStack}</Elink>
                 {jamStack.two}<Elink href="https://micro-frontends.org/">{jamStack.microfrontends}</Elink>.
 
 
             </Card>
-            <Card title={frameworks.title} href="/docs/widgets">
+            <Card
+                title={frameworks.title}
+                img="framework-views"
+                href="/docs/widgets">
                 {frameworks.start}
                 <Elink href="https://reactjs.org">React</Elink>,&nbsp;
                 <Elink href="https://vuejs.org/">Vue</Elink> <Elink

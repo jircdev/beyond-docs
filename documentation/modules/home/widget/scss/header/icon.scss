@@ -1,28 +1,18 @@
-$height: 90vh;
-$width: 90vh;
-
+$height: 130%;
+$width: 70%;
 
 .beyond__icon {
   //border: 1px solid red;
   height: $height;
   width: $width;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -10%;
   position: absolute;
-  top: -8vh;
-
+  top: 0;
+  right: 0;
   fill: var(--app-icon-bg);
   opacity: .6;
   z-index: -1;
-  svg {
-    position: relative;
-    transition: all ease-in 100ms;
-
-    #beyond-ales path {
-      fill: var(--app-icon-bg);
-    }
-
-    #beyond-circle path {
-      fill: var(--app-icon-bg);
-    }
-  }
-
 }

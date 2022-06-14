@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {Code} from "@beyond/docs/code/code";
-import {TypeProperty} from "../../type-property";
+import {TypeProperty} from "@beyond/docs/components/html/code";
 
 const tpl1 = `{
   "applications": "projects.json",

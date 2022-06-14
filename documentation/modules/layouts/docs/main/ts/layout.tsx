@@ -14,7 +14,7 @@ export  /*bundle*/  function Layout() {
     return (
 
         <div className="main-widget">
-            <beyond-docs-header/>
+            <docs-header-menu/>
             <div className="docs-page container">
                 <menu-layout/>
                 <main>

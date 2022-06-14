@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {Link} from '@beyond/ui/link/code';
-import {ModalImage} from "../../views/modal-image";
+import {ModalImage} from "@beyond/docs/components/html/code";
 import {Code} from "@beyond/docs/code/code";
 import {PageCode} from "./templates/page-code";
 import {pageStyles} from "./templates/page-styles";

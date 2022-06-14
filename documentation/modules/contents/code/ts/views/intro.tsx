@@ -1,13 +1,11 @@
 import * as React from 'react';
 import {Link} from '@beyond/ui/link/code';
-import {Quiz} from "../quiz";
 import {BeyondImage} from '@beyond/ui/image/code';
-import {BeyondName} from "./beyond";
+import {BeyondName} from "@beyond/docs/components/html/code";
 
 export function __Intro() {
     return (
         <>
-
             <h2 id="intro">Bienvenido</h2>
             <p>
                 Bienvenido a la documentación de <span className="beyond">BeyondJS</span>. En este documento se realiza
@@ -53,7 +51,6 @@ export function __Intro() {
                 simplificando el proceso y garantizando la compatibilidad entre entornos. Asimismo, es
                 compatible con la mayoria de frameworks de vista y suministra medios para integrar nuevas librerias.
             </p>
-
 
 
         </>

@@ -1,0 +1,39 @@
+@use "~template/sass/mixins";
+
+.page-section {
+  margin: 2rem auto;
+  padding: 2rem;
+
+  &.primary-surface {
+    background: var(--app-element-surface);
+  }
+
+  .content {
+    padding: 2rem;
+  }
+
+  .flex-center-v {
+    align-items: center;
+    display: flex;
+  }
+
+  .top-img {
+    margin-bottom: -100px;
+  }
+
+  h3 {
+    padding: 0;
+    margin: .5rem 0 1rem;
+    font-size: 1.5rem;
+    @include mixins.text-gradient(var(--app-dark-text-gradient));
+
+    &.secondary {
+
+      @include mixins.text-gradient(var(--app-secondary-text-gradient));
+    }
+  }
+}
+
+.debug {
+  border: 1px solid red;
+}

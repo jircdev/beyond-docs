@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {Link} from '@beyond/ui/link/code';
 import {DashboardCreateProject} from "./dashboard";
-import {BeyondName} from "../../../views/beyond";
+import {BeyondName} from "@beyond/docs/components/html/code";
 import {ManualCreation} from "./manual";
 import {NextLinks} from "@beyond/docs/components/next-links/code";
 

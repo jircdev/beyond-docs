@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {Link} from "@beyond/ui/link/code";
-import {BeyondName} from "../../../views/beyond";
+import {BeyondName} from "@beyond/docs/components/html/code";
 import {Code} from "@beyond/docs/code/code";
 
 export function NPXOptions() {

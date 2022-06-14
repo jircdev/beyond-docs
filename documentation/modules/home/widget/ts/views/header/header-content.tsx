@@ -13,7 +13,7 @@ export function HeaderContent() {
                     <StrongTitle/>
                 </h1>
             </section>
-            <span className="header__description">{texts.description}</span>
+            <span className="p1">{texts.description}</span>
         </div>
     )
 }

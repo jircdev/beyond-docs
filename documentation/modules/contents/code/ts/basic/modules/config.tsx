@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {TypeProperty} from "../../views/type-property";
+import {TypeProperty} from "@beyond/docs/components/html/code";
 import {Link} from '@beyond/ui/link/code';
 import {Code} from "@beyond/docs/code/code";
 import {NextLinks} from '@beyond/docs/components/next-links/code';

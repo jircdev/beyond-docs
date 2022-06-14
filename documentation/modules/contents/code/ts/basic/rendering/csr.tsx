@@ -1,5 +1,4 @@
 import * as React from 'react';
-import {SSR} from "./ssr";
 import {Link} from '@beyond/ui/link/code';
 
 export /*bundle*/ function CSR() {

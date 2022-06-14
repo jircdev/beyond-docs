@@ -1,20 +1,24 @@
 header.home__header .header__content {
   max-width: 700px;
+
   .main__title {
     padding: 4rem 0;
   }
 
   .pre__title {
-    font-size: 1.6rem;
-    color: var(--primary-light);
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-300) var(--unnamed-font-size-26)/var(--unnamed-line-spacing-30) var(--unnamed-font-family-rubik);
+    letter-spacing: var(--unnamed-character-spacing--0-26);
+    color: var(---primary-light-color-e58165);
   }
 
   h1 {
     margin: 5px 0;
-    font-size: 3.2rem;
-    font-family: var(--header-font);
+    text-align: left;
+    font-size: 43px;
+    font-family: var(--title-font);
     letter-spacing: -0.43px;
-    line-height: .9;
+    color: #FFFFFF;
+    opacity: 1;
 
     background: var(--app-primary-text-gradient);
     -webkit-background-clip: text;
@@ -30,6 +34,5 @@ header.home__header .header__content {
   .header__description {
     font-size: 1.3rem;
   }
-
 
 }

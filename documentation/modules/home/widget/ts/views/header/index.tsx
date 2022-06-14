@@ -1,21 +1,23 @@
 import * as React from 'react';
 import {IconLogo} from "./icon";
 import {Pulse} from "./pulse";
-import {Notice} from "./notice";
+import {Notice} from "../../../../../header-menu/widget/ts/views/notice";
 import {HeaderContent} from "./header-content";
 import "@beyond/docs/header-menu/widget";
+import {HeaderImage} from "./header-image";
 
 export function Header() {
     const container = React.useRef(null);
     return (
         <>
-            <Notice/>
-            <docs-header-menu/>
             <header className="home__header" ref={container}>
-                <div className="container flex-container flex-center">
+                <div className="container header-content__container ">
                     <HeaderContent/>
-                    <IconLogo/>
+                    <div className="header__animation__container">
+                        <HeaderImage/>
+                    </div>
                 </div>
+                <IconLogo/>
                 <Pulse/>
             </header>
         </>

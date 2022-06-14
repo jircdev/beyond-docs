@@ -1,33 +1,23 @@
 import * as React from 'react';
-import {BeyondName} from "../../views/beyond";
 import {Link} from '@beyond/ui/link/code';
-import {NextLinks} from '@beyond/docs/components/next-links/code';
+import {useDocsContext} from "../../context";
 
 export function Overview() {
+    const {texts: {intro: {overview: {title, p1, p2, p3, p4}}}} = useDocsContext();
+
+    console.log(12, p3)
     return (
         <>
-            <h2 id="projects">Manejo de proyectos</h2>
-            <p>Los proyectos en <BeyondName/>, tienen un enfoque de compatibilidad con NPM, lo cual les permite ser
-                pensados como paquetes que podrían eventualmente, ser publicados directamente en NPM y posteriormente
-                utilizados en cualquier otro proyecto, tanto de Beyond como externo.
-            </p>
-            <p> Un proyecto es definido por medio de la especificación de su scope, nombre y de al menos una
-                distribución. Las distribuciones permiten identificar el entorno de ejecución sobre el cual se espera
-                funcione el proyecto y algunos datos adicionales que pueden resultar relevantes para el proceso de
-                compilación y deployment. Asimismo,se puede configurar múltiples distribuciones en
-                simultáneo, brindandole al desarrollador la flexibilidad de validar el comportamiento de su proyecto en
-                los diferentes ecosistemas configurados.</p>
-
-
+            <h2 id="projects">{title}</h2>
+            <p>{p1}</p>
+            <p> {p2}</p>
             <p>
-                Los proyectos contienen <Link href="/docs/modules">módulos</Link>, estos representan la unidad mínima de
-                desarrollo en Beyond y tienen la capacidad de definir sobre que plataforma funcionan. dato que es
-                interpretado por las <Link href="/docs/distributions">distribuciones</Link> configuradas en el entorno
-                de desarrollo y al momento de realizar deploy de un proyecto.
+                {p3.t1} <Link href="/docs/modules">{p3.link1}</Link> {p3.t2} <Link
+                href="/docs/distributions">{p3.link2}</Link>
+                {p3.t3}
             </p>
             <div className="block__note note-info">
-                Si quieres conocer más en detalle acerca de esto y sobre cómo crear proyectos en <BeyondName/>
-                te recomendamos ir a la <Link href="/docs/projects/intro">sección de Proyectos</Link>
+                {p4.t1}<Link href="/docs/projects/intro">{p4.l1}</Link>
             </div>
         </>
     )

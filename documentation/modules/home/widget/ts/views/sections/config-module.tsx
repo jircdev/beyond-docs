@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {CodeBox} from "../navigator-box";
+import {CodeBox} from "@beyond/docs/code/code";
 import {Link} from '@beyond/ui/link/code';
 import {useHomeContext} from "../context";
 
@@ -29,20 +29,32 @@ export function ConfigModule() {
 
     const {texts: {config, plugAndPlay, readMore}} = useHomeContext();
     return (
-        <section className="block__features two-columns gradient-one code-box-container">
-            <div className="content">
-                <h3 className="text-plg">{config.title}</h3>
-                <p>{config.texts}</p>
-                <h3 className="text-slg">{plugAndPlay.title}</h3>
-                <p>{plugAndPlay.texts}
-                </p>
-                <footer className="action">
-                    <Link className="link-more" href="/docs/modules/introduction">{readMore}</Link>
-                </footer>
+        <div className="page-section grid-container container two-columns">
+            <div className="flex-center-v">
+                <div className="content">
+                    <section>
+                        <header>
+                            <span className="pretitle">
+                                {config.pretitle}
+                            </span>
+                            <h3>{config.title}</h3>
+                        </header>
+
+                        <p>{config.texts}</p>
+                    </section>
+
+                    <h3>{plugAndPlay.title}</h3>
+                    <p>{plugAndPlay.texts}
+                    </p>
+                    <footer className="action">
+                        <Link className="link-more" href="/docs/modules/introduction">{readMore}</Link>
+                    </footer>
+                </div>
             </div>
+
             <CodeBox title="module.json">
                 {tpl}
             </CodeBox>
-        </section>
+        </div>
     )
 }

@@ -4,7 +4,7 @@
  * @author Rose Pritchard
  */
 code:not(.inline-code, .inline), pre {
-  background: #1a1a1a;
+  background: var(--app-editor-bg);
   padding: 15px;
 
 }

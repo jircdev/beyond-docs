@@ -1,7 +1,7 @@
 import * as React from 'react';
-import {BeyondName} from "../views/beyond";
+import {BeyondName} from "@beyond/docs/components/html/code";
 import {Link} from '@beyond/ui/link/code';
-import {TypeProperty} from "../views/type-property";
+import {TypeProperty} from "@beyond/docs/components/html/code";
 import {CodeBox} from "@beyond/docs/code/code";
 import {NextLinks} from "@beyond/docs/components/next-links/code";
 

@@ -4,12 +4,13 @@ import {Controller} from "./controller";
 
 interface props {
     children: Array<JSX.Element>;
-    footer: boolean;
-    navigation: boolean,
-    pagination: boolean;
-    next: boolean,
-    functionNext: (e: React.SyntheticEvent) => void,
-    className: string;
+    footer?: boolean;
+    navigation?: boolean,
+    pagination?: boolean;
+    next?: boolean,
+    functionNext?: (e: React.SyntheticEvent) => void,
+    className?: string;
+    config: object
 }
 
 export /*bundle*/
@@ -27,7 +28,6 @@ function BeyondSwiperSlider(props: props): JSX.Element {
 
     const footer: boolean = props.footer === true;
     const [state, setState] = React.useState<any>({});
-    const [lastIndex, setLastIndex] = React.useState<any>();
 
     React.useEffect((): any => {
         const controller: any = new Controller();
@@ -39,16 +39,13 @@ function BeyondSwiperSlider(props: props): JSX.Element {
             lastIndex: controller.lastIndex
         });
         controller.bind("change", onChange);
-        controller.setSwiper(container.current, props, refs);
+        const config = props.config ?? {};
+        const specs = {...props, ...config};
+        controller.setSwiper(container.current, specs, refs);
         onChange();
         return () => controller.unbind("change", onChange);
     }, []);
     const {controller} = state;
-    React.useEffect((): any => {
-        setLastIndex(controller?.lastIndex);
-    }, [controller?.lastIndex]);
-
-
 
     const cls: string = props.className ? `${props.className} beyond-element-swiper-slider` : "beyond-element-swiper-slider"
     return (

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {ModalImage} from "../../views/modal-image";
+import {ModalImage} from "@beyond/docs/components/html/code";
 import {Link} from "@beyond/ui/link/code";
 
 export function TDashboard() {

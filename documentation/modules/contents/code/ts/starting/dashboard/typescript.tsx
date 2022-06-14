@@ -1,6 +1,6 @@
 import * as React from 'react';
-import {BeyondName} from "../../views/beyond";
-import {ModalImage} from "../../views/modal-image";
+import {BeyondName} from "@beyond/docs/components/html/code";
+import {ModalImage} from "@beyond/docs/components/html/code";
 
 export function DashboardTypescript() {
     return (

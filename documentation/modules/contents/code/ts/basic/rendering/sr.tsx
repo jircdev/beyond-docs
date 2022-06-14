@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {BeyondName} from "../../views/beyond";
+import {BeyondName} from "@beyond/docs/components/html/code";
 export /*bundle*/ function SR() {
     return (
         <>

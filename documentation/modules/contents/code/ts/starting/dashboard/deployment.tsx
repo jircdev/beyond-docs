@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {Link} from '@beyond/ui/link/code';
-import {ModalImage} from "../../views/modal-image";
+import {ModalImage} from "@beyond/docs/components/html/code";
 
 export function DashboardDeployment() {
     return (

@@ -30,11 +30,9 @@ export function Page({store}): JSX.Element {
             <main className="main__home__content">
                 <Solution/>
                 <Technologies/>
-                <div className="container">
-                    <ConfigModule/>
-                    <Realtime/>
-                    <DX/>
-                </div>
+                <Realtime/>
+                <ConfigModule/>
+                <DX/>
                 <Footer/>
             </main>
 

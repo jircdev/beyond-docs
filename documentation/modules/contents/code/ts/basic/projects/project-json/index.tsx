@@ -1,9 +1,7 @@
 import * as React from "react";
 import {Link} from '@beyond/ui/link/code';
-
-import {ObjectProperty} from "../../../views/object-property";
 import {NextLinks} from "@beyond/docs/components/next-links/code";
-import {BeyondName} from "../../../views/beyond";
+import {ObjectProperty, BeyondName} from "@beyond/docs/components/html/code";
 
 export function ProjectJson() {
     return (

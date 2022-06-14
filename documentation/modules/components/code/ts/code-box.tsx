@@ -6,12 +6,9 @@ export /*bundle*/ function CodeBox({title, language, children}) {
     return (
         <div className="code__box">
             <header>
-                <div className="box__buttons">
-                    <div className="circle red"/>
-                    <div className="circle blue"/>
-                    <div className="circle green"/>
+                <div className="tab active">
+                    {title}
                 </div>
-                {title}
             </header>
             <section className="box__code">
                 <Code language={language}>

@@ -1,8 +1,8 @@
 import * as React from 'react';
-import {BeyondName} from "../../views/beyond";
-import {Link, Elink} from "@beyond/ui/link/code";
+import {BeyondName} from "@beyond/docs/components/html/code";
+import {Elink} from "@beyond/ui/link/code";
 import {Code} from "@beyond/docs/code/code";
-import {TypeProperty} from "../../views/type-property";
+import {TypeProperty} from "@beyond/docs/components/html/code";
 
 const tpl1 = `{
   "applications": "projects.json",

@@ -3,7 +3,7 @@ import {Code} from "@beyond/docs/code/code";
 import {bridgeCode} from "./templates/bridge";
 import {Link} from '@beyond/ui/link/code';
 import {PageCode} from "./templates/page-code";
-import {ModalImage} from "../../views/modal-image";
+import {ModalImage} from "@beyond/docs/components/html/code";
 
 export function BridgeSection() {
     return (

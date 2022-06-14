@@ -3,7 +3,7 @@ import {Code} from "@beyond/docs/code/code";
 import {Link} from "@beyond/ui/link/code";
 
 import {AppIcon} from "@beyond/docs/ui/icons/code";
-import {ModalImage} from "../../views/modal-image";
+import {ModalImage} from "@beyond/docs/components/html/code";
 
 export function TRouting() {
     return (

@@ -1,18 +1,9 @@
 @use "~template/sass/mixins";
 
-p, ul, li {
-  font-size: 1.1rem;
-  line-height: 2rem;
-}
-
-.p2 {
-  line-height: 1.4rem;
-  letter-spacing: .2px;
-}
-
 .main__home__content {
   z-index: 2;
 }
+
 
 a {
   color: var(--app-link-color);
@@ -42,8 +33,8 @@ a {
   gap: 1rem;
 
   .beyond-icon {
-    height: 60px;
-    width: 60px;
+    height: 45px;
+    width: 45px;
     @include mixins.set-media('mobile', false, max) {
       height: 50px;
       width: 50px;

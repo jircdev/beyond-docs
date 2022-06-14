@@ -1,0 +1,47 @@
+$columns-gap: 15px !default;
+.flex-center {
+  place-content: center;
+  place-items: center;
+  display: flex;
+  gap: $columns-gap;
+
+
+  &-y {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    gap: $columns-gap;
+  }
+
+  &-x {
+    display: flex;
+    justify-content: center;
+    gap: $columns-gap;
+  }
+}
+
+.flex-container {
+  display: flex;
+
+  &.space-between {
+    justify-content: space-between;
+  }
+}
+
+.bg-secondary {
+  background: var(--secondary);
+  color: var(--text-on-secondary)
+}
+
+.bg-primary-accent {
+  background: var(--primary-accent);
+  color: var(--text-on-primary);
+}
+
+.pd-5 {
+  padding: 5px;
+}
+
+.pd-15 {
+  padding: 15px;
+}

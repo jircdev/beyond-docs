@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {Link} from '@beyond/ui/link/code';
-import {BeyondName} from "../../beyond";
+import {BeyondName} from "@beyond/docs/components/html/code";
 
 export function Glossary() {
     return (

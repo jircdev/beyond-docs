@@ -1,5 +1,4 @@
 import * as React from "react";
-import {beyond__styles} from '@beyond/docs/layout/styles/code';
 
 declare global {
     namespace JSX {
@@ -13,16 +12,13 @@ declare global {
 
 export default function () {
     return (
-
         <div className="main-widget">
-
             <div className="home-page">
-
+                <docs-header-menu/>
                 <main>
                     <beyond-layout-children/>
                 </main>
             </div>
         </div>
-
     );
 }

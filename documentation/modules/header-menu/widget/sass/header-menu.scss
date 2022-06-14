@@ -11,6 +11,12 @@
   align-items: center;
   align-content: center;
 
+  .mobile__header {
+    a {
+      display: grid;
+      align-items: center;
+    }
+  }
   .menu-container {
     z-index: 3;
   }

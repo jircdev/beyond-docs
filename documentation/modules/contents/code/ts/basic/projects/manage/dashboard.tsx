@@ -3,7 +3,7 @@ import {Elink, Link} from "@beyond/ui/link/code";
 import {Code} from "@beyond/docs/code/code";
 import {BeyondImage} from "@beyond/ui/image/code";
 import {AppIcon} from "@beyond/docs/ui/icons/code";
-import {BeyondName} from "../../../views/beyond";
+import {BeyondName} from "@beyond/docs/components/html/code";
 
 export function DashboardCreateProject() {
     return (

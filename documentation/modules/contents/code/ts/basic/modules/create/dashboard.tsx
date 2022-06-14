@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {AppIconButton} from "@beyond/docs/ui/icons/code";
-import {ModalImage} from "../../../views/modal-image";
-import {TypeProperty} from "../../../views/type-property";
+import {ModalImage, TypeProperty} from "@beyond/docs/components/html/code";
+
 
 export function ModulesDashboardCreation() {
     return (

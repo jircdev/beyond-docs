@@ -1,8 +1,7 @@
 @use 'content';
-
+@import "container";
 header.home__header {
-  display: flex;
-  grid-template-columns: 1fr;
+
   z-index: -1;
   aspect-ratio: 16 / 6;
   margin: 1rem auto auto;
@@ -22,10 +21,10 @@ header.home__header {
     aspect-ratio: 16 / 7;
   }
   @media (max-width: 800px) and (min-height: 800px) {
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 4 / 3;
     max-height: 700px;
   }
-  @media (min-width: 1600px) {
+  @media (min-width: 1400px) {
     aspect-ratio: 16 / 4;
   }
 }

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {CodeBox, Code} from "@beyond/docs/code/code";
-import {BeyondName} from "../../views/beyond";
+import {BeyondName} from "@beyond/docs/components/html/code";
 
 const tpl = `
 //....

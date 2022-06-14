@@ -1,0 +1,32 @@
+.docs-home-slider {
+  padding: 2rem 0;
+
+  .beyond-element-image {
+
+    position: relative;
+    aspect-ratio: 4/3;
+
+    img {
+      width: 100%
+    }
+  }
+
+  .swiper-slide {
+    transition: all 200ms linear;
+  }
+
+  .swiper-slide-active {
+    transform: scale(1.2);
+    transition: all 200ms linear;
+    z-index: 10;
+  }
+
+  @media (min-width: 400px) {
+    .swiper-slide-active {
+      transform: scale(1.5);
+    }
+  }
+  @media (min-width: 800px) {
+    padding: 2rem 0;
+  }
+}

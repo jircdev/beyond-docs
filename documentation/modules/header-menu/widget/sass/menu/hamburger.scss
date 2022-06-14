@@ -150,9 +150,7 @@
   }
 
   .hamburger-icon {
-
     @include hamburger(var(--primary-accent));
-
   }
 
 }

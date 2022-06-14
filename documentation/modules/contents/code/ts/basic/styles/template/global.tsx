@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {Elink, Link} from "@beyond/ui/link/code";
-import {BeyondName} from "../../../views/beyond";
+import {BeyondName} from "@beyond/docs/components/html/code";
 
 export function StylesTemplateGlobal() {
     return (
