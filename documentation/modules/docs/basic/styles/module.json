@@ -1,0 +1,27 @@
+{
+  "name": "docs/basic/styles",
+  "txt": {
+    "multilanguage": true,
+    "ts": {
+      "path": "/texts",
+      "files": [
+        "*"
+      ]
+    }
+  },
+  "code": {
+    "hmr": true,
+    "sass": {
+      "path": "/code/sass",
+      "files": [
+        "*"
+      ]
+    },
+    "ts": {
+      "path": "/code/ts",
+      "files": [
+        "*"
+      ]
+    }
+  }
+}

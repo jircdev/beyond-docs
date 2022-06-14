@@ -1,0 +1,25 @@
+{
+  "name": "docs/basic/widgets/rendering",
+  "code": {
+    "hmr": true,
+    "sass": {
+      "path": "/code/sass",
+      "files": [
+        "*"
+      ]
+    },
+    "ts": {
+      "path": "/code/ts",
+      "files": [
+        "*"
+      ]
+    }
+  },
+  "txt": {
+    "multilanguage": true,
+    "path": "texts",
+    "files": [
+      "*"
+    ]
+  }
+}

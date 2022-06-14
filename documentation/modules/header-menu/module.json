@@ -1,0 +1,28 @@
+{
+  "name": "header-menu",
+  "widget": {
+    "hmr": true,
+    "element": {
+      "name": "docs-header-menu"
+    },
+    "sass": {
+      "path": "/widget/sass",
+      "files": [
+        "*"
+      ]
+    },
+    "ts": {
+      "path": "/widget/ts",
+      "files": [
+        "*"
+      ]
+    }
+  },
+  "txt": {
+    "multilanguage": true,
+    "path": "texts",
+    "files": [
+      "*"
+    ]
+  }
+}
