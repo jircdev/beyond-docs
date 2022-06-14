@@ -11,8 +11,9 @@ aside.docs__menu {
     transition: 150ms ease-in all;
     overflow: hidden;
     padding: 0;
-    z-index: 101;
+    height: calc(100vh + 190px);
 
+    z-index: 101;
 
     .menu-mobile-container {
       background: var(--background);

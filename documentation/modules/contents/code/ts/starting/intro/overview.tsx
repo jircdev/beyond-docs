@@ -5,7 +5,6 @@ import {useDocsContext} from "../../context";
 export function Overview() {
     const {texts: {intro: {overview: {title, p1, p2, p3, p4}}}} = useDocsContext();
 
-    console.log(12, p3)
     return (
         <>
             <h2 id="projects">{title}</h2>
@@ -17,7 +16,7 @@ export function Overview() {
                 {p3.t3}
             </p>
             <div className="block__note note-info">
-                {p4.t1}<Link href="/docs/projects/intro">{p4.l1}</Link>
+                {p4.t1} <Link href="/docs/projects/intro">{p4.l1}</Link>
             </div>
         </>
     )

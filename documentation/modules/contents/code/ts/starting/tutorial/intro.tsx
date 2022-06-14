@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {ModalImage} from "@beyond/docs/components/html/code";
+import {BeyondName} from "@beyond/docs/components/html/code";
 import {Link} from '@beyond/ui/link/code';
 import {Code} from "@beyond/docs/code/code";
 
@@ -10,13 +10,12 @@ export function TutorialIntro() {
 
             <h2 id="before-start">Antes de Empezar</h2>
             <p>
-                Este tutorial busca el flujo principal de desarrollo con <span className="beyond">Beyond</span> y
+                Este tutorial busca el flujo principal de desarrollo con <BeyondName/> y
                 demostrar de manera clara los beneficios que este ofrece.
                 Está creado para personas que deseen aprender mientras practican, por tanto, los conceptos que definen
-                la estructura de <span
-                className="beyond">Beyond</span> son abordados de forma general, focalizando en hacer un ejercicio
-                rápido, conciso y claro. Para mayor detalle los conceptos estarán disponbiles en la documentación
-                cuando sea requerida.
+                la estructura de <BeyondName/> son abordados de forma general, focalizando en
+                hacer un ejercicio rápido, conciso y claro. Para mayor detalle los conceptos estarán disponbiles en la
+                documentación cuando sea requerida.
 
             </p>
             <p>El tutorial se divide en las siguientes partes:</p>
@@ -53,12 +52,11 @@ export function TutorialIntro() {
             <section>
                 <h2 id="starting">Empezando</h2>
                 <p>
-                    Lo primero que debes hacer es inicializar <span className="beyond">Beyond</span>. Sí lo instalaste
-                    de forma global, sólo debes ejecutar el comando <span className="inline">beyond</span> desde la
+                    Lo primero que debes hacer es inicializar <BeyondName/>. Sí lo instalaste
+                    de forma global, sólo debes ejecutar el comando <BeyondName/> desde la
                     consola, ubicado en la carpeta que definas cómo raiz de tus proyectos.
-                    Ten en cuenta que al crear un proyecto desde el dashboard, deberás definirle un nombre y <span
-                    className="beyond">BeyondJS</span>
-                    creará en tu directorio raiz una carpeta para tu proyecto con el nombre que hayas definido.
+                    Ten en cuenta que al crear un proyecto desde el dashboard, deberás definirle un nombre
+                    y <BeyondName/> creará en tu directorio raiz una carpeta para tu proyecto con el nombre que hayas definido.
                 </p>
                 <p>Al estar con la línea de comandos, ubicado en tu workspace, sólo tienes que ejecutar el siguiente
                     comando: </p>
@@ -66,7 +64,7 @@ export function TutorialIntro() {
                     {`> beyond`}
                 </Code>
 
-                <p>Listo, ahora <span className="beyond">Beyond</span> se encuentra iniciado y estamos listos para
+                <p>Listo, ahora <BeyondName/> se encuentra iniciado y estamos listos para
                     empezar utilizando el dashboard.</p>
 
                 <div className="block__note">

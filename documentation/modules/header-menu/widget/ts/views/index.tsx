@@ -10,9 +10,10 @@ import {module} from "beyond_context";
 import {HamburgerMenu} from "./hamburger-menu";
 
 
-export function TopHeader({attributes, component, store}) {
+export function TopHeader({attributes, widget, store}) {
     const [ready, texts] = useTexts(module.resource);
     if (!ready) return null;
+
     return (
         <>
             <Notice texts={texts}/>

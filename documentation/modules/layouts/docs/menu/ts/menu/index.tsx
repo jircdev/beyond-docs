@@ -15,16 +15,18 @@ interface IState {
 }
 
 export /*bundle*/
-function WidgetMenu() {
-    const [selected, setSelected] = React.useState<IState>();
+function WidgetMenu({attributes}) {
+
     const [ready, texts] = useTexts(module.resource);
     const parent = React.useRef(null)
     const openedLocal = (typeof window !== undefined)
         ? window?.localStorage.getItem('__menu_opened')
         : true;
-    const [opened] = React.useState([true, 'true'].includes(openedLocal));
-
-    useBinder([AppManager], () => parent.current.classList.toggle('docs__menu--opened'));
+    const [opened, setOpened] = React.useState([true, 'true'].includes(openedLocal));
+    useBinder([attributes], () => {
+        const option = attributes.get('opened') === 'true';
+        if (option !== opened) setOpened(option);
+    });
     const closeMenu = () => {
         const isOpened = parent.current.classList.contains('docs__menu--opened');
         parent.current.classList.toggle('docs__menu--opened');
@@ -39,11 +41,7 @@ function WidgetMenu() {
     if (!ready) return <Loading/>;
 
     return (
-        <MenuContext.Provider value={{
-            ready,
-            texts,
-            close: closeMenu
-        }}>
+        <MenuContext.Provider value={{ready, texts, close: closeMenu}}>
             <aside ref={parent} className={cls}>
                 <div className="menu-mobile-container">
                     <header className="aside__header">

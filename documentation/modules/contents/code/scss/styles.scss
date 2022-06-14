@@ -1,26 +1,14 @@
 @import "~template/sass/mixins/set-media";
 
 .block__note {
-  border: 1px solid var(--color-yellow-90);
+  background: var(--app-surface-notes);
   padding: 15px;
   border-left-width: 8px;
-  background: var(--color-yellow-30);
-  //font-size: 1.2rem;
-  color: var(--gray-darker);
+  color: var(--text-on-primary);
   line-height: 1.8rem;
   margin: 30px 0;
-  box-shadow: var(--shadow-4);
-  border-radius: 4px;
+  border-radius: var(--border-radius-base);
 
-}
-
-:host-context(html[data-beyond-mode]) {
-  .block__note {
-    background: var(--secondary-dark);
-    color: var(--text-color) !important;
-    border: 1px solid var(--secondary-light);
-    border-left-width: 8px;
-  }
 }
 
 .page__main-container {
@@ -52,6 +40,10 @@
       width: 100%;
 
     }
+  }
+
+  @include set-media('mobile', false, 'max') {
+    margin-top: 50px;
   }
 
 }

@@ -9,7 +9,6 @@ class Controller extends PageReactWidgetController {
     createStore(): IWidgetStore {
         //Todo: @julio @felix question  new Contents(this.body)
         const contents: IWidgetStore = new Contents(this.body);
-        console.log(0.1, contents);
         return contents;
     }
 
