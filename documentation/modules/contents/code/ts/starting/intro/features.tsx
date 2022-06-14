@@ -13,7 +13,6 @@ export function Features() {
             <p> {p1}
             </p>
             <List items={items}/>
-
         </>
     )
 }

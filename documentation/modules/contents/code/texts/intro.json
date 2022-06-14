@@ -2,7 +2,7 @@
   "es": {
     "intro": {
       "universal": {
-        "title": "¿Qué es BeyondJS?",
+        "title": "¿Qué es <span className=\"beyond\">BeyondJS</span>?",
         "p1": "BeyondJS es un meta-framework basado en typescript, diseñado para crear proyectos que funcionen en diferentes entornos de ejecución JavaScript, manteniendo el foco en garantizar al programador una experiencia universal de desarrollo. Lo hace manteniéndose agnóstico a las librerías y tecnologías existentes, buscando dejar un camino estandarizado que permita su integración.",
         "p2": "Los factores que garantizan una experiencia de desarrollo homogénea, sin importar el entorno para el que se trabaje son:",
         "items": [
