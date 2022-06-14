@@ -1,8 +1,8 @@
 import * as React from 'react';
 
 export function Pulse() {
-    return (
 
+    return (
         <div className="header__circle">
             <span style={{'--i': 1}}/>
             <span style={{'--i': 2}}/>
@@ -10,6 +10,5 @@ export function Pulse() {
             <span style={{'--i': 4}}/>
             <span style={{'--i': 5}}/>
         </div>
-
     )
 }

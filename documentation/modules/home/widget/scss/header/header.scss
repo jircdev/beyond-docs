@@ -1,5 +1,6 @@
 @use 'content';
 @import "container";
+
 header.home__header {
 
   z-index: -1;
@@ -18,10 +19,10 @@ header.home__header {
   }
 
   @media (min-width: 801px) {
-    aspect-ratio: 16 / 7;
+    aspect-ratio: 16 / 4;
   }
-  @media (max-width: 800px) and (min-height: 800px) {
-    aspect-ratio: 4 / 3;
+  @media (max-width: 900px) and (min-height: 600px) {
+    aspect-ratio: 16/4;
     max-height: 700px;
   }
   @media (min-width: 1400px) {

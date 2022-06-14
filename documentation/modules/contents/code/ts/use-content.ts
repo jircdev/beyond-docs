@@ -35,7 +35,6 @@ export /*bundle*/function useContent(contentId, sub, hmrChanged): [IControl, boo
         setFetching(true);
         setContent(getContent(contentId, sub));
         if (updated === hmrChanged) {
-            console.log(10.1)
             setFetching(false);
             return;
         }

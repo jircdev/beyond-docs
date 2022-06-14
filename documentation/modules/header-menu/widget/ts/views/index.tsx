@@ -4,27 +4,24 @@ import {Hamburger} from "./hamburger";
 import {ThemeToggleButton} from "@beyond/docs/components/theme-button/code";
 import {Link} from "@beyond/ui/link/code";
 import {LanguageAction} from "./language-action";
-import {useBinder} from "@beyond/docs/store/code";
+import {useBinder, useTexts} from "@beyond/docs/store/code";
 import {Notice} from "./notice";
+import {module} from "beyond_context";
+import {HamburgerMenu} from "./hamburger-menu";
 
-export function TopHeader({attributes, component, store}) {
 
-    const [ready, setReady] = React.useState();
-    const [data, setTexts] = React.useState(store.texts);
-    useBinder([store], () => {
-        setReady(store.ready);
-        setTexts(store.texts);
-    });
+export function TopHeader({attributes, widget, store}) {
+    const [ready, texts] = useTexts(module.resource);
     if (!ready) return null;
-    const {texts} = store;
 
     return (
         <>
-            <Notice texts={store.texts}/>
+            <Notice texts={texts}/>
             <section className="top__header">
                 <nav className="menu-container container flex-container flex-h-end">
                     <div className="mobile__header">
-                        <Link href="/"><BeyondImage  src="/images/beyond-logo.png" alt="beyondjs"/></Link>
+                        <HamburgerMenu/>
+                        <Link href="/"><BeyondImage src="/images/beyond-logo.png" alt="beyondjs"/></Link>
                         <Hamburger/>
                     </div>
                     <div className="menu-list__container">

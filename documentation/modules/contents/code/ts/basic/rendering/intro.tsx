@@ -8,7 +8,7 @@ export function RenderingIntro() {
     const {
         texts
     } = useDocsContext();
-    console.log(10, texts);
+
     return 'aja';
     return (
         <>

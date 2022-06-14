@@ -1,5 +1,8 @@
 {
   "es": {
+    "rightAside": {
+      "title": "En esta página"
+    },
     "intro": {
       "universal": {
         "title": "¿Qué es <span className=\"beyond\">BeyondJS</span>?",
@@ -28,7 +31,7 @@
         },
         "p4": {
           "t1": "Si quieres conocer más en detalle acerca de esto y sobre cómo crear proyectos en BeyondJSte recomendamos ir a la ",
-          "l1": "sección de Proyectos"
+          "l1": " sección de Proyectos"
         }
       },
       "features": {
@@ -55,6 +58,9 @@
     }
   },
   "en": {
+    "rightAside": {
+      "title": "On this page"
+    },
     "intro": {
       "universal": {
         "title": "What is BeyondJS?",

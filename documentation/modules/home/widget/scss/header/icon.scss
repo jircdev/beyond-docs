@@ -1,5 +1,5 @@
-$height: 130%;
-$width: 70%;
+$height: 100%;
+$width: 50%;
 
 .beyond__icon {
   //border: 1px solid red;
@@ -8,11 +8,21 @@ $width: 70%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: -10%;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 100px;
+  right: 100px;
   fill: var(--app-icon-bg);
   opacity: .6;
   z-index: -1;
+
+
+  @media (max-width: 900px) and (min-height: 600px) {
+    top: -100px;
+    right: -70px;
+  }
+
+  @media (min-width: 901px) and (max-width: 1200px) {
+    top: -20px;
+    right: -50px;
+  }
 }

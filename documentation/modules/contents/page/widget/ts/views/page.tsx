@@ -7,7 +7,6 @@ export function Page({uri, component}): JSX.Element {
     const sub = uri.vars.get('sub');
     const contentId = !['', undefined, null].includes(propsContent) ? propsContent : 'intro';
 
-    console.log(0.1, component)
     return (
         <ContentsPage component={component} contentId={contentId} sub={sub} hmrChanged={hmrChanged}/>
     );

@@ -1,14 +1,14 @@
 
 aside.docs__menu {
 
-  --docs-scrollbar-thumb: var(--secondary-light);
+  --docs-scrollbar-thumb: var(--app-scrollbar-color);
 
   &::-webkit-scrollbar {
     width: 8px;
   }
 
   &::-webkit-scrollbar-track {
-    background: var(--color-carbon-95);
+    background: var(--app-scrollbar-track);
     border-radius: 10px;
   }
 

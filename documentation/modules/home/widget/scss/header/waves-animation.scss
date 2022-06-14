@@ -1,3 +1,4 @@
+
 .header__circle span {
   position: absolute;
   left: -30vh;
@@ -13,6 +14,13 @@
   animation-delay: calc(0.5s * var(--i));
   transition: all 300ms ease-in;
 
+}
+.fade-out {
+  animation: fadeOutAnimation ease 300ms forwards;
+}
+
+.fade-in {
+  animation: fadeInAnimation ease 300ms forwards;
 }
 
 @keyframes pulse {
@@ -30,13 +38,7 @@
   }
 }
 
-.fade-out {
-  animation: fadeOutAnimation ease 300ms forwards;
-}
 
-.fade-in {
-  animation: fadeInAnimation ease 300ms forwards;
-}
 
 @keyframes fadeInAnimation {
   from {

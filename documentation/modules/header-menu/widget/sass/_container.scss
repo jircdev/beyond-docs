@@ -1,26 +1,9 @@
 .container {
   z-index: 2;
+  position: relative;
 
   .header__content {
     width: 70%;
-  }
-
-  .beyond-element-image {
-    margin: 0;
-  }
-
-  > figure {
-
-    display: flex;
-    justify-content: center;
-    flex-grow: 1;
-    width: 30%;
-
-    .beyond__icon {
-      display: flex;
-      width: 100%;
-      justify-content: center;
-    }
   }
 
   @media (max-width: 800px) {

@@ -12,8 +12,7 @@ export function TutorialPage() {
     return (
         <div className="content">
             <TutorialIntro/>
-            <TDashboard/>
-            <CreateProject/>
+
             <HomeModule/>
             <ModuleReview/>
             <BridgeSection/>

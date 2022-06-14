@@ -6,11 +6,11 @@ import {NextLinks} from '@beyond/docs/components/next-links/code';
 import {RenderingIntro} from "./intro";
 import {useTexts, DocsContext} from "@beyond/docs/store/code";
 import {module} from "beyond_context";
-
+import {Loading} from '@beyond/docs/components/html/code';
 export /*bundle*/ function RenderingPage() {
 
     const [ready, texts] = useTexts(module.resource);
-    if (!ready) return "...cargando....";
+    if (!ready) return  <Loading/>;
 
     return (
         <DocsContext.Provider value={{ready, texts}}>

@@ -16,10 +16,11 @@ export function Header() {
                     <div className="header__animation__container">
                         <HeaderImage/>
                     </div>
+                    <IconLogo/>
+
                 </div>
-                <IconLogo/>
-                <Pulse/>
             </header>
+            <Pulse/>
         </>
     );
 }

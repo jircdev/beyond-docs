@@ -14,7 +14,10 @@
   h4 {
     display: block;
     margin: 15px;
+    font-size: 13px;
+    text-transform: uppercase;
     padding: 0;
+    font-weight: lighter;
   }
 
   .mobile-only {
@@ -25,7 +28,6 @@
   }
 
   .docs__menu__list__btn-close {
-
     position: absolute;
     right: 15px;
     height: 30px;

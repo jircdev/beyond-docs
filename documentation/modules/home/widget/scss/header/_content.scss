@@ -20,14 +20,19 @@ header.home__header .header__content {
     color: #FFFFFF;
     opacity: 1;
 
-    background: var(--app-primary-text-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    span {
+      background: var(--app-primary-text-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
     strong {
       padding: 1.2rem 0 0;
       display: flex;
-      color: var(--primary);
+      color: var(--primary-light) !important;
+      @media (max-width: 800px) {
+        font-size: 2.2rem;
+      }
     }
   }
 

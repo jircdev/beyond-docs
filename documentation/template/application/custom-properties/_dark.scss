@@ -12,8 +12,8 @@
   --secondary: #121F36;
   --secondary-dark: #030405;
   --secondary-darker: #0C1525;
-  --secondary-light: #263451;
-  --secondary-accent: # #8E99BB;
+  --secondary-light: #617096;
+  --secondary-accent: #8E99BB;
   --text-on-secondary: #FFFFFF;
   --secondary-background: #{$secondary-bg};
   //background
@@ -26,7 +26,7 @@
   --bg-element: var(--secondary-dark);
   --element-border-color: var(--gray-light);
   --separator-color: var(--gray-lighter);
-
+  --app-aside-link-selected: #fff;
   --primary-surface: #101625;
 
   //elements
@@ -47,6 +47,12 @@
   --app-insight-surface: var(--secondary-light-light);
   --app-link-hover-bg: #{rgba(#FF8056, .3)};
   --app-opacity-bg: rgba(0, 0, 0, .3);
+  --app-surface-notes: var(--app-opacity-bg);
+  --app-editor-bg: #1D2B3D;
+
+  --app-scrollbar-color: var(--secondary-light);
+  --app-scrollbar-track: var(--color-carbon-95);
+
 }
 
 

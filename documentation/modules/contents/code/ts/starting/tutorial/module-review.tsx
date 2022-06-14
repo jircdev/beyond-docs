@@ -6,6 +6,23 @@ import {PageCode} from "./templates/page-code";
 import {pageStyles} from "./templates/page-styles";
 import {PageCodeStarted} from "./templates/page-code-started";
 import {moduleJson} from "./templates/module.json";
+import {BeyondName} from "@beyond/docs/components/html/code";
+import {CodeBox} from "@beyond/docs/code/code";
+
+const tpl = `
+{
+  "bundle": "start",
+  "platforms": "backend",
+  "ts": {
+    "files": "*"
+  }
+}
+`;
+
+const tpl2 = `
+import {listen} from '@beyond-js/backend/listen/ts';
+
+listen();`;
 
 export function ModuleReview() {
 
@@ -24,14 +41,37 @@ export function ModuleReview() {
                 con el código cliente. Los bundles bridges, como su nombre lo indica, crean un puente de conexión entre
                 el código cliente y servidor permitiendo manejar el código de manera uniforme.
             </p>
+
+            <h3>Inicialización del Backend</h3>
+            <div className="block__note"><BeyondName/> provee la libreria <span
+                className="inline"> @beyond-js/backend</span> para la creación de
+                código backend, esta libreria es opcional para evitar su inclusión innecesaria en aquellos proyectos que
+                no la requieran.
+            </div>
+
+            <p>
+                Para empezar, es necesario inicializar el backend, para lo cual se requiere crear un bundle <span
+                className="inline">start</span> que lo levante, para ello, creamos una carpeta <span
+                className="inline">start</span> y adentro agregamos un archivo <span
+                className="inline">module.json</span> con la siguiente estructura
+            </p>
+            <CodeBox language="json" title="module.json">
+                {tpl}
+            </CodeBox>
+            <p>Procedemos a crear un archivo <span className="inline">start.ts</span> y agregamos el códdigo para
+                inicializar el backend
+            </p>
+            <CodeBox language="ts" title="start.ts">
+                {tpl2}
+            </CodeBox>
             <div className="block__note">
-                NOTA: Los bridges son un feature central y muy poderoso en <div className="beyond">BeyondJS</div> y en
+                NOTA: Los bridges son un feature central y muy poderoso en <span className="beyond">BeyondJS</span> y en
                 este tutorial solo se muestran de
                 forma superficial. Si quieres conocer más y entender cómo funcionan, dirígite a la seccion de bridges.
             </div>
             <div className="block__note">
-                Tip: La definición de bundles en el module.json se cubre completamente en la sección module.json de la
-                documentación.
+                Si quieres conocer más acerca del manejo de bundles y módulos, puedes ir a <Link
+                href="/docs/modules/introduction">la sección de Módulos</Link>.
             </div>
             <p>
 

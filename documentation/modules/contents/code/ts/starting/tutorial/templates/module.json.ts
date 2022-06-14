@@ -1,5 +1,6 @@
 export const moduleJson = {
-    bridge: `  "platforms": [
+    bridge: `
+  "platforms": [
     "backend",
     "web"
   ],
@@ -11,7 +12,8 @@ export const moduleJson = {
   },
    "widget": ...    
     `,
-    module: `{
+    module: `
+{
   "name": "home",
   "platforms": [
     "backend",

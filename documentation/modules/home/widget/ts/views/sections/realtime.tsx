@@ -10,7 +10,7 @@ export function Realtime() {
 
         <section className="page-section primary-surface realtime-section">
             <div className="top-img container no-mv no-pv">
-                <BeyondImage alt="BeyondJS - HMR & real time connections" src="/images/home/separator.png"/>
+                <BeyondImage className="is-floating" alt="BeyondJS - HMR & real time connections" src="/images/home/separator.png"/>
             </div>
             <div className="container grid-container two-columns  no-mv">
                 <div className="content">
