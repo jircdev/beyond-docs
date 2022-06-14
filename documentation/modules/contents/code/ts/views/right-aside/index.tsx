@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {Link} from '@beyond/ui/link/code';
 import {RightAsideItem} from "./item";
+import {useDocsContext} from "../../context";
 
 interface IProps {
     container: ShadowRoot,
@@ -9,11 +10,13 @@ interface IProps {
 }
 
 export /*bundle*/
-const RightAside = React.memo(({container, titles}: IProps) => {
-        const output = titles.map((item, i) => {
-            return <RightAsideItem key={`${item.id}.${i}`} item={item} container={container}/>
+const RightAside = React.memo(({}: IProps) => {
 
-        });
+
+        const {component, texts: {rightAside: {title}}} = useDocsContext();
+
+        const [titles, setTitles] = React.useState([]);
+
 
         const ref = React.useRef(null);
         React.useEffect(() => {
@@ -41,15 +44,35 @@ const RightAside = React.memo(({container, titles}: IProps) => {
             });
             titles.forEach(item => observer.observe(item))
         });
+
+        React.useEffect(() => {
+            window?.setTimeout(() => {
+                const titles = Array.from(component.shadowRoot.querySelectorAll('h1,h2,h3'));
+                setTitles(titles);
+            }, 50);
+            const body = document.querySelector('body');
+            body.scroll({
+                top: 0,
+                left: 0,
+                behavior: "smooth"
+            });
+        }, []);
+
+        if (!titles) return null;
+
+        const output = titles.map((item, i) => {
+            return <RightAsideItem key={`${item.id}.${i}`} item={item} container={component.shadowRoot}/>
+
+        });
+
         return (
             <aside className="docs__aside-navbar" ref={ref}>
                 <div className="aside__container">
-                    <h4>En esta página</h4>
+                    <h4>{title}</h4>
                     <ol>
                         {output}
                     </ol>
                 </div>
-
             </aside>
         )
     }

@@ -1,5 +1,12 @@
 {
   "name": "layout/menu",
+  "txt": {
+    "multilanguage": true,
+    "path": "/texts",
+    "files": [
+      "*"
+    ]
+  },
   "widget": {
     "is": "layout",
     "element": {

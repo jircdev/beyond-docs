@@ -145,8 +145,9 @@
 .hamburger-icon-container {
   background: transparent;
   border: none;
-  @include set-media('md-screen', true) {
-    display: none;
+  display: none;
+  @include set-media('tablet', false, 'max') {
+    display: flex;
   }
 
   .hamburger-icon {

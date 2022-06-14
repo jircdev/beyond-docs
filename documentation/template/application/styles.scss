@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;500&display=swap');
+
 html, body {
   min-height: 100%;
   overflow-x: hidden;
   padding: 0;
-
+  font-weight: lighter;
   font-family: var(--font-family);
 
   color: var(--text-color);

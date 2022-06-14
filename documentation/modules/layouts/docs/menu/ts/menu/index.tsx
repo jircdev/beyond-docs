@@ -6,6 +6,9 @@ import {AppManager} from '@beyond/docs/manager/code';
 import {useBinder} from "@beyond/docs/store/code";
 import {BeyondIconButton} from "@beyond/ui/icons/code";
 import {BeyondImage} from '@beyond/ui/image/code';
+import {useTexts} from "@beyond/docs/store/code";
+import {module} from "beyond_context";
+import {Loading} from "@beyond/docs/components/html/code";
 
 interface IState {
     selected: string;
@@ -14,13 +17,13 @@ interface IState {
 export /*bundle*/
 function WidgetMenu() {
     const [selected, setSelected] = React.useState<IState>();
-    const [value, setValue] = React.useState<IValue>({selected, setSelected});
+    const [ready, texts] = useTexts(module.resource);
     const parent = React.useRef(null)
     const openedLocal = (typeof window !== undefined)
         ? window?.localStorage.getItem('__menu_opened')
         : true;
     const [opened] = React.useState([true, 'true'].includes(openedLocal));
-    React.useEffect(() => setValue({...value, container: parent?.current}), []);
+
     useBinder([AppManager], () => parent.current.classList.toggle('docs__menu--opened'));
     const closeMenu = () => {
         const isOpened = parent.current.classList.contains('docs__menu--opened');
@@ -32,11 +35,16 @@ function WidgetMenu() {
         closeMenu();
     }
     const cls = `docs__menu${opened ? ` docs__menu--opened` : ''}`;
+
+    if (!ready) return <Loading/>;
+
     return (
-        <MenuContext.Provider value={{container: value.container, close: closeMenu}}>
-
+        <MenuContext.Provider value={{
+            ready,
+            texts,
+            close: closeMenu
+        }}>
             <aside ref={parent} className={cls}>
-
                 <div className="menu-mobile-container">
                     <header className="aside__header">
                         <div>
@@ -49,9 +57,7 @@ function WidgetMenu() {
                     </header>
                     <List items={Menu}/>
                 </div>
-
             </aside>
-
         </MenuContext.Provider>
 
     );

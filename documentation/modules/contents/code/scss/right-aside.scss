@@ -3,7 +3,7 @@
 
   .aside__container {
     position: sticky;
-    top: 80px;
+    top: 50px;
     display: flex;
     flex-direction: column;
     padding-top: 15px;
@@ -24,9 +24,17 @@
       list-style: none;
       border-left: 2px solid transparent;
 
-      a{
+      a {
+        text-decoration: none;
         color: var(--text-color);
+        line-height: 23px;
+        letter-spacing: .68px;
+
+        &:hover {
+          color: var(--app-aside-link-selected);
+        }
       }
+
       &.item--active,
       &:hover {
         border-left: 2px solid var(--secondary-accent);

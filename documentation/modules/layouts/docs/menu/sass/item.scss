@@ -2,32 +2,59 @@
   a {
     text-decoration: none;
     color: var(--text-color);
+    line-height: 23px;
+    letter-spacing: .68px;
 
     &:hover {
       color: #fff;
     }
   }
 
-  > .menu__item--parent > section a {
-    color: var(--primary);
-    margin-bottom: .5rem;
+  > .menu__item--parent {
+    > section a {
+      color: var(--primary);
+      font-size: 14px;
+      font-weight: lighter;
+      margin: 5px 0;
+
+    }
+
   }
 }
 
 .docs__menu__list {
 
+  > .menu__item--parent > .docs__menu__sublist {
+    > li.item--opened > section a {
+      font-weight: bolder;
+    }
+  }
+
+  .active-item {
+    font-weight: bolder;
+
+    a {
+      color: var(--app-aside-link-selected)
+    }
+
+  }
+
   li {
-    display: grid;
     cursor: pointer;
     align-items: center;
+    //border: 1px solid gray;
+    list-style: none;
+
+    a {
+      font-size: 14px;
+      font-weight: lighter;
+    }
 
     > section {
       display: flex;
-      gap: 5px;
       align-items: center;
       accent-color: var(--text-second-color);
       transition: 300ms all ease-in;
-      padding: 4px 0;
       justify-content: space-between;
 
       .beyond-icon {
@@ -37,6 +64,7 @@
     }
 
     &.item--opened {
+
       .beyond-icon {
         transform: rotate(90deg);
       }

@@ -1,5 +1,8 @@
 {
   "es": {
+    "rightAside": {
+      "title": "En esta página"
+    },
     "intro": {
       "universal": {
         "title": "¿Qué es <span className=\"beyond\">BeyondJS</span>?",
@@ -55,6 +58,9 @@
     }
   },
   "en": {
+    "rightAside": {
+      "title": "On this page"
+    },
     "intro": {
       "universal": {
         "title": "What is BeyondJS?",

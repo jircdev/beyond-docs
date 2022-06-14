@@ -18,7 +18,7 @@ export class Controller extends ReactiveModel {
             slidesPerView: props.slidesPerView ?? 1,
             modules: [Navigation, Pagination],
         }, props);
-        console.log(10, specs, props)
+
         if (props.pagination || props.footer) {
             specs.pagination = {
                 el: ref.pagination.current,

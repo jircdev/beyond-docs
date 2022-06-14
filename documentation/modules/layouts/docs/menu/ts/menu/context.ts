@@ -4,6 +4,8 @@ export interface IValue {
     selected?: any;
     setSelected?: any;
     close?: () => void;
+    ready?: boolean;
+    texts?: object;
     container?: HTMLElement;
 }
 

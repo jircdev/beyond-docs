@@ -11,12 +11,18 @@
   align-items: center;
   align-content: center;
 
+  position: sticky;
+  top: 0;
+
+  background: var(--primary-surface);
+
   .mobile__header {
     a {
       display: grid;
       align-items: center;
     }
   }
+
   .menu-container {
     z-index: 3;
   }

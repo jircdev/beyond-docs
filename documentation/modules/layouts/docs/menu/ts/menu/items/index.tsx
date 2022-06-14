@@ -1,7 +1,6 @@
 import * as React from 'react';
-
 import {useMenuContext} from "../context";
-import {Link} from '@beyond/ui/link/code';
+import {routing} from "@beyond-js/kernel/routing/ts";
 import {AppIcon} from "@beyond/docs/ui/icons/code";
 
 interface IMenuItem {
@@ -45,28 +44,26 @@ export function ParentItem({item}) {
 
 
 export function MenuItem({item}) {
-
     const {container, close} = useMenuContext();
-
     if (item.children) return <ParentItem item={item}/>;
 
     const onClick = event => {
         event.preventDefault();
-        const target = event.currentTarget;
+        const container = event.currentTarget.closest('aside');
+        const target = event.currentTarget.closest('li');
         const currentActive = container.querySelector('.active-item')
         if (currentActive) currentActive.classList.remove('active-item');
-        target.classList.toggle('active-item');
-        // routing.pushState(`/docs/${item.id}`);
+        target.classList.add('active-item');
+        routing.pushState(`/docs/${item.id}`);
         close();
-
     }
 
-    const cls = `item--opened`;
+    const cls = ``;
     return (
-        <li onClick={onClick} className={cls}>
-            <section>
-                <Link href={`/docs/${item.id}`}><span>{item.label}</span></Link>
-            </section>
+        <li className={cls}>
+            <a href={`/docs/${item.id}`} onClick={onClick}>
+                {item.label}
+            </a>
         </li>
     )
 }
