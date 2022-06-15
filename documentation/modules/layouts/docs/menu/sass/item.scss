@@ -6,7 +6,7 @@
     letter-spacing: .68px;
 
     &:hover {
-      color: #fff;
+      color: var(--text-color);
     }
   }
 
@@ -16,9 +16,7 @@
       font-size: 14px;
       font-weight: lighter;
       margin: 5px 0;
-
     }
-
   }
 }
 
@@ -34,9 +32,9 @@
     font-weight: bolder;
 
     a {
-      color: var(--app-aside-link-selected)
+      font-weight: bolder;
+      color: var(--app-aside-link-selected);
     }
-
   }
 
   li {

@@ -51,31 +51,85 @@ export function TutorialIntro() {
             </ul>
             <section>
                 <h2 id="starting">Empezando</h2>
-                <p>
-                    Lo primero que debes hacer es inicializar <BeyondName/>. Sí lo instalaste
-                    de forma global, sólo debes ejecutar el comando <BeyondName/> desde la
-                    consola, ubicado en la carpeta que definas cómo raiz de tus proyectos.
-                    Ten en cuenta que al crear un proyecto desde el dashboard, deberás definirle un nombre
-                    y <BeyondName/> creará en tu directorio raiz una carpeta para tu proyecto con el nombre que hayas definido.
+                <p>Lo primero que debe hacerse es instalar BeyondJS de forma global, lo cual se puede hacer por medio
+                    del siguiente comando:
                 </p>
-                <p>Al estar con la línea de comandos, ubicado en tu workspace, sólo tienes que ejecutar el siguiente
-                    comando: </p>
                 <Code language="shell">
-                    {`> beyond`}
+                    {`> npm i -g beyond`}
+                </Code>
+                <p>A continuación, podemos crear la configuración inicial de nuestro proyecto por medio del
+                    paquete <span className="inline">@beyond-js/create-project</span>.
+                </p>
+                <Code language="shell">
+                    {`> npx @beyond-js/create-project --name @test/login --type web-backend --container beyond`}
                 </Code>
 
-                <p>Listo, ahora <BeyondName/> se encuentra iniciado y estamos listos para
-                    empezar utilizando el dashboard.</p>
+
+                <p>
+                    En el comando anterior, se solicitó crear un proyecto de tipo web con backend y se le agregó como
+                    scope <strong>testing</strong> y como nombre <strong>login</strong>.
+                </p>
 
                 <div className="block__note">
-                    <div className="beyond">BeyondJS</div>
-                    cuenta con un dashboard (actualmente en versión beta), que es una herramienta muy potente, creada
-                    con la intención de agilizar el proceso de creación y desarrollo del programador y será
-                    usado durante el ejemplo a continuación. El Dashboard se encuentra en versión Beta.
-                    Por supuesto, puedes hacer la configuración de proyectos,
-                    modules y cualquier cosa necesaria a través de código. Puedes encontrar como en <Link
-                    href="/project/config"> La documentación.</Link>
+                    El scope y el nombre, son datos que permiten identificar el proyecto y que lo dejan listo para ser
+                    publicado como paquete npm o para importarlo desde otro proyecto. Estas configuraciones pueden
+                    hacerse de forma manual, el dashboard sólo simplifica el proceso. Puedes ver la explicación de ello
+                    en
+                    <Link href="/project/config"> la sección de Configuración de proyecto.</Link>
                 </div>
+
+
+                <p>Al finalizar el comando, podremos ver que se crearon los siguientes archivos, podremos ver que se
+                    creó la carpeta <span className="inline">beyond</span> que definimos como container y adentro de
+                    ella tendremos la siguiente estructura:</p>
+                <ul>
+                    <li><strong>beyond.json</strong>: Archivo para manejar el servidor de desarrollo, gestionado por
+                        BeyondJS.
+                    </li>
+                    <li><strong>package.json</strong>: Archivo de dependencias del proyecto</li>
+                    <li><strong>projects.json</strong>: Archivo de configuración de proyectos, permite a BeyondJS
+                        identificar los proyectos a levantar.
+                    </li>
+                    <li>
+                        <strong>login</strong> Carpeta del proyecto.
+                        <ul>
+                            <li>
+                                <strong>project.json:</strong> Contiene la configuración básica del proyecto (puede
+                                variar
+                                según el tipo y las necesidades del mismo).
+
+                            </li>
+                            <li><strong>/modules</strong>: Carpeta en donde se crean los módulos del proyecto por
+                                defecto. Este valor es configurable, puedes leer más de ello en la sección de <Link
+                                    href="/docs/projects/json">Configuración de Proyectos</Link>.
+                            </li>
+                            <li>
+                                <strong>template:</strong> Esta carpeta contiene todos los elementos necesarios para
+                                definir el
+                                template general del
+                                proyecto.
+                                <ul>
+                                    <li><strong>template.json:</strong> Archivo que permite realizar ajustes en la
+                                        configuración
+                                        del template del proyecto.
+                                    </li>
+                                </ul>
+
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+                <div className="block__note">
+                    Puedes aprender más acerca de los tipos de proyecto disponibles en la sección de <Link
+                    href="/docs/quick-start">Inicio Rápido</Link>.
+                </div>
+                <p>Luego de haber ejecutado el comando, ya estamos listos para empezar nuestro proyecto, para ello
+                    ejecutamos lo siguiente.</p>
+                <Code language="shell">
+                    {`> npm start`}
+                </Code>
             </section>
         </>
     )

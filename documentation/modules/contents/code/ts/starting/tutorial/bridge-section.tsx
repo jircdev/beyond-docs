@@ -44,32 +44,33 @@ export function BridgeSection() {
                 El bridge que creamos es un servicio node. Generalmente, para ejecutar un servicio node, es necesario
                 ir a una consola. Sin embargo, en <span className="beyond">BeyondJS </span> estos servicios
                 funcionan como un <Link href="/bee">BEE (Beyond Environment Service)</Link> y para ejecutarlo
-                podemos debemos ir al <Link href="/dashboard"> Dashboard</Link> y darle al botón de ejecución,
-                hay uno en el listado de proyectos:
+                podemos debemos ir al <Link href="/dashboard"> Dashboard</Link> y darle al botón de ejecución, que
+                podemos encontrar en la pantalla de detalle del proyecto.
+
             </p>
-            <ModalImage src="/contents/static/bee-button.png" alt="bee service"/>
+
             <p>
                 y otro en el detalle del proyecto:
             </p>
-            <ModalImage src="/contents/static/bee-button-project.png" alt="bee service"/>
+            <ModalImage src="/images/dashboard/v1/bee.png" alt="bee service"/>
+            <div className="block__note">
+                <strong>El Dashboard</strong> es una herramienta muy potente provista por BeyondJS. Puedes aprender más
+                acerca de esto en <Link href="/docs/dashboard">la sección de detalle</Link>.
+            </div>
             <p>
                 Para poder implementar la funcionalidad de login con nuestro servidor,
                 debemos importar nuestro objeto auth en el código cliente y asociar el
                 evento <span className="inline-code">onSubmit</span> a nuestro formulario.
             </p>
             <p>
-                <span className="beyond">En beyondJS</span>
-                los proyectos
+                <span className="beyond">En beyondJS</span> los proyectos
                 siguen las mismas directrices para espacificación y resolución
                 de nombres y paquetes que npm, de la misma forma que lo hace typescript.
                 Deben tener <strong>nombre</strong> de módulo y pueden manejar un
                 <strong>scope</strong> tambien. En nuestro caso, definimos ambos
                 al momento de crear nuestro proyecto y módulo respectivamente.
             </p>
-            <div className="block__note">
-                Si quieres saber más acerca del estandar de resolución de nombres, dirigete
-                a la sección <Link href="/module-resolution">Resolución de módulos</Link>.
-            </div>
+
 
             <p>A continuación, en nuestro componente <span className="inline_code">Page</span> importamos el
                 objeto <span
@@ -92,7 +93,7 @@ export function BridgeSection() {
                 actualizamos en la variable de estado del componente.
             </p>
 
-            <h4>Hagamos un resumen de lo que hemos visto</h4>
+            <h4>Resumen</h4>
             <ul>
                 <li>Creamos un módulo con un widget de tipo page</li>
                 <li>Creamos una conexión con un backend node por medio del bundle bridge</li>

@@ -1,6 +1,6 @@
 import * as React from 'react';
-import {Link} from '@beyond/ui/link/code';
-import {ModalImage} from  "@beyond/docs/components/html/code";
+import {Link, Elink} from '@beyond/ui/link/code';
+
 import {Code} from "@beyond/docs/code/code";
 import {PageCodeStarted} from "./templates/page-code-started";
 import {pageStyles} from "./templates/page-styles";
@@ -11,15 +11,12 @@ export function HomeModule() {
             <h2 id="create-module">Módulo Inicial</h2>
 
             <p>El proyecto trae un módulo <span className="inline">home</span> creado por defecto. Puedes verlo
-                accediendo desde el navegador a
-                <a href="http://localhost:6500" target="_blank">localhost:6500 </a> (Si colocaste otro puerto, debes
-                cambiarlo).
+                accediendo desde el navegador a <Elink href="http://localhost:6500" target="_blank">localhost:6500 </Elink>
             </p>
-
-            <p>
-                El módulo podemos verlo desde el Dashboard, en el listado de módulos del proyecto. Al hacer click en el,
-                se abrirá el Board de detalle del módulo, que nos permite ver la información general del mismo.
-            </p>
+            <div className="block__note">El puerto se define en el archivo <span className="inline">project.json</span>,
+                puedes leer más sobre ello
+                en la sección de <Link href="/docs/projects/json">Configuración de Proyectos</Link>.
+            </div>
 
             <p>La estructura del módulo es la siguiente: </p>
 
@@ -49,7 +46,7 @@ export function HomeModule() {
                 agregar algo de estilos, para luego continuar con la conexión al backend node.
             </p>
 
-            <h3>Creemos el Formulario</h3>
+            <h3>Creación del Formulario</h3>
 
             <p>
                 Si has trabajado con React, lo que viene es la parte que seguramente
@@ -62,7 +59,7 @@ export function HomeModule() {
                 {PageCodeStarted}
             </Code>
 
-            <h3>Agreguemos el estilo</h3>
+            <h3 id="styles">Estilos</h3>
             <p>
                 <span className="beyond">BeyondJS</span> maneja los estilos por defecto
                 con el preprocesador SASS, ahora vamos a nuestro archivo

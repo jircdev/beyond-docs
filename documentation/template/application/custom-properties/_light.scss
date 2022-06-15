@@ -12,12 +12,12 @@
   --secondary: #121F36;
   --secondary-dark: #121F36;
   --secondary-light: #313C50;
-  --secondary-accent: #F7C700;
+  --secondary-accent: #424F6E;
   --text-on-secondary: #FFFFFF;
   --secondary-background: #{$secondary-bg};
   //background
   --background: #fff;
-  --text-color: var(--color-gray-50);
+  --text-color: var(--color-gray-80);
   --text-title-color: var(--secondary-dark);
   --text-second-color: var(--gray-dark);
   --text-hover-color: var(--primary);
@@ -33,14 +33,27 @@
   --app-element-border-color-1: var(--color-gray-10);
   --app-primary-text-gradient: linear-gradient(to right, var(--secondary-light), var(--primary-dark));
   --app-secondary-text-gradient: linear-gradient(to right, var(--primary), var(--secondary-light));
-  --app-dark-text-gradient: linear-gradient(var(--color-carbon-50), var(--secondary));
+  --app-dark-text-gradient: linear-gradient(to right, var(--primary-dark), var(--primary-light));
   --app-animation-color: var(--gray-light);
-  --app-link-color: var(--secondary);
-  --app-link-hover-color: var(--secondary-dark);
+
+  --app-link-color: var(--primary);
+  --app-link-hover-color: var(--primary-dark);
+  --app-aside-link-selected: var(--text-color);
   /**
   highlight content
    */
   --app-insight-surface: var(--primary-light);
   --app-link-hover-bg: #{rgba(#FF8056, .5)};
   --app-opacity-bg: rgba(0, 0, 0, .3);
+
+  --app-editor-bg: #1D2B3D;
+  --app-surface-notes: var(--color-gray-10);
+  --app-icon-bg: var(--color-gray-10);
+
+  /**
+  scrollbar
+   */
+
+  --app-scrollbar-color: var(--color-gray-10);
+  --app-scrollbar-track: var(--color-gray-10);
 }
