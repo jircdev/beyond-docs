@@ -4,7 +4,7 @@ import {Error404} from "./views/error-404";
 /*starting*/
 import {Intro} from "./starting/intro";
 import {QuickStart} from "./starting/quick-start";
-import {TutorialPage} from "./starting/tutorial/tutorial-page";
+import {TutorialPage, TutorialInitialModule} from "@beyond/docs/docs/starting/tutorial/code';
 import {DashboardPage} from "./starting/dashboard";
 
 /*basic*/
@@ -31,6 +31,8 @@ import {
 
 import {RenderingPage} from "@beyond/docs/docs/basic/widgets/rendering/code";
 
+// import {Dashboard} from "@beyond/docs/docs/starting/dashboard/code';
+
 import {Backend} from "./basic/backend";
 import {FetchingDAtaPage} from "./basic/fetching";
 import {RoutingPage} from "./basic/routing";
@@ -42,7 +44,6 @@ import {ThemesPage} from "./basic/styles/themes";
 
 
 import {StateManagement} from "./basic/state-management";
-
 
 
 /*fundamentals*/
@@ -78,7 +79,8 @@ export const getContent = (contentId: string, sub: string | undefined = undefine
         'quick-start': QuickStart,
         dashboard: DashboardPage,
         tutorial: {
-            web: TutorialPage
+            start: TutorialPage,
+            'first-module': TutorialInitialModule,
         },
     }
     const basics = {

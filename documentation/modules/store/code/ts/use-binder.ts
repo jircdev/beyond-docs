@@ -11,12 +11,10 @@ import * as React from 'react';
 export /*bundle*/ function useBinder(objects, onBinder, event = 'change') {
     React.useEffect(() => {
         objects.forEach(object => {
-
             if (object && object.bind) object.bind(event, onBinder);
             if (object && object.on) object.on(event, onBinder);
         });
         return () => objects.forEach(object => {
-
             if (object && object.unbind) object.unbind(event, onBinder);
             if (object && object.off) object.off(event, onBinder);
         });

@@ -51,19 +51,18 @@ export function TutorialIntro() {
             </ul>
             <section>
                 <h2 id="starting">Empezando</h2>
-                <p>Lo primero que debe hacerse es instalar BeyondJS de forma global, lo cual se puede hacer por medio
-                    del siguiente comando:
-                </p>
-                <Code language="shell">
-                    {`> npm i -g beyond`}
-                </Code>
-                <p>A continuación, podemos crear la configuración inicial de nuestro proyecto por medio del
-                    paquete <span className="inline">@beyond-js/create-project</span>.
+
+                <p>Lo primero que debe hacerse es crear el proyecto, para ello usaremos el
+                    paquete <span className="inline">@beyond-js/create-project</span> se encarga de instalar BeyondJS de
+                    manera local y generar la estructura inicial de nuestro proyecto.
                 </p>
                 <Code language="shell">
                     {`> npx @beyond-js/create-project --name @test/login --type web-backend --container beyond`}
                 </Code>
-
+                <div className="block__note"><span className="beyond">BeyondJS</span> está realizado para funcionar como
+                    dependencia global y correr varios proyectos en simultáneo,
+                    puedes aprender más sobre esto <Link href="/docs/quick-start">aqui</Link>.
+                </div>
 
                 <p>
                     En el comando anterior, se solicitó crear un proyecto de tipo web con backend y se le agregó como
