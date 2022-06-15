@@ -1,12 +1,12 @@
 {
   "es": {
     "introduction": {
-      "t1": "Introduccion",
+      "t1": "Introducción",
       "p1": "En BeyondJS los módulos representan la unidad básica de desarrollo y tienen características que es necesario tener presente. Para poder entender bien las diferencias y ventajas del ecosistema de módulos de BeyondJS, es necesario antes repasar cómo funcionan los módulos de JavaScript y cómo se integran en el proceso de desarrollo en la actualidad.",
       "p2": {
         "t1": "Un ",
         "e1": {
-          "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules", 
+          "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules",
           "label": "modulo JavaScript"
         },
         "t2": "hoy es representado por un único archivo, con tareas independientes y un scope propio. Este módulo puede exportar elementos y ser importado por otros módulos que consumen las variables, objetos o funciones que este provee."
@@ -19,14 +19,12 @@
       "p1": "Representan el concepto de módulos JavaScript conocido, con la diferencia de que el programador puede definir si estos quedan disponibles para ser consumidos desde un módulo externo o no. Esto se logra por medio del comentario mágico /*bundle*/ que se coloca en la exportación.",
       "p2": "Los módulos internos, pueden ser importados por cualquier otro módulo interno por medio de la ruta relativa del archivo."
     },
-
     "modules": {
       "t1": "Modules",
       "p1": "Como se comentó antes, representan la unidad mínima de desarrollo de BeyondJS y está compuesto por todos los módulos internos que requiera",
       "p2": "Esto permite que el concepto de módulo en BeyondJS se acerque más a la definición de un módulo en la informática general, donde este representa una funcionalidad dentro de un programa o sistema. Aunque los módulos JavaScript son compatibles con este concepto, en la práctica un módulo (bajo el concepto informático) de un proyecto, aplicación o librería contiene todo un conjunto de módulos JavaScript (módulos internos en BeyondJS), en conjunto con el resto de herramientas y tecnologías que se requieran para componerlo, como estilos, imágenes o texto.",
       "p3": "En otras palabras, en BeyondJS es el contenedor de todas las herramientas y tecnologías necesarias para garantizar el funcionamiento completo de una funcionalidad representa una funcionalidad desarrollada y donde el programador tiene la capacidad de definir que desea exportar para que pueda ser consumido de forma externa y que no."
     },
-
     "workingWithModules": {
       "t1": "Trabajando con modulos",
       "p1": "Los módulos deben estar contenidos en un proyecto y son consumidos por este, pero también pueden ser consumidos por otros proyectos que los importen como bibliotecas.",
@@ -40,7 +38,6 @@
       "p3": "La definición de nombre de módulos es una característica vital en BeyondJS ya que ayuda al mantenimiento futuro del proyecto, permitiendo que los módulos y carpetas puedan reestructurarse sin que el comportamiento del mismo sea puesto en riesgo a causa de las importaciones.",
       "p4": "Cuando BeyondJS levanta el entorno de desarrollo, realiza un mapeo de los módulos existentes e interpreta las rutas de cada módulo para poder referenciarlas correctamente cuando estos son importados. Posteriormente, en la fase de despliegue, se encarga de armar la estructura necesaria y convertir las importaciones."
     },
-
     "identifierOfAModule": {
       "t1": "Identificador de un modulo",
       "p1": "El identificador de un módulo es el que se utiliza para importarlo",

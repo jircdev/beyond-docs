@@ -2,12 +2,10 @@
   "name": "docs/basic/modules",
   "txt": {
     "multilanguage": true,
-    "ts": {
-      "path": "/texts",
-      "files": [
-        "*"
-      ]
-    }
+    "path": "/texts",
+    "files": [
+      "*"
+    ]
   },
   "code": {
     "hmr": true,
