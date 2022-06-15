@@ -59,7 +59,7 @@
         "The style template.",
         "Data-beyond-mode attribute."
       ],
-      "p2": "Themes in the template",
+      "t2": "Themes in the template",
       "p3": "The application template is already configured to support the light and dark theme and supplies a custom CSS property definition file for each theme selection. Then, in the definition.scss file, we have the following code:",
       "p4": "The above code makes the variables, set in the dark and light files, available for each respective theme.",
       "p5": "In most cases, if a widget requires validation of the theme it is using, it may be enough to use the host-context selector to define it from a style file, as shown in the following example:",
