@@ -1,13 +1,14 @@
 import * as React from 'react';
-import {TutorialIntro} from "../intro";
+
 import {TutorialHomeForm} from "./form";
 import {TutorialHomeStyles} from "./styles";
+import {TutorialFirstModuleIntro} from "./intro";
 
-export /*bundle*/ function TutorialInitialModule() {
+export /*bundle*/ function TutorialFirstModule() {
     return (
         <>
 
-            <TutorialIntro/>
+            <TutorialFirstModuleIntro/>
             <TutorialHomeForm/>
             <TutorialHomeStyles/>
         </>

@@ -1,12 +1,21 @@
+import {structureItems} from "./structure-item";
+
 const obj = ([id, label]) => ({id, label});
 
+const tutorial = structureItems([
+    ['tutorial/start', 'Empezando'],
+    ['tutorial/first-module', 'Creando un módulo'],
+    ['tutorial/backend', 'Código Backend'],
+    ['tutorial/bridge', 'Bridge'],
+    ['tutorial/routing', 'Enrutamiento'],
+]);
 const items = [
     ['intro', 'Introducción'],
     ['quick-start', 'Inicio rápido'],
-    ['tutorial/web', 'Tutorial'],
+    ['tutorial', 'Tutorial', tutorial],
     ['dashboard', 'Dashboard'],
 ]
-const children = items.map(obj);
+const children = structureItems(items);
 export const starting = {
     id: 'getting-start',
     label: 'Empezando',

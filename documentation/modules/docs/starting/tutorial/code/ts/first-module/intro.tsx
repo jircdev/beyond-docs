@@ -1,10 +1,10 @@
 import * as React from 'react';
 import {Elink, Link} from "@beyond/ui/link/code";
 
-export function DashboardIntro() {
+export function TutorialFirstModuleIntro() {
     return (
         <>
-            <span className="subtitle">Tutorial</span>
+
             <h2 id="create-module">Módulo Inicial</h2>
             <p>El proyecto trae un módulo <span className="inline">home</span> creado por defecto. Puedes verlo
                 accediendo desde el navegador a <Elink href="http://localhost:6500"

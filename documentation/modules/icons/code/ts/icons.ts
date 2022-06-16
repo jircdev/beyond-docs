@@ -19,12 +19,8 @@ const ICONS = {
         viewBox: '0 0 122.88 92.91',
     },
     settings: {
-        viewBox: `
-        0 0
-        24 24`,
-        icon: ` < g
-        id = "settings"
-        transform = "scale(0.0499)" >
+        viewBox: `0 0 24 24`,
+        icon: ` <g id = "settings" transform="scale(0.0499)">
         <path d = "M254.15,234.1V13.5c0-7.5-6-13.5-13.5-13.5s-13.5,6-13.5,13.5v220.6c-31.3,6.3-55,34-55,67.2s23.7,60.9,55,67.2v98.2
         c0,
         7.5,

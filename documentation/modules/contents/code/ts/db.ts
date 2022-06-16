@@ -4,7 +4,13 @@ import {Error404} from "./views/error-404";
 /*starting*/
 import {Intro} from "./starting/intro";
 import {QuickStart} from "./starting/quick-start";
-import {TutorialPage, TutorialInitialModule} from "@beyond/docs/docs/starting/tutorial/code';
+import {
+    TutorialIntro,
+    TutorialBridge,
+    TutorialBackend,
+    TutorialFirstModule,
+    TutorialRouting
+} from "@beyond/docs/docs/starting/tutorial/code";
 import {DashboardPage} from "./starting/dashboard";
 
 /*basic*/
@@ -31,7 +37,6 @@ import {
 
 import {RenderingPage} from "@beyond/docs/docs/basic/widgets/rendering/code";
 
-// import {Dashboard} from "@beyond/docs/docs/starting/dashboard/code';
 
 import {Backend} from "./basic/backend";
 import {FetchingDAtaPage} from "./basic/fetching";
@@ -41,18 +46,15 @@ import {DeploymentPage} from "./basic/deployment";
 import {TemplatePage} from "./basic/template";
 import {StylesPage} from "./basic/styles";
 import {ThemesPage} from "./basic/styles/themes";
-
-
 import {StateManagement} from "./basic/state-management";
 
 
 /*fundamentals*/
-import {WhyBeyond} from "./fundamentals/why";
+
 import {BEE} from "./fundamentals/bee";
 import {HMR} from "./fundamentals/hmr";
 import {Processors} from "./fundamentals/processors";
 import {DevServer} from "./fundamentals/dev-server";
-import {NpmPackages} from "./fundamentals/npm-packages";
 
 
 /*API*/
@@ -79,8 +81,11 @@ export const getContent = (contentId: string, sub: string | undefined = undefine
         'quick-start': QuickStart,
         dashboard: DashboardPage,
         tutorial: {
-            start: TutorialPage,
-            'first-module': TutorialInitialModule,
+            start: TutorialIntro,
+            'first-module': TutorialFirstModule,
+            backend: TutorialBackend,
+            bridge: TutorialBridge,
+            routing: TutorialRouting
         },
     }
     const basics = {
