@@ -1,0 +1,55 @@
+{
+    "es": {
+        "routing": {
+            "h1": "Enrutamiento",
+            "p1": {
+                "t1": "BeyondJS tiene un manejo de rutas simple y potente al mismo tiempo. Para la mayoría de los casos, las URLs pueden ser definidas en la configuración de los ",
+                "l1": [
+                    "/widgets/pages",
+                    "widgets de tipo page"
+                ],
+                "t2": ", por medio de la propiedad URL, pero pueden existir casos donde se requiera alguna configuración más avanzada."
+            }
+        },
+        
+        "routingObject": {
+            "h1": "Objecto \"routing\"",
+            "p1": "El objeto  routing gestiona el histórico del navegador y se encarga de manejar la compatibilidad para proyectos web y móviles. Ofrece una API que permite trabajar con el histórico y manipularlo.",
+            "p2": "Es disponibilizado por el kernel y se importa de la siguiente forma:",
+            "p3": "El objeto routing de BeyondJS existe para cubrir los siguientes escenarios:",
+            "items": [
+                "Disponibilizar al programador una API simple para hacer tratamientos complejos de las URLs, como validaciones, redireccionamientos y manejo de variables.",
+                "Identificar el flujo e histórico de navegación del usuario adentro del aplicativo. El objeto history  del navegador tiene un tratamiento muy limitado del mismo y sólo permite acceder al número de navegaciones existentes. BeyondJS por su parte, maneja un histórico detallado.",
+                "Debido a que las aplicaciones híbridas realizadas con JavaScript, resuelven el manejo de archivos por medio de un protocolo distinto a las aplicaciones accedidas desde un navegador, BeyondJS realiza un tratamiento  del mismo para abstraer al programador de ello y garantizar el mismo comportamiento sin importar la plataforma en que se trabaje."
+            ]
+        },
+
+        "navigation": {
+            "h1": "Navigacion",
+            "p1": "Con la finalidad de mantener compatibilidad con las APIs Conocidas, el objeto Routing tiene métodos homólogos a los métodos de la API del historial del navegador y básicamente cubren las mismas necesidades, pero a la vez, se encargan de unificar los comportamientos entre las plataformas y actualizar los elementos del histórico de BeyondJS.",
+            "p2": "Los métodos disponibles son:",
+            "p3": "Registra un nuevo elemento en el histórico",
+            "p4": "Modifica la URL actual sin agregar nuevos elementos en el histórico.",
+            "p5": "Tiene la misma interfaz que el método pushState del objeto history de la API Web y adicional se encarga de actualizar el histórico de BeyondJS."
+        },
+
+        "routeOverride": {
+            "h1": "Sobreescrituras de rutas",
+            "p2": "Generalmente, aunque puede haber más, existen dos contextos típicos en los cuales es necesario darle tratamiento a las URLs:",
+            "items": [
+                "Cuando se requiere manejar URLs amigables.",
+                "Cuando es necesario validar permisos de acceso y, en caso de que quien intenta entrar a la URL no los tenga, se pretenda hacer una redirección a un flujo determinado."
+            ],
+            "p3": {
+                "t1": "Para este tipo de casos, se puede definir una función asincronaredirect como  propiedad del objeto routing. Esta función recibe un objeto de tipo",
+                "l1": [
+                    "/api/uri",
+                    "<URI>"
+                ],
+                "t2": " que tiene una propiedad pathname la cual representa la ruta actual."
+            },
+            "p4": "La función redirect puede retornar una ruta diferente, en cuyo caso BeyondJS realizará la redirección a la URL devuelta o, puede no devolver nada, en cuyo caso se interpreta que el usuario tiene acceso a la ruta, el cual es el comportamiento por defecto.",
+            "p5": "En el ejemplo anterior, cualquier ruta recibida es redireccionada a /. "
+        }
+    }
+}
