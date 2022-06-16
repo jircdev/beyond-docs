@@ -1,0 +1,47 @@
+{
+    "es": {
+        "distributions": {
+            "title": "Distribuciones",
+            "p1": "Las distribuciones representan el entorno de ejecución de un proyecto. Es necesario configurar una distribución por cada entorno en el que se desee trabajar. BeyondJS crea un Entorno de Ejecución de Beyond (BEE) por cada distribución creada. Más adelante se explicará que es exactamente un BEE y las ventajas que ofrece."
+        },
+        "node": {
+            "title": "Node",
+            "p1": {
+                "t1": "BeyondJS permite realizar proyectos escalables y eficientes con ",
+                "e1": {
+                    "href": "https://nodejs.org/",
+                    "label": "NodeJS"
+                },
+                "t2": ", construidos directamente con typescript y buscando mejorar la experiencia de desarrollo, por medio de la integración de HMR."
+            },
+            "p2": "Para trabajar con node, es necesario crear una distribución de tipo node. A partir de allí, BeyondJS se encargará de levantar el entorno de ejecución (BEE) y dejar disponible todos los modulos del proyecto que esten configurados para las plataformas que manejan node."
+        },
+
+        "distribution": {
+            "title": "Distribución",
+            "p1": "La configuración de modulos node en BeyondJS se hace por medio de las distribuciones. El desarrollador configura una distribución",
+            "p2": "Como se explica en otras partes de esta documentación, un módulo en BeyondJS es un contenedor de bundles, donde puede existir uno o varios bundles. A su vez, cada uno de estos bundles, contiene un conjunto de modulos internos. Cuando el proyecto BeyondJS hace uso de los BEE(Beyond Execution Environment) sobre lo cual se explicará más adelante, para optimizar los tiempos de desarrollo y ofrecer mejores resultados en la experiencia."
+        },
+
+        "bee": {
+            "title": "BEE (Beyond Execution Environment",
+            "p1": "Los BEE son procesos gestionados por BeyondJS. Se comportan como un servicio node, con la diferencia de que son gestionados por el servicio principal de Beyond, el cual analiza, revisa y compila los cambios en tiempo real para dejar disponible en memoria una nueva versión de los bundles con los cambios de código aplicados por medio de HMR, brindando la oportunidad de temer acceso a las funcionalidades de código actualizadas, sin necesidad de reiniciar el proceso node.",
+            "p2": {
+                "t1": "La actualización en tiempo real en el proceso Node ofrece ventajas en tiempo de ejecución pues evita realizar toda la carga a nivel de tiempo recursos que implica detener el proceso completo y volver a levantarlo, esto puede aplicar para valores en memoria o conexiones a bases de datos, por mencionar ejemplos. BeyondJS detecta los cambios en un archivo o ",
+                "l1": [
+                    "/docs/modules#internal-modules",
+                    "Modulo interno"
+                ],
+                "t2": "actualiza el cambio, realiza una compilación nueva del bundle en el momento y deja la nueva versión disponible para ser consumida."
+            },
+            "p3": "<strong>TEl flujo de funcionamiento del Bee es el siguiente:</strong>",
+            "items": [
+                "Beyond levanta el servicio.",
+                "Se realiza un repaso del arbol de dependencias de los bundles (notar que es a nivel de bundles y no módulos internos).",
+                "Se carga en memoria el código procesado y se agregan whatchers para poder detectar cambios.",
+                "Si existe un cambio en un archivo, el mismo es detectado y se reemplaza ese segmento de código."
+            ],
+            "p4": "Los imports dinámicos no son cargados cuando el BEE levanta, sino que se solicitan a demanda."
+        }
+    }
+}
