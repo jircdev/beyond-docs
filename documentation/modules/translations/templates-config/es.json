@@ -12,7 +12,7 @@
                 "<strong>Light & Dark Theme</strong> Integrados."
             ]
         },
-        "Settings": {
+        "settings": {
             "title": "Configuración",
             "p1": {
                 "t1": "La configuración de la plantilla, al igual que todos los elementos en BeyondJS, se maneja por medio de un archivo de configuración, cuyo nombre, por convención es template.json y se ubica en la carpeta template en la raiz del proyecto. Sin embargo, tanto el nombre como la ubicación son valores configurables en el ",

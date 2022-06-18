@@ -1,0 +1,31 @@
+{
+    "en": {
+        "handling": {
+            "h1#State-handling": "State Handling",
+            "p1": "The state is the representation of the rendered values of a component or widget on the screen. It migth mutate and vary due to various factors, such as data updates from a server or user interaction.",
+            "p2": {
+                "t1": "There are numerous libraries for managing the state of a project, generally associated with the ",
+                "l1": [
+                    "/docs/widgets",
+                    "View Framework"
+                ],
+                "t2": " at use. BeyondJS allows the integration of the state management tool you want, as long as is prepared for modular operation.",
+                "q1": {
+                    "s1": "You can see a working example of a counter that shares state handling between a component built with <strong>React</strong>, one built in with <strong>Svelte</strong>, and one built in with <strong>Vue</strong> in This example.",
+                    "l1": [
+                        "/examples/sm/counter",
+                        "This example"
+                    ]
+                },
+                "p3": {
+                    "t1": "Also, BeyondJS defines a structure for state handling. The object that handles the state must be made available via the widget controller's createWidgetStore method. This method must return an object that implements the ",
+                    "l1": [
+                        "/api/IWidgetStore",
+                        "IWidgetStore"
+                    ],
+                    "t2": " interface, especially if is expected to work along with SSR."
+                }
+            }
+        }
+    }
+}
