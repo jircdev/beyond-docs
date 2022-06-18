@@ -1,62 +1,73 @@
 import * as React from "react";
-import {Menu} from "../data";
-import {List} from "./list";
-import {IValue, MenuContext} from "./context";
-import {AppManager} from '@beyond/docs/manager/code';
-import {useBinder} from "@beyond/docs/store/code";
-import {BeyondIconButton} from "@beyond/ui/icons/code";
-import {BeyondImage} from '@beyond/ui/image/code';
-import {useTexts} from "@beyond/docs/store/code";
-import {module} from "beyond_context";
-import {Loading} from "@beyond/docs/components/html/code";
+import { Menu } from "../data";
+import { List } from "./list";
+import { IValue, MenuContext } from "./context";
+import { AppManager } from "@beyond/docs/manager/code";
+import { useBinder } from "@beyond/docs/store/code";
+import { BeyondIconButton } from "@beyond/ui/icons/code";
+import { BeyondImage } from "@beyond/ui/image/code";
+import { useTexts } from "@beyond/docs/store/code";
+import { module } from "beyond_context";
+import { Loading } from "@beyond/docs/components/html/code";
 
 interface IState {
-    selected: string;
+  selected: string;
 }
 
 export /*bundle*/
-function WidgetMenu({attributes}) {
+function WidgetMenu({ attributes, store }) {
+  const [ready, texts] = useTexts(module.resource);
+  const [storeReady, setStoreReady] = React.useState(store.ready);
+  const parent = React.useRef(null);
+  const openedLocal =
+    typeof window !== undefined
+      ? window?.localStorage.getItem("__menu_opened")
+      : true;
+  const [opened, setOpened] = React.useState(
+    [true, "true"].includes(openedLocal)
+  );
 
-    const [ready, texts] = useTexts(module.resource);
-    const parent = React.useRef(null)
-    const openedLocal = (typeof window !== undefined)
-        ? window?.localStorage.getItem('__menu_opened')
-        : true;
-    const [opened, setOpened] = React.useState([true, 'true'].includes(openedLocal));
-    useBinder([attributes], () => {
-        const option = attributes.get('opened') === 'true';
-        if (option !== opened) setOpened(option);
-    });
-    const closeMenu = () => {
-        const isOpened = parent.current.classList.contains('docs__menu--opened');
-        parent.current.classList.toggle('docs__menu--opened');
-        window.localStorage.setItem('__menu_opened', `${!isOpened}`);
-    }
-    const close = event => {
-        event.preventDefault();
-        closeMenu();
-    }
-    const cls = `docs__menu${opened ? ` docs__menu--opened` : ''}`;
+  useBinder([attributes], () => {
+    const option = attributes.get("opened") === "true";
+    if (option !== opened) setOpened(option);
+  });
+  
+  useBinder([store], () =>setStoreReady(store.ready));
+  const closeMenu = () => {
+    const isOpened = parent.current.classList.contains("docs__menu--opened");
+    parent.current.classList.toggle("docs__menu--opened");
+    window.localStorage.setItem("__menu_opened", `${!isOpened}`);
+  };
+  const close = (event) => {
+    event.preventDefault();
+    closeMenu();
+  };
+  const cls = `docs__menu${opened ? ` docs__menu--opened` : ""}`;
 
-    if (!ready) return <Loading/>;
+  if (!ready || !storeReady) return <Loading />;
 
-    return (
-        <MenuContext.Provider value={{ready, texts, close: closeMenu}}>
-            <aside ref={parent} className={cls}>
-                <div className="menu-mobile-container">
-                    <header className="aside__header">
-                        <div>
-                            <BeyondImage src="/images/beyond-logo.png"
-                                         className="img-logo mobile-only"
-                                         alt="Beyond the universal meta framework"/>
-                            <h4>Contents</h4>
-                        </div>
-                        <BeyondIconButton onClick={close} className="docs__menu__list__btn-close" icon="close"/>
-                    </header>
-                    <List items={Menu}/>
-                </div>
-            </aside>
-        </MenuContext.Provider>
-
-    );
+  return (
+    <MenuContext.Provider value={{ ready, texts, close: closeMenu }}>
+      <aside ref={parent} className={cls}>
+        <div className="menu-mobile-container">
+          <header className="aside__header">
+            <div>
+              <BeyondImage
+                src="/images/beyond-logo.png"
+                className="img-logo mobile-only"
+                alt="Beyond the universal meta framework"
+              />
+              <h4>Contents</h4>
+            </div>
+            <BeyondIconButton
+              onClick={close}
+              className="docs__menu__list__btn-close"
+              icon="close"
+            />
+          </header>
+          <List items={Menu} />
+        </div>
+      </aside>
+    </MenuContext.Provider>
+  );
 }

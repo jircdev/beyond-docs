@@ -4,15 +4,12 @@ import {module} from "beyond_context";
 export /*bundle*/ function TutorialBridge() {
 
     return (
-        <>
-        <Document  moduleId={module.resource}  textId="bridgeCode"/> 
-        <Document 
+    <Document 
         nextLinks={[
-                ['Routing', '/docs/tutorial/routing']
+                ['First Module', '/docs/tutorial/first-module'],
+                ['Backend', '/docs/tutorial/backend'],
         ]}
         moduleId={module.resource} 
-        textId="connectClientAndServer"/> 
-    
-        </>
+        textId="bridge"/> 
     );
 }

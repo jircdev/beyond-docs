@@ -7,10 +7,10 @@ interface IDocsValue {
 }
 
 const value: IDocsValue = {};
-export /*bundle*/ const DocsContext = React.createContext(value);
+export /*bundle*/ const DocsContext = React.createContext<IDocsValue>(value);
 export /*bundle*/ const useDocsContext = () => React.useContext(DocsContext);
 
-export /*bundle*/function useTexts(moduleId) {
+export /*bundle*/function useTexts(moduleId):[boolean, object] {
     const [ready, setReady] = React.useState(false);
     const [texts, setTexts] = React.useState({});
     React.useEffect(() => {
@@ -26,6 +26,6 @@ export /*bundle*/function useTexts(moduleId) {
         }
 
     }, []);
-    const isReady = ready && texts;
+    const isReady = ready && !!texts;
     return [isReady, texts];
 }

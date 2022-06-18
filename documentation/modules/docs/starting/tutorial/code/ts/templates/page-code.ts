@@ -6,8 +6,8 @@ interface IForm {
     disabled?: boolean;
 }
 const model = new Auth();
-export /*bridge*/
-function Page(): JSX.Element {
+export /*page*/
+function View(): JSX.Element {
     const defaultValues = {username: '', password: '', fetching: false};
     const [values, setValues] = React.useState(defaultValues);
     const [error, setError] = React.useState();

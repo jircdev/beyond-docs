@@ -14,13 +14,13 @@ export /*bundle*/function ViewFrameworks() {
                 <Elink href="https://vuejs.org/">Vue</Elink> {and} <Elink
                 href="https://svelte.dev/">Svelte</Elink>{t2}
             </p>
-            <h3 id="widget-react"><CHtml value={using.react.title}/></h3>
+            <h3 id="widget-react"><CHtml content={using.react.title}/></h3>
             <p>{using.react.p1}</p>
             <div className="block__note">
                 {using.react.p2}
                 <Elink href={using.react.e1.href}>{using.react.e1.label}</Elink>
             </div>
-            <h3><CHtml value={using.vueSvelte.title}/></h3>
+            <h3><CHtml content={using.vueSvelte.title}/></h3>
             <p>{using.vueSvelte.p1.t1} <Link
                 href="/docs/processors">{using.vueSvelte.p1.l1}</Link> {using.vueSvelte.p1.t2}</p>
         </>

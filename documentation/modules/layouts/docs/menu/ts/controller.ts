@@ -2,6 +2,7 @@ import {ReactWidgetController} from '@beyond-js/react-widgets/controllers/ts';
 import {IWidgetStore} from '@beyond-js/kernel/core/ts';
 import {beyond__styles} from "@beyond/docs/layout/styles/code";
 import {WidgetMenu} from "./menu";
+import { MenuStore } from './store';
 
 export /*bundle*/
 class Controller extends ReactWidgetController {
@@ -14,6 +15,6 @@ class Controller extends ReactWidgetController {
     }
 
     createStore(): IWidgetStore {
-        return undefined;
+        return new MenuStore();
     }
 }

@@ -15,8 +15,4 @@ class Controller extends PageReactWidgetController {
     get Widget() {
         return Page;
     }
-    constructor(a) {
-        super(a);
-        console.log(11, 'prueba')
-    }
 }

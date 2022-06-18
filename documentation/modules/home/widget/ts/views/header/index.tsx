@@ -17,7 +17,6 @@ export function Header() {
                         <HeaderImage/>
                     </div>
                     <IconLogo/>
-
                 </div>
             </header>
             <Pulse/>

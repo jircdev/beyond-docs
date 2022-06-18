@@ -1,12 +1,16 @@
-import * as React from 'react';
-import {TutorialBackendLogic} from "./logic";
-import {TutorialBackendStructure} from "./structure";
+import * as React from "react";
+import { hmr, Document } from "@beyond/docs/components/html/code";
+import { module } from "beyond_context";
 
 export /*bundle*/ function TutorialBackend() {
-    return (
-        <>
-            <TutorialBackendLogic/>
-            <TutorialBackendStructure/>
-        </>
-    )
+  return (
+    <>
+      <Document moduleId={module.resource} textId="backendLogic" />
+      <Document
+        moduleId={module.resource}
+        textId="backendInitialization"
+        nextLinks={[["Bridge", "/docs/tutorial/bridge"]]}
+      />
+    </>
+  );
 }
