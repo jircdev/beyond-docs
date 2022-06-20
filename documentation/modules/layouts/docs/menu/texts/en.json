@@ -1,5 +1,146 @@
 {
   "en": {
-
+    "home": [
+      "/",
+      "HOME"
+    ],
+    "gettingStarted": {
+      "introduccion": [
+        "/docs/intro",
+        "Getting started"
+      ],
+      "quickStart": [
+        "/docs/quick-start",
+        "Quick start"
+      ],
+      "walkthrough": [
+        "/docs/tutorial/web",
+        "Walkthrough"
+      ],
+      "dashboard": [
+        "/docs/dashboard",
+        "Dashboard"
+      ]
+    },
+    "basicConcepts": {
+      "projects": {
+        "introduction": [
+          "/docs/projects/intro",
+          "Introduction"
+        ],
+        "createAProject": [
+          "/docs/projects/create",
+          "Create a project"
+        ],
+        "structure": [
+          "/docs/projects/structure",
+          "Structure"
+        ],
+        "projectJson": [
+          "/docs/projects/json",
+          "project.json"
+        ],
+        "importAProject": [
+          "/docs/projects/import",
+          "Import a project"
+        ],
+        "dependencies": [
+          "/docs/projects/dependencies",
+          "Dependencies"
+        ]
+      },
+      "modules": {
+        "modulesInBeyond": [
+          "/docs/modules/introduction",
+          "Modules in Beyond"
+        ],
+        "createAModule": [
+          "/docs/modules/create",
+          "Create a module"
+        ],
+        "setting": [
+          "/docs/modules/json",
+          "Setting"
+        ]
+      },
+      "bundles": [
+        "/docs/bundles",
+        "Bundles"
+      ],
+      "processor": [
+        "/docs/processors",
+        "Processors"
+      ],
+      "templateSystem": [
+        "/docs/template",
+        "Template System"
+      ],
+      "widgets": [
+        "/docs/intro",
+        "Widgets"
+      ],
+      "routing": [
+        "/docs/routing",
+        "Routing"
+      ],
+      "stateHandling": [
+        "/docs/state/management",
+        "State Handling"
+      ],
+      "backendStyles": [
+        "/docs/intro",
+        "Backend Styles"
+      ]
+    },
+    "fundamentals": {
+      "developmentServer": [
+        "/docs/dev-server",
+        "Development server"
+      ],
+      "distributions": [
+        "/docs/distributions",
+        "Distributions"
+      ],
+      "hmrProcessors": [
+        "/docs/processors",
+        "HMR processors"
+      ],
+      "bee": [
+        "/docs/bee",
+        "BEE"
+      ],
+      "ssr": [
+        "/docs/ssr",
+        "SSR"
+      ],
+      "multilanguage": [
+        "/docs/multilanguage",
+        "Multilanguage"
+      ],
+      "glossary": [
+        "/docs/glossary",
+        "Glossary"
+      ]
+    },
+    "settings": {
+      "template": [
+        "/docs/template",
+        "Template"
+      ]
+    },
+    "api": {
+      "uri": [
+        "/docs/api/uri",
+        "URI"
+      ],
+      "widgetObject": [
+        "/docs/api/BeyondWidget",
+        "Widget object"
+      ],
+      "iWidgetStore": [
+        "/docs/api/IWidgetStore",
+        "IWidgetStore"
+      ]
+    }
   }
 }
