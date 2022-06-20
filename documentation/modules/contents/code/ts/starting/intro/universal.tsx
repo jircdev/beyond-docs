@@ -13,7 +13,7 @@ export function Universal() {
             <BeyondImage src="/images/tutorials/beyond-environments.png" alt="Beyond environments"/>
             <p>{universal.p1}</p>
             <p>{universal.p2}</p>
-            <List items={universal.items}/>
+            <List content={universal.items}/>
         </>
     )
 }

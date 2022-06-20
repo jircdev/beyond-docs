@@ -12,7 +12,7 @@ export function Features() {
             <h2 id="features">{title}</h2>
             <p> {p1}
             </p>
-            <List items={items}/>
+            <List content={items}/>
         </>
     )
 }

@@ -1,11 +1,12 @@
 import React from "react";
-import { useRender } from "./use-render";
+import {useRender} from "./use-render";
 
 interface Ivalue {
-  content: object;
+    content: object;
 }
 
-export /*bundle*/ function Render({ content }) {
-  const output = useRender(content);
-  return <>{output}</>;
+export /*bundle*/ function Render({content, tpls}) {
+    const output = useRender(content, tpls);
+    return <>{output}</>;
 }
+

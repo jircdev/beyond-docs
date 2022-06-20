@@ -17,7 +17,7 @@ export /*bundle*/ function Original() {
                 proyecto, Las listamos a continuación:
             </p>
 
-            <ul taclassName="content__list list-icons list-icons--left">
+            <ul className="content__list list-icons list-icons--left">
                 <li><AppIcon icon="add"/>Agregar módulos</li>
                 <li><AppIcon icon="settings"/> Configuración general del proyecto</li>
                 <li><AppIcon icon="static"/>Gestionar archivos estáticos</li>

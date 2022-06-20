@@ -6,7 +6,7 @@ interface IForm {
 }
 
 export /*page*/
-function Page(): JSX.Element {
+function View(): JSX.Element {
     const defaultValues = {username: '', password: '', fetching: false};
     const [values, setValues] = React.useState(defaultValues);
     const [error, setError] = React.useState();

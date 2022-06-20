@@ -26,7 +26,6 @@ export function ErrorImage({onError, properties, src}: IProps) {
     return (
         <figure data-src={src} {...properties}>
             <div key="error" data-src={src} className="content-error">
-
                 <span>Fallo la carga de la imagen</span>
             </div>
         </figure>

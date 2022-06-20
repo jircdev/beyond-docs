@@ -8,7 +8,7 @@ import { Content } from "./content";
 export /*bundle*/ function TutorialIntro() {
   return (
     <>
-      {/* <Document moduleId={module.resource} textId="intro" /> */}
+       <Document moduleId={module.resource} textId="intro" />
       <Document
         moduleId={module.resource}
         textId="starting"
