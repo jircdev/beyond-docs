@@ -76,7 +76,6 @@ export function useRender(content: object, tpls = {}) {
         }
         if (["c"].includes(item[0])) {
             if (!tpls[data[item]]) {
-                console.log(5, tpls)
                 throw new Error(`the template "${data[item]}" were not found on ${item}`);
             }
             output.push(<CodeComponent key={itemId} content={tpls[data[item]]}/>)
