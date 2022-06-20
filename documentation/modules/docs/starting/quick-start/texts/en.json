@@ -55,36 +55,36 @@
       "l2": [
         "http://localhost:6500",
         "http://localhost:6500"
+      ]
+    },
+    "q1": {
+      "s1": " The dashboard is a system that BeyondJS provides the developer with a better user experience. You can read more about him ",
+      "l1": [
+        "/docs/dashboard",
+        "here"
       ],
-      "q1": {
-        "s1": " The dashboard is a system that BeyondJS provides the developer with a better user experience. You can read more about him ",
-        "l1": [
-          "/docs/dashboard",
-          "here"
-        ],
-        "s2": "."
-      },
-      "h2": "Global installation",
-      "p7": "To install BeyondJS globally, run the following command:\n",
-      "c4": "npm2",
-      "p8": "From the installation, it is only necessary to go to the folder where you want to create the project(s) and initialize BeyondJS from the command line as follows:\n",
-      "c5": "beyond",
-      "p9": {
-        "s1": "If everything goes smothly, a message will appear saying that BeyondJS is running and that you can access the dashboard at ",
-        "l1": [
-          "http://localhost:4000",
-          "http://localhost:4000"
-        ],
-        "s2": ", from where a project is created through the dashboard graphical interface."
-      },
-      "p10": {
-        "s1": "Also at the dashboard, you can create a project from the graphical interface. See how you can  do it",
-        "l1": [
-          "/docs/projects/create",
-          "here"
-        ],
-        "s2": "."
-      }
+      "s2": "."
+    },
+    "h2": "Global installation",
+    "p7": "To install BeyondJS globally, run the following command:\n",
+    "c4": "npm2",
+    "p8": "From the installation, it is only necessary to go to the folder where you want to create the project(s) and initialize BeyondJS from the command line as follows:\n",
+    "c5": "beyond",
+    "p9": {
+      "s1": "If everything goes smothly, a message will appear saying that BeyondJS is running and that you can access the dashboard at ",
+      "l1": [
+        "http://localhost:4000",
+        "http://localhost:4000"
+      ],
+      "s2": ", from where a project is created through the dashboard graphical interface."
+    },
+    "p10": {
+      "s1": "Also at the dashboard, you can create a project from the graphical interface. See how you can  do it",
+      "l1": [
+        "/docs/projects/create",
+        "here"
+      ],
+      "s2": "."
     }
   }
 }

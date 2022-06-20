@@ -11,7 +11,7 @@ import {
     TutorialFirstModule,
     TutorialRouting
 } from "@beyond/docs/docs/starting/tutorial/code";
-import {DashboardPage} from "./starting/dashboard";
+import {DashboardPage} from "@beyond/docs/docs/starting/dashboard/code";
 
 /*basic*/
 //projects

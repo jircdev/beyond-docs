@@ -1,5 +1,5 @@
 {
-  "en": {
+  "es": {
     "h1#quick-start": "Inicio rápido",
     "h4": "Prerequisitos",
     "items1": [
@@ -79,10 +79,10 @@
       "s2": ", desde donde se podrá crear un proyecto por medio de la interfaz gráfica del dashboard.\n"
     },
     "p10": {
-      "s1": "Ya en el Dashboard, puedes crear un proyecto desde la interfaz gráfica, puedes ver cómo hacerlo",
+      "s1": "Ya en el Dashboard, puedes crear un proyecto desde la interfaz gráfica, puedes ver cómo hacerlo ",
       "l1": [
         "/docs/projects/create",
-        "here"
+        "aqui"
       ],
       "s2": "."
     }
