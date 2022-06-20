@@ -10,7 +10,7 @@ export /*bundle*/ function CHtml({content, children}) {
 
 export /*bundle*/ function Paragraph({content, children}) {
     if (Array.isArray(content)) {
-        console.log(56.2, content)
+
         return (
             <p>
                 {content}
@@ -74,7 +74,7 @@ export function BlockQuote({children}) {
  */
 export function ListItem({content}) {
     const output = [];
-    console.log(100, content);
+
     if (isString(content)) content = [content];
     content.map(item => output.push(item));
     return (<li>{output}</li>)

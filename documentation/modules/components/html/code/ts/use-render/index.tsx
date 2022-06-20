@@ -30,17 +30,14 @@ export function useRender(content: object, tpls = {}) {
     const analize = (item, data, output, id) => {
         const value = data[item];
         // validacion items
-        console.log(1, item)
+
         const itemId = `${item}.${id}`;
         if (item.includes("items") && item.substring(0, 5) === "items") {
             const Control = controls.items;
             let items = [];
             let children = [];
-            console.log(3, item, data[item])
             data[item].forEach((element, index) => {
-                console.log(3.1, element)
                 if (typeof element === "object") {
-                    console.log(3.2, element)
                     element = check(element, [], `${i}.${index}`);
                     items.push(<ListItem key={`element.sublist.${index}.${data[item].length}`} content={element}/>);
                     return;
@@ -116,8 +113,8 @@ export function useRender(content: object, tpls = {}) {
 
     let i = 0;
     const check = (data, output, id) => {
-        console.log(56.1, data)
-        id = `${id}.item.${performance.now()}.${Object.keys(data).join()}`
+
+        id = `${id ?? ''}.item.${performance.now()}.${Object.keys(data).join()}.${Math.random(10)}`
         if (i > 50) return console.log("TOP.......");
 
         i++;

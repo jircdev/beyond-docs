@@ -9,7 +9,6 @@ export /* bundle */ function Document({moduleId, tpls, textId, nextLinks}) {
     const [ready, texts] = useTexts(moduleId);
     if (!ready) return <Loading/>;
 
-    console.log(11,tpls);
     return (
         <DocsContext.Provider value={{texts, ready, tpls}}>
             <Render content={texts[textId]} tpls={tpls}/>
