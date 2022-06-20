@@ -15,12 +15,15 @@ import {DashboardPage} from "@beyond/docs/docs/starting/dashboard/code";
 
 /*basic*/
 //projects
-import {ProjectsPage} from "./basic/projects";
-import {ProjectJson} from "./basic/projects/project-json";
-import {ManageProject} from "./basic/projects/manage";
-import {ImportProject} from "./basic/projects/import";
-import {ProjectStructure} from "./basic/projects/structure";
-import {ProjectDependencies} from "./basic/projects/dependencies";
+import {
+    ProjectsIntro,
+    ProjectJson,
+    ProjectCreate,
+    ProjectImports,
+    ProjectStructure,
+    ProjectDependencies
+} from "@beyond/docs/docs/basic/projects/code";
+
 // modules
 import {ModuleIntro} from "./basic/modules/intro";
 import {ModuleConfig} from "./basic/modules/config";
@@ -90,11 +93,11 @@ export const getContent = (contentId: string, sub: string | undefined = undefine
     }
     const basics = {
             projects: {
-                intro: ProjectsPage,
-                create: ManageProject,
+                intro: ProjectsIntro,
+                create: ProjectCreate,
                 structure: ProjectStructure,
                 json: ProjectJson,
-                import: ImportProject,
+                import: ProjectImports,
                 dependencies: ProjectDependencies,
             },
             modules: {

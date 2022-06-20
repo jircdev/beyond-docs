@@ -29,9 +29,6 @@ export function useRender(content: object, tpls = {}) {
      * @param id
      */
     const analize = (item, data, output, id) => {
-        const value = data[item];
-        // validacion items
-        console.log(1, item, data, output, id)
 
         const itemId = `${item}.${id}`;
         if (item.includes("items") && item.substring(0, 5) === "items") {
@@ -78,7 +75,6 @@ export function useRender(content: object, tpls = {}) {
         }
         if (["c"].includes(item[0])) {
             if (!tpls[data[item]]) {
-                console.log(1, tpls)
                 throw new Error(`the template "${data[item]}" were not found on ${item}`);
             }
             output.push(<CodeComponent key={itemId} content={tpls[data[item]]}/>)
