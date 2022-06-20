@@ -8,7 +8,7 @@ export /*bundle*/ function TutorialRouting() {
     return (
         <Document
             moduleId={module.resource}
-            tpls={tpls}
+            tpls={tpls.routing}
             textId="routing"/>
     );
 }

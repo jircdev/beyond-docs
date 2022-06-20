@@ -1,7 +1,10 @@
 {
   "es": {
     "intro": {
-      "h1": "Tutorial: Proyecto Web",
+      "h1": [
+        "Tutorial",
+        "Proyecto Web"
+      ],
       "h2": "Antes de Empezar",
       "p1": "Este tutorial busca el flujo principal de desarrollo con Beyond y demostrar de manera clara los beneficios que este ofrece. El propósito de este tutorial es que los usuarios/programadores puedan  aprender mientras practican, por tanto, los conceptos que definen la estructura de BeyondJS son abordados de forma general, focalizando en hacer un ejercicio rápido, conciso y claro. Para mayor detalle los conceptos, esta estará disponible en la documentación cuando esta sea requerida.",
       "p2": "El tutorial se divide de la siguiente forma: ",
@@ -72,7 +75,10 @@
       "p7": "Luego de haber ejecutado el comando, ya estamos listos para empezar nuestro proyecto, para ello ejecutamos lo siguiente."
     },
     "firstModule": {
-      "h2": "Modulo Inicial",
+      "h1": [
+        "Tutorial",
+        "Primer módulo"
+      ],
       "p1": {
         "s1": "El proyecto trae un módulo home creado por defecto. Puedes verlo accediendo a ",
         "e1": [
@@ -81,8 +87,8 @@
         ],
         "s2": " desde el navegador."
       },
-      "p2": {
-        "s1": "El puerto se define en el archivo project.json, puedes leer más sobre ello en la sección de ",
+      "q1": {
+        "s1": " El puerto se define en el archivo project.json, puedes leer más sobre ello en la sección de ",
         "l1": [
           "/projects/json",
           "Configuracion de Proyectos"
@@ -94,8 +100,8 @@
         {
           "s1": "ts: ",
           "items": [
-            "controller.tsx: Objeto controlador del componente, requerido para poder montar el WebComponent en el navegador.",
-            "views/page.tsx: Componente react que renderiza la página."
+            "`controller.tsx`: Objeto controlador del componente, requerido para poder montar el WebComponent en el navegador.",
+            "`views/page.tsx`: Componente react que renderiza la página."
           ]
         },
         "scss: Carpeta para agregar estilos al módulo.",
@@ -114,12 +120,12 @@
       "q2": {
         "s1": "SASS es un procesador en BeyondJS, si quieres leer a profundidad sobre el mecanismo de procesadores podrás encontrar los detalles en ",
         "l1": [
-          "/processors",
+          "/docs/processors",
           "La seccion de procesadores"
         ]
       },
       "c1": "styles",
-      "p3": "Expliquemos un poco el código anterior.",
+      "p3": "Expliquemos un poco el código anterior:",
       "items": [
         "Agregamos estilo básico al formulario, los inputs, el botón de envío y para manejar un mensaje de error.",
         {
@@ -127,12 +133,16 @@
           "l1": [
             "/template",
             "Template del proyecto"
-          ]
+          ],
+          "s2": "."
         }
       ]
     },
     "backendLogic": {
-      "h2": "Logica Backend",
+      "h1": [
+        "Tutorial",
+        "Logica Backend"
+      ],
       "p1": "Por su naturaleza, Los formularios de inicio de sesión requieren validar los datos contra un backend que se conecte a algún manejador de datos. A continuación, vamos a emular la conexión a la base de datos, creando nuestra integración con un servicio node, que tendrá un usuario y clave predefinidos y así, podremos revisar si la sesión es válida o no. Para lograrlo, haremos uso de websockets.",
       "p2": "Es necesario crear un bundle BRIDGE para crear de forma simple un servicio node y lograr la integración con el código cliente. Los bundles bridges, como su nombre lo indica, crean un puente de conexión entre el código cliente y servidor permitiendo manejar el código de manera uniforme."
     },
@@ -165,7 +175,10 @@
       "p10": "A cotinuación, creamos una carpeta con el nombre \"bridge\" para que Beyond consiga el path definido en module.json y, adentro de la carpeta bridge, creamos un archivo index.ts en el cual se agregará la lógica servidor."
     },
     "bridgeCode": {
-      "h2": "Codigo Bridge",
+      "h1": [
+        "Tutorial",
+        "Código Bridge"
+      ],
       "p1": "Como mencionamos antes, en esta parte generalmente cada proyecto tiene su propia lógica para la validación de sesión. La intención hoy no es enfocarse en cómo debe manejarse esto, lo que haremos será crear un código básico que nos permita conectar nuestro código cliente con el backend node.",
       "c1": "bridge",
       "p2": "El código es bastante simple, pero hay varios puntos interesantes a destacar",
@@ -225,7 +238,10 @@
       "p10": "Ahora solo nos falta redireccionar al usuario a una pantalla de bienvenida."
     },
     "routing": {
-      "h2": "Routing",
+      "h1": [
+        "Tutorial",
+        "Routing"
+      ],
       "p1": "Lo primero que debemos hacer, es crear un nuevo módulo con un bundle de tipo Page, esta vez lo haremos desde el Dashboard. Para eso, debemos acceder a nuestro dashboard y seleccionar el proyecto que estamos trabajando, si no lo hemos hecho. Esto habilitará en el Preaside las acciones que podemos realizar sobre el proyecto, Las listamos a continuación:",
       "items": [
         "Agregar modulos",
@@ -260,7 +276,7 @@
       "c1": "importing",
       "h4#pushState": "Navegación",
       "c2": "pushState",
-      "p8": "¡Listo! Si volvemos a probar nuestro formulario, podremos iniciar sesión y ver cómo nos dirigimos a la página de bienvenida.."
+      "p8": "¡Listo! Si volvemos a probar nuestro formulario, podremos iniciar sesión y ver cómo nos dirigimos a la página de bienvenida."
     },
     "algo": "algo"
   }

@@ -1,7 +1,10 @@
 {
   "en": {
     "intro": {
-      "h1": "Walkthrough: Web Project",
+      "h1#start": [
+        "Tutorial",
+        "Web Project"
+      ],
       "h2": "Before beginning",
       "p1": "This tutorial walks through the main flow of development with Beyond and clearly shows the benefits it offers in its use. The purpose of this development is for end-users/developers who want to learn while practicing, therefore the concepts that define the structure of Beyond are addressed in a general approach, focusing on making a quick, concise, and clear exercise out of it. For a more detailed description of concepts, it will be available on the documentation upon request.",
       "p2": "The tutorial is structures as follows:",
@@ -20,7 +23,7 @@
       ]
     },
     "starting": {
-      "h1": "Starting",
+      "h2#starting": "Starting",
       "p1": "The first thing to do is create the project, for this, we will use the bundle @beyond-js/create-project. It is responsible for installing BeyondJS locally and generating the initial structure of our project.",
       "q1": {
         "s1": "BeyondJS, is developed to work as a global dependency and run multiple projects simultaneously. Learn more about it ",
@@ -74,7 +77,10 @@
       "p7": "After having executed the command, we are ready to start our project.  Execute the following:"
     },
     "firstModule": {
-      "h2": "Initial Module",
+      "h1#first-module": [
+        "Tutorial",
+        "First module"
+      ],
       "p1": {
         "s1": "The project comes with a default home module. You can see it by accessing ",
         "e1": [
@@ -83,12 +89,13 @@
         ],
         "s2": " from the browser."
       },
-      "p2": {
+      "q2": {
         "s1": "The port is defined in the project.json file. You can read more about it in the ",
         "l1": [
           "/projects/json",
           "Projects Settings chapter"
-        ]
+        ],
+        "s2": "."
       },
       "p3": "The structure of the module is as follows",
       "items": [
@@ -134,7 +141,10 @@
       ]
     },
     "backendLogic": {
-      "h2": "Backend Logic",
+      "h1": [
+        "Tutorial",
+        "Backend Logic"
+      ],
       "p1": "Login forms, by nature, require validating data against a backend that connects to some data handler. Next, we are emulating the connection to the database, creating our integration with a node service, which will have a predefined username and password against which we will validate if the session is valid or not. To achieve this, we will make use of WebSockets.",
       "p2": "To create a BRIDGE bundle, it is necessary basically to create a node service and achieve integration with client code. Bundle bridges, as their name implies, develop a connection bridge between the client and server code, allowing the code to be handled uniformly."
     },
@@ -167,7 +177,10 @@
       "p10": "Next, we create a folder with the name \"bridge\" so that Beyond gets the path defined in module.json and, inside the bridge folder, we create an index.ts file, in which the server logic will be added."
     },
     "bridgeCode": {
-      "h2": "Bridge Code",
+      "h1": [
+        "Tutorial",
+        "Bridge Code"
+      ],
       "p1": "As we mentioned before, in this step generally each project has its logic for session validation. The intention today is not to focus on how this should be handled, but rather focusing on creating a basic code that allows us to connect our client code with the backend do not give.",
       "c1": "bridge",
       "p2": "The code is quite simple, but there are several interesting points to highlight: ",
@@ -194,7 +207,7 @@
         ],
         "s2": "and to execute it, we must go to the",
         "l2": [
-          "/dashboard",
+          "/docs/dashboard",
           "Dashboard"
         ],
         "s3": " and click on the execution button, which we can find on the project detail screen"
@@ -227,7 +240,10 @@
       "p10": "Now we just need to redirect the user to a welcome screen."
     },
     "routing": {
-      "h2": "Routing",
+      "h1": [
+        "tutorial",
+        "Routing"
+      ],
       "p1": "The first thing we must do is create a new module with a bundle of type Page. This can be done from the dashboard. For that, we must access our dashboard and select the project we are working on if we have done so. It will enable, in the Preaside, the actions that we can carry out on the project, listed below:",
       "items": [
         "Add modules",
@@ -258,8 +274,11 @@
       "p5": "Pages and layouts in Beyond are resolved using Web components. If you want to know in detail how they work and why, go to the Web Components Section.",
       "p6": "We then open the Page object created in the module and add a simple message that says: Welcome!",
       "p7": "Next, we will make the necessary adjustments to redirect to our welcome module after logging in. What we need to do after is import the \"routing\" object from Beyond, use the pushState method as it provides, and navigate to the welcome page.",
+      "h4#imports": "Imports",
+      "c1": "importing",
+      "h4#pushState": "Navigation",
+      "c2": "pushState",
       "p8": "We are done! If we retest our form, we'll be able to log in and see how we've been redirected to the welcome page."
-    },
-    "algo": "algo"
+    }
   }
 }

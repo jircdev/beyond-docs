@@ -37,7 +37,7 @@
   --app-primary-text-gradient: linear-gradient(to right, var(--text-on-primary), var(--secondary-light));
   --app-secondary-text-gradient: linear-gradient(to right, var(--color-gray-10), var(--color-carbon-30));
   --app-dark-text-gradient: var(--app-secondary-text-gradient);
-
+  --app-primary-color: var(--primary-dark);
   --app-icon-bg: #2b3853;
   --app-animation-color: #{darken(#2b3853, 5%)};; // primary-surface 800
 

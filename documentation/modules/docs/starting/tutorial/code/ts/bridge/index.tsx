@@ -5,7 +5,6 @@ import {tpls} from "../templates";
 
 export /*bundle*/ function TutorialBridge() {
 
-    console.log(55.1, tpls.bridge);
     return (
         <>
             <Document moduleId={module.resource} textId="bridgeCode" tpls={tpls.bridge}/>

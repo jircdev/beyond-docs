@@ -4,6 +4,7 @@ import {backend} from "./start";
 import {bridgeCode} from "./bridge";
 import {PageCodeStarted} from "./page-code-started";
 import {connection} from "./backend";
+import {routing} from "./routing";
 
 export const tpls = {
     module: {
@@ -16,7 +17,7 @@ export const tpls = {
         platforms1: backend.platform1,
         platforms2: backend.platform2,
     },
-
+    routing,
     bridge: connection
 
 

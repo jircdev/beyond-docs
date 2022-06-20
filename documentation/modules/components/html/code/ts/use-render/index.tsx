@@ -18,6 +18,7 @@ export function useRender(content: object, tpls = {}) {
      * i = img
      * c = code
      */
+
     const regexp = /[q|h|p|l|e|t|i|c]{1}?\d{1}|items\d{0,1}|\d/;
 
     /**
@@ -38,11 +39,11 @@ export function useRender(content: object, tpls = {}) {
             let children = [];
             data[item].forEach((element, index) => {
                 if (typeof element === "object") {
-                    element = check(element, [], `${i}.${index}`);
+                    element = check(element, []);
                     items.push(<ListItem key={`element.sublist.${index}.${data[item].length}`} content={element}/>);
                     return;
                 }
-                items.push(<ListItem key={itemId} content={element}/>);
+                items.push(<ListItem key={`${itemId}.${index}`} content={element}/>);
                 return;
             });
 
@@ -58,14 +59,14 @@ export function useRender(content: object, tpls = {}) {
          * Si es un objeto recursivo
          */
         if (!regexp.test(item)) {
-            check(data[item], output, item);
+            check(data[item], output);
             return;
         }
 
         // blockQuote
         if (["q"].includes(item[0])) {
 
-            const quote = isString(data[item]) ? data[item] : check(data[item], [], `${item[0]}.${id}`);
+            const quote = isString(data[item]) ? data[item] : check(data[item], []);
             output.push(<BlockQuote key={itemId}>{quote}</BlockQuote>);
             return;
         }
@@ -76,6 +77,7 @@ export function useRender(content: object, tpls = {}) {
         }
         if (["c"].includes(item[0])) {
             if (!tpls[data[item]]) {
+                console.log(1, tpls)
                 throw new Error(`the template "${data[item]}" were not found on ${item}`);
             }
             output.push(<CodeComponent key={itemId} content={tpls[data[item]]}/>)
@@ -91,12 +93,22 @@ export function useRender(content: object, tpls = {}) {
             output.push(<DocLinks {...attrs} />);
             return;
         }
-        if (item[0] === 'p' && data[item] === 'object') {
+
+        if (item[0] === 'p' && typeof data[item] === 'object') {
             const Control = controls[item[0]];
-            const elements = check(data[item], output, item);
+            const elements = check(data[item], output);
             output.push(
                 <Control key={`${id}${item}`} selector={item} content={elements}/>
             );
+
+        }
+        if (item[0] === 'h') {
+            const Control = controls[item[0]];
+
+            output.push(
+                <Control key={`${id}${item}`} selector={item} content={data[item]}/>
+            );
+            return;
 
         }
         if (typeof data[item] === "object") {
@@ -111,14 +123,16 @@ export function useRender(content: object, tpls = {}) {
     };
 
     let i = 0;
-    const check = (data, output, id) => {
-
-        id = `${id ?? ''}.item.${performance.now()}.${Object.keys(data).join()}.${Math.random(10)}`
+    const check = (data) => {
+        const output = [];
+        const id = `item.${performance.now()}.${Object.keys(data).join()}}`
         if (i > 50) return console.log("TOP.......");
 
         i++;
         const keys = Object.keys(data);
-        keys.forEach((item) => analize(item, data, output, id));
+        keys.forEach((item, i) => {
+            analize(item, data, output, `${id}.${i}`)
+        });
         return output;
     };
 

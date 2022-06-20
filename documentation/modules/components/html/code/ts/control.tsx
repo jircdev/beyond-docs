@@ -9,28 +9,33 @@ export /*bundle*/ function CHtml({content, children}) {
 }
 
 export /*bundle*/ function Paragraph({content, children}) {
-    if (Array.isArray(content)) {
 
-        return (
-            <p>
-                {content}
-            </p>
-        )
+    if (Array.isArray(content)) {
+        return (<p>{content}</p>);
     }
     const data = children ?? content;
     return <p dangerouslySetInnerHTML={{__html: data}}/>
 }
 
-export /*bundle*/ function Title({content, selector, children}) {
-    const data = children ?? content;
-    const Control = ['h2', 'h3', 'h4'].includes(selector) ? selector : 'h1';
-    return <Control dangerouslySetInnerHTML={{__html: data}}/>
+export /*bundle*/ function Title(props) {
+
+    const {content, selector, children} = props;
+    let data = children ?? content;
+
+    const output = [];
+    const tag = selector.split("#")[0];
+    const Control = ['h2', 'h3', 'h4', 'h5', 'h6'].includes(tag) ? tag : 'h1';
+    if (Array.isArray(data)) {
+        output.push(<span className={`pretitle-${tag}`} key="pretitle">{data[0]}</span>);
+        data = data[1];
+    }
+    output.push(<Control dangerouslySetInnerHTML={{__html: data}} key="title"/>)
+    return <>{output}</>
 }
 
 export /*bundle*/ function List(props) {
     const {content, children} = props;
     if (!Array.isArray(content)) {
-        console.log(3.5, content, children, props)
         throw new Error('The content passed must be an array');
     }
     return (
@@ -73,18 +78,18 @@ export function BlockQuote({children}) {
  * @constructor
  */
 export function ListItem({content}) {
-    const output = [];
+    if (isString(content)) {
+        content = [<CHtml content={content} key={content}/>];
+    }
 
-    if (isString(content)) content = [content];
-    content.map(item => output.push(item));
-    return (<li>{output}</li>)
+    return (<li>{content}</li>)
 }
 
 export function CodeComponent({content}) {
     if (!content) {
         throw new Error('the content object is missing');
     }
-    console.log(55, content)
+
     const {title, language = 'typescript', tpl} = content;
     const Control = title ? CodeBox : Code;
     if (tpl)
