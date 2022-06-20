@@ -1,19 +1,19 @@
 {
   "es": {
     "developmentServer": {
-      "h1": "Servidor de desarrollo",
+      "h1#devServer": "Servidor de desarrollo",
       "p1": "El servidor de desarrollo de BeyondJS se inicia cuando se ejecuta el comando beyond y puede leer determinadas configuraciones a partir del archivo beyond.json, pero no es necesario para crearlo. BeyondJS está creado para que el programador trabaje haciendo uso del Dashboard y este gestiona la mayoría de las configuraciones habituales, que suelen tener que ver con el poder levantar algún proyecto.",
       "p2": {
         "t1": "Cuando el servidor de desarrollo se levanta, el Dashboard queda disponible para ser accedido desde ",
-        "e1": {
-          "href": "http://localhost:4000",
-          "label": "http://localhost:4000"
-        },
+        "l1": [
+          "http://localhost:4000",
+          "http://localhost:4000"
+        ],
         "t2": " y este genera y edita el archivo beyond.json cuando se crea, edita o elimina algún proyecto."
       }
     },
     "properties": {
-      "h1": "Propiedades",
+      "h2#properties": "Propiedades",
       "items": [
         {
           "l1": [

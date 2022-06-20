@@ -1,7 +1,7 @@
 {
     "es": {
         "bundles": {
-            "h1": "Bundles",
+            "h1#bundles": "Bundles",
             "p1": "Imagina que necesitas realizar la interfaz de un formulario de registro. El formulario de registro podría dividirse en dos capas:",
             "items": [
                 "la interfaz de usuario basada en el código HTML y los estilos de la pantalla.",
@@ -14,13 +14,13 @@
         },
 
         "transversalBundles": {
-            "h1": "Bundles Transversales",
+            "h2#transversalBundles": "Bundles Transversales",
             "p1": "Los bundles transversales, se definen igual que el resto de bundles, pero tienen una particularidad que ofrece ventajas productivas: el código de un bundle transversal es compilado en un archivo único.",
             "p2": "BeyondJS los ubica, integra y unifica en un único bundle o archivo final. Los bundle de tipo start son un ejemplo claro de ello, permiten al programador definir la lógica que desea sea ejecutada en el arranque de la aplicación."
         },
 
         "types": {
-            "h1": "Types",
+            "h2#types": "Tipos",
             "items": [
                 {
                     "t1": "<strong>Widget</strong>: ontienen el código de un web-component. Las páginas y los layouts son manejados como widgets. Puedes leer más acerca de este tipo de bundle en la sección de ",

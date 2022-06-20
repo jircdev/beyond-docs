@@ -62,7 +62,7 @@ export const backend = {
     module1: {
         title: "module.json",
         "language": "json",
-        'tpl': tpl1
+        "tpl": tpl1
     },
     module2: {
         title: "start.ts",
