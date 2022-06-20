@@ -1,19 +1,19 @@
 {
   "en": {
     "developmentServer": {
-      "h1": "Development Server",
+      "h1#devServer": "Development Server",
       "p1": "The BeyondJS development server starts when the ‘beyond’ command runs, and it can read some settings from the ‘beyond.json’ file, but it is not required to create it. BeyondJS's purpose is that the developer works using the Dashboard, which manages most of the usual configurations and usually has to do with being able to launch a project.",
       "p2": {
         "t1": "When the development server comes up, the Dashboard is accessed from",
-        "e1": {
-          "href": "http://localhost:4000",
-          "label": "http://localhost:4000"
-        },
+        "l1": [
+          "http://localhost:4000",
+          "http://localhost:4000"
+        ],
         "t2": " and it generates and edits the ‘beyond.json’ file whether a project is created, edited, or delete."
       }
     },
     "properties": {
-      "h1": "Properties",
+      "h2#properties": "Properties",
       "items": [
         {
           "l1": [

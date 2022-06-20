@@ -1,7 +1,7 @@
 {
     "en": {
         "bundles": {
-            "h1": "Bundles",
+            "h1#bundles": "Bundles",
             "p1": "Imagine that you need to make a registration form interface. The registration form could be divided into two layers:",
             "items": [
                 "HTML and screen styles based user interface.",
@@ -14,13 +14,13 @@
         },
 
         "transversalBundles": {
-            "h1": "Transversal Bundles",
+            "h2#transversalBundles": "Transversal Bundles",
             "p1": "Transversal bundles are defined in the same way as other bundles, but they have a peculiarity that offers productive advantages: the code of a transversal bundle is compiled into a single file.",
             "p2": "BeyondJS locates, integrates and unifies them into a single bundle or final file. The start type bundles are a clear example of this, they allow the programmer to define the logic desired to be executed at the start of the application."
         },
 
         "types": {
-            "h1": "Types",
+            "h2#types": "Types",
             "items": [
                 {
                     "t1": "<strong>Widget</strong>: They contain the code of a web-component. Pages and layouts are handled as widgets. You can read more about this type of bundle in the ",

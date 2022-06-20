@@ -10,20 +10,21 @@
             ]
         },
         "servidor": {
-            "h1#Api-Sevidor-Bundle-bridge": "API Server Bundle bridge",
+            "h2#apiServerBundleBridge": "API Server",
+            "h3#apiServerBundleBridge": "Bundle bridge",
             "p1": {
                 "t1": "Server APIs in BeyondJS represent functions that execute code on the server and can be consumed from client-code. They handle the logic for connecting to a backend and returning data. It's achieved simply by creating a ",
                 "l1": [
                     "/bundles#bridge",
                     "Bundle Bridge"
-                ],
-                "q1": {
-                    "s1": "To execute backend-code in BeyondJS, is necessary to have the needed distributions configured. If the project is created from the web-backend project type, then is already configured. You can find more information in the ",
-                    "l1": [
-                        "/docs/distributions",
-                        "La seccion de distribuciones"
-                    ]
-                }
+                ]
+            },
+            "q1": {
+                "s1": "To execute backend-code in BeyondJS, is necessary to have the needed distributions configured. If the project is created from the web-backend project type, then is already configured. You can find more information in the ",
+                "l1": [
+                    "/docs/distributions",
+                    "La seccion de distribuciones"
+                ]
             },
             "p2": {
                 "t1": "Like any module or bundle, it can be managed from the ",
@@ -45,18 +46,18 @@
                 ],
                 "t2": ". The code for the bundle start is as follows:"
             },
-            "q1": {
+            "q2": {
                 "s1": "In the ",
                 "l1": [
                     "/tutorial/web",
                     "Web Tutorial"
                 ],
-                "s2": "vailable, an implemented bridge allows you to see the operation of the BeyondJS backend APIs in action."
+                "s2": "vailable, an implemented bridge allows you to see the operation of the BeyondJS <strong>backend APIs</strong> in action."
             }
         },
         "comments": {
-            "h1#Magical-comments": "Magical comments",
-            "h2#bundle-backend": "bundle backend",
+            "h3#magicalComments": "Magical comments",
+            "h2#bundleBackend": "bundle backend",
             "p1": "Backend bundles represent JavaScript code executed on the server and used only by modules that also run on the server. In other words, they are like any typical NodeJS service, with the exception that in a development environment are executed through a BEE or BeyondJS process, which increases productivity by enabling it to work with <strong>HMR</strong> in an automated way and without configuration"
         }
     }

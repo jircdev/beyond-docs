@@ -1,7 +1,7 @@
 {
     "es": {
         "code": {
-            "h1#Backend-code": "Código Backend",
+            "h1#backendCode": "Código Backend",
             "p1": "BeyondJS disponibiliza un entorno seguro y eficiente pare crear código backend, bien sea que se requiera para trabajar con servicios independientes, encargados de tareas específicas o que busque implementar una conexión de un proyecto cliente con una api backend.",
             "p2": "Para efectos de BeyondJS, podemos clasificar estas estructuras de código en dos tipos:",
             "items": [
@@ -11,20 +11,21 @@
         },
 
         "servidor": {
-            "h1#Api-Sevidor-Bundle-bridge": "Api Servidor Bundle bridge",
+            "h2#apiServerBundleBridge": "Api Servidor",
+            "h3#apiServerBundleBridge": "Bundle bridge",
             "p1": {
                 "t1": "Las APIs servidor en BeyondJS representan funciones que ejecutan código en el servidor y pueden ser consumidas desde el código cliente. Manejan la lógica para conectarse a un backend y retornar data. Esto se lógra de forma simple, con la creación de un ",
                 "l1": [
                     "/bundles#bridge",
                     "Bundle Bridge"
-                ],
-                "q1": {
-                    "s1": "Para que se pueda ejecutar código Backend en BeyondJS es necesario tener configuradas las distribuciones necesarias. Si el proyecto se creo a partir del tipo de proyecto web-backend, la misma ya se encuentra configurada. Puedes encontrar más información en ",
-                    "l1": [
-                        "/docs/distributions",
-                        "La seccion de distribuciones"
-                    ]
-                }
+                ]
+            },
+            "q1": {
+                "s1": "Para que se pueda ejecutar código Backend en BeyondJS es necesario tener configuradas las distribuciones necesarias. Si el proyecto se creo a partir del tipo de proyecto web-backend, la misma ya se encuentra configurada. Puedes encontrar más información en ",
+                "l1": [
+                    "/docs/distributions",
+                    "La seccion de distribuciones"
+                ]
             },
             "p2": {
                 "t1": "Al igual que cualquier módulo o bundle, este puede ser gestionado desde el ",
@@ -46,7 +47,7 @@
                 ],
                 "t2": ". El código del bundle start es el siguiente:"
             },
-            "q1": {
+            "q2": {
                 "s1": "En el ",
                 "l1": [
                     "/tutorial/web",
@@ -57,8 +58,8 @@
         },
 
         "comments": {
-            "h1#Magical-comments": "Comentarios mágicos",
-            "h2#bundle-backend": "bundle backend",
+            "h3#magicalComments": "Comentarios mágicos",
+            "h2#bundleBackend": "bundle backend",
             "p1": "Los bundles backend representan código javascript que es ejecutado en el servidor y sólo pueden ser utilizados por módulos que tambien funcionen en el servidor. Dicho en otras palabras, representan cualquier servicio típico de NodeJS, con la salvedad de que, en entorno de desarrollo, son ejecutados por medio de un BEE o proceso BeyondJS lo cual aumenta la productividad al poder trabajar con <strong>HMR</strong> de forma automatizada y sin configuración."
         }
     }
