@@ -4,7 +4,6 @@ import {module} from "beyond_context";
 import {tpls} from "../templates";
 
 export /*bundle*/ function TutorialFirstModule() {
-
     return (
         <>
             <Document tpls={tpls.module} moduleId={module.resource} textId="firstModule"/>
