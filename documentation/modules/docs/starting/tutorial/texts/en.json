@@ -25,6 +25,7 @@
     "starting": {
       "h2#starting": "Starting",
       "p1": "The first thing to do is create the project, for this, we will use the bundle @beyond-js/create-project. It is responsible for installing BeyondJS locally and generating the initial structure of our project.",
+      "c1": "npx",
       "q1": {
         "s1": "BeyondJS, is developed to work as a global dependency and run multiple projects simultaneously. Learn more about it ",
         "l1": [
@@ -150,12 +151,19 @@
     },
     "backendInitialization": {
       "h2": "Backend Initialization",
-      "p1": "BeyondJS provides the @beyond-js/backend library to create the of backend code. This library is optional to avoid its unnecessary inclusion in those projects that do not require it.",
-      "p2": "For starters, it is necessary to initialize the backend, for which it is necessary first to create a start bundle that launches it. For this, we create a start folder, and inside we add a module.json file with the following structure.",
-      "c1": "module1",
-      "p3": "We proceed to create a file start.ts and add the code to initialize the backend.",
+      "q1": "BeyondJS provides the @beyond-js/backend library to create the of backend code. This library is optional to avoid its unnecessary inclusion in those projects that do not require it.",
+      "p1": "The project comes with a `start-backend` module that contains a bundle of type `start` that is responsible for initializing the Backend through the following code:",
       "c2": "module2",
+      "p2": {
+        "s1": "The initialization of the backend is necessary for executing the ",
+        "l1": [
+          "/docs/bee",
+          "BEE"
+        ],
+        "s2": " that manages the JavaScript code on the server-side of our project."
+      },
       "p4": "NOTE: Bridges are a central and very powerful feature in Beyond and are only briefly shown in this tutorial. If you want to know more and understand how they work, go to the section on bridges.",
+      "h3": "Platforms",
       "p5": {
         "s1": "If you want to know more about managing bundles and modules, you can go to the ",
         "l1": [

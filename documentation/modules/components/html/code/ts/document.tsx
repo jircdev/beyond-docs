@@ -8,10 +8,11 @@ import {NextLinks} from "@beyond/docs/components/next-links/code";
 export /* bundle */ function Document({moduleId, tpls, textId, nextLinks}) {
     const [ready, texts] = useTexts(moduleId);
     if (!ready) return <Loading/>;
-
+    const textsUsed = textId ? texts[textId] : texts;
+    console.log(120, tpls)
     return (
         <DocsContext.Provider value={{texts, ready, tpls}}>
-            <Render content={texts[textId]} tpls={tpls}/>
+            <Render content={textsUsed} tpls={tpls}/>
             {nextLinks && <NextLinks items={nextLinks}/>}
         </DocsContext.Provider>
     );

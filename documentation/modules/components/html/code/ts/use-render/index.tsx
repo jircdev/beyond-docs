@@ -31,6 +31,7 @@ export function useRender(content: object, tpls = {}) {
     const analize = (item, data, output, id) => {
         const value = data[item];
         // validacion items
+        console.log(1, item, data, output, id)
 
         const itemId = `${item}.${id}`;
         if (item.includes("items") && item.substring(0, 5) === "items") {

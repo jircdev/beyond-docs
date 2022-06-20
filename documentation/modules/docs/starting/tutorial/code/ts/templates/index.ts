@@ -5,8 +5,10 @@ import {bridgeCode} from "./bridge";
 import {PageCodeStarted} from "./page-code-started";
 import {connection} from "./backend";
 import {routing} from "./routing";
+import {starting} from "./starting";
 
 export const tpls = {
+    starting: starting,
     module: {
         page: {title: "page.tsx", tpl: PageCodeStarted},
         styles: {title: "styles.scss", language: "css", tpl: pageStyles},

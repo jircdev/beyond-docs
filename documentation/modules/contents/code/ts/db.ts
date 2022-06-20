@@ -3,7 +3,7 @@ import {Error404} from "./views/error-404";
 
 /*starting*/
 import {Intro} from "./starting/intro";
-import {QuickStart} from "./starting/quick-start";
+import {QuickStart} from "@beyond/docs/docs/starting/quick-start/code";
 import {
     TutorialIntro,
     TutorialBridge,

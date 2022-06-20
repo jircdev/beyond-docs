@@ -4,7 +4,7 @@ import {GlobalInstalation} from "./global-instalation";
 import {NextLinks} from "@beyond/docs/components/next-links/code";
 import {Prerequisites} from "./prerequisites";
 
-export function QuickStart() {
+export function _QuickStart() {
     return (
         <>
             <h1>Comienzo rápido</h1>

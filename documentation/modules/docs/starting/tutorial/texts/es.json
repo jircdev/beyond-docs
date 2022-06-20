@@ -32,6 +32,7 @@
           "aqui"
         ]
       },
+      "c1": "npx",
       "p3": "En el comando anterior, se solicitó crear un proyecto de tipo web con backend y se le agregó como scope <strong>testing</strong> y como nombre <strong>login</strong>.",
       "q2": {
         "s1": "El scope y el nombre, son datos que permiten identificar el proyecto y que lo dejan listo para ser publicado como paquete npm o para importarlo desde otro proyecto. Estas configuraciones pueden hacerse de forma manual, el dashboard sólo simplifica el proceso. Puedes ver la explicación de ello en ",
@@ -149,11 +150,18 @@
     "backendInitialization": {
       "h2": "Inicializacion del Backend",
       "q1": "BeyondJS provee la libreria @beyond-js/backend para la creación de código backend, esta libreria es opcional para evitar su inclusión innecesaria en aquellos proyectos que no la requieran.",
-      "p2": "Para empezar, es necesario inicializar el backend, para lo cual se requiere crear un bundle start que lo levante, para ello, creamos una carpeta `start` y adentro agregamos un archivo `module.json` con la siguiente estructura.",
-      "c1": "module1",
-      "p3": "Procedemos a crear un archivo `start.ts` y agregamos el códdigo para inicializar el backend.",
+      "p1": "El proyecto trae un módulo `start-backend` que contiene un bundle de tipo `start` que se encarga de la inicialización del Backend, por medio del siguiente código:",
       "c2": "module2",
-      "p4": "NOTA: Los bridges son un feature central y muy poderoso en BeyondJS y en este tutorial solo se muestran de forma superficial. Si quieres conocer más y entender cómo funcionan, dirígete a la sección de bridges.",
+      "p2": {
+        "s1": "La inicialización del backend es necesaria para que se ejecute el ",
+        "l1": [
+          "/docs/bee",
+          "BEE"
+        ],
+        "s2": " que gestiona el código javascript del lado servidor de nuestro proyecto."
+      },
+      "q4": "NOTA: Los `bridges` son un feature central y muy poderoso en <span class=\"inline\">BeyondJS</span> y en este tutorial solo se muestran de forma superficial. Si quieres conocer más y entender cómo funcionan, dirígete a la sección de bridges.",
+      "h3": "Plataformas",
       "q5": {
         "s1": "Si quieres conocer más acerca del manejo de bundles y módulos, puedes ir a la ",
         "l1": [
