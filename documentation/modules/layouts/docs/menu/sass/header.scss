@@ -38,7 +38,7 @@
       fill: var(--primary-accent)
     }
 
-    @include set-media('md-screen', false, 'min') {
+    @media(min-width: 764px) {
       display: none;
     }
   }

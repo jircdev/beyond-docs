@@ -6,7 +6,11 @@ import {module} from "beyond_context";
 export /*bundle*/ function ProjectDependencies() {
     return (
         <>
-           <h1>Dependencies</h1>
+            <Document
+
+                moduleId={module.resource} textId="dependencies"
+                nextLinks={["/docs/projects/dependencies"]}
+            />
         </>
     );
 }

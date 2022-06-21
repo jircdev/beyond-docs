@@ -6,9 +6,9 @@ import {module} from "beyond_context";
 export /*bundle*/ function ProjectJson() {
     return (
         <>
-            <Document textId="json"
-                      moduleId={module.resource} textId="deploy"
-                      nextLinks={[["Tutorial", "/docs/tutorial/bridge"]]}
+            <Document
+                moduleId={module.resource} textId="json"
+                nextLinks={["/docs/projects/create"]}
             />
         </>
     );

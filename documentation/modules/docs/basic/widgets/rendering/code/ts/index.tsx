@@ -20,8 +20,8 @@ export /*bundle*/ function RenderingPage() {
             <CSR/>
             <SR/>
             <NextLinks items={[
-                ['Renderización', '/docs/rendering'],
-                ['Widgets', '/docs/widgets'],
+                '/docs/rendering',
+                '/docs/widgets',
             ]}/>
 
         </DocsContext.Provider>

@@ -11,9 +11,7 @@ export /*bundle*/ function TutorialFirstModule() {
             <Document moduleId={module.resource}
                       textId="styles"
                       tpls={tpls.module}
-                      nextLinks={[
-                          ['Backend', '/docs/tutorial/backend'],
-                      ]}
+                      nextLinks={['/docs/tutorial/backend']}
             />
         </>
     )

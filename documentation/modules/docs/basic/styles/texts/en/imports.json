@@ -1,0 +1,22 @@
+{
+  "en": {
+    "importOfStyleFiles": {
+      "h1": [
+        "Styles",
+        "Import of style files"
+      ],
+      "h2": "Node Modules",
+      "p1": "If you need to include a style file of any library installed in node_modules, it can be imported in  non-relative way, from the module file in which it is required, using the ~ character followed by the bundle path in the node_modules folder.",
+      "p2": "Thus, if you want to work with bootstrap you could import it in the following way:",
+      "c1": "tpl1",
+      "p3": "Likewise, if it is required to import a specific file within the library, such as de_variables.scss, it can be imported directly:",
+      "c2": "tpl2"
+    },
+    "importingStylesFromABundle": {
+      "h2": "Importing styles from a bundle",
+      "p1": "The import of style modules is considered in BeyondJS as a non-relative import, thus following the same rules of importing an existing file in an npm library, but the included path, in this case, follows the naming structure of the modules. Modules made with the framework, which, as we have seen before, can be composed of @scope/name, where the scope is optional.",
+      "p2": "To exemplify it, let's imagine that there is a module called form, which includes a bundle code, which defines components of a form, and is required to import the styles from another module. In the module, a sass file is created that defines stylings for the labels, whose name is labels.scss. The import line would be:",
+      "c3": "tpl3"
+    }
+  }
+}

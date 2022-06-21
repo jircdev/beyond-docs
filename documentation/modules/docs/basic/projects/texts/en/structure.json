@@ -1,0 +1,45 @@
+{
+  "en": {
+    "structure": {
+      "h1": [
+        "Projects",
+        "Structure of a project"
+      ],
+      "p1": "`BeyondJS has a configurable architecture that allows for flexible project structures. However, when creating a project through the Dashboard or ´@beyond-js/create-project´, the initial structure is created as follows:\n",
+      "h4": "Structure",
+      "p2": "This command creates the following structure:",
+      "items1": [
+        {
+          "s1": "A ",
+          "l1": [
+            "docs/projects/json",
+            "project.json"
+          ],
+          "s2": " file, with the project settings."
+        },
+        {
+          "s1": "A ",
+          "l1": [
+            "/docs/dev-server",
+            "beyond.json "
+          ],
+          "s2": " file that allows you to manage configurations for the development server.\n."
+        },
+        {
+          "s1": "template/Carpeta con la estructura de la plantilla del proyecto. Esta carpeta aplica para los proyectos web y móvil. Puedes leer más en detalle sobre el sistema de plantillas",
+          "l1": [
+            "/docs/template-system",
+            "aqui"
+          ],
+          "s2": "."
+        }
+      ],
+      "p3": "\nLa estructura de carpetas puede variar y extenderse según las consideraciones del proyecto.",
+      "h2": "Gestión de directorios",
+      "p4": "BeyondJS sigue una estructura de directorios basada en mantener una semántica simple y concisa que permita al programador ubicarse a partir de los nombres de carpeta. Sin embargo, el programador puede tener un estandar de estructura que desee seguir, para lo cual se permite hacer cambios en la configuración de directorios.",
+      "p5": "La ubicación de los módulos de un proyecto, suele estar por convención en la carpeta modules, esto se define en el project.json, en la propiedad module",
+      "c1": "modules",
+      "p6": "Al igual que todas las propiedades configurativas de directorios. la propiedad module.path evalúa el valor recibido de forma relativa al directorio en donde se encuentra, dicho en otras palabras, la carpeta modules debe encontrarse, según el ejemplo a la misma altura que el archivo project.json, si esta propiedad se remueve, BeyondJS intentará encontrar los módulos en el directorio raíz del proyecto, el cúal corresponde a el lugar en donde se encuentra el module.json"
+    }
+  }
+}

@@ -1,146 +1,57 @@
 {
-    "en": {
-      "home": [
-        "/",
-        "HOME"
-      ],
-      "gettingStarted": {
-        "introduccion": [
-          "/docs/intro",
-          "Empezando"
-        ],
-        "quickStart": [
-          "/docs/quick-start",
-          "Inicio rápido"
-        ],
-        "walkthrough": [
-          "/docs/tutorial/web",
-          "Tutorial"
-        ],
-        "dashboard": [
-          "/docs/dashboard",
-          "Dashboard"
-        ]
-      },
-      "basicConcepts": {
-        "projects": {
-          "introduction": [
-            "/docs/projects/intro",
-            "Introducción"
-          ],
-          "createAProject": [
-            "/docs/projects/create",
-            "Crear un proyecto"
-          ],
-          "structure": [
-            "/docs/projects/structure",
-            "Estructura"
-          ],
-          "projectJson": [
-            "/docs/projects/json",
-            "project.json"
-          ],
-          "importAProject": [
-            "/docs/projects/import",
-            "Importar un proyecto"
-          ],
-          "dependencies": [
-            "/docs/projects/dependencies",
-            "Dependencias"
-          ]
-        },
-        "modules": {
-          "modulesInBeyond": [
-            "/docs/modules/introduction",
-            "Modulos en Beyond"
-          ],
-          "createAModule": [
-            "/docs/modules/create",
-            "Crear un módulo"
-          ],
-          "setting": [
-            "/docs/modules/json",
-            "Configuración"
-          ]
-        },
-        "bundles": [
-          "/docs/bundles",
-          "Bundles"
-        ],
-        "processor": [
-          "/docs/processors",
-          "Processors"
-        ],
-        "templateSystem": [
-          "/docs/template",
-          "Sistema de Plantillas"
-        ],
-        "widgets": [
-          "/docs/intro",
-          "Widgets"
-        ],
-        "routing": [
-          "/docs/routing",
-          "Enrutamiento"
-        ],
-        "stateHandling": [
-          "/docs/state/management",
-          "Manejo de Estados"
-        ],
-        "backendStyles": [
-          "/docs/intro",
-          "Backend Estilos"
-        ]
-      },
-      "fundamentals": {
-        "developmentServer": [
-          "/docs/dev-server",
-          "Servidor de desarrollo"
-        ],
-        "distributions": [
-          "/docs/distributions",
-          "Distribuciones"
-        ],
-        "hmrProcessors": [
-          "/docs/processors",
-          "Procesadores HMR"
-        ],
-        "bee": [
-          "/docs/bee",
-          "BEE"
-        ],
-        "ssr": [
-          "/docs/ssr",
-          "SSR"
-        ],
-        "multilanguage": [
-          "/docs/multilanguage",
-          "Multilenguaje"
-        ],
-        "glossary": [
-          "/docs/glossary",
-          "Glosario"
-        ]
-      },
-      "settings": {
-        "template": [
-          "/docs/template",
-          "Plantilla"
-        ]
-      },
-      "api": {
-        "uri": [
-          "/docs/api/uri",
-          "URI"
-        ],
-        "widgetObject": [
-          "/docs/api/BeyondWidget",
-          "Objecto widget"
-        ],
-        "iWidgetStore": [
-          "/docs/api/IWidgetStore",
-          "IWidgetStore"
-        ]
-      }
-    }
+  "es": {
+    "title": "Contenidos",
+    "/": "HOME",
+    "getting-start": "Empezando",
+    "fundamentals": "Fundamentos",
+    "configuration": "Configuración",
+    "projects": "Proyectos",
+    "modules": "Módulos",
+    "bundles": "Bundles",
+    "widgets": "Widgets",
+    "styles": "Estilos",
+    "api": "API",
+    "tutorial": "tutorial",
+    "/docs/tutorial/start": "Introducción",
+    "/docs/tutorial/first-module": "Primer módulo",
+    "/docs/tutorial/backend": "Backend",
+    "/docs/tutorial/bridge": "Bridge",
+    "/docs/tutorial/routing": "Enrutamiento",
+    "concepts": "Conceptos básicos",
+    "/docs/intro": "Introducción",
+    "/docs/quick-start": "Inicio rápido",
+    "/docs/dashboard": "Dashboard",
+    "/docs/projects/intro": "Introducción",
+    "/docs/projects/create": "Crear un proyecto",
+    "/docs/projects/structure": "Estructura",
+    "/docs/projects/json": "project.json",
+    "/docs/projects/import": "Importar un proyecto",
+    "/docs/projects/dependencies": "Dependencias",
+    "/docs/modules/introduction": "Modulos en Beyond",
+    "/docs/modules/create": "Crear un módulo",
+    "/docs/modules/json": "Configuración",
+    "/docs/bundles": "Bundles",
+    "/docs/processors": "Processors",
+    "/docs/template-system": "Sistema de Plantillas",
+    "/docs/widgets": "Widgets",
+    "/docs/routing": "Enrutamiento",
+    "/docs/state/management": "Manejo de Estados",
+    "/docs/backend": "Backend",
+    "/docs/styles/template": "Template",
+    "/docs/styles/modules": "Módulos",
+    "/docs/styles/themes": "Light & Dark theme",
+    "/docs/styles/imports": "Importación",
+    "/docs/dev-server": "Servidor de desarrollo",
+    "/docs/foundations/distributions": "Distribuciones",
+    "/docs/bee": "BEE",
+    "/docs/ssr": "SSR",
+    "/docs/multilanguage": "Multilenguaje",
+    "/docs/glossary": "Glosario",
+    "/docs/api/uri": "URI",
+    "/docs/foundations/hmr": "HMR",
+    "/docs/foundations/bee": "BEEs",
+    "/docs/api/BeyondWidget": "Objecto widget",
+    "/docs/api/IWidgetStore": "IWidgetStore"
   }
+}
+

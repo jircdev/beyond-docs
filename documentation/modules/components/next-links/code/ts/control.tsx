@@ -1,12 +1,16 @@
 import * as React from 'react';
 import {Link} from '@beyond/ui/link/code';
+import {useTexts} from "@beyond/docs/store/code";
 
-const Item = ({label, href}) => {
-    return <li><Link href={href}>{label}</Link></li>
+const Item = ({href, texts}) => {
+    return <li><Link href={href}>{texts[href]}</Link></li>
 }
 
 export /*bundle*/ function NextLinks({items}) {
-    const output = items.map(([label, href], i) => <Item key={`${label}.${i}`} href={href} label={label}/>);
+
+    const [ready, texts] = useTexts('@beyond/docs/layout/menu');
+    if (!ready) return null;
+    const output = items.map((href, i) => <Item texts={texts} key={`${href}.${i}`} href={href}/>);
     // items
     return (
         <div className="next__content link__content">

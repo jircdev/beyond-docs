@@ -27,14 +27,16 @@ export function List({items, className}: IProps) {
 }
 
 export function ParentItem({item}) {
+    const {texts} = useMenuContext();
     const onClick = (event) => {
         event.preventDefault();
         event.currentTarget.closest('li').classList.toggle('item--opened');
     }
+
     return (
         <li className="menu__item--parent">
             <section onClick={onClick}>
-                <a href=""><span>{item.label}</span></a>
+                <a href=""><span>{texts[item.id]}</span></a>
                 <AppIcon icon="chevronRight"/>
             </section>
             <List items={item.children} level={1}/>
@@ -44,7 +46,7 @@ export function ParentItem({item}) {
 
 
 export function MenuItem({item}) {
-    const {container, close} = useMenuContext();
+    const {container, close, texts} = useMenuContext();
     if (item.children) return <ParentItem item={item}/>;
 
     const onClick = event => {
@@ -60,10 +62,11 @@ export function MenuItem({item}) {
     }
 
     const cls = ``;
+    const link = `/docs/${item.id}`;
     return (
         <li className={cls}>
-            <a href={`/docs/${item.id}`} onClick={onClick}>
-                {item.label}
+            <a href={link} onClick={onClick}>
+                {texts[link]}
             </a>
         </li>
     )

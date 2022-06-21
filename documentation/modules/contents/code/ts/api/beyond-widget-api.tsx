@@ -4,7 +4,6 @@ import {BeyondName, ObjectProperty} from "@beyond/docs/components/html/code";
 import {Elink} from "@beyond/ui/link/code";
 
 
-
 export function BeyondWidgetApi() {
     return (
         <>
@@ -35,10 +34,7 @@ export function BeyondWidgetApi() {
                 </li>
             </ul>
 
-            <NextLinks items={[
-                ['Creación de widgets', '/docs/widgets/creation'],
-                ['Widgets de tipo Page', '/docs/widgets/page',]
-            ]}/>
+            <NextLinks items={['/docs/widgets/creation', '/docs/widgets/page']}/>
         </>
     )
 }

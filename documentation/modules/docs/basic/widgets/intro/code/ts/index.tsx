@@ -14,8 +14,8 @@ export /*bundle*/ function Widgets() {
             <Intro/>
             <ViewFrameworks/>
             <NextLinks items={[
-                ['Crear un Widget', '/docs/widgets/creation'],
-                ['Objeto Controller', '/docs/widgets/controller'],
+                '/docs/widgets/creation',
+                '/docs/widgets/controller',
             ]}/>
         </DocsContext.Provider>
     )

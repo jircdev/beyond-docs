@@ -1,0 +1,23 @@
+{
+  "es": {
+    "modules": {
+      "h1": [
+        "Estilos",
+        "En el módulo"
+      ],
+      "p1": {
+        "s1": "Para agregar estilos en un módulo/bundle creado, debe agregarse el ",
+        "e1": [
+          "/processors",
+          "procesador"
+        ],
+        "s2": " SASS."
+      },
+      "q2": "Si se usa el dashboard para la creación de proyectos, el procesador sass es incluido por defecto en los bundles de tipo code y widget de cualquier tipo.",
+      "p3": "La configuración estandar de un procesador sass es la siguiente: ",
+      "c1": "tpl1",
+      "p4": "En la configuración anterior, se está definiendo que en el módulo existe una carpeta sass, con ubicación relativa al archivo module.json y que todos los archivos de esta carpeta deben ser tomados en cuenta como archivos de estilo.",
+      "p5": "El bundle contenedor del procesador se encarga de insertar los estilos en el DOM cuando el elemento es renderizado, de esta forma, no es requerido hacer imports con semántica de JavaScript de archivos externos en nuestro código."
+    }
+  }
+}

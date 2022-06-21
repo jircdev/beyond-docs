@@ -8,6 +8,6 @@ export const Menu = [
     starting,
     basics,
     fundamentals,
-    config,
-    api
+    // config,
+    // api
 ]

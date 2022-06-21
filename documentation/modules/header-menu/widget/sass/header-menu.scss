@@ -10,11 +10,13 @@
   flex-shrink: 1;
   align-items: center;
   align-content: center;
-
   position: sticky;
   top: 0;
-
   background: var(--primary-surface);
+
+  &.home-header {
+
+  }
 
   .mobile__header {
     a {

@@ -2,8 +2,9 @@ import {Error404} from "./views/error-404";
 
 
 /*starting*/
-import {Intro} from "./starting/intro";
+import {DocsIntro} from "@beyond/docs/docs/starting/intro/code";
 import {QuickStart} from "@beyond/docs/docs/starting/quick-start/code";
+import {DevServer} from "@beyond/docs/docs/foundations/dev-server/code";
 import {
     TutorialIntro,
     TutorialBridge,
@@ -25,9 +26,9 @@ import {
 } from "@beyond/docs/docs/basic/projects/code";
 
 // modules
-import {ModuleIntro} from "./basic/modules/intro";
-import {ModuleConfig} from "./basic/modules/config";
-import {Bundles} from "./basic/modules/bundles";
+import {ModulesIntro, ModulesCreate, StylesModules, ModulesConfig} from "@beyond/docs/docs/basic/modules/code";
+import {Bundles} from "@beyond/docs/docs/basic/bundles/code";
+
 
 //widgets
 import {
@@ -41,31 +42,31 @@ import {
 import {RenderingPage} from "@beyond/docs/docs/basic/widgets/rendering/code";
 
 
-import {Backend} from "./basic/backend";
-import {FetchingDAtaPage} from "./basic/fetching";
-import {RoutingPage} from "./basic/routing";
+import {BackendPage} from "@beyond/docs/docs/basic/backend/code";
+import {RoutingPage} from "@beyond/docs/docs/basic/routing/code";
+
 import {DeploymentPage} from "./basic/deployment";
 //styles
-import {TemplatePage} from "./basic/template";
-import {StylesPage} from "./basic/styles";
-import {ThemesPage} from "./basic/styles/themes";
-import {StateManagement} from "./basic/state-management";
+import
+{
+    StylesImportsPage, StylesModulesPage,
+    StylesTemplatePage, StylesThemePage
+} from "@beyond/docs/docs/basic/styles/code";
+
+import {StateManagement} from "@beyond/docs/docs/basic/state/code";
 
 
-/*fundamentals*/
+// /*fundamentals*/
 
-import {BEE} from "./fundamentals/bee";
-import {HMR} from "./fundamentals/hmr";
-import {Processors} from "./fundamentals/processors";
-import {DevServer} from "./fundamentals/dev-server";
-
+import {Processors} from "@beyond/docs/docs/basic/processors/code";
+import {BEEPage} from "@beyond/docs/docs/foundations/bee/code";
+import {HMRPage} from "@beyond/docs/docs/foundations/hmr/code";
+import {DistributionsPage} from "@beyond/docs/docs/foundations/distributions/code";
 
 /*API*/
 import {APIURI} from "./api/uri";
 import {BeyondWidgetApi} from "./api/beyond-widget-api";
-import {ModulesCreate} from "./basic/modules/create";
-import {StylesImports} from "./basic/styles/imports";
-import {StylesModules} from "./basic/styles/tpl/modules";
+
 import {Glossary} from "./views/concepts/glossary/glossary";
 import {IWidgetStore} from "./api/i-widget-store";
 import {MultiLanguage} from "./fundamentals/multilanguage";
@@ -80,7 +81,7 @@ export const getContent = (contentId: string, sub: string | undefined = undefine
 
 
     const starting = {
-        intro: Intro,
+        intro: DocsIntro,
         'quick-start': QuickStart,
         dashboard: DashboardPage,
         tutorial: {
@@ -101,9 +102,9 @@ export const getContent = (contentId: string, sub: string | undefined = undefine
                 dependencies: ProjectDependencies,
             },
             modules: {
-                introduction: ModuleIntro,
+                introduction: ModulesIntro,
                 create: ModulesCreate,
-                json: ModuleConfig
+                json: ModulesConfig
             },
             bundles: Bundles,
             widgets: {
@@ -117,33 +118,33 @@ export const getContent = (contentId: string, sub: string | undefined = undefine
                 management: StateManagement
             },
             styles: {
-                template: StylesPage,
-                module: StylesModules,
-                imports: StylesImports,
-                themes: ThemesPage,
+                template: StylesTemplatePage,
+                modules: StylesModulesPage,
+                imports: StylesImportsPage,
+                themes: StylesThemePage,
             },
             routing: RoutingPage,
-
-            template: TemplatePage,
-            backend: Backend,
+            backend: BackendPage,
             rendering: RenderingPage,
-            deployment: DeploymentPage,
-
         }
     ;
     const foundations = {
-        bee: BEE,
-        hmr: HMR,
+
         processors: Processors,
         'dev-server': DevServer,
-        glossary: Glossary,
-        multilanguage: MultiLanguage,
+        // glossary: Glossary,
+        foundations: {
+            bee: BEEPage,
+            hmr: HMRPage,
+            distributions: DistributionsPage
+        }
+        // multilanguage: MultiLanguage,
     }
     const api = {
         api: {
             uri: APIURI,
             BeyondWidget: BeyondWidgetApi,
-            iWidgetStore: IWidgetStore
+            iWidgetStore: IWidgetStore,
         }
     }
     const contents = {
@@ -151,10 +152,9 @@ export const getContent = (contentId: string, sub: string | undefined = undefine
         ...basics,
         ...foundations,
         ...api,
-        fetching: FetchingDAtaPage,
+
         error404: Error404,
     };
-
 
     if (!contents.hasOwnProperty(contentId) || sub && !contents[contentId].hasOwnProperty(sub)) {
         return {id: contentId, control: contents.error404};

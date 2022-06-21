@@ -1,7 +1,6 @@
 import * as React from 'react';
 import {IconLogo} from "./icon";
-import {Pulse} from "./pulse";
-import {Notice} from "../../../../../header-menu/widget/ts/views/notice";
+
 import {HeaderContent} from "./header-content";
 import "@beyond/docs/header-menu/widget";
 import {HeaderImage} from "./header-image";
@@ -19,7 +18,7 @@ export function Header() {
                     <IconLogo/>
                 </div>
             </header>
-            <Pulse/>
+
         </>
     );
 }

@@ -1,0 +1,23 @@
+{
+  "en": {
+    "modules": {
+      "h1": [
+        "Styles",
+        "In the module"
+      ],
+      "p1": {
+        "s1": "To add styles to a created module/bundle, the SASS ",
+        "e1": [
+          "/processors",
+          "processor"
+        ],
+        "s2": " must be added."
+      },
+      "q2": "If the dashboard is used to create projects, the sass processor is included by default in the bundles of type code and widget of any type.",
+      "p3": "The standard sass processor configuration is as follows: ",
+      "c1": "tpl1",
+      "p4": "In the previous configuration, you can observe a definition where there is a sass folder in the module, with a location relative to the module.json file and that all the files in this folder must be taken into account as style files.",
+      "p5": "The container bundle of the processor is in charge of inserting the styles in the DOM when the element is rendered, by doing this it is not required to import semantic JavaScript from external files in our code."
+    }
+  }
+}

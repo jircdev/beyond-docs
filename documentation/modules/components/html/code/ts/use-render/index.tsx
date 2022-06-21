@@ -1,9 +1,9 @@
 import React from "react";
 import {BlockQuote, DocLinks, ListItem, CodeComponent} from "../control";
-import {Elink, Link} from "@beyond/ui/link/code";
 import {Controls} from "./controls";
 import {ModalImage} from "../modal-image";
 import {isString} from "@cloudinary/url-gen/internal/utils/dataStructureUtils";
+import {AppIcon} from "@beyond/docs/ui/icons/code";
 
 export function useRender(content: object, tpls = {}) {
 
@@ -17,9 +17,10 @@ export function useRender(content: object, tpls = {}) {
      * t = deprecated
      * i = img
      * c = code
+     * bi = BeyondIcon
      */
 
-    const regexp = /[q|h|p|l|e|t|i|c]{1}?\d{1}|items\d{0,1}|\d/;
+    const regexp = /[bi|q|h|p|l|e|t|i|c]{1}?\d{1}|items\d{0,1}|\d/;
 
     /**
      * @TODO: @julio: refactor and order
@@ -30,15 +31,20 @@ export function useRender(content: object, tpls = {}) {
      */
     const analize = (item, data, output, id) => {
 
+        const elementData = data[item];
         const itemId = `${item}.${id}`;
+        if (item.substring(0, 2) === 'bi') {
+            output.push(<AppIcon icon={elementData} key={itemId}/>);
+            return;
+        }
         if (item.includes("items") && item.substring(0, 5) === "items") {
             const Control = controls.items;
             let items = [];
             let children = [];
-            data[item].forEach((element, index) => {
+            elementData.forEach((element, index) => {
                 if (typeof element === "object") {
-                    element = check(element, []);
-                    items.push(<ListItem key={`element.sublist.${index}.${data[item].length}`} content={element}/>);
+                    element = check(element);
+                    items.push(<ListItem key={`element.sublist.${index}.${elementData.length}`} content={element}/>);
                     return;
                 }
                 items.push(<ListItem key={`${itemId}.${index}`} content={element}/>);
@@ -57,59 +63,62 @@ export function useRender(content: object, tpls = {}) {
          * Si es un objeto recursivo
          */
         if (!regexp.test(item)) {
-            check(data[item], output);
+
+            const data = check(elementData);
+            output = output.concat(data);
             return;
         }
 
         // blockQuote
         if (["q"].includes(item[0])) {
 
-            const quote = isString(data[item]) ? data[item] : check(data[item], []);
+            const quote = isString(elementData) ? elementData : check(elementData, []);
             output.push(<BlockQuote key={itemId}>{quote}</BlockQuote>);
             return;
         }
         if (["i"].includes(item[0])) {
-            const [src, alt] = data[item];
+            const [src, alt] = elementData;
             output.push(<ModalImage key={itemId} src={src} alt={alt}/>)
             return;
         }
         if (["c"].includes(item[0])) {
-            if (!tpls[data[item]]) {
-                throw new Error(`the template "${data[item]}" were not found on ${item}`);
+            if (!tpls[elementData]) {
+                throw new Error(`the template "${elementData}" were not found on ${item}`);
             }
-            output.push(<CodeComponent key={itemId} content={tpls[data[item]]}/>)
+            output.push(<CodeComponent key={itemId} content={tpls[elementData]}/>)
             return;
         }
         //links
         if (["e", "l"].includes(item[0])) {
             const attrs = {
                 key: `${id}${item}`,
-                item: data[item],
+                item: elementData,
             };
             if (item[0] === "e") attrs.external = true;
             output.push(<DocLinks {...attrs} />);
             return;
         }
 
-        if (item[0] === 'p' && typeof data[item] === 'object') {
+        if (item[0] === 'p' && typeof elementData === 'object') {
             const Control = controls[item[0]];
-            const elements = check(data[item], output);
+            const elements = check(elementData, output);
             output.push(
                 <Control key={`${id}${item}`} selector={item} content={elements}/>
             );
+            return;
 
         }
         if (item[0] === 'h') {
             const Control = controls[item[0]];
 
             output.push(
-                <Control key={`${id}${item}`} selector={item} content={data[item]}/>
+                <Control key={`${id}${item}`} selector={item} content={elementData}/>
             );
             return;
 
         }
-        if (typeof data[item] === "object") {
-            check(data[item], output, item);
+        if (typeof elementData === "object") {
+            check(elementData);
             return;
         }
         const Control = controls[item[0]];
@@ -127,6 +136,7 @@ export function useRender(content: object, tpls = {}) {
 
         i++;
         const keys = Object.keys(data);
+
         keys.forEach((item, i) => {
             analize(item, data, output, `${id}.${i}`)
         });

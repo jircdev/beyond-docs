@@ -1,0 +1,19 @@
+{
+  "es": {
+    "settings": {
+      "h1#settings": [
+        "Módulos",
+        "Configuración"
+      ],
+      "p1": "El archivo de configuración de módulos es el module.json",
+      "p2": "Las propiedades de configuración son:",
+      "items": [
+        "<strong>name</strong> <string>: Define el nombre del módulo, necesario para que los elementos puedan ser importados.",
+        "<strong>platforms</strong> <array>: Define las plataformas soportadas por el módulo. Los valores soportados son los identificadores de las plataformas existentes.",
+        "<strong>[bundle]</strong> <bundle>: Refiere al nombre identificador del tipo de bundle que se desea agregar en el módulo. Un módulo puede poseer uno o varios bundles. Cada bundle recibe un objeto de configuración con los procesadores que utiliza y alguna variación inherita del tipo de bundle agregado.",
+        "Bundles",
+        "Widgets"
+      ]
+    }
+  }
+}

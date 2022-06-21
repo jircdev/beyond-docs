@@ -10,7 +10,7 @@
   }
 
   .mobile__header {
-    padding: 0 1rem;
+
     display: flex;
     width: 100%;
     align-items: center;
@@ -41,11 +41,19 @@
     flex-grow: 0;
     flex-shrink: 0;
 
-    .mobile__header {
-      .beyond-element-image {
-        justify-content: center;
+    .container {
+
+      margin: 0;
+    }
+
+    &:not(.home--header) {
+      .mobile__header {
+        .beyond-element-image {
+          justify-content: center;
+        }
       }
     }
+
     .menu-list__container {
       position: absolute;
       width: 100%;

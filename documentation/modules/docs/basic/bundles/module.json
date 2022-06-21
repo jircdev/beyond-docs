@@ -1,0 +1,25 @@
+{
+  "name": "docs/basic/bundles",
+  "txt": {
+    "multilanguage": true,
+    "path": "/texts",
+    "files": [
+      "*"
+    ]
+  },
+  "code": {
+    "hmr": true,
+    "sass": {
+      "path": "/code/sass",
+      "files": [
+        "*"
+      ]
+    },
+    "ts": {
+      "path": "/code/ts",
+      "files": [
+        "*"
+      ]
+    }
+  }
+}

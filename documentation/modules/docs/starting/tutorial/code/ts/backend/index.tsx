@@ -11,7 +11,7 @@ export /*bundle*/ function TutorialBackend() {
                 moduleId={module.resource}
                 textId="backendInitialization"
                 tpls={tpls.backend}
-                nextLinks={[["Bridge", "/docs/tutorial/bridge"]]}
+                nextLinks={["/docs/tutorial/bridge"]}
             />
         </>
     );

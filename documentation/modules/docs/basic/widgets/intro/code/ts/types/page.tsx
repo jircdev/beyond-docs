@@ -72,8 +72,8 @@ export /*bundle*/ function PageWidget() {
                 implementación de cada framework o herramienta.
             </div>
             <NextLinks items={[
-                ['Layouts', '/docs/widgets/layouts'],
-                ['Enrutamiento', '/docs/routing']
+                '/docs/widgets/layouts',
+                '/docs/routing',
             ]}/>
         </>
     )

@@ -14,8 +14,8 @@ export /*bundle*/ function TutorialIntro() {
                 textId="starting"
                 tpls={tpls.starting}
                 nextLinks={[
-                    ["First Module", "/docs/tutorial/first-module"],
-                    ["Backend", "/docs/tutorial/backend"],
+                    "/docs/tutorial/first-module",
+                    "/docs/tutorial/backend",
                 ]}
             />
         </>

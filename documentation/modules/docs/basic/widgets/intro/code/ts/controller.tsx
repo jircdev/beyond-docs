@@ -97,8 +97,8 @@ export /*bundle*/ function WidgetController() {
             </ul>
 
             <NextLinks items={[
-                ['Creación de widgets', '/docs/widgets/creation'],
-                ['Widgets de tipo Page', '/docs/widgets/page',]
+                '/docs/widgets/creation',
+                '/docs/widgets/page',
             ]}/>
         </>
     )

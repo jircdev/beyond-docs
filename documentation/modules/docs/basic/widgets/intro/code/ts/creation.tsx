@@ -83,8 +83,8 @@ export /*bundle*/ function WidgetCreation() {
                 archivos son generados y módificados por el servicio de desarrollo.
             </p>
             <NextLinks items={[
-                ['Widget Page', '/docs/widgets/page'],
-                ['Widget Layout', '/docs/widgets/layout'],
+                '/docs/widgets/page',
+                '/docs/widgets/layout',
             ]}/>
         </>
     )

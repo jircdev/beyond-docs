@@ -68,10 +68,7 @@ export function DocLinks({item: [href, label], external}) {
 }
 
 export function BlockQuote({children}) {
-    console.log(33, children)
-    return (
-        <div className="block__note">{children}</div>
-    )
+    return (<div className="block__note">{children}</div>)
 }
 
 /**
@@ -93,6 +90,5 @@ export function CodeComponent({content}) {
 
     const {title, language = 'typescript', tpl} = content;
     const Control = title ? CodeBox : Code;
-    console.log(20, content)
     return <Control title={title} language={language}>{tpl}</Control>
 }

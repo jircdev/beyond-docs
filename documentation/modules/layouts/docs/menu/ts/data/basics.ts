@@ -31,7 +31,7 @@ const widgets = [
 
 const general = structureItems([
     ['projects', 'Proyectos', structureItems(projects)],
-    [undefined, 'Módulos', structureItems(modules)],
+    ['modules', 'Módulos', structureItems(modules)],
     ['bundles', 'Bundles'],
     ['processors', 'Processors'],
     ['template', 'Sistema de Plantillas'],

@@ -5,12 +5,12 @@ export const fundamentals = {
     label: 'Fundamentos',
     children: structureItems([
         ['dev-server', "Servidor de desarrollo"],
-        ['distributions', 'Distribuciones'],
-        ["processors", "Procesadores"],
-        ['hmr', 'HMR'],
-        ['bee', 'BEE'],
-        ['ssr', 'SSR'],
-        ['multilanguage', 'Multilenguaje'],
-        ['glossary', 'Glosario']
+        ['foundations/distributions', 'Distribuciones'],
+
+        ['foundations/hmr', 'HMR'],
+        ['foundations/bee', 'BEE'],
+
+        // ['multilanguage', 'Multilenguaje'],
+        // ['glossary', 'Glosario']
     ])
 };

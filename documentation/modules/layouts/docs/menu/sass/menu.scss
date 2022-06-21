@@ -8,9 +8,11 @@ aside.docs__menu {
   padding-bottom: 30px;
   position: sticky;
   top: 50px;
-  max-height: 90vh;
-  overflow-y: scroll;
-  height: calc(100vh - 100px);
+  overflow-y: auto;
+  @media (min-width: 765px) {
+    height: calc(100vh - 100px);
+    max-height: 90vh;
+  }
 
   @include set-media(tablet, false, 'max') {
     padding: 15px;

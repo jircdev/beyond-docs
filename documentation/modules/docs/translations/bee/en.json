@@ -1,0 +1,47 @@
+{
+  "en": {
+    "distributions": {
+      "h1#distributions": "Distributions",
+      "p1": "Distributions represent the execution environment of a project. It's necessary to set up a distribution for each environment you want to work in. BeyondJS creates a <strong>Beyond Execution Environment (BEE)</strong> for each distribution being used. It will be explained later what exactly is a BEE and the offered advantages of its use."
+    },
+    "node": {
+      "h2#node": "Node",
+      "p1": {
+        "t1": "BeyondJS allows for scalable and efficient projects with ",
+        "l1": [
+          "https://nodejs.org/",
+          "NodeJS"
+        ],
+        "t2": ", built directly with typescript and seeking to improve the development experience by integrating HMR."
+      },
+      "p2": "To work with Node, you need to create a Node-type distribution. From there, BeyondJS will take care of raising the execution environment (BEE) and making available all the project modules configured for the platforms that handle Node."
+    },
+    "distribution": {
+      "h3#distribution": "Distribution",
+      "p1": "The configuration of Node modules in BeyondJS, is done through distributions. The developer sets up a distribution.",
+      "p2": "As explained before in this documentation, a module in BeyondJS is a bundle container, where one or more bundles can exist. Each of these bundles contains a set of internal modules. When the BeyondJS project uses the BEE (Beyond Execution Environment), which is explained later, it optimizes development times and offers better results in the experience."
+    },
+    "bee": {
+      "h2#bee": "BEE (Beyond Execution Environment",
+      "p1": "BEEs are processes managed by BeyondJS. They behave like a Node service, with the distinctive characteristic of being handled by the main Beyond service. The beyond service analyzes, reviews, and compiles the changes in real-time to make a new version of the bundles available in memory with the code changes applied through HMR, providing the opportunity to have access to updated code capabilities without the need to restart the node process.",
+      "p2": {
+        "t1": "The real-time update in the Node process offers runtime advantages because it avoids carrying out all the load at the resource time level, which implies stopping the entire process and starting it again. This can also apply to values in memory or connections to databases, to mention some examples. BeyondJS detects changes at an internal file or ",
+        "l1": [
+          "/docs/modules#internal-modules",
+          "Module"
+        ],
+        "t2": ", updates changes, performs a fresh build of the bundle on the fly, and makes the new version available for consumption."
+      },
+      "p3": "<strong>The operating flow of the Bee looks like the description as follows:</strong>",
+      "items": [
+        "Beyond picks up the service.",
+        "A revision of the bundle dependency tree is performed (note that it is at the level of bundles and not internal modules).",
+        "The processed code loads into the memory and whatchers are added to be able to detect changes.",
+        "If there is a change in a file, this is detected, and that code segment is replaced."
+      ],
+      "q1": {
+        "s1": "Dynamic imports are not loaded when the BEE picks up, but are requested on demand."
+      }
+    }
+  }
+}

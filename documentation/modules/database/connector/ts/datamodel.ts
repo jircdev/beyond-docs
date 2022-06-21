@@ -38,7 +38,7 @@ class DataModel {
         this.#name = name;
         this.#definition = definition;
         this.init();
-        console.log(0.5, 'instance', this.id);
+
     }
 
 
