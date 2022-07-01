@@ -12,17 +12,6 @@
       "es"
     ]
   },
-  "libraries": {
-    "imports": [
-      "@beyond-js/kernel",
-      "@beyond-js/widgets",
-      "@beyond-js/react-widgets",
-      "@beyond-js/vue-widgets",
-      "@beyond-js/svelte-widgets",
-      "@beyond-js/backend",
-      "@testing/message"
-    ]
-  },
   "params": {},
   "modules": {
     "path": "./modules",
@@ -36,21 +25,40 @@
         "environment": "development",
         "port": 3500,
         "backend": "backend",
-        "default": true
+        "imports": {
+          "@beyond/ui": "web",
+          "@beyond-js/kernel": "web",
+          "@beyond-js/widgets": "web",
+          "@beyond-js/react-widgets": "web",
+          "@beyond-js/svelte-widgets": "web",
+          "@beyond-js/backend": "web",
+          "@beyond-js/ssr": "web"
+        }
       },
       {
         "name": "backend",
         "platform": "backend",
-        "environment": "development",
-        "port": 4600
+        "port": 4600,
+        "environment": "development"
       },
       {
         "name": "web-tsc",
         "platform": "web",
         "environment": "development",
-        "port": 4700,
-        "ts": true
+        "ts": {
+          "compiler": "tsc"
+        }
       }
+    ]
+  },
+  "libraries": {
+    "imports": [
+      "@beyond/ui",
+      "@beyond-js/kernel",
+      "@beyond-js/backend",
+      "@beyond-js/widgets",
+      "@beyond-js/react-widgets",
+      "@beyond-js/svelte-widgets"
     ]
   },
   "static": {
