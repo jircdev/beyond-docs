@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {BeyondIconButton} from '@beyond/ui/icons/code';
+
 
 interface IProps {
     properties: any,

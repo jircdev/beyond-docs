@@ -5,8 +5,6 @@
   "title": "Beyond Docs",
   "description": "Beyond documentation site",
   "template": "template/template.json",
-  "backend": {
-  },
   "languages": {
     "default": "en",
     "supported": [
@@ -14,68 +12,52 @@
       "es"
     ]
   },
-  "params": {
-    "logs": "./logs",
-    "backend": {
-      "test1": "test2"
-    },
-    "web": {
-      "test2": "test2"
-    }
+  "libraries": {
+    "imports": [
+      "@beyond-js/kernel",
+      "@beyond-js/widgets",
+      "@beyond-js/react-widgets",
+      "@beyond-js/vue-widgets",
+      "@beyond-js/svelte-widgets",
+      "@beyond-js/backend",
+      "@testing/message"
+    ]
   },
+  "params": {},
   "modules": {
-    "path": "./modules"
+    "path": "./modules",
+    "externals": {}
   },
   "deployment": {
     "distributions": [
       {
         "name": "web",
         "platform": "web",
-        "port": 3500,
-        "default": true,
         "environment": "development",
+        "port": 3500,
         "backend": "backend",
-        "imports": {
-          "@beyond/ui": "web",
-          "@beyond-js/kernel": "web",
-          "@beyond-js/widgets": "web",
-          "@beyond-js/react-widgets": "web",
-          "@beyond-js/svelte-widgets": "web",
-          "@beyond-js/backend": "web",
-          "@beyond-js/ssr": "web"
-        }
+        "default": true
       },
       {
         "name": "backend",
         "platform": "backend",
-        "port": 4600,
-        "environment": "development"
+        "environment": "development",
+        "port": 4600
       },
       {
         "name": "web-tsc",
         "platform": "web",
-        "port": 4700,
         "environment": "development",
-        "ts": {
-          "compiler": "tsc"
-        }
+        "port": 4700,
+        "ts": true
       }
-    ]
-  },
-  "libraries": {
-    "imports": [
-      "@beyond/ui",
-      "@beyond-js/kernel",
-      "@beyond-js/backend",
-      "@beyond-js/widgets",
-      "@beyond-js/react-widgets",
-      "@beyond-js/svelte-widgets"
     ]
   },
   "static": {
     "includes": [
       "./images",
-      "favicon.png"
+      "favicon.png",
+      "./static"
     ]
   }
 }

@@ -1,6 +1,6 @@
 import * as React from 'react';
-import {Link} from "@beyond/ui/link/code";
-import {Code} from "@beyond/docs/code/code";
+import {Link} from "@beyond/ui/link";
+import {Code} from "@beyond/docs/code";
 
 const tplConfig = `
 "application": {

@@ -1,7 +1,7 @@
 import * as React from 'react';
-import {Elink, Link} from "@beyond/ui/link/code";
-import {useDocsContext} from "@beyond/docs/store/code";
-import {CHtml, List} from "@beyond/docs/components/html/code";
+import {Elink, Link}from "@beyond/ui/link";
+import {useDocsContext} from "@beyond/docs/store";
+import {CHtml, List} from "@beyond/docs/components/html";
 
 export function SSR() {
     const {texts: {ssr: {title, p1, p2, p3, p4, items}}} = useDocsContext();

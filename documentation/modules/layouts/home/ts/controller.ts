@@ -1,4 +1,4 @@
-import {ReactWidgetController} from '@beyond-js/react-widgets/controllers/ts';
+import {ReactWidgetController} from '@beyond-js/react-widgets/controllers';
 import Layout from "./layout";
 
 export /*bundle*/

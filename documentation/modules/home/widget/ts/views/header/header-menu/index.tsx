@@ -1,8 +1,8 @@
 import * as React from 'react';
-import {BeyondImage} from "@beyond/ui/image/code";
+import {BeyondImage} from "@beyond/ui/image";
 import {Hamburger} from "../menu/hamburger";
-import {ThemeToggleButton} from "@beyond/docs/components/theme-button/code";
-import {Link} from "@beyond/ui/link/code";
+import {ThemeToggleButton} from "@beyond/docs/components/theme-button";
+import {Link} from "@beyond/ui/link";
 import {LanguageAction} from "./language-action";
 
 export function TopHeader() {

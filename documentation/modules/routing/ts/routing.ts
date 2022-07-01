@@ -1,4 +1,4 @@
-import {routing} from "@beyond-js/kernel/routing/ts";
+import {routing} from "@beyond-js/kernel/routing";
 
 
 const data = new Map();

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {Svg} from "./svg";
-import {widgets} from '@beyond-js/widgets/render/ts';
+import {widgets} from '@beyond-js/widgets/render';
 
 const key = '__beyond-mode';
 

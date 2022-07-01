@@ -1,5 +1,5 @@
 import * as React from "react";
-import {hmr, ContentsPage} from "@beyond/docs/contents-data/code";
+import {hmr, ContentsPage} from "@beyond/docs/contents-data.code";
 
 export function Page({uri, component}): JSX.Element {
     const propsContent = uri.vars.get('content');

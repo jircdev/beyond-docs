@@ -37,7 +37,7 @@
     &.three-columns {
       grid-template-columns: 1fr 1fr 1fr;
     }
-    margin: 2rem auto;
+
   }
 
   @include set-media('tablet', false, 'max') {

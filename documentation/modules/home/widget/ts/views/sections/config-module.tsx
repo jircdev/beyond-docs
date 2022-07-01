@@ -1,6 +1,6 @@
 import * as React from 'react';
-import {CodeBox} from "@beyond/docs/code/code";
-import {Link} from '@beyond/ui/link/code';
+import {CodeBox} from "@beyond/docs/code";
+import {Link} from '@beyond/ui/link';
 import {useHomeContext} from "../context";
 
 

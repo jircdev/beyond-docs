@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-import {Elink, Link} from "@beyond/ui/link/code";
-import {useDocsContext} from "@beyond/docs/store/code";
-import {List} from "@beyond/docs/components/html/code";
+import {Elink, Link}from "@beyond/ui/link";
+import {useDocsContext} from "@beyond/docs/store";
+import {List} from "@beyond/docs/components/html";
 
 export function RenderingIntro() {
     const {texts: {intro: {h1, p1, p2, p3, items}}} = useDocsContext();

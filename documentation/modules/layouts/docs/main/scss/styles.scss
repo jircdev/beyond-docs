@@ -7,7 +7,7 @@
 
 .docs-page {
 
-
+  margin-top: 60px;
   @include mixins.set-media('small-screen', false) {
     display: grid;
     grid-template-columns: 200px 1fr;

@@ -2,17 +2,17 @@ import {Error404} from "./views/error-404";
 
 
 /*starting*/
-import {DocsIntro} from "@beyond/docs/docs/starting/intro/code";
-import {QuickStart} from "@beyond/docs/docs/starting/quick-start/code";
-import {DevServer} from "@beyond/docs/docs/foundations/dev-server/code";
+import {DocsIntro} from "@beyond/docs/docs/starting/intro.code";
+import {QuickStart} from "@beyond/docs/docs/starting/quick-start.code";
+import {DevServer} from "@beyond/docs/docs/foundations/dev-server.code";
 import {
     TutorialIntro,
     TutorialBridge,
     TutorialBackend,
     TutorialFirstModule,
     TutorialRouting
-} from "@beyond/docs/docs/starting/tutorial/code";
-import {DashboardPage} from "@beyond/docs/docs/starting/dashboard/code";
+} from "@beyond/docs/docs/starting/tutorial.code";
+import {DashboardPage} from "@beyond/docs/docs/starting/dashboard.code";
 
 /*basic*/
 //projects
@@ -23,27 +23,28 @@ import {
     ProjectImports,
     ProjectStructure,
     ProjectDependencies
-} from "@beyond/docs/docs/basic/projects/code";
+} from "@beyond/docs/docs/basic/projects.code";
 
 // modules
-import {ModulesIntro, ModulesCreate, StylesModules, ModulesConfig} from "@beyond/docs/docs/basic/modules/code";
-import {Bundles} from "@beyond/docs/docs/basic/bundles/code";
+import {ModulesIntro, ModulesCreate, StylesModules, ModulesConfig} from "@beyond/docs/docs/basic/modules.code";
+import {Bundles} from "@beyond/docs/docs/basic/bundles.code";
 
 
 //widgets
 import {
-    LayoutWidget,
-    WidgetCreation,
-    PageWidget,
+
+    WidgetsDefinition,
+    WidgetLayout,
+    WidgetPage,
     Widgets,
     WidgetController
-} from "@beyond/docs/docs/basic/widgets/intro/code";
+} from "@beyond/docs/docs/basic/widgets/intro.code";
 
-import {RenderingPage} from "@beyond/docs/docs/basic/widgets/rendering/code";
+import {WidgetsRendering} from "@beyond/docs/docs/basic/widgets/rendering.code";
 
 
-import {BackendPage} from "@beyond/docs/docs/basic/backend/code";
-import {RoutingPage} from "@beyond/docs/docs/basic/routing/code";
+import {BackendPage} from "@beyond/docs/docs/basic/backend.code";
+import {RoutingPage} from "@beyond/docs/docs/basic/routing.code";
 
 import {DeploymentPage} from "./basic/deployment";
 //styles
@@ -51,25 +52,22 @@ import
 {
     StylesImportsPage, StylesModulesPage,
     StylesTemplatePage, StylesThemePage
-} from "@beyond/docs/docs/basic/styles/code";
+} from "@beyond/docs/docs/basic/styles.code";
 
-import {StateManagement} from "@beyond/docs/docs/basic/state/code";
+import {StateManagement} from "@beyond/docs/docs/basic/state.code";
 
 
 // /*fundamentals*/
 
-import {Processors} from "@beyond/docs/docs/basic/processors/code";
-import {BEEPage} from "@beyond/docs/docs/foundations/bee/code";
-import {HMRPage} from "@beyond/docs/docs/foundations/hmr/code";
-import {DistributionsPage} from "@beyond/docs/docs/foundations/distributions/code";
+import {Processors} from "@beyond/docs/docs/basic/processors.code";
+import {BEEPage} from "@beyond/docs/docs/foundations/bee.code";
+import {HMRPage} from "@beyond/docs/docs/foundations/hmr.code";
+import {DistributionsPage} from "@beyond/docs/docs/foundations/distributions.code";
 
 /*API*/
 import {APIURI} from "./api/uri";
 import {BeyondWidgetApi} from "./api/beyond-widget-api";
-
-import {Glossary} from "./views/concepts/glossary/glossary";
 import {IWidgetStore} from "./api/i-widget-store";
-import {MultiLanguage} from "./fundamentals/multilanguage";
 
 
 interface IReturn {
@@ -109,10 +107,11 @@ export const getContent = (contentId: string, sub: string | undefined = undefine
             bundles: Bundles,
             widgets: {
                 default: Widgets,
-                definition: WidgetCreation,
+                definition: WidgetsDefinition,
                 controller: WidgetController,
-                layout: LayoutWidget,
-                page: PageWidget
+                layout: WidgetLayout,
+                page: WidgetPage,
+                rendering: WidgetsRendering,
             },
             state: {
                 management: StateManagement
@@ -125,7 +124,7 @@ export const getContent = (contentId: string, sub: string | undefined = undefine
             },
             routing: RoutingPage,
             backend: BackendPage,
-            rendering: RenderingPage,
+
         }
     ;
     const foundations = {

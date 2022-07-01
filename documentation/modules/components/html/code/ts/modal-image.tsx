@@ -1,6 +1,6 @@
 import * as React from 'react';
-import {BeyondImage} from '@beyond/ui/image/code';
-import {BeyondModal} from '@beyond/ui/modal/code';
+import {BeyondImage} from '@beyond/ui/image';
+import {BeyondModal} from '@beyond/ui/modal';
 
 export /*bundle*/function ModalImage({src, alt, className}) {
     const [open, toggle] = React.useState(false)

@@ -1,5 +1,5 @@
 const tpl1 = `
-import {routing} from "@beyond-js/kernel/routing/ts";`
+import {routing} from "@beyond-js/kernel/routing";`
 const tpl2 = `
 routing.pushState('/welcome');`;
 export const routing = {

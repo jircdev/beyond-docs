@@ -7,8 +7,6 @@
   "../beyond/lib/client/browser/backend/project.json",
   "../beyond/lib/client/browser/ssr/project.json",
   "/sass-test/project.json",
-  "/pruebas/project.json",
-  "/first-app/project.json",
   "/b-ui/project.json",
   "/documentation/project.json"
 ]

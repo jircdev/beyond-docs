@@ -12,9 +12,10 @@
       }
     },
     "object": {
-      "h2": "Objecto \"routing\"",
+      "h2#object-routing": "Objecto \"routing\"",
       "p1": "El objeto  routing gestiona el histórico del navegador y se encarga de manejar la compatibilidad para proyectos web y móviles. Ofrece una API que permite trabajar con el histórico y manipularlo.",
       "p2": "Es disponibilizado por el kernel y se importa de la siguiente forma:",
+      "c1": "tpl1",
       "p3": "El objeto routing de BeyondJS existe para cubrir los siguientes escenarios:",
       "items": [
         "Disponibilizar al programador una API simple para hacer tratamientos complejos de las URLs, como validaciones, redireccionamientos y manejo de variables.",
@@ -27,7 +28,9 @@
       "p1": "Con la finalidad de mantener compatibilidad con las APIs Conocidas, el objeto Routing tiene métodos homólogos a los métodos de la API del historial del navegador y básicamente cubren las mismas necesidades, pero a la vez, se encargan de unificar los comportamientos entre las plataformas y actualizar los elementos del histórico de BeyondJS.",
       "p2": "Los métodos disponibles son:",
       "p3": "Registra un nuevo elemento en el histórico",
+      "c2": "tpl2",
       "p4": "Modifica la URL actual sin agregar nuevos elementos en el histórico.",
+      "c3": "tpl3",
       "p5": "Tiene la misma interfaz que el método pushState del objeto history de la API Web y adicional se encarga de actualizar el histórico de BeyondJS."
     },
     "overwrite": {

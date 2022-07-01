@@ -1,7 +1,10 @@
 {
   "en": {
     "routing": {
-      "h1": "Routing",
+      "h1": [
+        "Basics",
+        "Routing"
+      ],
       "p1": {
         "s1": "BeyondJS has simple and powerful route handling at the same time. For most cases, the URLs are defined in the configuration of ",
         "l1": [
@@ -12,9 +15,10 @@
       }
     },
     "object": {
-      "h2": "Routing Object",
+      "h2#routing-object": "Routing Object",
       "p1": "The routing object manages the history of the browser and handles compatibility for web and mobile projects. It offers an API that allows you to work with the history and manipulate it.",
       "p2": "It is made available by the kernel and is imported as follows:",
+      "c1": "tpl1",
       "p3": "The BeyondJS routing object exists to cover the following scenarios:",
       "items": [
         "Provide the developer with a simple API to perform complex URL treatments, such as validations, redirections, and variable management.",
@@ -23,15 +27,17 @@
       ]
     },
     "navigation": {
-      "h2": "Navigation",
+      "h2#navigation": "Navigation",
       "p1": "To maintain compatibility with the known APIs, the Routing object has methods homologous to the ones of the browser history API. They cover equal needs, but at the same time, they are in charge of unifying the behaviors between the platforms and updating the elements of the history of BeyondJS.",
       "p2": "The available methods are:",
       "p3": "Record a new item in the history",
+      "c2": "tpl2",
       "p4": "Modify the current URL without adding new items to the history.",
+      "c3": "tpl3",
       "p5": "It has the same interface as the pushState method of the history object of the Web API, and additionally, it is in charge of updating the history of BeyondJS."
     },
     "overwrite": {
-      "h2": "Route Override",
+      "h2#route-override": "Route Override",
       "p2": "Generally, although there may be more, there are two typical contexts in which it is necessary to treat URLs:",
       "items": [
         "When it is required to manage friendly URLs.",

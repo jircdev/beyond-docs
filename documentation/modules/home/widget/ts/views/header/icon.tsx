@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {BeyondIcon} from '@beyond/ui/icons/code';
+import {BeyondIcon} from '@beyond/ui/icons';
 
 export function IconLogo() {
     return (

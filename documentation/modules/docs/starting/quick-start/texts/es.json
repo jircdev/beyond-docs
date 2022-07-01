@@ -6,7 +6,7 @@
       "Node ^14.17.4.",
       "Estar familiarizado con manejadores de dependencias como npm o yarn."
     ],
-    "h2#create-project": "`beyondjs/create-project`",
+    "h2#create-project": "`@beyond-js/create-project`",
     "p1": "Para empezar, posiblemente la manera más sencilla de arrancar un proyecto en BeyondJS sea por medio del `@beyond-js/create-project`.",
     "c1": "npx1",
     "h4#command": "Opciones del comando",

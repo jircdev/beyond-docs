@@ -1,5 +1,5 @@
-import {Events, IWidgetStore} from "@beyond-js/kernel/core/ts";
-import {CurrentTexts} from '@beyond-js/kernel/texts/ts';
+import {Events, IWidgetStore} from "@beyond-js/kernel/core";
+import {CurrentTexts} from '@beyond-js/kernel/texts';
 import {module} from "beyond_context";
 
 interface IContent {

@@ -1,22 +1,12 @@
 import * as React from 'react';
-import {Intro} from "./intro";
-import {ViewFrameworks} from "./view-frameworks";
-import {NextLinks} from "@beyond/docs/components/next-links/code";
-import {useTexts, DocsContext} from "@beyond/docs/store/code";
-import {module} from "beyond_context";
-import {Loading} from '@beyond/docs/components/html/code';
 
-export /*bundle*/ function Widgets() {
-    const [ready, texts] = useTexts(module.resource);
-    if (!ready) return <Loading/>;
+import {module} from "beyond_context";
+import {Document, Loading} from '@beyond/docs/components/html';
+
+export /*bundle*/ function WidgetsDefinition() {
     return (
-        <DocsContext.Provider value={{ready, texts}}>
-            <Intro/>
-            <ViewFrameworks/>
-            <NextLinks items={[
-                '/docs/widgets/creation',
-                '/docs/widgets/controller',
-            ]}/>
-        </DocsContext.Provider>
+        <>
+            <Document moduleId={module.resource} textId="intro" nextLinks={["/docs/widgets/definition"]}/>
+        </>
     )
 }

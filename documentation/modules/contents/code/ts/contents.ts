@@ -1,4 +1,4 @@
-import {Events, IWidgetStore} from "@beyond-js/kernel/core/ts";
+import {Events, IWidgetStore} from "@beyond-js/kernel/core";
 
 interface IContent {
     id: number;

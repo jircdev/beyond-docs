@@ -1,5 +1,5 @@
 import * as React from "react";
-import {hmr, Document} from "@beyond/docs/components/html/code";
+import {hmr, Document} from "@beyond/docs/components/html";
 import {module} from "beyond_context";
 import {tpls} from "../templates";
 

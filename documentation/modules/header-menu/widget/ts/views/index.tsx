@@ -1,14 +1,14 @@
 import * as React from 'react';
-import {BeyondImage} from "@beyond/ui/image/code";
+import {BeyondImage} from "@beyond/ui/image";
 import {Hamburger} from "./hamburger";
-import {ThemeToggleButton} from "@beyond/docs/components/theme-button/code";
-import {Link} from "@beyond/ui/link/code";
+import {ThemeToggleButton} from "@beyond/docs/components/theme-button";
+import {Link} from "@beyond/ui/link";
 import {LanguageAction} from "./language-action";
-import {useBinder, useTexts} from "@beyond/docs/store/code";
+import {useBinder, useTexts} from "@beyond/docs/store";
 import {Notice} from "./notice";
 import {module} from "beyond_context";
 import {HamburgerMenu} from "./hamburger-menu";
-import {routing} from "@beyond-js/kernel/routing/ts";
+import {routing} from "@beyond-js/kernel/routing";
 
 export function TopHeader({attributes, widget, store}) {
     const [ready, texts] = useTexts(module.resource);

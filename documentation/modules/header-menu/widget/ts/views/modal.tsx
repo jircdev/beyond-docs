@@ -1,6 +1,6 @@
 import * as React from 'react';
-import {BeyondModal} from "@beyond/ui/modal/code";
-import {beyond} from '@beyond-js/kernel/core/ts';
+import {BeyondModal} from "@beyond/ui/modal";
+import {beyond} from '@beyond-js/kernel/core';
 
 interface IDisabled {
     disabled?: boolean

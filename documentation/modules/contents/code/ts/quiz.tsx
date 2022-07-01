@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {AppIconButton} from "@beyond/docs/ui/icons/code";
+import {AppIconButton} from "@beyond/docs/ui/icons";
 
 export function Quiz({id}) {
     return (

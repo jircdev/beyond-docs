@@ -1,6 +1,6 @@
 import * as React from 'react';
-import {Link} from '@beyond/ui/link/code';
-import {useTexts} from "@beyond/docs/store/code";
+import {Link} from '@beyond/ui/link';
+import {useTexts} from "@beyond/docs/store";
 
 const Item = ({href, texts}) => {
     return <li><Link href={href}>{texts[href]}</Link></li>

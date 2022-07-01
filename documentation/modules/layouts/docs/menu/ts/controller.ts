@@ -1,6 +1,6 @@
-import {ReactWidgetController} from '@beyond-js/react-widgets/controllers/ts';
-import {IWidgetStore} from '@beyond-js/kernel/core/ts';
-import {beyond__styles} from "@beyond/docs/layout/styles/code";
+import {ReactWidgetController} from '@beyond-js/react-widgets/controllers';
+import {IWidgetStore} from '@beyond-js/kernel/core';
+import {beyond__styles} from "@beyond/docs/layout/styles";
 import {WidgetMenu} from "./menu";
 import { MenuStore } from './store';
 

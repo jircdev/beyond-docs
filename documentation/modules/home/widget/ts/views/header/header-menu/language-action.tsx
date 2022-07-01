@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {AppIcon} from "@beyond/docs/ui/icons/code";
+import {AppIcon} from "@beyond/docs/ui/icons";
 import {LanguagesModal} from "./modal";
 
 export function LanguageAction() {

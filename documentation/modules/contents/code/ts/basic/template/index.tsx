@@ -1,6 +1,6 @@
 import * as React from 'react';
-import {Code} from "@beyond/docs/code/code";
-import {Link} from '@beyond/ui/link/code';
+import {Code} from "@beyond/docs/code";
+import {Link} from '@beyond/ui/link';
 import {variablesTPL} from "../styles/tpl/variables";
 import {TemplateIntro} from "./intro";
 import {TemplateConfig} from "./config";

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Code} from "@beyond/docs/code/code";
+import {Code} from "@beyond/docs/code";
 
 const exampleCode = `
 function A() {

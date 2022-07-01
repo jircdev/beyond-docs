@@ -1,7 +1,7 @@
 import * as React from 'react';
-import {Link} from '@beyond/ui/link/code';
-import {useDocsContext} from "@beyond/docs/store/code";
-import {List} from "@beyond/docs/components/html/code";
+import {Link} from '@beyond/ui/link';
+import {useDocsContext} from "@beyond/docs/store";
+import {List} from "@beyond/docs/components/html";
 
 export function CSR() {
     const {

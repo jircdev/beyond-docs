@@ -1,6 +1,6 @@
 import * as React from 'react';
-import {BeyondName} from "@beyond/docs/components/html/code";
-import {useDocsContext} from "@beyond/docs/store/code";
+import {BeyondName} from "@beyond/docs/components/html";
+import {useDocsContext} from "@beyond/docs/store";
 
 export /*bundle*/ function SR() {
     const {texts: {sr: {title, p1, p2}}} = useDocsContext();

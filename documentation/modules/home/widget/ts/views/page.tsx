@@ -6,7 +6,7 @@ import {DX} from "./sections/dx";
 import {Footer} from "./footer";
 import {Technologies} from "./sections/technologies";
 import {Solution} from "./sections/solution";
-import {useBinder} from "@beyond/docs/store/code";
+import {useBinder} from "@beyond/docs/store";
 import {HomeContext} from "./context";
 
 

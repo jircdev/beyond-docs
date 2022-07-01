@@ -1,5 +1,5 @@
 import * as React from "react";
-import {ContentsPage, hmr} from "@beyond/docs/contents-data/code";
+import {ContentsPage, hmr} from "@beyond/docs/contents-data.code";
 
 
 export function Page({uri, component, store}): JSX.Element {

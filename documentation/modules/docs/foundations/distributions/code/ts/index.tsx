@@ -1,4 +1,4 @@
-import {Document} from "@beyond/docs/components/html/code";
+import {Document} from "@beyond/docs/components/html";
 import {module} from "beyond_context";
 import * as React from "react";
 

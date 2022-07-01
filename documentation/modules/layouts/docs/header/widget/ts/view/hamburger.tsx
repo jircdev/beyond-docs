@@ -1,5 +1,5 @@
 import * as React from "react";
-import {AppManager} from '@beyond/docs/manager/code';
+import {AppManager} from '@beyond/docs/manager';
 
 export function Hamburger({onClick}) {
     const showMenu = event => {

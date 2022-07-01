@@ -1,0 +1,17 @@
+{
+  "name": "docs/starting/quick-start",
+  "code": {
+    "ts": {
+      "path": "/code/ts",
+      "files": [
+        "*"
+      ]
+    }
+  },
+  "txt": {
+    "path": "texts",
+    "files": [
+      "*"
+    ]
+  }
+}

@@ -1,5 +1,5 @@
 import * as React from "react";
-import {CurrentTexts} from "@beyond-js/kernel/texts/ts";
+import {CurrentTexts} from "@beyond-js/kernel/texts";
 
 interface IDocsValue {
     ready?: boolean,

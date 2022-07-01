@@ -1,8 +1,9 @@
 import * as React from "react";
-import {routing} from "@beyond-js/kernel/routing/ts";
+import {routing} from "@beyond-js/kernel/routing";
 import {BeyondIcon} from './icon';
 
 interface props {
+
     icon: string;
     onClick: (e: React.SyntheticEvent) => void;
     viewBox: string;

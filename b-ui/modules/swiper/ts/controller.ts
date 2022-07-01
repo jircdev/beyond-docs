@@ -1,6 +1,6 @@
 import * as  Swiper from 'swiper';
 import {Navigation, Pagination} from 'swiper';
-import {ReactiveModel} from "@beyond/ui/reactive-model/ts";
+import {ReactiveModel} from "@beyond/ui/reactive-model";
 
 const SwiperCasted: typeof Swiper.Swiper = (Swiper.Swiper as unknown as typeof Swiper.default);
 

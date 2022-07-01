@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {getContent} from "./db";
-import {CurrentTexts} from '@beyond-js/kernel/texts/ts';
+import {CurrentTexts} from '@beyond-js/kernel/texts';
 import {module} from "beyond_context";
 
 interface IControl {

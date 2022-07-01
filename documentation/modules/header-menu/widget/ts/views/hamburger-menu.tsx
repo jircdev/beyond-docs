@@ -1,6 +1,6 @@
 import * as React from "react";
-import {AppManager} from '@beyond/docs/manager/code';
-import {widgets} from '@beyond-js/widgets/render/ts';
+import {AppManager} from '@beyond/docs/manager';
+import {widgets} from '@beyond-js/widgets/render';
 
 export function HamburgerMenu() {
     const showMenu = event => {

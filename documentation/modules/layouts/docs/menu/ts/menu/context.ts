@@ -7,6 +7,7 @@ export interface IValue {
     ready?: boolean;
     texts?: object;
     container?: HTMLElement;
+    current: String;
 }
 
 const defaultValue: IValue = {}

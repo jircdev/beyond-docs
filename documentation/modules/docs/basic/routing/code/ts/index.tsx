@@ -1,17 +1,27 @@
 import * as React from "react";
-import {hmr, Document} from "@beyond/docs/components/html/code";
+import {hmr, Document} from "@beyond/docs/components/html";
 import {module} from "beyond_context";
 
 
+const tpl = `
+routing.redirect = async function redirect(uri): Promise<string> {
+    return '/';
+}`
+const tpls = {
+    tpl1: {tpl: `routing.pushState('/home', [{state}]);`, language: "ts"},
+    tpl2: {tpl: `routing.replaceState('/home', [{state}]);`, language: "ts"},
+    tpl3: {tpl: tpl}
+}
+
 export /*bundle*/ function RoutingPage() {
-    console.log(2, "ak")
+
     return (
         <>
-            <Document moduleId={module.resource} textId="routing"/>
-            <Document moduleId={module.resource} textId="object"/>
-            <Document moduleId={module.resource} textId="navigation"/>
-            <Document moduleId={module.resource} textId="overwrite"
-                nextLinks={["/docs/modules/create"]}
+            <Document tpls={tpls} moduleId={module.resource} textId="routing"/>
+            <Document tpls={tpls} moduleId={module.resource} textId="object"/>
+            <Document tpls={tpls} moduleId={module.resource} textId="navigation"/>
+            <Document tpls={tpls} moduleId={module.resource} textId="overwrite"
+                      nextLinks={["/docs/modules/create"]}
             />
         </>
     );

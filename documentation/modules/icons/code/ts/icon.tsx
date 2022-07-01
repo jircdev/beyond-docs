@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {BeyondIcon, BeyondIconButton} from "@beyond/ui/icons/code";
+import {BeyondIcon, BeyondIconButton} from "@beyond/ui/icons";
 import {ICONS} from "./icons";
 
 export /*bundle*/ const AppIcon = (props: any) => {

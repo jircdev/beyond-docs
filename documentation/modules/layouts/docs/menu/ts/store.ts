@@ -1,8 +1,8 @@
-import {ReactiveModel} from "@beyond/ui/reactive-model/ts";
-import {CurrentTexts} from "@beyond-js/kernel/texts/ts";
+import {ReactiveModel} from "@beyond/ui/reactive-model";
+import {CurrentTexts} from "@beyond-js/kernel/texts";
 
 import {module} from "beyond_context";
-import {IWidgetStore} from '@beyond-js/kernel/core/ts';
+import {IWidgetStore} from '@beyond-js/kernel/core';
 
 export class MenuStore extends ReactiveModel implements IWidgetStore{
 

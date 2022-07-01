@@ -1,6 +1,6 @@
 import * as React from 'react';
-import {BeyondImage} from '@beyond/ui/image/code';
-import {Link, Elink} from "@beyond/ui/link/code";
+import {BeyondImage} from '@beyond/ui/image';
+import {Link, Elink}from "@beyond/ui/link";
 import {useHomeContext} from "../context";
 
 

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {useMenuContext} from "../context";
-import {routing} from "@beyond-js/kernel/routing/ts";
-import {AppIcon} from "@beyond/docs/ui/icons/code";
+import {routing} from "@beyond-js/kernel/routing";
+import {AppIcon} from "@beyond/docs/ui/icons";
 
 interface IMenuItem {
     id: string;
@@ -27,14 +27,16 @@ export function List({items, className}: IProps) {
 }
 
 export function ParentItem({item}) {
-    const {texts} = useMenuContext();
+    const {texts, current} = useMenuContext();
     const onClick = (event) => {
         event.preventDefault();
         event.currentTarget.closest('li').classList.toggle('item--opened');
     }
 
+    const selected = item.children.find(item => `/docs/${item.id}` === current.uri);
+    const cls = `menu__item--parent${!!selected ? ' item--opened' : ''}`;
     return (
-        <li className="menu__item--parent">
+        <li className={cls}>
             <section onClick={onClick}>
                 <a href=""><span>{texts[item.id]}</span></a>
                 <AppIcon icon="chevronRight"/>
@@ -46,9 +48,10 @@ export function ParentItem({item}) {
 
 
 export function MenuItem({item}) {
-    const {container, close, texts} = useMenuContext();
+    const {close, texts, current} = useMenuContext();
     if (item.children) return <ParentItem item={item}/>;
 
+    const uri = `/docs/${item.id}`;
     const onClick = event => {
         event.preventDefault();
         const container = event.currentTarget.closest('aside');
@@ -57,11 +60,12 @@ export function MenuItem({item}) {
         if (currentActive) currentActive.classList.remove('active-item');
         target.classList.add('active-item');
 
-        routing.pushState(`/docs/${item.id}`);
+        routing.pushState(uri);
         close();
     }
 
-    const cls = ``;
+
+    const cls = `${uri === current.uri ? 'active-item' : ''}`;
     const link = `/docs/${item.id}`;
     return (
         <li className={cls}>

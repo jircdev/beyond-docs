@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Link} from '@beyond/ui/link/code';
+import {Link} from '@beyond/ui/link';
 import {RightAsideItem} from "./item";
 import {useDocsContext} from "../../context";
 

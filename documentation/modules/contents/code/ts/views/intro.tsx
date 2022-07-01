@@ -1,7 +1,7 @@
 import * as React from 'react';
-import {Link} from '@beyond/ui/link/code';
-import {BeyondImage} from '@beyond/ui/image/code';
-import {BeyondName} from "@beyond/docs/components/html/code";
+import {Link} from '@beyond/ui/link';
+import {BeyondImage} from '@beyond/ui/image';
+import {BeyondName} from "@beyond/docs/components/html";
 
 export function __Intro() {
     return (

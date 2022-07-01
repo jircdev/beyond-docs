@@ -1,7 +1,7 @@
 import * as React from 'react';
-import {TypeProperty} from "@beyond/docs/components/html/code";
-import {Link} from "@beyond/ui/link/code";
-import {Code} from "@beyond/docs/code/code";
+import {TypeProperty} from "@beyond/docs/components/html";
+import {Link} from "@beyond/ui/link";
+import {Code} from "@beyond/docs/code";
 
 export function APIURI() {
     return (

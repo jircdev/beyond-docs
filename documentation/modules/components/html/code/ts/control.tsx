@@ -1,6 +1,6 @@
 import * as React from 'react';
-import {Elink, Link} from "@beyond/ui/link/code";
-import {Code, CodeBox} from "@beyond/docs/code/code";
+import {Elink, Link}from "@beyond/ui/link";
+import {Code, CodeBox} from "@beyond/docs/code";
 import {isString} from "@cloudinary/url-gen/internal/utils/dataStructureUtils";
 
 export /*bundle*/ function CHtml({content, children}) {
@@ -23,23 +23,29 @@ export /*bundle*/ function Title(props) {
     let data = children ?? content;
 
     const output = [];
-    const tag = selector.split("#")[0];
+    const [tag, idAttribute] = selector.split("#");
     const Control = ['h2', 'h3', 'h4', 'h5', 'h6'].includes(tag) ? tag : 'h1';
     if (Array.isArray(data)) {
         output.push(<span className={`pretitle-${tag}`} key="pretitle">{data[0]}</span>);
         data = data[1];
     }
-    output.push(<Control dangerouslySetInnerHTML={{__html: data}} key="title"/>)
+    const attrs = {key: idAttribute ?? 'title'};
+    if (idAttribute) attrs.id = idAttribute;
+    output.push(<Control dangerouslySetInnerHTML={{__html: data}} {...attrs}/>);
     return <>{output}</>
 }
 
 export /*bundle*/ function List(props) {
-    const {content, children} = props;
+    const {content, children, element} = props;
+    const [name, className] = element.split(".");
+    console.log(12, element)
     if (!Array.isArray(content)) {
         throw new Error('The content passed must be an array');
     }
+    const attrs = {};
+    if (className) attrs.className = className;
     return (
-        <ul>
+        <ul {...attrs}>
             {content.map((item, index) => {
 
                 if (item?.type?.name === 'ListItem') {

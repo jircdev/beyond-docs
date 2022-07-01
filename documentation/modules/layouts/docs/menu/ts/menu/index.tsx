@@ -2,13 +2,14 @@ import * as React from "react";
 import {Menu} from "../data";
 import {List} from "./list";
 import {IValue, MenuContext} from "./context";
-import {AppManager} from "@beyond/docs/manager/code";
-import {useBinder} from "@beyond/docs/store/code";
-import {BeyondIconButton} from "@beyond/ui/icons/code";
-import {BeyondImage} from "@beyond/ui/image/code";
-import {useTexts} from "@beyond/docs/store/code";
+
+import {useBinder} from "@beyond/docs/store";
+import {BeyondIconButton} from "@beyond/ui/icons";
+import {BeyondImage} from "@beyond/ui/image";
+import {useTexts} from "@beyond/docs/store";
 import {module} from "beyond_context";
-import {Loading} from "@beyond/docs/components/html/code";
+import {Loading} from "@beyond/docs/components/html";
+import {routing} from "@beyond-js/kernel/routing";
 
 interface IState {
     selected: string;
@@ -18,7 +19,6 @@ export /*bundle*/
 function WidgetMenu({attributes}) {
 
     const [ready, texts] = useTexts(module.resource);
-
     const parent = React.useRef(null);
     const openedLocal =
         typeof window !== undefined
@@ -49,7 +49,11 @@ function WidgetMenu({attributes}) {
 
 
     return (
-        <MenuContext.Provider value={{ready, texts, close: closeMenu}}>
+        <MenuContext.Provider value={{
+            ready, texts,
+            current: routing.uri,
+            close: closeMenu
+        }}>
             <aside ref={parent} className={cls}>
                 <div className="menu-mobile-container">
                     <header className="aside__header">

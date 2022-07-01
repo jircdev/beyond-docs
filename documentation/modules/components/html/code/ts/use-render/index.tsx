@@ -3,7 +3,7 @@ import {BlockQuote, DocLinks, ListItem, CodeComponent} from "../control";
 import {Controls} from "./controls";
 import {ModalImage} from "../modal-image";
 import {isString} from "@cloudinary/url-gen/internal/utils/dataStructureUtils";
-import {AppIcon} from "@beyond/docs/ui/icons/code";
+import {AppIcon} from "@beyond/docs/ui/icons";
 
 export function useRender(content: object, tpls = {}) {
 
@@ -52,7 +52,7 @@ export function useRender(content: object, tpls = {}) {
             });
 
             output.push(
-                <Control key={`${id}${item}`} content={items}>
+                <Control key={`${id}${item}`} content={items} element={item}>
                     {children}
                 </Control>
             );

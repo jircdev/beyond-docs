@@ -1,8 +1,8 @@
 import * as React from 'react';
-import {BeyondIcon} from "@beyond/ui/icons/code";
+import {BeyondIcon} from "@beyond/ui/icons";
 import {SVGS} from "../../icons";
 
-import {BeyondSwiperSlider} from '@beyond/ui/swiper/code';
+import {BeyondSwiperSlider} from '@beyond/ui/swiper';
 
 export function Technologies() {
     return (

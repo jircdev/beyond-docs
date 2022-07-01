@@ -1,7 +1,7 @@
 import * as React from 'react';
-import {NextLinks} from '@beyond/docs/components/next-links/code';
-import {BeyondName, ObjectProperty} from "@beyond/docs/components/html/code";
-import {Elink} from "@beyond/ui/link/code";
+import {NextLinks} from '@beyond/docs/components/next-links';
+import {BeyondName, ObjectProperty} from "@beyond/docs/components/html";
+import {Elink}from "@beyond/ui/link";
 
 
 export function BeyondWidgetApi() {

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {CodeBox} from "@beyond/docs/code/code";
+import {CodeBox} from "@beyond/docs/code";
 
 const tpl = `
 {

@@ -1,29 +1,14 @@
 import * as React from 'react';
-import {SSR} from "./ssr";
-import {CSR} from "./csr";
-import {SR} from "./sr";
-import {NextLinks} from '@beyond/docs/components/next-links/code';
-import {RenderingIntro} from "./intro";
-import {useTexts, DocsContext} from "@beyond/docs/store/code";
 import {module} from "beyond_context";
-import {Loading} from '@beyond/docs/components/html/code';
+import {Document} from '@beyond/docs/components/html';
 
-export /*bundle*/ function RenderingPage() {
-
-    const [ready, texts] = useTexts(module.resource);
-    if (!ready) return <Loading/>;
-
+export /*bundle*/ function WidgetsRendering() {
     return (
-        <DocsContext.Provider value={{ready, texts}}>
-            <RenderingIntro/>
-            <SSR/>
-            <CSR/>
-            <SR/>
-            <NextLinks items={[
-                '/docs/rendering',
-                '/docs/widgets',
-            ]}/>
-
-        </DocsContext.Provider>
+        <>
+            <Document moduleId={module.resource} textId="intro"/>
+            <Document moduleId={module.resource} textId="ssr"/>
+            <Document moduleId={module.resource} textId="csr"/>
+            <Document moduleId={module.resource} textId="sr" nextLinks={["/docs/widgets/controller"]}/>
+        </>
     )
 }

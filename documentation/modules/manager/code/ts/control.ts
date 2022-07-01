@@ -1,4 +1,4 @@
-import {Events} from "@beyond-js/kernel/core/ts";
+import {Events} from "@beyond-js/kernel/core";
 
 export class Manager extends Events {
 

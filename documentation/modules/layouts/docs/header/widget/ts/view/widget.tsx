@@ -1,10 +1,10 @@
 import * as React from "react";
-import {AppIcon} from "@beyond/docs/ui/icons/code";
-import {Link, Elink} from "@beyond/ui/link/code";
+import {AppIcon} from "@beyond/docs/ui/icons";
+import {Link, Elink}from "@beyond/ui/link";
 import {Hamburger} from "./hamburger";
 import {Notice} from "./notice";
-import {BeyondImage} from '@beyond/ui/image/code';
-import {ThemeToggleButton} from "@beyond/docs/components/theme-button/code";
+import {BeyondImage} from '@beyond/ui/image';
+import {ThemeToggleButton} from "@beyond/docs/components/theme-button";
 
 export /*bundle*/
 function Widget() {

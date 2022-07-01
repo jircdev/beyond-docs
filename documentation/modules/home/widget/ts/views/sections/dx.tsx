@@ -1,8 +1,8 @@
 import * as React from 'react';
-import {BeyondSwiperSlider} from "@beyond/ui/swiper/code";
+import {BeyondSwiperSlider} from "@beyond/ui/swiper";
 import {useHomeContext} from "../context";
-import {BeyondImage} from "@beyond/ui/image/code";
-import {Link} from '@beyond/ui/link/code';
+import {BeyondImage} from "@beyond/ui/image";
+import {Link} from '@beyond/ui/link';
 
 export function DX() {
     const {texts: {experience, readMore, learnMore}} = useHomeContext();

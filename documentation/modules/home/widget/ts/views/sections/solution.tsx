@@ -1,8 +1,8 @@
 import * as React from 'react';
 import {Card} from "../card";
-import {Elink} from "@beyond/ui/link/code";
+import {Elink}from "@beyond/ui/link";
 import {useHomeContext} from "../context";
-import {CHtml} from "@beyond/docs/components/html/code";
+import {CHtml} from "@beyond/docs/components/html";
 
 export function Solution() {
     const {texts: {solution: {universalTs, jamStack, frameworks}}} = useHomeContext();
