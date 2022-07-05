@@ -4,30 +4,3 @@
   max-width: 1340px;
   margin: auto;
 }
-
-.container {
-  z-index: 2;
-  position: relative;
-
-  .header__content {
-    width: 70%;
-  }
-
-  @media (max-width: 800px) {
-
-    height: 100%;
-
-    .header__content {
-      width: 100%;
-
-      h1 {
-        font-size: 2rem;
-      }
-    }
-
-    > figure {
-      display: none;
-    }
-  }
-
-}

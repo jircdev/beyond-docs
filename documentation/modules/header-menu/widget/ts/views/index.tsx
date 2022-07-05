@@ -14,13 +14,19 @@ export function TopHeader({attributes, widget, store}) {
     const [ready, texts] = useTexts(module.resource);
     const [url, setUrl] = React.useState(routing.uri?.uri);
     const ref = React.useRef(null);
-    useBinder([routing], () => {
-        console.log('cambio la url');
-        setUrl(routing.uri.uri);
-    });
+
+    useBinder([routing], () => setUrl(routing.uri.uri));
+
     React.useEffect(() => {
-        if(!ref?.current) return;
-        console.log("si")
+
+        document.querySelector("body").addEventListener('scroll', () => {
+            if (!ref?.current) return;
+            if (ref.current.offsetTop > 50) ref.current.classList.add('is-sticky');
+            else ref.current.classList.remove('is-sticky');
+
+        });
+        if (!ref?.current) return;
+
         const parent = ref.current;
         const items = [...parent.querySelectorAll('a')];
         const menu = parent.querySelector('.menu-list__container');
@@ -37,7 +43,7 @@ export function TopHeader({attributes, widget, store}) {
             }
             item.addEventListener('click', onClick);
         })
-    }, [ref]);
+    }, [ref?.current]);
     if (!ready) return null;
 
 

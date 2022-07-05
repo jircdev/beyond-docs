@@ -12,7 +12,11 @@
   align-content: center;
   position: sticky;
   top: 0;
-  background: var(--primary-surface);
+  &.is-sticky {
+    transition: 300ms ease-in all;
+    background: var(--primary-surface);
+  }
+
 
   &.home-header {
 

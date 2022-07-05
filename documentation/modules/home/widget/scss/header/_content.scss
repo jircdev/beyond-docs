@@ -7,7 +7,7 @@ header.home__header .header__content {
 
   .pre__title {
     font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-300) var(--unnamed-font-size-26)/var(--unnamed-line-spacing-30) var(--unnamed-font-family-rubik);
-    letter-spacing: var(--unnamed-character-spacing--0-26);
+
     color: var(---primary-light-color-e58165);
   }
 
@@ -17,21 +17,30 @@ header.home__header .header__content {
     font-size: 43px;
     font-family: var(--title-font);
     letter-spacing: -0.43px;
-    color: #FFFFFF;
+    color: var(--text-color);
     opacity: 1;
 
-    span {
-      background: var(--app-primary-text-gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    strong {
-      padding: 1.2rem 0 0;
-      display: flex;
-      color: var(--primary-light) !important;
+    .special-text {
+      padding-left: 10px;
+      padding-right: 10px;
+      display: inline-flex;
+      color: var(--app-accent-color);
       @media (max-width: 800px) {
         font-size: 2.2rem;
+      }
+
+      position: relative;
+
+      &:after {
+
+        position: absolute;
+        content: " ";
+        bottom: 0;
+        width: calc(100% - 20px);
+        left: 10px;
+        right: 10px;
+        background: var(--app-accent-color);
+        height: 2px;
       }
     }
   }

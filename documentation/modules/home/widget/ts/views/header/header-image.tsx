@@ -2,7 +2,7 @@ import * as React from 'react';
 
 export function HeaderImage() {
     return (
-        <>
+        <div className="header__animation__container">
             <svg className="header__animation__front" xmlns="http://www.w3.org/2000/svg" width="504" height="360.369"
                  viewBox="0 0 504 360.369">
                 <defs>
@@ -283,6 +283,6 @@ export function HeaderImage() {
                 </g>
             </svg>
 
-        </>
+        </div>
     )
 }

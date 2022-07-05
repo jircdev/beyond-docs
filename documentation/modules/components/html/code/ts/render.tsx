@@ -5,8 +5,10 @@ interface Ivalue {
     content: object;
 }
 
-export /*bundle*/ function Render({content, tpls}) {
-    const output = useRender(content, tpls);
+export /*bundle*/ function Render(props) {
+
+    const {content, tpls, components} = props
+    const output = useRender(content, tpls, components);
     return <>{output}</>;
 }
 

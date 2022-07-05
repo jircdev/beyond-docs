@@ -33,7 +33,7 @@
 
   --app-element-surface: #{rgba(#000, .7)};
   --app-element-hover-surface: #{rgba(#030405, .5)};
-  --app-element-border-color-1: var(--gray-darker);
+  --app-element-border-color-1: var(--color-gray-80);
   --app-primary-text-gradient: linear-gradient(to right, var(--text-on-primary), var(--secondary-light));
   --app-secondary-text-gradient: linear-gradient(to right, var(--color-gray-10), var(--color-carbon-30));
   --app-dark-text-gradient: var(--app-secondary-text-gradient);
@@ -52,6 +52,7 @@
 
   --app-scrollbar-color: var(--secondary-light);
   --app-scrollbar-track: var(--color-carbon-95);
+  --app-accent-color: #617096;
 
 }
 

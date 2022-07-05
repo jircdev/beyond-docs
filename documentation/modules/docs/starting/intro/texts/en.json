@@ -1,11 +1,11 @@
 {
   "en": {
     "universal": {
-      "h1": "What is BeyondJS?",
-      "i1": [
-        "/images/tutorials/beyond-environments.png",
-        "Beyond environments"
+      "h1": [
+        "Universal Typescript",
+        "What is BeyondJS?"
       ],
+      "cc1": "about",
       "p1": "BeyondJS is a typescript-based meta framework, designed to create projects that work in different JavaScript execution environments, keeping the focus on ensuring a universal development experience for the developer. It does so by remaining agnostic to existing libraries and technologies, seeking to leave a standardized path that allows their integration.",
       "p2": "The factors that ensure a homogeneous development experience, regardless of the environment in which you are working, are:",
       "items1": [
@@ -20,13 +20,19 @@
       "p2": "A project is defined by specifying its scope, name, and at least one distribution. The distributions allow identifying the execution environment in which the project is expected to work and some additional data that may be relevant for the compilation and deployment process. Likewise, multiple distributions are able to be  configured simultaneously, giving the developer the flexibility to validate the behavior of their project in different configured ecosystems.",
       "p3": {
         "s1": "The projects contain ",
-        "l1": "modules",
-        "s2": ". These represent the minimum unit of development in BeyondJS and have the ability to define on which platform they work. Data interpreted by the",
-        "l2": "distributions",
+        "l1": [
+          "/docs/modules",
+          "modules"
+        ],
+        "s2": ". These represent the minimum unit of development in BeyondJS and have the ability to define on which platform they work. Data interpreted by the ",
+        "l2": [
+          "/docs/distributions",
+          "distributions"
+        ],
         "s3": "  distributions configured in the development environment and when deploying a project."
       },
       "p4": {
-        "s1": "If you want to know more about projects and how create it, you can go to the",
+        "s1": "If you want to know more about projects and how create it, you can go to the ",
         "l1": [
           "/docs/projects",
           "Project chapter"

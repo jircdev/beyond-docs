@@ -10,7 +10,7 @@ import {starting} from "./starting";
 export const tpls = {
     starting: starting,
     module: {
-        page: {title: "page.tsx", tpl: PageCodeStarted},
+        page: {title: "view/index.tsx", tpl: PageCodeStarted},
         styles: {title: "styles.scss", language: "css", tpl: pageStyles},
     },
     backend: {

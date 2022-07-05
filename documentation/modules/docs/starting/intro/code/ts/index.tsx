@@ -1,6 +1,7 @@
 import * as React from "react";
 import {hmr, Document} from "@beyond/docs/components/html";
 import {module} from "beyond_context";
+import {AboutHeader} from "./header";
 
 const tpl = `
 routing.redirect = async function redirect(uri): Promise<string> {
@@ -16,7 +17,11 @@ const tpls = {
 export /*bundle*/ function DocsIntro() {
     return (
         <>
-            <Document tpls={tpls} textId="universal" moduleId={module.resource}/>
+            <Document
+                components={{
+                    about: AboutHeader
+                }}
+                tpls={tpls} textId="universal" moduleId={module.resource}/>
             <Document tpls={tpls} textId="overview" moduleId={module.resource}/>
             <Document
                 tpls={tpls}

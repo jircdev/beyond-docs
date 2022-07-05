@@ -1,11 +1,11 @@
 {
   "es": {
     "universal": {
-      "h1": "¿Qué es <span className=\"beyond\">BeyondJS</span>?",
-      "i1": [
-        "/images/tutorials/beyond-environments.png",
-        "Beyond environments"
+      "h1": [
+        "Typescript Universal",
+        "¿Qué es <span className=\"beyond\">BeyondJS</span>?"
       ],
+      "cc1": "about",
       "p1": "BeyondJS es un meta-framework basado en typescript, diseñado para crear proyectos que funcionen en diferentes entornos de ejecución JavaScript, manteniendo el foco en garantizar al programador una experiencia universal de desarrollo. Lo hace manteniéndose agnóstico a las librerías y tecnologías existentes, buscando dejar un camino estandarizado que permita su integración.",
       "p2": "Los factores que garantizan una experiencia de desarrollo homogénea, sin importar el entorno para el que se trabaje son:",
       "items": [
@@ -20,14 +20,24 @@
       "p2": "Un proyecto es definido por medio de la especificación de su scope, nombre y de al menos una distribución. Las distribuciones permiten identificar el entorno de ejecución sobre el cual se espera funcione el proyecto y algunos datos adicionales que pueden resultar relevantes para el proceso de compilación y deployment. Asimismo, se puede configurar múltiples distribuciones en simultáneo, brindándole al desarrollador la flexibilidad de validar el comportamiento de su proyecto en los diferentes ecosistemas configurados.",
       "p3": {
         "s1": "Los proyectos contienen ",
-        "l1": "módulos",
-        "s2": " estos representan la unidad mínima de desarrollo en BeyondJS y tienen la capacidad de definir sobre que plataforma funcionan. Dato que es interpretado por las",
-        "l2": "distribuciones",
+        "l1": [
+          "/docs/modules",
+          "módulos"
+        ],
+        "s2": " estos representan la unidad mínima de desarrollo en BeyondJS y tienen la capacidad de definir sobre que plataforma funcionan. Dato que es interpretado por las ",
+
+        "l2": [
+          "/docs/distributions",
+          "distribuciones"
+        ],
         "s3": " configuradas en el entorno de desarrollo y al momento de realizar deploy de un proyecto."
       },
       "p4": {
         "s1": "Si quieres conocer más en detalle acerca de esto y sobre cómo crear proyectos en BeyondJSte recomendamos ir a la ",
-        "l1": " sección de Proyectos"
+        "l1": [
+          "/docs/projects/intro",
+          " sección de Proyectos."
+        ]
       }
     },
     "features": {

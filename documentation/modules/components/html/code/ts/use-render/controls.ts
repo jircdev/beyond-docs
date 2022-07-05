@@ -1,6 +1,7 @@
-import  { CHtml, List,Paragraph, Title,DocLinks} from "../control";
-import {Elink, Link}from "@beyond/ui/link";
-export const Controls = 
+import {CHtml, List, Paragraph, Title, DocLinks} from "../control";
+import {Elink, Link} from "@beyond/ui/link";
+
+export const Controls =
     {
         p: Paragraph,
         l: DocLinks,
@@ -8,6 +9,6 @@ export const Controls =
         e: DocLinks,
         h: Title,
         items: List,
-        s: CHtml
-      }
-    
+        s: CHtml,
+    }
+

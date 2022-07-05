@@ -7,7 +7,7 @@ export function HeaderContent() {
     return (
         <div className="header__content">
             <section className="main__title">
-                <span className="pre__title">{texts.pretitle}</span>
+                <span className="pretitle-h1">{texts.pretitle}</span>
                 <h1>
                     <span dangerouslySetInnerHTML={{__html: texts.h1}}/>
                     <StrongTitle/>

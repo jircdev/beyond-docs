@@ -8,12 +8,6 @@
   align-content: end;
   transition: all 150ms linear;
 
-  &:after {
-    display: flex;
-    content: "-->";
-    margin: auto 5px;
-  }
-
   &:hover {
     margin-right: 10px;
     font-weight: bolder;

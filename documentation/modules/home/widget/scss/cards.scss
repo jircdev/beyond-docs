@@ -20,6 +20,7 @@
     flex-direction: column;
     align-content: space-between;
     //flex-grow: 1;
+    border: var(--app-element-border-color-1) 1px solid;
     border-radius: var(--border-radius-base);
     justify-content: space-between;
     transition: all 200ms ease-in;
@@ -50,7 +51,7 @@
   @media (min-width: 801px) and (max-width: 1200px) {
     grid-gap: 1rem;
     .docs__card {
-      padding: 1rem;
+      padding: 2rem 1rem;
     }
   }
   @media(min-width: 1000px) {

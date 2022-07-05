@@ -1,17 +1,26 @@
 .home__header {
-  z-index: 2;
+  z-index: 1;
+  position: relative;
+  aspect-ratio: 16 / 7;
+  margin: 1rem auto auto;
+  padding: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--header-font);
+  display: grid;
+  grid-template-columns: 55% 1fr;
 
-  .header-content__container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 1rem;
-
-    @media (max-width: 900px) {
-      grid-template-columns: 60% auto;
-    }
-    @media (max-width: 400px) {
-      grid-template-columns: 1fr;
-    }
+  @media (max-width: 800px) {
+    aspect-ratio: 9 / 16;
+    align-items: center;
+    justify-items: center;
   }
+
+
+  @media (max-width: 900px) and (min-height: 600px) {
+    aspect-ratio: 16/4;
+    max-height: 700px;
+  }
+
 
 }

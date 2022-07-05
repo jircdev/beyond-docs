@@ -1,5 +1,5 @@
 import {PageReactWidgetController} from '@beyond-js/react-widgets/controllers';
-import {BridgeModel} from '@beyond/docs/models/contents/bridge';
+import {BridgeModel} from '@beyond/docs/models/contents';
 
 export /*bundle*/
 class Controller extends PageReactWidgetController {

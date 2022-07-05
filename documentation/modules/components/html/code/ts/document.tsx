@@ -4,17 +4,17 @@ import {useTexts, DocsContext} from "@beyond/docs/store";
 import {Render} from "./render";
 import {NextLinks} from "@beyond/docs/components/next-links";
 
-export /* bundle */ function Document({moduleId, tpls, textId, nextLinks, d}) {
+export /* bundle */ function Document({moduleId, tpls, components, textId, nextLinks, d}) {
     const [ready, texts] = useTexts(moduleId);
     if (!ready) return null;
     const textsUsed = textId ? texts[textId] : texts;
     if (d) {
-        console.log(1.1, moduleId, texts);
+        console.log(1.1, moduleId, texts, components);
         console.log(1.2, textId, textsUsed);
     }
     return (
-        <DocsContext.Provider value={{texts, ready, tpls}}>
-            <Render content={textsUsed} tpls={tpls}/>
+        <DocsContext.Provider value={{texts, ready, tpls, components}}>
+            <Render content={textsUsed} tpls={tpls} components={components}/>
             {nextLinks && <NextLinks items={nextLinks}/>}
         </DocsContext.Provider>
     );

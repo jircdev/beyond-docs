@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Elink, Link}from "@beyond/ui/link";
+import {Elink, Link} from "@beyond/ui/link";
 import {Code, CodeBox} from "@beyond/docs/code";
 import {isString} from "@cloudinary/url-gen/internal/utils/dataStructureUtils";
 
@@ -97,4 +97,16 @@ export function CodeComponent({content}) {
     const {title, language = 'typescript', tpl} = content;
     const Control = title ? CodeBox : Code;
     return <Control title={title} language={language}>{tpl}</Control>
+}
+
+export function CustomComponent({components, control, content, tpls}) {
+
+    if (!components.hasOwnProperty(control)) {
+        console.warn(`custom component ${control} was not found`);
+        return null;
+    }
+    const Control = components[control];
+
+    return <Control tpls={tpls} content={content}/>
+
 }

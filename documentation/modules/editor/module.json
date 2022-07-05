@@ -1,7 +1,6 @@
 {
   "name": "editor",
   "widget": {
-    "hmr": true,
     "element": {
       "name": "editor-page"
     },

@@ -9,16 +9,11 @@ export function Header() {
     const container = React.useRef(null);
     return (
         <>
-            <header className="home__header" ref={container}>
-                <div className="container header-content__container ">
-                    <HeaderContent/>
-                    <div className="header__animation__container">
-                        <HeaderImage/>
-                    </div>
-                    <IconLogo/>
-                </div>
+            <header className="home__header container" ref={container}>
+                <HeaderContent/>
+                <HeaderImage/>
+                <IconLogo/>
             </header>
-
         </>
     );
 }

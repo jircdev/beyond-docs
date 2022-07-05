@@ -75,37 +75,51 @@
           "Quick Start chapter"
         ]
       },
-      "p7": "After having executed the command, we are ready to start our project.  Execute the following:"
+      "p7": "After having executed the command, we are ready to start our project.  Execute the following:",
+      "c2": "beyond",
+      "p8": {
+        "s1": "Luego de ejecutar el comando, puede verse un mensaje que indica que el Dashboard está disponible en ",
+        "e1": [
+          "http://localhost:4000",
+          "http://localhost:4000"
+        ],
+        "s2": ", lo navegamos y podremos ver la interfaz del Dashboard con el board del listado de proyectos, donde aparece el proyecto creado con el link para navegarlo debajo del titulo, si hacemos click en el, la pantalla se dividirá en dos y podremos navegar el proyecto desde el dashboard."
+      },
+      "i1": [
+        "/images/tutorial/projects-list.png",
+        "BeyondJS - Module List view"
+      ],
+      "q4": {
+        "s1": " El puerto del proyecto se define en el archivo project.json, puedes leer más sobre ello en la sección de ",
+        "l1": [
+          "/projects/json",
+          "Configuracion de Proyectos"
+        ]
+      },
+      "q5": {
+        "s1": "La funcionalidad de navegación es un feature del dashboard y es opcional, el proyecto puede navegarse de forma independiente en cualquier navegador.\n"
+      },
+      "p9": "Ahora estamos listos para empezar a trabajar en el primer modulo."
     },
     "firstModule": {
       "h1#first-module": [
         "Tutorial",
         "First module"
       ],
-      "p1": {
-        "s1": "The project comes with a default home module. You can see it by accessing ",
-        "e1": [
-          "http://localhost:6500/",
-          "localhost:6500"
-        ],
-        "s2": " from the browser."
-      },
-      "q2": {
-        "s1": "The port is defined in the project.json file. You can read more about it in the ",
-        "l1": [
-          "/projects/json",
-          "Projects Settings chapter"
-        ],
-        "s2": "."
-      },
+      "p0": "Como puede verse, el proyecto trae un módulo home creado, el cúal tiene definida la ruta “/” y es el que navegamos al hacer click en el link del proyecto.",
+      "p1": "Desde el Dashboard, podemos tambien navegar el módulo accediendo desde el PreAside, en el icono del proyecto Activo, hacemos click sobre el módulo home y esté desplegará la lista de bundles contenidos en el modulo.",
+      "i1": [
+        "/images/tutorial/navigate-module.png",
+        "BeyondJS - Navigating module"
+      ],
       "p3": "The structure of the module is as follows",
       "items": [
         "widget: Folder where the page component code is located.",
         {
           "s1": "ts: ",
           "items": [
-            "controller.tsx: Component controller object, required to mount the WebComponent in the browser.",
-            "views/page.tsx: React component that renders the page."
+            "controller.ts: Component controller object, required to mount the WebComponent in the browser.",
+            "views/index.tsx: React component that renders the page."
           ]
         },
         "scss: Folder for adding styles to the module",
@@ -151,7 +165,7 @@
       "p2": "To create a BRIDGE bundle, it is necessary basically to create a node service and achieve integration with client code. Bundle bridges, as their name implies, develop a connection bridge between the client and server code, allowing the code to be handled uniformly."
     },
     "backendInitialization": {
-      "h2": "Backend Initialization",
+      "h2#backend": "Backend Initialization",
       "q1": "BeyondJS provides the @beyond-js/backend library to create the of backend code. This library is optional to avoid its unnecessary inclusion in those projects that do not require it.",
       "p1": "The project comes with a `start-backend` module that contains a bundle of type `start` that is responsible for initializing the Backend through the following code:",
       "c2": "module2",
@@ -163,27 +177,42 @@
         ],
         "s2": " that manages the JavaScript code on the server-side of our project."
       },
-      "p4": "NOTE: Bridges are a central and very powerful feature in Beyond and are only briefly shown in this tutorial. If you want to know more and understand how they work, go to the section on bridges.",
-      "h3": "Platforms",
-      "p5": {
-        "s1": "If you want to know more about managing bundles and modules, you can go to the ",
+      "q4": " Los `bridges` son un feature central y muy poderoso en <span class=\"inline\">BeyondJS</span> y en este tutorial solo se muestran de forma superficial. Si quieres conocer más y entender cómo funcionan, dirígete a la sección de bridges.",
+      "h3#bridge": "Creación del Bridge",
+      "q5": {
+        "s1": "Si quieres conocer más acerca del manejo de bundles y módulos, puedes ir a la ",
         "l1": [
           "/modules/introduction",
-          "Modules chapter"
+          "seccion de Modulos"
         ]
       },
-      "p6": "To add a bundle bridge to the module, we must go to the configuration file (module.json), located inside the home folder. The path should be: ",
-      "p7": "There, we need to add the following structure:",
-      "c3": "platforms1",
-      "p8": "Our final module.json should have the following structure:",
-      "c4": "platforms2",
-      "p9": "We explain what we just did:",
-      "items": [
-        "As BeyondJS is a framework that guarantees universal operation. Each module created can specify which platforms are supported by it. With the platform input, we specify what we want our module to support on the web and backend platforms.",
-        "We add the configuration of a bundle of type bridges to handle the actions in a node service and the interconnection with the client code.",
-        "In the Bridge input, we add the \"path\" property that defines the relative directory, where the bundle code can be found."
+      "p6": "El bundle Bridge, lo crearemos desde el formulario de creación de módulos del Dashboard, al cual se puede acceder desde el icono + en el Aside.  ",
+      "i2": [
+        "/images/tutorial/create-module.png",
+        "Creating module on BeyondJS Dashboard"
       ],
-      "p10": "Next, we create a folder with the name \"bridge\" so that Beyond gets the path defined in module.json and, inside the bridge folder, we create an index.ts file, in which the server logic will be added."
+      "p61": "Seleccionamos módulo en blanco y en la siguiente pantalla, seleccionaremos módulo Bridge",
+      "i3": [
+        "/images/tutorial/bundle-type.png",
+        "Creating module on BeyondJS Dashboard"
+      ],
+      "p62": "A continuación, se mostrará un formulario para agregar el nombre del módulo, al cual llamaremos `auth`.",
+      "i4": [
+        "/images/tutorial/bridge-form.png",
+        "Creating module on BeyondJS Dashboard"
+      ],
+      "p7": "Seleccionamos tipo Bridge y posteriormente agregamos el nombre del módulo, al cúal llamaremos `auth` y confirmamos.  Cúando el formulario termine la ejecución, BeyondJS habrá  creado una carpeta con la estructura del módulo, que incluye una estructura similar a la del módulo home, pero con un bundle de tipo bridge en vez de page. ",
+      "p8": "Allí, debemos agregar la siguiente estructura:",
+      "c3": "platforms1",
+      "p9": "Nuestro `module.json` final, debería quedar con la siguiente estructura:",
+      "c4": "platforms2",
+      "p10": "Explicamos lo que acabamos de hacer:",
+      "items": [
+        "Como BeyondJS es un framework que garantiza el funcionamiento universal, cada módulo creado puede especificar que plataformas estan soportadas por el mismo. Con la entrada platforms le especificamos que queremos que nuestro modulo soporte las plataformasweb y backend.",
+        "Agregamos la configuración de un bundle de tipo bridge para manejar las acciones en un servicio node y la interconexión con el código cliente.",
+        "En la entrada Bridge, agregamos la propiedad \"path\" que define el directorio relativo en donde se encontrará el código del bundle."
+      ],
+      "p11": "A cotinuación, creamos una carpeta con el nombre \"bridge\" para que Beyond consiga el path definido en module.json y, adentro de la carpeta bridge, creamos un archivo index.ts en el cual se agregará la lógica servidor."
     },
     "bridgeCode": {
       "h1": [

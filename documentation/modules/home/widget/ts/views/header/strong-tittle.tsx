@@ -31,7 +31,7 @@ export function StrongTitle() {
     }, [])
 
     return (
-        <strong ref={ref}>{labels[current]}</strong>
+        <span className="special-text" ref={ref}>{labels[current]}</span>
     );
 
 }

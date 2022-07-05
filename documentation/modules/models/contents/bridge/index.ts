@@ -1,5 +1,5 @@
-import {Config, Manager} from '@beyond/docs/database/connector/ts';
-import {Contents} from "@beyond/docs/database/models/ts";
+import {Config, Manager} from '@beyond/docs/database/connector';
+import {Contents} from "@beyond/docs/database/models";
 
 export  /*actions*//*bundle*/
 class BridgeModel {

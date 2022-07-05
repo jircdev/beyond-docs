@@ -1,11 +1,11 @@
 import React from "react";
-import {BlockQuote, DocLinks, ListItem, CodeComponent} from "../control";
+import {BlockQuote, DocLinks, ListItem, CodeComponent, CustomComponent} from "../control";
 import {Controls} from "./controls";
 import {ModalImage} from "../modal-image";
 import {isString} from "@cloudinary/url-gen/internal/utils/dataStructureUtils";
 import {AppIcon} from "@beyond/docs/ui/icons";
 
-export function useRender(content: object, tpls = {}) {
+export function useRender(content: object, tpls = {}, components = {}) {
 
     const controls = Controls;
     /**
@@ -15,12 +15,13 @@ export function useRender(content: object, tpls = {}) {
      * l = link
      * e = external link
      * t = deprecated
+     * cc = CustomComponent
      * i = img
      * c = code
      * bi = BeyondIcon
      */
 
-    const regexp = /[bi|q|h|p|l|e|t|i|c]{1}?\d{1}|items\d{0,1}|\d/;
+    const regexp = /[bi|q|h|p|l|e|t|i|c|cc]{1}?\d{1}|items\d{0,1}|\d/;
 
     /**
      * @TODO: @julio: refactor and order
@@ -69,6 +70,11 @@ export function useRender(content: object, tpls = {}) {
             return;
         }
 
+        if (["cc"].includes(item.substring(0, 2))) {
+
+            output.push(<CustomComponent key={itemId} content={content }control={elementData} components={components} tpls={tpls}/>);
+            return;
+        }
         // blockQuote
         if (["q"].includes(item[0])) {
 
