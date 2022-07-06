@@ -31,7 +31,7 @@ aside.docs__menu {
     }
   }
 
-  @include set-media('tablet', false, 'max') {
+  @include set-media('tablet', false, 'min') {
     &.on-home {
       display: none;
     }

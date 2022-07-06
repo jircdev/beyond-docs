@@ -45,9 +45,9 @@ function WidgetMenu({attributes}) {
         closeMenu();
     };
     let cls = `docs__menu${opened ? ` docs__menu--opened` : ""}`;
-    if (attributes.home) cls += " on-home";
+    if (attributes.has('home')) cls += " on-home";
     if (!ready) return <Loading/>;
-
+console.log(10, attributes, cls)
 
     return (
         <MenuContext.Provider value={{
