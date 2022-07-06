@@ -12,7 +12,8 @@
     "element": {
       "name": "menu-layout",
       "attrs": [
-        "opened"
+        "opened",
+        "home"
       ]
     },
     "ts": {

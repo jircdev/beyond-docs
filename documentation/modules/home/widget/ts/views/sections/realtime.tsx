@@ -12,12 +12,12 @@ export function Realtime() {
             <div className="top-img container no-mv no-pv">
                 <BeyondImage className="is-floating" alt="BeyondJS - HMR & real time connections" src="/images/home/separator.png"/>
             </div>
-            <div className="container grid-container two-columns  no-mv">
+            <div className="container grid-container two-columns  no-mv no-pd">
                 <div className="content">
                         <span className="pretitle t3 secondary-accent">
                             {hmr.pretitle}
                         </span>
-                    <h3>{hmr.title}</h3>
+                    <h3 className="primary-color">{hmr.title}</h3>
                     <p> {hmr.texts}</p>
                     <Link href="/docs/hmr" className="link-more">{readMore}</Link>
                 </div>
@@ -25,7 +25,7 @@ export function Realtime() {
                         <span className="pretitle t3 secondary-accent">
                             {realtime.pretitle}
                         </span>
-                    <h3>{realtime.title}</h3>
+                    <h3 className="primary-color">{realtime.title}</h3>
                     <p>{realtime.startText} <Elink href={realtime.link}> websockets </Elink> {realtime.endText}</p>
                     <Link href="/docs/hmr" className="link-more">{readMore}</Link>
                 </div>

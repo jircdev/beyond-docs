@@ -55,9 +55,8 @@ export function TopHeader({attributes, widget, store}) {
                 <nav className="menu-container flex-container flex-h-end">
                     <div className="mobile__header">
 
-                        {!isHome && <HamburgerMenu/>}
                         <Link href="/"><BeyondImage src="/images/beyond-logo.png" alt="beyondjs"/></Link>
-                        <Hamburger/>
+                        <HamburgerMenu/>
                     </div>
                     <div className="menu-list__container">
                         <ul className="header__menu">

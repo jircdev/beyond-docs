@@ -1,14 +1,14 @@
 import * as React from 'react';
 import {Card} from "../card";
-import {Elink}from "@beyond/ui/link";
+import {Elink} from "@beyond/ui/link";
 import {useHomeContext} from "../context";
 import {CHtml} from "@beyond/docs/components/html";
 
 export function Solution() {
     const {texts: {solution: {universalTs, jamStack, frameworks}}} = useHomeContext();
     return (
-        <div className="container cards__container no-mv">
-            <Card title={universalTs.title}  img="universal-ts" href="/docs/intro">
+        <div className="container page-section cards__container no-mv">
+            <Card title={universalTs.title} img="universal-ts" href="/docs/intro">
                 <CHtml>{universalTs.description.one}</CHtml> <Elink
                 href="https://cordova.apache.org/">{universalTs.description.cordova}</Elink>, <Elink
                 href="https://docs.npmjs.com/packages-and-modules">{universalTs.description.npm}</Elink>

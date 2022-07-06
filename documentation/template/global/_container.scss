@@ -13,7 +13,12 @@
 
   &.grid-container {
     display: grid;
-    grid-gap: 1rem;
+    grid-gap: 2rem;
+  }
+
+  &.no-pd {
+    padding: 0;
+    width: 100%;
   }
 
   &.no-mv {

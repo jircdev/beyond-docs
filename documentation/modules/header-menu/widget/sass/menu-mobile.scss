@@ -41,13 +41,7 @@
     flex-grow: 0;
     flex-shrink: 0;
 
-    &:not(.home--header) {
-      .mobile__header {
-        .beyond-element-image {
-          justify-content: center;
-        }
-      }
-    }
+
 
     .menu-list__container {
       position: absolute;

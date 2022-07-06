@@ -17,7 +17,7 @@ export function TopHeader() {
                     <ul className="header__menu">
                         <li><ThemeToggleButton/></li>
                         <li><LanguageAction/></li>
-                        <li><Link href="/docs/tutorial/web">Tutorial</Link></li>
+                        <li><Link href="/docs/tutorial/start">Tutorial</Link></li>
                         <li><Link href="/docs/intro">Documentation</Link></li>
                         <li><Link href="/examples">Examples</Link></li>
                     </ul>

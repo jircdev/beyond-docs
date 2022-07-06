@@ -37,13 +37,13 @@ export function ConfigModule() {
                             <span className="pretitle">
                                 {config.pretitle}
                             </span>
-                            <h3>{config.title}</h3>
+                            <h3 className="primary-color">{config.title}</h3>
                         </header>
 
                         <p>{config.texts}</p>
                     </section>
 
-                    <h3>{plugAndPlay.title}</h3>
+                    <h3 className="primary-color">{plugAndPlay.title}</h3>
                     <p>{plugAndPlay.texts}
                     </p>
                     <footer className="action">

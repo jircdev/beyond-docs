@@ -4,7 +4,6 @@
   z-index: 2;
 }
 
-
 a {
   color: var(--app-link-color);
   cursor: pointer;
@@ -68,8 +67,10 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  padding: 2rem;
   gap: 1rem;
+  @media(max-width: 600px) {
+    grid-template-columns: 60% 1fr;
+  }
 }
 
 .pre__title {

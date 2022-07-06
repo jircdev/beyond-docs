@@ -11,4 +11,24 @@
       top: -30%;
     }
   }
+
+  @media(max-width: 1200px) {
+    .beyond__icon, .beyond__surface-icon {
+      svg {
+        height: 230%;
+        top: 0;
+      }
+    }
+  }
+
+  @media(max-width: 600px) {
+    .beyond__icon, .beyond__surface-icon {
+      top: -5%;
+
+      svg {
+        height: 100%;
+        top: 0%;
+      }
+    }
+  }
 }

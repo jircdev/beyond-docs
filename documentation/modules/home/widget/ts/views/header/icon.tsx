@@ -4,7 +4,7 @@ import {BeyondIcon} from '@beyond/ui/icons';
 export function IconLogo() {
     return (
         <figure className="beyond__surface-icon">
-            <div className="beyond__icon hidden-mobile">
+            <div className="beyond__icon">
                 <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 626.601 1156.834">
                     <g id="Ilustration.Background.Icon" transform="translate(-1419 -3535.999)" opacity="0.07">
                         <g id="Grupo_7716" data-name="Grupo 7716" transform="translate(1419 3535.999)">

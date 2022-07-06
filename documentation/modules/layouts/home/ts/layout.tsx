@@ -15,6 +15,7 @@ export default function () {
         <div className="main-widget">
             <div className="home-page">
                 <docs-header-menu/>
+                <menu-layout home="true"/>
                 <main>
                     <beyond-layout-children/>
                 </main>

@@ -7,7 +7,7 @@ import {BeyondSwiperSlider} from '@beyond/ui/swiper';
 export function Technologies() {
     return (
 
-        <div className="container technologies__section no-mv">
+        <div className="container technologies__section page-section no-mv">
 
             <section className="">
                 <h3 className="subtitle">
@@ -15,7 +15,7 @@ export function Technologies() {
                 </h3>
                 <p className="p2">
                     Enfocado en hacer que las mismas herramientas y técnicas
-                            funcionen para múltiples distribuciones  y tecnologías de manera simple y en  la creación
+                    funcionen para múltiples distribuciones y tecnologías de manera simple y en la creación
                     de micro servicios y micro frontends.
                 </p>
             </section>

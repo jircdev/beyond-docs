@@ -20,6 +20,24 @@ h1, .h1 {
   line-height: 54px;
   letter-spacing: .43px;
   margin: 0 0 2rem;
+
+}
+
+h2, .h2 {
+  font-size: 2.25rem;
+  line-height: 54px;
+  letter-spacing: .43px;
+  margin: 2rem 0;
+
+}
+
+h3, .h3 {
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+h3, h4 {
+  color: var(--text-color);
 }
 
 .pretitle-h1 {
@@ -32,14 +50,6 @@ h1, .h1 {
 figure {
   margin: 0;
   padding: 0;
-}
-
-h2, .h2 {
-  font-size: 2.25rem;
-  line-height: 54px;
-  letter-spacing: .43px;
-  margin: 2rem 0;
-
 }
 
 .pretitle-h2 {
@@ -59,15 +69,6 @@ h2, .h2 {
   }
 }
 
-h3, .h3 {
-  font-size: 1.5rem;
-  font-weight: normal;
-}
-
-h3, h4 {
-  color: var(--text-color);
-}
-
 .p1 {
   font-size: 18px;
   font-weight: lighter;
@@ -77,7 +78,7 @@ h3, h4 {
 
 .p2 {
   font-size: 1rem;
-  letter-spacing: .0.32px;
+  letter-spacing: .32px;
   font-weight: lighter;
   line-height: 24px;
 }
@@ -86,6 +87,11 @@ p {
   @extend .p2;
 
 }
+
+.primary-color {
+  color: var(--primary) !important;
+}
+
 
 .subtitle {
   font-size: 18px;
@@ -98,6 +104,18 @@ p {
 
 .secondary-accent {
   color: var(--secondary-accent);
+}
+
+@media(max-width: 600px) {
+  h1, .h1 {
+    font-size: 2.4rem;
+  }
+  h2, .h2 {
+    font-size: 2.05rem;
+  }
+  h2, .h2 {
+    font-size: 1.5rem;
+  }
 }
 
 @include set-media('mobile', false, 'max') {

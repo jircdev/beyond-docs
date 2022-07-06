@@ -1,5 +1,10 @@
 {
   "en": {
+    "notice": "Beta version",
+    "documentation": "Documentation",
+    "examples": "Examples",
+    "languages": "Languages",
+    "theme": "Theme",
     "title": "Contents",
     "/": "HOME",
     "getting-start": "Getting started",

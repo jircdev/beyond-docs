@@ -13,11 +13,11 @@ export function Card({title, href, children, img}) {
                 <p className="p2">
                     {children}
                 </p>
+                <section className="card__action">
+                    <Link href={href} className="link-more">Leer más</Link>
+                </section>
+            </section>
 
-            </section>
-            <section className="card__action">
-                <Link href={href} className="link-more">Leer más</Link>
-            </section>
         </article>
     )
 }

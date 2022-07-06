@@ -7,8 +7,8 @@ export function LanguageAction() {
     const onClick = event => {
         event.preventDefault();
         setToggle(!toggle);
-
     }
+
     return (
         <>
             <AppIcon className="language-icon" icon="languages" onClick={onClick}/>

@@ -1,8 +1,11 @@
 $width: 1376;
 .main__home__content, .home__header {
+  min-width: 100%;
+
   @media(min-width: 900px) {
-    $container: calc(($width / 12) * 10);
-    &.container, .container {
+    $result: calc($width / 12);
+    $container: calc($result * 10);
+    .container {
       max-width: #{$container}px;
     }
   }

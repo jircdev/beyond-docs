@@ -10,6 +10,7 @@ import {useTexts} from "@beyond/docs/store";
 import {module} from "beyond_context";
 import {Loading} from "@beyond/docs/components/html";
 import {routing} from "@beyond-js/kernel/routing";
+import {MobileMenu} from "./mobile-menu";
 
 interface IState {
     selected: string;
@@ -43,8 +44,8 @@ function WidgetMenu({attributes}) {
         event.preventDefault();
         closeMenu();
     };
-    const cls = `docs__menu${opened ? ` docs__menu--opened` : ""}`;
-
+    let cls = `docs__menu${opened ? ` docs__menu--opened` : ""}`;
+    if (attributes.home) cls += " on-home";
     if (!ready) return <Loading/>;
 
 
@@ -71,6 +72,7 @@ function WidgetMenu({attributes}) {
                             icon="close"
                         />
                     </header>
+                    <MobileMenu/>
                     <List items={Menu}/>
                 </div>
             </aside>

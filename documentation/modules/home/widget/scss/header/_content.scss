@@ -14,9 +14,8 @@ header.home__header .header__content {
   h1 {
     margin: 5px 0;
     text-align: left;
-    font-size: 43px;
+
     font-family: var(--title-font);
-    letter-spacing: -0.43px;
     color: var(--text-color);
     opacity: 1;
 
@@ -49,4 +48,22 @@ header.home__header .header__content {
     font-size: 1.3rem;
   }
 
+  @media (max-width: 600px) {
+    h1 {
+      text-align: center;
+
+      .special-text {
+        display: flex;
+        justify-content: center;
+
+        &:after {
+          display: none;
+        }
+
+      }
+    }
+    .main__title {
+      padding-bottom: 0;
+    }
+  }
 }

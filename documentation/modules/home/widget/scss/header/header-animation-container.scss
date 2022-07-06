@@ -2,9 +2,17 @@
 
 .header__animation__container {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 
   .header__animation__front {
     @extend .is-floating;
+  }
+
+  svg {
+    max-width: 90%;
+    margin: auto;
   }
 }
 

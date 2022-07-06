@@ -5,8 +5,6 @@
   grid-auto-flow: column;
   grid-auto-columns: 1fr;
   grid-gap: 2rem;
-  padding: 2rem;
-  width: calc(100% - 4rem);
 
   .accent {
     color: var(--accent-color);
@@ -45,17 +43,33 @@
 
   }
 
-  @media(max-width: 800px) {
+  @media(max-width: 1200px) and (min-width: 601px) {
+
+    .docs__card {
+      display: grid;
+      grid-template-columns: 30% auto;
+      grid-gap: 2rem;
+
+      header {
+        display: grid;
+        align-content: center;
+        justify-content: center;
+        justify-items: center;
+
+        h3 {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1000px) {
     grid-auto-flow: row;
   }
   @media (min-width: 801px) and (max-width: 1200px) {
     grid-gap: 1rem;
-    .docs__card {
-      padding: 2rem 1rem;
-    }
+
   }
-  @media(min-width: 1000px) {
-    padding: 2rem 0;
-  }
+
 }
 

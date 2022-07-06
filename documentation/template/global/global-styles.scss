@@ -3,6 +3,7 @@
 @import "separator";
 @import "typography";
 @import "container";
+
 .accent {
   color: var(--accent-color) !important;
 }
@@ -14,12 +15,13 @@ ul {
 
 .content-container {
   display: grid;
-  grid-gap: 1rem;
+  grid-gap: 2rem;
   padding: 0;
 
   .two-columns,
   .three-columns {
     grid-template-columns: 1fr;
+    grid-gap: 2rem;
   }
 
   @include set-media('tablet', false, min) {
