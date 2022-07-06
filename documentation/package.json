@@ -10,6 +10,8 @@
     "@types/highlightjs": "^9.12.2",
     "@types/is-hotkey": "^0.1.7",
     "@types/react": "^17.0.34",
+    "@beyond-js/react-widgets": "^17.15.0",
+    "@beyond-js/backend": "^0.0.8",
     "@types/react-dom": "^17.0.11",
     "animatewithsass": "^3.2.1",
     "cloudinary-core": "^2.12.3",

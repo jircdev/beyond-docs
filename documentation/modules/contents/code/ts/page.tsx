@@ -6,7 +6,6 @@ import {ContentsContainer} from "./container";
 
 export /*bundle*/ function ContentsPage({component, contentId, sub, hmrChanged}) {
     const [content, fetching, texts] = useContent(contentId, sub, hmrChanged);
-    console.log(100, fetching, texts)
     if (fetching || !texts) return <PreloadPage/>;
 
     const Control = content.control;
