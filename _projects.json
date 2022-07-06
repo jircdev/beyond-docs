@@ -1,0 +1,12 @@
+[
+  "../beyond/lib/client/browser/kernel/project.json",
+  "../beyond/lib/client/browser/widgets/widgets/project.json",
+  "../beyond/lib/client/browser/widgets/react/project.json",
+  "../beyond/lib/client/browser/widgets/vue/project.json",
+  "../beyond/lib/client/browser/widgets/svelte/project.json",
+  "../beyond/lib/client/browser/backend/project.json",
+  "../beyond/lib/client/browser/ssr/project.json",
+  "/sass-test/project.json",
+  "/b-ui/project.json",
+  "/documentation/project.json"
+]
