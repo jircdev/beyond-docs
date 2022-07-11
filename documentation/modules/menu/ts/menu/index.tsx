@@ -11,6 +11,7 @@ import {module} from "beyond_context";
 import {Loading} from "@beyond/docs/components/html";
 import {routing} from "@beyond-js/kernel/routing";
 import {MobileMenu} from "./mobile-menu";
+import {widgets} from "@beyond-js/widgets/render";
 
 interface IState {
     selected: string;
@@ -39,15 +40,19 @@ function WidgetMenu({attributes}) {
         const isOpened = parent.current.classList.contains("docs__menu--opened");
         parent.current.classList.toggle("docs__menu--opened");
         window.localStorage.setItem("__menu_opened", `${!isOpened}`);
+        const menu = [...widgets.instances].find(item => item.localName === 'menu-layout');
+        const option = menu.getAttribute('opened') === 'true' ? 'false' : 'true';
+        menu.setAttribute('opened', option);
+
     };
     const close = (event) => {
         event.preventDefault();
         closeMenu();
     };
     let cls = `docs__menu${opened ? ` docs__menu--opened` : ""}`;
-    if (attributes.has('home')) cls += " on-home";
-    if (!ready) return <Loading/>;
-console.log(10, attributes, cls)
+    if (attributes.get('home')) cls += " on-home";
+    if (!ready) return null;
+
 
     return (
         <MenuContext.Provider value={{

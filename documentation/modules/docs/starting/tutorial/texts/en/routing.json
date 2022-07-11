@@ -1,0 +1,39 @@
+{
+  "en": {
+    "routing": {
+      "h1": [
+        "tutorial",
+        "Routing"
+      ],
+      "p1": "The first thing we must do is create a new module with a bundle of type Page. For this, we going to repeat the process that we used to create our Bridge bundle.",
+      "p2": "We click on the icon to add modules and a modal like the following will open:",
+      "i1": [
+        "/images/dashboard/v1/create-module-1.png",
+        "Create module on beyond project 1"
+      ],
+      "p3": "We select blank module. On the next screen, it request the bundle, we then select “page”:",
+      "i2": [
+        "/images/dashboard/v1/create-module-2.png",
+        "Create module on beyond project 2"
+      ],
+      "p4": "On the final screen, it will require us for some information, below it is explained what to place on it:",
+      "i3": [
+        "/images/dashboard/v1/create-module-3.png",
+        "Create module on beyond project 3"
+      ],
+      "items2": [
+        "Module name: welcome",
+        "Web component name: welcome-page.",
+        "Url: \"/welcome\""
+      ],
+      "p5": "Pages and layouts in Beyond are resolved using Web components. If you want to know in detail how they work and why, go to the Web Components Section.",
+      "p6": "We then open the Page object created in the module and add a simple message that says: Welcome!",
+      "p7": "Next, we will make the necessary adjustments to redirect to our welcome module after logging in. What we need to do after is import the \"routing\" object from Beyond, use the pushState method as it provides, and navigate to the welcome page.",
+      "h4#imports": "Imports",
+      "c1": "importing",
+      "h4#pushState": "Navigation",
+      "c2": "pushState",
+      "p8": "We are done! now we only need to refresh our form page to let BeyondJS register the new URL. If we retest our form, we'll be able to log in and see how we've been redirected to the welcome page."
+    }
+  }
+}

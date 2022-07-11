@@ -1,0 +1,27 @@
+{
+  "name": "examples/sm/counter-svelte",
+  "widget": {
+    "hmr": true,
+    "element": {
+      "name": "counter-svelte"
+    },
+    "sass": {
+      "path": "/widget/scss",
+      "files": [
+        "*"
+      ]
+    },
+    "svelte": {
+      "path": "/widget/svelte",
+      "files": [
+        "*"
+      ]
+    },
+    "ts": {
+      "path": "/widget/svelte",
+      "files": [
+        "*"
+      ]
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "es": {
+    "routing": {
+      "h1": [
+        "Tutorial",
+        "Routing"
+      ],
+      "p1": "Lo primero que debemos hacer, es crear un nuevo módulo con un bundle de tipo Page, esta vez lo haremos desde el Dashboard. Para eso, debemos acceder a nuestro dashboard y seleccionar el proyecto que estamos trabajando, si no lo hemos hecho. Esto habilitará en el PreAside las acciones que podemos realizar sobre el proyecto, Las listamos a continuación:",
+      "p2": "Hacemos clic en el ícono para agregar módulos y se abrirá un modal como el siguiente:",
+      "i1": [
+        "/images/dashboard/v1/create-module-1.png",
+        "Create module on beyond project 1"
+      ],
+      "p3": "Seleccionamos módulo en blanco. Y en la siguiente pantalla, nos pide el bundle, seleccionamos \"page\":",
+      "i2": [
+        "/images/dashboard/v1/create-module-2.png",
+        "Create module on beyond project 2"
+      ],
+      "p4": "En la pantalla final, nos pedirá algunos datos, a continuación, se explica que colocar:",
+      "i3": [
+        "/images/dashboard/v1/create-module-3.png",
+        "Create module on beyond project 3"
+      ],
+      "items2": [
+        "Module name: welcome",
+        "Web component name: welcome-page.",
+        "Url: \"/welcome\""
+      ],
+      "p5": "Las páginas y layouts en Beyond se resuelven haciendo uso de Web components. Si quieres saber en detalle cómo funcionan y porqué, dirígete a la sección de Web Components.",
+      "p6": "Abrimos el objeto Page creado en el módulo y agregaremos un mensaje simple que diga: ¡Bienvenido!",
+      "p7": "A continuación, Haremos los ajustes necesarios, para redireccionar a nuestro módulo de bienvenida, luego de iniciar sesión. Lo que debemos hacer a continuación, es importar el objeto \"routing\" de Beyond, para usar el método pushState que provee y navegar a la página de Bienvenida.",
+      "h4#imports": "Importación",
+      "c1": "importing",
+      "h4#pushState": "Navegación",
+      "c2": "pushState",
+      "p8": "Ahora sólo debemos refrescar la página del formulario para que BeyondJS registre la ruta nueva creada y  Si volvemos a probar nuestro formulario, podremos iniciar sesión y ver cómo nos dirigimos a la página de bienvenida."
+    }
+  }
+}

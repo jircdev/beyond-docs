@@ -12,7 +12,7 @@ export function Header() {
     return (
         <>
             <header className="home__header" ref={container}>
-                <div className="page-section container no-pd">
+                <div className="page-section container">
                     <HeaderContent/>
                     <HeaderImage/>
                     <div className="visible-mobile">

@@ -5,10 +5,11 @@
         "Tutorial",
         "Web Project"
       ],
-      "h2": "Before beginning",
-      "p1": "This tutorial walks through the main flow of development with Beyond and clearly shows the benefits it offers in its use. The purpose of this development is for end-users/developers who want to learn while practicing, therefore the concepts that define the structure of Beyond are addressed in a general approach, focusing on making a quick, concise, and clear exercise out of it. For a more detailed description of concepts, it will be available on the documentation upon request.",
+      "h2#before": "Before beginning",
+      "p1": "This tutorial walks through the main flow of development with Beyond and clearly shows the benefits it offers in its use. The purpose of this development is for end-users/developers who want to learn while practicing, therefore the concepts that define the structure of Beyond are addressed in a general approach, focusing on making a quick, concise, and clear exercise out of it. We strongly suggest accessing the corresponding chapters in the documentation to understand some concepts better.",
       "p2": "The tutorial is structures as follows:",
       "items": [
+        "Install BeyondJS.",
         "Dashboard.",
         "Creation of the first module.",
         "Back-end integration.",
@@ -25,7 +26,6 @@
     "starting": {
       "h2#starting": "Starting",
       "p1": "The first thing to do is create the project, for this, we will use the bundle @beyond-js/create-project. It is responsible for installing BeyondJS locally and generating the initial structure of our project.",
-      "c1": "npx",
       "q1": {
         "s1": "BeyondJS, is developed to work as a global dependency and run multiple projects simultaneously. Learn more about it ",
         "l1": [
@@ -33,6 +33,7 @@
           "here"
         ]
       },
+      "c1": "npx",
       "p3": "In the previous command, you can see a requisition to create a web-type project with a backend, and it was added as a scope <strong>testing</strong> and as a name <strong>login</strong>.",
       "q2": {
         "s1": "The scope and name, are data that allow the project to be identified and be ready to be published as an npm bundle, or to be imported from another project. These settings can be done manually, but the dashboard just makes the process much simpler. You can see the explanation of it in the ",
@@ -78,83 +79,28 @@
       "p7": "After having executed the command, we are ready to start our project.  Execute the following:",
       "c2": "beyond",
       "p8": {
-        "s1": "Luego de ejecutar el comando, puede verse un mensaje que indica que el Dashboard está disponible en ",
+        "s1": "After executing the command, a message will appear indicating that the dashboard is available at ",
         "e1": [
           "http://localhost:4000",
           "http://localhost:4000"
         ],
-        "s2": ", lo navegamos y podremos ver la interfaz del Dashboard con el board del listado de proyectos, donde aparece el proyecto creado con el link para navegarlo debajo del titulo, si hacemos click en el, la pantalla se dividirá en dos y podremos navegar el proyecto desde el dashboard."
+        "s2": ". While navigating it, you will be able to see the Dashboard interface with the project list board, where the created project appears with the link to navigate it below the title. If we click on it, the screen will split into two, and we will be able to navigate the project from the dashboard."
       },
       "i1": [
         "/images/tutorial/projects-list.png",
         "BeyondJS - Module List view"
       ],
       "q4": {
-        "s1": " El puerto del proyecto se define en el archivo project.json, puedes leer más sobre ello en la sección de ",
+        "s1": " The project port is defined in the project.json file. Read more about it in the ",
         "l1": [
           "/projects/json",
-          "Configuracion de Proyectos"
+          " Project Configuration chapter."
         ]
       },
       "q5": {
-        "s1": "La funcionalidad de navegación es un feature del dashboard y es opcional, el proyecto puede navegarse de forma independiente en cualquier navegador.\n"
+        "s1": "The navigation functionality is a feature of the dashboard and is optional. The project has the ability of being navigated independently in any browser.\n"
       },
-      "p9": "Ahora estamos listos para empezar a trabajar en el primer modulo."
-    },
-    "firstModule": {
-      "h1#first-module": [
-        "Tutorial",
-        "First module"
-      ],
-      "p0": "Como puede verse, el proyecto trae un módulo home creado, el cúal tiene definida la ruta “/” y es el que navegamos al hacer click en el link del proyecto.",
-      "p1": "Desde el Dashboard, podemos tambien navegar el módulo accediendo desde el PreAside, en el icono del proyecto Activo, hacemos click sobre el módulo home y esté desplegará la lista de bundles contenidos en el modulo.",
-      "i1": [
-        "/images/tutorial/navigate-module.png",
-        "BeyondJS - Navigating module"
-      ],
-      "p3": "The structure of the module is as follows",
-      "items": [
-        "widget: Folder where the page component code is located.",
-        {
-          "s1": "ts: ",
-          "items": [
-            "controller.ts: Component controller object, required to mount the WebComponent in the browser.",
-            "views/index.tsx: React component that renders the page."
-          ]
-        },
-        "scss: Folder for adding styles to the module",
-        "module.json: Module configuration file (Place to define the type of bundles and processors to use)."
-      ],
-      "p4": "Let's get down to business!",
-      "p5": "Having a clear idea on the structure, what's next is creating the login form and adding some styles, and then continuing with the connection to the backend node."
-    },
-    "formCreation": {
-      "h2#form-creation": "Form Creation",
-      "p1": "If you have worked with React, what follows a part that you probably know best, with some subtleties for sure. Next, we'll edit our page.tsx file to create a login form and the basic functionality for updating status.",
-      "c1": "page"
-    },
-    "styles": {
-      "h2": "Styles",
-      "p1": "BeyondJS handles styling by default with the SASS preprocessor. Let's go to our styles.scss file and add some styling to the form.",
-      "q2": {
-        "s1": "SASS is a processor in BeyondJS. To read in-depth about the processor's mechanism, you can find further details in the",
-        "l1": [
-          "/processors",
-          "processor's chapter"
-        ]
-      },
-      "c1": "styles",
-      "p3": "Let's explain a bit the above code.",
-      "items": [
-        "We add basic styling to the form, the inputs, the submit button, and for handling an error message.",
-        {
-          "s1": "Custom properties: the custom properties used are a simple structure for handling variables included by beyond in the ",
-          "l1": [
-            "/template",
-            "Project Template"
-          ]
-        }
-      ]
+      "p9": "Now, you are ready to start working on the first module."
     },
     "backendLogic": {
       "h1": [
@@ -175,51 +121,43 @@
           "/docs/bee",
           "BEE"
         ],
-        "s2": " that manages the JavaScript code on the server-side of our project."
+        "s2": "  that manages the JavaScript code on the server-side of our project.\n"
       },
       "q4": " Los `bridges` son un feature central y muy poderoso en <span class=\"inline\">BeyondJS</span> y en este tutorial solo se muestran de forma superficial. Si quieres conocer más y entender cómo funcionan, dirígete a la sección de bridges.",
-      "h3#bridge": "Creación del Bridge",
+      "h3#bridge": "Creation of bundle bridge\n",
       "q5": {
-        "s1": "Si quieres conocer más acerca del manejo de bundles y módulos, puedes ir a la ",
+        "s1": "If you want to know more about managing bundles and modules, you can go to the ",
         "l1": [
           "/modules/introduction",
-          "seccion de Modulos"
+          "Modules section."
         ]
       },
-      "p6": "El bundle Bridge, lo crearemos desde el formulario de creación de módulos del Dashboard, al cual se puede acceder desde el icono + en el Aside.  ",
+      "p6": "You will create the Bridge bundle from the Dashboard module creation form, which can be accessed from the + icon on the Aside. A modal will appear similar to the bolow image:",
       "i2": [
         "/images/tutorial/create-module.png",
         "Creating module on BeyondJS Dashboard"
       ],
-      "p61": "Seleccionamos módulo en blanco y en la siguiente pantalla, seleccionaremos módulo Bridge",
+      "p61": "Select blank module and on the next screen, select Bridge module.\n",
       "i3": [
         "/images/tutorial/bundle-type.png",
         "Creating module on BeyondJS Dashboard"
       ],
-      "p62": "A continuación, se mostrará un formulario para agregar el nombre del módulo, al cual llamaremos `auth`.",
+      "p62": "You add the module name, which we will be called `auth`, and confirm. When the form finishes executing, BeyondJS will have created a folder with the module structure. This includes a structure similar to the home module, but with a bundle of a bridge type instead of a page one.\n.",
       "i4": [
         "/images/tutorial/bridge-form.png",
         "Creating module on BeyondJS Dashboard"
       ],
-      "p7": "Seleccionamos tipo Bridge y posteriormente agregamos el nombre del módulo, al cúal llamaremos `auth` y confirmamos.  Cúando el formulario termine la ejecución, BeyondJS habrá  creado una carpeta con la estructura del módulo, que incluye una estructura similar a la del módulo home, pero con un bundle de tipo bridge en vez de page. ",
-      "p8": "Allí, debemos agregar la siguiente estructura:",
-      "c3": "platforms1",
-      "p9": "Nuestro `module.json` final, debería quedar con la siguiente estructura:",
+      "p7": "\nYou add the module name, which we will be called `auth`, and confirm. When the form finishes executing, BeyondJS will have created a folder with the module structure. This includes a structure similar to the home module, but with a bundle of a bridge type instead of a page one.\n",
+      "p8": "Our final module.json should have the following structure:",
       "c4": "platforms2",
-      "p10": "Explicamos lo que acabamos de hacer:",
-      "items": [
-        "Como BeyondJS es un framework que garantiza el funcionamiento universal, cada módulo creado puede especificar que plataformas estan soportadas por el mismo. Con la entrada platforms le especificamos que queremos que nuestro modulo soporte las plataformasweb y backend.",
-        "Agregamos la configuración de un bundle de tipo bridge para manejar las acciones en un servicio node y la interconexión con el código cliente.",
-        "En la entrada Bridge, agregamos la propiedad \"path\" que define el directorio relativo en donde se encontrará el código del bundle."
-      ],
-      "p11": "A cotinuación, creamos una carpeta con el nombre \"bridge\" para que Beyond consiga el path definido en module.json y, adentro de la carpeta bridge, creamos un archivo index.ts en el cual se agregará la lógica servidor."
+      "q2": "module.json are currently not visible from the dashboard, you can see them from your preferred IDE"
     },
     "bridgeCode": {
       "h1": [
         "Tutorial",
         "Bridge Code"
       ],
-      "p1": "As we mentioned before, in this step generally each project has its logic for session validation. The intention today is not to focus on how this should be handled, but rather focusing on creating a basic code that allows us to connect our client code with the backend do not give.",
+      "p1": "As we mentioned before, in this moment, usually, each project has its logic for session validation. The intention today is not to focus on how should this be handled. What you will do, is create a basic code that allows you to connect our client code with the backend node. You'll add this to the existing bridge.ts file in the module you just created.\n",
       "c1": "bridge",
       "p2": "The code is quite simple, but there are several interesting points to highlight: ",
       "items": [
@@ -255,13 +193,6 @@
         "/images/dashboard/v1/bee.png",
         "Beyond Environment Execution - Dashboard - BeyondJs"
       ],
-      "p3": {
-        "s1": "<strong>The Dashboard</strong> is a powerful tool provided by BeyondJS. You can learn more about this in ",
-        "l1": [
-          "/dashboard",
-          "detail section"
-        ]
-      },
       "p4": "To implement the login functionality with our server, we must import our auth object in the client code and associate the onSubmit event to our form.",
       "p5": "Projects in BeyondJS follow the same guidelines for specification and resolution of names and packages, as npm, in the same way that typescript does. They must have a module name and can handle a scope as well. In our case, we define both when creating our project and module respectively.",
       "p6": "Next, in our Page component we import the Auth object",
@@ -276,47 +207,7 @@
         "We review the module resolution structure to import the Auth bridge and be able to add the login validation."
       ],
       "p10": "Now we just need to redirect the user to a welcome screen."
-    },
-    "routing": {
-      "h1": [
-        "tutorial",
-        "Routing"
-      ],
-      "p1": "The first thing we must do is create a new module with a bundle of type Page. This can be done from the dashboard. For that, we must access our dashboard and select the project we are working on if we have done so. It will enable, in the Preaside, the actions that we can carry out on the project, listed below:",
-      "items": [
-        "Add modules",
-        "General project settings",
-        "Manage static files",
-        "Manage Templates"
-      ],
-      "p2": "We click on the icon to add modules and a modal like the following will open:",
-      "i1": [
-        "/images/dashboard/v1/create-module-1.png",
-        "Create module on beyond project 1"
-      ],
-      "p3": "We select blank module. On the next screen, it request the bundle, we then select “page”:",
-      "i2": [
-        "/images/dashboard/v1/create-module-2.png",
-        "Create module on beyond project 2"
-      ],
-      "p4": "On the final screen, it will require us for some information, below it is explained what to place on it:",
-      "i3": [
-        "/images/dashboard/v1/create-module-3.png",
-        "Create module on beyond project 3"
-      ],
-      "items2": [
-        "Module name: welcome",
-        "Web component name: welcome-page.",
-        "Url: \"/welcome\""
-      ],
-      "p5": "Pages and layouts in Beyond are resolved using Web components. If you want to know in detail how they work and why, go to the Web Components Section.",
-      "p6": "We then open the Page object created in the module and add a simple message that says: Welcome!",
-      "p7": "Next, we will make the necessary adjustments to redirect to our welcome module after logging in. What we need to do after is import the \"routing\" object from Beyond, use the pushState method as it provides, and navigate to the welcome page.",
-      "h4#imports": "Imports",
-      "c1": "importing",
-      "h4#pushState": "Navigation",
-      "c2": "pushState",
-      "p8": "We are done! If we retest our form, we'll be able to log in and see how we've been redirected to the welcome page."
     }
   }
 }
+

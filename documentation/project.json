@@ -26,7 +26,13 @@
         "port": 3500,
         "backend": "backend",
         "imports": {
-          "@beyond/ui": "web"
+          "@beyond/ui": "web",
+          "@beyond-js/kernel": "web",
+          "@beyond-js/widgets": "web",
+          "@beyond-js/react-widgets": "web",
+          "@beyond-js/svelte-widgets": "web",
+          "@beyond-js/backend": "web",
+          "@beyond-js/ssr": "web"
         }
       },
       {
@@ -47,7 +53,12 @@
   },
   "libraries": {
     "imports": [
-      "@beyond/ui"
+      "@beyond/ui",
+      "@beyond-js/kernel",
+      "@beyond-js/backend",
+      "@beyond-js/widgets",
+      "@beyond-js/react-widgets",
+      "@beyond-js/svelte-widgets"
     ]
   },
   "static": {

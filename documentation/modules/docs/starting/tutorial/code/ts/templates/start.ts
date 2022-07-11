@@ -27,36 +27,16 @@ const tpl2 = `
 
 const tpl3 = `
 {
-  "name": "home",
-  "platforms": [
-    "backend",
-    "web"
-  ],
+  "name": "auth",
   "bridge": {
     "path": "bridge",
     "files": [
       "*"
     ]
   },
-  "widget": {
-    "is": "page",
-    "route": "/",
-    "element": {
-      "name": "home-page"
-    },
-    "scss": {
-      "path": "scss",
-      "files": [
-        "*"
-      ]
-    },
-    "ts": {
-      "path": "ts",
-      "files": [
-        "*"
-      ]
-    }
-  }
+  "platforms": [
+    "*"
+  ]
 }`;
 export const backend = {
     module1: {

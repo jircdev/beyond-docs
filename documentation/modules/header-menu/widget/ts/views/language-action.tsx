@@ -11,7 +11,7 @@ export function LanguageAction() {
 
     return (
         <>
-            <AppIcon className="language-icon" icon="languages" onClick={onClick}/>
+            <AppIcon className="btn-header-menu language-icon" icon="languages" onClick={onClick}/>
             {toggle && <LanguagesModal onClose={() => setToggle(false)}/>}
         </>
     )

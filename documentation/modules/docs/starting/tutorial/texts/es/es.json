@@ -9,6 +9,7 @@
       "p1": "Este tutorial busca el flujo principal de desarrollo con BeyondJS y demostrar de manera clara los beneficios que este ofrece. El propósito de este tutorial es que los usuarios/programadores puedan  aprender mientras practican, por tanto, los conceptos que definen la estructura de BeyondJS son abordados de forma general, focalizando en hacer un ejercicio rápido, conciso y claro. Para mayor entendimiento de los algunos conceptos, es necesario acceder a las secciones correspondientes en la documentación.",
       "p2": "El tutorial se divide de la siguiente forma: ",
       "items": [
+        "Instalar BeyondJS",
         "Dashboard.",
         "Creación de primer módulo.",
         "Integración con el backend.",
@@ -97,78 +98,7 @@
       "q5": {
         "s1": "La funcionalidad de navegación es un feature del dashboard y es opcional, el proyecto puede navegarse de forma independiente en cualquier navegador.\n"
       },
-      "p9": "Ahora estamos listos para empezar a trabajar en el primer modulo."
-    },
-    "firstModule": {
-      "h1": [
-        "Tutorial",
-        "Primer módulo"
-      ],
-      "p01": "En el dashboard, tambien podemos hacer click sobre el proyecto y esto abrirá un nuevo tab con el listado de módulos del mismo.",
-      "i1": [
-        "/images/tutorial/project-view.png",
-        "BeyondJS - Project view"
-      ],
-      "p0": "Como puede verse, el proyecto trae dos módulos creados, el Home, que responde a la url base del proyecto y el modulo “server-start” del cúal se hablará más adelante.",
-      "p1": "Desde el Dashboard tambien podemos ver el contenido de estos módulos, para ello podemos hacer click en el icono de proyecto en el PreAside y luego seleccionar el módulo que deseemos y podremos ver la estructura del mismo.",
-      "i2": [
-        "/images/tutorial/navigate-module.png",
-        "BeyondJS - Navigating module"
-      ],
-      "p11": "El Dashboard nos permite hacer las siguientes acciones sobre un módulo",
-      "items1": [
-        "Ver los bundles de un modulo.",
-        "Ver los archivos de los bundles.",
-        "Agregar archivos.",
-        "Editar el código fuente de los archivos.",
-        "Generar declaraciones.",
-        "Visualizar errores de código."
-      ],
-      "p3": "La estructura del módulo `home` es la siguiente:",
-      "items": [
-        "widget: Carpeta en donde se encuentra el código del componente page",
-        {
-          "s1": "ts: ",
-          "items": [
-            "`controller.ts`: Objeto controlador del componente, requerido para poder montar el WebComponent en el navegador.",
-            "`views/index.tsx`: Componente react que renderiza la página."
-          ]
-        },
-        "scss: Carpeta para agregar estilos al módulo.",
-        "module.json: Archivo de configuración del módulo (Lugar para definir tipo de bundles y procesadores a utilizar)."
-      ],
-      "p4": "¡Manos a la obra!",
-      "p5": "Teniendo clara la estructura, lo que procede a continuación es crear el formulario de inicio de sesión y agregar algo de estilos, para luego continuar con la conexión al backend node"
-    },
-    "formCreation": {
-      "h2#creating-module": "Creación del Formulario",
-      "p1": "Si has trabajado con React, lo que viene es la parte que seguramente conoces mejor, con algunas sutilezas seguramente. A continuación, editaremos nuestro archivo page.tsx para crear un formulario de inicio de sesión y la funcionalidad básica para actualizar el estado.",
-      "p2": " La edición puede hacerse desde tu IDE de preferencia y tambien desde el Editor integrado del Dashboard, el cual tiene como finalidad brindar ayuda para casos especificos al desarrollador, pero para efectos del tutorial recomendamos usarlo, basta con hacer click en el archivo requerido desde el aside.",
-      "c1": "page"
-    },
-    "styles": {
-      "h2": "Estilos",
-      "p1": "BeyondJS maneja los estilos por defecto con el preprocesador SASS, ahora vamos a nuestro archivo styles.scss y agreguemos un poco de estilo al formulario.",
-      "q2": {
-        "s1": "SASS es un procesador en BeyondJS, si quieres leer a profundidad sobre el mecanismo de procesadores podrás encontrar los detalles en ",
-        "l1": [
-          "/docs/processors",
-          "La seccion de procesadores"
-        ]
-      },
-      "c1": "styles",
-      "p3": "Expliquemos un poco el código anterior:",
-      "items": [
-        "Agregamos estilo básico al formulario, los inputs, el botón de envío y para manejar un mensaje de error.",
-        {
-          "s1": "Custom properties: las custom properties utilizadas, son una estructura básica para manejo de variables incluidas por beyond en el ",
-          "l1": [
-            "/template",
-            "Template del proyecto"
-          ],
-          "s2": "."
-        }
-      ]
+      "p9": "Ahora estamos listos para empezar a trabajar en el primer módulo."
     },
     "backendLogic": {
       "h1": [
@@ -176,7 +106,7 @@
         "Logica Backend"
       ],
       "p1": "Por su naturaleza, Los formularios de inicio de sesión requieren validar los datos contra un backend que se conecte a algún manejador de datos. A continuación, vamos a emular la conexión a la base de datos, creando nuestra integración con un servicio node, que tendrá un usuario y clave predefinidos y así, podremos revisar si la sesión es válida o no. Para lograrlo, haremos uso de websockets.",
-      "p2": "Para realizar la integración cliente/servidor, es necesario crear un bundle de tipo BRIDGE, que cómo su nombre indica, nos permitirá integrar la lógica entre ellos. Para crearlo, haremos uso del formulario de creación de módulos del Dashboard, que se puede acceder desde el icono de + en el Aside."
+      "p2": "Para realizar la integración cliente/servidor, es necesario crear un bundle de tipo BRIDGE, que cómo su nombre indica, nos permitirá integrar la lógica entre ellos. Para crearlo, haremos uso del formulario de creación de módulos del Dashboard, que se puede acceder desde el ícono de + en el Aside."
     },
     "backendInitialization": {
       "h2#backend": "Inicializacion del Backend",
@@ -197,10 +127,10 @@
         "s1": "Si quieres conocer más acerca del manejo de bundles y módulos, puedes ir a la ",
         "l1": [
           "/modules/introduction",
-          "seccion de Modulos"
+          "seccion de módulos"
         ]
       },
-      "p6": "El bundle Bridge, lo crearemos desde el formulario de creación de módulos del Dashboard, al cual se puede acceder desde el icono + en el Aside. Aparecerá un formulario como el siguiente: ",
+      "p6": "El bundle Bridge, lo crearemos desde el formulario de creación de módulos del Dashboard, al cual se puede acceder desde el ícono + en el Aside. Aparecerá un formulario como el siguiente: ",
       "i2": [
         "/images/tutorial/create-module.png",
         "Creating module on BeyondJS Dashboard"
@@ -217,7 +147,8 @@
       ],
       "p7": "A continuación agregamos el nombre del módulo, al cúal llamaremos `auth` y confirmamos.  Cúando el formulario termine la ejecución, BeyondJS habrá  creado una carpeta con la estructura del módulo, que incluye una estructura similar a la del módulo home, pero con un bundle de tipo bridge en vez de page. ",
       "p8": "Nuestro module.json final, debería quedar con la siguiente estructura:",
-      "c4": "platforms2"
+      "c4": "platforms2",
+      "q2": "los module.json actualmente no son visibles desde el dashboard, puedes verlos desde tu IDE de preferencia"
     },
     "bridgeCode": {
       "h1": [
@@ -232,7 +163,7 @@
           "s1": "El comentario mágico /*bundle*/es utilizado por Beyond para identificar que el código a continuación debe ser considerado como código a exportar en el bundle final. Si quieres leer más acerca del funcionamiento de bundles y módulos, te recomendamos ir a La ",
           "l1": [
             "/modules/introduction",
-            "seccion de modulos"
+            "seccion de módulos"
           ],
           "s2": " de la documentacion."
         },
@@ -260,15 +191,8 @@
         "/images/dashboard/v1/bee.png",
         "Beyond Environment Execution - Dashboard - BeyondJs"
       ],
-      "p3": {
-        "s1": "<strong>El Dashboard</strong> es una herramienta muy potente provista por BeyondJS. Puedes aprender más acerca de esto en",
-        "l1": [
-          "/dashboard",
-          "La seccion de detalle"
-        ]
-      },
       "p4": "Para poder implementar la funcionalidad de login con nuestro servidor, debemos importar nuestro objeto auth en el código cliente y asociar el evento onSubmit a nuestro formulario.",
-      "p5": "En BeyondJS los proyectos siguen las mismas directrices para especificación y resolución de nombres y paquetes que npm, de la misma forma que lo hace typescript. Deben tener nombre de modulo y pueden manejar un scope también. En nuestro caso, definimos ambos al momento de crear nuestro proyecto y módulo respectivamente.",
+      "p5": "En BeyondJS los proyectos siguen las mismas directrices para especificación y resolución de nombres y paquetes que npm, de la misma forma que lo hace typescript. Deben tener nombre de módulo y pueden manejar un scope también. En nuestro caso, definimos ambos al momento de crear nuestro proyecto y módulo respectivamente.",
       "p6": "A continuación, en nuestro componente Page importamos el objeto Auth",
       "c1": "view1",
       "p7": "Agregamos nuestra función onSubmity la asociamos al formulario, nuestro código debe quedar de la siguiente forma:",
@@ -278,51 +202,16 @@
       "items": [
         "Creamos un módulo con un widget de tipo page.",
         "Creamos una conexión con un backend node por medio del bundle bridge.",
-        "Repasamos la estructura de resolución de modulos para importar el bridge Auth y poder agregar la validación de inicio de sesión."
+        "Repasamos la estructura de resolución de módulos para importar el bridge Auth y poder agregar la validación de inicio de sesión."
       ],
       "p10": "Ahora solo nos falta redireccionar al usuario a una pantalla de bienvenida."
     },
-    "routing": {
-      "h1": [
-        "Tutorial",
-        "Routing"
-      ],
-      "p1": "Lo primero que debemos hacer, es crear un nuevo módulo con un bundle de tipo Page, esta vez lo haremos desde el Dashboard. Para eso, debemos acceder a nuestro dashboard y seleccionar el proyecto que estamos trabajando, si no lo hemos hecho. Esto habilitará en el Preaside las acciones que podemos realizar sobre el proyecto, Las listamos a continuación:",
-      "items": [
-        "Agregar modulos",
-        "Configuración general del proyecto",
-        "Gestionar archivos estáticos",
-        "Gestionar Templates"
-      ],
-      "p2": "Hacemos clic en el ícono para agregar módulos y se abrirá un modal como el siguiente:",
-      "i1": [
-        "/images/dashboard/v1/create-module-1.png",
-        "Create module on beyond project 1"
-      ],
-      "p3": "Seleccionamos módulo en blanco. Y en la siguiente pantalla, nos pide el bundle, seleccionamos \"page\":",
-      "i2": [
-        "/images/dashboard/v1/create-module-2.png",
-        "Create module on beyond project 2"
-      ],
-      "p4": "En la pantalla final, nos pedirá algunos datos, a continuación, se explica que colocar:",
-      "i3": [
-        "/images/dashboard/v1/create-module-3.png",
-        "Create module on beyond project 3"
-      ],
-      "items2": [
-        "Module name: welcome",
-        "Web component name: welcome-page.",
-        "Url: \"/welcome\""
-      ],
-      "p5": "Las páginas y layouts en Beyond se resuelven haciendo uso de Web components. Si quieres saber en detalle cómo funcionan y porqué, dirígete a la sección de Web Components.",
-      "p6": "Abrimos el objeto Page creado en el módulo y agregaremos un mensaje simple que diga: ¡Bienvenido!",
-      "p7": "A continuación, Haremos los ajustes necesarios, para redireccionar a nuestro módulo de bienvenida, luego de iniciar sesión. Lo que debemos hacer a continuación, es importar el objeto \"routing\" de Beyond, para usar el método pushState que provee y navegar a la página de Bienvenida.",
-      "h4#imports": "Importación",
-      "c1": "importing",
-      "h4#pushState": "Navegación",
-      "c2": "pushState",
-      "p8": "¡Listo! Si volvemos a probar nuestro formulario, podremos iniciar sesión y ver cómo nos dirigimos a la página de bienvenida."
-    },
-    "algo": "algo"
+    "p3": {
+      "s1": "<strong>El Dashboard</strong> es una herramienta muy potente provista por BeyondJS. Puedes aprender más acerca de esto en",
+      "l1": [
+        "/dashboard",
+        "La seccion de detalle"
+      ]
+    }
   }
 }

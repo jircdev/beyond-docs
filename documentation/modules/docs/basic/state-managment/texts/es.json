@@ -15,16 +15,16 @@
         "s1": "Puedes ver un ejemplo funcional de un contador que comparte el manejo de estado entre un componente creado con <strong>React</strong>, uno creado con <strong>Svelte</strong> y otro con <strong>Vue</strong> en ",
         "l1": [
           "/examples/sm/counter",
-          " Este ejemplo"
+          " Este ejemplo."
         ]
       },
       "p3": {
-        "t1": "Asimismo, BeyondJS Define una estructura para el manejo de estado. El objeto que maneja el estado, debe ser disponibilizado por medio del método createWidgetStore del controlador del widget. Este método debe retornar un objeto que implemente la interfaz",
+        "s1": "Asimismo, BeyondJS Define una estructura para el manejo de estado. El objeto que maneja el estado, debe ser disponibilizado por medio del método createWidgetStore del controlador del widget. Este método debe retornar un objeto que implemente la interfaz ",
         "l1": [
           "/api/IWidgetStore",
           "IWidgetStore"
         ],
-        "t2": " esencialmente si se espera trabajar con ssr."
+        "s2": " esencialmente si se espera trabajar con ssr."
       }
     }
   }

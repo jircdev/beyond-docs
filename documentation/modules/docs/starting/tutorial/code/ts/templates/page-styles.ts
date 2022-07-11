@@ -20,7 +20,7 @@ export const pageStyles = `
     display: flex;
     flex-direction: column;
     gap: 15px;
-    background: var(--element-bg);
+    background: var(--bg-element);
     padding: 30px;
     width: 100%;
     max-width: 500px;

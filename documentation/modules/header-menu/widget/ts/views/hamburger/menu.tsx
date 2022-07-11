@@ -1,14 +1,14 @@
 import * as React from "react";
-import {AppManager} from '@beyond/docs/manager';
 import {widgets} from '@beyond-js/widgets/render';
 
 export function HamburgerMenu() {
     const showMenu = event => {
         event.preventDefault();
         const menu = [...widgets.instances].find(item => item.localName === 'menu-layout');
+        console.log(12, menu.getAttribute('opened'));
         const option = menu.getAttribute('opened') === 'true' ? 'false' : 'true';
         menu.setAttribute('opened', option);
-
+        console.log(10, option)
     }
 
     return (

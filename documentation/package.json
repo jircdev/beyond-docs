@@ -22,6 +22,8 @@
     "is-hotkey": "^0.2.0",
     "mysql": "^2.18.1",
     "mysql-import": "^3.0.6",
+    "vue": "^3.2.31",
+    "universal-model-ng-react-svelte-vue": "^0.3.3",
     "mysql2": "^2.2.5",
     "perfect-scrollbar": "^1.5.5",
     "prismjs": "^1.27.0",

@@ -12,11 +12,11 @@
   align-content: center;
   position: sticky;
   top: 0;
+
   &.is-sticky {
     transition: 300ms ease-in all;
     background: var(--primary-surface);
   }
-
 
   &.home-header {
 
@@ -31,6 +31,13 @@
 
   .menu-container {
     z-index: 3;
+
+  }
+
+  .menu-list__container {
+    display: grid;
+
+    margin: -15px 0; // negative margin to ignore the padding added by the container
   }
 
   .header__menu {
@@ -40,8 +47,9 @@
     display: flex;
     gap: 15px;
     padding: 0 1rem;
-    margin: 0;
+
     align-items: center;
+
     align-content: center;
     flex-shrink: 1;
     font-family: var(--font-family);
@@ -50,23 +58,30 @@
       list-style: none;
       position: relative;
       padding: 5px;
+      height: 100%;
       display: flex;
+      align-items: center;
 
       &:after {
         position: absolute;
-        bottom: -5px;
+        bottom: 2px;
         left: 0;
         right: 0;
         width: 0;
         content: " ";
         transition: width 300ms;
         height: 1px;
-        background: var(--accent-color);
+        background: var(--secondary-accent);
       }
 
       a {
         text-decoration: none;
-        color: var(--primary);
+
+        color: var(--text-on-primary);
+
+        &:hover {
+          color: var(--secondary-accent);
+        }
 
         &:after {
           display: none;

@@ -7,7 +7,7 @@ import {LanguageAction} from "./language-action";
 import {useBinder, useTexts} from "@beyond/docs/store";
 import {Notice} from "./notice";
 import {module} from "beyond_context";
-import {HamburgerMenu} from "./hamburger-menu";
+import {HamburgerMenu} from "./hamburger/menu";
 import {routing} from "@beyond-js/kernel/routing";
 
 export function TopHeader({attributes, widget, store}) {
@@ -18,12 +18,10 @@ export function TopHeader({attributes, widget, store}) {
     useBinder([routing], () => setUrl(routing.uri.uri));
 
     React.useEffect(() => {
-
         document.querySelector("body").addEventListener('scroll', () => {
             if (!ref?.current) return;
             if (ref.current.offsetTop > 50) ref.current.classList.add('is-sticky');
             else ref.current.classList.remove('is-sticky');
-
         });
         if (!ref?.current) return;
 
@@ -56,12 +54,15 @@ export function TopHeader({attributes, widget, store}) {
                     <div className="mobile__header">
 
                         <Link href="/"><BeyondImage src="/images/beyond-logo.png" alt="beyondjs"/></Link>
-                        <HamburgerMenu/>
+                        <div className="header-mobile-menu">
+                            <ThemeToggleButton/>
+                            <LanguageAction/>
+                            <HamburgerMenu/>
+                        </div>
+
                     </div>
                     <div className="menu-list__container">
                         <ul className="header__menu">
-                            <li><ThemeToggleButton/></li>
-                            <li><LanguageAction/></li>
                             <li><a href="/docs/tutorial/start">{texts.tutorial}</a></li>
                             <li><a href="/docs/intro">{texts.documentation}</a></li>
                             <li><a href="/examples">{texts.examples}</a></li>

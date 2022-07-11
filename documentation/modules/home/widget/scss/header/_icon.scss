@@ -23,11 +23,13 @@
 
   @media(max-width: 600px) {
     .beyond__icon, .beyond__surface-icon {
-      top: -5%;
+      top: -10%;
+      left: -15%;
+      position: absolute;
+      //transform: translate(0, -50%);
 
       svg {
         height: 100%;
-        top: 0%;
       }
     }
   }

@@ -38,7 +38,7 @@ export /*bundle*/ function Title(props) {
 export /*bundle*/ function List(props) {
     const {content, children, element} = props;
     const [name, className] = element.split(".");
-    console.log(12, element)
+
     if (!Array.isArray(content)) {
         throw new Error('The content passed must be an array');
     }

@@ -1,0 +1,77 @@
+{
+  "es": {
+    "firstModule": {
+      "h1": [
+        "Tutorial",
+        "Primer módulo"
+      ],
+      "p0": "En el dashboard, también podemos hacer click sobre el proyecto y esto abrirá un nuevo tab con el listado de módulos del mismo.",
+      "i1": [
+        "/images/tutorial/project-view.png",
+        "BeyondJS - Project view"
+      ],
+      "p1": "Como puede verse, el proyecto trae dos módulos creados, el Home, que responde a la URL base del proyecto y el módulo “server-start” del cúal se hablará más adelante.",
+      "p2": "El Dashboard nos permite hacer las siguientes acciones sobre un módulo",
+      "items1": [
+        "Ver y gestionar módulos.",
+        "Agregar archivos.",
+        "Editar el código fuente de los archivos.",
+        "Generar declaraciones.",
+        "Visualizar errores de código.",
+        "Gestionar configuraciones generales del proyecto",
+        "Gestionar Templates"
+      ],
+      "p3": "Desde el Dashboard, podemos también navegar el módulo accediendo desde el menu lateral (PreAside), en el icono del proyecto Activo, que desplegará el aside con el listado de módulos del proyecto,  hacemos click sobre el módulo home y se mostrará la lista de bundles contenidos en el módulo y el contenido de estos, procesadores y archivos.",
+      "i2": [
+        "/images/tutorial/navigate-module.png",
+        "BeyondJS - Navigating module"
+      ],
+      "p10": "Desde el Dashboard, podemos también navegar el módulo accediendo desde el menu lateral (PreAside), en el icono del proyecto Activo, que desplegará el aside con el listado de módulos del proyecto,  hacemos click sobre el módulo home y se mostrará la lista de bundles contenidos en el módulo y el contenido de estos, procesadores y archivos.",
+      "p4": "La estructura del módulo `home` es la siguiente:",
+      "items": [
+        "widget: Carpeta en donde se encuentra el código del componente page",
+        {
+          "s1": "ts: ",
+          "items": [
+            "`controller.ts`: Objeto controlador del componente, requerido para poder montar el WebComponent en el navegador.",
+            "`views/index.tsx`: Componente react que renderiza la página."
+          ]
+        },
+        "scss: Carpeta para agregar estilos al módulo.",
+        "module.json: Archivo de configuración del módulo (Lugar para definir tipo de bundles y procesadores a utilizar)."
+      ],
+      "p5": "¡Manos a la obra!",
+      "p6": "Teniendo clara la estructura, lo que procede a continuación es crear el formulario de inicio de sesión y agregar algo de estilos, para luego continuar con la conexión al backend node"
+    },
+    "formCreation": {
+      "h2#creating-module": "Creación del Formulario",
+      "p1": "Si has trabajado con React, lo que viene es la parte que seguramente conoces mejor, con algunas sutilezas seguramente. A continuación, editaremos nuestro archivo page.tsx para crear un formulario de inicio de sesión y la funcionalidad básica para actualizar el estado.",
+      "p2": " La edición puede hacerse desde tu IDE de preferencia y también desde el Editor integrado del Dashboard, el cual tiene como finalidad brindar ayuda para casos especificos al desarrollador, pero para efectos del tutorial recomendamos usarlo, basta con hacer click en el archivo requerido desde el aside.",
+      "c1": "page"
+    },
+    "styles": {
+      "h2": "Estilos",
+      "p1": "BeyondJS maneja los estilos por defecto con el preprocesador SASS, ahora vamos a nuestro archivo styles.scss y agreguemos un poco de estilo al formulario.",
+      "q2": {
+        "s1": "SASS es un procesador en BeyondJS, si quieres leer a profundidad sobre el mecanismo de procesadores podrás encontrar los detalles en ",
+        "l1": [
+          "/docs/processors",
+          "La seccion de procesadores"
+        ]
+      },
+      "c1": "styles",
+      "p3": "Expliquemos un poco el código anterior:",
+      "items": [
+        "Agregamos estilo básico al formulario, los inputs, el botón de envío y para manejar un mensaje de error.",
+        {
+          "s1": "Custom properties: las custom properties utilizadas, son una estructura básica para manejo de variables incluidas por beyond en el ",
+          "l1": [
+            "/template",
+            "Template del proyecto"
+          ],
+          "s2": "."
+        }
+      ]
+    }
+  }
+}

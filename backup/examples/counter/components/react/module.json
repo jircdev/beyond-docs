@@ -1,0 +1,20 @@
+{
+  "name": "examples/sm/counter-react",
+  "widget": {
+    "element": {
+      "name": "counter-react"
+    },
+    "sass": {
+      "path": "/widget/scss",
+      "files": [
+        "*"
+      ]
+    },
+    "ts": {
+      "path": "/widget/ts",
+      "files": [
+        "*"
+      ]
+    }
+  }
+}

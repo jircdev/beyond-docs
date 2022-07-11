@@ -12,9 +12,12 @@
     transform: rotateX(0deg) rotateY(0deg);
 
   }
+  50% {
+    transform: rotateX(20deg);
+  }
   to {
     //transform: rotate3d(1, 1, 1, 360deg);
-    transform: rotateX(20deg);
+    transform: rotateX(0deg) rotateY(0deg);
 
   }
 }

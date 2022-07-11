@@ -1,0 +1,23 @@
+{
+  "name": "examples/sm/counter",
+  "widget": {
+    "hmr": true,
+    "element": {
+      "name": "examples-counter-page"
+    },
+    "route": "/examples/sm/counter",
+    "is": "page",
+    "scss": {
+      "path": "/widget/scss",
+      "files": [
+        "*"
+      ]
+    },
+    "ts": {
+      "path": "/widget/ts",
+      "files": [
+        "*"
+      ]
+    }
+  }
+}

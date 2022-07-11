@@ -10,70 +10,68 @@ interface IProps {
 }
 
 export /*bundle*/
-const RightAside = React.memo(({}: IProps) => {
+const RightAside = ({}: IProps) => {
+    const {component, texts: {rightAside: {title}}} = useDocsContext();
+    const [titles, setTitles] = React.useState([]);
+    const ref = React.useRef(null);
 
+    React.useEffect(() => {
+        const items: HTMLElement[] = Array.from(ref.current.querySelectorAll('li'));
 
-        const {component, texts: {rightAside: {title}}} = useDocsContext();
+        const callback = (entries) => {
+            const check = item => {
+                const {top} = item.boundingClientRect;
+                if (top < 500) {
+                    const {target} = item;
+                    const listItem = items.find(item => item.dataset.id === target.id);
+                    const active = items.find(item => item.classList.contains('item--active'));
+                    if (active) active.classList.remove('item--active')
+                    listItem.classList.add('item--active');
+                }
 
-        const [titles, setTitles] = React.useState([]);
-
-
-        const ref = React.useRef(null);
-        React.useEffect(() => {
-            const items: HTMLElement[] = Array.from(ref.current.querySelectorAll('li'));
-
-            const callback = (entries) => {
-                const check = item => {
-                    const {top} = item.boundingClientRect;
-                    if (top < 500) {
-                        const {target} = item;
-                        const listItem = items.find(item => item.dataset.id === target.id);
-                        const active = items.find(item => item.classList.contains('item--active'));
-                        if (active) active.classList.remove('item--active')
-                        listItem.classList.add('item--active');
-                    }
-
-                };
-                entries.forEach(check);
             };
+            entries.forEach(check);
+        };
 
-            const observer = new IntersectionObserver(callback, {
-                root: null,
-                rootMargin: '-50% 0% -50% 0%',
-                threshold: 0
-            });
-            titles.forEach(item => observer.observe(item))
+        const observer = new IntersectionObserver(callback, {
+            root: null,
+            rootMargin: '-50% 0% -50% 0%',
+            threshold: 0
         });
+        titles.forEach(item => observer.observe(item))
+    });
 
-        React.useEffect(() => {
-            window?.setTimeout(() => {
-                const titles = Array.from(component.shadowRoot.querySelectorAll('h1,h2,h3'));
-                setTitles(titles);
-            }, 50);
-            const body = document.querySelector('body');
-            body.scroll({
-                top: 0,
-                left: 0,
-                behavior: "smooth"
-            });
-        }, []);
+    React.useEffect(() => {
+        window?.setTimeout(() => {
+            const titles = Array.from(component.shadowRoot.querySelectorAll('h1,h2,h3'));
+            setTitles(titles);
+            console.log(0.1, titles);
+        }, 50);
 
-        if (!titles) return null;
-
-        const output = titles.map((item, i) => {
-            return <RightAsideItem key={`${item.id}.${i}`} item={item} container={component.shadowRoot}/>
-
+        const body = document.querySelector('body');
+        body.scroll({
+            top: 0,
+            left: 0,
+            behavior: "smooth"
         });
+    }, []);
 
-        return (
-            <aside className="docs__aside-navbar" ref={ref}>
-                <div className="aside__container">
-                    <h4>{title}</h4>
-                    <ol>
-                        {output}
-                    </ol>
-                </div>
-            </aside>
-        )
-    }
-);
+    if (!titles) return null;
+
+    const output = titles.map((item, i) => {
+        return <RightAsideItem key={`${item.id}.${i}`} item={item} container={component.shadowRoot}/>
+
+    });
+
+    return (
+        <aside className="docs__aside-navbar" ref={ref}>
+            <div className="aside__container">
+                <h4>{title}</h4>
+                <ol>
+                    {output}
+                </ol>
+            </div>
+        </aside>
+    )
+}
+

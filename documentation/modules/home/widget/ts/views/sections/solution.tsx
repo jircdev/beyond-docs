@@ -16,7 +16,7 @@ export function Solution() {
             </Card>
             <Card title={jamStack.title}
                   img="isomorphic"
-                  href="/docs/rendering">
+                  href="/docs/widgets/rendering">
                 <CHtml>{jamStack.one}</CHtml>
                 <Elink href="https://jamstack.org/">{jamStack.jamStack}</Elink>
                 {jamStack.two}<Elink href="https://micro-frontends.org/">{jamStack.microfrontends}</Elink>.

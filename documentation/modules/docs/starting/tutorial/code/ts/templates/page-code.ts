@@ -1,6 +1,6 @@
 export const PageCode = `
 import * as React from "react";
-import {Auth} from "@testing/login/home/bridge";
+import { Auth } from "@testing/login/auth";
 
 interface IForm {
     disabled?: boolean;
@@ -26,7 +26,7 @@ function View(): JSX.Element {
             event.preventDefault();
             const response = await model.login(username, password);
             if (response.data?.valid) {
-                console.log('iniciamos sesion');
+                console.log('valid data');
                 return;
             }
             setError(response.error);

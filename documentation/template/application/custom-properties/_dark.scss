@@ -18,7 +18,7 @@
   --secondary-background: #{$secondary-bg};
   //background
   //--background: linear-gradient(#{ darken(#121F36, 0%)}, #{ darken(#121F36, 10%)});
-  --background: #183045;
+
   --text-color: rgba(255, 255, 255, .6);
   --text-title-color: var(--text-on-primary);
   --text-second-color: var(--gray-dark);
@@ -28,7 +28,7 @@
   --separator-color: var(--gray-lighter);
   --app-aside-link-selected: #fff;
   --primary-surface: #101625;
-
+  --background: #101625;
   //elements
 
   --app-element-surface: #{rgba(#000, .7)};

@@ -1,5 +1,15 @@
 @import "~template/sass/mixins/set-media";
 
+.header-mobile-menu {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+
+  .btn-header-menu {
+    padding: .5rem;
+  }
+}
+
 .top__header {
   width: 100%;
   z-index: 12;
@@ -40,8 +50,6 @@
     justify-content: end;
     flex-grow: 0;
     flex-shrink: 0;
-
-
 
     .menu-list__container {
       position: absolute;

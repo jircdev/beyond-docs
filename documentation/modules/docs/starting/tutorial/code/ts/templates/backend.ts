@@ -6,11 +6,11 @@ import {Auth} from "@testing/login/home/bridge";
 `
 export const connection = {
     view1: {
-        title: 'view.tsx',
+        title: 'home/views/index.tsx',
         tpl: tpl1
     },
     view2: {
-        title: 'view.tsx',
+        title: 'home/views/index.tsx',
         tpl: PageCode
     },
     bridge: {

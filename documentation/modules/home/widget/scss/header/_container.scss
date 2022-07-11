@@ -4,12 +4,11 @@
 
   > .container {
     display: grid;
+    z-index: -1;
     grid-template-columns: 55% 1fr;
-    z-index: 1;
     position: relative;
     aspect-ratio: 16 / 7;
     margin: 1rem auto auto;
-
     grid-gap: 30px;
     align-items: center;
     justify-content: space-between;

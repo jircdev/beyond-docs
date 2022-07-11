@@ -1,12 +1,8 @@
 {
   "name": "database/connector",
-  "platforms": [
-    "backend"
-  ],
+  "description": "caracas",
   "ts": {
-    "hmr": true,
-    "name": "database/connector",
-    "path": "/ts",
+    "path": "ts",
     "files": [
       "*"
     ]

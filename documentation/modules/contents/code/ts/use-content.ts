@@ -20,9 +20,7 @@ export /*bundle*/function useContent(contentId, sub, hmrChanged): [IControl, boo
     const [texts, setTexts] = React.useState({});
     React.useEffect(() => {
         const modelTexts = new CurrentTexts(module.resource, true);
-        // console.log(99, module.resource, contentId, modelTexts)
         const triggerEvent = () => {
-            // console.log(99.3, modelTexts)
             setReady(modelTexts.ready);
             setTexts(modelTexts.value)
         };
@@ -48,10 +46,7 @@ export /*bundle*/function useContent(contentId, sub, hmrChanged): [IControl, boo
     }, [contentId, hmrChanged])
 
     const isFetching = fetching && !ready;
-    if (!texts) {
-        console.log(99.2, "no hubo textos de", contentId);
-        console.log()
-    }
+
     return [content, isFetching, texts];
 
 }

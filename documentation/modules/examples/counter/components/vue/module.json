@@ -1,0 +1,30 @@
+{
+  "name": "examples/sm/counter-vue",
+  "widget": {
+    "hmr": true,
+    "element": {
+      "name": "counter-vue",
+      "props": [
+        "number"
+      ]
+    },
+    "sass": {
+      "path": "/widget/vue",
+      "files": [
+        "*"
+      ]
+    },
+    "vue": {
+      "path": "/widget/vue",
+      "files": [
+        "*"
+      ]
+    },
+    "ts": {
+      "path": "/widget/vue",
+      "files": [
+        "*"
+      ]
+    }
+  }
+}
