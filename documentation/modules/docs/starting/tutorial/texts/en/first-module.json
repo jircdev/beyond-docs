@@ -10,7 +10,7 @@
         "/images/tutorial/project-view.png",
         "BeyondJS - Navigating module"
       ],
-      "p1": "As can be observed, the project has two modules created, the Home, which is a response to the base URL of the project, and the “server-start” module, which will be addressed later.",
+      "p1": "As can be observed, the project has two modules created, the Home, which is a response to the base URL of the project, and the “start-backend” module, which will be addressed later.",
       "p2": "The dashboard allows us to",
       "items1": [
         "See and manage modules.",
@@ -33,7 +33,12 @@
           "s1": "ts: ",
           "items": [
             "controller.ts: Component controller object, required to mount the WebComponent in the browser.",
-            "views/index.tsx: React component that renders the page."
+            {
+              "s1": "views",
+              "items": [
+                "index.tsx: React component that renders the page."
+              ]
+            }
           ]
         },
         "scss: Folder for adding styles to the module",

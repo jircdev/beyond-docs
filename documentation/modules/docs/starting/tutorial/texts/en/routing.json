@@ -33,6 +33,14 @@
       "c1": "importing",
       "h4#pushState": "Navigation",
       "c2": "pushState",
+      "q1": {
+        "s1": "BeyondJS provides a routing object to interact with the navigation api, you can learn more about it in the section on ",
+        "l1": [
+          "/docs/routing",
+          " Routing "
+        ],
+        "s2": " page."
+      },
       "p8": "We are done! now we only need to refresh our form page to let BeyondJS register the new URL. If we retest our form, we'll be able to log in and see how we've been redirected to the welcome page."
     }
   }

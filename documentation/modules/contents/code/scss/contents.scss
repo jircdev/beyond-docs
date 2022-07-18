@@ -20,6 +20,7 @@ code *, pre * {
 
 .page__main-content {
   padding: 2rem;
+  position: relative;
   @include set-media('small-screen', false, max) {
     margin-top: 1rem;
     padding: 0;

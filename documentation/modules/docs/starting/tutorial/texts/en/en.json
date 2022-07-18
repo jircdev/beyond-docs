@@ -52,13 +52,11 @@
           "items": [
             "<strong>project.json</strong>: Contains the basic configuration of the project (may vary depending on the type and needs of the project).",
             {
-              "q1": {
-                "s1": "<strong>/modules</strong>: Folder where the default project modules are created. This value is configurable. Reed more about it in the ",
-                "l1": [
-                  "/projects/json",
-                  "Project Confirguration chapter"
-                ]
-              }
+              "s1": "<strong>/modules</strong>: Folder where the default project modules are created. This value is configurable. Reed more about it in the ",
+              "l1": [
+                "/projects/json",
+                "Project Confirguration chapter"
+              ]
             },
             {
               "s1": "<strong>template</strong>: This folder contains all the needed elements to define the general project template.",

@@ -29,6 +29,13 @@ aside.docs__menu {
     * {
       font-size: .85rem;
     }
+
+    @include set-media(tablet, false, 'min') {
+      &.mobile__menu {
+        display: none;
+      }
+    }
+
   }
 
   @include set-media('tablet', false, 'min') {

@@ -10,7 +10,7 @@
         "/images/tutorial/project-view.png",
         "BeyondJS - Project view"
       ],
-      "p1": "Como puede verse, el proyecto trae dos módulos creados, el Home, que responde a la URL base del proyecto y el módulo “server-start” del cúal se hablará más adelante.",
+      "p1": "Como puede verse, el proyecto trae dos módulos creados, el Home, que responde a la URL base del proyecto y el módulo “start-backend” del cúal se hablará más adelante.",
       "p2": "El Dashboard nos permite hacer las siguientes acciones sobre un módulo",
       "items1": [
         "Ver y gestionar módulos.",
@@ -26,7 +26,6 @@
         "/images/tutorial/navigate-module.png",
         "BeyondJS - Navigating module"
       ],
-      "p10": "Desde el Dashboard, podemos también navegar el módulo accediendo desde el menu lateral (PreAside), en el icono del proyecto Activo, que desplegará el aside con el listado de módulos del proyecto,  hacemos click sobre el módulo home y se mostrará la lista de bundles contenidos en el módulo y el contenido de estos, procesadores y archivos.",
       "p4": "La estructura del módulo `home` es la siguiente:",
       "items": [
         "widget: Carpeta en donde se encuentra el código del componente page",
@@ -34,7 +33,12 @@
           "s1": "ts: ",
           "items": [
             "`controller.ts`: Objeto controlador del componente, requerido para poder montar el WebComponent en el navegador.",
-            "`views/index.tsx`: Componente react que renderiza la página."
+            {
+              "s1": "`views",
+              "items": [
+                "`index.tsx`: Componente react que renderiza la página.\""
+              ]
+            }
           ]
         },
         "scss: Carpeta para agregar estilos al módulo.",

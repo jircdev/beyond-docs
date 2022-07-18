@@ -5,7 +5,7 @@
         "Tutorial",
         "Routing"
       ],
-      "p1": "Lo primero que debemos hacer, es crear un nuevo módulo con un bundle de tipo Page, esta vez lo haremos desde el Dashboard. Para eso, debemos acceder a nuestro dashboard y seleccionar el proyecto que estamos trabajando, si no lo hemos hecho. Esto habilitará en el PreAside las acciones que podemos realizar sobre el proyecto, Las listamos a continuación:",
+      "p1": "Lo primero que debemos hacer, es crear un nuevo módulo con un bundle de tipo Page, esta vez lo haremos desde el Dashboard. Accedemos al Dashboard y seleccionamos el proyecto (si no lo hemos hecho). Esto habilitará en el PreAside las acciones que podemos realizar sobre el proyecto.",
       "p2": "Hacemos clic en el ícono para agregar módulos y se abrirá un modal como el siguiente:",
       "i1": [
         "/images/dashboard/v1/create-module-1.png",
@@ -33,6 +33,13 @@
       "c1": "importing",
       "h4#pushState": "Navegación",
       "c2": "pushState",
+      "q1": {
+        "s1": "BeyondJS provee un objeto routing para interactuar con la api de navegación, puedes aprender más al respecto en la sección de ",
+        "l1": [
+          "/docs/routing",
+          " Enrutamiento."
+        ]
+      },
       "p8": "Ahora sólo debemos refrescar la página del formulario para que BeyondJS registre la ruta nueva creada y  Si volvemos a probar nuestro formulario, podremos iniciar sesión y ver cómo nos dirigimos a la página de bienvenida."
     }
   }

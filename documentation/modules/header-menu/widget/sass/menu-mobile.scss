@@ -15,10 +15,6 @@
   z-index: 12;
   border-bottom: 1px solid var(--app-element-border-color-1);
 
-  .menu-container {
-    padding: 0;
-  }
-
   .mobile__header {
 
     display: flex;
@@ -46,10 +42,12 @@
   }
 
   @include set-media('tablet', false, 'max') {
+
     display: flex;
     justify-content: end;
     flex-grow: 0;
     flex-shrink: 0;
+
 
     .menu-list__container {
       position: absolute;
