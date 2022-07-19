@@ -52,7 +52,6 @@ export class Contents extends Events implements IWidgetStore {
     }
 
     hydrate(cached: IContent[]) {
-        console.log(cached);
         this.#loading = false;
         this.#loaded = true;
         cached.forEach(company => this.#value.push(company));

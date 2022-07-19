@@ -9,7 +9,6 @@
     "element": {
       "name": "contents-subpage"
     },
-    "name": "docs-page",
     "layout": "main-layout",
     "route": "/docs/${content}/${sub}",
     "is": "page",

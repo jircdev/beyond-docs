@@ -16,11 +16,10 @@ export /*bundle*/ function DevServer() {
 
     return (
         <>
-            <Document tpls={tpls} moduleId={module.resource} textId="server"/>
             <Document
                 tpls={tpls}
-                moduleId={module.resource} textId="properties"
-                nextLinks={["/docs/distributions"]}
+                moduleId={module.resource}
+                nextLinks={["/docs/foundations/distributions"]}
             />
         </>
     );

@@ -23,9 +23,16 @@
     transition: all 200ms ease-in;
     padding-top: $padding;
 
-    .beyond-element-image img {
-      height: 50px;
-      aspect-ratio: 1/1;
+    .beyond-element-image {
+      display: flex;
+      justify-items: center;
+      text-align: center;
+      justify-content: center;
+
+      img {
+        height: 50px;
+        aspect-ratio: 1/1;
+      }
     }
 
     header {
@@ -34,8 +41,9 @@
       }
 
       h3 {
-        padding: 0.5rem $padding;
+        //padding: 0.5rem $padding;
         border-left: 1px solid var(--primary);
+        text-align: center;
       }
     }
 
@@ -55,7 +63,7 @@
 
   }
 
-  @media(max-width: 1200px) and (min-width: 601px) {
+  @media(max-width: 1000px) and (min-width: 601px) {
 
     .docs__card {
       display: grid;
@@ -65,11 +73,12 @@
       header {
         display: grid;
         align-content: center;
-        justify-content: center;
         justify-items: center;
 
         h3 {
+          width: 100%;
           font-size: 1.2rem;
+
         }
       }
     }
@@ -80,7 +89,6 @@
   }
   @media (min-width: 801px) and (max-width: 1200px) {
     grid-gap: 1rem;
-
   }
 
 }

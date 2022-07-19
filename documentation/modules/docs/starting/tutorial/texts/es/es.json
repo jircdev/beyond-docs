@@ -63,6 +63,11 @@
               "l1": [
                 "/projects/json",
                 "Configuracion de Proyectos"
+              ],
+              "items": [
+                "<strong>backend</strong>: it starts the backend platform",
+                "<strong>home</strong>: basic page module with a default route",
+                "<strong>layouts</strong>: Folder with default layout of the web project"
               ]
             },
             {

@@ -54,8 +54,13 @@
             {
               "s1": "<strong>/modules</strong>: Folder where the default project modules are created. This value is configurable. Reed more about it in the ",
               "l1": [
-                "/projects/json",
+                "/docs/projects/json",
                 "Project Confirguration chapter"
+              ],
+              "items": [
+                "<strong>backend</strong>: it starts the backend platform",
+                "<strong>home</strong>: basic page module with a default route",
+                "<strong>layouts</strong>: Folder with default layout of the web project"
               ]
             },
             {

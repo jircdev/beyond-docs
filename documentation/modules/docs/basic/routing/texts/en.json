@@ -22,7 +22,7 @@
       "p3": "The BeyondJS routing object exists to cover the following scenarios:",
       "items": [
         "Provide the developer with a simple API to perform complex URL treatments, such as validations, redirections, and variable management.",
-        "Identify the flow and history of user navigation within the applicative. The history object of the browser has a very limited treatment of it, and only allows access to the number of existing navigations. BeyondJS on the other hand manages a detailed history.",
+        "Identify the flow and history of user navigation within the applicative. The `history` object of the browser has a very limited treatment of it, and only allows access to the number of existing navigations. BeyondJS on the other hand manages a detailed history.",
         "Since hybrid applications made with JavaScript resolve file handlingutilizing a different protocol than applications accessed from a browser, BeyondJS treats it to abstract the developer from it and ensure the same behavior regardless of the platform they are working."
       ]
     },
@@ -30,8 +30,10 @@
       "h2#navigation": "Navigation",
       "p1": "To maintain compatibility with the known APIs, the Routing object has methods homologous to the ones of the browser history API. They cover equal needs, but at the same time, they are in charge of unifying the behaviors between the platforms and updating the elements of the history of BeyondJS.",
       "p2": "The available methods are:",
+      "h4#pushState.inline": "`routing.pushState`",
       "p3": "Record a new item in the history",
       "c2": "tpl2",
+      "h4#replaceState0.inline": "`routing.replaceState`",
       "p4": "Modify the current URL without adding new items to the history.",
       "c3": "tpl3",
       "p5": "It has the same interface as the pushState method of the history object of the Web API, and additionally, it is in charge of updating the history of BeyondJS."

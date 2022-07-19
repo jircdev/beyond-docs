@@ -4,8 +4,34 @@ import {module} from "beyond_context";
 
 const tpls = {
     beyond: {language: 'shell', tpl: 'beyond'},
-    tpl1: {language: 'shell', tpl: 'beyond'},
-    tpl2: {language: 'shell', tpl: 'beyond'}
+    tpl1: {
+        language: 'json', tpl: `
+{
+  "name": "project-name",
+  "version": "1.0.0",
+  "title": "Project title",
+  "description": "Description"
+  "languages": {
+    "default": "en",
+    "supported": [
+      "en"
+    ]
+  },,
+  "modules": {
+    "path": "modules"
+  }
+}
+`
+    },
+    tpl2: {language: 'json', tpl: '' + `
+
+{
+  "applications": [
+    "path-to-project/project.json"
+  ]
+}
+
+`}
 }
 
 export /*bundle*/ function ProjectCreate() {
@@ -19,7 +45,7 @@ export /*bundle*/ function ProjectCreate() {
             <Document
                 {...attrs} textId="manual"
 
-                nextLinks={["/docs/tutorial/bridge"]}
+                nextLinks={["/docs/projects/structure", "/docs/projects/json"]}
             />
         </>
     );

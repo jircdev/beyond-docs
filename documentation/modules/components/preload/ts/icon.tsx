@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {AppIcon} from "@beyond/docs/ui/icons";
 
-export function IconLogo() {
+export /*bundle*/ function BeyondIsotype() {
     return (
 
         <div className="ds-preload__icon-container">

@@ -1,0 +1,48 @@
+{
+  "en": {
+    "features": {
+      "h2#modular": "Diseño Modular",
+      "p1": "La arquitectura modular es todo en BeyondJS, permite al programador desarrollar proyectos desacoplados al dividirlos en partes más pequeñas que reciben una configuración mínima y no se ven afectados por el crecimiento del proyecto.\n\n",
+      "p2": "La estructura de los módulos se define por medio de los archivos de configuración `module.json`, con una estructura como la siguiente:\n",
+      "c1": "modulejson",
+      "p3": "Los `module.json` permiten al programador definir los bundles, archivos y tipos de archivos que se incluyen.",
+      "q1": {
+        "s1": "Puedes aprender más sobre el manejo de módulos en BeyondJS en",
+        "l1": [
+          "/docs/modules/introduction",
+          "la sección de Módulos.\n"
+        ]
+      },
+      "h2#dev-server": "Dev Server",
+      "p4": "BeyondJS provee el servidor de desarrollo para disponibilizar los bundles a demanda. el browser puede hacer las peticiones de forma normal y Deno soporta los imports HTTP por tanto trabaja de la misma forma y cómo node no soporta los http imports, beyondJS provee un BEE que sirve de proxy para poder interfacear con el servidor de desarrollo y lograr que todos guarden la misma lógica de programación.",
+      "q2": {
+        "s1": "Puedes aprender más acerca del comportamiento del entorno de desarrollo en ",
+        "l1": [
+          "/docs/dev-server",
+          "la sección de DevServer"
+        ],
+        "s2": "."
+      },
+      "i1": [
+        "/images/graphs/beyond-js-flow.png",
+        "Beyond dev server flow"
+      ],
+      "h2#on-demand": "Carga a demanda",
+      "p7": " Gracias al diseño modular, que segmenta los proyectos en pequeñas piezas o módulos, estos sólo son cargados cuando son requeridos, lo que permite una carga rápida y eficiente de los proyectos.",
+      "p8": "El comportamiento modular funciona igual en entornos de desarrollo y en entornos productivos.",
+      "p9": "Es conveniente usar una distribución optimizada para desarrollo y otra para producción, en ambos casos BeyondJS trabajará construyendo los bundles pero los generará en base a la configuración de cada distribución.",
+      "h2#distributions": "Distribuciones",
+      "p10": "Motivado a algunas incompatbilidades existentes aún en los entornos de ejecución de javascript, BeyondJS permite al programador disponibilizar su código para diversas plataformas  por medio de las distribuciones.",
+      "h2#hmr": "Hot Module Replacement (HMR)",
+      "p11": " El Hot Module Replacement es una característica esencial hoy en día en el desarrollo, comunmente utilizada en las herramientas de frontEnd. BeyondJS lo tiene habilitado por defecto en el DevServer y sin configuraciones adicionales. Además brinda una API básica al desarrollador que permite definir cuando y que desea actualizarse.",
+      "q3": {
+        "s1": "Puedes aprender más sobre esto en ",
+        "l1": [
+          "/docs/foundations/hmr",
+          " la sección de  HMR"
+        ],
+        "s2": "."
+      }
+    }
+  }
+}

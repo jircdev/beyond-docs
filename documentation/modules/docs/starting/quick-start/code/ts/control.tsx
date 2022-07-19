@@ -15,10 +15,15 @@ const tpls = {
 export /*bundle*/ function QuickStart() {
     return (
         <>
+            <Document textId="requires" moduleId={module.resource} tpls={tpls}/>
+            <Document textId="global" moduleId={module.resource} tpls={tpls}/>
             <Document
+                textId="create"
                 moduleId={module.resource}
                 tpls={tpls}
-                nextLinks={[["Bridge", "/docs/tutorial/bridge"]]}
+                nextLinks={[
+                    "/docs/tutorial/start"
+                ]}
             />
         </>
     );

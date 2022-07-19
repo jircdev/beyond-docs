@@ -3,6 +3,7 @@
     text-decoration: none;
     color: var(--text-color);
     line-height: 23px;
+    font-size: .85rem;
     letter-spacing: .28px;
 
     &:hover {
@@ -43,11 +44,6 @@
     //border: 1px solid gray;
     list-style: none;
 
-    a {
-      font-size: 14px;
-      font-weight: lighter;
-    }
-
     > section {
       display: flex;
       align-items: center;
@@ -62,7 +58,6 @@
     }
 
     &.item--opened {
-
       .beyond-icon {
         transform: rotate(90deg);
       }

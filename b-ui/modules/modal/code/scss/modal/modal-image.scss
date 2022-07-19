@@ -1,21 +1,10 @@
-//@import "modal/animate/animate";
-//@import "modal/modal/mixins";
-//@import "modal/modal/alert-dialog";
-//@import "modal/modal/close-icon";
-//@import "modal/modal/confirm-dialog";
-//@import "modal/modal/content";
-@import "modal/animate/keyframes";
 
-.beyond-element-modal.show-modal.image__modal {
-
+.beyond-element-modal.image__modal {
+  padding: 30px;
 
   .modal-content {
     width: 100%;
-    max-width: 800px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+    max-width: 1200px;
     background: none;
     @media (max-width: 600px) {
       .modal-content {

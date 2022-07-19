@@ -1,15 +1,14 @@
 import * as React from 'react';
-import {IconLogo} from "./icon";
+import {BeyondIsotype} from "./icon";
 
-export function PreloadPage() {
+export /*bundle*/ function PreloadPage() {
     return (
         <div className="preload-container">
             <div className="circle"/>
             <div className="page__main-content">
                 <div className="center__container">
-                    <IconLogo/>
+                    <BeyondIsotype/>
                 </div>
-
             </div>
         </div>
     )

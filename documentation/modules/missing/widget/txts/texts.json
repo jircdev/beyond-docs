@@ -1,0 +1,22 @@
+{
+  "en": {
+    "pretitle": "404 error",
+    "title": "Page not found!",
+    "description": "Maybe this page moved? Got deleted? Is hiding out in quarantine? Never existed in the first place?",
+    "end": {
+      "s1": " Let’s go ",
+      "l1": "home",
+      "s2": "and try from there."
+    }
+  },
+  "es": {
+    "pretitle": "Error 404",
+    "title": "¡Página no encontrada!",
+    "description": "¿Habrá sido removida? ¿Eliminada? ¿Nunca existió? ¿Se escondió en la cuarentena?",
+    "end": {
+      "s1": " Volvamos al ",
+      "l1": "inicio",
+      "s2": " y validemos allí."
+    }
+  }
+}

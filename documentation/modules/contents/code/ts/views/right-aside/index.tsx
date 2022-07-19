@@ -45,8 +45,7 @@ const RightAside = ({}: IProps) => {
         window?.setTimeout(() => {
             const titles = Array.from(component.shadowRoot.querySelectorAll('h1,h2,h3'));
             setTitles(titles);
-            console.log(0.1, titles);
-        }, 50);
+        }, 100);
 
         const body = document.querySelector('body');
         body.scroll({

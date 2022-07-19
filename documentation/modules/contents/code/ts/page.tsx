@@ -1,9 +1,9 @@
 import * as React from 'react';
 import {useContent} from "./use-content";
-import {PreloadPage} from "./preload/loading";
+import {PreloadPage} from "@beyond/docs/preload";
 import {DocsContext} from "./context";
 import {ContentsContainer} from "./container";
-import {RightAside} from "./views/right-aside";
+
 
 export /*bundle*/ function ContentsPage({component, contentId, sub, hmrChanged}) {
     const [content, fetching, texts] = useContent(contentId, sub, hmrChanged);

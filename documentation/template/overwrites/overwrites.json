@@ -1,2 +1,7 @@
 {
+  "@beyond/ui/modal": {
+    "code": {
+      "sass":"modal.scss"
+    }
+  }
 }

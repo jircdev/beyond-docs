@@ -8,9 +8,10 @@ routing.redirect = async function redirect(uri): Promise<string> {
     return '/';
 }`
 const tpls = {
-    tpl1: {tpl: `routing.pushState('/home', [{state}]);`, language: "ts"},
-    tpl2: {tpl: `routing.replaceState('/home', [{state}]);`, language: "ts"},
-    tpl3: {tpl: tpl}
+    tpl1: {tpl: `import {routing} from "@beyond-js/kernel/routing";`, language: "ts"},
+    tpl2: {tpl: `routing.pushState('/home', [{state}]);`, language: "ts"},
+    tpl3: {tpl: `routing.replaceState('/home', [{state}]);`, language: "ts"},
+    tpl4: {tpl: tpl}
 }
 
 export /*bundle*/ function RoutingPage() {
