@@ -1,6 +1,3 @@
-import {Error404} from "./views/error-404";
-
-
 /*starting*/
 import {DocsIntro} from "@beyond/docs/docs/starting/intro.code";
 import {QuickStart} from "@beyond/docs/docs/starting/quick-start.code";
@@ -152,7 +149,6 @@ export const getContent = (contentId: string, sub: string | undefined = undefine
         ...foundations,
         ...api,
 
-        error404: Error404,
     };
 
     if (!contents.hasOwnProperty(contentId) || sub && !contents[contentId].hasOwnProperty(sub)) {
