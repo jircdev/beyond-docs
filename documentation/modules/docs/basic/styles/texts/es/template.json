@@ -1,11 +1,12 @@
 {
   "es": {
-    "stylesInTheTemplate": {
+    "styles": {
       "h1": [
         "Estilos",
         "En el template"
       ],
       "p1": "El manejo de estilos en el sistema de Template de BeyondJS se realiza por medio de la configuración del procesador de estilos sass, esta configuración se realiza en dos niveles básicamente:",
+      "c1": "tpl1",
       "p2": "El código anterior, es la configuración por defecto de la plantilla de los proyectos web. Básicamente se está configurando el procesador sass para las plantillas de aplicación y global. A continuación se describe la finalidad de ambas",
       "p3": "En esta página se asume que el template se encuentra en una carpeta con dicho nombre en la raiz del proyecto, si se hizo un cambio en la configuración por defecto deberá considerarse la ubicación configurada."
     },
@@ -17,17 +18,17 @@
           "https://developer.mozilla.org/en-US/docs/Web/CSS/--*",
           "propiedades personalizadas"
         ],
-        "s2": "para que esten disponibles en todos los widgets."
+        "s2": " para que esten disponibles en todos los widgets."
       },
       "p2": "Las <strong>propiedades personalizadas</strong>  son los únicos valores de estilos que pueden ser compartidos entre los widgets ya que estos se incluyen por medio de Componentes Web con Shadow DOM.",
       "p3": "La configuración por defecto de estilos para template.application, incluye todos los archivos scss que se encuentren en el directorio ./template/application adentro del proyecto. Estos son:",
       "items": [
-        "./variables.scss: contiene una lista de variables sass por defecto.",
-        "./styles.scss: contiene estilos muy básicos para el body del documento",
-        "./custom-properties/dark.scss: provee un mixin que define las variables a utilizar en el estilo en modo oscuro.",
-        "./custom-properties/light.scss: provee un mixin que define las variables a utilizar en el estilo en modo claro.",
-        "./custom-properties/material-design.scss: incluye las propiedades css del sistema de colores de material design.",
-        "./custom-properties/definition.scss: incluye la definición de las propiedades personalizadas css que integra el uso de los mixins definidos en los archivos dark.scss y light.scss"
+        "`./variables.scss`: contiene una lista de variables sass por defecto.",
+        "`./styles.scss`: contiene estilos muy básicos para el body del documento",
+        "`./custom-properties/dark.scss`: provee un mixin que define las variables a utilizar en el estilo en modo oscuro.",
+        "`./custom-properties/light.scss`: provee un mixin que define las variables a utilizar en el estilo en modo claro.",
+        "`./custom-properties/material-design.scss`: incluye las propiedades css del sistema de colores de material design.",
+        "`./custom-properties/definition.scss`: incluye la definición de las propiedades personalizadas css que integra el uso de los mixins definidos en los archivos dark.scss y light.scss"
       ],
       "p4": "El programador puede editar o agregar cualquier archivo adicional de estilos y este será integrado de forma automática debido a que en la configuración se tiene agregado un \"*\" que indica que todos los archivos dentro de la carpeta deben ser procesados."
     },

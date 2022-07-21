@@ -23,12 +23,12 @@
       "p2": "<strong>Custom properties</strong> are the only style values that are available for sharing between widgets, as their inclusion is via Web Components with Shadow DOM.",
       "p3": "The default style settings for template.application include all scss files found in the ./template/application directory inside the project. These are:",
       "items": [
-        "./variables.scss: Contains a list of default sass variables.",
-        "./styles.scss: contains very basic styles for the document body.",
-        "./custom-properties/dark.scss: Provides a mixin that defines the variables to use in dark mode styling.",
-        "./custom-properties/light.scss: Provides a mixin that defines the variables to use in light mode styling.",
+        "`./variables.scss`: Contains a list of default sass variables.",
+        "`./styles.scss`: contains very basic styles for the document body.",
+        "`./custom-properties/dark.scss`: Provides a mixin that defines the variables to use in dark mode styling.",
+        "`./custom-properties/light.scss`: Provides a mixin that defines the variables to use in light mode styling.",
         "./custom-properties/material-design.scss - Contains the material design color system css properties.",
-        "./custom-properties/definition.scss: includes the definition of the custom css properties that integrates the use of the mixins defined in the dark.scss and light.scss files."
+        "`./custom-properties/definition.scss`: includes the definition of the custom css properties that integrates the use of the mixins defined in the dark.scss and light.scss files."
       ],
       "p4": "The developer can edit or add any additional file of styles and will be integrated automatically, because a \"*\" has been added in the configuration, which indicates that all the files inside the folder must be processed."
     },

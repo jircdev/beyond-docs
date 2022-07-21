@@ -24,6 +24,7 @@ const tpls = {
 }
 
 export /*bundle*/ function StylesTemplatePage() {
+
     return (
         <>
             <Document tpls={tpls} moduleId={module.resource} textId="styles"/>
