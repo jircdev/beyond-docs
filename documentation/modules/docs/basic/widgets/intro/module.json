@@ -1,12 +1,6 @@
 {
   "name": "docs/basic/widgets/intro",
   "code": {
-    "sass": {
-      "path": "/code/sass",
-      "files": [
-        "*"
-      ]
-    },
     "ts": {
       "path": "/code/ts",
       "files": [

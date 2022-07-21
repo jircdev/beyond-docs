@@ -6,6 +6,7 @@
         "in the template"
       ],
       "p1": "The handling of styles in the BeyondJS Template system is done through the configuration of the sass style processor. This configuration is simply done at two levels:",
+      "c1": "tpl1",
       "p2": "The above code is the default configuration of the web project template. Basically, you are configuring the sass processor for the application and global templates. The purpose of both is described below.",
       "p3": "On this page, we assume that the template is located in a folder with that name at the root of the project. If a change was made in the default configuration, the configured location should also be considered."
     },

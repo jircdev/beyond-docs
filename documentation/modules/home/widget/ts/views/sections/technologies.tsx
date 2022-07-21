@@ -29,6 +29,7 @@ export function Technologies() {
                 <BeyondIcon icon={SVGS.svelte}/>
                 <BeyondIcon icon={SVGS.vue}/>
                 <BeyondIcon icon={SVGS.sass}/>
+                <BeyondIcon icon={SVGS.deno}/>
                 <BeyondIcon icon={SVGS.websocket}/>
             </div>
         </div>

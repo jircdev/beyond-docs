@@ -3,8 +3,9 @@
     "header": {
       "notice": "Versión beta",
       "pretitle": "Welcome to BeyondJS",
-      "h1": "The Full Stack <br/> universal \nTypescript Framework",
-      "description": "Integra diferentes stacks de desarrollo y trabaja con ellos bajo el mismo paradigma, priorizando\n                            la experiencia de desarrollo y la carga modular, sin necesidad de empaquetadores."
+      "h1": "The Full Stack Modular + <br/> universal \nTypescript Framework",
+      "description": "Integra diferentes stacks de desarrollo y trabaja con ellos bajo el mismo paradigma, priorizando\n                            la experiencia de desarrollo y la carga modular, sin necesidad de empaquetadores.",
+      "copied": "Copiado al portapapeles"
     },
     "solution": {
       "universalTs": {
@@ -27,7 +28,7 @@
       },
       "frameworks": {
         "title": "Frameworks de vistas",
-        "start": "Compatible con&nbsp;",
+        "start": "Compatible con ",
         "and": " and ",
         "end": "Preparado para incluir otros frameworks o librerías  de gestión de vistas."
       }

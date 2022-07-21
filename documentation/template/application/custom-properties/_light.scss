@@ -2,10 +2,10 @@
 
   $secondary-bg: #4B6378;
   --primary-surface: #fff;
-  --primary: #FF8056;
-  --primary-dark: #E36152;
-  --primary-light: #FFA789;
-  --primary-accent: #FFA789;
+  --primary: #CB6245;
+  --primary-dark: #9E533E;
+  --primary-light: #E46F4E;
+  --primary-accent: #E36152;
   --text-on-primary: #fff;
   --accent-color: var(--primary);
   //secondary colors
@@ -29,7 +29,7 @@
 
   //elements
 
-  --app-element-surface: var(--color-gray-10);
+  --app-element-surface: var(--color-gray-5);
   --app-element-hover-surface: var(--color-gray-10);
   --app-element-border-color-1: var(--color-gray-10);
   --app-primary-text-gradient: linear-gradient(to right, var(--secondary-light), var(--primary-dark));

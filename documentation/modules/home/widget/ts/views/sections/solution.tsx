@@ -17,9 +17,8 @@ export function Solution() {
             <Card title={jamStack.title}
                   img="isomorphic"
                   href="/docs/widgets/rendering">
-                <CHtml>{jamStack.one}</CHtml>
-                <Elink href="https://jamstack.org/">{jamStack.jamStack}</Elink>
-                {jamStack.two}<Elink href="https://micro-frontends.org/">{jamStack.microfrontends}</Elink>.
+                <CHtml>{jamStack.one}</CHtml> <Elink href="https://jamstack.org/">{jamStack.jamStack}</Elink>
+                {jamStack.two} <Elink href="https://micro-frontends.org/">{jamStack.microfrontends}</Elink>.
 
 
             </Card>
@@ -28,10 +27,9 @@ export function Solution() {
                 img="framework-views"
                 href="/docs/widgets">
                 {frameworks.start}
-                <Elink href="https://reactjs.org">React</Elink>,&nbsp;
-                <Elink href="https://vuejs.org/">Vue</Elink> <Elink
-                href="https://svelte.dev/">Svelte</Elink>.
-                {frameworks.end}
+                <Elink href="https://reactjs.org">React</Elink>,&nbsp; <Elink
+                href="https://vuejs.org/">Vue</Elink> y <Elink
+                href="https://svelte.dev/">Svelte</Elink>. {frameworks.end}
             </Card>
         </div>
     )

@@ -5,6 +5,7 @@
     height: 100%;
     right: -50px;
     top: -25%;
+    z-index: -1;
 
     svg {
       height: 250%;
@@ -22,6 +23,7 @@
   }
 
   @media(max-width: 600px) {
+    padding-bottom: 0;
     .beyond__icon, .beyond__surface-icon {
       top: -10%;
       left: -15%;

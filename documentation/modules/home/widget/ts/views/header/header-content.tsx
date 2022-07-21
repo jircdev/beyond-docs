@@ -10,6 +10,7 @@ export function HeaderContent() {
                 <span className="pretitle-h1">{texts.pretitle}</span>
                 <h1>
                     <span dangerouslySetInnerHTML={{__html: texts.h1}}/>
+                    <br/>
                     <StrongTitle/>
                 </h1>
             </section>

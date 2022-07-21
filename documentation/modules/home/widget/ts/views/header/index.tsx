@@ -5,6 +5,7 @@ import {HeaderContent} from "./header-content";
 import "@beyond/docs/header-menu.widget";
 import {HeaderImage} from "./header-image";
 import {useHomeContext} from "../context";
+import {Clipboard} from "./clipboard";
 
 export function Header() {
     const container = React.useRef(null);
@@ -18,6 +19,7 @@ export function Header() {
                     <div className="visible-mobile">
                         <span className="p1">{texts.description}</span>
                     </div>
+                    <Clipboard/>
                     <IconLogo/>
                 </div>
             </header>

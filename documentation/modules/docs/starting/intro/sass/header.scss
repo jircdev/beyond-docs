@@ -2,12 +2,12 @@
   position: relative;
 
   svg {
-    animation: 5s rotate infinite forwards;
+    animation: 5s rotateA infinite forwards;
   }
 
 }
 
-@keyframes rotate {
+@keyframes rotateA {
   from {
     transform: rotateX(0deg) rotateY(0deg);
 

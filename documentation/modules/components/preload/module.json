@@ -2,7 +2,7 @@
   "name": "preload",
   "code": {
     "sass": {
-      "path": "sass",
+      "path": "scss",
       "files": [
         "*"
       ]

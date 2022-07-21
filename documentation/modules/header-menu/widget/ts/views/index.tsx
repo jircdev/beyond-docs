@@ -55,9 +55,19 @@ export function TopHeader({attributes, widget, store}) {
 
                         <Link href="/"><BeyondImage src="/images/beyond-logo.png" alt="beyondjs"/></Link>
                         <div className="header-mobile-menu">
-                            <ThemeToggleButton/>
-                            <LanguageAction/>
-                            <HamburgerMenu/>
+                            <ul className="header__all__menu">
+                                <li>
+                                    <ThemeToggleButton/>
+                                </li>
+                                <li>
+                                    <LanguageAction/>
+                                </li>
+                                <li>
+                                    <HamburgerMenu/>
+                                </li>
+                            </ul>
+
+
                         </div>
 
                     </div>
