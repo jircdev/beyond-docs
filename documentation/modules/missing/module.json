@@ -1,0 +1,30 @@
+{
+  "name": "missing",
+  "widget": {
+    "element": {
+      "name": "app-docs-missing"
+    },
+    "route": "/not-found",
+    "is": "page",
+    "layout": "home-layout",
+    "sass": {
+      "path": "/widget/sass",
+      "files": [
+        "*"
+      ]
+    },
+    "ts": {
+      "path": "/widget/ts",
+      "files": [
+        "*"
+      ]
+    }
+  },
+  "txt": {
+    "multilanguage": true,
+    "path": "/widget/txts",
+    "files": [
+      "*"
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "libs/chart-test",
+  "ts": {
+    "path": "ts",
+    "files": [
+      "*"
+    ]
+  }
+}
