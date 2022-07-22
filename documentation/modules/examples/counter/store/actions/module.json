@@ -1,5 +1,5 @@
 {
-  "name": "examples/sm/actions",
+  "name": "examples-sm-actions",
   "ts": {
     "path": "ts",
     "files": [

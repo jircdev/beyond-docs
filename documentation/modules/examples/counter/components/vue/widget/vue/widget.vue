@@ -8,7 +8,7 @@
 </template>
 
 <script lang="ts">
-import {updateCount} from "@beyond/docs/examples/sm/actions";
+import {updateCount} from "@beyond/docs/examples-sm-actions";
 
 export default {
   data() {

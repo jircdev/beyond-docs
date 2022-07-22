@@ -1,4 +1,4 @@
-import {SvelteWidgetController} from '@beyond-js/kernel/svelte-widget/ts';
+import {SvelteWidgetController} from '@beyond-js/svelte-widgets/controllers';
 import type {SvelteComponent} from 'svelte';
 import Widget from "./widget.svelte";
 

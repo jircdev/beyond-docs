@@ -1,5 +1,5 @@
 import * as React from "react";
-import {updateCount} from "@beyond-tests/widget-app/actions/ts";
+import {updateCount} from "@beyond/docs/examples-sm-actions";
 
 export /*bundle*/
 function Widget() {

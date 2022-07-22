@@ -1,5 +1,5 @@
 <script>
-    import {updateCount} from "@beyond/docs/examples/sm/actions";
+    import {updateCount} from "@beyond/docs/examples-sm-actions";
 
     let count = 0;
     const add = () => {

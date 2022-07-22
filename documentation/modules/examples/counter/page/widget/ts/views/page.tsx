@@ -1,5 +1,5 @@
 import * as React from "react";
-import {store} from "@beyond/docs/examples/sm/store";
+import {store} from "@beyond/docs/examples-sm-store";
 
 export /*bundle*/
 function Page() {

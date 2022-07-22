@@ -6,6 +6,8 @@
   "license": "ISC",
   "dependencies": {
     "@beyond-js/react-widgets": "^17.15.0",
+    "@beyond-js/vue-widgets": "^0.0.2",
+    "@beyond-js/svelte-widgets": "^0.0.2",
     "@beyond-js/backend": "^0.0.8",
     "@cloudinary/url-gen": "^1.6.0",
     "@types/escape-html": "^1.0.1",
