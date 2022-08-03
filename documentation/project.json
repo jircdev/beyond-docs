@@ -14,8 +14,7 @@
   },
   "params": {},
   "modules": {
-    "path": "./modules",
-    "externals": {}
+    "path": "./modules"
   },
   "deployment": {
     "distributions": [
@@ -24,15 +23,15 @@
         "platform": "web",
         "environment": "development",
         "port": 3500,
+        "default": true,
         "backend": "backend",
         "imports": {
           "@beyond/ui": "web",
           "@beyond-js/kernel": "web",
+          "@beyond-js/backend": "web",
           "@beyond-js/widgets": "web",
           "@beyond-js/react-widgets": "web",
-          "@beyond-js/svelte-widgets": "web",
-          "@beyond-js/backend": "web",
-          "@beyond-js/ssr": "web"
+          "@beyond-js/svelte-widgets": "web"
         }
       },
       {

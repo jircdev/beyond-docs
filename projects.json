@@ -1,12 +1,11 @@
 [
-  "../beyond/lib/client/browser/kernel/project.json",
-  "../beyond/lib/client/browser/widgets/widgets/project.json",
-  "../beyond/lib/client/browser/widgets/react/project.json",
-  "../beyond/lib/client/browser/widgets/vue/project.json",
-  "../beyond/lib/client/browser/widgets/svelte/project.json",
-  "../beyond/lib/client/browser/backend/project.json",
-  "../beyond/lib/client/browser/ssr/project.json",
-  "/sass-test/project.json",
+  "../beyond/packages/kernel/project.json",
+  "../beyond/packages/widgets/widgets/project.json",
+  "../beyond/packages/widgets/react/project.json",
+  "../beyond/packages/widgets/vue/project.json",
+  "../beyond/packages/widgets/svelte/project.json",
+  "../beyond/packages/backend/project.json",
+  "../beyond/packages/ssr/project.json",
   "/b-ui/project.json",
   "/documentation/project.json"
 ]
