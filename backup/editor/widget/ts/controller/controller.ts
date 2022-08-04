@@ -1,4 +1,4 @@
-import {PageReactWidgetController} from '@beyond-js/react-widgets/controllers';
+import {PageReactWidgetController} from '@beyond-js/react-widgets/page';
 import {BridgeModel} from '@beyond/docs/models/contents';
 
 export /*bundle*/

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {Elink, Link} from "@beyond/ui/link";
 import {Code, CodeBox} from "@beyond/docs/code";
-import {isString} from "@cloudinary/url-gen/internal/utils/dataStructureUtils";
+
 
 export /*bundle*/ function CHtml({content, children}) {
     const data = children ?? content;
@@ -82,7 +82,7 @@ export function BlockQuote({children}) {
  * @constructor
  */
 export function ListItem({content}) {
-    if (isString(content)) {
+    if (content instanceof String) {
         content = [<CHtml content={content} key={content}/>];
     }
 
@@ -109,4 +109,13 @@ export function CustomComponent({components, control, content, tpls}) {
 
     return <Control tpls={tpls} content={content}/>
 
+}
+
+export function DocList({content}) {
+    console.log(10, content);
+    return (
+        <>
+            <h3>Element</h3>
+        </>
+    )
 }

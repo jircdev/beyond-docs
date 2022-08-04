@@ -1,0 +1,26 @@
+{
+  "name": "examples/list",
+  "platforms": [
+    "web"
+  ],
+  "widget": {
+    "is": "page",
+    "route": "/examples",
+    "layout": "main-layout",
+    "element": {
+      "name": "examples-list-page"
+    },
+    "ts": {
+      "path": "ts",
+      "files": [
+        "*"
+      ]
+    },
+    "txt": {
+      "path": "txt",
+      "files": [
+        "*"
+      ]
+    }
+  }
+}

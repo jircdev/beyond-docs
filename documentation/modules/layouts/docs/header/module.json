@@ -1,6 +1,9 @@
 {
   "name": "header",
   "widget": {
+    "platforms": [
+      "web"
+    ],
     "hmr": true,
     "element": {
       "name": "beyond-docs-header"

@@ -1,12 +1,13 @@
 {
   "name": "examples/sm/counter",
   "widget": {
-    "hmr": true,
+    "route": "/examples/sm/counter",
+    "layout": "main-layout",
+    "is": "page",
     "element": {
       "name": "examples-counter-page"
     },
-    "route": "/examples/sm/counter",
-    "is": "page",
+
     "scss": {
       "path": "/widget/scss",
       "files": [

@@ -1,6 +1,9 @@
 {
   "name": "layout/styles",
   "code": {
+    "platforms": [
+      "web"
+    ],
     "ts": {
       "path": "ts",
       "files": [

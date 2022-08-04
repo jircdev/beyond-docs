@@ -1,4 +1,4 @@
-import {ReactWidgetController} from '@beyond-js/react-widgets/controllers';
+import {ReactWidgetController} from '@beyond-js/react-widgets/base';
 
 import {TopHeader} from "./views";
 import {IWidgetStore} from "@beyond-js/kernel/core";

@@ -5,7 +5,6 @@
     "web"
   ],
   "widget": {
-    "hmr": true,
     "element": {
       "name": "contents-subpage"
     },

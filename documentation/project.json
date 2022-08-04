@@ -31,7 +31,8 @@
           "@beyond-js/backend": "web",
           "@beyond-js/widgets": "web",
           "@beyond-js/react-widgets": "web",
-          "@beyond-js/svelte-widgets": "web"
+          "@beyond-js/svelte-widgets": "web",
+          "@beyond-js/vue-widgets": "web"
         }
       },
       {
@@ -57,6 +58,7 @@
       "@beyond-js/backend",
       "@beyond-js/widgets",
       "@beyond-js/react-widgets",
+      "@beyond-js/vue-widgets",
       "@beyond-js/svelte-widgets"
     ]
   },

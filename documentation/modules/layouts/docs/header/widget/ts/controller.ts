@@ -1,4 +1,4 @@
-import {ReactWidgetController} from '@beyond-js/react-widgets/controllers';
+import {ReactWidgetController} from '@beyond-js/react-widgets/base';
 import {Events, IWidgetStore} from "@beyond-js/kernel/core";
 import {Widget} from './view/widget';
 

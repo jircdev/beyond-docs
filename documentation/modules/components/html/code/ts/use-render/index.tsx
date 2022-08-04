@@ -1,8 +1,8 @@
 import React from "react";
-import {BlockQuote, DocLinks, ListItem, CodeComponent, CustomComponent} from "../control";
+import {BlockQuote, DocLinks, ListItem, CodeComponent, CustomComponent, DocList} from "../control";
 import {Controls} from "./controls";
 import {ModalImage} from "../modal-image";
-import {isString} from "@cloudinary/url-gen/internal/utils/dataStructureUtils";
+
 import {AppIcon} from "@beyond/docs/ui/icons";
 
 export function useRender(content: object, tpls = {}, components = {}) {
@@ -19,9 +19,10 @@ export function useRender(content: object, tpls = {}, components = {}) {
      * i = img
      * c = code
      * bi = BeyondIcon
+     * z: ListDoc
      */
 
-    const regexp = /[bi|q|h|p|l|e|t|i|c|cc]{1}?\d{1}|items\d{0,1}|\d/;
+    const regexp = /[bi|q|h|p|l|e|t|i|c|cc|z]{1}?\d{1}|items\d{0,1}|\d/;
 
     /**
      * @TODO: @julio: refactor and order
@@ -72,13 +73,14 @@ export function useRender(content: object, tpls = {}, components = {}) {
 
         if (["cc"].includes(item.substring(0, 2))) {
 
-            output.push(<CustomComponent key={itemId} content={content }control={elementData} components={components} tpls={tpls}/>);
+            output.push(<CustomComponent key={itemId} content={content} control={elementData} components={components}
+                                         tpls={tpls}/>);
             return;
         }
         // blockQuote
         if (["q"].includes(item[0])) {
 
-            const quote = isString(elementData) ? elementData : check(elementData, []);
+            const quote = elementData instanceof String ? elementData : check(elementData, []);
             output.push(<BlockQuote key={itemId}>{quote}</BlockQuote>);
             return;
         }
@@ -92,6 +94,13 @@ export function useRender(content: object, tpls = {}, components = {}) {
                 throw new Error(`the template "${elementData}" were not found on ${item}`);
             }
             output.push(<CodeComponent key={itemId} content={tpls[elementData]}/>)
+            return;
+        }
+        if (["z"].includes(item[0])) {
+            if (!tpls[elementData]) {
+                throw new Error(`the template "${elementData}" were not found on ${item}`);
+            }
+            output.push(<DocList key={itemId} content={tpls[elementData]}/>)
             return;
         }
         //links

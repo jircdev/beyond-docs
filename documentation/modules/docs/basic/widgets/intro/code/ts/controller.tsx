@@ -3,7 +3,7 @@ import {Document} from "@beyond/docs/components/html";
 import {module} from "beyond_context";
 
 const tpl =
-    `\rimport {ReactWidgetController} from '@beyond-js/react-widgets/controllers';
+    `\rimport {ReactWidgetController} from '@beyond-js/react-widgets/base';
 import {Page} from './views/page';
 export /*bundle*/
 class Controller extends ReactWidgetController {

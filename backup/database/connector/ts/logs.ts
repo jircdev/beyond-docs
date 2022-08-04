@@ -1,7 +1,6 @@
 import * as dayjs from 'dayjs';
 import {join} from 'path';
 import {promises, existsSync} from "fs";
-import {beyond} from '@beyond-js/kernel/core';
 
 export class Logs {
     days: number;

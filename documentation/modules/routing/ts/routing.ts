@@ -11,3 +11,4 @@ routing.missing = async (pathname: String) => {
     return 'app-docs-missing';
 }
 
+routing.setup();
