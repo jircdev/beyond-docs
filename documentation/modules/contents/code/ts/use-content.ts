@@ -19,7 +19,7 @@ export /*bundle*/function useContent(contentId, sub, hmrChanged): [IControl, boo
     const [ready, setReady] = React.useState(false);
     const [texts, setTexts] = React.useState({});
     React.useEffect(() => {
-        const modelTexts = new CurrentTexts(module.resource, true);
+        const modelTexts = new CurrentTexts(module.specifier, true);
         const triggerEvent = () => {
             setReady(modelTexts.ready);
             setTexts(modelTexts.value)

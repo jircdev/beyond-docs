@@ -8,7 +8,7 @@ export class MenuStore extends ReactiveModel implements IWidgetStore{
 
     constructor() {
         super();
-        // this.#texts = new CurrentTexts(module.resource);
+        // this.#texts = new CurrentTexts(module.specifier);
         // this.#texts.on('change', this.#listen);
     }
 

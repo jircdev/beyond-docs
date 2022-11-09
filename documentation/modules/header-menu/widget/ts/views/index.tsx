@@ -11,7 +11,7 @@ import {HamburgerMenu} from "./hamburger/menu";
 import {routing} from "@beyond-js/kernel/routing";
 
 export function TopHeader({attributes, widget, store}) {
-    const [ready, texts] = useTexts(module.resource);
+    const [ready, texts] = useTexts(module.specifier);
     const [url, setUrl] = React.useState(routing.uri?.uri);
     const ref = React.useRef(null);
 

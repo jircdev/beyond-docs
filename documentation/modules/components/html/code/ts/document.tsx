@@ -4,12 +4,12 @@ import {useTexts, DocsContext} from "@beyond/docs/store";
 import {Render} from "./render";
 import {NextLinks} from "@beyond/docs/components/next-links";
 
-export /* bundle */ function Document({moduleId, tpls, components, textId, nextLinks, d}) {
-    const [ready, texts] = useTexts(moduleId);
+export /* bundle */ function Document({specifier, tpls, components, textId, nextLinks, d}) {
+    const [ready, texts] = useTexts(specifier);
     if (!ready) return null;
     const textsUsed = textId ? texts[textId] : texts;
     if (d) {
-        console.log(1.1, moduleId, texts, components);
+        console.log(1.1, specifier, texts, components);
         console.log(1.2, textId, textsUsed);
     }
     return (

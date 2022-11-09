@@ -43,7 +43,7 @@ export class Store extends Events implements IWidgetStore {
     constructor(container) {
         super();
         this.#container = container;
-        this.#texts = new CurrentTexts(module.resource, true);
+        this.#texts = new CurrentTexts(module.specifier, true);
 
         this.#texts.bind('change', this.triggerChange);
     }

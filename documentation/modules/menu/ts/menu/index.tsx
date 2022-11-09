@@ -20,7 +20,7 @@ interface IState {
 export /*bundle*/
 function WidgetMenu({attributes}) {
 
-    const [ready, texts] = useTexts(module.resource);
+    const [ready, texts] = useTexts(module.specifier);
     const parent = React.useRef(null);
     const openedLocal =
         typeof window !== undefined
