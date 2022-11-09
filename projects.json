@@ -1,4 +1,11 @@
 [
+  "../beyond/packages/kernel/project.json",
+  "../beyond/packages/widgets/widgets/project.json",
+  "../beyond/packages/widgets/react/project.json",
+  "../beyond/packages/widgets/vue/project.json",
+  "../beyond/packages/widgets/svelte/project.json",
+  "../beyond/packages/backend/project.json",
+  "../beyond/packages/ssr/project.json",
   "/b-ui/project.json",
   "/documentation/project.json"
 ]

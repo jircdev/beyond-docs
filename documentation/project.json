@@ -18,7 +18,13 @@
   },
   "libraries": {
     "includes": [
-      "@beyond/ui"
+      "@beyond/ui",
+      "@beyond-js/kernel",
+      "@beyond-js/backend",
+      "@beyond-js/widgets",
+      "@beyond-js/react-widgets",
+      "@beyond-js/svelte-widgets",
+      "@beyond-js/vue-widgets"
     ]
   },
   "deployment": {
