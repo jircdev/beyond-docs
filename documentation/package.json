@@ -5,6 +5,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "animatewithsass": "^3.2.1",
     "socket.io": "^4.3.1",
     "socket.io-client": "^4.5.2",
     "@beyond-js/widgets": "^0.1.0",
