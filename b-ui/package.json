@@ -5,7 +5,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@beyond-js/react-widgets": "^18.18.0",
+    "@beyond-js/kernel": "^0.1.0",
+    "@beyond-js/react-widgets": "^18.20.1",
     "swiper": "^8.1.4"
   }
 }

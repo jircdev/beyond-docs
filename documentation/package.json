@@ -5,10 +5,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@beyond-js/react-widgets": "^17.15.0",
-    "@beyond-js/vue-widgets": "^0.0.2",
-    "@beyond-js/svelte-widgets": "^0.0.2",
     "@beyond-js/backend": "^0.0.8",
+    "@beyond-js/kernel": "^0.1.0",
+    "@beyond-js/react-widgets": "^18.20.1",
+    "@beyond-js/svelte-widgets": "^0.0.2",
+    "@beyond-js/vue-widgets": "^0.0.2",
+    "@beyond-js/widgets": "^0.1.0",
     "@cloudinary/url-gen": "^1.6.0",
     "@types/escape-html": "^1.0.1",
     "@types/highlightjs": "^9.12.2",
@@ -22,8 +24,6 @@
     "is-hotkey": "^0.2.0",
     "mysql": "^2.18.1",
     "mysql-import": "^3.0.6",
-    "vue": "^3.2.31",
-    "universal-model-ng-react-svelte-vue": "^0.3.3",
     "mysql2": "^2.2.5",
     "perfect-scrollbar": "^1.5.5",
     "prismjs": "^1.27.0",
@@ -34,7 +34,9 @@
     "socket.io": "^4.3.1",
     "socket.io-client": "^4.4.1",
     "svelte": "^3.47.0",
-    "swiper": "^8.1.4"
+    "swiper": "^8.1.4",
+    "universal-model-ng-react-svelte-vue": "^0.3.3",
+    "vue": "^3.2.31"
   },
   "devDependencies": {
     "@types/prop-types": "^15.7.4",

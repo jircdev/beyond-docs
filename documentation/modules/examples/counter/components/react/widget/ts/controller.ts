@@ -1,4 +1,6 @@
 import {ReactWidgetController} from '@beyond-js/react-widgets/base';
+
+
 import {Widget} from "./views/widget";
 
 export /*bundle*/

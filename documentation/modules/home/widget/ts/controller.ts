@@ -7,7 +7,9 @@ import {Store} from "./store";
 export /*bundle*/
 class Controller extends PageReactWidgetController {
     createStore(): IWidgetStore {
-        return new Store(this.body);
+        const store = new Store(this.body);
+        window.s = store;
+        return store;
     }
 
     get Widget() {
