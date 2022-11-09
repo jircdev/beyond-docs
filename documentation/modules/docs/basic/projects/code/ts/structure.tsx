@@ -15,14 +15,10 @@ const tpls = {
 
 export /*bundle*/ function ProjectStructure() {
     return (
-        <>
-
-
-            <Document
-                moduleId={module.resource} textId="structure"
-                tpls={tpls}
-                nextLinks={["/docs/projects/json"]}
-            />
-        </>
+        <Document
+            specifier={module.specifier} textId="structure"
+            tpls={tpls}
+            nextLinks={["/docs/projects/json"]}
+        />
     );
 }

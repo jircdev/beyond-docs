@@ -5,12 +5,9 @@ import {module} from "beyond_context";
 
 export /*bundle*/ function ProjectDependencies() {
     return (
-        <>
-            <Document
-
-                moduleId={module.resource} textId="dependencies"
-                nextLinks={["/docs/projects/dependencies"]}
-            />
-        </>
+        <Document
+            specifier={module.specifier} textId="dependencies"
+            nextLinks={["/docs/projects/dependencies"]}
+        />
     );
 }

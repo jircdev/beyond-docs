@@ -6,13 +6,13 @@ import {module} from "beyond_context";
 export /*bundle*/ function DashboardPage() {
     return (
         <>
-            <Document textId="dashboard" moduleId={module.resource}/>
-            <Document textId="features" moduleId={module.resource}/>
-            <Document textId="structure" moduleId={module.resource}/>
-            <Document textId="ts" moduleId={module.resource}/>
-            <Document textId="editor" moduleId={module.resource}/>
+            <Document textId="dashboard" specifier={module.specifier}/>
+            <Document textId="features" specifier={module.specifier}/>
+            <Document textId="structure" specifier={module.specifier}/>
+            <Document textId="ts" specifier={module.specifier}/>
+            <Document textId="editor" specifier={module.specifier}/>
             <Document
-                moduleId={module.resource} textId="deploy"
+                specifier={module.specifier} textId="deploy"
                 nextLinks={[["Tutorial", "/docs/tutorial/bridge"]]}
             />
         </>

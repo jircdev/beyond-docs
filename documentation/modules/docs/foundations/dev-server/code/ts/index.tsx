@@ -18,7 +18,7 @@ export /*bundle*/ function DevServer() {
         <>
             <Document
                 tpls={tpls}
-                moduleId={module.resource}
+                specifier={module.specifier}
                 nextLinks={["/docs/foundations/distributions"]}
             />
         </>

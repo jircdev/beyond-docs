@@ -20,12 +20,9 @@ const tpls = {
 
 export /*bundle*/ function WidgetPage() {
     return (
-        <>
-
-            <Document
-                tpls={tpls}
-                moduleId={module.resource}
-                textId="page" nextLinks={["/docs/widgets/controller"]}/>
-        </>
+        <Document
+            tpls={tpls}
+            specifier={module.specifier}
+            textId="page" nextLinks={["/docs/widgets/controller"]}/>
     )
 }

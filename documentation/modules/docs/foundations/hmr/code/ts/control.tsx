@@ -7,9 +7,9 @@ export /*bundle*/ function HMRPage() {
 
     return (
         <>
-            <Document moduleId={module.resource} textId="hmr"/>
+            <Document specifier={module.specifier} textId="hmr"/>
             <Document
-                moduleId={module.resource} textId="events"
+                specifier={module.specifier} textId="events"
                 nextLinks={["/docs/foundations/bee"]}
             />
         </>

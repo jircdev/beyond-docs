@@ -5,10 +5,10 @@ import {Document} from '@beyond/docs/components/html';
 export /*bundle*/ function WidgetsRendering() {
     return (
         <>
-            <Document moduleId={module.resource} textId="intro"/>
-            <Document moduleId={module.resource} textId="ssr"/>
-            <Document moduleId={module.resource} textId="csr"/>
-            <Document moduleId={module.resource} textId="sr" nextLinks={["/docs/widgets/controller"]}/>
+            <Document specifier={module.specifier} textId="intro"/>
+            <Document specifier={module.specifier} textId="ssr"/>
+            <Document specifier={module.specifier} textId="csr"/>
+            <Document specifier={module.specifier} textId="sr" nextLinks={["/docs/widgets/controller"]}/>
         </>
     )
 }

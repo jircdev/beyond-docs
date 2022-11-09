@@ -18,10 +18,10 @@ export /*bundle*/ function RoutingPage() {
 
     return (
         <>
-            <Document tpls={tpls} moduleId={module.resource} textId="routing"/>
-            <Document tpls={tpls} moduleId={module.resource} textId="object"/>
-            <Document tpls={tpls} moduleId={module.resource} textId="navigation"/>
-            <Document tpls={tpls} moduleId={module.resource} textId="overwrite"
+            <Document tpls={tpls} specifier={module.specifier} textId="routing"/>
+            <Document tpls={tpls} specifier={module.specifier} textId="object"/>
+            <Document tpls={tpls} specifier={module.specifier} textId="navigation"/>
+            <Document tpls={tpls} specifier={module.specifier} textId="overwrite"
                       nextLinks={["/docs/modules/create"]}
             />
         </>

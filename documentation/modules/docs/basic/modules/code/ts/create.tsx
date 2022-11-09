@@ -27,13 +27,10 @@ const tpls = {creation: {language: "json", tpl}};
 
 export /*bundle*/ function ModulesCreate() {
     return (
-        <>
-
-            <Document
-                tpls={tpls}
-                moduleId={module.resource} textId="create"
-                nextLinks={["/docs/modules/create"]}
-            />
-        </>
+        <Document
+            tpls={tpls}
+            specifier={module.specifier} textId="create"
+            nextLinks={["/docs/modules/create"]}
+        />
     );
 }

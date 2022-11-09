@@ -16,11 +16,11 @@ export /*bundle*/ function DistributionsPage() {
     return (
         <>
 
-            <Document tpls={tpls} moduleId={module.resource} textId="distributions"/>
-            <Document tpls={tpls} moduleId={module.resource} textId="node"/>
+            <Document tpls={tpls} specifier={module.specifier} textId="distributions"/>
+            <Document tpls={tpls} specifier={module.specifier} textId="node"/>
             <Document
                 tpls={tpls}
-                moduleId={module.resource} textId="distribution"
+                specifier={module.specifier} textId="distribution"
                 nextLinks={["/docs/distributions"]}
             />
         </>

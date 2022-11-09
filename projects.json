@@ -1,11 +1,12 @@
 [
-  "../../beyond/packages/kernel/project.json",
-  "../../beyond/packages/widgets/widgets/project.json",
-  "../../beyond/packages/widgets/react/project.json",
-  "../../beyond/packages/widgets/vue/project.json",
-  "../../beyond/packages/widgets/svelte/project.json",
-  "../../beyond/packages/backend/project.json",
-  "../../beyond/packages/ssr/project.json",
   "/b-ui/project.json",
-  "/documentation/project.json"
+  "/documentation/project.json",
+  "../../beyond/@beyond-js/local/project.json",
+  "../../beyond/@beyond-js/kernel/project.json",
+  "../../beyond/@beyond-js/backend/project.json",
+  "../../beyond/@beyond-js/ssr/project.json",
+  "../../beyond/@beyond-js/widgets/project.json",
+  "../../beyond/@beyond-js/svelte-widgets/project.json",
+  "../../beyond/@beyond-js/vue-widgets/project.json",
+  "../../beyond/@beyond-js/react-widgets/react-17/project.json"
 ]

@@ -14,6 +14,7 @@ export /*bundle*/function useTexts(specifier): [boolean, object] {
     const [ready, setReady] = React.useState(false);
     const [texts, setTexts] = React.useState({});
     React.useEffect(() => {
+        // console.trace(1,specifier)
         const modelTexts = new CurrentTexts(specifier, true);
         const triggerEvent = () => {
             setReady(modelTexts.ready);

@@ -6,9 +6,9 @@ import {tpls} from "../templates";
 export /*bundle*/ function TutorialFirstModule() {
     return (
         <>
-            <Document tpls={tpls.module} moduleId={module.resource} textId="firstModule"/>
-            <Document tpls={tpls.module} moduleId={module.resource} textId="formCreation"/>
-            <Document moduleId={module.resource}
+            <Document tpls={tpls.module} specifier={module.specifier} textId="firstModule"/>
+            <Document tpls={tpls.module} specifier={module.specifier} textId="formCreation"/>
+            <Document specifier={module.specifier}
                       textId="styles"
                       tpls={tpls.module}
                       nextLinks={['/docs/tutorial/backend']}

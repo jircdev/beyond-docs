@@ -7,11 +7,11 @@ export /*bundle*/ function TutorialBridge() {
 
     return (
         <>
-            <Document moduleId={module.resource} textId="bridgeCode" tpls={tpls.bridge}/>
+            <Document specifier={module.specifier} textId="bridgeCode" tpls={tpls.bridge}/>
             <Document
                 nextLinks={['/docs/tutorial/routing']}
                 tpls={tpls.bridge}
-                moduleId={module.resource}
+                specifier={module.specifier}
                 textId="connectClientAndServer"/>
         </>
     );

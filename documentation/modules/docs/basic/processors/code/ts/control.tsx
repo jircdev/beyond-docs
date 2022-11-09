@@ -25,12 +25,12 @@ const tpls = {modulejson: {language: "json", tpl}};
 export /*bundle*/ function Processors() {
     return (
         <>
-            <Document moduleId={module.resource} textId="processors"/>
-            <Document moduleId={module.resource} textId="types"/>
-            <Document  moduleId={module.resource} textId="properties"/>
+            <Document specifier={module.specifier} textId="processors"/>
+            <Document specifier={module.specifier} textId="types"/>
+            <Document specifier={module.specifier} textId="properties"/>
             <Document
                 tpls={tpls}
-                moduleId={module.resource} textId="examples"
+                specifier={module.specifier} textId="examples"
                 nextLinks={["/docs/modules/create"]}
             />
         </>

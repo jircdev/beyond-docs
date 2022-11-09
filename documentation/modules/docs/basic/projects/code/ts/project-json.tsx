@@ -7,7 +7,7 @@ export /*bundle*/ function ProjectJson() {
     return (
         <>
             <Document
-                moduleId={module.resource} textId="json"
+                specifier={module.specifier} textId="json"
                 nextLinks={["/docs/projects/create"]}
             />
         </>

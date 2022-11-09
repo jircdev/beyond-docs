@@ -7,7 +7,7 @@ export /*bundle*/ function StateManagement() {
     return (
         <>
             <Document
-                moduleId={module.resource} textId="handling"
+                specifier={module.specifier} textId="handling"
                 nextLinks={["/docs/modules/create"]}
             />
         </>

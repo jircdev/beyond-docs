@@ -36,7 +36,7 @@ const tpls = {
 
 export /*bundle*/ function ProjectCreate() {
 
-    const attrs = {moduleId: module.resource, tpls};
+    const attrs = {specifier: module.specifier, tpls};
     return (
         <>
             <Document {...attrs} textId="create"/>
@@ -44,7 +44,6 @@ export /*bundle*/ function ProjectCreate() {
             <Document {...attrs} textId="createInfo"/>
             <Document
                 {...attrs} textId="manual"
-
                 nextLinks={["/docs/projects/structure", "/docs/projects/json"]}
             />
         </>

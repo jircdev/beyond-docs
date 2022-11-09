@@ -21,7 +21,7 @@ export /*bundle*/ function WidgetLayout() {
         <>
             <Document
                 tpls={tpls}
-                moduleId={module.resource}
+                specifier={module.specifier}
                 textId="layout" nextLinks={["/docs/widgets/definition"]}/>
         </>
     )

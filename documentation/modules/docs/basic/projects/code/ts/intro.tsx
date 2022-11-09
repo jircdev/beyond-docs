@@ -6,7 +6,7 @@ import {module} from "beyond_context";
 export /*bundle*/ function ProjectsIntro() {
     return (
         <Document
-            moduleId={module.resource} textId="intro"
+            specifier={module.specifier} textId="intro"
             nextLinks={["/docs/projects/create"]}
         />
     );

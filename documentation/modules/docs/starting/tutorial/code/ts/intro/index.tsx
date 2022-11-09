@@ -8,9 +8,9 @@ import {tpls} from "../templates";
 export /*bundle*/ function TutorialIntro() {
     return (
         <>
-            <Document moduleId={module.resource} textId="intro"/>
+            <Document specifier={module.specifier} textId="intro"/>
             <Document
-                moduleId={module.resource}
+                specifier={module.specifier}
                 textId="starting"
                 tpls={tpls.starting}
                 nextLinks={[

@@ -22,7 +22,7 @@ export /*bundle*/ function WidgetController() {
         <>
             <Document
                 tpls={tpls}
-                moduleId={module.resource}
+                specifier={module.specifier}
                 textId="controller" nextLinks={["/docs/widgets/definition"]}/>
         </>
     )

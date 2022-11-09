@@ -6,9 +6,9 @@ import {tpls} from "../templates";
 export /*bundle*/ function TutorialBackend() {
     return (
         <>
-            <Document moduleId={module.resource} textId="backendLogic"/>
+            <Document specifier={module.specifier} textId="backendLogic"/>
             <Document
-                moduleId={module.resource}
+                specifier={module.specifier}
                 textId="backendInitialization"
                 tpls={tpls.backend}
                 nextLinks={["/docs/tutorial/bridge"]}

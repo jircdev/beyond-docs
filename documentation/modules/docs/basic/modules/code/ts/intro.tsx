@@ -22,12 +22,12 @@ const tpls = {
 export /*bundle*/ function ModulesIntro() {
     return (
         <>
-            <Document moduleId={module.resource} textId="introduction"/>
-            <Document tpls={tpls} moduleId={module.resource} textId="internal"/>
-            <Document tpls={tpls} moduleId={module.resource} textId="working"/>
+            <Document specifier={module.specifier} textId="introduction"/>
+            <Document tpls={tpls} specifier={module.specifier} textId="internal"/>
+            <Document tpls={tpls} specifier={module.specifier} textId="working"/>
             <Document
                 tpls={tpls}
-                moduleId={module.resource} textId="identifier"
+                specifier={module.specifier} textId="identifier"
                 nextLinks={["/docs/modules/create"]}
             />
         </>

@@ -6,7 +6,7 @@ export /*bundle*/ function BEEPage() {
 
     return (
         <>
-            <Document moduleId={module.resource} textId="bee"/>
+            <Document specifier={module.specifier} textId="bee"/>
         </>
     );
 }

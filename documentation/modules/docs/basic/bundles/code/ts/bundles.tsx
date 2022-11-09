@@ -28,11 +28,10 @@ const tpls = {modulejson: {title: "module.json", language: "json", tpl}};
 export /*bundle*/ function Bundles() {
     return (
         <>
-            <Document tpls={tpls} moduleId={module.resource} textId="bundles"/>
-            <Document tpls={tpls} moduleId={module.resource} textId="transversal"/>
+            <Document tpls={tpls} specifier={module.specifier} textId="bundles"/>
+            <Document tpls={tpls} specifier={module.specifier} textId="transversal"/>
             <Document
-                tpls={tpls}
-                moduleId={module.resource} textId="types"
+                tpls={tpls} specifier={module.specifier} textId="types"
                 nextLinks={["/docs/modules/create"]}
             />
         </>

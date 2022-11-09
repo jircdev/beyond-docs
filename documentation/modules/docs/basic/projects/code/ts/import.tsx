@@ -21,12 +21,10 @@ const tpls = {
 
 export /*bundle*/ function ProjectImports() {
     return (
-        <>
-            <Document
-                tpls={tpls}
-                moduleId={module.resource} textId="imports"
-                nextLinks={["/docs/projects/dependencies"]}
-            />
-        </>
+        <Document
+            tpls={tpls}
+            specifier={module.specifier} textId="imports"
+            nextLinks={["/docs/projects/dependencies"]}
+        />
     );
 }

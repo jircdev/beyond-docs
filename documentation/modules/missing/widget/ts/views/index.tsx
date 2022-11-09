@@ -5,7 +5,6 @@ import {Link} from "@beyond/ui/link";
 import {BeyondIsotype} from "@beyond/docs/preload";
 
 export function View() {
-
     const [ready, texts] = useTexts(module.specifier);
     if (!ready) return null;
     return (

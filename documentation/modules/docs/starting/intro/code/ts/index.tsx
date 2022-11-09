@@ -30,8 +30,8 @@ export /*bundle*/ function DocsIntro() {
                 components={{
                     about: AboutHeader
                 }}
-                tpls={tpls} textId="universal" moduleId={module.resource}/>
-            <Document textId="features" tpls={tpls} moduleId={module.resource}
+                tpls={tpls} textId="universal" specifier={module.specifier}/>
+            <Document textId="features" tpls={tpls} specifier={module.specifier}
                       nextLinks={["/docs/quick-start", "/docs/tutorial/start"]}/>
         </>
     );
