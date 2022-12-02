@@ -5,33 +5,32 @@
 @import "container";
 
 .accent {
-  color: var(--accent-color) !important;
+    color: var(--accent-color) !important;
 }
 
 ul {
-  padding: 0;
-  margin: 0;
+    padding: 0;
+    margin: 0;
 }
 
 .content-container {
-  display: grid;
-  grid-gap: 2rem;
-  padding: 0;
-
-  .two-columns,
-  .three-columns {
-    grid-template-columns: 1fr;
+    display: grid;
     grid-gap: 2rem;
-  }
+    padding: 0;
 
-  @include set-media('tablet', false, min) {
+    .two-columns,
+    .three-columns {
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+    }
 
-    &.two-columns {
-      grid-template-columns: 1fr 1fr;
+    @include set-media("tablet", false, min) {
+        &.two-columns {
+            grid-template-columns: 1fr 1fr;
+        }
+        &.three-columns {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        margin: 2rem auto;
     }
-    &.three-columns {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-    margin: 2rem auto;
-  }
 }

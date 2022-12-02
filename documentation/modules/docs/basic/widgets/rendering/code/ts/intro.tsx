@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import {Elink, Link}from "@beyond/ui/link";
+import {Elink, Link} from "@beyond/ui/link";
 import {useDocsContext} from "@beyond/docs/store";
 import {List} from "@beyond/docs/components/html";
 

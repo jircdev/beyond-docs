@@ -1,0 +1,75 @@
+@import '~template/sass/variables';
+.beyond-button {
+	outline: 0;
+	border: none;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+
+	&:active,
+	&:hover,
+	&:focus {
+		outline: 0;
+	}
+	//padding: 8px 30px;
+
+	&.secondary {
+		background: var(--secondary);
+		color: var(--text-on-secondary);
+		transition: all 300ms ease-in-out;
+
+		&:hover {
+			background: var(--secondary-dark);
+			transition: all 300ms ease-in;
+		}
+	}
+
+	&.primary {
+		background: var(--primary);
+		color: var(--text-on-primary);
+		border: 1px solid var(--primary-dark);
+		transition: all 300ms ease-in-out;
+
+		&:hover {
+			background: var(--primary-dark);
+			transition: all 300ms ease-in;
+		}
+	}
+	span {
+		position: absolute;
+		background-color: #979797b5;
+		transform: translate(-50%, -50%);
+		pointer-events: none;
+		border-radius: 50%;
+		-webkit-animation: rippleEffect 1s linear infinite;
+		animation: rippleEffect 1s linear infinite;
+	}
+
+	@-webkit-keyframes rippleEffect {
+		0% {
+			width: 0;
+			height: 0;
+			opacity: 0.5;
+		}
+
+		100% {
+			width: 500px;
+			height: 500px;
+			opacity: 0;
+		}
+	}
+
+	@keyframes rippleEffect {
+		0% {
+			width: 0;
+			height: 0;
+			opacity: 0.5;
+		}
+
+		100% {
+			width: 500px;
+			height: 500px;
+			opacity: 0;
+		}
+	}
+}

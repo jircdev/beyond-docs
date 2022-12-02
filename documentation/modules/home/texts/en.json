@@ -1,67 +1,66 @@
 {
-  "en": {
-    "header": {
-      "pretitle": "Welcome to BeyondJS",
-      "h1": "The Full Stack Modular + <br/>Universal \nTypescript Framework",
-      "description": "Integrates different development stacks and works with them under the same paradigm, prioritizing the developer experience and modular loading, without the need for packagers..",
-      "copied": "Copied to clipboard"
-    },
-    "solution": {
-      "universalTs": {
-        "title": "Typescript Universal",
-        "description": {
-          "one": "Designed to create from the same project, multiple distributions such as websites, web",
-          "cordova": "Cordova applications",
-          "npm": "NPM packages",
-          "two": " and ",
-          "node": "Node projects"
+    "en": {
+        "header": {
+            "pretitle": "Welcome to BeyondJS",
+            "h1": "UNIVERSAL PACKAGES",
+            "description": "Code what you want and run it wherever you want.",
+            "copied": "Copied to clipboard"
+        },
+        "solution": {
+            "universalTs": {
+                "title": "Typescript Universal",
+                "description": {
+                    "one": "Designed to create from the same project, multiple distributions such as websites, web",
+                    "cordova": "Cordova applications",
+                    "npm": "NPM packages",
+                    "two": " and ",
+                    "node": "Node projects"
+                }
+            },
+            "jamStack": {
+                "title": "Jamstack y SSR",
+                "one": "Ready to publish static sites, <strong>SSR</strong>, <strong>CSR</strong> or ",
+                "jamStack": "Jamstack architecture,",
+                "two": " with the possibility of using them together through  ",
+                "microfrontends": "micro frontends"
+            },
+            "frameworks": {
+                "title": "Frameworks Views",
+                "start": "Compatible with ",
+                "and": " and ",
+                "end": "Prepared to include other frameworks or view management libraries."
+            }
+        },
+        "universal": {
+            "title": "Universal Development",
+            "texts": "Focused on establishing a consistent way for the development of universal and superpowered modules/packages, following the ecosystem of NPM + NodeJS."
+        },
+        "config": {
+            "preTitle": "Easy integration",
+            "title": "Minimum configuration and modular load",
+            "texts": "Without module bundle and in a modular structure that ensures on-demand loading without adding complexities as the project grows."
+        },
+        "plugAndPlay": {
+            "title": "Plug & Play",
+            "texts": "Modules can be restructured and moved from one project to another without the need for additional configuration."
+        },
+        "hmr": {
+            "pretitle": "Service Management",
+            "title": "HMR in Browser and Node",
+            "texts": "Runtime update of client code and Node. BeyondJS manages Node services, to avoid restarting them when changes are made and to ensure the best possible development experience."
+        },
+        "realtime": {
+            "pretitle": "REALTIME Conection",
+            "title": "Real-time connection client & server/ server & server",
+            "link": "https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API",
+            "startText": "Automatically supported",
+            "endText": "communication to connect the client code of a mobile or web project, with a node server or service."
+        },
+        "readMore": "Find out more",
+        "learnMore": "Learn more",
+        "experience": {
+            "title": "Development expertise",
+            "texts": "BeyondJS provides a workspace to enhance the development experience, allowing you to simultaneously manage projects, efficiently detect and fix bugs, and manage the package deployment and release process."
         }
-      },
-      "jamStack": {
-        "title": "Jamstack y SSR",
-        "one": "Ready to publish static sites, <strong>SSR</strong>, <strong>CSR</strong> or ",
-        "jamStack": "Jamstack architecture,",
-        "two": " with the possibility of using them together through  ",
-        "microfrontends": "micro frontends"
-      },
-      "frameworks": {
-        "title": "Frameworks Views",
-        "start": "Compatible with ",
-        "and": " and ",
-        "end": "Prepared to include other frameworks or view management libraries."
-      }
-    },
-    "universal": {
-      "title": "Universal Development",
-      "texts": "Focused on making both tools and techniques work for multiple distributions and technologies, in a simple way, creating microservices and micro frontends."
-    },
-    "config": {
-      "preTitle": "Easy integration",
-      "title": "Minimum configuration and modular load",
-      "texts": "Without module bundle and in a modular structure that ensures on-demand loading without adding complexities as the project grows."
-    },
-    "plugAndPlay": {
-      "title": "Plug & Play",
-      "texts": "Modules can be restructured and moved from one project to another without the need for additional configuration."
-    },
-    "hmr": {
-      "pretitle": "Service Management",
-      "title": "HMR in Browser and Node",
-      "texts": "Runtime update of client code and Node. BeyondJS manages Node services, to avoid restarting them when changes are made and to ensure the best possible development experience."
-    },
-    "realtime": {
-      "pretitle": "REALTIME Conection",
-      "title": "Real-time connection client & server/ server & server",
-      "link": "https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API",
-      "startText": "Automatically supported",
-      "endText": "communication to connect the client code of a mobile or web project, with a node server or service."
-    },
-    "readMore": "Find out more",
-    "learnMore": "Learn more",
-    "experience": {
-      "title": "Development expertise",
-      "texts": "A total and integrating experience in the development of projects simultaneously, code editing, deployment, module creation and total platform and service management."
     }
-  }
 }
-

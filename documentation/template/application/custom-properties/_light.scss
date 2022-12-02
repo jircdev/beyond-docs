@@ -1,60 +1,60 @@
 @mixin properties() {
+    $secondary-bg: #4b6378;
+    --primary-surface: #fff;
+    --primary: #cb6245;
+    --primary-dark: #9e533e;
+    --primary-light: #e46f4e;
+    --primary-accent: #e36152;
+    --text-on-primary: #fff;
+    --accent-color: var(--primary);
+    //secondary colors
+    --secondary: #121f36;
+    --secondary-dark: #121f36;
+    --secondary-light: #313c50;
+    --secondary-accent: #424f6e;
+    --text-on-secondary: #ffffff;
+    --secondary-background: #{$secondary-bg};
+    //background
+    --background: #fff;
+    --text-color: #000;
+    --text-title-color: var(--secondary-dark);
+    --text-second-color: var(--gray-dark);
+    --text-hover-color: var(--primary);
+    --bg-element: var(--gray-light);
+    --element-bg: var(--gray-light);
+    --element-border-color: var(--gray-light);
+    --separator-color: var(--gray-darker);
+    --app-primary-color: var(--primary-dark);
 
-  $secondary-bg: #4B6378;
-  --primary-surface: #fff;
-  --primary: #CB6245;
-  --primary-dark: #9E533E;
-  --primary-light: #E46F4E;
-  --primary-accent: #E36152;
-  --text-on-primary: #fff;
-  --accent-color: var(--primary);
-  //secondary colors
-  --secondary: #121F36;
-  --secondary-dark: #121F36;
-  --secondary-light: #313C50;
-  --secondary-accent: #424F6E;
-  --text-on-secondary: #FFFFFF;
-  --secondary-background: #{$secondary-bg};
-  //background
-  --background: #fff;
-  --text-color: #000;
-  --text-title-color: var(--secondary-dark);
-  --text-second-color: var(--gray-dark);
-  --text-hover-color: var(--primary);
-  --bg-element: var(--gray-light);
-  --element-bg: var(--gray-light);
-  --element-border-color: var(--gray-light);
-  --separator-color: var(--gray-darker);
-  --app-primary-color: var(--primary-dark);
+    //elements
 
-  //elements
-
-  --app-element-surface: var(--color-gray-5);
-  --app-element-hover-surface: var(--color-gray-10);
-  --app-element-border-color-1: var(--color-gray-10);
-  --app-primary-text-gradient: linear-gradient(to right, var(--secondary-light), var(--primary-dark));
-  --app-secondary-text-gradient: linear-gradient(to right, var(--primary), var(--secondary-light));
-  --app-dark-text-gradient: linear-gradient(to right, var(--primary-dark), var(--primary-light));
-  --app-animation-color: var(--gray-light);
-  --app-header-link: var(--color-gray-70);
-  --app-link-color: var(--primary);
-  --app-link-hover-color: var(--primary-dark);
-  --app-aside-link-selected: var(--text-color);
-  /**
+    --app-element-surface: var(--color-gray-5);
+    --app-element-hover-surface: var(--color-gray-10);
+    --app-element-border-color-1: var(--color-gray-10);
+    --app-primary-text-gradient: linear-gradient(to right, var(--secondary-light), var(--primary-dark));
+    --app-secondary-text-gradient: linear-gradient(to right, var(--primary), var(--secondary-light));
+    --app-dark-text-gradient: linear-gradient(to right, var(--primary-dark), var(--primary-light));
+    --app-animation-color: var(--gray-light);
+    --app-header-link: var(--color-gray-70);
+    --app-link-color: var(--primary);
+    --app-link-hover-color: var(--primary-dark);
+    --app-aside-link-selected: var(--text-color);
+    /**
   highlight content
    */
-  --app-insight-surface: var(--primary-light);
-  --app-link-hover-bg: #{rgba(#FF8056, .5)};
-  --app-opacity-bg: rgba(0, 0, 0, .3);
+    --app-insight-surface: var(--primary-light);
+    --app-link-hover-bg: #{rgba(#ff8056, 0.5)};
+    --app-opacity-bg: rgba(0, 0, 0, 0.3);
 
-  --app-editor-bg: #1D2B3D;
-  --app-surface-notes: var(--color-gray-10);
-  --app-icon-bg: var(--color-gray-10);
+    --app-editor-bg: #1d2b3d;
+    --app-surface-notes: var(--color-gray-10);
+    --app-icon-bg: var(--color-gray-10);
 
-  /**
+    /**
   scrollbar
    */
 
-  --app-scrollbar-color: var(--color-gray-10);
-  --app-scrollbar-track: var(--color-gray-10);
+    --app-scrollbar-color: var(--color-gray-10);
+    --app-scrollbar-track: var(--color-gray-10);
+    --gh-icon-color: #000;
 }

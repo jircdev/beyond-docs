@@ -1,28 +1,42 @@
-import * as React from 'react';
-import {IconLogo} from "./icon";
-
-import {HeaderContent} from "./header-content";
+import * as React from "react";
 import "@beyond/docs/header-menu.widget";
-import {HeaderImage} from "./header-image";
-import {useHomeContext} from "../context";
-import {Clipboard} from "./clipboard";
+import { useHomeContext, HeaderContext } from "../context";
+import { SVGImage } from "./svgs/svg-image";
+import { CDN } from "./svgs/cdn";
 
+import { Buttons } from "./buttons";
+import { PublishSVG } from "./svgs/publish";
+import { ServerSVG } from "./svgs/server";
 export function Header() {
     const container = React.useRef(null);
-    const {texts: {header: texts}} = useHomeContext();
+    const [slide, setSlide] = React.useState("dev");
+    const {
+        texts: { header: texts },
+    } = useHomeContext();
+    const images = {
+        prod: CDN,
+        publish: PublishSVG,
+        dev: ServerSVG,
+    };
     return (
-        <>
-            <header className="home__header" ref={container}>
-                <div className="page-section container">
-                    <HeaderContent/>
-                    <HeaderImage/>
-                    <div className="visible-mobile">
-                        <span className="p1">{texts.description}</span>
-                    </div>
-                    <Clipboard/>
-                    <IconLogo/>
+        <HeaderContext.Provider value={{ setSlide, slide }}>
+            <header className="container home__header" ref={container}>
+                <div className="welcome__text">
+                    <span dangerouslySetInnerHTML={{ __html: texts.pretitle }} className="pretitle-h1" />
+                    <h1>El framework para programación modular basado en paquetes universales</h1>
+                    <span className="mt-15">
+                        Dev Server de desarrollo para consumir paquetes desde cualquier entorno de ejecución
+                    </span>
+                    {/* <h1>El framework para programación modular basado en paquetes universales</h1> */}
                 </div>
+
+                <figure className="header__banners">
+                    <SVGImage src={images[slide]} />
+                    <figcaption>
+                        Visualiza cómo funciona <Buttons />
+                    </figcaption>
+                </figure>
             </header>
-        </>
+        </HeaderContext.Provider>
     );
 }

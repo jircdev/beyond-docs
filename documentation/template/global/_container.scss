@@ -1,53 +1,56 @@
-@import 'set-media';
+@import "set-media";
 
 .container--md {
-  max-width: 900px;
-  margin: auto;
+    max-width: 900px;
+    margin: auto;
 }
 
-.container {
-  margin: auto;
-  padding: 15px;
-  width: calc(100% - 30px);
-  max-width: 1376px;
-
-  &.grid-container {
-    display: grid;
-    grid-gap: 2rem;
-  }
-
-  &.no-pd {
-    padding: 0;
-    width: 100%;
-  }
-
-  &.no-mv {
-    margin: 0 auto;
-  }
-
-  &.pd-x2 {
-    padding: 2rem;
-  }
-
-  &.two-columns,
-  &.three-columns {
-    grid-template-columns: 1fr;
-  }
-
-  @include set-media('tablet', false, min) {
-
-    &.two-columns {
-      grid-template-columns: 1fr 1fr;
-    }
-    &.three-columns {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-
-  }
-
-  @include set-media('tablet', false, 'max') {
+.container,
+.container--800 {
+    margin: auto;
     padding: 15px;
     width: calc(100% - 30px);
-  }
+    max-width: 1376px;
 
+    &--800 {
+        max-width: 800px;
+        margin: auto;
+    }
+
+    &.grid-container {
+        display: grid;
+        grid-gap: 2rem;
+    }
+
+    &.no-pd {
+        padding: 0;
+        width: 100%;
+    }
+
+    &.no-mv {
+        margin: 0 auto;
+    }
+
+    &.pd-x2 {
+        padding: 2rem;
+    }
+
+    &.two-columns,
+    &.three-columns {
+        grid-template-columns: 1fr;
+    }
+
+    @include set-media("tablet", false, min) {
+        &.two-columns {
+            grid-template-columns: 1fr 1fr;
+        }
+        &.three-columns {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+    @include set-media("tablet", false, "max") {
+        padding: 15px;
+        width: calc(100% - 30px);
+    }
 }
