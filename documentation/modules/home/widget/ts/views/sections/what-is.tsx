@@ -1,13 +1,14 @@
 import * as React from "react";
 export function WhatIs() {
     return (
-        <section className="container">
+        <section className="container--800">
             <header className="header__section">
                 <h3 className="primary-color">
                     ¿Por qué <span className="beyond">BeyondJS?</span>
+                    <br />
                 </h3>
             </header>
-            <div className="container--800">
+            <div>
                 <p>
                     BeyondJS provee un Dev Server para desarrollo y un CDN en producción, para consumir modulos desde
                     cualquier entorno de ejecución de forma directa. La misma experiencia de desarrollo para todo.

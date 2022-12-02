@@ -1,17 +1,13 @@
 import * as React from "react";
 import { Header } from "./header";
-import { ConfigModule } from "./sections/config-module";
-import { Realtime } from "./sections/realtime";
-import { DX } from "./sections/dx";
 import { Footer } from "./footer";
-import { Technologies } from "./sections/technologies";
-import { Solution } from "./sections/solution";
 import { useBinder } from "@beyond/docs/store";
 import { HomeContext } from "./context";
 import { Why } from "./why";
 import { WhatIs } from "./sections/what-is";
 import { WhatIsItFor } from "./sections/what-is-it-for";
 import { GettingStart } from "./sections/getting-start";
+import { CodePen } from "./sections/codepen";
 
 export function Page({ store }): JSX.Element {
     const [ready, setReady] = React.useState(store.ready);
@@ -37,6 +33,7 @@ export function Page({ store }): JSX.Element {
                 <WhatIsItFor />
                 <Why />
                 <GettingStart />
+                <CodePen />
                 <Footer />
             </main>
         </HomeContext.Provider>

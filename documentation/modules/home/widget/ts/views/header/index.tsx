@@ -23,10 +23,9 @@ export function Header() {
             <header className="container home__header" ref={container}>
                 <div className="welcome__text">
                     <span dangerouslySetInnerHTML={{ __html: texts.pretitle }} className="pretitle-h1" />
-                    <h1>El framework para programación modular basado en paquetes universales</h1>
-                    <span className="mt-15">
-                        Dev Server de desarrollo para consumir paquetes desde cualquier entorno de ejecución
-                    </span>
+                    <h1>CREA MÓDULOS PENSANDO EN EL FUTURO</h1>
+
+                    <span className="mt-15">El único framework compatible con todos los entornos javascript.</span>
                     {/* <h1>El framework para programación modular basado en paquetes universales</h1> */}
                 </div>
 
