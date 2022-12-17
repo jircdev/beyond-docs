@@ -1,52 +1,34 @@
-import * as React from "react";
+import * as React from 'react';
+import { BeyondIcon } from '@beyond/ui/icons';
+import { useHomeContext } from '../context';
+
 export function WhatIsItFor() {
-    return (
-        <section className="container--800">
-            <h2>Programación módular basada en paquetes universales</h2>
-            <h3 className="primary-color">¿Para que sirve?</h3>
-            <ul className="container--800">
-                <li>Crear librerias o paquetes que esperen ser consumidos por otros equipos de desarrolladores </li>
-                <li>Composite applications, microfrontends/Microservicios de forma directa </li>
-                <li>Crear proyectos SPA y aplicaciones Hibridas para moviles </li>
-                <li>Crear proyectos con SSR, renderizado estático o Hibrido </li>
-                <li>
-                    Crear soluciones con tecnología actualizada e integrarla de manera simple en proyectos
-                    preexistentes.
-                </li>
-            </ul>
-            <h3 className="primary-color">Pero hay más</h3>
+	const {
+		texts: { whatsIsItFor: texts },
+	} = useHomeContext();
 
-            <ul className=" container--800">
-                <li>Puedes consumir paquetes desde y para cualquier entorno.</li>
-
-                <li>
-                    <strong> Typescript First</strong>: genera de forma automática los tipos (archivos .d.ts) y realiza
-                    un chequeo de tipos optimizado.
-                </li>
-
-                <li>
-                    Cuenta con un workspace que gestiona el manejo de dependencias, el proceso deployment y el manejo de
-                    errores.
-                </li>
-
-                <li>Posee *HMR* integrado y multiplataforma.</li>
-
-                <li>Web Socket intergrado.</li>
-
-                <li>
-                    Desarrollo modular basado en modulos ES, con generación automática de importmaps y SystemJS para el
-                    browser.
-                </li>
-
-                <li>
-                    Desarrollo con super poderes: <strong>css, sass, vue, svelte y react</strong> integrado de forma
-                    automática.
-                </li>
-
-                <li>Optimización de paquetes npm para erradicar el "npm dependency hell".</li>
-
-                <li>Pensado para agregar tecnologías futuras y evitar obsolescencia.</li>
-            </ul>
-        </section>
-    );
+	return (
+		<section className="container--800">
+			<h2>{texts.title}</h2>
+			<ul className="container--800">
+				<li>
+					{/* Here goes the icon */}
+					<h4>Librerías y paquetes</h4>
+					<p>Que esperan ser consumidos por otros equipos de desarrolladores.</p>
+				</li>
+				<li>
+					<h4>Composite applications / Microfrontends / Microservices</h4>
+					<p>De forma directa, sin configuraciones y listos para integrarse en proyectos ya existentes.</p>
+				</li>
+				<li>
+					<h4>SPA / WPA / Hybrid APPs</h4>
+					<p>Para móviles, de escritorio y webs.</p>
+				</li>
+				<li>
+					<h4>JamsTACK / SSR, renderizado híbrido y estático</h4>
+					<p>Pudiendo elegir el renderizado que desees para cada componente.</p>
+				</li>
+			</ul>
+		</section>
+	);
 }

@@ -1,68 +1,47 @@
 {
-    "es": {
-        "header": {
-            "notice": "Versión beta",
-            "pretitle": "Welcome to BeyondJS",
-            "h1": "PAQUETES UNIVERSALES",
-            "description": "Programa lo que deseas, ejecutalo donde quieras.",
-            "copied": "Copiado al portapapeles"
-        },
-        "solution": {
-            "universalTs": {
-                "title": "Typescript first",
-                "description": {
-                    "one": "Diseñado para trabajar con typescript por defecto, con generación de tipos (.d.ts) y chequeo de tipado de forma automática y optimizada, sin necesidad de configruaciones.",
-                    "cordova": "Cordova",
-                    "npm": "paquetes NPM",
-                    "two": " y proyectos ",
-                    "node": "Node"
-                }
-            },
-            "jamStack": {
-                "title": "Jamstack y SSR",
-                "one": "Listo para publicar sitios estáticos, <strong>SSR</strong>, <strong>CSR</strong> o arquitecturas",
-                "jamStack": "Jamstack",
-                "two": " y con posibilidad de usarlas en conjunto por medio de ",
-                "microfrontends": "micro frontends",
-                "description": "  Listo para publicar sitios estáticos, <strong>SSR</strong>, <strong>CSR</strong> o arquitecturas <Elink href=\"https://jamstack.org/\">Jamstack</Elink> y con posibilidad de\n                usarlas en conjunto por medio de <Elink href=\"https://micro-frontends.org/\">micro frontends</Elink>"
-            },
-            "frameworks": {
-                "title": "Frameworks de vistas",
-                "start": "Compatible con ",
-                "and": " and ",
-                "end": "Preparado para incluir otros frameworks o librerías  de gestión de vistas."
-            }
-        },
-        "universal": {
-            "title": "Desarollo universal",
-            "texts": "Enfocado en establecer una forma consistente para el desarrollo de módulos/paquetes universales y con super poderes, siguiendo el ecosistema de NPM + NodeJS."
-        },
-        "config": {
-            "preTitle": "Integración simple",
-            "title": "Mínima Configuración y carga modular",
-            "texts": "Sin empaquetadores y en una estructura modular que asegura la carga a demanda sin agregar complejidades a medida que el proyecto crece."
-        },
-        "plugAndPlay": {
-            "title": "Plug & Play",
-            "texts": "Los módulos  pueden reestructurarse y moverse de un proyecto a otro sin necesidad de configuraciones adicionales."
-        },
-        "hmr": {
-            "pretitle": "Gestión de servicios",
-            "title": "HMR en Navegador y Node",
-            "texts": "Actualización en tiempo de ejecución del código cliente y Node. BeyondJS gestiona los servicios Node para evitar el reinicio de los mismos cuando se realizan cambios y garantizar la mejor experiencia de desarrollo posibl"
-        },
-        "realtime": {
-            "pretitle": "Conexión en tiempo real",
-            "title": "Conexión Real-time cliente y servidor/ servidor y servidor",
-            "link": "https://developer.mozilla.org/es/docs/Web/API/WebSockets_API",
-            "startText": "Comunicación de ",
-            "endText": "soportada de forma automática para conectar el código cliente de un proyecto móvil o web con un servidor o servicio node."
-        },
-        "readMore": "Leer más",
-        "learnMore": "Aprender más",
-        "experience": {
-            "title": "Experiencia de desarrollo",
-            "texts": "BeyondJS provee un workspace para mejorar la experiencia de desarrollo, que te permite, gestionar proyectos en simultáneo, detectar y corregir errores de forma eficiente y gestionar el proceso de deployment y publicación de paquetes."
-        }
-    }
+	"es": {
+		"header": {
+			"notice": "Versión beta",
+			"title": "CREA MÓDULOS PENSANDO EN EL FUTURO",
+			"subtitle": "El único framework compatible con todos los entornos JavaScript."
+		},
+		"whatIs": {
+			"title": "¿Por qué elegir BeyondJS?",
+			"links": { "why": "¿Por que BeyondJS?", "github": "Ver en Github" },
+			"what": "BeyondJS es un meta-framework que provee un Dev Server para desarrollo y un CDN en producción, para consumir módulos desde cualquier entorno de ejecución de forma directa."
+		},
+		"whatsIsItFor": {
+			"title": "Programación módular basada en paquetes universales"
+		},
+		"technologies": {
+			"title": "Desarollo Universal"
+		},
+		"universalDevelopment": {
+			"pretitle": "MAS SOBRE BEYONDJS",
+			"title": "Desarollo Universal",
+			"subTitle": "La misma experiencia para todo",
+			"concept": "Misma base de código, misma experiencia de desarrollo y con poca curva de aprendizaje. Lleva la experiencia del desarrollo web a todos los ámbitos donde JavaScript tiene alcance.",
+			"startNow": "Comenzar Ahora",
+			"moreInfo": "Mas informacion"
+		},
+		"doYouWantMore": {
+			"title": "¿QUIERES CONOCER MÁS?",
+			"subTitle": "Más que un Framework, es BeyondJS"
+		},
+		"codepen": {
+			"title": "Widgets out-of-the-box",
+			"subTitle": "Listos para usar",
+			"description": "Integramos un widget con carga a demanda de React  que inicialmente renderiza con SSR y te permite modificar los tipos de renderizado al instante (inspeccionalo).",
+			"checkItOut": "¡Échale un vistazo al siguiente ejemplo!"
+		},
+		"gettingStarted": {
+			"ready": "¿Listo para empezar?",
+			"description": "!Crea tu propio proyecto y haz la diferencia!",
+			"links": {
+				"why": "¿Por que BeyondJS?",
+				"github": "Ver en Github"
+			},
+			"creatingAProject": "O creando un proyecto de forma directa"
+		}
+	}
 }

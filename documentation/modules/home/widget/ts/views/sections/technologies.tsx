@@ -1,0 +1,34 @@
+import React from 'react';
+import { BeyondIcon } from '@beyond/ui/icons';
+import { useHomeContext } from '../context';
+
+const technologies = [
+	{ title: 'jamstack', icon: 'jamstack' },
+	{ title: 'react', icon: 'react' },
+	{ title: 'npm', icon: 'npm' },
+	{ title: 'vue', icon: 'vue' },
+	{ title: 'sass', icon: 'sass' },
+	{ title: 'typescript', icon: 'typescript' },
+	{ title: 'node', icon: 'node' },
+	{ title: 'svelte', icon: 'svelte' },
+	{ title: 'websockets', icon: 'websockets' },
+];
+
+export function Technologies() {
+	const {
+		texts: { technologies: texts },
+	} = useHomeContext();
+
+	const output = technologies.map((technology) => (
+		<li key={technology.title}>
+			<BeyondIcon icon={technology.icon} title={technology.title} />
+		</li>
+	));
+
+	return (
+		<section>
+			<h5>{texts.title}</h5>
+			<ul>{output}</ul>
+		</section>
+	);
+}
