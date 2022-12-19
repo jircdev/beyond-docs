@@ -28,17 +28,19 @@ export function Page({ store }): JSX.Element {
 				ready,
 				texts: store.texts,
 			}}>
-			<Header />
-			<main className="main__home__content">
-				<WhatIs />
-				<WhatIsItFor />
-				<Technologies />
-				<UniversalDevelopment />
-				<DoYouWantMore />
-				<CodePen />
-				<GettingStart />
-				<Footer />
-			</main>
+			<div className="home">
+				<Header />
+				<main className="main__home__content">
+					<WhatIs />
+					<WhatIsItFor />
+					<Technologies />
+					<UniversalDevelopment />
+					<DoYouWantMore />
+					<CodePen />
+					<GettingStart />
+					<Footer />
+				</main>
+			</div>
 		</HomeContext.Provider>
 	);
 }

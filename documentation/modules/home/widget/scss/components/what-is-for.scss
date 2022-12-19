@@ -1,0 +1,52 @@
+.what-its-for__section {
+	min-width: 20rem;
+	width: 67.5%;
+
+	padding: 0 2rem;
+	margin: 0 auto;
+
+	h2 {
+		margin: 0 0 1rem 0;
+	}
+
+	h3 {
+		width: 63%;
+		min-width: 15rem;
+		font-size: 2.7rem;
+		margin: 0;
+	}
+
+	.feature__list {
+		margin: 5rem 0 0 0;
+		padding: 0;
+		list-style: none;
+
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, 15rem);
+		justify-content: space-between;
+		gap: 1rem;
+
+		.feature__item {
+			width: 15rem;
+
+			svg {
+				background: red; // TODO APPLY SVG
+				aspect-ratio: 1/1;
+				width: 50px;
+				height: 50px;
+			}
+
+			h4 {
+				margin: 1rem 0 1rem 0;
+				font-size: 1.3rem;
+				line-height: 1.7rem;
+			}
+
+			p {
+				color: var(--secondary-text-color);
+				font-size: 0.9rem;
+			}
+		}
+	}
+}

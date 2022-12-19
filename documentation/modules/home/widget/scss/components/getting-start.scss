@@ -1,0 +1,39 @@
+.getting_started__section {
+	background: #131e32;
+	border-radius: 20px;
+
+	width: 67.5%;
+	margin: 0 auto;
+	padding: 2rem 1rem;
+
+	h3 {
+		font-size: 1.5rem;
+	}
+
+	h3,
+	p {
+		text-align: center;
+	}
+
+	p {
+		font-size: 0.9rem;
+		margin: 0.2rem 0 1rem 0;
+	}
+
+	.actions {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 1rem;
+
+		a {
+			font-size: 0.8rem;
+			font-weight: 400;
+		}
+
+		.clipboard__container {
+			background: var(--text-color);
+			padding: 0.8rem 1rem;
+		}
+	}
+}

@@ -5,15 +5,17 @@ interface Props {
 	key: string;
 	icon: string;
 	content: string;
+	title: string;
+	children?: JSX.Element;
 }
 
-export function Item({ icon = '', content = '' }: Props) {
+export function Item({ icon = '', title = '', content = '', children }: Props) {
 	return (
-		<li>
-			<div className="">
-				<BeyondIcon icon={icon} />
-				<p dangerouslySetInnerHTML={{ __html: content }}></p>
-			</div>
+		<li className="feature__item">
+			<BeyondIcon icon={icon} />
+			<h4>{title}</h4>
+			<p dangerouslySetInnerHTML={{ __html: content }}></p>
+			{children}
 		</li>
 	);
 }

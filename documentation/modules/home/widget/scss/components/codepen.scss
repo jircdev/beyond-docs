@@ -1,0 +1,24 @@
+.codepen__section {
+	width: 67.5%;
+	margin: 0 auto 3rem auto;
+
+	display: grid;
+	grid-template-columns: 40% 60%;
+
+	h3 {
+		margin: 0 0 1rem 0;
+	}
+
+	h5 {
+		margin: 0 0 2rem 0;
+	}
+}
+
+@media (max-width: 1024px) {
+	.codepen__section {
+		display: grid;
+		grid-template-columns: none;
+		grid-template-rows: 40% 60%;
+		gap: 1rem;
+	}
+}

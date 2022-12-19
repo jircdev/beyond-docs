@@ -1,4 +1,6 @@
 import React from 'react';
+import { BeyondIcon } from '@beyond/ui/icons';
+import { BeyondButton } from '@beyond/ui/form';
 import { useHomeContext } from '../context';
 
 export function UniversalDevelopment() {
@@ -7,20 +9,20 @@ export function UniversalDevelopment() {
 	} = useHomeContext();
 
 	return (
-		<section>
-			{/* SVG GOES HERE */}
+		<section className="universal-development__section">
+			<BeyondIcon icon="universal-development" />
 
 			<div className="content">
 				<header>
-					<p className="">{texts.pretitle}</p>
-					<h4>{texts.title}</h4>
-					<h5>{texts.subTitle}</h5>
+					<h3 className="pre__title">{texts.pretitle}</h3>
+					<h4 className="main__title">{texts.title}</h4>
+					<h5 className="sub__title">{texts.subTitle}</h5>
 				</header>
 
 				<p>{texts.concept}</p>
 
-				<div className="links">
-					<button>{texts.startNow}</button>
+				<div className="actions">
+					<BeyondButton>{texts.startNow}</BeyondButton>
 					<a href="#">{texts.moreInfo}</a>
 				</div>
 			</div>

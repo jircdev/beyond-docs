@@ -7,6 +7,7 @@ import { CDN } from './svgs/cdn';
 import { Buttons } from './buttons';
 import { PublishSVG } from './svgs/publish';
 import { ServerSVG } from './svgs/server';
+
 export function Header() {
 	const container = React.useRef(null);
 	const [slide, setSlide] = React.useState('dev');
@@ -25,7 +26,7 @@ export function Header() {
 				<div className="welcome__text">
 					<h1>{texts.title}</h1>
 
-					<span className="mt-15">{texts.subtitle}</span>
+					<p>{texts.subtitle}</p>
 					{/* <h1>El framework para programación modular basado en paquetes universales</h1> */}
 				</div>
 

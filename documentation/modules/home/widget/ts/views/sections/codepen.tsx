@@ -7,10 +7,11 @@ export function CodePen() {
 	} = useHomeContext();
 
 	return (
-		<section>
+		<section className="codepen__section">
 			<div className="content">
-				<h4>{texts.title}</h4>
-				<h5>{texts.subTitle}</h5>
+				<h4 className="pre__title">{texts.preTitle}</h4>
+				<h3 className="main__title">{texts.title}</h3>
+				<h5 className="sub__title">{texts.subTitle}</h5>
 
 				<p>{texts.description}</p>
 

@@ -2,22 +2,31 @@
 	"es": {
 		"header": {
 			"notice": "Versión beta",
-			"title": "CREA MÓDULOS PENSANDO EN EL FUTURO",
+			"title": "Creando módulos pensando en el futuro",
 			"subtitle": "El único framework compatible con todos los entornos JavaScript."
 		},
 		"whatIs": {
-			"title": "¿Por qué elegir BeyondJS?",
-			"links": { "why": "¿Por que BeyondJS?", "github": "Ver en Github" },
-			"what": "BeyondJS es un meta-framework que provee un Dev Server para desarrollo y un CDN en producción, para consumir módulos desde cualquier entorno de ejecución de forma directa."
+			"title": "Por qué elegir BeyondJS",
+			"links": { "why": "Conocer mas", "github": "Github" },
+			"what": "BeyondJS es un meta-framework que provee un Dev Server para desarrollo y un CDN en producción, para consumir módulos desde cualquier entorno de ejecución de forma directa.",
+			"startNow": "Comienza ahora"
 		},
 		"whatsIsItFor": {
-			"title": "Programación módular basada en paquetes universales"
+			"title": "Programación módular basada en paquetes universales",
+			"pretitle": "¿PARA QUÉ SIRVE?",
+
+			"features": [
+				{ "title": "Librerías y paquetes", "description": "Que esperan ser consumidos por otros equipos de desarrolladores.", "icon": "librariesAndPackages" },
+				{ "title": "Composite Apps, Microfrontends, Microservices", "description": "De forma directa, sin configuraciones y listos para integrarse en proyectos ya existentes.", "icon": "microservices" },
+				{ "title": "SPA / WPA / Hybrid APPs", "description": "Para móviles, de escritorio y webs.", "icon": "spaWpaApps" },
+				{ "title": "JamsTACK, SSR, renderizado híbrido y estático", "description": "Pudiendo elegir el renderizado que desees para cada componente.", "icon": "ssrJamstack" }
+			]
 		},
 		"technologies": {
-			"title": "Desarollo Universal"
+			"title": "DESAROLLO UNIVERSAL"
 		},
 		"universalDevelopment": {
-			"pretitle": "MAS SOBRE BEYONDJS",
+			"pretitle": "MÁS SOBRE BEYONDJS",
 			"title": "Desarollo Universal",
 			"subTitle": "La misma experiencia para todo",
 			"concept": "Misma base de código, misma experiencia de desarrollo y con poca curva de aprendizaje. Lleva la experiencia del desarrollo web a todos los ámbitos donde JavaScript tiene alcance.",
@@ -25,10 +34,62 @@
 			"moreInfo": "Mas informacion"
 		},
 		"doYouWantMore": {
-			"title": "¿QUIERES CONOCER MÁS?",
-			"subTitle": "Más que un Framework, es BeyondJS"
+			"preTitle": "¿QUIERES CONOCER MÁS?",
+			"title": "Más que un Framework, es BeyondJS",
+			"features": [
+				{
+					"icon": "unification",
+					"title": "Unificación",
+					"description": "Permite consumir paquetes desde cualquier entorno."
+				},
+				{
+					"icon": "typescript",
+					"title": "Typescript First",
+					"description": "Posibilita la generación automática de tipos (archivos .d.ts) y realiza chequeo de tipos optimizados y sin necesidad de configuración."
+				},
+				{
+					"icon": "deployment",
+					"title": "Deployment",
+					"description": "Cuenta con <a href=\"#\">BeyondJS Workspace</a> que gestiona el manejo de dependencias, el proceso de deployment y la gestión de errores."
+				},
+				{
+					"icon": "hmr",
+					"title": "HMR",
+					"description": "Se encuentra integrado automáticamente para Frontend y Backend."
+				},
+				{
+					"icon": "webSockets",
+					"title": "Web Socket",
+					"description": "Está completamente listo para usar con generación de tipado para el código de interacción entre frontend y backend."
+				},
+				{
+					"icon": "esm",
+					"title": "ESM estándar",
+					"description": "Permite el desarrollo modular basado en Módulos ES, con generación automática de importmaps y SystemJS para proyectos en el Browser.",
+					"moreInfo": {
+						"to": "",
+						"text": "Mas informacion"
+					}
+				},
+				{
+					"icon": "allYouNeed",
+					"title": "Todo lo que necesitas",
+					"description": "<a href=\"#\">BeyondJS</a> es todo lo que necesitas: CSS, SASS, VUE, REACT, SVELTE compatibles entre sí y de forma natural."
+				},
+				{
+					"icon": "npm",
+					"title": "Estándar NPM",
+					"description": "Posee una optimización de paquetes npm que erradica el  “dependency hell” y asegurar la compatibilidad con las distintas formas de consumo de paquetes."
+				},
+				{
+					"icon": "readyForTheFuture",
+					"title": "Listo para el futuro",
+					"description": "Está diseñado para agregar tecnologías y librerías emergentes."
+				}
+			]
 		},
 		"codepen": {
+			"preTitle": "WIDGETS",
 			"title": "Widgets out-of-the-box",
 			"subTitle": "Listos para usar",
 			"description": "Integramos un widget con carga a demanda de React  que inicialmente renderiza con SSR y te permite modificar los tipos de renderizado al instante (inspeccionalo).",
@@ -36,10 +97,11 @@
 		},
 		"gettingStarted": {
 			"ready": "¿Listo para empezar?",
-			"description": "!Crea tu propio proyecto y haz la diferencia!",
+			"description": "¡Crea ahora tu propio proyecto y haz la diferencia!",
 			"links": {
 				"why": "¿Por que BeyondJS?",
-				"github": "Ver en Github"
+				"github": "Ver en Github",
+				"startNow": "Comience ahora"
 			},
 			"creatingAProject": "O creando un proyecto de forma directa"
 		}

@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { AppIcon } from '@beyond/docs/ui/icons';
+import { BeyondIconButton } from '@beyond/ui/icons';
 import { useHomeContext } from '../context';
 
 export function GettingStart() {
@@ -8,25 +9,23 @@ export function GettingStart() {
 	} = useHomeContext();
 
 	return (
-		<div className="container">
-			<div className="container--800">
-				<h3>{texts.ready}</h3>
-				{/* <Elink href="https://workspace.beyondjs.com">Conoce nuestro Workspace</Elink> */}
-				<p>{texts.description}</p>
-				<div className="links">
-					<a href="#">{texts.links.why}</a>
-					<a href="#">{texts.links.github}</a>
+		<section className="getting_started__section">
+			<h3 className="main__title">{texts.ready}</h3>
+			{/* <Elink href="https://workspace.beyondjs.com">Conoce nuestro Workspace</Elink> */}
+			<p className="pre__title">{texts.description}</p>
+			<div className="actions">
+				<a href="#">{texts.links.why}</a>
+				<a href="#">{texts.links.github}</a>
 
-					<div className="clipboard__container" data-text="npm i -g beyond">
-						<span>npm i --location=global beyond</span>
-						<AppIcon icon="copy" />
-					</div>
-					<p>{texts.creatingAProject}</p>
-					<div className="clipboard__container" data-text="npm i -g beyond">
-						npx @beyond-js/create-project --type node --name @beyond-tutorial/hmr
-					</div>
+				<BeyondIconButton className="start-now" icon="arrow-left">
+					{texts.links.startNow}
+				</BeyondIconButton>
+
+				<div className="clipboard__container" data-text="npm i -g beyond">
+					<span>npm i --location=global beyond</span>
+					<AppIcon icon="copy" />
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 }

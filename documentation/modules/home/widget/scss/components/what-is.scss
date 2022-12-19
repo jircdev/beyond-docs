@@ -1,3 +1,94 @@
 .what-is__section {
-	width: 70%;
+	// TODO APPLY SVG
+	background: linear-gradient(90deg, rgba(21, 68, 136, 1) 0%, rgba(18, 45, 83, 1) 59%);
+	border-radius: 12px;
+
+	min-width: 20rem;
+	width: 55%;
+	height: 12rem;
+
+	padding: 3.8rem 6rem 2.5rem 6rem;
+	margin: 0 auto 8rem auto;
+
+	display: grid;
+	grid-template-columns: 30% calc(100% - 30% - 4rem);
+	gap: 2rem;
+
+	.left {
+		height: 92%;
+		min-width: 12.3rem;
+		width: auto;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		gap: 4rem;
+
+		.links {
+			width: 100%;
+			display: flex;
+			gap: 2rem;
+
+			a {
+				font-weight: 200;
+			}
+		}
+	}
+
+	.right {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		p {
+			color: var(--text-on-primary);
+			font-size: 1.3rem;
+			line-height: 1.6rem;
+			margin: 0;
+			display: block;
+		}
+
+		.actions {
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+
+			.clipboard__container {
+				background: var(--text-on-primary);
+				border-radius: 5px;
+				padding: 0.8rem 1rem;
+				margin: 0;
+				width: 19rem;
+
+				span {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.what-is__section {
+		height: auto;
+		min-width: 13rem;
+		padding: 2.5rem 3rem;
+		grid-template-columns: none;
+		grid-template-rows: 20% 80%;
+		gap: 0;
+
+		.left {
+			gap: 0;
+		}
+
+		.right {
+			margin: 1.5rem 0 0 0;
+
+			.actions {
+				flex-direction: column;
+				gap: 0.5rem;
+			}
+		}
+	}
 }

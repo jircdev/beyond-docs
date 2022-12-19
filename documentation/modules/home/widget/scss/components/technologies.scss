@@ -1,0 +1,26 @@
+.technologies__section {
+	width: 67.5%;
+	margin: 7rem auto 6rem auto;
+
+	h5 {
+		text-align: center;
+	}
+
+	.technologies__list {
+		padding: 0;
+		list-style: none;
+
+		display: grid;
+		grid-template-columns: repeat(auto-fit, 30px);
+		justify-content: center;
+		gap: 5rem;
+
+		li {
+			width: 30px;
+
+			svg {
+				background: red; // TODO APPLY SVG
+			}
+		}
+	}
+}

@@ -26,9 +26,9 @@ export function Technologies() {
 	));
 
 	return (
-		<section>
-			<h5>{texts.title}</h5>
-			<ul>{output}</ul>
+		<section className="technologies__section">
+			<h5 className="pre__title">{texts.title}</h5>
+			<ul className="technologies__list">{output}</ul>
 		</section>
 	);
 }

@@ -1,38 +1,37 @@
 .home__header {
-    .header__banners {
-        position: relative;
-        display: grid;
-        grid-template-rows: 1fr auto;
-        grid-template-columns: 1fr;
-        margin: auto;
-        width: 100%;
-        height: 400px;
-        align-items: center;
-        justify-items: center;
-        width: 100%;
-        margin-top: 2rem;
-        align-items: center;
-        picture,
-        svg {
-            width: 100%;
-            height: auto;
-            path#github {
-                fill: var(--gh-icon-color) !important;
-            }
-        }
+	.header__banners {
+		width: 100%;
+		margin: auto;
+		margin-top: 2rem;
 
-        figcaption {
-            align-self: center;
-            display: grid;
-            grid-gap: 0.5rem;
-        }
-        @media (min-width: 900px) {
-            max-width: 800px;
+		position: relative;
 
-            figcaption {
-                justify-content: end;
-                justify-self: end;
-            }
-        }
-    }
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1.2rem;
+
+		picture,
+		svg {
+			width: 100%;
+			height: auto;
+			path#github {
+				fill: var(--gh-icon-color) !important;
+			}
+		}
+
+		figcaption {
+			justify-self: center;
+			display: grid;
+			grid-gap: 0.5rem;
+		}
+		@media (min-width: 900px) {
+			max-width: 800px;
+
+			figcaption {
+				justify-content: end;
+				justify-self: end;
+			}
+		}
+	}
 }
