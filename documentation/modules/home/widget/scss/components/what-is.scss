@@ -3,7 +3,7 @@
 	background: linear-gradient(90deg, rgba(21, 68, 136, 1) 0%, rgba(18, 45, 83, 1) 59%);
 	border-radius: 12px;
 
-	min-width: 20rem;
+	min-width: 404px;
 	width: 55%;
 	height: 12rem;
 
@@ -16,13 +16,16 @@
 
 	.left {
 		height: 92%;
-		min-width: 12.3rem;
 		width: auto;
 
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 		gap: 4rem;
+
+		.main__title {
+			color: var(--text-on-primary);
+		}
 
 		.links {
 			width: 100%;
@@ -36,12 +39,14 @@
 	}
 
 	.right {
+		width: 100%;
 		height: 100%;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 
 		p {
+			width: 100%;
 			color: var(--text-on-primary);
 			font-size: 1.3rem;
 			line-height: 1.6rem;
@@ -71,12 +76,14 @@
 
 @media (max-width: 1024px) {
 	.what-is__section {
-		height: auto;
+		width: 85%;
+		height: 60%;
 		min-width: 13rem;
-		padding: 2.5rem 3rem;
+
+		padding: 2.5rem 1rem 4rem 1rem;
 		grid-template-columns: none;
 		grid-template-rows: 20% 80%;
-		gap: 0;
+		gap: 1rem;
 
 		.left {
 			gap: 0;

@@ -9,7 +9,7 @@ export function GettingStart() {
 	} = useHomeContext();
 
 	return (
-		<section className="getting_started__section">
+		<section className="getting_started__section center-content">
 			<h3 className="main__title">{texts.ready}</h3>
 			{/* <Elink href="https://workspace.beyondjs.com">Conoce nuestro Workspace</Elink> */}
 			<p className="pre__title">{texts.description}</p>

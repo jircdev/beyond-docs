@@ -38,8 +38,8 @@ export function Page({ store }): JSX.Element {
 					<DoYouWantMore />
 					<CodePen />
 					<GettingStart />
-					<Footer />
 				</main>
+				<Footer />
 			</div>
 		</HomeContext.Provider>
 	);

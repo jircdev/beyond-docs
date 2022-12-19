@@ -23,7 +23,7 @@ export function DoYouWantMore() {
 	});
 
 	return (
-		<section className="more__section">
+		<section className="more__section center-content">
 			<h3 className="pre__title">{texts.preTitle}</h3>
 			<h4 className="main__title">{texts.title}</h4>
 			<ul className="feature__list">{output}</ul>

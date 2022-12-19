@@ -4,6 +4,7 @@
 	padding: 3rem 0 0 0;
 
 	.main__home__content {
+		padding: 0 0 5rem 0;
 		z-index: 2;
 	}
 }
@@ -63,5 +64,15 @@ a {
 .hidden-mobile {
 	@include mixins.set-media('tablet', false, 'max') {
 		display: none;
+	}
+}
+
+.center-content {
+	width: 67.5%;
+}
+
+@media (max-width: 768px) {
+	.center-content {
+		width: 80%;
 	}
 }
