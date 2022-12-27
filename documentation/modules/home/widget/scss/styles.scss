@@ -1,78 +1,78 @@
-@use '~template/sass/mixins';
+@use "~template/sass/mixins";
 
 .home {
-	padding: 3rem 0 0 0;
+    padding: 3rem 0 0 0;
 
-	.main__home__content {
-		padding: 0 0 5rem 0;
-		z-index: 2;
-	}
+    .main__home__content {
+        padding: 0 0 5rem 0;
+        z-index: 2;
+    }
 }
 
 a {
-	color: var(--app-link-color);
-	cursor: pointer;
-	transition: all 200ms linear;
-	text-decoration: none;
-	position: relative;
+    color: var(--app-link-color);
+    cursor: pointer;
+    transition: all 200ms linear;
+    text-decoration: none;
+    position: relative;
 
-	&:not(.link-more) {
-		text-underline-offset: 1.5px;
-		text-decoration: underline;
-	}
+    &:not(.link-more) {
+        text-underline-offset: 1.5px;
+        text-decoration: underline;
+    }
 
-	&:hover {
-		color: var(--app-link-hover-color);
-	}
+    &:hover {
+        color: var(--app-link-hover-color);
+    }
 }
 
 .text-center {
-	text-align: center;
+    text-align: center;
 }
 
 .banner__icons {
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	gap: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
 
-	.beyond-icon {
-		height: 45px;
-		width: 45px;
-		@include mixins.set-media('mobile', false, max) {
-			height: 50px;
-			width: 50px;
-		}
-	}
+    .beyond-icon {
+        height: 45px;
+        width: 45px;
+        @include mixins.set-media("mobile", false, max) {
+            height: 50px;
+            width: 50px;
+        }
+    }
 }
 
 .mv-200 {
-	margin: 14rem auto;
-	@include mixins.set-media('desktop', false, min) {
-		margin: 7rem auto;
-	}
+    margin: 14rem auto;
+    @include mixins.set-media("desktop", false, min) {
+        margin: 7rem auto;
+    }
 }
 
 .page__footer {
-	padding: 2rem;
-	border-top: 1px solid var(--app-element-border-color-1);
-	width: calc(100% - 2rem * 2);
-	max-width: 1376px;
-	margin: auto;
+    padding: 2rem;
+    border-top: 1px solid var(--app-element-border-color-1);
+    width: calc(100% - 2rem * 2);
+    max-width: 1376px;
+    margin: auto;
 }
 
 .hidden-mobile {
-	@include mixins.set-media('tablet', false, 'max') {
-		display: none;
-	}
+    @include mixins.set-media("tablet", false, "max") {
+        display: none;
+    }
 }
 
 .center-content {
-	width: 67.5%;
+    width: 67.5%;
 }
 
 @media (max-width: 768px) {
-	.center-content {
-		width: 80%;
-	}
+    .center-content {
+        width: 80%;
+    }
 }
