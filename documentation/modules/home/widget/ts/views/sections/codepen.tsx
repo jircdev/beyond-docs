@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHomeContext } from '../context';
+import { useHomeContext } from '../contexts';
 
 export function CodePen() {
 	const {

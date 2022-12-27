@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useHomeContext } from '../context';
+import { useHomeContext } from '../contexts';
 import { Item } from './item';
 
 export function WhatIsItFor() {

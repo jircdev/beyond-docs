@@ -1,30 +1,26 @@
 {
-  "name": "contents-data",
-  "code": {
-    "hmr": true,
-    "ts": {
-      "path": "/ts",
-      "files": [
-        "*"
-      ]
-    },
-    "sass": {
-      "path": "/scss",
-      "files": [
-        "*"
-      ]
-    }
-  },
-  "static": {
-    "includes": [
-      "./static"
-    ]
-  },
-  "txt": {
-    "files": [
-      "*"
-    ],
-    "path": "texts",
-    "multilanguage": true
-  }
+	"name": "contents-data",
+	"code": {
+		"hmr": true,
+		"mdx": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"ts": {
+			"path": "/ts",
+			"files": ["*"]
+		},
+		"sass": {
+			"path": "/scss",
+			"files": ["*"]
+		}
+	},
+	"static": {
+		"includes": ["./static"]
+	},
+	"txt": {
+		"files": ["*"],
+		"path": "texts",
+		"multilanguage": true
+	}
 }

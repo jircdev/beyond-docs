@@ -1,6 +1,6 @@
 import * as React from 'react';
 import '@beyond/docs/header-menu.widget';
-import { useHomeContext, HeaderContext } from '../context';
+import { useHomeContext, HeaderContext } from '../contexts';
 import { SVGImage } from './svgs/svg-image';
 import { CDN } from './svgs/cdn';
 

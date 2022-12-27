@@ -1,7 +1,7 @@
 import React from 'react';
 import { BeyondIcon } from '@beyond/ui/icons';
 import { BeyondButton } from '@beyond/ui/form';
-import { useHomeContext } from '../context';
+import { useHomeContext } from '../contexts';
 
 export function UniversalDevelopment() {
 	const {

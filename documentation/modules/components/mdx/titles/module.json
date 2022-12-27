@@ -1,0 +1,13 @@
+{
+	"name": "titles",
+	"code": {
+		"sass": {
+			"path": "scss",
+			"files": ["*"]
+		},
+		"ts": {
+			"path": "ts",
+			"files": ["*"]
+		}
+	}
+}

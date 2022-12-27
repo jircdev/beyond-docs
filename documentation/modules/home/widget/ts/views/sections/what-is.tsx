@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { AppIcon } from '@beyond/docs/ui/icons';
 import { BeyondIconButton } from '@beyond/ui/icons';
-import { useHomeContext } from '../context';
+import { useHomeContext } from '../contexts';
 
 export function WhatIs() {
 	const {

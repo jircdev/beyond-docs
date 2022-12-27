@@ -1,15 +1,15 @@
-import {PageReactWidgetController} from '@beyond-js/react-widgets/page';
-import {IWidgetStore} from "@beyond-js/kernel/core";
-import {Contents} from "./contents";
-import {Page} from './page';
+import { PageReactWidgetController } from '@beyond-js/react-widgets/page';
+import { IWidgetStore } from '@beyond-js/kernel/core';
+import { Contents } from './contents';
+import { Page } from './index';
 
 export /*bundle*/
 class Controller extends PageReactWidgetController {
-    createStore(): IWidgetStore {
-        return new Contents(this.body);
-    }
+	createStore(): IWidgetStore {
+		return new Contents(this.body);
+	}
 
-    get Widget() {
-        return Page;
-    }
+	get Widget() {
+		return Page;
+	}
 }

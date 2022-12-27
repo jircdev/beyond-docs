@@ -1,6 +1,6 @@
 import React from 'react';
 import { BeyondIcon } from '@beyond/ui/icons';
-import { useHomeContext } from '../context';
+import { useHomeContext } from '../contexts';
 
 const technologies = [
 	{ title: 'jamstack', icon: 'jamstack' },

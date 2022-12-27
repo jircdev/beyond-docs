@@ -1,34 +1,26 @@
 {
-  "name": "home",
-  "platforms": [
-    "web"
-  ],
-  "widget": {
-    "layout": "home-layout",
-    "hmr": true,
-    "element": {
-      "name": "home-page"
-    },
-    "route": "/",
-    "is": "page",
-    "ts": {
-      "path": "/widget/ts",
-      "files": [
-        "*"
-      ]
-    },
-    "sass": {
-      "path": "widget/scss",
-      "files": [
-        "*"
-      ]
-    }
-  },
-  "txt": {
-    "multilanguage": true,
-    "path": "texts",
-    "files": [
-      "*"
-    ]
-  }
+	"name": "home",
+	"platforms": ["web"],
+	"widget": {
+		"layout": "home-layout",
+		"hmr": true,
+		"element": {
+			"name": "home-page"
+		},
+		"route": "/",
+		"is": "page",
+		"ts": {
+			"path": "/widget/ts",
+			"files": ["*"]
+		},
+		"sass": {
+			"path": "widget/scss",
+			"files": ["*"]
+		}
+	},
+	"txt": {
+		"multilanguage": true,
+		"path": "texts",
+		"files": ["*"]
+	}
 }

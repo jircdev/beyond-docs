@@ -1,0 +1,9 @@
+{
+	"name": "links",
+	"code": {
+		"ts": {
+			"path": "ts",
+			"files": ["*"]
+		}
+	}
+}

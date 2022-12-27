@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Header } from './header';
 import { Footer } from './footer';
 import { useBinder } from '@beyond/docs/store';
-import { HomeContext } from './context';
+import { HomeContext } from './contexts';
 import { WhatIs } from './sections/what-is';
 import { WhatIsItFor } from './sections/what-is-it-for';
 import { Technologies } from './sections/technologies';

@@ -1,15 +1,19 @@
 {
-  "name": "docs/starting/tutorial",
-  "txt": {
-    "multilanguage": true,
-    "path": "/texts",
-    "files": ["*"]
-  },
-  "code": {
-    "hmr": true,
-    "ts": {
-      "path": "/code/ts",
-      "files": ["*"]
-    }
-  }
+	"name": "docs/starting/tutorial",
+	"txt": {
+		"multilanguage": true,
+		"path": "/texts",
+		"files": ["*"]
+	},
+	"code": {
+		"hmr": true,
+		"mdx": {
+			"path": "/code/ts",
+			"files": ["*"]
+		},
+		"ts": {
+			"path": "/code/ts",
+			"files": ["*"]
+		}
+	}
 }
