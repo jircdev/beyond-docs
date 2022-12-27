@@ -1,21 +1,16 @@
 {
-  "name": "contents-subpage",
-  "platforms": [
-    "backend",
-    "web"
-  ],
-  "widget": {
-    "element": {
-      "name": "contents-subpage"
-    },
-    "layout": "main-layout",
-    "route": "/docs/${content}/${sub}",
-    "is": "page",
-    "ts": {
-      "path": "/widget/ts",
-      "files": [
-        "*"
-      ]
+    "name": "contents-subpage",
+    "platforms": ["backend", "web"],
+    "widget": {
+        "element": {
+            "name": "contents-subpage"
+        },
+        "layout": "main-layout",
+        "route": "/docs/old/${content}/${sub}",
+        "is": "page",
+        "ts": {
+            "path": "/widget/ts",
+            "files": ["*"]
+        }
     }
-  }
 }

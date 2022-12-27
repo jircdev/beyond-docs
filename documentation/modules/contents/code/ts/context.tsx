@@ -1,8 +1,8 @@
-import * as React from 'react';
+import * as React from "react";
 
 interface IDocsContextValue {
-    ready?: boolean,
-    texts?: Object
+    ready?: boolean;
+    texts?: Object;
 }
 
 const value: IDocsContextValue = {};

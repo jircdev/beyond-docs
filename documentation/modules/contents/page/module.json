@@ -1,23 +1,22 @@
 {
-  "name": "contents-page",
-  "platforms": [
-    "backend",
-    "web"
-  ],
-  "widget": {
-    "hmr": true,
-    "layout": "main-layout",
-    "element": {
-      "name": "contents-page"
-    },
-    "name": "home",
-    "route": "/docs/${content}",
-    "is": "page",
-    "ts": {
-      "path": "/widget/ts",
-      "files": [
-        "*"
-      ]
+    "name": "contents-page",
+    "platforms": ["backend", "web"],
+    "widget": {
+        "hmr": true,
+        "layout": "main-layout",
+        "element": {
+            "name": "contents-page"
+        },
+        "name": "home",
+        "route": "/docs/${content}",
+        "is": "page",
+        "mdx": {
+            "path": "/widget/ts",
+            "files": ["*"]
+        },
+        "ts": {
+            "path": "/widget/ts",
+            "files": ["*"]
+        }
     }
-  }
 }
