@@ -1,0 +1,20 @@
+{
+	"name": "icons/page",
+	"widget": {
+		"route": "/icons",
+		"is": "page",
+
+		"sass": {
+			"path": "/widget/scss",
+			"files": ["*"]
+		},
+
+		"ts": {
+			"path": "/widget/ts",
+			"files": ["*"]
+		},
+		"element": {
+			"name": "icons-view"
+		}
+	}
+}
