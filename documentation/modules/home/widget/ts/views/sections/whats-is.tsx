@@ -2,6 +2,7 @@ import * as React from 'react';
 import { AppIcon } from '@beyond/docs/ui/icons';
 import { BeyondIconButton } from '@beyond/ui/icons';
 import { useHomeContext } from '../contexts';
+import { SVGS } from '../../icons';
 
 export function WhatIs() {
 	const {
@@ -22,7 +23,7 @@ export function WhatIs() {
 				<p>{texts.what}</p>
 
 				<div className="actions">
-					<BeyondIconButton className="start-now" icon="arrow-left">
+					<BeyondIconButton className="start-now" icon={SVGS.rightArrow}>
 						{texts.startNow}
 					</BeyondIconButton>
 

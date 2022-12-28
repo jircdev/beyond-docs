@@ -1,5 +1,6 @@
 import React from 'react';
 import { BeyondIcon } from '@beyond/ui/icons';
+import { SVGImage } from '../../svg-image';
 
 interface Props {
 	key: string;

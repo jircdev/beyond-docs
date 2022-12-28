@@ -2,7 +2,7 @@
 	"en": {
 		"header": {
 			"notice": "Versión beta",
-			"title": "Creando módulos pensando en el futuro",
+			"title": "Crea módulos pensando en el futuro",
 			"subtitle": "El único framework compatible con todos los entornos JavaScript."
 		},
 		"whatIs": {
@@ -17,16 +17,16 @@
 
 			"features": [
 				{ "title": "Librerías y paquetes", "description": "Que esperan ser consumidos por otros equipos de desarrolladores.", "icon": "librariesAndPackages" },
-				{ "title": "Composite Apps, Microfrontends, Microservices", "description": "De forma directa, sin configuraciones y listos para integrarse en proyectos ya existentes.", "icon": "microservices" },
+				{ "title": "Composite Applications / Micro Frontends / Microservices", "description": "De forma directa, sin configuraciones y listos para integrarse en proyectos ya existentes.", "icon": "microservices" },
 				{ "title": "SPA / WPA / Hybrid APPs", "description": "Para móviles, de escritorio y webs.", "icon": "spaWpaApps" },
-				{ "title": "JamsTACK, SSR, renderizado híbrido y estático", "description": "Pudiendo elegir el renderizado que desees para cada componente.", "icon": "ssrJamstack" }
+				{ "title": "JamsTACK / SSR, renderizado híbrido y estático", "description": "Pudiendo elegir el renderizado que desees para cada componente.", "icon": "ssrJamstack" }
 			]
 		},
 		"technologies": {
 			"title": "DESAROLLO UNIVERSAL"
 		},
 		"universalDevelopment": {
-			"pretitle": "MÁS SOBRE BEYONDJS",
+			"pretitle": "JAVASCRIPT ESTA EN TODOS LADOS",
 			"title": "Desarollo Universal",
 			"subTitle": "La misma experiencia para todo",
 			"concept": "Misma base de código, misma experiencia de desarrollo y con poca curva de aprendizaje. Lleva la experiencia del desarrollo web a todos los ámbitos donde JavaScript tiene alcance.",
@@ -50,7 +50,7 @@
 				{
 					"icon": "deployment",
 					"title": "Deployment",
-					"description": "Cuenta con <a href=\"#\">BeyondJS Workspace</a> que gestiona el manejo de dependencias, el proceso de deployment y la gestión de errores."
+					"description": "Cuenta con <a href=\"https://workspace.beyondjs.com/\">BeyondJS Workspace</a> que gestiona el manejo de dependencias, el proceso de deployment y la gestión de errores."
 				},
 				{
 					"icon": "hmr",
@@ -68,13 +68,13 @@
 					"description": "Permite el desarrollo modular basado en Módulos ES, con generación automática de importmaps y SystemJS para proyectos en el Browser.",
 					"moreInfo": {
 						"to": "",
-						"text": "Mas informacion"
+						"text": "Leer más"
 					}
 				},
 				{
 					"icon": "allYouNeed",
 					"title": "Todo lo que necesitas",
-					"description": "<a href=\"#\">BeyondJS</a> es todo lo que necesitas: CSS, SASS, VUE, REACT, SVELTE compatibles entre sí y de forma natural."
+					"description": "BeyondJS es todo lo que necesitas: CSS, SASS, VUE, REACT, SVELTE compatibles entre sí y de forma natural."
 				},
 				{
 					"icon": "npm",
@@ -89,10 +89,10 @@
 			]
 		},
 		"codepen": {
-			"preTitle": "WIDGETS",
+			"preTitle": "Y HAY MUCHO MÁS….",
 			"title": "Widgets out-of-the-box",
 			"subTitle": "Listos para usar",
-			"description": "Integramos un widget con carga a demanda de React  que inicialmente renderiza con SSR y te permite modificar los tipos de renderizado al instante (inspeccionalo).",
+			"description": "Integramos un widget con carga a demanda de React que inicialmente renderiza con SSR y te permite modificar los tipos de renderizado al instante (inspeccionalo).",
 			"checkItOut": "¡Échale un vistazo al siguiente ejemplo!"
 		},
 		"gettingStarted": {

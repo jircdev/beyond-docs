@@ -2,6 +2,7 @@ import * as React from 'react';
 import { AppIcon } from '@beyond/docs/ui/icons';
 import { BeyondIconButton } from '@beyond/ui/icons';
 import { useHomeContext } from '../contexts';
+import { SVGS } from '../../icons';
 
 export function GettingStart() {
 	const {
@@ -17,7 +18,7 @@ export function GettingStart() {
 				<a href="#">{texts.links.why}</a>
 				<a href="#">{texts.links.github}</a>
 
-				<BeyondIconButton className="start-now" icon="arrow-left">
+				<BeyondIconButton className="start-now" icon={SVGS.rightArrow}>
 					{texts.links.startNow}
 				</BeyondIconButton>
 

@@ -3,7 +3,7 @@ import { Header } from './header';
 import { Footer } from './footer';
 import { useBinder } from '@beyond/docs/store';
 import { HomeContext } from './contexts';
-import { WhatIs } from './sections/what-is';
+import { WhatIs } from './sections/whats-is';
 import { WhatIsItFor } from './sections/what-is-it-for';
 import { Technologies } from './sections/technologies';
 import { UniversalDevelopment } from './sections/universal-development';

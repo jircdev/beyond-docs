@@ -3,7 +3,7 @@
 	background: linear-gradient(90deg, rgba(21, 68, 136, 1) 0%, rgba(18, 45, 83, 1) 59%);
 	border-radius: 12px;
 
-	min-width: 404px;
+	min-width: min-content;
 	width: 55%;
 	height: 12rem;
 
@@ -78,7 +78,6 @@
 	.what-is__section {
 		width: 85%;
 		height: 60%;
-		min-width: 13rem;
 
 		padding: 2.5rem 1rem 4rem 1rem;
 		grid-template-columns: none;

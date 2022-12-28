@@ -1,6 +1,7 @@
 import React from 'react';
 import { Item } from './item';
 import { useHomeContext } from '../contexts';
+import { SVGS } from '../../icons';
 
 interface IFeature {
 	moreInfo?: { text: string; to: string };
@@ -16,7 +17,7 @@ export function DoYouWantMore() {
 
 	const output = texts.features.map((feature: IFeature) => {
 		return (
-			<Item key={feature.description} title={feature.title} icon={feature.icon} content={feature.description}>
+			<Item key={feature.description} title={feature.title} icon={SVGS.outlines[feature.icon]} content={feature.description}>
 				{feature.moreInfo && <a href={feature.moreInfo.to}>{feature.moreInfo.text}</a>}
 			</Item>
 		);

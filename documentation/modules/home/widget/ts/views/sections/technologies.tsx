@@ -1,9 +1,10 @@
 import React from 'react';
 import { BeyondIcon } from '@beyond/ui/icons';
 import { useHomeContext } from '../contexts';
+import { SVGS } from '../../icons';
 
 const technologies = [
-	{ title: 'jamstack', icon: 'jamstack' },
+	{ title: 'jamstack', icon: 'jamstackIcon' },
 	{ title: 'react', icon: 'react' },
 	{ title: 'npm', icon: 'npm' },
 	{ title: 'vue', icon: 'vue' },
@@ -11,7 +12,7 @@ const technologies = [
 	{ title: 'typescript', icon: 'typescript' },
 	{ title: 'node', icon: 'node' },
 	{ title: 'svelte', icon: 'svelte' },
-	{ title: 'websockets', icon: 'websockets' },
+	{ title: 'websockets', icon: 'websocket' },
 ];
 
 export function Technologies() {
@@ -21,7 +22,7 @@ export function Technologies() {
 
 	const output = technologies.map((technology) => (
 		<li key={technology.title}>
-			<BeyondIcon icon={technology.icon} title={technology.title} />
+			<BeyondIcon icon={SVGS[technology.icon]} title={technology.title} />
 		</li>
 	));
 

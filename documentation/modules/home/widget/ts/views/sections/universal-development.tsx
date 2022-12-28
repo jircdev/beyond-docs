@@ -2,6 +2,7 @@ import React from 'react';
 import { BeyondIcon } from '@beyond/ui/icons';
 import { BeyondButton } from '@beyond/ui/form';
 import { useHomeContext } from '../contexts';
+import { SVGS } from '../../icons';
 
 export function UniversalDevelopment() {
 	const {
