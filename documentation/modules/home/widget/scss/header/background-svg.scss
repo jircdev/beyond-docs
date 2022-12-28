@@ -1,0 +1,14 @@
+.headersvg__container {
+	position: absolute;
+	left: 0;
+	top: 3.5rem;
+	right: 0;
+
+	width: 100%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	z-index: 0;
+}

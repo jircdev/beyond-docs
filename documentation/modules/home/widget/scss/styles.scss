@@ -1,11 +1,10 @@
 @use '~template/sass/mixins';
 
 .home {
-	padding: 8rem 0 0 0;
-
 	.main__home__content {
+		position: relative;
 		padding: 0 0 5rem 0;
-		z-index: 2;
+		z-index: 5;
 	}
 }
 
@@ -69,6 +68,8 @@ a {
 
 .center-content {
 	width: 67.5%;
+	z-index: 5;
+	position: relative;
 }
 
 @media (max-width: 768px) {

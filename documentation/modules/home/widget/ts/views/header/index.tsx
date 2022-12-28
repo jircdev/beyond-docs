@@ -24,6 +24,7 @@ export function Header() {
 	return (
 		<HeaderContext.Provider value={{ setSlide, slide }}>
 			<header className="container home__header" ref={container}>
+				<BackgroundContainer />
 				<div className="welcome__text">
 					<h1>{texts.title}</h1>
 					<p>{texts.subtitle}</p>
@@ -36,7 +37,6 @@ export function Header() {
 					</figcaption>
 					<SVGImage src={images[slide]} />
 				</figure>
-				<BackgroundContainer />
 			</header>
 		</HeaderContext.Provider>
 	);

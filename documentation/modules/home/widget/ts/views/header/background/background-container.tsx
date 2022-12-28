@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 const SVG = `<svg xmlns="http://www.w3.org/2000/svg" width="626.601" height="1156.834" z>
 <g id="Ilustration.Background.Icon" transform="translate(-1419 -3535.999)" opacity="0.45" style="mix-blend-mode: normal;isolation: isolate">
   <g id="Grupo_7716" data-name="Grupo 7716" transform="translate(1419 3535.999)" style="mix-blend-mode: color-dodge;isolation: isolate">
@@ -11,21 +11,9 @@ const SVG = `<svg xmlns="http://www.w3.org/2000/svg" width="626.601" height="115
 </svg>
 `;
 export function BackgroundContainer() {
-    return (
-        <div
-            style={{
-                position: "absolute",
-                left: "0",
-                border: "yellow 1px solid",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                top: 0,
-                width: "100%",
-                right: "0",
-            }}
-        >
-            <span dangerouslySetInnerHTML={{ __html: SVG }} />
-        </div>
-    );
+	return (
+		<div className="headersvg__container">
+			<span dangerouslySetInnerHTML={{ __html: SVG }} />
+		</div>
+	);
 }

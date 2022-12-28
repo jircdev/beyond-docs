@@ -1,39 +1,39 @@
 .home__header {
-    border: 1px solid red;
-    position: relative;
-    .header__banners {
-        width: 100%;
-        margin: auto;
-        margin-top: 2rem;
+	position: relative;
 
-        position: relative;
+	.header__banners {
+		width: 100%;
+		margin: auto;
+		margin-top: 2rem;
 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1.2rem;
+		position: relative;
 
-        picture,
-        svg {
-            width: 100%;
-            height: auto;
-            path#github {
-                fill: var(--gh-icon-color) !important;
-            }
-        }
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1.2rem;
 
-        figcaption {
-            justify-self: center;
-            display: grid;
-            grid-gap: 0.5rem;
-        }
-        @media (min-width: 900px) {
-            max-width: 800px;
+		picture,
+		svg {
+			width: 100%;
+			height: auto;
+			path#github {
+				fill: var(--gh-icon-color) !important;
+			}
+		}
 
-            figcaption {
-                justify-content: end;
-                justify-self: end;
-            }
-        }
-    }
+		figcaption {
+			justify-self: center;
+			display: grid;
+			grid-gap: 0.5rem;
+		}
+		@media (min-width: 900px) {
+			max-width: 800px;
+
+			figcaption {
+				justify-content: end;
+				justify-self: end;
+			}
+		}
+	}
 }
