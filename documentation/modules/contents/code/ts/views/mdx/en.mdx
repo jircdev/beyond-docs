@@ -1,0 +1,64 @@
+import { PreTitle, Title, SubTitle } from '@beyond/docs/titles';
+import { Code, InlineCode } from '@beyond/docs/code';
+import { ELink } from '@beyond/docs/links';
+
+<PreTitle>Walkthrough</PreTitle>
+<Title>Web Project</Title>
+<SubTitle>Before beginning</SubTitle>
+
+This tutorial walks through the main flow of development with **Beyond** and clearly shows the benefits it offers in its use.
+The purpose of this development is for end-users/developers who want to learn while practicing, therefore the concepts
+that define the structure of **Beyond** are addressed in a general approach, focusing on making a quick, concise, and clear
+exercise out of it. We strongly suggest accessing the corresponding chapters in the documentation to understand some concepts
+better.
+
+The tutorial is structures as follows:
+
+Dashboard.
+Creation of the first module.
+Back-end integration
+Navigation
+
+We suggest completing the tutorial, to prove how in a short amount of time you´ll be able to integrate client and server-code using the same JavaScript structure.
+
+Before you start, we recommend revising these concepts to have a clear concept about them, while you go through the tutorial.
+
+**Bundle:** Represents a set of source files that generates a single final file, included in the browser.
+**Module:** Represents one or multiple bundles.
+**Processor:** Represents the code processor, compiler, or transpiler of the technology being used.
+
+<Title>Starting</Title>
+
+The first thing to do is create the project, for this, we will use the bundle <InlineCode>@beyond-js/create-project</InlineCode>. It is responsible for installing BeyondJS locally and generating the initial structure of our project.
+
+<Code>npx @beyond-js/create-project --name @test/login --type web-backend --container beyond</Code>
+
+BeyondJS, is developed to work as a global dependency and run multiple projects simultaneously. Learn more about it <Link to="/docs/quick-start">here</Link>
+
+In the previous command, you can see a requisition to create a web-type project with a backend, and it was added as a scope <InlineCode>testing</InlineCode> and as a name <InlineCode>login</InlineCode>.
+
+The scope and name, are data that allow the project to be identified and be ready to be published as an npm bundle, or to be imported from another project. These settings can be done manually, but the dashboard just makes the process much simpler. You can see the explanation of it in the <Link to="/project/config">Project Settings chapter.</Link>
+
+At the completion of the command, we can validate the structure created inside the directory. It is as follows:
+
+**beyond.json:** File for managing the development server, managed by BeyondJS.
+**package.json:** Project dependencies file
+**projects.json:** Projects configuration file, allows BeyondJS to identify the projects for launch.
+**login:**: Project folder.
+
+// SUB List
+
+**project.json:** Contains the basic configuration of the project (may vary depending on the type and needs of the project).
+**/modules:** Folder where the default project modules are created. This value is configurable. Reed more about it in the <Link to="/docs/projects/json">Project Configuration</Link> chapter.
+**template:** This folder contains all the needed elements to define the general project template.
+
+// SUB SUB LIST
+**template.json**: File that allows adjustments to be done to the project template setting.
+
+Learn more about the available project types in the <Link to="/docs/quick-start">Quick Start chapter.</Link>
+
+After having executed the command, we are ready to start our project. Execute the following:
+
+<Code>npm start</Code>
+
+After executing the command, a message will appear indicating that the dashboard is available at <ELink to="https://workspace.beyondjs.com/">https://workspace.beyondjs.com/</ELink> While navigating it, you will be able to see the Dashboard interface with the project list board, where the created project appears with the link to navigate it below the title. If we click on it, the screen will split into two, and we will be able to navigate the project from the dashboard.
