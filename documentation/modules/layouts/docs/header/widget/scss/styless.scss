@@ -1,62 +1,61 @@
 .docs-header {
-  display: flex;
-  padding: 5px 15px;
-  border-bottom: 1px solid var(--accent-color);
-  justify-content: space-between;
-  position: sticky;
-  height: 60px;
-  top: 0;
-  z-index: 100;
-  background: var(--background);
-  //@include shadow-1;
-
-  .container, figure, ul {
-    padding: 0;
-    margin: auto;
-
-  }
-
-  .docs-header__link-icon {
     display: flex;
-    align-content: center;
+    padding: 5px 15px;
+    border-bottom: 1px solid var(--accent-color);
+    justify-content: space-between;
+    position: sticky;
+    height: 60px;
+    top: 0;
+    z-index: 100;
+    background: var(--background);
+    //@include shadow-1;
 
-    .beyond-icon {
-      height: 20px;
-      width: 20px;
-    }
-  }
-
-  .header-logo {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-    height: 60%;
-    align-self: center;
-
-    a {
-      display: flex;
-      position: relative;
-      overflow: hidden;
-      height: 60%;
+    .container,
+    figure,
+    ul {
+        padding: 0;
+        margin: auto;
     }
 
-    .beyond-element-image.img-logo {
-      height: 100%;
+    .docs-header__link-icon {
+        display: flex;
+        align-content: center;
 
-      img {
-        height: 34.8px;
-      }
+        .beyond-icon {
+            height: 20px;
+            width: 20px;
+        }
     }
-  }
+
+    .header-logo {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        height: 60%;
+        align-self: center;
+
+        a {
+            display: flex;
+            position: relative;
+            overflow: hidden;
+            height: 60%;
+        }
+
+        .beyond-element-image.img-logo {
+            height: 100%;
+
+            img {
+                height: 34.8px;
+            }
+        }
+    }
 }
 
 [data-beyond-mode="dark"] {
-  .docs-header {
-    .beyond-icon {
-
-      fill: var(--primary);
-      stroke: var(--primary);
+    .docs-header {
+        .beyond-icon {
+            fill: var(--primary);
+            stroke: var(--primary);
+        }
     }
-  }
 }
-

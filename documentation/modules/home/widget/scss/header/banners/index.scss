@@ -1,0 +1,30 @@
+.header__banner {
+    z-index: 2;
+}
+.header__banner__container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 205px;
+    flex: 1 0 21%;
+
+    position: relative;
+    .draw-box,
+    .draw-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .draw-box {
+        display: grid;
+        position: relative;
+        padding-left: 20px;
+    }
+
+    @media (max-width: 700px) {
+        height: 380px;
+        .draw-box,
+        .draw-section {
+            margin-top: 1rem;
+        }
+    }
+}

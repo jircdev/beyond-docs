@@ -1,36 +1,16 @@
 @use "~template/sass/mixins";
 
 .page-section {
-  margin: 2rem auto;
-  padding: 2rem;
-  width: calc(100% - 4rem);
+    margin: 2rem auto;
+    padding: 2rem;
+    width: calc(100% - 4rem);
 
-  &.primary-surface {
-    background: var(--app-element-surface);
-
-    .pretitle {
-      color: var(--secondary-light);
+    > header {
+        .pretitle + h2,
+        .pretitle + h3,
+        .pretitle + h1 {
+            margin-top: 0;
+        }
+        margin-bottom: 5rem;
     }
-  }
-
-  .flex-center-v {
-    align-items: center;
-    display: flex;
-  }
-
-  h3 {
-    padding: 0;
-    margin: .5rem 0 1rem;
-    font-size: 1.5rem;
-
-  }
-
-  @media (max-width: 600px) {
-    padding: 2rem 1rem;
-    width: calc(100% - 2rem);
-  }
-}
-
-.debug {
-  border: 1px solid red;
 }

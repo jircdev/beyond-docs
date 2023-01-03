@@ -13,4 +13,13 @@
     fill: var(--text-on-primary);
   }
 
+
+  &.md-icon {
+    height: 50px;
+    width: 50px;
+  }
+  &.big-icon {
+    height: 4rem;
+    width: 4rem;
+  }
 }

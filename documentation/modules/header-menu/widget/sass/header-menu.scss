@@ -2,89 +2,83 @@
 @use "~template/sass/mixins/set-media";
 
 .top__header {
-  display: flex;
-  justify-content: end;
-  margin: 0 0 -72px;
-  height: 60px;
-  z-index: 12;
-  flex-shrink: 1;
-  align-items: center;
-  align-content: center;
-  position: sticky;
-  top: 0;
-
-  &.is-sticky {
-    transition: 300ms ease-in all;
-    background: var(--primary-surface);
-  }
-
-  &.home-header {
-
-  }
-
-  .mobile__header {
-    a {
-      display: grid;
-      align-items: center;
-    }
-  }
-
-  .menu-list__container {
-    display: grid;
-  }
-
-  .header__menu {
-    z-index: 12;
-    list-style: none;
-    height: 100%;
     display: flex;
-    gap: 15px;
-    padding: 0 1rem;
-    align-items: center;
-
-    align-content: center;
+    justify-content: end;
+    margin: 0 0 -72px;
+    height: 60px;
+    z-index: 12;
     flex-shrink: 1;
-    font-family: var(--font-family);
+    align-items: center;
+    align-content: center;
+    position: sticky;
+    top: 0;
 
-    li {
-      position: relative;
-      padding: 0 5px;
-      height: 100%;
-      display: flex;
-      align-items: center;
-
-
-      &:after {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        width: 0;
-        content: " ";
-        transition: width 300ms;
-        height: 1px;
-        background: var(--secondary-accent);
-      }
-
-      a {
-        text-decoration: none;
-        color: var(--app-header-link);
-
-        &:after {
-          display: none;
-        }
-      }
-
-      &:hover {
-        a {
-          color: var(--secondary-accent);
-        }
-
-        &:after {
-          width: 100%;
-        }
-
-      }
+    &.is-sticky {
+        transition: 300ms ease-in all;
+        background: var(--primary-surface);
     }
-  }
+
+    .mobile__header {
+        a {
+            display: grid;
+            align-items: center;
+        }
+    }
+
+    .menu-list__container {
+        display: grid;
+    }
+
+    .header__menu {
+        z-index: 12;
+        list-style: none;
+        height: 100%;
+        display: flex;
+        gap: 15px;
+        padding: 0 1rem;
+        align-items: center;
+
+        align-content: center;
+        flex-shrink: 1;
+        font-family: var(--font-family);
+
+        li {
+            position: relative;
+            padding: 0 5px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            &:after {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                width: 0;
+                content: " ";
+                transition: width 300ms;
+                height: 1px;
+                background: var(--secondary-accent);
+            }
+
+            a {
+                text-decoration: none;
+                color: var(--app-header-link);
+
+                &:after {
+                    display: none;
+                }
+            }
+
+            &:hover {
+                a {
+                    color: var(--secondary-accent);
+                }
+
+                &:after {
+                    width: 100%;
+                }
+            }
+        }
+    }
 }

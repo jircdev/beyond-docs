@@ -29,6 +29,19 @@
                 "backend": "backend"
             },
             {
+                "name": "web-dist",
+                "platform": "web",
+                "environment": "development",
+                "ports": {
+                    "bundles": 3900
+                },
+                "default": true,
+                "backend": "backend",
+                "ts": {
+                    "compiler": "tsc"
+                }
+            },
+            {
                 "name": "backend",
                 "platform": "backend",
                 "ports": {

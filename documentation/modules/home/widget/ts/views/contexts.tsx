@@ -1,13 +1,15 @@
-import * as React from 'react';
+import * as React from "react";
 
 interface IContextValue {
-	opened?: (Event) => Promise<void>;
-	dismiss?: boolean;
+    opened?: (Event) => Promise<void>;
+    dismiss?: boolean;
+    slide?: string;
+    setSlide?: Function;
 }
 
 interface IHomeContextValue {
-	texts?: Object;
-	ready: boolean;
+    texts?: Object;
+    ready: boolean;
 }
 
 const value: IContextValue = {};

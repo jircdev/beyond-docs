@@ -1,47 +1,46 @@
 $columns-gap: 15px !default;
 .flex-center {
-  place-content: center;
-  place-items: center;
-  display: flex;
-  gap: $columns-gap;
-
-
-  &-y {
+    place-content: center;
+    place-items: center;
     display: flex;
-    align-items: center;
-    align-content: center;
     gap: $columns-gap;
-  }
 
-  &-x {
-    display: flex;
-    justify-content: center;
-    gap: $columns-gap;
-  }
+    &-y {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        gap: $columns-gap;
+    }
+
+    &-x {
+        display: flex;
+        justify-content: center;
+        gap: $columns-gap;
+    }
 }
 
 .flex-container {
-  display: flex;
+    display: flex;
 
-  &.space-between {
-    justify-content: space-between;
-  }
+    &.space-between {
+        justify-content: space-between;
+    }
 }
 
 .bg-secondary {
-  background: var(--secondary);
-  color: var(--text-on-secondary)
+    background: var(--secondary);
+    color: var(--text-on-secondary);
 }
 
 .bg-primary-accent {
-  background: #000;
-  color: var(--text-on-primary);
+    background: #000;
+    color: var(--text-on-primary);
 }
 
 .pd-5 {
-  padding: 5px;
+    padding: 5px;
 }
 
 .pd-15 {
-  padding: 15px;
+    padding: 15px;
 }
