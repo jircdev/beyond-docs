@@ -1,0 +1,17 @@
+.headersvg__container {
+    position: absolute;
+    left: 0;
+    top: 60px; // negative value because the SVG files contains space at the top.
+    right: 0;
+    z-index: -1;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .svg--absolute {
+        position: absolute;
+        top: 0;
+    }
+}

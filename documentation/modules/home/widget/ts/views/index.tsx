@@ -10,7 +10,7 @@ import { UniversalDevelopment } from "./sections/universal-development";
 import { DoYouWantMore } from "./sections/do-you-want-more";
 import { CodePen } from "./sections/codepen";
 import { GettingStart } from "./sections/getting-start";
-
+import { AppHomeHeader } from "@beyond/docs/home/header";
 export function Page({ store }): JSX.Element {
     const [ready, setReady] = React.useState(store.ready);
     const [data, setTexts] = React.useState(store.texts);
@@ -30,7 +30,7 @@ export function Page({ store }): JSX.Element {
             }}
         >
             <div className="home">
-                <Header />
+                <AppHomeHeader />
                 <main className="main__home__content">
                     <WhatIs />
                     <WhatIsItFor />

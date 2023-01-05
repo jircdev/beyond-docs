@@ -1,0 +1,24 @@
+.home__header {
+    .btn-group {
+        display: flex;
+        gap: 0.7rem;
+        bottom: 0;
+        justify-content: center;
+        margin: 1rem 0 2rem;
+
+        .beyond-button {
+            color: var(--primary);
+            background: transparent;
+            padding: 8px 12px;
+            border-radius: 5px;
+
+            &:hover {
+                background-color: #cb624533;
+            }
+        }
+    }
+    // @media (max-width: 600px) {
+    // 	.btn-group {
+    // 	}
+    // }
+}
