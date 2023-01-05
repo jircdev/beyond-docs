@@ -12,7 +12,7 @@ import { TutoES, IntroES, BackendES, BeeES } from './mdx/es';
 export /*bundle*/ function ContentsPage({ contentId }) {
 	const contents = {
 		intro: {
-			es: IntroES,
+			es: BackendES,
 			en: IntroEN,
 		},
 
