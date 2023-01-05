@@ -13,7 +13,7 @@ export /*bundle*/ function ContentsPage({ contentId }) {
 	const contents = {
 		intro: {
 			es: BackendES,
-			en: IntroEN,
+			en: BackendES,
 		},
 
 		'tutorial/start': {
