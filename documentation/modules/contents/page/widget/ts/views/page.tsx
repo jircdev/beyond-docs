@@ -1,17 +1,15 @@
-import * as React from 'react';
-import { hmr, ContentsPage } from '@beyond/docs/contents-data.code';
-import Component from './test.mdx';
+import * as React from "react";
+import { hmr, ContentsPage } from "@beyond/docs/contents-data.code";
 
 export function Page({ uri, component }): JSX.Element {
-	const propsContent = uri.vars.get('content');
-	const [hmrChanged, setHmr] = React.useState(performance.now());
-	const sub = uri.vars.get('sub');
-	const contentId = !['', undefined, null].includes(propsContent) ? propsContent : 'intro';
+    const content = uri.vars.get("content");
+    const [hmrChanged, setHmr] = React.useState(performance.now());
+    const contentId = !["", undefined, null].includes(content) ? content : "intro";
 
-	return (
-		<div>
-			<Component />
-			<ContentsPage />
-		</div>
-	);
+    console.log(contentId);
+    return (
+        <div>
+            <ContentsPage contentId={contentId} />
+        </div>
+    );
 }
