@@ -4,5 +4,6 @@ import IntroES from './intro.mdx';
 import BeeES from './bee.mdx';
 import BundlesES from './bundles.mdx';
 import TemplatesES from './templates.mdx';
+import HmrES from './hmr.mdx';
 
-export { TutoES, BackendES, IntroES, BeeES, BundlesES, TemplatesES };
+export { HmrES, TutoES, BackendES, IntroES, BeeES, BundlesES, TemplatesES };

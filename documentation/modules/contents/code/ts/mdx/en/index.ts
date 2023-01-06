@@ -4,5 +4,6 @@ import BackendEN from './backend.mdx';
 import BeeEN from './bee.mdx';
 import BundlesEN from './bundles.mdx';
 import TemplatesEN from './templates.mdx';
+import HmrEN from './hmr.mdx';
 
-export { IntroEN, TutoEN, BackendEN, BeeEN, BundlesEN, TemplatesEN };
+export { HmrEN, IntroEN, TutoEN, BackendEN, BeeEN, BundlesEN, TemplatesEN };
