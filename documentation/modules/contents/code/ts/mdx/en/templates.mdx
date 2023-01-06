@@ -1,0 +1,65 @@
+import { Title, SubTitle } from '@beyond/docs/titles';
+import { Code } from '@beyond/docs/code';
+import { Link } from '@beyond/docs/links';
+
+<Title>Project template</Title>
+
+BeyondJS provides a simple but robust architecture for managing templates in projects, which has the following features:
+
+-   **Styles:** Built-in support for LESS and SASS preprocessors.
+-   **CSS properties:** A basic variable structure that allows you to work with web components efficiently.
+-   **Global Style:** Global style sheet for the project.
+-   **Override:** A unique feature that allows you to redefine the styles and texts of existing modules without having to touch the original code.
+-   **Code separation:** Independent handling of the style files with an automated process for generating independent and optimized final files.
+-   Integrated **Light & Dark Theme.**
+
+<SubTitle>Setting</SubTitle>
+
+The template configuration, like all elements in BeyondJS, is handled by a configuration file whose name, by convention, is template.json and is located in the template folder at the project root. However, both name and location are configurable values in the <Link to="/project/config">project.json.</Link>
+
+The template can be managed from the <Link to="/docs/dashboard">Dashboard.</Link> And when a project is created, the default structure is already configured for its management.
+
+Explained below, are the configuration properties.
+
+The application and global properties receive the same configuration parameters but have different purposes.
+
+**template.application**
+
+The application configuration property represents the general styles project's file. Its main focus is to be the place where the custom CSS properties are defined and any style that needs to be applied to the general document, external to the widgets.
+
+**Custom properties** play a key role in handling widgets. Web components with Shadow DOM are not affected by the general website styles, where they are included-in. CSS properties, however, can be accessed and used.
+
+Style management can be reviewed in detail in the <Link to="/docs/styles/template">Styles of the template chapter.</Link>
+
+**template.global**
+
+Its purpose is to provide the developer with the possibility of sharing code between widgets. The files added in the global configuration are compiled into a file named global.css, which is included in the shadow dom of each widget so that they have access to the styles.
+
+<SubTitle>Configuration parameters</SubTitle>
+
+<Code>
+	{`
+"application": {
+    "processor": "sass",
+    "path": "application",
+    "files": [
+      "*"
+    ]
+},
+"global": {
+    "processor": "sass",
+    "path": "application",
+    "files": [
+      "*"
+    ]
+  }
+  `}
+</Code>
+
+As can seen in the previous code, the configuration of both properties works the same, they receive an object with the following properties:
+
+As you can see in the above code, you can define three properties:
+
+-   **processor:** Processor to use. Supports sass and less
+-   **path:** Directory where the files are located, if not defined, all the files related to the location of the configuration file will be searched.
+-   **files:** the \* indicates that any file within the defined path should be taken into consideration. If files are specified by name, only the indicated files will be taken into account.

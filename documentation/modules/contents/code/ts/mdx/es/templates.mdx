@@ -1,6 +1,6 @@
 import { Title, SubTitle } from '@beyond/docs/titles';
-import { Code, InlineCode } from '@beyond/docs/code';
-import { Link, ELink } from '@beyond/docs/links';
+import { Code } from '@beyond/docs/code';
+import { Link } from '@beyond/docs/links';
 
 <Title>Plantilla de un proyecto</Title>
 
@@ -55,3 +55,11 @@ Tiene como finalidad suministrar al desarrollador la posibilidad de compartir c�
   }
   `}
 </Code>
+
+Cómo se puede ver en el código anterior, la configuración de ambas propiedades funciona igual, reciben un objeto con las siguientes propiedades:
+
+Cómo se puede ver en el código anterior, se puede definir tres propiedades
+
+-   **processor:** Procesador a utilizar. Soporta sass y less
+-   **path:** Directorio donde se encuentran los archivos, sino se define se buscaran todos los archivos relativos a la ubicación del archivo de configuración.
+-   **files:** el \* indica que se debe tomar en cuenta cualquier archivo adentro del path definido. Si se específican archivos por nombre, sólo se tomara en cuenta los archivos indicados.
