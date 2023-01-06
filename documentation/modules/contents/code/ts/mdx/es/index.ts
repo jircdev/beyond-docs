@@ -6,5 +6,6 @@ import BundlesES from './bundles.mdx';
 import TemplatesES from './templates.mdx';
 import HmrES from './hmr.mdx';
 import WidgetObjectES from './widget-object.mdx';
+import ProcessorsES from './processors.mdx';
 
-export { WidgetObjectES, HmrES, TutoES, BackendES, IntroES, BeeES, BundlesES, TemplatesES };
+export { ProcessorsES, WidgetObjectES, HmrES, TutoES, BackendES, IntroES, BeeES, BundlesES, TemplatesES };

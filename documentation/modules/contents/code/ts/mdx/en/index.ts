@@ -6,5 +6,6 @@ import BundlesEN from './bundles.mdx';
 import TemplatesEN from './templates.mdx';
 import HmrEN from './hmr.mdx';
 import WidgetObjectEN from './widget-object.mdx';
+import ProcessorsEN from './processors.mdx';
 
-export { WidgetObjectEN, HmrEN, IntroEN, TutoEN, BackendEN, BeeEN, BundlesEN, TemplatesEN };
+export { ProcessorsEN, WidgetObjectEN, HmrEN, IntroEN, TutoEN, BackendEN, BeeEN, BundlesEN, TemplatesEN };

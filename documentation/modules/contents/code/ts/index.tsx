@@ -7,12 +7,12 @@ import { beyond } from '@beyond-js/kernel/core';
 import { DocsContext } from './context';
 import { ContentsContainer } from './container';
 import { IntroEN, BackendEN, BeeEN } from './mdx/en';
-import { TutoES, IntroES, BackendES, BeeES, BundlesES, TemplatesES } from './mdx/es';
+import { ProcessorsES, TutoES, IntroES, BackendES, BeeES, BundlesES, TemplatesES } from './mdx/es';
 
 export /*bundle*/ function ContentsPage({ contentId }) {
 	const contents = {
 		intro: {
-			es: BackendES,
+			es: ProcessorsES,
 			en: BackendES,
 		},
 
