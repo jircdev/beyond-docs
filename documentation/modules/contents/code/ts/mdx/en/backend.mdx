@@ -18,12 +18,19 @@ Server APIs in BeyondJS represent functions that execute code on the server and 
 
 To execute backend-code in BeyondJS, is necessary to have the needed distributions configured. If the project is created from the web-backend project type, then is already configured. You can find more information in the <Link to="/docs/distributions">Distributions Chapter.</Link>
 
-"bridge": \{
-"path": "bridge",
-"files": [
-"*"
-]
-\}
+<Code>
+	{`
+    {
+        "name": "module-name",
+        "bridge": {
+            "path": "ts",
+            "files": ["*"]
+        },
+        "platforms": ["*"]
+    }
+`}
+
+</Code>
 
 Like any module or bundle, it can be managed from the <Link to="/dashboard">Dashboard</Link> or manually.
 
@@ -32,17 +39,20 @@ As its name indicates, the bridge-type bundle function as a bridge between clien
 The code for a bundle bridge looks like this:
 
 <Code>
-\export /\*actions\*/\*bundle\*/
-\class Auth \{
-    async login(user :string, password: string) \{
-    if (user !== data.user || password !== data.password) \{
-    return \{status: true, error: "Invalid data" \};
-    \}
+{`
+export /*actions*//*bundle*/
+class Auth {
+    async login(user :string, password: string) {
+        if (user !== data.user || password !== data.password) {
+            return {status: true, error: "Invalid data" };
+        }
 
-        \return \{status: true, data: \{valid: true\}\}
-    \}
+        return {status: true, data: {valid: true} }
+    }
 
-\}
+}
+
+`}
 
 </Code>
 
@@ -53,9 +63,10 @@ BeyondJS generates a client object that makes the web-socket connection to the s
 Now all you need to do is initialize the server. To do this, it is necessary to create a module with a bundle start that is in charge of starting the <Link to="/docs/bee">BEE.</Link> The code for the bundle start is as follows:
 
 <Code>
-\import \{ listen \} from "@beyond-js/backend/listen/ts";
+	{`
+import { listen } from "@beyond-js/backend/listen/ts";
 listen();
-
+`}
 </Code>
 
 In the <Link to="/tutorial/web">Web Tutorial</Link> available, an implemented bridge allows you to see the operation of the BeyondJS backend APIs in action.
