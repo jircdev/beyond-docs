@@ -8,5 +8,6 @@ import HmrEN from './hmr.mdx';
 import WidgetObjectEN from './widget-object.mdx';
 import ProcessorsEN from './processors.mdx';
 import URIEN from './uri.mdx';
+import ProjectsEN from './projects.mdx';
 
-export { URIEN, ProcessorsEN, WidgetObjectEN, HmrEN, IntroEN, TutoEN, BackendEN, BeeEN, BundlesEN, TemplatesEN };
+export { ProjectsEN, URIEN, ProcessorsEN, WidgetObjectEN, HmrEN, IntroEN, TutoEN, BackendEN, BeeEN, BundlesEN, TemplatesEN };

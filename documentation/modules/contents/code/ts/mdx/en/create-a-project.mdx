@@ -1,0 +1,105 @@
+import { Title, SubTitle } from '@beyond/docs/titles';
+import { Code } from '@beyond/docs/code';
+import { Link, ELink } from '@beyond/docs/links';
+
+<Title>Managing a project</Title>
+
+Projects, like all other BeyondJS elements, are configured using objects in .json files. Project configuration files are generally named <Link to="/docs/projects/json">project.json</Link> as a convention and allow a wide range of configurations.
+
+Projects can be configured in two ways: through the Dashboard interface and manually.
+
+<SubTitle>Using the Dashboard</SubTitle>
+
+To create a project from the dashboard, you first need to make sure BeyondJS is running in the folder where you want to work on your projects. As explained in the <Link to="/docs/projects/intro">introducción</Link>, BeyondJS, is developed to handle projects simultaneously, so keep in mind that the run directory may be one where you want to add "multiple" projects.
+
+Let's start BeyondJS::
+
+<Code>beyond run</Code>
+
+Then, we access the dashboard, which will be available at <ELink to="https://workspace.beyondjs.com/">https://workspace.beyondjs.com/</ELink.
+
+The dashboard has three ways to access the project creation process:
+
+// Img
+
+-   In the <Link to="/docs/dashboard#preaside">Preaside</Link> by using the icon.
+-   En el <Link to="/docs/dashboard#board">Board</Link> at the top right, the option "create project."
+-   When no project created, a message is displayed inviting you to create a project, as seen in the above reference image.
+
+Clicking on any of the mentioned alternatives, a modal is displayed, allowing you to select the type of project to create. This function enables you to start with a blank project or using an already created template. Current choices are:
+
+<SubTitle>Blank Project Types</SubTitle>
+
+// Img
+
+-   **Web:** Ready to start a web project that can be distributed on the internet or as a mobile application.
+-   **Node:** Ready to distribute as a project to run in a node environment
+-   **Backend:** Node project that makes available interfaces that could be consumed in real-time with web sockets from another node project or a client project.
+-   **Library:** Ideal for creating projects intended to be distributed as **NPM** packages
+-   **web - backend:** Generates a web project with a backend distribution.
+
+<SubTitle>Template types</SubTitle>
+
+-   **React, vue y svelte** apps, Projects to start working with the preferred framework library.
+-   **Express:** Project with an initial structure to create an express server.
+-   **Template web:** Project with a client and backend structure communicated through a web socket.
+
+It is possible to work with different view libraries/Frameworks in the same project, thanks to the micro-frontend structure offered by BeyondJS. Read more about it in <Link to="/docs/widgets/intro">the Widgets chapter.</Link>
+
+<SubTitle>Project Information</SubTitle>
+
+After seleting the project type, a form appears requesting the scope and name of the project, the port on which it will run, and additionally, an optional title and description. After filling in the necessary data, the dashboard is responsible for creating the project with the file structure, and the project is available to be accessed on the configured port.
+
+// Img
+
+All projects have dependencies on NPM packages, which can optionally installed them from the dashboard. If you haven't done it before, you need to install dependencies manually for the project to work.
+
+**Creación manual**
+
+The definition of a project is done through the project.json file.
+
+The minimum structure required to create a project is as follows:
+
+<Code>
+{`
+{
+  "name": "project-name",
+  "version": "1.0.0",
+  "title": "Project title",
+  "description": "Description"
+  "languages": {
+    "default": "en",
+    "supported": [
+      "en"
+    ]
+  },,
+  "modules": {
+    "path": "modules"
+  }
+}
+
+`}
+
+</Code>
+
+Having created the project.json file, it only left creating the BeyondJS server configuration file, which is called beyond.json and whose basic structure is as follows:
+
+<Code>
+{`
+{
+  "applications": [
+    "path-to-project/project.json"
+  ]
+}
+
+`}
+
+</Code>
+
+The applications' input is an array that can contain a list of paths relative to project configuration files.
+
+Read more about BeyondJS configuration options in the development environment in the <Link to="/docs/dev-server">Development Server chapter.</Link>
+
+-   <Link to="/docs/projects/create">Create a project</Link>
+-   <Link to="/docs/projects/distributions">Distributions</Link>
+-   <Link to="/docs/projects/json">project.json</Link>

@@ -1,0 +1,30 @@
+import { Title } from '@beyond/docs/titles';
+import { Link } from '@beyond/docs/links';
+
+<Title>Project.json</Ttle>
+
+Propiedades project.json:
+
+-   **name** string optional: string is the name to identify the project. It follows the npm standard, so it can only contain safe characters for URLs, without periods or underscores.
+
+-   **scope** string optional: The same as npm, is used to group packages. And since projects can be published as npm packages, if a scope is added, it must be unique and can only be managed by the organization or user that uses it. Scope uniqueness validation is done by npm, only if the programmer intends to publish their project as a package.
+
+-   **title** string optional: Descriptive title of the project. It shouldn’t have more than 100 characters.
+
+-   **description** string optional: Space to briefly explain which are the characteristics of the project.
+
+-   **template** <Link to="/glossary#eoc">EOC</Link> optional: Space to briefly explain the characteristics of the project.
+
+-   **layout** <Link to="/glossary#eoc">EOC</Link> optional: Space to briefly explain the characteristics of the project.
+
+-   **params** <Link to="/glossary#eoc">EOC</Link> optional: Object that allows adding general parameters that are required to be used throughout the project. It has the possibility of defining values ​​by environment. To understand more, you can refer to the Project <Link to="/project/params">Parameters chapter.</Link>
+
+-   **modules** <Link to="/glossary#eoc">EOC</Link> optional: Receives an object with a path input that allows defining the modules directory, by default is "module".
+
+-   **deployment** <Link to="/glossary#eoc">EOC</Link> optional: Object that allows the configuration of the development environments, which are defined through the deployment entry.
+
+-   **Deployment** <Link to="/glossary#eac">EAC</Link> optional: Object that allows configuration of development environments, which are defined through the distributions entry. Distributions can be added from the dashboard functionality for it or manually. To understand how they work, you can go to the <Link to="/project/distributions">Distribution chapter.</Link>
+
+-   **libraries** object optional: Defines the import of projects used as libraries in the defined project.
+
+    -   **imports** string optional: Each entry represents an imported project. The import is done by adding the scope and name of the imported project.

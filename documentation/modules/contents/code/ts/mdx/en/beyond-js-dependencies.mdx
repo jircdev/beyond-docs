@@ -1,0 +1,37 @@
+import { Title, SubTitle } from '@beyond/docs/titles';
+import { Link } from '@beyond/docs/links';
+
+<Title>BeyondJS Dependencies</Title>
+
+BeyondJS offers a list of required dependencies according to the type of project that you want to carry out.
+
+<SubTitle>**@beyond/kernel**</SubTitle>
+
+It is the main library of BeyondJS. It contains modules to cover the basic functionalities of the Framework. Portraits the following packages:
+
+-   **bundle:** used by any <Link to="/docs/bundles">bundle</Link>, and common functions for them.
+-   **core:** manages package import handling universally.
+-   **routing:** Contains all the functionalities associated with the history and navigation of the project.
+-   **styles:** Used to work style sheets reactively
+-   **texts:** required for handling multilanguage features.
+
+<SubTitle>**@beyond/backend**</SubTitle>
+
+A library that manages the client and server part of real-time connection, and bridges. It is required in **node** and **backend** type projects.
+
+<SubTitle>**@beyond/ssr**</SubTitle>
+
+It is responsible for providing the APIs the ability to access the rendering information of the widgets and make the server rendering available.
+
+<SubTitle>Widget libraries</SubTitle>
+
+To work with widgets, it is necessary to have the @beyond/widgets dependency installed, and additionally, depending on the framework that you wish to use, BeyondJS offers the following libraries:
+
+-   @beyond/react-widget
+-   @beyond/vue-widget
+-   @beyond/svelte-widget
+
+All the mentioned libraries, can be installed through the npm i library command, where "library" would be the library name to install.
+
+-   <Link to="/docs/widgets">Widgets</Link>
+-   <Link to="/docs/modules/create">Create a module</Link>

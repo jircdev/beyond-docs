@@ -1,0 +1,45 @@
+import { Title } from '@beyond/docs/titles';
+import { Code } from '@beyond/docs/code';
+import { Link } from '@beyond/docs/links';
+
+<Title>Import of projects</Title>
+
+**project.json**
+
+<Code>
+{`
+"libraries": {
+    "imports": [
+      "@project/models"
+    ]
+}
+
+`}
+
+</Code>
+
+In BeyondJS, a project can be imported by another, and function as a library, giving the main project access to its modules. This functionality is key to thinking of solutions with interconnected microservice structures or libraries that contain reusable code.
+
+To exemplify it, we can mention a solution that manages a web page, a mobile application, and an administrative panel, all as independent projects that feed from the same data source. The importation of projects allows all the data logic, to be handled as independent projects, and used by the three applications, thus allowing the re-use of the code.
+
+The importation of projects is performed from the <Link to="/docs/projects/json">project.json</Link>and the projects must be added to the project's entry of beyond.json.
+
+If the projects are created through the Dashboard, the file beyond.json is modified automatically.
+
+If the projects are created through the Dashboard, the file beyond.json is modified automatically.
+
+Following the mentioned example, the project with the modules that manage the data and connects to the database, could be called models, and in ordet to be imported into the other projects, the following code should have to be added to the project.json.
+
+<Code>
+{`
+"libraries": {
+    "imports": [
+      "@project/models"
+    ]
+}
+
+`}
+
+</Code>
+
+The importation property receives an array of items, which enables multiple projects being imported if required.

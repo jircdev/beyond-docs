@@ -1,0 +1,105 @@
+import { Title, SubTitle } from '@beyond/docs/titles';
+import { Code } from '@beyond/docs/code';
+import { Link, ELink } from '@beyond/docs/links';
+
+<Title>Gestión de un proyecto</Title>
+
+Los proyectos, al igual que el resto de elementos de BeyondJS, se configuran por medio de objetos en archivos .json. Generalmente, los archivos de configuración de proyectos llevan por nombre <Link to="/docs/projects/json">project.json</Link> como convención y permiten una variedad amplia de configuraciones.
+
+Los proyectos se pueden configurar de dos formas: por medio de la interfaz del Dashboard y manualmente.
+
+<SubTitle>Usando el Dashboard</SubTitle>
+
+Para crear un proyecto desde el dashboard, en primer lugar debe asegurarse de que BeyondJS esté ejecutandose en la carpeta donde desee trabajar sus proyectos. Como se explica en la <Link to="/docs/projects/intro">introducción</Link>, BeyondJS está hecho para manejar proyectos en simultáneo, por lo que es importante tener presente que el directorio de ejecución puede ser uno donde se deseen agregar "varios" proyectos.
+
+Iniciamos BeyondJS:
+
+<Code>beyond run</Code>
+
+Luego accedemos al dashboard el cual estará disponible en <ELink to="https://workspace.beyondjs.com/">https://workspace.beyondjs.com/</ELink>.
+
+El dashboard posee tres maneras de acceder al proceso de creación de proyectos
+
+// Img
+
+-   En el <Link to="/docs/dashboard#preaside">Preaside</Link> por medio del icono
+-   En el <Link to="/docs/dashboard#board">Board</Link> de proyectos, en la parte superior derecha, la opción "crear proyecto"
+-   Cuando no existe ningún proyecto creado, se muestra un mensaje invitando a crearlo como se ve en la imagen de referencia.
+
+Al hacer click en alguna de las opciones mencionadas, se mostrará un modal que permite seleccionar el tipo de proyecto a crear, dando oportunidad de comenzar con un proyecto en blanco o de usar una plantilla creada. Las opciones actuales son:
+
+<SubTitle>Tipos de Proyectos en blanco</SubTitle>
+
+// Img
+
+-   **Web:** Listo para comenzar un proyecto web que pueda ser distribuido en internet o como aplicación móvil.
+-   **Node:** Listo para distribuir como un proyecto a ejecutar en un entorno node.
+-   **Backend:** Proyecto node que disponibiliza interfaces que puedan ser consumidas en real-time con web sockets desde otro proyecto node o desde un proyecto cliente.
+-   **Library:** Ideal para crear proyectos que esten pensados para ser distribuidos como paquetes **NPM**.
+-   **web - backend:** Genera un proyecto con distribuciones Web y Backend integrados.
+
+<SubTitle>Tipos de plantillas</SubTitle>
+
+-   **React, vue y svelte** apps, proyectos para empezar a trabajar con la libreria de framework de preferencia.
+-   **Express:** Proyecto con una estructura inicial para crear un servidor express.
+-   **Template web:** Template basica, con un modulo de ruta por defecto y la inicialización del backend implementada.
+
+Se puede trabajar con diferentes librerias/Frameworks de vistas en un mismo proyecto gracias a la estructura de micro-frontends que ofrece BeyondJS. Puede leerse más al respecto en <Link to="/docs/widgets/intro">La sección de widgets</Link>
+
+<SubTitle>Datos del Proyecto</SubTitle>
+
+Luego de la selección del tipo de proyecto, aparece un formulario que solicita el scope y nombre del proyecto, el puerto sobre el cúal correrá, y adicionalmente, un titulo y descripción opcionales. Luego de llenar los datos necesarios, el Dashboard se encarga de crear el proyecto con la estructura de archivos y el proyecto queda disponible para ser accedido en el puerto configurado.
+
+// Img
+
+Todos los proyectos tienen dependencias de paquetes npm que pueden opcionalmente ser instalados desde el dashboard. En caso de no haberlo hecho, para que el proyecto funcione es necesario instalar las dependencias manualmente.
+
+**Creación manual**
+
+La definición de un proyecto se hace por medio del archivo project.json.
+
+La estructura mínima necesaria para la creación de un proyecto es la siguiente:
+
+<Code>
+{`
+{
+  "name": "project-name",
+  "version": "1.0.0",
+  "title": "Project title",
+  "description": "Description"
+  "languages": {
+    "default": "en",
+    "supported": [
+      "en"
+    ]
+  },,
+  "modules": {
+    "path": "modules"
+  }
+}
+
+`}
+
+</Code>
+
+Habiendo creado el archivo project.json, solo resta crear el archivo de configuración del servidor de BeyondJS, que lleva por nombre beyond.json y cuya estructura básica es la siguiente:
+
+<Code>
+{`
+{
+  "applications": [
+    "path-to-project/project.json"
+  ]
+}
+
+`}
+
+</Code>
+
+La entrada applications es un arreglo que puede contener una lista de rutas relativas a archivos de configuración de proyectos.
+
+Puedes leer más sobre las opciones de configuración de BeyondJS en entorno de desarrollo en la sección del <Link to="/docs/dev-server">Servidor de desarrollo</Link>
+
+-   <Link to="/docs/projects/create">Crear un proyecto</Link>
+-   <Link to="/docs/projects/distributions">Distribuciones</Link>
+-   <Link to="/docs/projects/json">project.json</Link>

@@ -1,0 +1,16 @@
+import { Title } from '@beyond/docs/titles';
+import { Link } from '@beyond/docs/links';
+
+<Title>Projects</Title>
+
+BeyondJS, offers an architecture focused on providing an efficient way to implement solutions, based on microservices interconnected with other microservices in the backend and with applications with micro-frontend structures if we talk about the client, without neglecting the possibility of creating simpler projects in fewer steps.
+
+To better explain the concept, one can think of a service that offers authentication management in applications. It is natural to believe that there may be developers who need to use the service from a web project with client code, and developers who are working on the backend and can also use the service to validate the session before certain actions.
+
+From the perspective of BeyondJS, the Auth service could be seen as a project that contains two distributions, one to generate the client code and another to generate the backend code, both with a single source code. The code deployed from the distributions could be made available in both distributions as an **NPM** package and made available for use by any developer in projects made or not with BeyondJS.
+
+Likewise, if the projects consuming ´Auth´ are BeyondJS projects, they could also import into ´Auth´ via the BeyondJS module import system.
+
+-   <Link to="/docs/projects/create">Create a project</Link>
+-   <Link to="/docs/projects/distributions">Distributions</Link>
+-   <Link to="/docs/projects/json">project.json</Link>

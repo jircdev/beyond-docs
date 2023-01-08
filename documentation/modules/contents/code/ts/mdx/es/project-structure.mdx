@@ -1,0 +1,39 @@
+import { Title, SubTitle } from '@beyond/docs/titles';
+import { Code } from '@beyond/docs/code';
+import { Link } from '@beyond/docs/links';
+
+<Title>Estructura de un proyecto</Title>
+
+BeyondJS posee una arquitectura configurable que permite tener estructuras flexibles en los proyectos. Sin embargo, al crear un proyecto por medio del Dashboard o de ´beyond-first-project´, la estructura inicial creada es la siguiente:
+
+<SubTitle>Estructura</SubTitle>
+
+Este comando crea la siguiente estructura:
+
+// Img
+
+-   Un archivo <Link to="/docs/project/json">project.json</Link>, con la configuración del proyecto.
+-   Un archivo <Link to="/docs/beyond/json">beyond.json</Link> que permite gestionar configuraciones para el servidor de desarrollo.
+-   template/carpeta con la estructura de la plantilla del proyecto. Esta carpeta aplica para los proyectos web y móvil. Puedes leer más en detalle sobre el sistema de plantillas <Link to="/docs/basics/template">aqui.</Link>
+
+La estructura de carpetas puede variar y extenderse según las consideraciones del proyecto.
+
+<SubTitle>Gestión de directorios</SubTitle>
+
+BeyondJS sigue una estructura de directorios basada en mantener una semántica simple y concisa que permita al programador ubicarse a partir de los nombres de carpeta. Sin embargo, el programador puede tener un estandar de estructura que desee seguir, para lo cual se permite hacer cambios en la configuración de directorios.
+
+La ubicación de los módulos de un proyecto, suele estar por convención en la carpeta modules, esto se define en el project.json, en la propiedad module
+
+<Code>
+{`
+"modules": {
+    "path": "modules"
+}
+
+`}
+
+</Code>
+
+Al igual que todas las propiedades configurativas de directorios. la propiedad module.path evalúa el valor recibido de forma relativa al directorio en donde se encuentra, dicho en otras palabras, la carpeta modules debe encontrarse, según el ejemplo a la misma altura que el archivo project.json, si esta propiedad se remueve, BeyondJS intentará encontrar los módulos en el directorio raíz del proyecto, el cúal corresponde a el lugar en donde se encuentra el module.json
+
+-   <Link to="/docs/projects/json">project.json</Link>
