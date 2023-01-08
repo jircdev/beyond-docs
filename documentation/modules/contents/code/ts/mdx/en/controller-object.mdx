@@ -1,0 +1,46 @@
+import { Title, SubTitle } from '@beyond/docs/titles';
+import { Link, ELink } from '@beyond/docs/links';
+
+<Title>Controller Object</Title>
+
+<SubTitle>Controller definition</SubTitle>
+
+Every widget must expose a defined Controller class. The Controller object is responsible for the declaration and handling of the web component representing the widget. The controller has a structure like the following:
+
+<Code>
+{`
+import {ReactWidgetController} from '@beyond-js/kernel/react-widget/ts';
+import {Page} from './views/page';
+export /*bundle*/
+class Controller extends ReactWidgetController {
+    get Widget() {
+        return Page;
+    }
+}
+
+`}
+
+</Code>
+
+In the code above, the Controller class extends the ReactWidgetController object which is the base controller made available to work with React. BeyondJS has a controller available for the various view frameworks. The objects are:
+
+-   ReactWidgetController and ReactPageWidgetController.
+-   SvelteWidgetController and SveltePageWidgetController.
+-   VueWidgetController and VuePageWidgetController.
+
+All controllers handle the same interface, but are focused on integrating and working with the view framework used.
+
+**Properties**
+
+-   **Widget** <getter>: Defined as a getter and should return the main view component.
+-   **uri** <Link to="/docs/api/uri"><URIObject></Link> [optional]: Uri object with all the information associated with the current url.
+
+**Methods**
+
+-   **createStore** <function> [optional]: Allows adding logic for handling the widget State, it must return an object with the <Link to="/docs/api/IwidgetStore">IWidgetStore</Link> interface.
+-   **initialise** <void> [optional]: Allows you to add logic to be executed before mounting the web component in the HTML DOM.
+-   **hide** <void> [optional]: Executed when it has been rendered and it is hidden. This happens when navigating from one URL to another.
+-   **show** <void> [optional]: Runs every time the URL is accessed and the page is displayed in the browser.
+
+    -   <Link to="/docs/widgets/creation">Widget Creation</Link>
+    -   <Link to="/docs/widgets/page">Page type widgets</Link>
