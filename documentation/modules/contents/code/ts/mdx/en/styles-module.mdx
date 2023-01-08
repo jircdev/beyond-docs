@@ -1,0 +1,32 @@
+import { Title } from '@beyond/docs/titles';
+import { Code } from '@beyond/docs/code';
+import { Link, ELink } from '@beyond/docs/links';
+
+<Title>Styles in the module</Title>
+
+To add styles to a created module/bundle, the SASS <Link to="/docs/processors">processor</Link> must be added.
+
+If the dashboard is used to create projects, the sass processor is included by default in the bundles of type code and widget of any type.
+
+The standard sass processor configuration is as follows:
+
+**module.json**
+
+<Code>
+{`
+{
+    ...
+    "sass": {
+        "path": "sass",
+        "files": ["*"]
+    },
+    ...
+}
+
+`}
+
+</Code>
+
+In the previous configuration, you can observe a definition where there is a sass folder in the module, with a location relative to the module.json file and that all the files in this folder must be taken into account as style files.
+
+The container bundle of the processor is in charge of inserting the styles in the DOM when the element is rendered, by doing this it is not required to import semantic JavaScript from external files in our code.

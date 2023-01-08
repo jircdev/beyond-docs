@@ -1,0 +1,87 @@
+import { Title, SubTitle } from '@beyond/docs/titles';
+import { Code } from '@beyond/docs/code';
+import { Link } from '@beyond/docs/links';
+
+<Title>Comienzo rápido</Title>
+
+**Prerequisitos**
+
+-   Node ^14.17.4.
+-   Be familiar with dependency managers like npm or yarn.
+
+<SubTitle>beyond-first-project</SubTitle>
+
+To begin with, possibly the easiest way to start a project in BeyondJS is through the beyond-first-project.
+
+<Code>
+	{`
+npx beyond-first-project -name @scope/name [-type node] [-container folderName]
+`}
+</Code>
+
+Command options:
+
+Listed below are the flags that can be selected when installing beyond-first-project:
+
+-   name: This allows you to define the scope and naming of the project. Projects follow the NPM standard. Read read more about it <Link to="/docs/intro#projects">here.</Link>
+-   type: his allows you to define the type of project to create (this is optional), if not, a web-type project will be set by default. Accepted values ​​are:
+
+    -   web
+    -   node
+    -   backend
+    -   library
+    -   web-backend
+
+You can read more about project types <Link to="/docs/projects/types">here.</Link>
+
+-   container: This allows you to specify if you want to add a project container folder. Remember that BeyondJS supports the ability to handle multiple projects simultaneously.
+
+To exemplify, you can imagine that you need to create a login project of type node, that could be create it with the following command:
+
+<Code>
+	{`
+    npx create-first-project -name @scope/name -type node
+`}
+</Code>
+
+When the command execution finishes, the project structure is created and is ready to be executed.
+
+To start the development server, the following command needs execution:
+
+<Code>
+	{`
+npm start
+`}
+</Code>
+
+Done! Now you can start programming and testing the project. The dashboard is accessed through: <ELink to="https://workspace.beyondjs.com/">https://workspace.beyondjs.com/</ELink> and the project created is available at <ELink to="http://localhost:6500">http://localhost:6500</ELink>
+
+The dashboard is a system that BeyondJS provides the developer with a better user experience. You can read more about him <Link to="/docs/dashboard">here.</Link>
+
+-   <Link to="/docs/projects/structure">Structure of a project</Link>
+-   <Link to="/docs/modules/intro">Modules</Link>
+
+<SubTitle>Overall installation</SubTitle>
+
+To install BeyondJS globally, run the following command:
+
+<Code>
+	{`
+npm i --location=global beyond
+`}
+</Code>
+
+From the installation, it is only necessary to go to the folder where you want to create the project(s) and initialize BeyondJS from the command line as follows:
+
+<Code>
+	{`
+beyond run
+`}
+</Code>
+
+If everything goes smothly, a message will appear saying that BeyondJS is running and that you can access the dashboard at <ELink to="https://workspace.beyondjs.com/">https://workspace.beyondjs.com/</ELink>, from where a project is created through the dashboard graphical.
+
+Also at the dashboard, you can create a project from the graphical interface. See how you can do it <Link to="/docs/projects/create">here.</Link>
+
+-   <Link to="/docs/project/create">Creating a project</Link>
+-   <Link to="/docs/tutorial/web">Tutorial</Link>
