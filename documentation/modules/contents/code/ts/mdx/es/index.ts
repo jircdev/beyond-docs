@@ -7,5 +7,6 @@ import TemplatesES from './templates.mdx';
 import HmrES from './hmr.mdx';
 import WidgetObjectES from './widget-object.mdx';
 import ProcessorsES from './processors.mdx';
+import URIES from './uri.mdx';
 
-export { ProcessorsES, WidgetObjectES, HmrES, TutoES, BackendES, IntroES, BeeES, BundlesES, TemplatesES };
+export { URIES, ProcessorsES, WidgetObjectES, HmrES, TutoES, BackendES, IntroES, BeeES, BundlesES, TemplatesES };

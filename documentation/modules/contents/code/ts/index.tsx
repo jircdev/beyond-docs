@@ -6,13 +6,13 @@ import { PreloadPage } from '@beyond/docs/preload';
 import { beyond } from '@beyond-js/kernel/core';
 import { DocsContext } from './context';
 import { ContentsContainer } from './container';
-import { IntroEN, BackendEN, BeeEN } from './mdx/en';
-import { ProcessorsES, TutoES, IntroES, BackendES, BeeES, BundlesES, TemplatesES } from './mdx/es';
+import { URIEN, IntroEN, BackendEN, BeeEN } from './mdx/en';
+import { URIES, ProcessorsES, TutoES, IntroES, BackendES, BeeES, BundlesES, TemplatesES } from './mdx/es';
 
 export /*bundle*/ function ContentsPage({ contentId }) {
 	const contents = {
 		intro: {
-			es: ProcessorsES,
+			es: URIEN,
 			en: BackendES,
 		},
 

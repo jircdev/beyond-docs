@@ -1,0 +1,33 @@
+import { PreTitle, Title, SubTitle } from '@beyond/docs/titles';
+import { Code, InlineCode } from '@beyond/docs/code';
+import { Link, ELink } from '@beyond/docs/links';
+
+<Title>URI object</Title>
+
+Import
+
+<Code>{`import {routing: {uri}} from "@beyond-js/kernel/routing/ts";`}</Code>
+
+The URI object provides an API equivalent to that of the window.location object, but with added functionality that ensures correct behavior in the web and mobile environment.
+
+<SubTitle>Properties</SubTitle>
+
+-   **pathname** string: current URL, no query string, and no hash
+-   **URI** string: complete URL.
+-   **qs** Map: Map with the list of variables passed through the query string.
+-   **Hashtag** string: Contains the URL fragment after the '#'. It is equivalent to the hash property of the Web API location object.
+-   **vars** Map: Container map of the dynamic variables added in the definition of the <Link to="/widgets#page">Widget Page URL.</Link>
+
+**routing.historyBeyondHistory:**
+
+The BeyondHistory object handles all the information associated with the user's browsing in the current session.
+
+<SubTitle>Properties</SubTitle>
+
+-   **current**: string: Current browsing URL.
+-   **initial**: number: Refers to the index associated with the history of the web API of the browser on which the navigation begins inside the BeyondJS project. For this handling, beyond makes use of the web API's SessionStorage object, where it registers two properties:
+    -   \_\_beyond_navigation_position
+    -   \_\_beyond_navigation_records
+-   **position** HistoryPosition :
+    -   **value** number: the value of the current navigation position in BeyondJS's history.
+-   **records** HistoryRecords: An object of type Map that contains all the user's navigation entries in the current session.

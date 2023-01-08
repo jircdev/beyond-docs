@@ -7,5 +7,6 @@ import TemplatesEN from './templates.mdx';
 import HmrEN from './hmr.mdx';
 import WidgetObjectEN from './widget-object.mdx';
 import ProcessorsEN from './processors.mdx';
+import URIEN from './uri.mdx';
 
-export { ProcessorsEN, WidgetObjectEN, HmrEN, IntroEN, TutoEN, BackendEN, BeeEN, BundlesEN, TemplatesEN };
+export { URIEN, ProcessorsEN, WidgetObjectEN, HmrEN, IntroEN, TutoEN, BackendEN, BeeEN, BundlesEN, TemplatesEN };
