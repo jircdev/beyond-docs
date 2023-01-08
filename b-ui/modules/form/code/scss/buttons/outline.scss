@@ -1,0 +1,10 @@
+@import '~template/sass/variables';
+.beyond-button {
+    &.btn-outline {
+        &.primary {
+            background: transparent;
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+    }
+}

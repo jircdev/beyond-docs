@@ -1,21 +1,19 @@
-.technologies__section {
-	margin: 7rem auto 6rem auto;
+.technologies-section {
+    .technologies__list {
+        padding: 0;
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 30px);
+        justify-content: center;
+        gap: 5rem;
+        svg {
+            width: 100%;
+            height: 100%;
+            aspect-ratio: 1/1;
+        }
 
-	h5 {
-		text-align: center;
-	}
-
-	.technologies__list {
-		padding: 0;
-		list-style: none;
-
-		display: grid;
-		grid-template-columns: repeat(auto-fit, 30px);
-		justify-content: center;
-		gap: 5rem;
-
-		li {
-			width: 30px;
-		}
-	}
+        li {
+            width: 30px;
+        }
+    }
 }

@@ -2,6 +2,7 @@
 @import "general";
 @import "separator";
 @import "typography";
+@import "flex";
 @import "container";
 
 .accent {
@@ -33,4 +34,11 @@ ul {
         }
         margin: 2rem auto;
     }
+}
+
+.no-m {
+    margin: 0;
+}
+.no-p {
+    padding: 0;
 }

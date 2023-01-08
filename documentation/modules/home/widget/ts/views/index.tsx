@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Header } from "./header";
+
 import { Footer } from "./footer";
 import { useBinder } from "@beyond/docs/store";
 import { HomeContext } from "./contexts";
@@ -10,7 +10,15 @@ import { UniversalDevelopment } from "./sections/universal-development";
 import { DoYouWantMore } from "./sections/do-you-want-more";
 import { CodePen } from "./sections/codepen";
 import { GettingStart } from "./sections/getting-start";
-import { AppHomeHeader } from "@beyond/docs/home/header";
+import "@beyond/docs/home-header";
+
+declare global {
+    namespace JSX {
+        interface IntrinsicElements {
+            "app-home-header": any;
+        }
+    }
+}
 export function Page({ store }): JSX.Element {
     const [ready, setReady] = React.useState(store.ready);
     const [data, setTexts] = React.useState(store.texts);
@@ -30,7 +38,7 @@ export function Page({ store }): JSX.Element {
             }}
         >
             <div className="home">
-                <AppHomeHeader />
+                <app-home-header></app-home-header>
                 <main className="main__home__content">
                     <WhatIs />
                     <WhatIsItFor />

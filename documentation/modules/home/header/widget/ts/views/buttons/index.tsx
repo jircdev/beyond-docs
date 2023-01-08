@@ -1,5 +1,5 @@
 import React from "react";
-import { useHeaderContext } from "../../contexts";
+import { useHeaderContext } from "../contexts";
 import { BeyondButton } from "@beyond/ui/form";
 
 export function Buttons() {

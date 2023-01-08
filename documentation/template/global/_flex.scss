@@ -1,0 +1,12 @@
+.flex-container {
+    display: flex;
+    gap: 1rem;
+    &.flex-h-end {
+        justify-items: end;
+        justify-content: end;
+        flex-grow: 1;
+    }
+    &.flex-space-b {
+        justify-content: space-between;
+    }
+}

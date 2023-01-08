@@ -1,12 +1,9 @@
 import React from "react";
-import { SVGImage } from "../../svg-image";
-import { EnvironmentsSVG } from "../background/svgs/environments";
-import { DevServerSVG } from "../background/svgs/dev-server";
+import { SVGImage } from "@beyond/docs/components/html";
 import { FilesSVG } from "../background/svgs/files";
 import { NpmSVG } from "../background/svgs/npm-gh";
 import { ImportsSVG } from "../background/svgs/imports";
-import { cdnSVG } from "../background/svgs/cdn";
-import { useHeaderContext } from "../../contexts";
+import { useHeaderContext } from "../contexts";
 import { BundleSVG } from "../background/svgs/bundle";
 
 export function PublishState({}) {

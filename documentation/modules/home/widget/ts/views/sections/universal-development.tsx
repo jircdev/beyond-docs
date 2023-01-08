@@ -9,9 +9,8 @@ export function UniversalDevelopment() {
         texts: { universalDevelopment: texts },
     } = useHomeContext();
 
-    console.log(101, UniversalDevSVG);
     return (
-        <section className="universal-development__section">
+        <section className=" container two-columns">
             <SVGImage src={UniversalDevSVG} />
 
             <div className="content">
@@ -24,7 +23,7 @@ export function UniversalDevelopment() {
                 <p>{texts.concept}</p>
 
                 <div className="actions">
-                    <BeyondButton>{texts.startNow}</BeyondButton>
+                    <BeyondButton className="primary btn-outline">{texts.startNow}</BeyondButton>
                     <a href="#">{texts.moreInfo}</a>
                 </div>
             </div>

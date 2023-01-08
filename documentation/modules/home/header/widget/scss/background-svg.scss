@@ -14,4 +14,20 @@
         position: absolute;
         top: 0;
     }
+
+    .logo-bg {
+        g,
+        path {
+            fill: var(--app-logo-bg);
+        }
+    }
+
+    #background-circles {
+        margin-top: -150px;
+        transform: rotate(20deg);
+
+        g {
+            fill: var(--app-bg-svg-color);
+        }
+    }
 }

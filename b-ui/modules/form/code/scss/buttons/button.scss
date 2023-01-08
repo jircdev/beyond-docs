@@ -5,6 +5,8 @@
 	cursor: pointer;
 	position: relative;
 	overflow: hidden;
+	padding: .5rem;
+	border-radius: var(--border-radius-base);
 
 	&:active,
 	&:hover,

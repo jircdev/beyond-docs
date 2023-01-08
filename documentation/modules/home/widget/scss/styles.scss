@@ -8,6 +8,10 @@
     }
 }
 
+svg path#svg--background {
+    fill: var(--app-bg-svg-secondary-color);
+}
+
 a {
     color: var(--app-link-color);
     cursor: pointer;
@@ -16,17 +20,12 @@ a {
     position: relative;
 
     &:not(.link-more) {
-        text-underline-offset: 1.5px;
         text-decoration: underline;
     }
 
     &:hover {
         color: var(--app-link-hover-color);
     }
-}
-
-.text-center {
-    text-align: center;
 }
 
 .banner__icons {

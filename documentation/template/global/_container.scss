@@ -37,6 +37,8 @@
 
     &.two-columns,
     &.three-columns {
+        display: grid;
+        align-items: center;
         grid-template-columns: 1fr;
     }
 

@@ -1,4 +1,4 @@
-export const DarkBGSVG = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1604.818" height="1573.743" viewBox="0 0 1604.818 1573.743">
+export const DarkBGSVG = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1604.818" height="1573.743" viewBox="0 0 1604.818 1573.743" id="background-circles">
 <defs>
   <clipPath id="clip-path">
     <rect id="Rectángulo_5593" data-name="Rectángulo 5593" width="1367.08" height="1214.722"/>

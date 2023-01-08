@@ -1,6 +1,8 @@
 @import "set-media";
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;500&display=swap");
 
+$titles: ("h1", "H2", "H3");
+
 :root {
     font-weight: lighter;
 }
@@ -36,8 +38,11 @@ h2,
 
 h3,
 .h3 {
-    font-size: 1.5rem;
+    font-size: 2.3rem;
     font-weight: normal;
+    line-height: 30px;
+    letter-spacing: 0.24px;
+
     small {
         display: grid;
         font-size: 1rem;
@@ -49,11 +54,17 @@ h3,
     text-transform: uppercase;
 }
 h3,
-h4 {
+h4,
+.h3,
+.h4 {
+    &.regular {
+        font-weight: lighter;
+    }
     color: var(--text-color);
 }
 
-h4 {
+h4,
+.h4 {
     font-size: 1.5rem;
     letter-spacing: 0.24px;
     line-height: 30px;
@@ -143,4 +154,19 @@ ul li {
 .mt-15 {
     margin-top: 15px !important;
     margin-bottom: 15px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.button-text {
+    font-size: 0.75rem;
+}
+
+.mt-50 {
+    margin-top: 50px;
+}
+.mt-100 {
+    margin-top: 100px;
 }
