@@ -1,0 +1,54 @@
+import { Title, SubTitle } from "@beyond/docs/titles";
+import { Link } from "@beyond/docs/links";
+import { Code } from "@beyond/docs/code";
+
+<Title>Widgets page</Title>
+
+Los widgets de tipo page representan a una página de un sitio o aplicativo web que puede ser accedido por medio de una URL. Cuando un proyecto web recibe una solicitud por URL, BeyondJS se encarga de identificar al widget con esa URL definida para inicializar el componente y dejarlo disponible en el DOM.
+
+<Code>
+{`
+"widget": {
+    "route": "login"
+    "layout: "main",
+    "element": {
+      "name": "login-page"
+    },
+....
+}
+
+`}
+
+</Code>
+
+Las páginas requieren la misma estructura de configuración que la de cualquier widget, pero aparte recieben los siguientes parametros de configuración:
+
+-   **route:** [string] : Define la URL o ruta de acceso al componente.
+-   **layout** [string] [optional] : y define si quieres usar un layout o no en tu página.
+-   **vdir** [string] [optional] : Permite definir si se quiere manejar algún valor dinámico en la URL.
+
+<SubTitle>Patrón de rutas</SubTitle>
+
+Se pueden definir URLs con valores dinámicos agregando las variables a la propiedad route con una sintaxis similar a la de template strings.
+
+Para ejemplificarlo, supongamos que se tiene una página de módificación de datos de un usuario y se necesita manejar el id por medio de la URL. La propiedad route del widget tendría el siguiente valor:
+
+<Code>
+    {`
+/user/edit/${userId}
+`}
+</Code>
+
+Las siguientes urls coincirian con la ruta creada:
+
+-   `/user/edit/1`
+-   `/user/edit/any-identifier`
+
+Estas propiedades, quedan disponibles en el objeto `uri` disponible como propiedad en el controller del widget y podria ser accedido desde el controlador de la siguiente forma:
+
+<Code>{`this.uri.vars.get('userId');`}</Code>
+
+El objeto uri es pasado también a los componentes de vista. La forma de acceder a ellos depende de la implementación de cada framework o herramienta.
+
+-   <Link to="/docs/widgets/layouts">Layouts</Link>
+-   <Link to="/docs/routing">Enrutamiento</Link>

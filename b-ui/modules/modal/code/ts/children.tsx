@@ -3,7 +3,7 @@ import {BeyondModalContext} from "./context";
 
 interface IProps {
     children?: any,
-    close: (Event) => Promise<void>,
+    close: (Event) => Promise[void],
     dismiss?: boolean
 }
 

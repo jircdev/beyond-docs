@@ -1,21 +1,35 @@
 @use "~template/sass/mixins";
+@import "~template/sass/mixins/set-media";
 
 .page-section {
     margin: 2rem auto;
     padding: 2rem;
     width: calc(100% - 4rem);
 
-    > header {
+    > header,
+    .section__header {
         .pretitle + h2,
         .pretitle + h3,
         .pretitle + h1 {
             margin-top: 0;
         }
-        margin-bottom: 5rem;
 
         &.header--center {
             display: grid;
             align-content: center;
         }
+        h3,
+        h4,
+        h5 {
+            margin: 0;
+            padding: 0;
+        }
+
+        margin-bottom: 5rem;
+    }
+
+    @include set-media("small-screen", false, max) {
+        padding: 1rem;
+        width: calc(100% - 2rem);
     }
 }

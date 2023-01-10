@@ -1,0 +1,57 @@
+import { Title, SubTitle } from "@beyond/docs/titles";
+import { Code } from "@beyond/docs/code";
+import { Link, ELink } from "@beyond/docs/links";
+
+<Title>Module configuration</Title>
+
+The module configuration file is the module.json.
+
+<Code>
+{`
+{
+  "name": "home",
+  "platforms": [
+    "backend",
+    "web"
+  ],
+  "widget": {
+    "hmr": true,
+    "element": {
+      "name": "home-page"
+    },
+    "name": "home",
+    "route": "/${content}",
+    "is": "page",
+    "ts": {
+      "path": "/widget/ts",
+      "files": [
+        "*"
+      ]
+    }
+  }
+}
+
+`}
+
+</Code>
+
+The configuration properties are:
+
+-   **name** string : Defines the name of the module, necessary so that the elements can be imported.
+-   **platforms** array : Defines the <Link to="/concepts/platforms">platforms</Link> supported by the module. The supported values are the identifiers of the existing platforms.
+
+<Code>
+{`
+"platforms": [
+    "backend",
+    "web"
+ ]
+
+`}
+
+</Code>
+
+-   [bundle] <Link to="/module#bundle">bundle</Link>: Refers to the identifier name of the type of bundle that you want to add to the module. A module can have one or more bundles. Each bundle receives a configuration object with the processors it uses and some inherent variation of the bundle type added.
+
+-   <Link to="/docs/bundles">Bundles</Link>
+-   <Link to="/docs/widgets">Widgets</Link>

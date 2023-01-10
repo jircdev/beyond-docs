@@ -1,23 +1,23 @@
 .main__home__content {
-	position: relative;
+    position: relative;
 
-	ul {
-		padding-left: 1rem;
-	}
-	.list-items {
-		list-style: none;
-		max-width: 600px;
+    ul {
+        padding: 0;
+    }
+    .list-items {
+        list-style: none;
+        max-width: 600px;
 
-		li {
-			padding: 0.3rem;
-			display: grid;
-			gap: 0.5rem;
-			grid-template-columns: auto 1fr;
-			align-items: start;
-			.beyond-icon {
-				margin-top: 0.25rem;
-				fill: var(--text-color);
-			}
-		}
-	}
+        li {
+            padding: 0.3rem;
+            display: grid;
+            gap: 0.5rem;
+            grid-template-columns: auto 1fr;
+            align-items: start;
+            .beyond-icon {
+                margin-top: 0.25rem;
+                fill: var(--text-color);
+            }
+        }
+    }
 }

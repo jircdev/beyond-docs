@@ -1,39 +1,40 @@
-import * as React from 'react';
-import { PreTitle, Title, SubTitle } from '@beyond/docs/titles';
-import { Code, InlineCode } from '@beyond/docs/code';
-import { ELink } from '@beyond/docs/links';
-import { PreloadPage } from '@beyond/docs/preload';
-import { beyond } from '@beyond-js/kernel/core';
-import { DocsContext } from './context';
-import { ContentsContainer } from './container';
-import { URIEN, IntroEN, BackendEN, BeeEN } from './mdx/en';
-import { URIES, ProcessorsES, TutoES, IntroES, BackendES, BeeES, BundlesES, TemplatesES } from './mdx/es';
+import * as React from "react";
+import { PreTitle, Title, SubTitle } from "@beyond/docs/titles";
+import { Code, InlineCode } from "@beyond/docs/code";
+import { ELink } from "@beyond/docs/links";
+import { PreloadPage } from "@beyond/docs/preload";
+import { beyond } from "@beyond-js/kernel/core";
+import { DocsContext } from "./context";
+import { ContentsContainer } from "./container";
+import ContentsEs from "@beyond/docs/contents/esp";
+import { useState, useEffect } from "react";
 
 export /*bundle*/ function ContentsPage({ contentId }) {
-	const contents = {
-		intro: {
-			es: URIEN,
-			en: BackendES,
-		},
+    const { current: lang } = beyond.languages;
+    // const ComponentToShow = contents[contentId][lang];
 
-		'tutorial/start': {
-			es: TutoES,
-		},
-		'/widgets/pepito': '@beyond/docs/pepito',
-	};
+    const [Component, setComponent] = useState();
+    // useEffect(() => {
+    //     (async () => {
+    //         try {
+    //             const contents = await globalThis.bimport(`@beyond/ui/contents/${lang}`);
+    //             console.log(13, contents);
+    //         } catch (e) {
+    //             console.error(e);
+    //         }
+    //     })();
+    // }, [contentId]);
+    function ContentWrapper({ children }) {
+        return <>{children}</>;
+    }
 
-	const { current: lang } = beyond.languages;
-	const ComponentToShow = contents[contentId][lang];
-
-	function ContentWrapper({ children }) {
-		return <>{children}</>;
-	}
-
-	return (
-		<DocsContext.Provider value={{}}>
-			<ContentsContainer>
-				<ComponentToShow components={{ wrapper: ContentWrapper }} />
-			</ContentsContainer>
-		</DocsContext.Provider>
-	);
+    return "listo";
+    console.log(12, contentId);
+    return (
+        <DocsContext.Provider value={{}}>
+            <ContentsContainer>
+                <ComponentToShow components={{ wrapper: ContentWrapper }} />
+            </ContentsContainer>
+        </DocsContext.Provider>
+    );
 }

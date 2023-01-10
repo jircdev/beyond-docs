@@ -1,4 +1,4 @@
-export const UniversalDevSVG = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="692" height="666" viewBox="0 0 692 666">
+export const UniversalDevSVG = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 692 666">
 <defs>
   <clipPath id="clip-path">
     <rect id="Rectangle_5594" data-name="Rectangle 5594" width="692" height="666" transform="translate(0 2035)" fill="#fff" stroke="#707070" stroke-width="1"/>

@@ -1,0 +1,12 @@
+@import "./set-media";
+@include set-media("small-screen", false, max) {
+    .hidden-xs {
+        display: none;
+    }
+}
+
+.hidden-mobile {
+    @include set-media("tablet", false, "max") {
+        display: none;
+    }
+}

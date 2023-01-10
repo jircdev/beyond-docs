@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 interface IContextValue {
-    close?: (Event) => Promise<void>,
+    close?: (Event) => Promise[void],
     dismiss?: boolean
 }
 

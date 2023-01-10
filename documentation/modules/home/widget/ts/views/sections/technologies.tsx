@@ -27,7 +27,7 @@ export function Technologies() {
     ));
 
     return (
-        <section className="technologies-section page-section text-center">
+        <section className="technologies-section page-section text-center container">
             {/* <h5 className="pre__title">{texts.title}</h5> */}
             <header className="header--center">
                 <span className="pretitle">{texts.title}</span>

@@ -1,7 +1,7 @@
 import * as React from "react";
 
 interface IContextValue {
-    opened?: (Event) => Promise<void>;
+    opened?: (Event) => Promise[void];
     dismiss?: boolean;
     slide?: string;
     setSlide?: Function;

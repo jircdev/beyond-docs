@@ -1,19 +1,33 @@
+@import "~template/sass/mixins/set-media";
 .technologies-section {
+    header {
+        margin-bottom: 2rem !important;
+    }
     .technologies__list {
         padding: 0;
         list-style: none;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, 30px);
-        justify-content: center;
-        gap: 5rem;
-        svg {
-            width: 100%;
-            height: 100%;
-            aspect-ratio: 1/1;
-        }
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1rem;
 
         li {
             width: 30px;
+            aspect-ratio: 1/1;
+            svg {
+                width: 100%;
+                height: 100%;
+                aspect-ratio: 1/1;
+                min-width: 3rem;
+            }
+        }
+    }
+
+    @include set-media("mobile", false, "max") {
+        // remove margin on mobile display to keep near icons and universal svg image
+        margin-bottom: 0 !important;
+        .technologies__list {
+            justify-content: center;
         }
     }
 }

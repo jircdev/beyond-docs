@@ -1,41 +1,21 @@
+@import "~template/sass/mixins/set-media";
 .getting_started__section {
-	background: var(--surface);
-	border-radius: 20px;
-
-	min-width: 20rem;
-	margin: 0 auto;
-	padding: 2rem 1rem;
-
-	h3 {
-		font-size: 1.5rem;
-	}
-
-	h3,
-	p {
-		text-align: center;
-	}
-
-	p {
-		font-size: 0.9rem;
-		margin: 0.2rem 0 1rem 0;
-	}
-
-	.actions {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-wrap: wrap;
-		gap: 1rem;
-
-		a {
-			font-size: 0.8rem;
-			font-weight: 400;
-		}
-
-		.clipboard__container {
-			margin: 0;
-			background: var(--text-on-primary);
-			padding: 0.8rem 1rem;
-		}
-	}
+    background: var(--surface);
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    gap: 3rem;
+    border: 1px solid var(--element-border-color);
+    border-radius: var(--border-radius-base);
+    div {
+        display: grid;
+        grid-gap: 2rem;
+    }
+    @include set-media("mobile", false, "max") {
+        div,
+        section {
+            text-align: center;
+            display: grid;
+            justify-items: center;
+        }
+    }
 }

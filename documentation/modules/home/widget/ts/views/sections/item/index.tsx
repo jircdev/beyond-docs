@@ -1,6 +1,6 @@
 import React from "react";
 import { AppIcon } from "@beyond/docs/ui/icons";
-import { SVGImage } from "../../svg-image";
+import { SVGImage } from "@beyond/docs/components/html";
 
 interface Props {
     key: string;
@@ -13,7 +13,7 @@ interface Props {
 export function Item({ icon = "", title = "", content = "", children }: Props) {
     return (
         <li className="feature__item">
-            <AppIcon icon={icon} className="md-icon" />
+            <AppIcon icon={icon} className="app-md-icon" />
             <h4>{title}</h4>
             <p dangerouslySetInnerHTML={{ __html: content }}></p>
             {children}

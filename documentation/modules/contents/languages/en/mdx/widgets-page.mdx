@@ -1,0 +1,54 @@
+import { Title, SubTitle } from "@beyond/docs/titles";
+import { Link } from "@beyond/docs/links";
+import { Code } from "@beyond/docs/code";
+
+<Title>Widgets page</Title>
+
+Page type widgets represent a page from a website or web application accessed through a URL. When a web project receives a request by URL, BeyondJS takes care of identifying the widget with that defined URL to initialize the component and make it available in the DOM.
+
+<Code>
+{`
+"widget": {
+    "route": "login"
+    "layout: "main",
+    "element": {
+      "name": "login-page"
+    },
+....
+}
+
+`}
+
+</Code>
+
+Pages require the same configuration structure as any widget, but they also receive the following configuration parameters:
+
+-   **route:** [string]: Defines the URL or path to the component.
+-   **layout** [string] [optional]: y defines whether you want to use a layout or not on your page.
+-   **vdir** [string] [optional]: This allows you to define if you want to handle any dynamic value in the URL.
+
+<SubTitle>Route pattern</SubTitle>
+
+URLs with dynamic values can be defined by adding variables to the route property with a syntax similar to template strings.
+
+To exemplify it, let's suppose that you have a page where you need modifying a user's data, and you also need to manage the id through the URL. The widget's route property would have the following value:
+
+<Code>
+    {`
+/user/edit/${userId}
+`}
+</Code>
+
+The following URLs would match the created route:
+
+-   `/user/edit/1`
+-   `/user/edit/any-identifier`
+
+These properties are available in the `uri` object available as a property in the widget controller and could be accessed from the controller as follows:
+
+<Code>{`this.uri.vars.get('userId');`}</Code>
+
+The uri object passed to view components as well. The way to access them depends on the implementation of each framework or tool.
+
+-   <Link to="/docs/widgets/layouts">Layouts</Link>
+-   <Link to="/docs/routing">Routing</Link>

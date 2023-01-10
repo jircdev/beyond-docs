@@ -1,0 +1,19 @@
+import { Title } from "@beyond/docs/titles";
+import { Code } from "@beyond/docs/code";
+import { Link } from "@beyond/docs/links";
+
+<Title>Manejo de Estados</Title>
+
+El estado es la representación de los valores renderizados de un componente o widget en pantalla.
+Este puede mutar y variar por diversos factores, tales como la actualización de datos desde un servidor o la interacción del usuario.
+
+Existen numerosas librerias para la gestión de estado de un proyecto, generalmente asociadas
+al <Link to="/docs/widgets">Framework de vista</Link> que se esté utilizando. BeyondJS permite integrar la herramienta para manejo de estados que se desee, siempre que esta este preparada para el funcionamiento modular.
+
+Puedes ver un ejemplo funcional de un contador que comparte el manejo de estado entre un componente creado con
+**React**, uno creado con **Svelte** y otro con **Vue** en <Link to="/examples/sm/counter">Este ejemplo.</Link>
+
+Asimismo, BeyondJS Define una estructura para el manejo de estado.
+El objeto que maneja el estado, debe ser disponibilizado por medio del método createWidgetStore del controlador del widget.
+Este método debe retornar un objeto que implemente la interfaz <Link to="/api/IWidgetStore">IWidgetStore</Link>,
+esencialmente si se espera trabajar con ssr.

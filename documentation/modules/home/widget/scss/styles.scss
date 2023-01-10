@@ -55,12 +55,16 @@ a {
     padding: 2rem;
     border-top: 1px solid var(--app-element-border-color-1);
     width: calc(100% - 2rem * 2);
-    max-width: 1376px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-size: 0.75rem;
+    flex-wrap: wrap;
     margin: auto;
-}
-
-.hidden-mobile {
-    @include mixins.set-media("tablet", false, "max") {
-        display: none;
+    .app__logo {
+        height: 1.3rem;
+        img {
+            height: 100%;
+        }
     }
 }

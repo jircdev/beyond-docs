@@ -1,3 +1,5 @@
+@import "~template/sass/mixins/set-media";
+
 .home__header {
     padding: 15rem 0 4rem 0;
     position: relative;
@@ -18,7 +20,6 @@
 
         position: relative;
         z-index: 5;
-
         h1 {
             padding: 0;
             margin: 0;
@@ -40,5 +41,17 @@
 
     @media (max-width: 600px) {
         height: auto;
+    }
+    @include set-media("tablet", false, "max") {
+        padding: 5rem 0 4rem 0;
+        .welcome__text {
+            h1 {
+                font-size: 3rem;
+                line-height: 3rem;
+            }
+            p {
+                line-height: 3rem;
+            }
+        }
     }
 }

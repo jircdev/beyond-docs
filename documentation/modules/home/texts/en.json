@@ -1,5 +1,6 @@
 {
     "en": {
+        "copyMessage": "Command copied",
         "header": {
             "notice": "Versión beta",
             "title": "Crea módulos pensando en el futuro",
@@ -14,7 +15,6 @@
         "whatsIsItFor": {
             "title": "Programación módular <br/> basada en paquetes universales",
             "pretitle": "¿PARA QUÉ SIRVE?",
-
             "features": [
                 {
                     "title": "Librerías y paquetes",
@@ -51,7 +51,7 @@
         },
         "doYouWantMore": {
             "preTitle": "¿QUIERES CONOCER MÁS?",
-            "title": "Más que un Framework, es BeyondJS",
+            "title": "Más que un Framework, <br/>es BeyondJS",
             "features": [
                 {
                     "icon": "unification",
@@ -74,7 +74,7 @@
                     "description": "Se encuentra integrado automáticamente para Frontend y Backend."
                 },
                 {
-                    "icon": "webSockets",
+                    "icon": "websockets",
                     "title": "Web Socket",
                     "description": "Está completamente listo para usar con generación de tipado para el código de interacción entre frontend y backend."
                 },
@@ -88,7 +88,7 @@
                     }
                 },
                 {
-                    "icon": "allYouNeed",
+                    "icon": "checkmark",
                     "title": "Todo lo que necesitas",
                     "description": "BeyondJS es todo lo que necesitas: CSS, SASS, VUE, REACT, SVELTE compatibles entre sí y de forma natural."
                 },
@@ -98,7 +98,7 @@
                     "description": "Posee una optimización de paquetes npm que erradica el  “dependency hell” y asegurar la compatibilidad con las distintas formas de consumo de paquetes."
                 },
                 {
-                    "icon": "readyForTheFuture",
+                    "icon": "rocket",
                     "title": "Listo para el futuro",
                     "description": "Está diseñado para agregar tecnologías y librerías emergentes."
                 }
@@ -106,7 +106,7 @@
         },
         "codepen": {
             "preTitle": "Y HAY MUCHO MÁS….",
-            "title": "Widgets out-of-the-box",
+            "title": "Widgets <i>out-of-the-box</i>",
             "subTitle": "Listos para usar",
             "description": "Integramos un widget con carga a demanda de React que inicialmente renderiza con SSR y te permite modificar los tipos de renderizado al instante (inspeccionalo).",
             "checkItOut": "¡Échale un vistazo al siguiente ejemplo!"

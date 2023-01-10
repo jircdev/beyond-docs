@@ -15,11 +15,17 @@
 
 
   &.md-icon {
-    height: 50px;
-    width: 50px;
+    &, svg {
+      height: 50px;
+      width: 50px;
+    }
+    
   }
   &.big-icon {
-    height: 4rem;
-    width: 4rem;
+    &, svg {
+      height: 4rem;
+      width: 4rem;
+    }
+    
   }
 }

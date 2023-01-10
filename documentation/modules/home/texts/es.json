@@ -1,5 +1,6 @@
 {
     "es": {
+        "copyMessage": "Comando copiado",
         "header": {
             "notice": "Versión beta",
             "title": "Crea módulos pensando en el futuro",
@@ -51,7 +52,7 @@
         },
         "doYouWantMore": {
             "preTitle": "¿QUIERES CONOCER MÁS?",
-            "title": "Más que un Framework, es BeyondJS",
+            "title": "Más que un Framework,<br/> es BeyondJS",
             "features": [
                 {
                     "icon": "unification",
@@ -74,7 +75,7 @@
                     "description": "Se encuentra integrado automáticamente para Frontend y Backend."
                 },
                 {
-                    "icon": "websockets",
+                    "icon": "websocket",
                     "title": "Web Socket",
                     "description": "Está completamente listo para usar con generación de tipado para el código de interacción entre frontend y backend."
                 },
@@ -88,7 +89,7 @@
                     }
                 },
                 {
-                    "icon": "check",
+                    "icon": "checkmark",
                     "title": "Todo lo que necesitas",
                     "description": "BeyondJS es todo lo que necesitas: CSS, SASS, VUE, REACT, SVELTE compatibles entre sí y de forma natural."
                 },

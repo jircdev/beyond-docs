@@ -1,3 +1,5 @@
+@import "./set-media";
+$columns-gap: 15px !default;
 .flex-container {
     display: flex;
     gap: 1rem;
@@ -7,6 +9,39 @@
         flex-grow: 1;
     }
     &.flex-space-b {
+        justify-content: space-between;
+    }
+
+    @include set-media("mobile", false, "max") {
+        flex-direction: column;
+        align-content: center;
+    }
+}
+
+.flex-center {
+    place-content: center;
+    place-items: center;
+    display: flex;
+    gap: $columns-gap;
+
+    &-y {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        gap: $columns-gap;
+    }
+
+    &-x {
+        display: flex;
+        justify-content: center;
+        gap: $columns-gap;
+    }
+}
+
+.flex-container {
+    display: flex;
+
+    &.space-between {
         justify-content: space-between;
     }
 }

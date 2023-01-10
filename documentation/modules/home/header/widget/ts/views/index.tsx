@@ -17,10 +17,9 @@ export function Widget() {
 
     return (
         <HeaderContext.Provider value={{ setSlide, slide }}>
-            <header className="container home__header" ref={container}>
+            <header className=" home__header" ref={container}>
                 <div className="header__gradient"></div>
                 <BackgroundContainer />
-
                 <div className="welcome__text">
                     <h1>{texts.title}</h1>
                     <p>{texts.subtitle}</p>

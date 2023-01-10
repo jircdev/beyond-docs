@@ -1,0 +1,57 @@
+import { Title, SubTitle } from "@beyond/docs/titles";
+import { Code } from "@beyond/docs/code";
+import { Link, ELink } from "@beyond/docs/links";
+
+<Title>Configuración de módulos</Title>
+
+El archivo de configuración de módulos es el module.json
+
+<Code>
+{`
+{
+  "name": "home",
+  "platforms": [
+    "backend",
+    "web"
+  ],
+  "widget": {
+    "hmr": true,
+    "element": {
+      "name": "home-page"
+    },
+    "name": "home",
+    "route": "/${content}",
+    "is": "page",
+    "ts": {
+      "path": "/widget/ts",
+      "files": [
+        "*"
+      ]
+    }
+  }
+}
+
+`}
+
+</Code>
+
+Las propiedades de configuración son:
+
+-   **name** [string] : Define el nombre del módulo, necesario para que los elementos puedan ser importados.
+-   **platforms** [array] : Define las plataformas soportadas por el módulo. Los valores soportados son los identificadores de las <Link to="/concepts/platforms">plataformas</Link> existentes.
+
+<Code>
+{`
+"platforms": [
+    "backend",
+    "web"
+ ]
+
+`}
+
+</Code>
+
+-   [bundle] <Link to="/module#bundle">[bundle]</Link> : Refiere al nombre identificador del tipo de bundle que se desea agregar en el módulo. Un módulo puede poseer uno o varios bundles. Cada bundle recibe un objeto de configuración con los procesadores que utiliza y alguna variación inherita del tipo de bundle agregado.
+
+-   <Link to="/docs/bundles">Bundles</Link>
+-   <Link to="/docs/widgets">Widgets</Link>

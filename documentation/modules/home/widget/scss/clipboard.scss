@@ -1,0 +1,71 @@
+.clipboard__container {
+    $text-color: var(--secondary-light);
+    border: 1px solid var(--secondary-light);
+    padding: 1rem;
+    border-radius: var(--border-radius-base);
+    display: inline-flex;
+    justify-content: space-between;
+    gap: 3rem;
+    cursor: pointer;
+    color: $text-color;
+    position: relative;
+    background: var(--app-clipboard-bg);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    border-radius: var(--border-radius-base);
+    padding: 0.8rem 1rem;
+    margin: 0;
+
+    span {
+        color: var(--secondary-light);
+    }
+
+    svg {
+        fill: $text-color;
+    }
+
+    .action-copied {
+        position: absolute;
+        top: -1.4rem;
+        right: -20%;
+        padding: 0.5rem;
+        background: rgba(0, 0, 0, 0.7);
+        border-radius: var(--border-radius-base);
+        color: var(--text-on-primary);
+        font-size: 0.6rem;
+        transition: all 300ms linear;
+        display: none;
+
+        &.show {
+            display: inline-flex;
+            animation: fadeIn 300ms;
+        }
+
+        &.hide {
+            animation: fadeOut 300ms;
+        }
+    }
+
+    @media (max-width: 600px) {
+        margin-top: 1.5rem;
+        font-size: 0.8rem;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
