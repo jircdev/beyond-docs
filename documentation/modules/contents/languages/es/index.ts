@@ -1,20 +1,10 @@
-import {
-    PreTitle,
-    Title,
-    ObjectProperty,
-    ItemProperty,
-    Subtitle,
-    Table,
-    DocHeader,
-    Link,
-    ELink,
-} from "@beyond/docs/components/html";
-import { Code, InlineCode } from "@beyond/docs/code";
+import { PreTitle, Title, ObjectProperty, ItemProperty, Subtitle, Table, DocHeader, Link, ELink } from '@beyond/docs/components/html';
+import { Code, InlineCode } from '@beyond/docs/code';
 
 // import { default as Backend1 } from "./mdx/backend.mdx";
-import { default as Intro1 } from "./mdx/starting/intro.mdx";
-import { default as QuickStart1 } from "./mdx/starting/quick-start.mdx";
-import { default as CLI1 } from "./mdx/starting/cli.mdx";
+import { default as Intro1 } from './mdx/starting/intro.mdx';
+import { default as QuickStart1 } from './mdx/starting/quick-start.mdx';
+import { default as CLI1 } from './mdx/starting/cli.mdx';
 // import { default as Bee1 } from "./mdx/bee.mdx";
 // import { default as Bundles1 } from "./mdx/bundles.mdx";
 // import { default as Templates1 } from "./mdx/templates.mdx";
@@ -24,13 +14,16 @@ import { default as CLI1 } from "./mdx/starting/cli.mdx";
 // import { default as URI1 } from "./mdx/uri.mdx";
 // import { default as Projects1 } from "./mdx/projects.mdx";
 
-import { default as BareSpecifier1 } from "./mdx/foundations/bare-specifiers.mdx";
-import { default as Modular1 } from "./mdx/foundations/modular.mdx";
-import { default as Universal1 } from "./mdx/foundations/universal.mdx";
-import { default as DevServer1 } from "./mdx/foundations/dev-server.mdx";
-import { default as Distributions1 } from "./mdx/foundations/distributions.mdx";
-import { default as Hmr1 } from "./mdx/foundations/hmr.mdx";
-import { default as Tutorial1 } from "./mdx/tutorial/start.mdx";
+import { default as BareSpecifier1 } from './mdx/foundations/bare-specifiers.mdx';
+import { default as Modular1 } from './mdx/foundations/modular.mdx';
+import { default as Universal1 } from './mdx/foundations/universal.mdx';
+import { default as DevServer1 } from './mdx/foundations/dev-server.mdx';
+import { default as Distributions1 } from './mdx/foundations/distributions.mdx';
+import { default as Hmr1 } from './mdx/foundations/hmr.mdx';
+import { default as Tutorial1 } from './mdx/tutorial/start.mdx';
+import { default as Tutorial2 } from './mdx/tutorial/backend.mdx';
+import { default as Tutorial3 } from './mdx/tutorial/bridge.mdx';
+import { default as Tutorial4 } from './mdx/tutorial/routing.mdx';
 
 // export /*bundle */ const Bee = Bee1;
 // export /*bundle */ const Bundles = Bundles1;
@@ -42,12 +35,16 @@ import { default as Tutorial1 } from "./mdx/tutorial/start.mdx";
 // export /*bundle */ const Projects = Projects1;
 // export /*bundle*/ const Backend = Backend1;
 
-//Get strating
+// Get strating
 export /*bundle */ const Intro = Intro1;
 export /*bundle */ const Cli = CLI1;
 export /*bundle */ const QuickStart = QuickStart1;
-// tutorial
+
+// Tutorial
 export /*bundle */ const TutorialStart = Tutorial1;
+export /*bundle*/ const TutorialBackend = Tutorial2;
+export /*bundle*/ const TutorialBridge = Tutorial3;
+export /*bundle*/ const TutorialRouting = Tutorial4;
 
 // Foundations
 export /*bundle*/ const BareSpecifiers = BareSpecifier1;

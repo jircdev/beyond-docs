@@ -1,0 +1,126 @@
+Tutorial
+Bridge Code
+As we mentioned before, in this moment, usually, each project has its logic for session validation. The intention today is not to focus on how should this be handled. What you will do, is create a basic code that allows you to connect our client code with the backend node. You'll add this to the existing bridge.ts file in the module you just created.
+
+bridge.ts
+
+<Code>
+	{`
+const data = {
+    user: 'admin',
+    password: '123456.'
+}
+`}
+</Code>
+
+<Code>
+{`
+export /*actions*//*bundle*/
+class Auth {
+
+    async login(user: string, password: string) {
+        if (user !== data.user || password !== data.password) {
+            return {status: true, error: 'Invalid data'};
+        }
+
+        return {status: true, data: {valid: true}}
+    }
+
+}
+`}
+
+</Code>
+The code is quite simple, but there are several interesting points to highlight:
+
+The magic comment /_bundle_/, is used by Beyond to identify that the code below should be considered as a code to be exported in the final bundle. If you want to read more about how bundles and modules work, we recommend you go to the modules chapter of the documentation.
+The magic comment /_actions_/ is used by BeyondJS to identify which segments of the bundle bridge should be made available as actions that can be consumed by the client.
+The response of the login method is a flat object that arrives with the defined structure to the client.
+Connect client and server
+The bridge we created is a node service. Generally, to run a node service, it is necessary to go to a console. However, in BeyondJS, these services work as a BEE (Beyond Environment Service)and to execute it, we must go to theDashboard and click on the execution button, which we can find on the project detail screen
+
+And another in the project detail:
+
+Beyond Environment Execution - Dashboard - BeyondJs
+To implement the login functionality with our server, we must import our auth object in the client code and associate the onSubmit event to our form.
+
+Projects in BeyondJS follow the same guidelines for specification and resolution of names and packages, as npm, in the same way that typescript does. They must have a module name and can handle a scope as well. In our case, we define both when creating our project and module respectively.
+
+Next, in our Page component we import the Auth object
+
+<Code>{`import {Auth} from "@testing/login/home/bridge";`}</Code>
+We add our onSubmity function and associate it to the form, our code should be as follows:
+
+<Code>
+{`
+import * as React from 'react';
+import { Auth } from '@testing/login/auth';
+
+interface IForm {
+disabled?: boolean;
+}
+const model = new Auth();
+export /_page_/
+function View(): JSX.Element {
+const defaultValues = {username: '', password: '', fetching: false};
+const [values, setValues] = React.useState(defaultValues);
+const [error, setError] = React.useState();
+const handleChange = ({currentTarget: target}) => {
+const currentValue = {...values};
+currentValue[target.name] = target.value;
+setValues(currentValue);
+};
+const formDisabled: IForm = {};
+const {username, password} = values;
+if (!username || !password) {
+formDisabled.disabled = true;
+}
+const onSubmit = async event => {
+try {
+event.preventDefault();
+const response = await model.login(username, password);
+if (response.data?.valid) {
+console.log('valid data');
+return;
+}
+setError(response.error);
+} catch (e) {
+console.log(e)
+}
+}
+
+     return (
+        <div className="page__container">
+            <form onSubmit={onSubmit}>
+                {
+                    error &&
+                    <div className="form__error">
+                        {error}
+                    </div>
+                }
+                <label>User: </label>
+                <input onChange={handleChange} type="text" name="username"/>
+                <label>Password</label>
+                <input onChange={handleChange} type="password" name="password"/>
+                <div className="form__actions">
+                    <button onClick={onSubmit} {...formDisabled}>Login</button>
+                </div>
+            </form>
+        </div>
+    );
+
+}
+
+`}
+
+</Code>
+
+Time to test our form. If we add the correct data, we can see a message appearing in the browser console indicating that the data was validated, and you can log in. If, on the contrary, we add incorrect data, we can see how the error message "Invalid data" appears. Which we update in the component's state variable.
+
+Summary:
+
+We create a module with a page type widget
+We create a connection with a backend node through the bundle bridge.
+We review the module resolution structure to import the Auth bridge and be able to add the login validation.
+Now we just need to redirect the user to a welcome screen.
+
+-   <Link to="/docs/tutorial/routing">Routing</Link>

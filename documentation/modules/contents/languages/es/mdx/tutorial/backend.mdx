@@ -1,5 +1,5 @@
-import { PreTitle, Title, Link, ELink } from "@beyond/docs/components/html";
-import { Code, InlineCode } from "@beyond/docs/code";
+import { PreTitle, Title, Link, ELink } from '@beyond/docs/components/html';
+import { Code, InlineCode } from '@beyond/docs/code';
 
 <Title>Código Backend</Title>
 
@@ -58,7 +58,7 @@ BeyondJS genera un objeto cliente que realiza la conexión web-socket al servido
 Ahora sólo es necesario inicializar el servidor. Para ello es necesario crear un módulo con un bundle start que se encargue de iniciar el <Link to="/docs/bee">BEE.</Link> El código del bundle start es el siguiente:
 
 <Code>
-    {`
+	{`
 import { listen } from "@beyond-js/backend/listen/ts";
 listen();
 `}

@@ -1,0 +1,35 @@
+import { DocHeader, BeyondName, Subtitle, Link } from '@beyond/docs/components/html';
+import { Code } from '@beyond/docs/code';
+
+<DocHeader pretitle="Tutorial" title="Routing" />
+
+Lo primero que debemos hacer, es crear un nuevo módulo con un bundle de tipo Page, esta vez lo haremos desde el Dashboard. Accedemos al Dashboard y seleccionamos el proyecto (si no lo hemos hecho). Esto habilitará en el PreAside las acciones que podemos realizar sobre el proyecto.
+
+Hacemos clic en el ícono para agregar módulos y se abrirá un modal como el siguiente:
+
+Seleccionamos módulo en blanco. Y en la siguiente pantalla, nos pide el bundle, seleccionamos "page":
+
+En la pantalla final, nos pedirá algunos datos, a continuación, se explica que colocar:
+
+-   Module name: welcome
+-   Web component name: welcome-page.
+-   Url: "/welcome"
+-   Las páginas y layouts en Beyond se resuelven haciendo uso de Web components. Si quieres saber en detalle cómo funcionan y porqué, dirígete a la sección de Web Components.
+
+Abrimos el objeto Page creado en el módulo y agregaremos un mensaje simple que diga: ¡Bienvenido!
+
+A continuación, Haremos los ajustes necesarios, para redireccionar a nuestro módulo de bienvenida, luego de iniciar sesión. Lo que debemos hacer a continuación, es importar el objeto "routing" de Beyond, para usar el método pushState que provee y navegar a la página de Bienvenida.
+
+**Importación**
+
+<Code>{`import { routing } from '@beyond-js/kernel/routing';`}</Code>
+
+**Navegación**
+
+<Code>{`routing.pushState('/welcome');`}</Code>
+
+<div className="block__note">
+	BeyondJS provee un objeto routing para interactuar con la api de navegación, puedes aprender más al respecto en la sección de <Link to="/docs/routing">Enrutamiento.</Link>
+</div>
+
+Ahora sólo debemos refrescar la página del formulario para que BeyondJS registre la ruta nueva creada y Si volvemos a probar nuestro formulario, podremos iniciar sesión y ver cómo nos dirigimos a la página de bienvenida.

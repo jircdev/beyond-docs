@@ -1,0 +1,35 @@
+import { DocHeader, BeyondName, Subtitle, Link } from '@beyond/docs/components/html';
+import { Code } from '@beyond/docs/code';
+
+<DocHeader pretitle="Tutorial" title="Routing" />
+
+The first thing we must do is create a new module with a bundle of type Page. For this, we going to repeat the process that we used to create our Bridge bundle.
+
+We click on the icon to add modules and a modal like the following will open:
+
+We select blank module. On the next screen, it request the bundle, we then select “page”:
+
+On the final screen, it will require us for some information, below it is explained what to place on it:
+
+-   Module name: welcome
+-   Web component name: welcome-page.
+-   Url: "/welcome"
+-   Pages and layouts in Beyond are resolved using Web components. If you want to know in detail how they work and why, go to the Web Components Section.
+
+We then open the Page object created in the module and add a simple message that says: Welcome!
+
+Next, we will make the necessary adjustments to redirect to our welcome module after logging in. What we need to do after is import the "routing" object from Beyond, use the pushState method as it provides, and navigate to the welcome page.
+
+**Imports**
+
+<Code>{`import { routing } from '@beyond-js/kernel/routing';`}</Code>
+
+**Navigation**
+
+<Code>{`routing.pushState('/welcome');`}</Code>
+
+<div className="block__note">
+	BeyondJS provides a routing object to interact with the navigation api, you can learn more about it in the section on <Link to="/docs/routing">Routing page.</Link>
+</div>
+
+We are done! now we only need to refresh our form page to let BeyondJS register the new URL. If we retest our form, we'll be able to log in and see how we've been redirected to the welcome page.
