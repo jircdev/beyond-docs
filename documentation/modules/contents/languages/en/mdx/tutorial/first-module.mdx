@@ -1,0 +1,173 @@
+import { PreTitle, Title, Link, Subtitle, ELink } from '@beyond/docs/components/html';
+import { Code, InlineCode } from '@beyond/docs/code';
+
+<DocHeader pretitle="Tutorial" title="First module" />
+
+From the dashboard, we can also see the content of these modules. For this, we can click on the project icon at the PreAside. Then you can select the module you want, and then you can see its structure.
+
+As can be observed, the project has two modules created, the Home, which is a response to the base URL of the project, and the “start-backend” module, which will be addressed later.
+
+The dashboard allows us to
+
+-   See and manage modules.
+-   Add files.
+-   Edit source code.
+-   Generate declarations of code.
+-   Errors handling.
+-   Manage general settings of the module
+-   Manage Templates.
+
+From the Dashboard, we can also navigate the module by accessing the PreAside at the Active project icon. You click on the home module, and it will display the list of bundles contained in the module.
+
+The structure of the module is as follows
+
+-   widget: Folder where the page component code is located.
+-   ts:
+
+        -   `controller.ts`: Component controller object, required to mount the WebComponent in the browser.
+        -   `views
+            -   `index.tsx`: React component that renders the page.
+
+-   scss: Folder for adding styles to the module
+
+-   module.json: Module configuration file (Place to define the type of bundles and processors to use).
+
+Let's get down to business!
+
+Having a clear idea on the structure, what's next is creating the login form and adding some styles, and then continuing with the connection to the backend node.
+
+<Title>Form Creation</Title>
+
+If you have previously worked with React, what follows is the part you will probably know best, for sure, with some subtleties. Next, you will edit our page.tsx file to create a login form and a basic functionality to update status.
+
+IDE or from the integrated Dashboard Editor, which speciallty is providing help to the developer for specific cases. But for the purposes of the tutorial, we recommend using it by clicking on the required file from the side.
+
+<Code>
+{`
+import * as React from 'react';
+
+interface IForm {
+disabled?: boolean;
+}
+
+export /*page*/
+function View(): JSX.Element {
+    const defaultValues = {username: '', password: '', fetching: false};
+    const [values, setValues] = React.useState(defaultValues);
+    const [error, setError] = React.useState();
+    const handleChange = ({currentTarget: target}) => {
+        const currentValue = {...values};
+        currentValue[target.name] = target.value;
+        setValues(currentValue);
+    };
+    const formDisabled: IForm = {};
+    const {username, password} = values;
+    if (!username || !password) {
+        formDisabled.disabled = true;
+    }
+     return (
+        <div className="page__container">
+            <form>
+                {
+                    error &&
+                    <div className="form__error">
+                        {error}
+                    </div>
+                }
+                <label>User: </label>
+                <input onChange={handleChange} type="text" name="username"/>
+                <label>Password</label>
+                <input onChange={handleChange} type="password" name="password"/>
+                <div className="form__actions">
+                    <button {...formDisabled}>Login</button>
+                </div>
+            </form>
+        </div>
+    );
+}
+`}
+<Code>
+
+<Title>Styles</Title>
+
+BeyondJS handles styling by default with the SASS preprocessor. Let's go to our styles.scss file and add some styling to the form.
+
+<div className="block__note">
+	SASS is a processor in BeyondJS. To read in-depth about the processor's mechanism, you can find further details in the <Link to="/docs/processors">Processor's chapter</Link>
+</div>
+
+<Code>
+{`
+.page\_\_container {
+display: flex;
+padding: 20px;
+height: 100%;
+margin: 0;
+flex-direction: column;
+align-items: center;
+align-content: center;
+justify-content: center;
+
+.form\_\_error {
+padding: 15px;
+display: grid;
+background: var(--error);
+color: var(--text-on-primary);
+}
+
+form {
+display: flex;
+flex-direction: column;
+gap: 15px;
+background: var(--bg-element);
+padding: 30px;
+width: 100%;
+max-width: 500px;
+
+    input {
+      padding: 8px;
+      border: 1px solid var(--gray-light);
+      transition: all 300ms ease-in;
+
+      &:hover, &:focus {
+        outline: none;
+        border-color: var(--primary);
+      }
+    }
+
+    .form__actions {
+      display: flex;
+      justify-content: end;
+
+      button {
+        background: var(--primary);
+        cursor: pointer;
+        border: 1px solid var(--primary-dark);
+        color: var(--text-on-primary);
+        padding: .5rem 2rem;
+        transition: all 300ms ease-in;
+
+        &:disabled {
+          opacity: .6;
+          cursor: not-allowed;
+        }
+
+        &:hover {
+          background: var(--primary-dark);
+        }
+      }
+    }
+
+}
+
+}
+`}
+
+</Code>
+
+Let's explain a bit the above code.
+
+-   We add basic styling to the form, the inputs, the submit button, and for handling an error message.
+-   Custom properties: the custom properties used are a simple structure for handling variables included by beyond in the <Link to="/template">Project Template.</Link>
+
+-   <Link to="/docs/tutorial/backend">Backend</Link>

@@ -20,10 +20,13 @@ import { default as Universal1 } from './mdx/foundations/universal.mdx';
 import { default as DevServer1 } from './mdx/foundations/dev-server.mdx';
 import { default as Distributions1 } from './mdx/foundations/distributions.mdx';
 import { default as Hmr1 } from './mdx/foundations/hmr.mdx';
+
+// Tutorial
 import { default as Tutorial1 } from './mdx/tutorial/start.mdx';
 import { default as Tutorial2 } from './mdx/tutorial/backend.mdx';
 import { default as Tutorial3 } from './mdx/tutorial/bridge.mdx';
 import { default as Tutorial4 } from './mdx/tutorial/routing.mdx';
+import { default as Tutorial5 } from './mdx/tutorial/first-module.mdx';
 
 // export /*bundle */ const Bee = Bee1;
 // export /*bundle */ const Bundles = Bundles1;
@@ -45,6 +48,7 @@ export /*bundle */ const TutorialStart = Tutorial1;
 export /*bundle*/ const TutorialBackend = Tutorial2;
 export /*bundle*/ const TutorialBridge = Tutorial3;
 export /*bundle*/ const TutorialRouting = Tutorial4;
+export /*bundle */ const TutorialFirstModule = Tutorial5;
 
 // Foundations
 export /*bundle*/ const BareSpecifiers = BareSpecifier1;
