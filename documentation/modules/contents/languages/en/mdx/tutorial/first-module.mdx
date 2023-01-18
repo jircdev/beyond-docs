@@ -1,13 +1,13 @@
-import { PreTitle, Title, Link, Subtitle, ELink } from '@beyond/docs/components/html';
+import { DocHeader, PreTitle, Title, Link, Subtitle, ELink } from '@beyond/docs/components/html';
 import { Code, InlineCode } from '@beyond/docs/code';
 
 <DocHeader pretitle="Tutorial" title="First module" />
 
-From the dashboard, we can also see the content of these modules. For this, we can click on the project icon at the PreAside. Then you can select the module you want, and then you can see its structure.
+From the workspace, we can also see the content of these modules. For this, we can click on the project icon at the PreAside. Then you can select the module you want, and then you can see its structure.
 
 As can be observed, the project has two modules created, the Home, which is a response to the base URL of the project, and the “start-backend” module, which will be addressed later.
 
-The dashboard allows us to
+The workspace allows us to
 
 -   See and manage modules.
 -   Add files.
@@ -17,7 +17,7 @@ The dashboard allows us to
 -   Manage general settings of the module
 -   Manage Templates.
 
-From the Dashboard, we can also navigate the module by accessing the PreAside at the Active project icon. You click on the home module, and it will display the list of bundles contained in the module.
+From the Workspace, we can also navigate the module by accessing the PreAside at the Active project icon. You click on the home module, and it will display the list of bundles contained in the module.
 
 The structure of the module is as follows
 
@@ -40,7 +40,7 @@ Having a clear idea on the structure, what's next is creating the login form and
 
 If you have previously worked with React, what follows is the part you will probably know best, for sure, with some subtleties. Next, you will edit our page.tsx file to create a login form and a basic functionality to update status.
 
-IDE or from the integrated Dashboard Editor, which speciallty is providing help to the developer for specific cases. But for the purposes of the tutorial, we recommend using it by clicking on the required file from the side.
+IDE or from the integrated Workspace Editor, which speciallty is providing help to the developer for specific cases. But for the purposes of the tutorial, we recommend using it by clicking on the required file from the side.
 
 <Code>
 {`
@@ -86,14 +86,14 @@ function View(): JSX.Element {
     );
 }
 `}
-<Code>
+</Code>
 
 <Title>Styles</Title>
 
 BeyondJS handles styling by default with the SASS preprocessor. Let's go to our styles.scss file and add some styling to the form.
 
 <div className="block__note">
-	SASS is a processor in BeyondJS. To read in-depth about the processor's mechanism, you can find further details in the <Link to="/docs/processors">Processor's chapter</Link>
+	SASS is a processor in BeyondJS. To read in-depth about the processor's mechanism, you can find further details in the <Link to="/docs/processors">Processors chapter</Link>
 </div>
 
 <Code>

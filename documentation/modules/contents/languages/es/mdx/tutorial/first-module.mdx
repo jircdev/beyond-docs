@@ -1,13 +1,13 @@
-import { PreTitle, Title, Link, Subtitle, ELink } from '@beyond/docs/components/html';
+import { DocHeader, PreTitle, Title, Link, Subtitle, ELink } from '@beyond/docs/components/html';
 import { Code, InlineCode } from '@beyond/docs/code';
 
 <DocHeader pretitle="Tutorial" title="Primer módulo" />
 
-En el dashboard, también podemos hacer click sobre el proyecto y esto abrirá un nuevo tab con el listado de módulos del mismo.
+En el workspace, también podemos hacer click sobre el proyecto y esto abrirá un nuevo tab con el listado de módulos del mismo.
 
 Como puede verse, el proyecto trae dos módulos creados, el Home, que responde a la URL base del proyecto y el módulo “start-backend” del cúal se hablará más adelante.
 
-El Dashboard nos permite hacer las siguientes acciones sobre un módulo
+El Workspace nos permite hacer las siguientes acciones sobre un módulo
 
 -   Ver y gestionar módulos.
 -   Agregar archivos.
@@ -16,9 +16,9 @@ El Dashboard nos permite hacer las siguientes acciones sobre un módulo
 -   Visualizar errores de código.
 -   Gestionar configuraciones generales del proyecto
 -   Gestionar Templates
--   Desde el Dashboard, podemos también navegar el módulo accediendo desde el menu lateral (PreAside), en el icono del proyecto Activo, que desplegará el aside con el listado de módulos del proyecto, hacemos click sobre el módulo home y se mostrará la lista de bundles contenidos en el módulo y el contenido de estos, procesadores y archivos.
+-   Desde el Workspace, podemos también navegar el módulo accediendo desde el menu lateral (PreAside), en el icono del proyecto Activo, que desplegará el aside con el listado de módulos del proyecto, hacemos click sobre el módulo home y se mostrará la lista de bundles contenidos en el módulo y el contenido de estos, procesadores y archivos.
 
-Desde el Dashboard, podemos también navegar el módulo accediendo desde el menu lateral (PreAside), en el icono del proyecto Activo, que desplegará el aside con el listado de módulos del proyecto, hacemos click sobre el módulo home y se mostrará la lista de bundles contenidos en el módulo y el contenido de estos, procesadores y archivos.
+Desde el Workspace, podemos también navegar el módulo accediendo desde el menu lateral (PreAside), en el icono del proyecto Activo, que desplegará el aside con el listado de módulos del proyecto, hacemos click sobre el módulo home y se mostrará la lista de bundles contenidos en el módulo y el contenido de estos, procesadores y archivos.
 
 La estructura del módulo `home` es la siguiente:
 
@@ -41,7 +41,7 @@ Teniendo clara la estructura, lo que procede a continuación es crear el formula
 
 Si has trabajado con React, lo que viene es la parte que seguramente conoces mejor, con algunas sutilezas seguramente. A continuación, editaremos nuestro archivo page.tsx para crear un formulario de inicio de sesión y la funcionalidad básica para actualizar el estado.
 
-La edición puede hacerse desde tu IDE de preferencia y también desde el Editor integrado del Dashboard, el cual tiene como finalidad brindar ayuda para casos especificos al desarrollador, pero para efectos del tutorial recomendamos usarlo, basta con hacer click en el archivo requerido desde el aside.
+La edición puede hacerse desde tu IDE de preferencia y también desde el Editor integrado del Workspace, el cual tiene como finalidad brindar ayuda para casos especificos al desarrollador, pero para efectos del tutorial recomendamos usarlo, basta con hacer click en el archivo requerido desde el aside.
 
 <Code>
 {`
@@ -87,9 +87,10 @@ function View(): JSX.Element {
     );
 }
 `}
-<Code>
+</Code>
 
 <Title>Estilos</Title>
+
 BeyondJS maneja los estilos por defecto con el preprocesador SASS, ahora vamos a nuestro archivo styles.scss y agreguemos un poco de estilo al formulario.
 
 <div className="block__note">

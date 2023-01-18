@@ -1,6 +1,6 @@
-import { Title, Subtitle } from "@beyond/docs/components/html";
-import { Code } from "@beyond/docs/code";
-import { Link, ELink } from "@beyond/docs/components/html";
+import { Title, Subtitle } from '@beyond/docs/components/html';
+import { Code } from '@beyond/docs/code';
+import { Link, ELink } from '@beyond/docs/components/html';
 
 <Title>Servidor de desarrollo</Title>
 
@@ -39,9 +39,7 @@ Si estás construyendo una aplicación completa en DENO, lo habitual sería que 
 El objetivo de BeyondJS es ofrecer un entorno de desarrollo typescript universal.
 A diferencia de Deno, que soporta imports HTTP de manera estable desde sus inicios, NodeJS lo implementa en versiones recientes y aún en fase experimental.
 
-<ELink to="https://nodejs.org/api/esm.html#https-and-http-imports">
-    https://nodejs.org/api/esm.html#https-and-http-imports
-</ELink>
+<ELink to="https://nodejs.org/api/esm.html#https-and-http-imports">https://nodejs.org/api/esm.html#https-and-http-imports</ELink>
 
 Para brindar una experiencia homogénea, BeyondJS ofrece un entorno de ejecución (**BEE**: Beyond Execution Environment)
 específicamente diseñado para ser usado en desarrollo (no en producción) desde NodeJS, encargado de permitir ejecutar una aplicación consumiendo los bundles desde el servidor HTTP y brindando soporte HMR.
@@ -70,7 +68,7 @@ El archivo `beyond.json` puede ser editado manualmente o a través del workspace
 La estructura del `beyond.json` es la siguiente:
 
 <Code>
-    {`
+	{`
 "applications": "projects.json",
   "bundles": {},
   "libraries": []
@@ -79,7 +77,7 @@ La estructura del `beyond.json` es la siguiente:
 
 **Propiedades**
 
--   applications <Link to="/aoc">AOC:</Link> Recibe un arreglo con la lista de proyectos o aplicaciones configuradas para que BeyondJS pueda leerlas y levantarlas. Este archivo, es gestionado por BeyondJS si se hace uso del dashboard.
+-   applications <Link to="/aoc">AOC:</Link> Recibe un arreglo con la lista de proyectos o aplicaciones configuradas para que BeyondJS pueda leerlas y levantarlas. Este archivo, es gestionado por BeyondJS si se hace uso del workspace.
 -   bundles object: Permite configurar la inclusión de bundles creados por el programador.
 -   libraries <Link to="/aoc">AOC:</Link> Arreglo de configuración de librerias BeyondJS a utilizar.
 

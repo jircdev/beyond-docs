@@ -1,5 +1,5 @@
-import { PreTitle, Title, Link, ELink } from "@beyond/docs/components/html";
-import { Code, InlineCode } from "@beyond/docs/code";
+import { PreTitle, Title, Link, ELink } from '@beyond/docs/components/html';
+import { Code, InlineCode } from '@beyond/docs/code';
 
 <Title>Backend-code</Title>
 
@@ -31,7 +31,7 @@ To execute backend-code in BeyondJS, is necessary to have the needed distributio
 
 </Code>
 
-Like any module or bundle, it can be managed from the <Link to="/dashboard">Dashboard</Link> or manually.
+Like any module or bundle, it can be managed from the <Link to="/workspace">Workspace</Link> or manually.
 
 As its name indicates, the bridge-type bundle function as a bridge between client-logic and server-logic. Generally, logic is associated with data management or file management implemented on the server. The bridge enables the implementation and availability of features that are required to be queried from the client and keeps encapsulate on the server those that don’t.
 
@@ -62,7 +62,7 @@ BeyondJS generates a client object that makes the web-socket connection to the s
 Now all you need to do is initialize the server. To do this, it is necessary to create a module with a bundle start that is in charge of starting the <Link to="/docs/bee">BEE.</Link> The code for the bundle start is as follows:
 
 <Code>
-    {`
+	{`
 import { listen } from "@beyond-js/backend/listen/ts";
 listen();
 `}

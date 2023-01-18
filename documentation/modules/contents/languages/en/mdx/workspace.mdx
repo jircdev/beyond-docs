@@ -1,10 +1,10 @@
-import { Title, Subtitle } from "@beyond/docs/components/html";
-import { Code } from "@beyond/docs/code";
-import { Link, ELink } from "@beyond/docs/components/html";
+import { Title, Subtitle } from '@beyond/docs/components/html';
+import { Code } from '@beyond/docs/code';
+import { Link, ELink } from '@beyond/docs/components/html';
 
 <Title>Workspace</Title>
 
-BeyondJS provides an integrated Dashboard, which seeks to improve the development experience in several ways, all focused on giving support to the developer in daily tasks that are often time-consuming. These tasks span the entire development loop, from creating a new project to deploying it.
+BeyondJS provides an integrated Workspace, which seeks to improve the development experience in several ways, all focused on giving support to the developer in daily tasks that are often time-consuming. These tasks span the entire development loop, from creating a new project to deploying it.
 
 It is available whenever the development server is started at <ELink to="https://workspace.beyondjs.com/">https://workspace.beyondjs.com/</ELink> and allows creating a new project or obtaining relevant information from the existing project, as will be seen later.
 
@@ -30,7 +30,7 @@ It is available whenever the development server is started at <ELink to="https:/
 
 // Img
 
-The Dashboard works as a framework (Workspace), and each component that integrates it has a defined name that allows its identification. These are:
+The Workspace works as a framework (Workspace), and each component that integrates it has a defined name that allows its identification. These are:
 
 1.  PreAside: First left panel, iconography of general access to actions which vary depending on whether or not you have a project open
 2.  Aside: Secondary menu that displays additional features associated with the option selected in the preview.
@@ -39,7 +39,7 @@ The Dashboard works as a framework (Workspace), and each component that integrat
 
 <Subtitle>Integration with Typescript</Subtitle>
 
-**Typescript** is a typed language, and type checking is a heavy task. The Dashboard utilizes the typescript compiler to detect errors that may exist in the code in real-time and provide information about them to the developer at three different levels:
+**Typescript** is a typed language, and type checking is a heavy task. The Workspace utilizes the typescript compiler to detect errors that may exist in the code in real-time and provide information about them to the developer at three different levels:
 
 -   **Module in development:** The module which is being worked on.
 -   **Dependencies:** The modules imported by the module under development.
@@ -53,8 +53,8 @@ Because the typescript compiler's parsing times are long when doing type checkin
 
 <Subtitle>Editor and Browser included</Subtitle>
 
-The dashboard has a built-in code editor that can be extremely useful for quickly accessing files and correcting detected errors, working with styles or bridges. Likewise, it also has a Board that allows you to navigate the projects.
+The workspace has a built-in code editor that can be extremely useful for quickly accessing files and correcting detected errors, working with styles or bridges. Likewise, it also has a Board that allows you to navigate the projects.
 
 <Subtitle>Project deployment</Subtitle>
 
-The Dashboard generates the necessary and optimized code to deploy the projects. Read in detail how it works in the <Link to="/docs/deployment">Project Deployment chapter.</Link>
+The Workspace generates the necessary and optimized code to deploy the projects. Read in detail how it works in the <Link to="/docs/deployment">Project Deployment chapter.</Link>
