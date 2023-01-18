@@ -1,6 +1,6 @@
-import { Title, SubTitle } from '@beyond/docs/titles';
-import { Code } from '@beyond/docs/code';
-import { Link } from '@beyond/docs/links';
+import { Title, Subtitle } from "@beyond/docs/components/html";
+import { Code } from "@beyond/docs/code";
+import { Link } from "@beyond/docs/components/html";
 
 <Title>Project template</Title>
 
@@ -13,7 +13,7 @@ BeyondJS provides a simple but robust architecture for managing templates in pro
 -   **Code separation:** Independent handling of the style files with an automated process for generating independent and optimized final files.
 -   Integrated **Light & Dark Theme.**
 
-<SubTitle>Setting</SubTitle>
+<Subtitle>Setting</Subtitle>
 
 The template configuration, like all elements in BeyondJS, is handled by a configuration file whose name, by convention, is template.json and is located in the template folder at the project root. However, both name and location are configurable values in the <Link to="/project/config">project.json.</Link>
 
@@ -35,10 +35,10 @@ Style management can be reviewed in detail in the <Link to="/docs/styles/templat
 
 Its purpose is to provide the developer with the possibility of sharing code between widgets. The files added in the global configuration are compiled into a file named global.css, which is included in the shadow dom of each widget so that they have access to the styles.
 
-<SubTitle>Configuration parameters</SubTitle>
+<Subtitle>Configuration parameters</Subtitle>
 
 <Code>
-	{`
+    {`
 "application": {
     "processor": "sass",
     "path": "application",

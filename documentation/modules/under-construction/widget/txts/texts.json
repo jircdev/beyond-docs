@@ -1,0 +1,22 @@
+{
+    "en": {
+        "pretitle": "Under construction",
+        "title": "We are working on it",
+
+        "end": {
+            "s1": " Let’s go ",
+            "l1": "home",
+            "s2": "and try from there."
+        }
+    },
+    "es": {
+        "pretitle": "En construcción",
+        "title": "¡Aún estamos trabajando en esta página!",
+
+        "end": {
+            "s1": " Volvamos al ",
+            "l1": "inicio",
+            "s2": " y validemos allí."
+        }
+    }
+}

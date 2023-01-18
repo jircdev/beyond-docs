@@ -1,0 +1,22 @@
+{
+    "name": "under-construction",
+    "widget": {
+        "element": {
+            "name": "app-under-construction"
+        },
+
+        "sass": {
+            "path": "/widget/sass",
+            "files": ["*"]
+        },
+        "ts": {
+            "path": "/widget/ts",
+            "files": ["*"]
+        }
+    },
+    "txt": {
+        "multilanguage": true,
+        "path": "/widget/txts",
+        "files": ["*"]
+    }
+}

@@ -10,10 +10,10 @@ export function GettingStart() {
     } = useHomeContext();
 
     return (
-        <div className="container">
-            <section className="getting_started__section flex-container page-section">
+        <section className="container page-section">
+            <div className="flex-container getting_started__section ">
                 <section>
-                    <h3 className="no-m primary-color">{texts.ready}</h3>
+                    <h4 className="no-m primary-color">{texts.ready}</h4>
                     <p className="pre__title">{texts.description}</p>
                 </section>
                 <div>
@@ -27,7 +27,7 @@ export function GettingStart() {
                     <Clipboard text="npm i --location=global beyond" message={copyMessage} />
                     <a href="#">{texts.links.github}</a>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
     );
 }

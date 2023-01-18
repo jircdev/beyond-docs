@@ -19,15 +19,5 @@
             height: 2rem;
             aspect-ratio: 1/1;
         }
-        @media (max-width: 700px) {
-            .content,
-            header {
-                padding: 0 1rem;
-                .h3 {
-                    margin-left: calc(-1rem - 3px);
-                    padding-left: 1rem;
-                }
-            }
-        }
     }
 }

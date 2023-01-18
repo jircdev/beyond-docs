@@ -1,6 +1,6 @@
-import { Title, SubTitle } from '@beyond/docs/titles';
-import { Code } from '@beyond/docs/code';
-import { Link, ELink } from '@beyond/docs/links';
+import { Title, Subtitle } from "@beyond/docs/components/html";
+import { Code } from "@beyond/docs/code";
+import { Link, ELink } from "@beyond/docs/components/html";
 
 <Title>Create a Module</Title>
 
@@ -8,7 +8,7 @@ This page assumes that you have already read the <Link to="/modules/intro">modul
 
 The modules are created and managed through the module.json configuration files. These have the alternative of being created manually or through the Dashboard interface.
 
-<SubTitle>Creation from the Dashboard</SubTitle>
+<Subtitle>Creation from the Dashboard</Subtitle>
 
 To be able to create a module, first you must have created a project before, and this needs to be active in the Dashboard.
 
@@ -30,7 +30,7 @@ Module data
 -   **Vue** boolean: Adds the Vue renderer.
 -   **Svelte** boolean: Adds the Svelte processor.
 
-<SubTitle>Manual creation</SubTitle>
+<Subtitle>Manual creation</Subtitle>
 
 The module configuration follows the same principle as the rest of the configuration elements in BeyondJS and must be created in a file named module.json.
 

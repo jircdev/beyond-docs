@@ -1,6 +1,6 @@
-import { Title, SubTitle } from '@beyond/docs/titles';
-import { Code } from '@beyond/docs/code';
-import { Link, ELink } from '@beyond/docs/links';
+import { Title, Subtitle } from "@beyond/docs/components/html";
+import { Code } from "@beyond/docs/code";
+import { Link, ELink } from "@beyond/docs/components/html";
 
 <Title>Development server</Title>
 
@@ -18,11 +18,11 @@ The BeyondJS engine has an optimized cache that stores the bundled code to provi
 
 Let's see the use of dev server according to the execution platform.
 
-<SubTitle>Web, Android, iOS</SubTitle>
+<Subtitle>Web, Android, iOS</Subtitle>
 
 On the web, Android, and Ios platforms, the dev server not only serves bundles but additionally returns the index.html when the requested URL does not find a resource (bundle or static file).
 
-<SubTitle>Deno</SubTitle>
+<Subtitle>Deno</Subtitle>
 
 Deno supports HTTP ES imports natively and stably.
 BeyondJS generates the import maps to resolve the project's bundles. Thus, when a bundle registered in the project is required, Deno will load it pointing to the dev server.
@@ -30,22 +30,24 @@ You can work with BeyondJS and Deno to build a comprehensive application but als
 BeyondJS supports the notion of cross-cutting bundles such as "start". The start bundles are coded in the modules, and their execution occurs at the start of the application.
 If you are building a complete application in DENO, you would typically load the "start" bundle. **More info about bundle start and transversal bundles.**
 
-<SubTitle>NodeJS</SubTitle>
+<Subtitle>NodeJS</Subtitle>
 
 BeyondJS aims to provide a universal typescript development environment.
 Unlike Deno, which stably supports HTTP imports since its inception, NodeJS implements it in recent versions and is still in an experimental phase.
 
-<ELink to="https://nodejs.org/api/esm.html#https-and-http-imports">https://nodejs.org/api/esm.html#https-and-http-imports</ELink>
+<ELink to="https://nodejs.org/api/esm.html#https-and-http-imports">
+    https://nodejs.org/api/esm.html#https-and-http-imports
+</ELink>
 
 To provide a homogeneous experience, BeyondJS offers an execution environment (**BEE:** Beyond Execution Environment) specifically designed to be used in development (not in production) from NodeJS, in charge of allowing you to run an application by consuming the bundles from the HTTP server and providing HMR support.
 This way, you can run an application in NodeJS processing bundles on demand, reducing the time required for startup.
 If not for the BEEs, you should compile the entire application so that NodeJS can synchronously request for the bundles.
 
-<SubTitle>Dockers containers</SubTitle>
+<Subtitle>Dockers containers</Subtitle>
 
 Due to the design of the bundle consumption over HTTP, running an application in a docker container is as simple as running it on your local PC.
 
-<SubTitle>Electron</SubTitle>
+<Subtitle>Electron</Subtitle>
 
 Electron applications feature two runtime environments, the browser for the UI view and a NodeJS instance which communicate with each other.
 With BeyondJS you can work on the same project in both environments.
@@ -53,7 +55,7 @@ With BeyondJS you can work on the same project in both environments.
 Modules specifying the "web" platform will be available for the view, and those specifying that the "node" platform will be available for that environment. This allows you to structure your application in an orderly way.
 The NodeJS environment of an Electron application must run through a BEE to consume on demand and with HMR support bundles served by the dev server.
 
-<SubTitle>Configuration</SubTitle>
+<Subtitle>Configuration</Subtitle>
 
 BeyondJS evaluates the directory where it is being executed to identify the existing project(s) by validating if a `beyond.json` file exists.
 
@@ -62,7 +64,7 @@ The `beyond.json` file can be edited manually or through the dashboard which is 
 The structure of the `beyond.json` is as follows:
 
 <Code>
-	{`
+    {`
 "applications": "projects.json",
   "bundles": {},
   "libraries": []
@@ -75,7 +77,7 @@ The structure of the `beyond.json` is as follows:
 -   bundles object: Allows you to configure the inclusion of bundles created by the developer.
 -   libraries <Link to="/aoc">AOC:</Link> BeyondJS libraries configuration arrangement to use.
 
-<SubTitle>Why Modular + Universal?</SubTitle>
+<Subtitle>Why Modular + Universal?</Subtitle>
 
 Deno, NodeJS, Chrome, Edge, webview, are all based on the same Javascript technology. Same engine, but not the same coding techniques.
 

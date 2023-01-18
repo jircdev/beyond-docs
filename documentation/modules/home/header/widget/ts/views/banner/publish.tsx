@@ -12,7 +12,7 @@ export function PublishState({}) {
     const { slide } = useHeaderContext();
 
     return (
-        <section className="header__banner__container">
+        <section className="header__banner__container container-section">
             <div className="card draw-section">
                 <header>
                     <span dangerouslySetInnerHTML={{ __html: ImportsSVG }} />

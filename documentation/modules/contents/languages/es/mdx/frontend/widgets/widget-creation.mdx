@@ -1,0 +1,48 @@
+import { Title, Subtitle } from "@beyond/docs/components/html";
+import { Link } from "@beyond/docs/components/html";
+
+<Title>Creación de widgets</Title>
+
+Un widget es un tipo de bundle y en BeyondJS tiene una filosofía de carga modular y los bundles son la representación de código final a ser ejecutado en el entorno JavaScript. Si quieres leer acerca de todos los tipos de bundles existentes, puedes dirigirte a <Link to="/docs/bundle">la sección de bundles.</Link>
+
+Los widgets exponencian las ventajas ya existentes en los componentes web gracias al encapsulamiento. Permiten integrar con una mínima configuración diferentes tecnologías y ofrecen una API simple para gestionar sus propiedades, metodos e interacción con el resto de componentes de un proyecto web. También, pueden ser disponibilizados como paquetes NPM y utilizados desde cualquier proyecto que utilice javascript sin necesidad de requerir de BeyondJS.
+
+Existen tres tipos de widgets:
+
+-   **Page:** Diseñados para crear las diferentes páginas del aplicativo, recibe parametros de configruación asociados a la URL y al uso de layouts.
+-   **Layout:** Representan a contenedores de páginas, permiten separar código o lógicas transversales a páginas. Un layout puede también contener otro layout.
+-   **Default:** Exponen un componente web bajo el nombre definido y no requieren de ningún tratamiento adicional de parte de BeyondJS.
+
+Todos los widgets implementan un objeto Controller quien es el encargado de manejar el ciclo de vida del componente web y permitir la definción de funcionalidades <Link to="/docs/widgets/docs/rendering">de renderizado</Link>, estado y navegación.
+
+<Subtitle>Creación manual</Subtitle>
+
+La configuración manual, se realiza agregando la definición del bundle de tipo widget en el <Link to="/module/config">module.json</Link> del módulo.
+
+<Code>
+{`
+"widget": {
+    "element": {
+      "name": "web-login"
+    },
+    "ts": {
+      "path": "/widget/ts",
+      "files": [
+        "*"
+      ]
+    }
+  }
+
+`}
+
+</Code>
+
+El código anterior, define un bundle de tipo widget con el nombre del web-component como web-login y con typescript como procesador.
+
+<Subtitle>Creación con el dashboard</Subtitle>
+
+// Img
+
+Todos los bundles pueden crearse desde el formulario de creación de módulos en el <Link to="/docs/dashboard">workspace</Link> y de este modo, BeyondJS se encarga de generar la estructura de carpetas y los archivos necesarios, incluyendo la definición del Controller y los archivos module.json y .tsconfig.
+
+Cuando los bundles son creados por medio del dashboard, los archivos son generados y módificados por el servicio de desarrollo.

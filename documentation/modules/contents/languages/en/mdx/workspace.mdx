@@ -1,6 +1,6 @@
-import { Title, SubTitle } from '@beyond/docs/titles';
-import { Code } from '@beyond/docs/code';
-import { Link, ELink } from '@beyond/docs/links';
+import { Title, Subtitle } from "@beyond/docs/components/html";
+import { Code } from "@beyond/docs/code";
+import { Link, ELink } from "@beyond/docs/components/html";
 
 <Title>Workspace</Title>
 
@@ -10,7 +10,7 @@ It is available whenever the development server is started at <ELink to="https:/
 
 // Img
 
-<SubTitle>Features</SubTitle>
+<Subtitle>Features</Subtitle>
 
 -   Creation of projects anew or from templates.
 -   Module creation.
@@ -26,7 +26,7 @@ It is available whenever the development server is started at <ELink to="https:/
 -   Management of static files and project templates.
 -   Project deployment management.
 
-<SubTitle>Structure</SubTitle>
+<Subtitle>Structure</Subtitle>
 
 // Img
 
@@ -37,7 +37,7 @@ The Dashboard works as a framework (Workspace), and each component that integrat
 3.  Boards: Each open panel on the main screen is called a board. The application list is a board. The application detail or the configuration screen are also boards.
 4.  Panels: Each screen division generated in the workspace
 
-<SubTitle>Integration with Typescript</SubTitle>
+<Subtitle>Integration with Typescript</Subtitle>
 
 **Typescript** is a typed language, and type checking is a heavy task. The Dashboard utilizes the typescript compiler to detect errors that may exist in the code in real-time and provide information about them to the developer at three different levels:
 
@@ -51,10 +51,10 @@ The developer can access a module/bundle and see the existing errors in it or a 
 
 Because the typescript compiler's parsing times are long when doing type checking, BeyondJS implements a hybrid approach that simultaneously handles type checking by the compiler and updating files with HMR by the transpiler. It offers the possibility to see the changes at the moment and receive the information of errors in parallel. It is possible that the first time the type validation of a project that is taking place, this process takes an extended time, which is then minimized with the cache management that BeyondJS integrates.
 
-<SubTitle>Editor and Browser included</SubTitle>
+<Subtitle>Editor and Browser included</Subtitle>
 
 The dashboard has a built-in code editor that can be extremely useful for quickly accessing files and correcting detected errors, working with styles or bridges. Likewise, it also has a Board that allows you to navigate the projects.
 
-<SubTitle>Project deployment</SubTitle>
+<Subtitle>Project deployment</Subtitle>
 
 The Dashboard generates the necessary and optimized code to deploy the projects. Read in detail how it works in the <Link to="/docs/deployment">Project Deployment chapter.</Link>

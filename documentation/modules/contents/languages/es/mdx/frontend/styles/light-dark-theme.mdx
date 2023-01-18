@@ -1,0 +1,70 @@
+import { Title } from "@beyond/docs/components/html";
+import { Code } from "@beyond/docs/code";
+import { Link } from "@beyond/docs/components/html";
+
+<Title>Light & Dark theme</Title>
+
+BeyondJS provee un mecanismo simple para brindar soporte al tema claro y oscuro, el cual consta de dos partes.
+
+-   El template de estilos.
+-   Atributo data-beyond-mode.
+
+Temas en el template.
+
+El template de aplicación viene ya configurado para soportar el tema claro y oscuro y suministra un archivo de definición de propiedades personalizadas css para cada tema. Luego, en el archivo definition.scss se tiene el siguiente código:
+
+**definition.scss**
+
+<Code>
+{`
+@use 'dark';
+@use 'light';
+:root {
+  @include light.properties();
+  @media(prefers-color-scheme: dark) {
+    @include dark.properties();
+  }
+}
+
+html[data-beyond-mode="light"] {
+@include light.properties();
+}
+
+html[data-beyond-mode="dark"] {
+@include dark.properties();
+}
+
+`}
+
+</Code>
+
+El código anterior deja disponibles las variables configuradas en los archivos dark y light para cada tema respectivo.
+
+En la mayoría de los casos, si un widget requiere validar el tema que se está utilizando, puede bastar con usar el selector host-context para definirlo desde un archivo de estilos, como se muestra en el siguiente ejemplo:
+
+<Code>
+{`
+:host-context(html[data-beyond-mode]) {
+    //styles here...
+}
+
+`}
+
+</Code>
+
+Existen algunos casos, donde podría ser necesario que los widgets se enteren de forma dinámica del cambio de tema, para ello, se puede utilizar la api del objeto widgets
+
+<Code>
+{`
+:host-context(html[data-beyond-mode]) {
+    //styles here...
+}
+
+`}
+
+</Code>
+
+La línea anterior agrega a todos los widgets existentes el atributo data-beyond-mode con el valor dark.
+
+-   <Link to="/docs/template">Plantilla</Link>
+-   <Link to="/docs/dev-server">Servidor de desarrollo</Link>

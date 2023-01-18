@@ -1,5 +1,5 @@
-import { Title, SubTitle } from '@beyond/docs/titles';
-import { Link, ELink } from '@beyond/docs/links';
+import { Title, Subtitle } from "@beyond/docs/components/html";
+import { Link, ELink } from "@beyond/docs/components/html";
 
 <Title>Widgets</Title>
 
@@ -11,12 +11,12 @@ BeyondJS implements widget rendering techniques, this offers the possibility to 
 
 BeyondJS provides support for working with frameworks/libraries such as <ELink to="https://reactjs.org/">React</ELink>, <ELink to="https://vuejs.org/">Vue</ELink> and <ELink to="https://svelte.dev/">Svelte</ELink> and has the possibility of integrating new libraries or tools available.
 
-<SubTitle>Using React</SubTitle>
+<Subtitle>Using React</Subtitle>
 
 React has automatic support motivated by the fact that typescript interprets the tsx code. Therefore, the only thing necessary to be able to use it is to have the dependency installed in npm and define the ts processor in the bundle configuration in the module.json.
 
 React configuration is done through .tsconfig files, each module comes with a file configured by default with compatibility to work with react. you can read more about it in the typescript documentation.
 
-<SubTitle>Using Svelte or Vue</SubTitle>
+<Subtitle>Using Svelte or Vue</Subtitle>
 
 Cada framework tiene su propio procesador con el nombre de la libreria. Para utilizarlos, solo es necesario incluir el procesador en la configuración del bundle.

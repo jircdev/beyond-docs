@@ -36,4 +36,26 @@
         border-right: none;
         width: 1rem;
     }
+
+    @media (max-width: 700px) {
+        .separator-lines,
+        .separator {
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            left: 49%;
+            height: 1rem;
+            border-top: none;
+            border-left: 1px dashed var(--element-border-color);
+        }
+    }
+}
+
+:host-context(html[data-beyond-mode="light"]) {
+    .header__banner__container {
+        .separator,
+        .separator-backet {
+            border-color: var(--primary-light);
+        }
+    }
 }

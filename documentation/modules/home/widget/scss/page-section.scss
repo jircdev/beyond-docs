@@ -6,6 +6,12 @@
     padding: 2rem;
     width: calc(100% - 4rem);
 
+    &.no-pd {
+        padding: 0;
+    }
+    &.no-m {
+        margin: auto;
+    }
     > header,
     .section__header {
         .pretitle + h2,
@@ -29,7 +35,7 @@
     }
 
     @include set-media("small-screen", false, max) {
-        padding: 1rem;
-        width: calc(100% - 2rem);
+        padding: 1rem 2rem;
+        width: calc(100% - 4rem);
     }
 }

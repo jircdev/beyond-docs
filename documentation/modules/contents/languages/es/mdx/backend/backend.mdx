@@ -1,0 +1,76 @@
+import { PreTitle, Title, Link, ELink } from "@beyond/docs/components/html";
+import { Code, InlineCode } from "@beyond/docs/code";
+
+<Title>Código Backend</Title>
+
+BeyondJS disponibiliza un entorno seguro y eficiente pare crear código backend, bien sea que se requiera para trabajar con servicios independientes, encargados de tareas específicas o que busque implementar una conexión de un proyecto cliente con una api backend. Para efectos de BeyondJS,
+podemos clasificar estas estructuras de código en dos tipos:
+
+-   **Servicios Backend**: Código node que representa un servicio en ejecución en el backend y sólo puede ser utilizado por módulos que tambien se ejecuten en el backend.
+-   **Api backend**: permiten la conexión entre el código backend
+    y el código cliente.
+
+<Title>Api Servidor</Title>
+<Subtitle>Bundle bridge</Subtitle>
+
+Las APIs servidor en BeyondJS representan funciones que ejecutan código en el servidor y pueden ser consumidas desde el código cliente. Manejan la lógica para conectarse a un backend y retornar data. Esto se lógra de forma simple, con la creación de un <Link to="/docs/bundles#bridge">Bundle Bridge.</Link>
+
+Para que se pueda ejecutar código Backend en BeyondJS es necesario tener configuradas las distribuciones necesarias. Si el proyecto se creo a partir del tipo de proyecto web-backend, la misma ya se encuentra configurada. Puedes encontrar más información en <Link to="/docs/distributions">La sección de distribuciones.</Link>
+
+<Code>
+	{`
+    {
+        "name": "module-name",
+        "bridge": {
+            "path": "ts",
+            "files": ["*"]
+        },
+        "platforms": ["*"]
+    }
+`}
+
+</Code>
+
+Al igual que cualquier módulo o bundle, este puede ser gestionado desde el <Link to="/dashboard">Dashboard</Link> o de forma manual.
+Cómo su nombre lo indica, el bundle de tipo bridge, sirve de puente entre la lógica cliente y la lógica servidor. Generalmente, en el servidor se impmenentan lógicas asociadas al manejo de datos o manipulación de archivos, el bridge Permite implementar y dejar disponibles funcionalidades que necesiten ser consultadas desde el cliente y mantener encapsuladas en el servidor aquellas que no.
+El código de un bundle bridge luce así:
+
+<Code>
+{`
+export /*actions*//*bundle*/
+class Auth {
+    async login(user :string, password: string) {
+        if (user !== data.user || password !== data.password) {
+            return {status: true, error: "Invalid data" };
+        }
+
+        return {status: true, data: {valid: true} }
+    }
+
+}
+
+`}
+
+</Code>
+
+Un objeto Javascript común y corriente ¿Verdad?
+BeyondJS genera un objeto cliente que realiza la conexión web-socket al servidor, ejecuta el código implementado por el desarrollador y deja disponible la respuesta en el código cliente, abstrayendo al programador de la necesidad de procuparse por la conexión entre las capas cliente y servidor y permitiendo que el código funcione como parte de un mismo ecosistema.
+Ahora sólo es necesario inicializar el servidor. Para ello es necesario crear un módulo con un bundle start que se encargue de iniciar el <Link to="/docs/bee">BEE.</Link> El código del bundle start es el siguiente:
+
+<Code>
+    {`
+import { listen } from "@beyond-js/backend/listen/ts";
+listen();
+`}
+</Code>
+
+En el <Link to="/tutorial/web">Tutorial Web</Link> disponible, se implementa un bridge que permite ver en acción el funcionamiento de las apis backend de BeyondJS.
+
+<Title>Comentarios mágicos</Title>
+
+<Subtitle>bundle backend</Subtitle>
+
+Los bundles backend representan código JavaScript que es ejecutado en el servidor y sólo pueden ser utilizados por módulos que tambien funcionen en el servidor. Dicho en otras palabras, representan cualquier servicio típico de NodeJS, con la salvedad de que, en entorno de desarrollo, son ejecutados por medio de un BEE o proceso BeyondJS lo cual aumenta la productividad al poder trabajar con HMR de forma automatizada y sin configuración.
+
+-   <Link to="/docs/modules/create">Crear un módulo</Link>
+-   <Link to="/docs/bundles">Bundles</Link>

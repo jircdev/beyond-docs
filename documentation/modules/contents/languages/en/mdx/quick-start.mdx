@@ -1,6 +1,6 @@
-import { Title, SubTitle } from '@beyond/docs/titles';
-import { Code } from '@beyond/docs/code';
-import { Link } from '@beyond/docs/links';
+import { Title, Subtitle } from "@beyond/docs/components/html";
+import { Code } from "@beyond/docs/code";
+import { Link } from "@beyond/docs/components/html";
 
 <Title>Comienzo rápido</Title>
 
@@ -9,12 +9,12 @@ import { Link } from '@beyond/docs/links';
 -   Node ^14.17.4.
 -   Be familiar with dependency managers like npm or yarn.
 
-<SubTitle>beyond-first-project</SubTitle>
+<Subtitle>beyond-first-project</Subtitle>
 
 To begin with, possibly the easiest way to start a project in BeyondJS is through the beyond-first-project.
 
 <Code>
-	{`
+    {`
 npx beyond-first-project -name @scope/name [-type node] [-container folderName]
 `}
 </Code>
@@ -39,7 +39,7 @@ You can read more about project types <Link to="/docs/projects/types">here.</Lin
 To exemplify, you can imagine that you need to create a login project of type node, that could be create it with the following command:
 
 <Code>
-	{`
+    {`
     npx create-first-project -name @scope/name -type node
 `}
 </Code>
@@ -49,7 +49,7 @@ When the command execution finishes, the project structure is created and is rea
 To start the development server, the following command needs execution:
 
 <Code>
-	{`
+    {`
 npm start
 `}
 </Code>
@@ -61,12 +61,12 @@ The dashboard is a system that BeyondJS provides the developer with a better use
 -   <Link to="/docs/projects/structure">Structure of a project</Link>
 -   <Link to="/docs/modules/intro">Modules</Link>
 
-<SubTitle>Overall installation</SubTitle>
+<Subtitle>Overall installation</Subtitle>
 
 To install BeyondJS globally, run the following command:
 
 <Code>
-	{`
+    {`
 npm i --location=global beyond
 `}
 </Code>
@@ -74,7 +74,7 @@ npm i --location=global beyond
 From the installation, it is only necessary to go to the folder where you want to create the project(s) and initialize BeyondJS from the command line as follows:
 
 <Code>
-	{`
+    {`
 beyond run
 `}
 </Code>

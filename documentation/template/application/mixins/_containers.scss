@@ -1,0 +1,14 @@
+@mixin section-container {
+}
+
+@mixin container-media {
+    min-width: 100%;
+
+    @media (min-width: 900px) {
+        $result: calc($width / 12);
+        $container: calc($result * 10);
+        .container {
+            max-width: #{$container}px;
+        }
+    }
+}

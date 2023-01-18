@@ -23,8 +23,8 @@
     }
 
     @include set-media("mobile", false, "max") {
+        grid-gap: 2rem;
         .feature__item {
-            text-align: center;
             svg {
                 height: 3rem;
                 width: 3rem;

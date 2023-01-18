@@ -1,60 +1,59 @@
 .preload-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 100;
-  background: var(--primary-surface);
-  transition: 200ms ease-in all;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+    background: var(--primary-surface);
+    transition: 200ms ease-in all;
 
-  .page__main-content {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    justify-content: center;
-    align-content: center;
+    .page__main-content {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+        align-content: center;
 
-    .ds-preload__icon {
-      z-index: 20;
-      height: 150px;
-      width: 150px;
-      margin: auto;
-      animation: rotate 2s linear infinite;
-      transform-origin: center;
-      transform-box: fill-box;
-      animation-fill-mode: forwards;
+        .ds-preload__icon {
+            z-index: 20;
+            height: 150px;
+            width: 150px;
+            margin: auto;
+            animation: rotate 2s linear infinite;
+            transform-origin: center;
+            transform-box: fill-box;
+            animation-fill-mode: forwards;
+        }
     }
-  }
 }
 
 @keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  13% {
-    transform: rotate(30deg) scale(1.1);
-  }
-  26% {
-    transform: rotate(45deg) scale(1.01);
-  }
-  39% {
-    transform: rotate(30deg) scale(1);
-  }
-  50% {
-    transform: rotate(0deg) scale(1.1);
-  }
+    0% {
+        transform: rotate(0deg);
+    }
+    13% {
+        transform: rotate(30deg) scale(1.1);
+    }
+    26% {
+        transform: rotate(45deg) scale(1.01);
+    }
+    39% {
+        transform: rotate(30deg) scale(1);
+    }
+    50% {
+        transform: rotate(0deg) scale(1.1);
+    }
 
-  63% {
-    transform: rotate(-30deg) scale(1.01);
-  }
-  76% {
-    transform: rotate(-45deg) scale(1.02);
-  }
-  89% {
-    transform: rotate(-30deg);
-  }
-
+    63% {
+        transform: rotate(-30deg) scale(1.01);
+    }
+    76% {
+        transform: rotate(-45deg) scale(1.02);
+    }
+    89% {
+        transform: rotate(-30deg);
+    }
 }

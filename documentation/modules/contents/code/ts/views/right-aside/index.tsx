@@ -1,77 +1,69 @@
-import * as React from 'react';
-import { Link } from '@beyond/ui/link';
-import { RightAsideItem } from './item';
-import { useDocsContext } from '../../context';
+import * as React from "react";
+import { Link } from "@beyond/ui/link";
+import { RightAsideItem } from "./item";
+import { useDocsContext } from "../../context";
 
-interface IProps {
-	container: ShadowRoot;
-	titles: HTMLElement[];
-	children?: JSX.Element;
+interface ISpecs {
+    shadowRoot: ShadowRoot;
+    item: any;
+    active?: boolean;
 }
-
 export /*bundle*/
-const RightAside = ({}: IProps) => {
-	return null;
-	const {
-		component,
-		texts: {
-			rightAside: { title },
-		},
-	} = useDocsContext();
-	const [titles, setTitles] = React.useState([]);
-	const ref = React.useRef(null);
+const RightAside = () => {
+    const { shadowRoot, sections, component } = useDocsContext();
 
-	React.useEffect(() => {
-		const items: HTMLElement[] = Array.from(ref.current.querySelectorAll('li'));
+    const [titles, setTitles] = React.useState(sections);
+    const ref = React.useRef(null);
+    console.log(component);
+    React.useLayoutEffect(() => {
+        const callback = (entries) => {
+            let selected;
 
-		const callback = (entries) => {
-			const check = (item) => {
-				const { top } = item.boundingClientRect;
-				if (top < 500) {
-					const { target } = item;
-					const listItem = items.find((item) => item.dataset.id === target.id);
-					const active = items.find((item) => item.classList.contains('item--active'));
-					if (active) active.classList.remove('item--active');
-					listItem.classList.add('item--active');
-				}
-			};
-			entries.forEach(check);
-		};
+            entries.forEach((entry) => {
+                const {
+                    boundingClientRect: { top },
+                    target,
+                } = entry;
+                const list = [...ref.current.querySelectorAll("li")];
+                let position = top + 100;
+                if (position < 50 || position > 300 || selected) return;
 
-		const observer = new IntersectionObserver(callback, {
-			root: null,
-			rootMargin: '-50% 0% -50% 0%',
-			threshold: 0,
-		});
-		titles.forEach((item) => observer.observe(item));
-	});
+                const item = list.find((item) => {
+                    return item.dataset.id === target.id;
+                });
 
-	React.useEffect(() => {
-		window?.setTimeout(() => {
-			const titles = Array.from(component.shadowRoot.querySelectorAll('h1,h2,h3'));
-			setTitles(titles);
-		}, 100);
+                if (!item) {
+                    console.warn("the item selected does not exist");
+                }
+                selected = item;
+                const active = list.find((item) => item.classList.contains("item--active"));
+                if (active) active.classList.remove("item--active");
+                item.classList.add("item--active");
+            });
+        };
 
-		const body = document.querySelector('body');
-		body.scroll({
-			top: 0,
-			left: 0,
-			behavior: 'smooth',
-		});
-	}, []);
+        const observer = new IntersectionObserver(callback, {
+            threshold: [0.5],
+            rootMargin: "-150px 0px  50%",
+        });
 
-	if (!titles) return null;
+        const items = component.shadowRoot.querySelectorAll("h1,h2, h3,h4");
+        items.forEach((item) => observer.observe(item));
+    }, []);
 
-	const output = titles.map((item, i) => {
-		return <RightAsideItem key={`${item.id}.${i}`} item={item} container={component.shadowRoot} />;
-	});
+    const output = titles.map((item, i) => {
+        const attrs: ISpecs = { shadowRoot, item };
 
-	return (
-		<aside className="docs__aside-navbar" ref={ref}>
-			<div className="aside__container">
-				<h4>{title}</h4>
-				<ol>{output}</ol>
-			</div>
-		</aside>
-	);
+        if (i === 0) attrs.active = true;
+        return <RightAsideItem key={`${item}.${i}`} {...attrs} />;
+    });
+
+    return (
+        <aside className="docs__aside-navbar" ref={ref}>
+            <div className="aside__container">
+                <h4>Right Aside</h4>
+                <ol>{output}</ol>
+            </div>
+        </aside>
+    );
 };

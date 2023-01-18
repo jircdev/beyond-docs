@@ -1,9 +1,0 @@
-{
-  "name": "examples-sm-store",
-  "ts": {
-    "path": "ts",
-    "files": [
-      "*"
-    ]
-  }
-}

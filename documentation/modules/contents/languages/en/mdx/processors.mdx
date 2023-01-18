@@ -1,6 +1,6 @@
-import { Title, SubTitle } from '@beyond/docs/titles';
-import { Code } from '@beyond/docs/code';
-import { Link } from '@beyond/docs/links';
+import { Title, Subtitle } from "@beyond/docs/components/html";
+import { Code } from "@beyond/docs/code";
+import { Link } from "@beyond/docs/components/html";
 
 <Title>Processors</Title>
 
@@ -12,14 +12,14 @@ BeyondJS works differently from bundlers like Webpack or Parcel. You do not need
 
 Processors are components of BeyondJS that allow interpreting, parsing, transpiling, or compiling code (as the case may be) of the languages or technologies used in a <Link to="/docs/bundles">Bundle.</Link>
 
-<SubTitle>Existing processors</SubTitle>
+<Subtitle>Existing processors</Subtitle>
 
 -   **ts:** Allows working with typescript and `tsx` files for react.
 -   **sass:** Provides support for working with SASS files with the .scss extension
 -   **vue:** Provides support for working with vue single-file-components files.
 -   **svelte:** Allows working with svelte single-file-component files
 
-<SubTitle>Properties</SubTitle>
+<Subtitle>Properties</Subtitle>
 
 All processors have the following features:
 
@@ -27,7 +27,7 @@ All processors have the following features:
 
 -   **files** (array) optional: Allows defining the list of files or folders included in the processor. If the path property is set, the files will be searched within the specified directory, otherwise, they will be searched related to the location of the module.json. An array with an input \* can be passed as property value, thus indicating that all files in the specified directory are included.
 
-<SubTitle>Examples</SubTitle>
+<Subtitle>Examples</Subtitle>
 
 The following example corresponds to the definition of a bundle of code types. Below, we explain in detail:
 
@@ -36,7 +36,7 @@ The following example corresponds to the definition of a bundle of code types. B
 -   The ts renderer only includes the component.ts file, which is located in the /code/ts directory relative to the location of the module.json file.
 
 <Code>
-	{`
+    {`
 {
   "name": "icons",
   "code": {

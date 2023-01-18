@@ -1,6 +1,6 @@
-import { Title, SubTitle } from '@beyond/docs/titles';
-import { Code } from '@beyond/docs/code';
-import { Link, ELink } from '@beyond/docs/links';
+import { Title, Subtitle } from "@beyond/docs/components/html";
+import { Code } from "@beyond/docs/code";
+import { Link, ELink } from "@beyond/docs/components/html";
 
 <Title>Managing a project</Title>
 
@@ -8,7 +8,7 @@ Projects, like all other BeyondJS elements, are configured using objects in .jso
 
 Projects can be configured in two ways: through the Dashboard interface and manually.
 
-<SubTitle>Using the Dashboard</SubTitle>
+<Subtitle>Using the Dashboard</Subtitle>
 
 To create a project from the dashboard, you first need to make sure BeyondJS is running in the folder where you want to work on your projects. As explained in the <Link to="/docs/projects/intro">introducción</Link>, BeyondJS, is developed to handle projects simultaneously, so keep in mind that the run directory may be one where you want to add "multiple" projects.
 
@@ -28,7 +28,7 @@ The dashboard has three ways to access the project creation process:
 
 Clicking on any of the mentioned alternatives, a modal is displayed, allowing you to select the type of project to create. This function enables you to start with a blank project or using an already created template. Current choices are:
 
-<SubTitle>Blank Project Types</SubTitle>
+<Subtitle>Blank Project Types</Subtitle>
 
 // Img
 
@@ -38,7 +38,7 @@ Clicking on any of the mentioned alternatives, a modal is displayed, allowing yo
 -   **Library:** Ideal for creating projects intended to be distributed as **NPM** packages
 -   **web - backend:** Generates a web project with a backend distribution.
 
-<SubTitle>Template types</SubTitle>
+<Subtitle>Template types</Subtitle>
 
 -   **React, vue y svelte** apps, Projects to start working with the preferred framework library.
 -   **Express:** Project with an initial structure to create an express server.
@@ -46,7 +46,7 @@ Clicking on any of the mentioned alternatives, a modal is displayed, allowing yo
 
 It is possible to work with different view libraries/Frameworks in the same project, thanks to the micro-frontend structure offered by BeyondJS. Read more about it in <Link to="/docs/widgets/intro">the Widgets chapter.</Link>
 
-<SubTitle>Project Information</SubTitle>
+<Subtitle>Project Information</Subtitle>
 
 After seleting the project type, a form appears requesting the scope and name of the project, the port on which it will run, and additionally, an optional title and description. After filling in the necessary data, the dashboard is responsible for creating the project with the file structure, and the project is available to be accessed on the configured port.
 

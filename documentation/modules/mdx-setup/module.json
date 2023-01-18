@@ -1,6 +1,0 @@
-{
-	"name": "mdx-setup",
-	"ts": {
-		"files": ["*"]
-	}
-}

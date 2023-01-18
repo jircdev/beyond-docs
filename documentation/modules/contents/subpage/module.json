@@ -6,7 +6,7 @@
             "name": "contents-subpage"
         },
         "layout": "main-layout",
-        "route": "/docs/old/${content}/${sub}",
+        "route": "/docs/${content}/${sub}",
         "is": "page",
         "ts": {
             "path": "/widget/ts",

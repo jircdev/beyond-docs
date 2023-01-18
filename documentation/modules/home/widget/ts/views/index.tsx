@@ -31,12 +31,7 @@ export function Page({ store }): JSX.Element {
     if (!ready) return null;
 
     return (
-        <HomeContext.Provider
-            value={{
-                ready,
-                texts: store.texts,
-            }}
-        >
+        <HomeContext.Provider value={{ ready, texts: store.texts }}>
             <div className="home">
                 <app-home-header></app-home-header>
                 <main className="main__home__content">

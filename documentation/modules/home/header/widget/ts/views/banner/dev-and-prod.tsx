@@ -12,7 +12,7 @@ export function DevAndProd({}) {
     const { slide } = useHeaderContext();
 
     return (
-        <section className="header__banner__container">
+        <section className="header__banner__container container-section">
             <div className="card">
                 <header>
                     <span dangerouslySetInnerHTML={{ __html: ImportsSVG }} />
@@ -25,7 +25,7 @@ export function DevAndProd({}) {
             </div>
             <hr className="separator" />
             <div className="draw-section">
-                <SVGImage src={EnvironmentsSVG} />
+                <SVGImage src={EnvironmentsSVG} className="horizontal-sm" />
             </div>
             <hr className="separator" />
             <div className="draw-section">

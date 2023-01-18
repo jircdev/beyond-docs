@@ -1,5 +1,5 @@
-import { Title, SubTitle } from "@beyond/docs/titles";
-import { Link } from "@beyond/docs/links";
+import { Title, Subtitle, DocHeader } from "@beyond/docs/components/html";
+import { Link } from "@beyond/docs/components/html";
 import { Code } from "@beyond/docs/code";
 
 <Title>Routing</Title>
@@ -8,7 +8,7 @@ BeyondJS has simple and powerful route handling at the same time. For most cases
 
 Note: This chapter covers the documentation of the routing object. If you want to learn about the handling of parameters in the URL of a page, you can read about it in the <Link to="/docs/widgets/page">Page widgets chapter.</Link>
 
-<SubTitle>Routing object</SubTitle>
+<Subtitle>Routing object</Subtitle>
 
 The routing object manages the history of the browser and handles compatibility for web and mobile projects. It offers an API that allows you to work with the history and manipulate it.
 
@@ -28,7 +28,7 @@ The BeyondJS routing object exists to cover the following scenarios:
 -   Identify the flow and history of user navigation within the applicative. The history object of the browser has a very limited treatment of it, and only allows access to the number of existing navigations. BeyondJS on the other hand manages a detailed history.
 -   Since hybrid applications made with JavaScript resolve file handlingutilizing a different protocol than applications accessed from a browser, BeyondJS treats it to abstract the developer from it and ensure the same behavior regardless of the platform they are working.
 
-<SubTitle>Navigation</SubTitle>
+<Subtitle>Navigation</Subtitle>
 
 To maintain compatibility with the known APIs, the Routing object has methods homologous to the ones of the browser history API. They cover equal needs, but at the same time, they are in charge of unifying the behaviors between the platforms and updating the elements of the history of BeyondJS.
 
@@ -56,7 +56,7 @@ routing.replaceState('/home', [{state}]);
 
 It has the same interface as the pushState method of the history object of the Web API, and additionally, it is in charge of updating the history of BeyondJS.
 
-<SubTitle>Route Override</SubTitle>
+<Subtitle>Route Override</Subtitle>
 
 **routing.redirect**
 
@@ -81,7 +81,7 @@ routing.redirect = async function redirect(uri): Promise[string] {
 
 In the example above, any route received is redirected to /.
 
-<SubTitle>Handling of URLs not found.</SubTitle>
+<Subtitle>Handling of URLs not found.</Subtitle>
 
 The routing object has a `missing` property that can be defined as an asynchronous function and returns the name of the widget you want to display in case the requested URL is not found.
 

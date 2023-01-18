@@ -1,6 +1,9 @@
 .home__header {
     position: relative;
-    .header__gradient {
+}
+
+:host-context(html[data-beyond-mode="dark"]) {
+    .home__header .header__gradient {
         transform: rotate(5deg);
         opacity: 0.2;
 
@@ -11,6 +14,28 @@
             rgba(188, 202, 216, 1) 32%,
             rgba(209, 182, 176, 1) 59%,
             rgba(151, 178, 178, 1) 90%
+        );
+        position: absolute;
+        top: -300px;
+        bottom: 0;
+        right: -300px;
+        left: -300px;
+    }
+}
+
+:host-context(html[data-beyond-mode="light"]) {
+    .home__header .header__gradient {
+        transform: rotate(5deg);
+        opacity: 0.8;
+
+        background: linear-gradient(
+            0deg,
+            rgba(255, 255, 255, 0.3) 0%,
+            rgba(160, 178, 196, 0.5) 17%,
+            rgba(188, 202, 216, 1) 32%,
+            rgba(209, 182, 176, 1) 56%,
+            rgba(151, 178, 178, 1) 90%,
+            rgba(95, 109, 126, 1) 97%
         );
         position: absolute;
         top: -300px;

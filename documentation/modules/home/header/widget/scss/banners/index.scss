@@ -1,12 +1,11 @@
 .header__banner {
     z-index: 2;
 }
-.header__banner__container {
+.header__banner__container.container-section {
     display: flex;
     flex-wrap: wrap;
     height: 205px;
     flex: 1 0 21%;
-
     position: relative;
     .draw-box,
     .draw-section {
@@ -21,10 +20,18 @@
     }
 
     @media (max-width: 700px) {
-        height: 380px;
+        display: grid;
+        height: auto;
+        place-items: center;
+        margin: auto;
+        width: 100%;
         .draw-box,
         .draw-section {
             margin-top: 1rem;
+        }
+        .horizontal-sm {
+            width: 100%;
+            // transform: rotate(90deg);
         }
     }
 }

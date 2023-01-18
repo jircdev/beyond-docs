@@ -6,9 +6,5 @@ export function Page({ uri, component }): JSX.Element {
     const [hmrChanged, setHmr] = React.useState(performance.now());
     const contentId = !["", undefined, null].includes(content) ? content : "intro";
 
-    return (
-        <div>
-            <ContentsPage contentId={contentId} />
-        </div>
-    );
+    return <ContentsPage contentId={contentId} component={component} />;
 }

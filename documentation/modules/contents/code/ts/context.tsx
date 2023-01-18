@@ -3,6 +3,10 @@ import * as React from "react";
 interface IDocsContextValue {
     ready?: boolean;
     texts?: Object;
+    sections?: Element[];
+    setSections?: Function;
+    shadowRoot?: ShadowRoot;
+    component?: Element;
 }
 
 const value: IDocsContextValue = {};

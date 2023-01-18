@@ -1,46 +1,43 @@
-@use 'dark';
-@use 'light';
-@use 'xd';
+@use "dark";
+@use "light";
+@use "xd";
 @import "material-design";
 //@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400&display=swap')
 //'https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap'
 @import url(https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap);
 
 :root {
+    --sections-width: 1140px;
+    --font-family: "Rubik", sans-serif;
+    --secondary-font-family: "Roboto", sans-serif;
+    --title-font: "Rubik", sans-serif;
 
-  --font-family: 'Rubik', sans-serif;
-  --secondary-font-family: 'Roboto', sans-serif;
-  --title-font: 'Rubik', sans-serif;
+    --header-font: "Rubik", sans-serif;
+    --bg-header: var(--secondary-background);
+    --gray-base: #000000;
+    --gray-darker: #333333;
+    --gray-dark: #5e5f5c;
+    --gray: #82837f;
+    --gray-light: #e4e5dc;
+    --success: #6aac7d;
+    --warning: #f7c700;
+    --error: #f04141;
+    --chat-online: #43fc22;
+    --preload: $secondary;
+    --border-radius-base: 8px;
 
-  --header-font: 'Rubik', sans-serif;
-  --bg-header: var(--secondary-background);
-  --gray-base: #000000;
-  --gray-darker: #333333;
-  --gray-dark: #5E5F5C;
-  --gray: #82837F;
-  --gray-light: #E4E5DC;
-  --success: #6AAC7D;
-  --warning: #F7C700;
-  --error: #f04141;
-  --chat-online: #43fc22;
-  --preload: $secondary;
-  --border-radius-base: 8px;
+    @include xd.xd();
+    @include light.properties();
 
-  @include xd.xd();
-  @include light.properties();
-
-  @media(prefers-color-scheme: dark) {
-    @include dark.properties();
-  }
-
+    @media (prefers-color-scheme: dark) {
+        @include dark.properties();
+    }
 }
 
 html[data-beyond-mode="light"] {
-  @include light.properties();
+    @include light.properties();
 }
 
 html[data-beyond-mode="dark"] {
-  @include dark.properties();
-
+    @include dark.properties();
 }
-

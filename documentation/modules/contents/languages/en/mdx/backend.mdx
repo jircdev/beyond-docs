@@ -1,6 +1,5 @@
-import { PreTitle, Title, SubTitle } from '@beyond/docs/titles';
-import { Code, InlineCode } from '@beyond/docs/code';
-import { Link, ELink } from '@beyond/docs/links';
+import { PreTitle, Title, Link, ELink } from "@beyond/docs/components/html";
+import { Code, InlineCode } from "@beyond/docs/code";
 
 <Title>Backend-code</Title>
 
@@ -12,7 +11,7 @@ For BeyondJS purposes, we can classify these code structures into two types:
 -   **Backend APIs**: Allows the connection between the backend-code and the client-code.
 
 <Title>API Server</Title>
-<SubTitle>bundle-bridge</SubTitle>
+<Subtitle>bundle-bridge</Subtitle>
 
 Server APIs in BeyondJS represent functions that execute code on the server and can be consumed from client-code. They handle the logic for connecting to a backend and returning data. It's achieved simply by creating a <Link to="/docs/bundles#bridge">Bundle-bridge</Link>.
 
@@ -63,7 +62,7 @@ BeyondJS generates a client object that makes the web-socket connection to the s
 Now all you need to do is initialize the server. To do this, it is necessary to create a module with a bundle start that is in charge of starting the <Link to="/docs/bee">BEE.</Link> The code for the bundle start is as follows:
 
 <Code>
-	{`
+    {`
 import { listen } from "@beyond-js/backend/listen/ts";
 listen();
 `}
@@ -72,7 +71,7 @@ listen();
 In the <Link to="/tutorial/web">Web Tutorial</Link> available, an implemented bridge allows you to see the operation of the BeyondJS backend APIs in action.
 
 <Title>Magical comments</Title>
-<SubTitle>bundle “backend”</SubTitle>
+<Subtitle>bundle “backend”</Subtitle>
 
 Backend bundles represent JavaScript code executed on the server and used only by modules that also run on the server. In other words, they are like any typical NodeJS service, with the exception that in a development environment are executed through a BEE or BeyondJS process, which increases productivity by enabling it to work with HMR in an automated way and without configuration.
 

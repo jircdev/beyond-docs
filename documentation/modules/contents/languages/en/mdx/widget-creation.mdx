@@ -1,5 +1,5 @@
-import { Title, SubTitle } from '@beyond/docs/titles';
-import { Link, ELink } from '@beyond/docs/links';
+import { Title, Subtitle } from "@beyond/docs/components/html";
+import { Link, ELink } from "@beyond/docs/components/html";
 
 <Title>Widget Creation</Title>
 
@@ -15,7 +15,7 @@ There are three types of widgets:
 
 All widgets implement a Controller object which is in charge of managing the lifecycle of the web component and allowing the definition of <Link to="/docs/widgets/docs/rendering">of rendering</Link>state, and navigation functionalities.
 
-<SubTitle>Manual creation</SubTitle>
+<Subtitle>Manual creation</Subtitle>
 
 The manual configuration is done by adding the definition of the widget type bundle in the <Link to="/module/config">module.json</Link> of the module.
 
@@ -39,7 +39,7 @@ The manual configuration is done by adding the definition of the widget type bun
 
 The code above defines a bundle of type widget with the name of the web component as web login and with typescript as renderer.
 
-<SubTitle>Creation with the dashboard</SubTitle>
+<Subtitle>Creation with the dashboard</Subtitle>
 
 // Img
 

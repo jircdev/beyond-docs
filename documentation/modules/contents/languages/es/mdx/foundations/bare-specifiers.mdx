@@ -1,0 +1,30 @@
+import { Title, Subtitle, DocHeader } from "@beyond/docs/components/html";
+import { Code } from "@beyond/docs/code";
+
+<DocHeader id="intro" pretitle="Fundamentos" title="Estructura Modular" />
+
+Un bare specifier es una forma de especificar un módulo en JavaScript para importarlo sin especificar el archivo completo.
+En lugar de colocar la ruta completa del archivo, se especifica solo el nombre del paquete o módulo tal como está definido
+en el archivo package.json y el sistema de módulos se encarga de encontrar y cargar el archivo correcto correspondiente
+
+Por ejemplo en el siguiente código
+
+<Code>{`import {someFunction} from 'my-module';`}</Code>
+
+En este caso, `my-module` es el nombre del paquete o módulo que se está importando y `someFunction` es el nombre de la función
+específica que se está importando.
+
+El uso de corchetes "{`{}` }" indica que se está importando una función específica en lugar de todo el módulo (destructuring).
+
+BeyondJS hace uso de los bare specifiers para gestionar la importación y exportación de paquetes y modulos en tus proyectos y
+gestiona su procesamiento para que el código pueda trabajarse de la misma forma en cualquier entorno.
+
+Actualmente los import maps no son soportados de forma estandarizada por los navegadores.
+BeyondJS utiliza el sistema de módulos SystemJS que proporciona un soporte para import maps,
+lo cual permite especificar la ruta de los módulos en lugar de utilizar rutas absolutas.
+
+Además, BeyondJS automatiza la generación de import maps y la configuración de SystemJS para que los desarrolladores no tengan
+que preocuparse por ello.
+
+De esta manera, los programadores pueden seguir utilizando el estándar de EcmaScript para importar módulos, incluso en entornos
+donde no está soportado de forma nativa.

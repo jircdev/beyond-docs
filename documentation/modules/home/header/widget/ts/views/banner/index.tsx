@@ -9,7 +9,7 @@ export function Banner() {
     const { slide } = useHeaderContext();
     const Slide = slide === "publish" ? PublishState : DevAndProd;
     return (
-        <article className="header__banner container">
+        <article className="header__banner container container-section">
             <section>
                 <Buttons />
             </section>

@@ -1,6 +1,5 @@
-import { PreTitle, Title, SubTitle } from '@beyond/docs/titles';
-import { Code, InlineCode } from '@beyond/docs/code';
-import { Link, ELink } from '@beyond/docs/links';
+import { PreTitle, Title, Link, ELink } from "@beyond/docs/components/html";
+import { Code, InlineCode } from "@beyond/docs/code";
 
 <Title>URI object</Title>
 
@@ -10,7 +9,7 @@ Import
 
 The URI object provides an API equivalent to that of the window.location object, but with added functionality that ensures correct behavior in the web and mobile environment.
 
-<SubTitle>Properties</SubTitle>
+<Subtitle>Properties</Subtitle>
 
 -   **pathname** string: current URL, no query string, and no hash
 -   **URI** string: complete URL.
@@ -22,7 +21,7 @@ The URI object provides an API equivalent to that of the window.location object,
 
 The BeyondHistory object handles all the information associated with the user's browsing in the current session.
 
-<SubTitle>Properties</SubTitle>
+<Subtitle>Properties</Subtitle>
 
 -   **current**: string: Current browsing URL.
 -   **initial**: number: Refers to the index associated with the history of the web API of the browser on which the navigation begins inside the BeyondJS project. For this handling, beyond makes use of the web API's SessionStorage object, where it registers two properties:

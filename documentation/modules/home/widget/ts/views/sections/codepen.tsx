@@ -7,7 +7,7 @@ export function CodePen() {
     } = useHomeContext();
 
     return (
-        <section className="container codepen__section center-content">
+        <section className="container page-section codepen__section center-content">
             <header>
                 <span className="pretitle">{texts.preTitle}</span>
                 <h3 dangerouslySetInnerHTML={{ __html: texts.title }}></h3>
@@ -20,8 +20,7 @@ export function CodePen() {
 
             <div className="codepen__iframe">
                 <iframe
-                    height="300"
-                    style={{ width: "100%" }}
+                    style={{ width: "100%", height: "100%" }}
                     scrolling="no"
                     title="BeyondJS react counter widget"
                     src="https://codepen.io/hello-beyond/embed/xxzrORV?default-tab=html%2Cresult"

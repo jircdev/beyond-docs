@@ -5,13 +5,26 @@
     margin: auto;
 }
 
+.container-section {
+    $width: 1376;
+    width: calc(100% - 2rem);
+    $result: calc($width / 12);
+    $container: calc($result * 10);
+    max-width: #{$container}px;
+    @include set-media("tablet", false, max) {
+        width: calc(100% - 4rem);
+    }
+}
 .container,
 .container--800 {
     margin: auto;
     padding: 15px;
-    width: calc(100% - 30px);
+    width: calc(100% - 2rem);
     max-width: 1376px;
 
+    &.container-section {
+        @extend .container-section;
+    }
     &--800 {
         max-width: 800px;
         margin: auto;
@@ -53,6 +66,5 @@
 
     @include set-media("tablet", false, "max") {
         padding: 15px;
-        width: calc(100% - 30px);
     }
 }
