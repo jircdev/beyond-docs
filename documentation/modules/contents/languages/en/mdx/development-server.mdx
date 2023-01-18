@@ -1,6 +1,6 @@
-import { Title, Subtitle } from "@beyond/docs/components/html";
-import { Code } from "@beyond/docs/code";
-import { Link, ELink } from "@beyond/docs/components/html";
+import { Title, Subtitle } from '@beyond/docs/components/html';
+import { Code } from '@beyond/docs/code';
+import { Link, ELink } from '@beyond/docs/components/html';
 
 <Title>Development server</Title>
 
@@ -35,9 +35,7 @@ If you are building a complete application in DENO, you would typically load the
 BeyondJS aims to provide a universal typescript development environment.
 Unlike Deno, which stably supports HTTP imports since its inception, NodeJS implements it in recent versions and is still in an experimental phase.
 
-<ELink to="https://nodejs.org/api/esm.html#https-and-http-imports">
-    https://nodejs.org/api/esm.html#https-and-http-imports
-</ELink>
+<ELink to="https://nodejs.org/api/esm.html#https-and-http-imports">https://nodejs.org/api/esm.html#https-and-http-imports</ELink>
 
 To provide a homogeneous experience, BeyondJS offers an execution environment (**BEE:** Beyond Execution Environment) specifically designed to be used in development (not in production) from NodeJS, in charge of allowing you to run an application by consuming the bundles from the HTTP server and providing HMR support.
 This way, you can run an application in NodeJS processing bundles on demand, reducing the time required for startup.
@@ -59,12 +57,12 @@ The NodeJS environment of an Electron application must run through a BEE to cons
 
 BeyondJS evaluates the directory where it is being executed to identify the existing project(s) by validating if a `beyond.json` file exists.
 
-The `beyond.json` file can be edited manually or through the dashboard which is available by default at <ELink to="https://workspace.beyondjs.com/">https://workspace.beyondjs.com/</ELink>
+The `beyond.json` file can be edited manually or through the workspace which is available by default at <ELink to="https://workspace.beyondjs.com/">https://workspace.beyondjs.com/</ELink>
 
 The structure of the `beyond.json` is as follows:
 
 <Code>
-    {`
+	{`
 "applications": "projects.json",
   "bundles": {},
   "libraries": []
@@ -73,7 +71,7 @@ The structure of the `beyond.json` is as follows:
 
 **Propiedades**
 
--   applications <Link to="/aoc">AOC:</Link> Receive an array with the list of projects or applications configured so that BeyondJS can read and launch them. This file is managed by BeyondJS if the dashboard is being used.
+-   applications <Link to="/aoc">AOC:</Link> Receive an array with the list of projects or applications configured so that BeyondJS can read and launch them. This file is managed by BeyondJS if the workspace is being used.
 -   bundles object: Allows you to configure the inclusion of bundles created by the developer.
 -   libraries <Link to="/aoc">AOC:</Link> BeyondJS libraries configuration arrangement to use.
 

@@ -1,29 +1,29 @@
-import { Title, Subtitle } from "@beyond/docs/components/html";
-import { Code } from "@beyond/docs/code";
-import { Link, ELink } from "@beyond/docs/components/html";
+import { Title, Subtitle } from '@beyond/docs/components/html';
+import { Code } from '@beyond/docs/code';
+import { Link, ELink } from '@beyond/docs/components/html';
 
 <Title>Managing a project</Title>
 
 Projects, like all other BeyondJS elements, are configured using objects in .json files. Project configuration files are generally named <Link to="/docs/projects/json">project.json</Link> as a convention and allow a wide range of configurations.
 
-Projects can be configured in two ways: through the Dashboard interface and manually.
+Projects can be configured in two ways: through the Workspace interface and manually.
 
-<Subtitle>Using the Dashboard</Subtitle>
+<Subtitle>Using the Workspace</Subtitle>
 
-To create a project from the dashboard, you first need to make sure BeyondJS is running in the folder where you want to work on your projects. As explained in the <Link to="/docs/projects/intro">introducción</Link>, BeyondJS, is developed to handle projects simultaneously, so keep in mind that the run directory may be one where you want to add "multiple" projects.
+To create a project from the workspace, you first need to make sure BeyondJS is running in the folder where you want to work on your projects. As explained in the <Link to="/docs/projects/intro">introducción</Link>, BeyondJS, is developed to handle projects simultaneously, so keep in mind that the run directory may be one where you want to add "multiple" projects.
 
 Let's start BeyondJS::
 
 <Code>beyond run</Code>
 
-Then, we access the dashboard, which will be available at <ELink to="https://workspace.beyondjs.com/">https://workspace.beyondjs.com/</ELink>.
+Then, we access the workspace, which will be available at <ELink to="https://workspace.beyondjs.com/">https://workspace.beyondjs.com/</ELink>.
 
-The dashboard has three ways to access the project creation process:
+The workspace has three ways to access the project creation process:
 
 // Img
 
--   In the <Link to="/docs/dashboard#preaside">Preaside</Link> by using the icon.
--   En el <Link to="/docs/dashboard#board">Board</Link> at the top right, the option "create project."
+-   In the <Link to="/docs/workspace#preaside">Preaside</Link> by using the icon.
+-   En el <Link to="/docs/workspace#board">Board</Link> at the top right, the option "create project."
 -   When no project created, a message is displayed inviting you to create a project, as seen in the above reference image.
 
 Clicking on any of the mentioned alternatives, a modal is displayed, allowing you to select the type of project to create. This function enables you to start with a blank project or using an already created template. Current choices are:
@@ -48,11 +48,11 @@ It is possible to work with different view libraries/Frameworks in the same proj
 
 <Subtitle>Project Information</Subtitle>
 
-After seleting the project type, a form appears requesting the scope and name of the project, the port on which it will run, and additionally, an optional title and description. After filling in the necessary data, the dashboard is responsible for creating the project with the file structure, and the project is available to be accessed on the configured port.
+After seleting the project type, a form appears requesting the scope and name of the project, the port on which it will run, and additionally, an optional title and description. After filling in the necessary data, the workspace is responsible for creating the project with the file structure, and the project is available to be accessed on the configured port.
 
 // Img
 
-All projects have dependencies on NPM packages, which can optionally installed them from the dashboard. If you haven't done it before, you need to install dependencies manually for the project to work.
+All projects have dependencies on NPM packages, which can optionally installed them from the workspace. If you haven't done it before, you need to install dependencies manually for the project to work.
 
 **Creación manual**
 

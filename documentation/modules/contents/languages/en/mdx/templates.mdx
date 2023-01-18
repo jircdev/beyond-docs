@@ -1,6 +1,6 @@
-import { Title, Subtitle } from "@beyond/docs/components/html";
-import { Code } from "@beyond/docs/code";
-import { Link } from "@beyond/docs/components/html";
+import { Title, Subtitle } from '@beyond/docs/components/html';
+import { Code } from '@beyond/docs/code';
+import { Link } from '@beyond/docs/components/html';
 
 <Title>Project template</Title>
 
@@ -17,7 +17,7 @@ BeyondJS provides a simple but robust architecture for managing templates in pro
 
 The template configuration, like all elements in BeyondJS, is handled by a configuration file whose name, by convention, is template.json and is located in the template folder at the project root. However, both name and location are configurable values in the <Link to="/project/config">project.json.</Link>
 
-The template can be managed from the <Link to="/docs/dashboard">Dashboard.</Link> And when a project is created, the default structure is already configured for its management.
+The template can be managed from the <Link to="/docs/workspace">Workspace.</Link> And when a project is created, the default structure is already configured for its management.
 
 Explained below, are the configuration properties.
 
@@ -38,7 +38,7 @@ Its purpose is to provide the developer with the possibility of sharing code bet
 <Subtitle>Configuration parameters</Subtitle>
 
 <Code>
-    {`
+	{`
 "application": {
     "processor": "sass",
     "path": "application",

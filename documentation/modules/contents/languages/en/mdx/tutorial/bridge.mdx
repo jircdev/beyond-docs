@@ -36,11 +36,11 @@ The magic comment /_bundle_/, is used by Beyond to identify that the code below 
 The magic comment /_actions_/ is used by BeyondJS to identify which segments of the bundle bridge should be made available as actions that can be consumed by the client.
 The response of the login method is a flat object that arrives with the defined structure to the client.
 Connect client and server
-The bridge we created is a node service. Generally, to run a node service, it is necessary to go to a console. However, in BeyondJS, these services work as a BEE (Beyond Environment Service)and to execute it, we must go to theDashboard and click on the execution button, which we can find on the project detail screen
+The bridge we created is a node service. Generally, to run a node service, it is necessary to go to a console. However, in BeyondJS, these services work as a BEE (Beyond Environment Service)and to execute it, we must go to theWorkspace and click on the execution button, which we can find on the project detail screen
 
 And another in the project detail:
 
-Beyond Environment Execution - Dashboard - BeyondJs
+Beyond Environment Execution - Workspace - BeyondJs
 To implement the login functionality with our server, we must import our auth object in the client code and associate the onSubmit event to our form.
 
 Projects in BeyondJS follow the same guidelines for specification and resolution of names and packages, as npm, in the same way that typescript does. They must have a module name and can handle a scope as well. In our case, we define both when creating our project and module respectively.

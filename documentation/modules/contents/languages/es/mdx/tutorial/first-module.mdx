@@ -1,0 +1,174 @@
+import { DocHeader, PreTitle, Title, Link, Subtitle, ELink } from '@beyond/docs/components/html';
+import { Code, InlineCode } from '@beyond/docs/code';
+
+<DocHeader pretitle="Tutorial" title="Primer módulo" />
+
+En el workspace, también podemos hacer click sobre el proyecto y esto abrirá un nuevo tab con el listado de módulos del mismo.
+
+Como puede verse, el proyecto trae dos módulos creados, el Home, que responde a la URL base del proyecto y el módulo “start-backend” del cúal se hablará más adelante.
+
+El Workspace nos permite hacer las siguientes acciones sobre un módulo
+
+-   Ver y gestionar módulos.
+-   Agregar archivos.
+-   Editar el código fuente de los archivos.
+-   Generar declaraciones.
+-   Visualizar errores de código.
+-   Gestionar configuraciones generales del proyecto
+-   Gestionar Templates
+-   Desde el Workspace, podemos también navegar el módulo accediendo desde el menu lateral (PreAside), en el icono del proyecto Activo, que desplegará el aside con el listado de módulos del proyecto, hacemos click sobre el módulo home y se mostrará la lista de bundles contenidos en el módulo y el contenido de estos, procesadores y archivos.
+
+Desde el Workspace, podemos también navegar el módulo accediendo desde el menu lateral (PreAside), en el icono del proyecto Activo, que desplegará el aside con el listado de módulos del proyecto, hacemos click sobre el módulo home y se mostrará la lista de bundles contenidos en el módulo y el contenido de estos, procesadores y archivos.
+
+La estructura del módulo `home` es la siguiente:
+
+-   widget: Carpeta en donde se encuentra el código del componente page
+-   ts:
+
+        -   `controller.ts`: Objeto controlador del componente, requerido para poder montar el WebComponent en el navegador.
+        -   `views
+            -   `index.tsx`: Componente react que renderiza la página.
+
+-   scss: Carpeta para agregar estilos al módulo.
+
+-   module.json: Archivo de configuración del módulo (Lugar para definir tipo de bundles y procesadores a utilizar).
+
+¡Manos a la obra!
+
+Teniendo clara la estructura, lo que procede a continuación es crear el formulario de inicio de sesión y agregar algo de estilos, para luego continuar con la conexión al backend node
+
+<Title>Creación del Formulario</Title>
+
+Si has trabajado con React, lo que viene es la parte que seguramente conoces mejor, con algunas sutilezas seguramente. A continuación, editaremos nuestro archivo page.tsx para crear un formulario de inicio de sesión y la funcionalidad básica para actualizar el estado.
+
+La edición puede hacerse desde tu IDE de preferencia y también desde el Editor integrado del Workspace, el cual tiene como finalidad brindar ayuda para casos especificos al desarrollador, pero para efectos del tutorial recomendamos usarlo, basta con hacer click en el archivo requerido desde el aside.
+
+<Code>
+{`
+import * as React from 'react';
+
+interface IForm {
+disabled?: boolean;
+}
+
+export /*page*/
+function View(): JSX.Element {
+    const defaultValues = {username: '', password: '', fetching: false};
+    const [values, setValues] = React.useState(defaultValues);
+    const [error, setError] = React.useState();
+    const handleChange = ({currentTarget: target}) => {
+        const currentValue = {...values};
+        currentValue[target.name] = target.value;
+        setValues(currentValue);
+    };
+    const formDisabled: IForm = {};
+    const {username, password} = values;
+    if (!username || !password) {
+        formDisabled.disabled = true;
+    }
+     return (
+        <div className="page__container">
+            <form>
+                {
+                    error &&
+                    <div className="form__error">
+                        {error}
+                    </div>
+                }
+                <label>User: </label>
+                <input onChange={handleChange} type="text" name="username"/>
+                <label>Password</label>
+                <input onChange={handleChange} type="password" name="password"/>
+                <div className="form__actions">
+                    <button {...formDisabled}>Login</button>
+                </div>
+            </form>
+        </div>
+    );
+}
+`}
+</Code>
+
+<Title>Estilos</Title>
+
+BeyondJS maneja los estilos por defecto con el preprocesador SASS, ahora vamos a nuestro archivo styles.scss y agreguemos un poco de estilo al formulario.
+
+<div className="block__note">
+	SASS es un procesador en BeyondJS, si quieres leer a profundidad sobre el mecanismo de procesadores podrás encontrar los detalles en <Link to="/docs/processors">La seccion de procesadores</Link>
+</div>
+
+<Code>
+{`
+.page\_\_container {
+display: flex;
+padding: 20px;
+height: 100%;
+margin: 0;
+flex-direction: column;
+align-items: center;
+align-content: center;
+justify-content: center;
+
+.form\_\_error {
+padding: 15px;
+display: grid;
+background: var(--error);
+color: var(--text-on-primary);
+}
+
+form {
+display: flex;
+flex-direction: column;
+gap: 15px;
+background: var(--bg-element);
+padding: 30px;
+width: 100%;
+max-width: 500px;
+
+    input {
+      padding: 8px;
+      border: 1px solid var(--gray-light);
+      transition: all 300ms ease-in;
+
+      &:hover, &:focus {
+        outline: none;
+        border-color: var(--primary);
+      }
+    }
+
+    .form__actions {
+      display: flex;
+      justify-content: end;
+
+      button {
+        background: var(--primary);
+        cursor: pointer;
+        border: 1px solid var(--primary-dark);
+        color: var(--text-on-primary);
+        padding: .5rem 2rem;
+        transition: all 300ms ease-in;
+
+        &:disabled {
+          opacity: .6;
+          cursor: not-allowed;
+        }
+
+        &:hover {
+          background: var(--primary-dark);
+        }
+      }
+    }
+
+}
+
+}
+`}
+
+</Code>
+
+Expliquemos un poco el código anterior:
+
+-   Agregamos estilo básico al formulario, los inputs, el botón de envío y para manejar un mensaje de error.
+-   Custom properties: las custom properties utilizadas, son una estructura básica para manejo de variables incluidas por beyond en el <Link to="/template">Template del proyecto.</Link>
+
+-   <Link to="/docs/tutorial/backend">Backend</Link>
