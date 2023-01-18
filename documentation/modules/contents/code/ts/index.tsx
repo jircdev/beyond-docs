@@ -28,6 +28,7 @@ export /*bundle*/ function ContentsPage({ contentId, component }) {
         const items: NodeList = shadowRoot.querySelectorAll("h1,h2,h3,h4");
         setSections(Array.from(items));
     }, []);
+    console.log(100, name, Contents);
     if (!Contents[name]) {
         return (
             <main className="page__main-container">
