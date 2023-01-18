@@ -10,7 +10,7 @@ const tutorial = structureItems([
     "tutorial/routing",
 ]);
 
-const base = ["intro", "quick-start", "cli"];
+const base = ["intro", "quick-start"];
 const items = [...base, ["tutorial", tutorial], "workspace"];
 const children = structureItems(items);
 export const starting = {

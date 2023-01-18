@@ -1,15 +1,12 @@
 import { starting } from "./starting";
 import { basics } from "./basics";
 import { fundamentals } from "./fundamentals";
-import { config } from "./config";
+
 import { api } from "./api";
-import { backend } from "./backend";
-import { frontend } from "./frontend";
 
 export const Menu = [
     starting,
-    backend,
-    frontend,
+    basics,
     fundamentals,
     // config,
     // api
