@@ -1,17 +1,10 @@
 import { structureItems } from "../structure-item";
 
-const projects = [
-    "projects/intro",
-    "projects/create",
-    "projects/structure",
-    "projects/json",
-    "projects/import",
-    "projects/dependencies",
-];
+const packages = ["packages/create", "packages/types", "packages/distributions", "packages/json", "packages/publish"];
 const modules = ["modules/introduction", "modules/create", "modules/json"];
 
 const general = structureItems([
-    ["projects", structureItems(projects)],
+    ["packages", structureItems(packages)],
     ["modules", structureItems(modules)],
     "bundles",
     "processors",

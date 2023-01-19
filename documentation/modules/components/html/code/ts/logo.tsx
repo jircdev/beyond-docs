@@ -20,6 +20,5 @@ const icon = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3
 </svg>
 `;
 export /* bundle */ function BeyondLogo(props) {
-    console.log(10, props);
     return <SVGImage src={icon} {...props} />;
 }

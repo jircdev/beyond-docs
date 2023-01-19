@@ -22,7 +22,6 @@ export const structureItems = (data: Object[]): IResponse[] => {
         return { id: item };
     });
 
-    console.log(response);
 
     return response;
 };

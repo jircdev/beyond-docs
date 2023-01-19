@@ -1,11 +1,18 @@
-import { Title } from '@beyond/docs/components/html';
-import { Link } from '@beyond/docs/components/html';
+import {
+    Title,
+    Subtitle,
+    ObjectProperty,
+    ItemProperty,
+    DocHeader,
+    Link,
+    ELink,
+    Table,
+} from "@beyond/docs/components/html";
+import { Code } from "@beyond/docs/code";
 
-<Title>Project.json</Title>
+<DocHeader pretitle="Packages" title="package.json" />
 
-Propiedades project.json:
-
--   **name** string optional: string Es el nombre para identificar el proyecto, sigue el estándar de npm, por tanto, sólo puede contener caracteres seguros para URLs, sin puntos o guiones bajos.
+-   **name** string: string Es el nombre para identificar el proyecto, sigue el estándar de npm, por tanto, sólo puede contener caracteres seguros para URLs, sin puntos o guiones bajos.
 
 -   **scope** string optional: Al igual que en npm, sirve para agrupar paquetes y como los proyectos pueden ser publicados como paquetes npm, en caso de agregarse un scope, este debe ser único y sólo puede ser manejado por la organización o usuario que lo utiliza. La validación de unicidad del scope es hecha por npm, sólo si el programador intenta publicar su proyecto como paquete.
 
@@ -24,7 +31,3 @@ Propiedades project.json:
 -   **deployment** <Link to="/glossary#eoc">EOC</Link> optional: Objeto que permite realizar las configuraciones de los entornos de desarrollo, las cuales son definidas por medio de la entrada deployment
 
 -   **Deployment** <Link to="/glossary#eac">EAC</Link> optional: Objeto que permite realizar las configuraciones de los entornos de desarrollo, las cuales son definidas por medio de la entrada distributions. Las distribuciones pueden agregarse desde la funcionalidad del workspace para ello o de forma manual. Para entender cómo funcionan puedes dirigirte a la <Link to="/project/distributions">Sección de distribuciones.</Link>
-
--   **libraries** object optional: Define la importación de proyectos a ser usados como librerías en el proyecto definido.
-
-    -   **imports** string optional: Cada entrada representa un proyecto importado, la importación se hace agregando el scope y nombre del proyecto importado.

@@ -13,7 +13,9 @@ export /*bundle*/ function ContentsPage({ contentId, component }) {
     const { current: lang } = beyond.languages;
     // const ComponentToShow = contents[contentId][lang];
 
-    const [Component, setComponent] = useState();
+    const replace = (text) => text.replace(text[0], text[0].toUpperCase());
+    const name = contentId.split("-").map(replace).join("");
+    const [Component, setComponent] = useState(Contents[name]);
     const [sections, setSections] = useState<Element[]>();
     const [updated, setUpdated] = useState<EpochTimeStamp>(performance.now());
     const { shadowRoot } = component;
@@ -22,18 +24,18 @@ export /*bundle*/ function ContentsPage({ contentId, component }) {
         return <>{children}</>;
     }
 
-    const replace = (text) => text.replace(text[0], text[0].toUpperCase());
-    const name = contentId.split("-").map(replace).join("");
-
     useEffect(() => {
         const items: NodeList = shadowRoot.querySelectorAll("h1,h2,h3,h4");
-        const onChange = () => setUpdated(performance.now());
+        const onChange = () => {
+            setComponent(Contents[name]);
+            setUpdated(performance.now());
+        };
         Contents.hmr.on("change", onChange);
         setSections(Array.from(items));
         return () => Contents.hmr.on("change", onChange);
     }, []);
-    console.log(100, name, Contents);
-    if (!Contents[name]) {
+
+    if (!Component) {
         return (
             <main className="page__main-container">
                 <section className="page__main-content">

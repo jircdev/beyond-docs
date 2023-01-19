@@ -14,7 +14,7 @@ export function Page({ uri, component, store }): JSX.Element {
         hmr.on("change", onChange);
         return () => hmr.off("change", onChange);
     }, []);
-    console.log(200, contentId);
+
     // @ts-ignore
     return <ContentsPage component={component} contentId={`${contentId}-${sub}`} />;
 }

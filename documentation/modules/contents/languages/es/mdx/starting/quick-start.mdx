@@ -1,60 +1,82 @@
 import { Link, ELink, DocHeader, Title, Subtitle, BeyondJS, Info } from "@beyond/docs/components/html";
+
 import { Code } from "@beyond/docs/code";
 
 <DocHeader pretitle="Introducción" title="Comienzo rápido" />
-
 <Info>
+Para entender esta documentación, debes tener en cuenta los siguientes puntos:
 
-Para entender esta documentación debes tener en cuenta los siguientes puntos.
-
-    -  Tener instalado Node ^14.17.4.
-    -  Estar familiarizado con manejadores de dependencias como npm o yarn.
+Tener instalado Node ^14.17.4.
+Estar familiarizado con manejadores de dependencias como npm o yarn.
 
 </Info>
 
-<BeyondJS /> puede ser instalado por medio de dos comandos:
+<BeyondJS /> puede ser instalado mediante dos comandos:
 
--   Instalación global con npm `npm i -g beyond`.
--   Instalación y creación de un proyecto con npx `npx @beyond-js/create-package`.
+-   Instalación global con npm: npm i -g beyond.
+-   Instalación y creación de un proyecto con npx: npx @beyond-js/create-package.
 
-<Title tag="h3" text="npx @beyond/create-package" />
+<Title tag="h3" text="Instalar y crear un proyecto" />
 
-Este es el comando ideal sino tienes instalado <BeyondJS/>, ya que realiza la instalación global
-y procede a crear un paquete de forma automática en el directorio en el que se ejecuta.
+Puedes instalar y crear un proyecto al mismo tiempo mediante el siguiente comando de npx:
 
-Es un atajo para ejecutar la instalación de <BeyondJS/> y el comando `beyond add package` que permite crear un paquete.
+```
+npx @beyond/create-package
+```
 
-Al ejecutarlo, te consultará por medio de la consola interactiva el nombre del paquete a crear y el tipo de paquete, una vez seleccionados,
+Este es el comando ideal si no tienes <BeyondJS/> instalado y deseas empezar con un proyecto nuevo al mismo tiempo.
+Realiza la instalación global y procede a crear un paquete automáticamente en el directorio en el que se ejecuta.
 
-<BeyondJS /> terminará el proceso de instalación y ya estás listo para poder ejecutar tu proyecto y empezar a programar.
+Al ejecutarlo, se te pedirá los datos del paquete, los cuales puedes ver en esta documentación
+en <Link href="/docs/quick-start#create-package">la sección de crear paquete.</Link>
 
-A continuación, solo necesitas ejecutar el siguiente comando en el directorio raiz del proyecto.
+<Title tag="h3" text="Instalación global" />
 
-` beyond run --workspace 4000`
+Puedes instalar <BeyondJS/> de forma global por medio del siguiente comando:
 
-Este comando inicializa BeyondJS y te permite navegar a tu proyecto en <ELink href="http://localhost:6530"> http://localhost:6530</ELink>.
+<Code>npm i -g beyond</Code>
 
-> El puerto `6530` es definido por defecto en la distribución de proyecto y puede modificarse de forma simple en el `package.json`. Puedes leer en detalle
-> sobre ello en <Link href="/distributions"> la sección de distribuciones</Link>
+El comando anterior instala <BeyondJS/> de forma global y habilita todos los comandos del CLI. Puedes leer más acerca de ellos en la
+sección <Link href="/docs/cli">de comandos de cli</Link>.
 
-<Title tag="h3" text="npm -g beyond" />
+A continuación, puedes <Link href="/docs/quick-start#create-package">crear un paquete desde cero</Link> o ejecutar <BeyondJS/> sobre una carpeta con proyectos existentes.
+
+<Title id="create-package" tag="h3" text="Crear un paquete" />
+
+Puedes llegar a este paso si ejecutaste el comando de `npx` para crear un proyecto o teniendo <BeyondJS/> instalado por medio del siguiente
+comando:
+
+<Code>beyond add package</Code>
+
+Al ejecutarlo, la consola interactiva te pedirá la siguiente información:
+
+-   specifier: que corresponde al nombre del paquete.
+-   title: Un titulo comercial y legible.
+-   type: Corresponde al tipo de paquete que quieres crear. <BeyondJS/> cuenta con varios templates bases que incluyen las librerias
+    más comunes de front o estructuras de trabajo para paquetes backend. Puedes leer más sobre ello en <Link href="/docs/packages/create">
+    la sección de creación de paquetes</Link>.
+
+Luego de ingresar los datos, <BeyondJS /> terminará el proceso de instalación y estarás listo para empezar a programar, sólo necesitas
+inicializar el DevServer con el siguiente comando:
+
+<Code>beyond run --workspace 4000</Code>
+
+<Title tag="h3" text="Instalación global" />
 
 Este comando realiza una instalación global que permite ejecutar el <Link href="/dev-server">DevServer</Link> de
 
 <BeyondJS /> en el directorio que se desee y habilita la lista de comandos disponibles en el CLI.
 
-> Para ver la lista de comandos de <BeyondJS/> puedes ir a <Link href="/cli"> la sección del CLI</Link>
+> Para ver la lista de comandos de <BeyondJS/> puedes ir a <Link href="/docs/cli"> la sección del CLI</Link>
 
-Con <BeyondJS/> instalado, puedes proceder a crear un proyecto en la carpeta que desees ejecutando el siguiente comando:
+<Title tag="h3" text="Ejecución del proyecto" />
 
-```
-beyond add project
-```
+Teniendo instalado <BeyondJS/> y habiendo creado el proyecto, sólo necesitas ejecutar el DevServer en la raiz de tu proyecto
+por medio del siguiente comando:
 
-Este comando te preguntará por el nombre y tipo de proyecto que deseas crear, entre los que puedes seleccionar:
+<Code>beyond add project</Code>
 
--   Web
--   Node
--   Backend
--   web-Backend
--   express.
+Este comando inicializa BeyondJS y te permite navegar a tu proyecto en <ELink href="http://localhost:6530"> http://localhost:6530</ELink>.
+
+> El puerto `6530` es definido por defecto en la distribución de proyecto y puede modificarse de forma simple en el `package.json`. Puedes leer en detalle
+> sobre ello en <Link href="/distributions"> la sección de distribuciones</Link>.
