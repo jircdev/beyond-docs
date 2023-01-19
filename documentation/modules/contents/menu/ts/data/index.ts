@@ -1,8 +1,8 @@
-import { starting } from "./starting";
-import { basics } from "./basics";
-import { fundamentals } from "./fundamentals";
+import { starting } from "./sections/starting";
+import { basics } from "./sections/basics";
+import { fundamentals } from "./sections/fundamentals";
 
-import { api } from "./api";
+import { api } from "./sections/api";
 
 export const Menu = [
     starting,
@@ -11,7 +11,3 @@ export const Menu = [
     // config,
     // api
 ];
-
-export /* action */ const api = (event) => {
-    const item = new debug();
-};

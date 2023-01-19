@@ -1,5 +1,5 @@
-import { DocHeader, BeyondName, Subtitle, Link } from '@beyond/docs/components/html';
-import { Code } from '@beyond/docs/code';
+import { DocHeader, BeyondJS, Subtitle, Link } from "@beyond/docs/components/html";
+import { Code } from "@beyond/docs/code";
 
 <DocHeader pretitle="Tutorial" title="Routing" />
 
@@ -29,7 +29,8 @@ Next, we will make the necessary adjustments to redirect to our welcome module a
 <Code>{`routing.pushState('/welcome');`}</Code>
 
 <div className="block__note">
-	BeyondJS provides a routing object to interact with the navigation api, you can learn more about it in the section on <Link to="/docs/routing">Routing page.</Link>
+    BeyondJS provides a routing object to interact with the navigation api, you can learn more about it in the section
+    on <Link to="/docs/routing">Routing page.</Link>
 </div>
 
 We are done! now we only need to refresh our form page to let BeyondJS register the new URL. If we retest our form, we'll be able to log in and see how we've been redirected to the welcome page.

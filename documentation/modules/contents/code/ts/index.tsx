@@ -15,6 +15,7 @@ export /*bundle*/ function ContentsPage({ contentId, component }) {
 
     const [Component, setComponent] = useState();
     const [sections, setSections] = useState<Element[]>();
+    const [updated, setUpdated] = useState<EpochTimeStamp>(performance.now());
     const { shadowRoot } = component;
 
     function ContentWrapper({ children }) {
@@ -26,7 +27,10 @@ export /*bundle*/ function ContentsPage({ contentId, component }) {
 
     useEffect(() => {
         const items: NodeList = shadowRoot.querySelectorAll("h1,h2,h3,h4");
+        const onChange = () => setUpdated(performance.now());
+        Contents.hmr.on("change", onChange);
         setSections(Array.from(items));
+        return () => Contents.hmr.on("change", onChange);
     }, []);
     console.log(100, name, Contents);
     if (!Contents[name]) {

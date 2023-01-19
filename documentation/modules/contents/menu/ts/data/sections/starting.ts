@@ -1,4 +1,4 @@
-import { structureItems } from "./structure-item";
+import { structureItems } from "../structure-item";
 
 const obj = ([id, label]) => ({ id, label });
 
@@ -10,7 +10,7 @@ const tutorial = structureItems([
     "tutorial/routing",
 ]);
 
-const base = ["intro", "quick-start"];
+const base = ["intro", "quick-start", "steps"];
 const items = [...base, ["tutorial", tutorial], "workspace"];
 const children = structureItems(items);
 export const starting = {

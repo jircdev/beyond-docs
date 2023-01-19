@@ -1,4 +1,4 @@
-import { structureItems } from "./structure-item";
+import { structureItems } from "../structure-item";
 
 export const fundamentals = {
     id: "fundamentals",
