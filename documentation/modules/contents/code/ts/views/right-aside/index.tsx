@@ -14,7 +14,7 @@ const RightAside = () => {
 
     const [titles, setTitles] = React.useState(sections);
     const ref = React.useRef(null);
-    console.log(component);
+
     React.useLayoutEffect(() => {
         const callback = (entries) => {
             let selected;

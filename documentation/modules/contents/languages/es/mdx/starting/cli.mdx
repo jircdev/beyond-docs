@@ -1,4 +1,4 @@
-import { Link, ELink, DocHeader, Title, Subtitle, BeyondName } from "@beyond/docs/components/html";
+import { Link, ELink, DocHeader, Title, Subtitle, BeyondJS } from "@beyond/docs/components/html";
 import { Code } from "@beyond/docs/code";
 
 <DocHeader pretitle="Introducción" title="BeyondJS Cli" />
@@ -9,16 +9,16 @@ BeyondJS provee la siguiente lista de comandos para trabajar desde la consola de
 
 <Code>{`beyond run [--workspace port]`}</Code>
 
-El comando `run` inicializa el DevServer de <BeyondName/> y habilita la conexión con
+El comando `run` inicializa el DevServer de <BeyondJS/> y habilita la conexión con
 el <Link href="/workspace">BeyondJS Workspace</Link>, lo que facilita el proceso de depuración y gestión de paquetes.
-Es necesario ejecutarlo para comenzar a trabajar con <BeyondName/>.
+Es necesario ejecutarlo para comenzar a trabajar con <BeyondJS/>.
 
 ##### Parametros:
 
 -   --workspace: Es opcional. Este parametro define el puerto de conexión websocket para que el
     <Link href="/workspace"> Workspace</Link> pueda obtener información acerca de los paquetes disponibles en el DevServer.
-    sino es pasado, <BeyondName /> tomará por defecto el puerto 4000. A partir de la instalación, sólo es necesario ir a
-    la carpeta en donde se desee crear el o los proyectos e inicializar BeyondJS desde la línea de comandos de la siguiente
+    sino es pasado, <BeyondJS /> tomará por defecto el puerto 4000. A partir de la instalación, sólo es necesario ir a la
+    carpeta en donde se desee crear el o los proyectos e inicializar BeyondJS desde la línea de comandos de la siguiente
     forma:
 
 <Title tag="h4" text="add package" />
@@ -41,6 +41,6 @@ del mismo por medio de la consola interactiva.
 
 <Title tag="h4" text="--version" />
 
-Permite verificar la versión de <BeyondName /> instalada.
+Permite verificar la versión de <BeyondJS /> instalada.
 
 <Code>{`beyond --version`}</Code>

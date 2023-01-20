@@ -5,7 +5,7 @@
             "path": "/code/ts",
             "files": ["*"]
         },
-        "scss": {
+        "sass": {
             "path": "/code/scss",
             "files": ["*"]
         }

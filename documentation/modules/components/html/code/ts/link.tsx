@@ -1,5 +1,5 @@
 import * as React from "react";
-
+import { routing } from "@beyond-js/kernel/routing";
 interface Iprops {
     href: "string";
     children?: JSX.Element;
@@ -10,10 +10,13 @@ interface IAttrs {
 }
 
 export /*bundle*/
-function ELink(props) {
-    const { href } = props;
+function Link(props) {
+    const onClick = (event) => {
+        event.preventDefault();
+        routing.pushState(props.href);
+    };
     return (
-        <a href={href} target="_blank" {...props} data-algo="algo">
+        <a onClick={onClick} {...props}>
             {props.children}
         </a>
     );

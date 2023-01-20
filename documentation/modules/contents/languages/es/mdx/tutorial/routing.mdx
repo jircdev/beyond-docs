@@ -1,5 +1,5 @@
-import { DocHeader, BeyondName, Subtitle, Link } from '@beyond/docs/components/html';
-import { Code } from '@beyond/docs/code';
+import { DocHeader, BeyondJS, Subtitle, Link } from "@beyond/docs/components/html";
+import { Code } from "@beyond/docs/code";
 
 <DocHeader pretitle="Tutorial" title="Routing" />
 
@@ -29,7 +29,8 @@ A continuación, Haremos los ajustes necesarios, para redireccionar a nuestro m�
 <Code>{`routing.pushState('/welcome');`}</Code>
 
 <div className="block__note">
-	BeyondJS provee un objeto routing para interactuar con la api de navegación, puedes aprender más al respecto en la sección de <Link to="/docs/routing">Enrutamiento.</Link>
+    BeyondJS provee un objeto routing para interactuar con la api de navegación, puedes aprender más al respecto en la
+    sección de <Link to="/docs/routing">Enrutamiento.</Link>
 </div>
 
 Ahora sólo debemos refrescar la página del formulario para que BeyondJS registre la ruta nueva creada y Si volvemos a probar nuestro formulario, podremos iniciar sesión y ver cómo nos dirigimos a la página de bienvenida.

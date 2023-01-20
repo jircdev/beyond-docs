@@ -163,3 +163,10 @@ ul li {
 .text-on-primary {
     color: var(--text-on-primary) !important;
 }
+
+.docs__info {
+    padding: 2rem;
+    background: var(--app-surface-notes);
+    border-radius: var(--border-radius-base);
+    margin-bottom: 2rem;
+}
