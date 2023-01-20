@@ -47,8 +47,17 @@ import { default as PAckagesTypes1 } from "./mdx/packages/types.mdx";
 import { default as Distributions1 } from "./mdx/packages/distributions.mdx";
 import { default as PackagesJson1 } from "./mdx/packages/json.mdx";
 import { default as PackagesPublish1 } from "./mdx/packages/publish.mdx";
+import { default as PackagesBeyondjs1 } from "./mdx/packages/beyond.mdx";
 
+import { default as ModulesIntroduction1 } from "./mdx/modules/introduction.mdx";
+import { default as ModulesBundles1 } from "./mdx/modules/bundles.mdx";
+
+import { default as ModulesCreation1 } from "./mdx/modules/creation.mdx";
+import { default as ModulesConfig1 } from "./mdx/modules/json.mdx";
+import { default as ModulesProcessors1 } from "./mdx/modules/processors.mdx";
+import { default as Deployment1 } from "./mdx/basics/deployment.mdx";
 // export /*bundle */ const Bee = Bee1;
+
 // export /*bundle */ const Bundles = Bundles1;
 // export /*bundle */ const Templates = Templates1;
 // export /*bundle */ const Hmr = Hmr1;
@@ -69,7 +78,7 @@ export /*bundle*/ const TutorialBackend = Tutorial2;
 export /*bundle*/ const TutorialBridge = Tutorial3;
 export /*bundle*/ const TutorialRouting = Tutorial4;
 export /*bundle */ const TutorialFirstModule = Tutorial5;
-
+export /*bundle */ const Deployment = Deployment1;
 // basics
 
 export /*bundle */ const PackagesCreate = PackagesCreate1;
@@ -77,9 +86,18 @@ export /*bundle */ const PackagesTypes = PAckagesTypes1;
 export /*bundle*/ const PackagesDistributions = Distributions1;
 export /*bundle */ const PackagesJson = PackagesJson1;
 export /*bundle */ const PackagesPublish = PackagesPublish1;
+export /*bundle */ const PackagesBeyondjs = PackagesBeyondjs1;
+// modules
+export /*bundle */ const ModulesIntroduction = ModulesIntroduction1;
+export /*bundle */ const ModulesCreation = ModulesCreation1;
+export /*bundle */ const ModulesConfig = ModulesCreation1;
+export /*bundle */ const ModulesBundles = ModulesBundles1;
+export /*bundle */ const ModulesProcessors = ModulesProcessors1;
+
+// modules
 
 // Foundations
-export /*bundle*/ const BareSpecifiers = BareSpecifier1;
+const /*bundle*/ BareSpecifiers = BareSpecifier1;
 export /*bundle*/ const Modular = Modular1;
 export /*bundle*/ const Universal = Universal1;
 export /*bundle*/ const DevServer = DevServer1;
