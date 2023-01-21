@@ -55,7 +55,7 @@ import { default as ModulesBundles1 } from "./mdx/modules/bundles.mdx";
 import { default as ModulesCreation1 } from "./mdx/modules/creation.mdx";
 import { default as ModulesConfig1 } from "./mdx/modules/json.mdx";
 import { default as ModulesProcessors1 } from "./mdx/modules/processors.mdx";
-import { default as Deployment1 } from "./mdx/basics/deployment.mdx";
+
 // export /*bundle */ const Bee = Bee1;
 
 // export /*bundle */ const Bundles = Bundles1;
@@ -78,7 +78,7 @@ export /*bundle*/ const TutorialBackend = Tutorial2;
 export /*bundle*/ const TutorialBridge = Tutorial3;
 export /*bundle*/ const TutorialRouting = Tutorial4;
 export /*bundle */ const TutorialFirstModule = Tutorial5;
-export /*bundle */ const Deployment = Deployment1;
+// export /*bundle */ const Deployment = Deployment1;
 // basics
 
 export /*bundle */ const PackagesCreate = PackagesCreate1;

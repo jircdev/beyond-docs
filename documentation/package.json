@@ -5,9 +5,9 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "@beyond-js/kernel": "^0.1.5",
         "@beyond-js/react-widgets": "^18.20.1",
         "@beyond-js/widgets": "^0.1.0",
-        "@beyond-js/kernel": "^0.1.5",
         "@cloudinary/url-gen": "^1.6.0",
         "@mdx-js/mdx": "^2.2.1",
         "@mdx-js/react": "^2.2.1",
@@ -21,6 +21,7 @@
         "perfect-scrollbar": "^1.5.5",
         "prismjs": "^1.27.0",
         "prop-types": "^15.8.1",
+        "ripple-effects": "^1.0.2",
         "sequelize": "^6.3.5",
         "slate-react": "^0.72.9",
         "socket.io": "^4.3.1",

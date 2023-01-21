@@ -11,6 +11,7 @@ export const fundamentals = {
         "distributions",
         "foundations/hmr",
         "foundations/bee",
+        "foundations/extend",
         // 'multilanguage',
         // 'glossary',
     ]),

@@ -1,13 +1,19 @@
 import { structureItems } from "../structure-item";
 
-const packages = ["packages/create", "packages/types", "packages/distributions", "packages/json", "packages/publish"];
-const modules = ["modules/introduction", "modules/create", "modules/json"];
+const packages = [
+    "packages/create",
+    "packages/types",
+    "packages/distributions",
+    "packages/json",
+    "packages/publish",
+    "packages/beyondjs",
+    "deployment",
+];
+const modules = ["modules/introduction", "modules/creation", "modules/config", "modules/bundles", "modules/processors"];
 
 const general = structureItems([
     ["packages", structureItems(packages)],
     ["modules", structureItems(modules)],
-    "bundles",
-    "processors",
 ]);
 export const basics = {
     id: "concepts",
