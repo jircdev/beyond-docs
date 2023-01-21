@@ -9,7 +9,7 @@ const packages = [
     "packages/beyondjs",
     "deployment",
 ];
-const modules = ["modules/introduction", "modules/creation", "modules/config", "modules/bundles", "modules/processors"];
+const modules = ["modules/introduction", "modules/creation", "modules/bundles", "modules/processors"];
 
 const general = structureItems([
     ["packages", structureItems(packages)],

@@ -1,71 +1,76 @@
-import { Title, Subtitle } from '@beyond/docs/components/html';
-import { Code } from '@beyond/docs/code';
-import { Link, ELink } from '@beyond/docs/components/html';
+import { NextLinks, Link, ELink, DocHeader, Title, Subtitle, BeyondJS } from "@beyond/docs/components/html";
+import { CodeBox, Code } from "@beyond/docs/code";
 
-<Title>Crear un Módulo</Title>
+<DocHeader pretitle="Basics" title="Creación de módulos" />
 
-Esta página asume que ya se leyó la <Link to="/modules/intro">introducción de módulos.</Link>
+> En esta página se asume que ya se ha leído
+> la <Link to="/modules/intro">introducción sobre módulos en la documentación.</Link>
 
-Los módulos se crean y gestionan por medio de los archivos de configuración module.json, estos pueden ser creados de forma manual o a través de la interfaz del Workspace.
+Los módulos se configuran a través de un objeto JSON que se guarda en un archivo
+llamado `module.json`. La estructura básica de este archivo es la siguiente:
 
-<Subtitle>Creación desde el Workspace</Subtitle>
+<CodeBox title="module.json" language="json">
 
-Para crear un módulo debe haberse creado previamente un proyecto y estar activo en el Workspace.
+{`{
+  "name": "module-name",
+  "platforms": ["browser"] 
+  "bundle": { 
+    // bundle properties
+  }
+}`}
 
-La opción de crear proyectos es una funcionalidad disponible cuando un proyecto se encuentra activo en el Workspace. Para poder verlas, es necesario abrir el proyecto accediendo al board de detalle del mismo.
+</CodeBox>
 
-Cuando el proyecto se encuentra activo, se puede ver la opción en el **PreAside**, al hacer click en ella, aparecce un modal que da la opción de crear un módulo en blanco o seleccionar una plantilla.
+> Para crear un módulo, es necesario tener previamente un paquete creado.
 
-// Img
+Como se puede ver en el ejemplo anterior, el archivo `module.json`
+puede contener las siguientes propiedades:
 
-Posteriormente, aparece un formulario que solicita el resto de datos necesarios, asociados al tipo de bundle que se agregará en el módulo y los procesadores que contendrá.
+-   `name`: es el nombre del módulo.
+-   `platfoms`: es una lista que indica las plataformas para las
+    que está disponible el bundle. Si no se especifica, se considera que el
+    bundle es compatible con todas las plataformas.
+-   `[bundleName]`: se utiliza para especificar el tipo de bundle que se desea
+    crear en el módulo. Un módulo puede contener múltiples bundles, simplemente
+    agregando más propiedades con el nombre de cada bundle adicional.
+    l valor de esta propiedad es un objeto que contiene la configuración del bundle,
+    y las propiedades dentro de este objeto varían dependiendo del tipo de bundle
+    que se está agregando. Para obtener más información sobre los diferentes
+    tipos de bundles y su configuración, consulta la sección de bundles de la documentación.
 
-// Img
+<Title tag="h3" text="Ejemplo de configuración" />
 
-Datos del módulo
+Recordando el ejemplo definido en la introducción, que tenía las siguientes características:
 
--   **Nombre del Módulo** string : Corresponde al nombre con el cual podra ser importado o utilizado el módulo a crear.
--   **Nombre Web Component** string: Aplica para los bundles de tipo widget. Debe seguir el estandar de nombres de componentes web, todo en minusculas y con un guión.
--   **Url** url optional : Aplica a módulos con un bundle de tipo widget page. Define la url de acceso.
--   **Vue** boolean : Agrega el procesador Vue.
--   **Svelte** boolean : Agrega el procesador Svelte.
+-   Un archivo auth.ts con un objeto Auth que sirve de modelo y permite realizar la llamada para el inicio de sesión.
+-   Un archivo user.ts con un objeto User que expone la información del usuario en caso de que inicie sesión.
+-   Un archivo de estilos styles.scss
+-   Un componente de interfaz gráfica form.tsx.
 
-<Subtitle>Creación manual</Subtitle>
+El `module.json` para este módulo podría definirse de la siguiente forma:
 
-La configuración de módulos sigue el mismo principio que el resto de elementos configurativos en BeyondJS y debe crearse en un archivo de nombre module.json.
-
-El module.json recibe cómo mínimo dos propiedades: El nombre del módulo y la configuración de un bundle.
-
-<Code>
+<Code title="module.json" language="json">
 {`
 {
-    "name": "first-module",
-    "platforms": [
-        "web"
-    ]
-    "code" : {
+    "name": "login",
+    "code": {
         "ts": {
-          "path": "ts",
-          "files": [
-            "*"
-          ]
+            "path": "ts",
+            "files": ["*"]
         },
         "sass": {
-          "path": "scss",
-          "files": [
-            "*"
-          ]
+            "path": "sass",
+            "files": ["*"]
         }
     }
 }
-
 `}
 
 </Code>
 
 En el ejemplo anterior, se está creando un módulo de nombre first-module, con un bundle code que contiene un procesador sass y un procesador ts que procesan código Sass y Typescript respectivamente y que será empaquetado para plataforma web.
 
-Un módulo puede contener varios bundles, estos se definen como propiedades del objeto de configuración del módulo y un módulo pureciben como valor un objeto de configuración que aparte de los procesadores, puede recibir algunas propiedades adicionales según el tipo de bundle. Puedes leer más en detalle sobre esto en <Link to="/docs/bundles">La sección de bundles.</Link>
+Un módulo puede contener varios bundles, estos se definen como propiedades del objeto de configuración del módulo y un módulo pureciben como valor un objeto de configuración que aparte de los procesadores, puede recibir algunas propiedades adicionales según el tipo de bundle. Puedes leer más en detalle sobre esto
+en <Link to="/docs/bundles">La sección de bundles.</Link>
 
--   <Link to="/docs/modules/json">Configuración de módulos</Link>
--   <Link to="/docs/widgets">Widgets</Link>
+<NextLinks items={["modules/bundles", "modules/processors"]} />

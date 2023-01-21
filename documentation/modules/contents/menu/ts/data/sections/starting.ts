@@ -11,7 +11,7 @@ const tutorial = structureItems([
 ]);
 
 const base = ["intro", "quick-start", "steps"];
-const items = [...base, ["tutorial", tutorial], "workspace"];
+const items = [...base, ["tutorial", tutorial]];
 const children = structureItems(items);
 export const starting = {
     id: "getting-start",

@@ -15,10 +15,8 @@ tecnologías y librerías que mejor se adapten a las necesidades del proyecto. A
 escalabilidad ya que los paquetes pueden ser actualizados o reemplazados de forma independiente. Puedes leer más acerca
 de estos paquetes en la sección de Paquetes disponibles.
 
+-   <ELink href="https://www.npmjs.com/package/@beyond-js/kernel">@beyond-js/bee</ELink>
 -   <ELink href="https://www.npmjs.com/package/@beyond-js/bee">@beyond-js/bee</ELink>
-
-Beyond Execution Environment.
-
 -   <ELink href="https://www.npmjs.com/package/@beyond-js/local">@beyond-js/local</ELink>
 -   <ELink href="https://www.npmjs.com/package/@beyond-js/ssr">@beyond-js/ssr</ELink>
 -   <ELink href="https://www.npmjs.com/package/@beyond-js/widgets">@beyond-js/widgets</ELink>
@@ -29,75 +27,48 @@ Beyond Execution Environment.
 En este documento se hará un repaso de que realiza cada uno de los paquetes.
 
 <Title tag="h3" text="@beyond-js/kernel" />
+Este paquete contiene un conjunto de funcionalidades utilitarias esenciales para desarrollar proyectos en <BeyondJS />.
+
+<Code lang="ts">{`import {Events, routing} from '@beyond-js/kernel'`}</Code>
+
 <Title tag="h3" text="@beyond-js/backend" />
 
-Este paquete implementa un servicio en node que disponibiliza una plataforma backend con conexión de Websocket y permite
-la ejecución de los Bridges, una funcionalidad de BeyondJS que permite crear APIs backend y el código cliente para consumirlo
-con el tipado de datos incluido.
+Este paquete proporciona un servicio de backend basado en node con conexión de Websocket y soporta la ejecución de los Bridges,
+una funcionalidad de BeyondJS que permite crear APIs backend y el código cliente para consumirlo con tipado de datos incluido.
 
 <Title tag="h3" text="@beyond-js/bee" />
 
-Este paquete esta creado para mejorar la experiencia de desarrollo en Node.
-
-El entorno de ejecución Node.js gestiona los paquetes haciendo busqueda de los mismos en disco. El
-Beyond Execution Environment de <BeyondJS/> permite que en su lugar, interactúe contra el
-DevServer de <BeyondJS/>, lo que permite codificar con funcionalidades de HMR (Hot Module Replacement)
-de forma natural y simple.
-
-Sino tienes algo asi es necesario compilar con nodemon que son soluciones obsoletas.
-
-> Node.js ha agregado funcionalidades experimentales para trabajar con http imports a partir de la
-> versión 19. <BeyondJS/> brinda un soporte directo para trabajar con http imports y este paquete permite
-> programar con la misma experiencia en versiones anteriores de Node.js
+Este paquete mejora la experiencia de desarrollo en Node.js, ya que permite interactuar con el DevServer de <BeyondJS /> en
+lugar de buscar paquetes en disco. Esto permite programar con funcionalidades de HMR (Hot Module Replacement) de forma natural
+y sencilla. Además, proporciona soporte para trabajar con http imports en versiones anteriores de Node.js
 
 <Title tag="h3" text="@beyond-js/local" />
 
-Este paquete es utilzado para dos cosas.
+Este paquete es utilizado para dos funciones principales:
 
--   Escucha los cambios desde el Inspector de BeyondJS y hace carga inmediata por medio de HMR de los elementos cambiados.
--   Sirve para proyectos backends. se encarga de revisar el estado de los launchers para validar si estan encendidos o no y levantarlos
-    previos a la ejecución de la acción.
-
--   Launcher: Es un objeto que es instanciado por el engine de Beyond por cada distribución backend o node a fin de que pueda ser llamado por el beyond-js local.
-    a fin de poder ser ejecuctado de forma automática el proceso de ejecución de estas distribuciones por medio del bee.
-
-Habilita el comportamiento HMR (Hot Module replacement) en los proyectos realizados con <BeyondJS/>.
-Es una dependencia para el entorno de desarrollo.
+Escucha los cambios desde el Inspector de BeyondJS y realiza carga inmediata mediante HMR de los elementos modificados.
+Sirve para proyectos de backend, verificando el estado de los launchers y encendiéndolos previamente a la ejecución de la acción.
+Habilita el comportamiento HMR en los proyectos realizados con <BeyondJS/>. Es una dependencia necesaria para el entorno de desarrollo.
 
 <Title tag="h3" text="@beyond-js/ssr" />
 
-BeyondJS implementa SSR por medio de un servidor HTTP que dispone tres endpoints.
-
--   widget
--   page
-
-Permite implementar soluciones de Server Side Rendering en proyectos web. Puedes leer más acerca del
-renderizado SSR, las buenas practicas y otras formas de renderizado
-en <Link href="/docs/widgets/rendering"> la seccion de Renderizado con Widgets</Link>
+BeyondJS implementa Server Side Rendering (SSR) mediante un servidor HTTP con tres endpoints: widget y page. Permite implementar
+soluciones de SSR en proyectos web. Puedes leer más acerca de las buenas prácticas y otras formas de renderizado
+en <Link href="/docs/widgets/rendering"> la sección de Renderizado con Widgets</Link>
 
 <Title tag="h3" text="@beyond-js/widgets" />
 
-Tiene un controlador base
-
-Los proyectos o paquetes Web en <BeyondJS/> funcionan como microfrontends independientes
-que pueden contener su propio stack de tecnologías. Estos proyectos son flexibles y fácilmente extensibles,
-permitiendo agregar nuevos paquetes de widgets que brinden soporte a librerías de vista o renderizado con pocos pasos simples.
+Los proyectos o paquetes Web en <BeyondJS/> funcionan como microfrontends independientes con la capacidad de contener su propio stack de tecnologías. Estos proyectos son flexibles y fácilmente extensibles, permitiendo la integración de nuevos paquetes de widgets que brinden soporte a librerías de vista o renderizado con pocos pasos simples.
 
 > <BeyondJS /> se enfoca en facilitar la integración de nuevas librerías de renderizado, para que puedas hacerlo de
-> forma sencilla. Puedes leer más acerca de cómo agregar motores de renderizado en la sección correspondiente del
+> forma sencilla. Puedes leer más acerca de cómo agregar motores de renderizado en la sección correspondiente de la
 > documentación.
 
-Por Defecto,
+Además, <BeyondJS/> ofrece los siguientes paquetes específicos para crear proyectos Web con Renderizado cliente, estático o de servidor (SSR)
+utilizando <ELink hef="https://reactjs.org/">React</ELink>, <ELink href="https://vuejs.org/">Vue</ELink> y <ELink href="https://svelte.dev/">Svelte</ELink>.
 
-<Title tag="h4" text="@beyond-js/react-widgets" />
+Estos paquetes son:
 
-Permite implementar widgets de <BeyondJS/> con React. Las versiones del paquete son homólogas a las
-versiones de React.
-
-<Title tag="h4" text="@beyond-js/svelte-widgets" />
-
-Creado para integrar Svelte.
-
-<Title tag="h4" text="@beyond-js/vue-widgets" />
-
-Creado para trabajar con vue en <BeyondJS/>.
+-   React: `@beyond-js/react-widgets`
+-   Svelte: `@beyond-js/svelte-widgets`
+-   Vue: `@beyond-js/vue-widgets`
