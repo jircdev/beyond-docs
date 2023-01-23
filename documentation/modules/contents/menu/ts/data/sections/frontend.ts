@@ -18,6 +18,7 @@ const widgets = [
     "widgets/page",
     "widgets/layout",
     "widgets/rendering",
+    "/widgets/add-rendering-engine",
 ];
 
 const general = structureItems([

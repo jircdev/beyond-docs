@@ -2,6 +2,7 @@ import * as React from "react";
 
 import { Footer } from "./footer";
 import { useBinder } from "@beyond/docs/store";
+import ripple from "ripple-effects";
 import { HomeContext } from "./contexts";
 import { WhatIs } from "./sections/whats-is";
 import { WhatIsItFor } from "./sections/what-is-it-for";

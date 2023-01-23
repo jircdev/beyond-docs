@@ -1,0 +1,91 @@
+import { NextLinks, Link, ELink, DocHeader, Title, Subtitle, BeyondJS } from "@beyond/docs/components/html";
+import { Code } from "@beyond/docs/code";
+
+<DocHeader pretitle="Basics" title="Modules" />
+
+En <BeyondJS/>, los módulos son la unidad básica de desarrollo y se dividen en dos conceptos:
+Módulos Internos y Módulos.
+
+Los Módulos Internos representan el concepto de módulos JavaScript tradicionales,
+es decir, archivos con tareas independientes y un scope propio.
+Sin embargo, los desarrolladores tienen la capacidad de definir si estos
+módulos internos son accesibles para ser utilizados por otros módulos internos o
+no mediante el uso de un comentario especial llamado`/*bundle*/`.
+
+Por otro lado, los Módulos en BeyondJS son una unidad más grande de desarrollo que
+se compone de varios módulos internos, así como de otros recursos como estilos,
+imágenes y texto. BeyondJS empaqueta estos módulos en un archivo único según
+el tipo de procesador utilizado.
+
+Para ilustrar esto, tomemos como ejemplo un módulo "login" que se compone de
+los siguientes elementos:
+
+-   Un archivo `auth.ts` con un objeto Auth que sirve de modelo y
+    permite realizar la llamada para el inicio de sesión
+
+<Code>
+
+{`
+export /_bundle_/ class Auth {
+
+    constructor(options) {
+        this.options = options;
+    }
+
+    login(username, password) {
+        // lógica de inicio de sesión
+    }
+
+    logout() {
+        // lógica de cierre de sesión
+    }
+
+}`}
+
+</Code>
+
+-   Un archivo `user.ts` con un objeto User que expone
+    la información del usuario en caso de que inicie sesión
+
+<Code>
+
+{`
+import { Auth } from './auth.js';
+
+export /*bundle*/ class User {
+    constructor(options) {
+        this.options = options;
+        this.auth = new Auth(options);
+    }
+
+    getCurrentUser() {
+        // lógica para obtener el usuario actual
+    }
+
+}
+`}
+
+</Code>
+
+-   Un archivo de estilos `styles.scss` y
+-   un componente de interfaz gráfica `form.tsx`.
+
+Basándonos en EcmaScript, los archivos auth.ts, user.ts y form.tsx
+son módulos independientes que exponen un objeto. Sin embargo,
+en términos de funcionalidad, el módulo de la aplicación se compone de estos
+archivos en su totalidad.
+
+Por lo tanto, <BeyondJS/> conceptualiza los módulos como un conjunto de archivos
+definidos en un archivo module.json, donde todos los elementos dentro de este
+módulo pueden ser utilizados entre sí. Además, el programador puede definir
+exactamente qué elementos exportar a un módulo externo, como en el ejemplo
+del objeto "user", que es exportado mediante el comentario mágico /_bundle_/.
+
+<BeyondJS /> empaqueta los módulos como bundles independientes. Puedes obtener más información sobre esto en la sección
+de creación de módulos.
+
+Como desarrollador, es probable que sólo te interese que otros módulos puedan
+consumir la vista del formulario y el objeto User para acceder a los datos del usuario.
+
+-   <Link to="/docs/modules/creation">Crear de módulos</Link>
+-   <Link to="/docs/bundles">Bundles</Link>
