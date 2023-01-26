@@ -1,0 +1,91 @@
+import { Link, ELink, NextLinks, DocHeader, BeyondJS, Title, Subtitle } from "@beyond/docs/components/html";
+import { Code, CodeBox } from "@beyond/docs/code";
+
+<DocHeader title="Layouts" pretitle="widgets" />
+
+Los Layouts son widgets especializados que representan contenedores para otros widgets.
+Tienen múltiples usos, como compartir un diseño de interfaz gráfica entre distintos elementos de
+un proyecto o incluir lógica de código en múltiples secciones del proyecto. En esta guía aprenderás
+cómo configurar y utilizar Layouts en tu proyecto BeyondJS.
+
+Para configurar un widget de tipo layout, la propiedad "is" debe tener cómo valor `layout` en el archivo
+`module.json`.
+
+<Code>
+{`
+"widget": {
+    "is": "layout",
+    "element": {
+      "name": "main-layout"
+    },
+...
+}
+`}
+
+</Code>
+
+La entrada "is" es requerida para que BeyondJS pueda identificar los layouts existentes.
+A partir de allí, el desarrollo es similar al de cualquier otro widget.
+
+El objeto controller del Widget de tipo Layout debe extender de `[Library]WidgetController`,
+donde `Library` debe ser reemplazado por el nombre de la librería de widgets que estés utilizando.
+
+Los Layouts se pueden utilizar de dos formas:
+
+-   Como Layout general para todo el proyecto.
+-   Como Layout específico en widgets de tipo página.
+
+<Title tag="h2" text="Layout de proyecto" />
+
+El layout general del proyecto se define agregando un punto de entrada "layout"
+en el archivo `package.json` que recibe como valor el nombre del componente web del layout,
+especificado en la configuración del widget al crearlo (puedes verlo en el archivo module.json del módulo).
+
+> Los proyectos creados desde el CLI o el Workspace de <BeyondJS/> vienen con un layout de proyecto
+> configurado. El nombre del componente web es `main-layout` y se encuentra en el
+> directorio `modules/layouts/main` del proyecto.
+
+El siguiente es el código mínimo de un layout
+
+<Code>
+    {`<main>
+    <beyond-layout-children/>
+</main>`}
+</Code>
+
+Para especificar dónde se deben insertar los demás elementos del proyecto en el layout,
+debes agregar la etiqueta `<beyond-layout-children/>` en el lugar deseado.
+
+El componente web `<beyond-layout-children/>` es manejado por <BeyondJS/>
+para determinar dónde deben cargarse los componentes web solicitados de forma dinámica.
+Si el proyecto no tiene un layout de proyecto, <BeyondJS/> inserta automáticamente
+un componente `<beyond-layout-children/>` en el archivo `index.html` para renderizar
+el resto de los elementos del proyecto.
+
+<Title tag="h2" text="Múltiples Layouts" />
+
+En <BeyondJS/> es posible manejar múltiples layouts y utilizarlos de manera jerárquica,
+donde un layout puede ser contenido por otro. Esto permite una mayor flexibilidad
+al momento de diseñar y estructurar la interfaz gráfica de tu proyecto.
+
+> Es importante tener en cuenta que el layout general de proyecto no puede
+> tener un layout contenedor especificado. En este caso, <BeyondJS/> incluirá el layout
+> global de proyecto y ignorará la instrucción.
+
+Para agregar un layout como contenedor de un widget, debes incluir la entrada "layout"
+en la configuración del bundle de tipo widget en el archivo `module.json`.
+
+<CodeBox title="module.json">
+    {` "widget": {
+    "is": "page",
+    "layout": "main-layout",
+    "route": "/",
+    "element": {
+        "name": "home-page"
+      }
+}`}
+</CodeBox>
+
+> El valor de la propiedad layout debe ser el nombre del componente web, no el subpath del módulo.
+
+<NextLinks items={["widgets/page", "widgets/rendering"]} />

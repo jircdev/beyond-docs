@@ -1,0 +1,112 @@
+import { Link, ELink, NextLinks, DocHeader, BeyondJS, Title, Subtitle } from "@beyond/docs/components/html";
+import { Code, CodeBox } from "@beyond/docs/code";
+
+<DocHeader pretitle="Frontend" title="Renderizado" />
+
+BeyondJS proporciona varias estrategias de renderizado
+para adaptarse a las necesidades de tu proyecto.
+A continuación se describen las estrategias de renderizado disponibles en BeyondJS y cómo utilizarlas.
+
+<Title tag="h2" text="CSR(Client Side Rendering)" />
+
+El renderizado Client Side (CSR) es una estrategia en la cual el navegador del
+cliente se encarga de generar la vista final utilizando JavaScript y es el tipo de renderizado
+por defecto en <BeyondJS/>. Esto significa que el contenido de la página se carga de forma dinámica en el navegador,
+en lugar de ser generado previamente en el servidor.
+
+Con esta configuración, estamos indicando que nuestro widget utilizará el renderizado Client Side.
+Por defecto, la propiedad csr tiene el valor true, por lo que no es necesario especificarla
+si deseamos utilizar el renderizado CSR.
+
+<Title tag="h2" text="SR (Static Rendering)" />
+
+La estrategia SR (Static Rendering) es una estrategia en la cual ya existe un HTML armado y listo para ser renderizado, no
+es necesario interactuar con el servidor o con algún framework ya que el recurso al estar armado sólo debe solicitarse.
+
+Para utilizar esta estrategia, debes definir una propiedad "render" en el
+archivo module.json de tu módulo, con el valor de un arreglo de
+strings que contengan cada una de las rutas definidas para cada página o recurso solicitado.
+
+<CodeBox title="module.json">
+
+{`{"widget": {
+
+        "render": {
+            "sr": [
+                "/path/to/page1",
+                "/path/to/page2"
+            ]
+        }
+    }
+
+}
+`}
+
+</CodeBox>
+
+<Title tag="h2" text="SSR (Server Side Rendering)" />
+
+La estrategia de renderizado SSR (Server Side Rendering) en BeyondJS se enfoca en
+generar el HTML de un componente o widget en el lado del servidor antes
+de enviarlo al cliente. Esto permite cargar la estructura de datos del
+componente de manera rápida y evitar la necesidad de que intervengan paquetes,
+dependencias o frameworks del lado del cliente para su carga.
+
+Para habilitar el SSR en un módulo o widget, se debe agregar una propiedad "ssr"
+en la configuración del bundle (widget) en el archivo "module.json" del módulo.
+Esta propiedad debe ser un booleano que indique si está activa la renderización del lado servidor.
+
+Además, es necesario definir una propiedad "createStore" en el Controlador
+de la vista. Esta propiedad es un getter que devuelve un objeto de tipo IWidgetStore
+que debe contener tres métodos principales:
+
+-   `toJSON` : se encarga de devolver la data que el widget va a consumir del servidor.
+    Este método se encarga de serializar la respuesta HTML para que pueda ser enviada al cliente
+    y mostrada en pantalla.
+-   `hydrate`:se encarga de hidratar o actualizar el HTML en el cliente.
+    Tiene como premisa que el estado previamente renderizado en el servidor
+    coincida con el estado que se va a devolver al cliente. Este proceso se llama hydrate y es
+    el encargado de sincronizar el estado del cliente con el estado del servidor.
+-   `fetch` es utilizado tanto en la estrategia SSR como en
+    la estrategia CSR (Client Side Rendering) y se encarga de procesar la data del
+    Store y disponibilizarla. Este método se ejecuta tanto en el cliente como en el servidor,
+    según la estrategia utilizada. Es responsable de recuperar la data necesaria
+    para renderizar el widget, ya sea desde el servidor o desde el cliente.
+
+<CodeBox title="module.json">
+    {`{
+    "widget": {
+        "name": "mi-widget",
+        "type": "page",
+        "route": "/mi-pagina",
+        "render": {
+            "ssr": true
+        }
+    }
+
+}`}
+
+</CodeBox>
+
+<Title tag="h2" text="Renderizado Hibrido (SSR y CSR)" data-menu="Renderizado Hibrido" />
+
+BeyondJS permite utilizar tanto el renderizado del lado cliente (CSR) como el
+renderizado del lado servidor (SSR) de manera conjunta, lo que se conoce como renderizado híbrido.
+
+En este tipo de renderizado, se utiliza el SSR para generar un HTML inicial que se entrega al cliente,
+mejorando la experiencia de carga de la página. Una vez que el navegador recibe el HTML inicial, el framework de vista
+correspondiente se encarga de actualizar y manejar la vista según la interacción del usuario.
+
+Para habilitar el renderizado híbrido en un widget de BeyondJS, debemos definir en el `module.json` del módulo una propiedad render, la cual es un objeto con tres posibles entradas:
+
+<CodeBox title="module.json">
+    {`{
+    "widget": {
+        "render": {
+            "ssr": true,
+            "csr": true
+        }
+    }
+}`}
+
+</CodeBox>

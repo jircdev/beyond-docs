@@ -1,0 +1,51 @@
+import { DocHeader, BeyondJS, Subtitle, NextLink, Pretitle, Title, Link, ELink } from "@beyond/docs/components/html";
+import { Code } from "@beyond/docs/code";
+
+<DocHeader pretitle="Tutorial" title="Crear el proyecto" />
+
+En el formulario de creación de proyectos, seleccionaremos el proyecto <strong>Web</strong>. Esto nos llevará a un formulario donde se nos solicitarán los siguientes datos:
+
+-   <strong>Scope:</strong> colocaremos "testing".
+-   <strong>Name:</strong> colocaremos "login".
+-   <strong>Title:</strong> Tutorial beyond.
+-   <strong>Backend:</strong> habilitaremos el botón backend.
+-   <strong>Port:</strong> colocaremos el puerto 6500. Este es el puerto que se utilizará para acceder al proyecto, beyond
+    propone uno por defecto y puede ser modificado si se requiere.
+
+-   <strong>Dependencias:</strong> al final del formulario hay un botón para instalar las dependencias por defecto del proyecto.
+
+Presionaremos el botón "crear".
+
+> El scope y el nombre son datos que permiten identificar el proyecto y que lo dejan listo para que este pueda
+> ser publicado como paquete npm o para importarlo desde otro proyecto. Estas configuraciones pueden hacerse de forma
+> manual, el workspace sólo simplifica el proceso. Puedes ver la explicación de ello
+> en <Link href="/project/config">la sección de Configuración de proyecto.</Link>
+
+Este formulario simplifica el proceso de creacion, internamente lo que sucede es que se crear el archivo
+de configuracion de beyond (beyond.json), el cual registra las aplicaciones en el directorio, tambien se
+crea la estructura base de la aplicacion, la cual se estructura de la siguiente forma:
+
+-   <strong>package.json:</strong> incluye las dependencias del proyecto creado
+
+-   <strong>project.json:</strong> Contiene la configuración básica del proyecto, esta puede variar según el tipo de proyecto
+    y las necesidades del mismo.
+
+-   <strong>template:</strong> Esta carpeta contiene todos los elementos necesarios para definir el template general del
+    proyecto.
+
+           - <strong>template.json:</strong> Archivo que permite realizar ajustes en la configuración
+               del template del proyecto.
+
+En el workspace, tenemos dos lugares para ver el modulo. Enn el board del proyecto, que lista los módulos
+existentes y en el aside del proyecto que permite navegar los archivos del mismo. Como vemos en la
+siguiente imagen
+
+La pantalla de detalle del proyecto nos permite realizar las siguientes acciones:
+
+-   Listar modulos del proyecto
+-   Crear nuevos modulos
+-   Visualizar errores de código en real time.
+-   Editar código fuente
+-   Agregar archivos estaticos y de template.
+-   Realizar configuraciones generales sobre el proyecto.
+-   Realizar deployment.

@@ -1,5 +1,8 @@
 .home__header {
     position: relative;
+    .header__gradient {
+        z-index: -1;
+    }
 }
 
 :host-context(html[data-beyond-mode="dark"]) {

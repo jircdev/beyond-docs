@@ -1,0 +1,82 @@
+import { Link, ELink, NextLinks, DocHeader, BeyondJS, Title, Subtitle } from "@beyond/docs/components/html";
+import { Code, CodeBox } from "@beyond/docs/code";
+
+<DocHeader pretitle="Widgets" title="Controladores" />
+
+Los controladores en <BeyondJS/> son los encargados de gestionar
+el ciclo de vida de los Widgets. Estos permiten crear un ecosistema rico y apropiado
+para las exigencias de las aplicaciones actuales y proveen una API que permite
+una configuración simple para comportamientos sofisticados cómo
+elegir el tipo de Renderizado que se desea utilizar, que puede variar
+entre Renderizado Estático, Renderizado Cliente o Renderizado del lado del
+servidor también conocido cómo SSR.
+
+BeyondJS provee unos controladores bases para los distintos tipos de renderizado
+y estos son extendidos por los paquetes que posibilitan la posibilidad de
+trabajar con librerias de renderizado.
+
+> El presente documento aplica para cualquiera de las librerias, solo se requiere
+> reemplazar la importación y el nombre del Controlador exportado, pero la interfaz es
+> la misma. Por convención y en Pro de un simple entendimiento, los controladores de
+> cada paquete sólo agregan como prefijo el nombre de la libreria a los Controladores.
+
+<Title tag="h2" text="WidgetController" />
+
+> Si haces uso del CLI o el Workspace para crear tus paquetes, el manejo de estas
+> dependencias es realizado de forma automática. Esta documentación está hecha con la intención
+> de que quien la lea pueda entender bien la forma extensible de <BeyondJS/>
+
+Para utilizar los widgets de <BeyondJS/> es necesario tener el paquete `@beyond-js/widgets`
+instalado y a partir de ello, instalar alguno de los siguientes paquetes
+según la libreria que se desee utilizar:
+
+-   <ELink href="https://www.npmjs.com/package/@beyond-js/react-widgets">`@beyond-js/react-widgets`</ELink>
+-   <ELink href="https://www.npmjs.com/package/@beyond-js/svelte-widgets">`@beyond-js/svelte-widgets`</ELink>
+-   <ELink href="https://www.npmjs.com/package/@beyond-js/vue-widgets">`@beyond-js/vue-widgets`</ELink>
+
+<Title tag="h2" text="WidgetController" />
+
+> `ReactWidgetController` en `react-widgets`.
+
+> `VueWidgetController` en `vue-widgets`
+
+> `SvelteWidgetController` en `svelte-widgets`.
+
+La implementación del controlador es requerida para el funcionamiento de los Widgets.
+La estructura es la siguiente:
+
+<Code>
+{`
+import {LibraryWidgetController} from '@beyond-js/kernel/library-widget/ts';
+import {ObjectToRender} from './views/page';
+export /*bundle*/
+class Controller extends LibraryWidgetController {
+    get Widget() {
+        return ObjectToRender;
+    }
+}
+
+`}
+
+</Code>
+
+el getter `Widget` debe definirse y retornar un componente a renderizar, compatible
+con la libreria de vista que se esté usando.
+
+<Title tag="h4" text="Métodos" />
+
+-   `initialise` : Permite agregar lógica a ejecutarse
+    previo al montado del componente web en el DOM HTML y se ejecuta una única vez.
+-   `createStore` : Propiedad requerida si se desea implementar SSR.
+    Permite agregar lógica para el manejo del Estado del widget,
+    debe retornar un objeto con
+    la interfaz <Link href="/docs/api/IwidgetStore">IWidgetStore</Link>.
+
+-   `mount`: Es similar al método initialise, la diferencia es que este método se ejecuta
+    cada vez que el componente es montado en el DOM, mientras que el método initialise sólo
+    se ejecuta al momento en el que se monta el componente por primera vez.
+
+-   `unmount`: Permite ejecutar lógica cuando el componente va a ser desmontado del Documento.
+-   `disconnect`: Es el evento disconnect del Componente Web, se ejecuta cuando el componente es eliminado del dom.
+
+<NextLinks items={["widgets/page", "widgets/layout"]} />

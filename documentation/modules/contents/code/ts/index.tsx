@@ -27,6 +27,7 @@ export /*bundle*/ function ContentsPage({ contentId, component }) {
     useEffect(() => {
         const items: NodeList = shadowRoot.querySelectorAll("h1,h2,h3,h4");
         const onChange = () => {
+            console.log(100, "actualizo.", Contents[name]);
             setComponent(Contents[name]);
             setUpdated(performance.now());
         };

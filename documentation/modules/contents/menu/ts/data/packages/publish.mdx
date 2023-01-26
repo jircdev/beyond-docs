@@ -1,0 +1,24 @@
+import { Link, ELink, DocHeader, Title, Subtitle, BeyondJS } from "@beyond/docs/components/html";
+import { Code } from "@beyond/docs/code";
+
+<DocHeader pretitle="Paquetes" title="Publicación  en NPM" />
+
+Para publicar un paquete en NPM actualmente debes agregar una distribución npm en el `package.json`.
+La distribución debe contener una propiedad "platforms" con un objeto que indique las plataformas que se desean compilar y la distribución asociada
+a esta plataforma.
+
+### Ejemplo
+
+<Code>
+{`
+{
+  "name": "npm",
+  "npm": {
+    "platforms": {
+      "web": "web" //
+    }
+  }
+}
+`}
+
+</Code>

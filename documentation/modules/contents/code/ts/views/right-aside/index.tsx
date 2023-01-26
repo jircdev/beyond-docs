@@ -38,7 +38,8 @@ const RightAside = () => {
                 selected = item;
                 const active = list.find((item) => item.classList.contains("item--active"));
                 if (active) active.classList.remove("item--active");
-                item.classList.add("item--active");
+
+                item.classList?.add("item--active");
             });
         };
 

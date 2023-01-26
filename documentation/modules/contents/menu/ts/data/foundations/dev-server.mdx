@@ -1,0 +1,57 @@
+import { Link, ELink, Title, Subtitle, DocHeader } from "@beyond/docs/components/html";
+import { Code } from "@beyond/docs/code";
+
+<DocHeader id="intro" pretitle="Fundamentos" title="DevServer" />
+
+> En este documento veremos qué es el Dev Server de Beyond, cómo funciona y cómo se configura
+
+<img src="/images/dev-server.jpg" alt="BeyondJS dev server" />
+
+BeyondJS ofrece un servidor de desarrollo que se encarga de proporcionar el código ya empaquetado de los módulos para su uso en el entorno
+en el que se está trabajando. Su función principal es retornar el código en el formato de sistema de resolución de módulos requerido y
+brindar una experiencia fluida y homogénea en el proceso de creación de código.
+
+Además, el DevServer permite ejecutar múltiples proyectos simultáneamente,
+lo que es muy útil en caso de trabajar en varios proyectos al mismo tiempo, cómo casos donde se trabaje con aplicaciones clientes y microservicios
+que se conectan entre sí.
+
+El desarrollador programa utilizando sintaxis de EcmaScript Modules, y el DevServer se encarga de transpilar el código al formato requerido
+y ponerlo a disposición inmediatamente para su uso en el entorno en el que se está programando.
+
+Los sistemas de resolución de módulo soportados por el DevServer de BeyondJS son:
+
+-   CommonJs (CJS).
+-   EcmaScript Modules (ESM).
+-   SystemJS (SJS).
+-   Asyncronous Module Definition (AMD).
+
+El código de los proyectos es empaquetado en base a los módulos definidos, cada módulo genera un bundle independiente, lo que optimiza
+el proceso de carga y mantenimiento, pues la velocidad de arranque y desarrollo se mantiene eficiente al no impactar el crecimiento del proyecto en ella.
+
+<Subtitle text="Configuración" />
+
+El comportamiento del DevServer, se define por medio de la configuración de distribuciones.
+
+Las distribuciones son configuraciones que permiten definir que tratamiento se le desea dar a los paquetes en el entorno de desarrollo.
+
+El programador puede configurar puertos de inspección, tipo de resolución de módulos o comportamiento del compilador de typescript, entre otras cosas.
+
+Por defecto, los proyectos BeyondJS vienen con una distribución ya creada, pero se pueden agregar tantas cómo el programador considere necesarias.
+
+<Code>
+    {` {
+    "name": "web",
+    "platform": "web",
+    "environment": "development",
+    "ports": {
+        "bundles": 3500
+    }
+},
+`}
+</Code>
+
+Un proyecto o paquete soporta múltiples distribuciones configuradas al mismo tiempo, esto provee la posibilidad de
+validar el comportamiento del código bajo diferentes escenarios de forma simple y para integrar funcionalidades de Backend y Frontend en un mismo
+proyecto.
+
+> Para leer más acerca de las distribuciones, puedes dirigirte a la <Link href="/distributions">sección de Distribuciones</Link>.

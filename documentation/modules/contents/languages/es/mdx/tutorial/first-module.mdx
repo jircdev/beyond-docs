@@ -1,49 +1,27 @@
-import { DocHeader, PreTitle, Title, Link, Subtitle, ELink } from '@beyond/docs/components/html';
-import { Code, InlineCode } from '@beyond/docs/code';
+import { DocHeader, PreTitle, Title, BeyondJS, NextLinks, Link, Subtitle, ELink } from "@beyond/docs/components/html";
+import { Code, InlineCode, CodeBox } from "@beyond/docs/code";
 
 <DocHeader pretitle="Tutorial" title="Primer módulo" />
 
-En el workspace, también podemos hacer click sobre el proyecto y esto abrirá un nuevo tab con el listado de módulos del mismo.
-
-Como puede verse, el proyecto trae dos módulos creados, el Home, que responde a la URL base del proyecto y el módulo “start-backend” del cúal se hablará más adelante.
-
-El Workspace nos permite hacer las siguientes acciones sobre un módulo
-
--   Ver y gestionar módulos.
--   Agregar archivos.
--   Editar el código fuente de los archivos.
--   Generar declaraciones.
--   Visualizar errores de código.
--   Gestionar configuraciones generales del proyecto
--   Gestionar Templates
--   Desde el Workspace, podemos también navegar el módulo accediendo desde el menu lateral (PreAside), en el icono del proyecto Activo, que desplegará el aside con el listado de módulos del proyecto, hacemos click sobre el módulo home y se mostrará la lista de bundles contenidos en el módulo y el contenido de estos, procesadores y archivos.
-
-Desde el Workspace, podemos también navegar el módulo accediendo desde el menu lateral (PreAside), en el icono del proyecto Activo, que desplegará el aside con el listado de módulos del proyecto, hacemos click sobre el módulo home y se mostrará la lista de bundles contenidos en el módulo y el contenido de estos, procesadores y archivos.
+Como se puede observar, el proyecto cuenta con dos módulos creados: el Home, que corresponde a la URL base del proyecto, y el módulo "start-backend", del cual se hablará más adelante.
 
 La estructura del módulo `home` es la siguiente:
 
--   widget: Carpeta en donde se encuentra el código del componente page
--   ts:
+-   `widget`: carpeta donde se encuentra el código del componente page.
+-   `ts`:
+    -   `controller.ts`: objeto controlador del componente, necesario para montar el WebComponent en el navegador.
+    -   `views`
+        -   `index.tsx`: componente react que renderiza la página.
+-   `scss`: carpeta para agregar estilos al módulo.
+-   `module.json`: archivo de configuración del módulo (donde se define el tipo de bundles y procesadores a utilizar).
 
-        -   `controller.ts`: Objeto controlador del componente, requerido para poder montar el WebComponent en el navegador.
-        -   `views
-            -   `index.tsx`: Componente react que renderiza la página.
+¡Manos a la obra! Con la estructura clara, lo siguiente es crear el formulario de inicio de sesión y agregar algunos estilos, antes de continuar con la conexión al backend node.
 
--   scss: Carpeta para agregar estilos al módulo.
+<Title tag="h2" text="Creación del Formulario" />
 
--   module.json: Archivo de configuración del módulo (Lugar para definir tipo de bundles y procesadores a utilizar).
+Si has trabajado con React, lo que viene es la parte que probablemente conozcas mejor, con algunas pequeñas diferencias. A continuación, editaremos nuestro archivo `index.tsx` para crear un formulario de inicio de sesión y la funcionalidad básica para actualizar el estado.
 
-¡Manos a la obra!
-
-Teniendo clara la estructura, lo que procede a continuación es crear el formulario de inicio de sesión y agregar algo de estilos, para luego continuar con la conexión al backend node
-
-<Title>Creación del Formulario</Title>
-
-Si has trabajado con React, lo que viene es la parte que seguramente conoces mejor, con algunas sutilezas seguramente. A continuación, editaremos nuestro archivo page.tsx para crear un formulario de inicio de sesión y la funcionalidad básica para actualizar el estado.
-
-La edición puede hacerse desde tu IDE de preferencia y también desde el Editor integrado del Workspace, el cual tiene como finalidad brindar ayuda para casos especificos al desarrollador, pero para efectos del tutorial recomendamos usarlo, basta con hacer click en el archivo requerido desde el aside.
-
-<Code>
+<CodeBox title="index.tsx" language="jsx">
 {`
 import * as React from 'react';
 
@@ -87,54 +65,56 @@ function View(): JSX.Element {
     );
 }
 `}
-</Code>
+</CodeBox>
 
-<Title>Estilos</Title>
+> Si navegamos nuestro proyecto en [http://localhost:6510/](http://localhost:6510/) podremos ver ya nuestro formulario funcionando, pero sin diseño, lo que agregaremos en la siguiente sección.
 
-BeyondJS maneja los estilos por defecto con el preprocesador SASS, ahora vamos a nuestro archivo styles.scss y agreguemos un poco de estilo al formulario.
+<Title tag="h2" text="Estilos" />
 
-<div className="block__note">
-	SASS es un procesador en BeyondJS, si quieres leer a profundidad sobre el mecanismo de procesadores podrás encontrar los detalles en <Link to="/docs/processors">La seccion de procesadores</Link>
-</div>
+Los estilos en <BeyondJS/> son manejados por defecto con el preprocesador SASS.
 
-<Code>
+A continuación, vamos a nuestro archivo `styles.scss` y agreguemos algo de estilo al formulario.
+
+> SASS es un procesador en BeyondJS, si quieres leer a profundidad sobre el mecanismo de procesadores podrás encontrar más detalles en [La sección de procesadores](/docs/modules/processors)
+
+<CodeBox title="styles.scss">
 {`
 .page\_\_container {
-display: flex;
-padding: 20px;
-height: 100%;
-margin: 0;
-flex-direction: column;
-align-items: center;
-align-content: center;
-justify-content: center;
+  display: flex;
+  padding: 20px;
+  height: 100%;
+  margin: 0;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
 
-.form\_\_error {
-padding: 15px;
-display: grid;
-background: var(--error);
-color: var(--text-on-primary);
-}
-
-form {
-display: flex;
-flex-direction: column;
-gap: 15px;
-background: var(--bg-element);
-padding: 30px;
-width: 100%;
-max-width: 500px;
-
-    input {
-      padding: 8px;
-      border: 1px solid var(--gray-light);
-      transition: all 300ms ease-in;
-
-      &:hover, &:focus {
-        outline: none;
-        border-color: var(--primary);
-      }
+    .form\_\_error {
+      padding: 15px;
+      display: grid;
+      background: var(--error);
+      color: var(--text-on-primary);
     }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      background: var(--bg-element);
+      padding: 30px;
+      width: 100%;
+      max-width: 500px;
+
+      input {
+        padding: 8px;
+        border: 1px solid var(--gray-light);
+        transition: all 300ms ease-in;
+
+        &:hover, &:focus {
+          outline: none;
+          border-color: var(--primary);
+        }
+      }
 
     .form__actions {
       display: flex;
@@ -160,15 +140,42 @@ max-width: 500px;
     }
 
 }
-
 }
+
 `}
 
-</Code>
+</CodeBox>
 
 Expliquemos un poco el código anterior:
 
--   Agregamos estilo básico al formulario, los inputs, el botón de envío y para manejar un mensaje de error.
--   Custom properties: las custom properties utilizadas, son una estructura básica para manejo de variables incluidas por beyond en el <Link to="/template">Template del proyecto.</Link>
+-   Agregamos estilo básico al formulario, los inputs, el botón de envío y
+    para manejar un mensaje de error.
+-   Custom properties: las custom properties utilizadas son una estructura básica para el manejo de variables incluidas por BeyondJS en el [Template del proyecto](/frontend/template).
 
--   <Link to="/docs/tutorial/backend">Backend</Link>
+<Title tag="h3" text="Entendiendo la estructura de BeyondJS" />
+
+Hay dos puntos clave que es importante destacar hasta ahora para comprender el valor de lo que se ha hecho.
+
+#### La página es un microfrontend.
+
+Puedes verificarlo si abres el analizador de código, podrás notar una etiqueta `<app-home/>` que encapsula el contenido del módulo creado.
+
+#### El módulo es empaquetado de forma independiente.
+
+Cada bundle incluido en un módulo de <BeyondJS/> es empaquetado de forma individual y los
+estilos de estos generan una hoja de estilo independiente.
+
+Puedes navegar el código CSS y JS generados de forma independiente accediendo a:
+
+-   bundle CSS: <ELink href="http://localhost:6510/home.css">http://localhost:6510/home.css</ELink>
+-   bundle JS: <ELink href="http://localhost:6510/home.js">http://localhost:6510/home.js</ELink>
+
+> El código empaquetado en el entorno de desarrollo no posee optimizaciones para poder hacer
+> debug de forma sencilla si es necesario. En el proceso de despliegue, los bundles se generan
+> también de forma independiente pero con las optimizaciones necesarias para un entorno productivo.
+> Además, <BeyondJS/> puede también generar las declaraciones de tipos del módulo. Puedes leer
+> sobre esto en <Link href="/docs/modules/bundles">la sección de bundles</Link>.
+
+Ahora viene la mejor parte: conectarnos con websocket a un servicio en node.
+
+<NextLinks items={["tutorial/backend"]} />
