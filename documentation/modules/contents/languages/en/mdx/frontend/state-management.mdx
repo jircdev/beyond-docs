@@ -1,19 +1,17 @@
-import { Title } from "@beyond/docs/components/html";
-import { Code } from "@beyond/docs/code";
-import { Link } from "@beyond/docs/components/html";
+import { Title } from '@beyond/docs/components/html';
+import { Code } from '@beyond/docs/code';
+import { Link } from '@beyond/docs/components/html';
 
-<Title>Manejo de Estados</Title>
+<Title>State management</Title>
 
-El estado es la representación de los valores renderizados de un componente o widget en pantalla.
-Este puede mutar y variar por diversos factores, tales como la actualización de datos desde un servidor o la interacción del usuario.
+State represents the values rendered by a component or widget on the screen.
+It can change and vary due to various factors, such as updating data from a server or user interaction.
 
-Existen numerosas librerias para la gestión de estado de un proyecto, generalmente asociadas
-al <Link href="/docs/widgets">Framework de vista</Link> que se esté utilizando. BeyondJS permite integrar la herramienta para manejo de estados que se desee, siempre que esta este preparada para el funcionamiento modular.
+There are numerous libraries for managing the state of a project, generally associated with the <Link href="/docs/widgets">view framework</Link> being used. BeyondJS allows integrating the desired state management tool, as long as it is prepared for modular operation.
 
-Puedes ver un ejemplo funcional de un contador que comparte el manejo de estado entre un componente creado con
-**React**, uno creado con **Svelte** y otro con **Vue** en <Link href="/examples/sm/counter">Este ejemplo.</Link>
+You can see a functional example of a counter that shares state management between a component created with **React**, one created with **Svelte** and one with **Vue** in <Link href="/examples/sm/counter">This example.</Link>
 
-Asimismo, BeyondJS Define una estructura para el manejo de estado.
-El objeto que maneja el estado, debe ser disponibilizado por medio del método createWidgetStore del controlador del widget.
-Este método debe retornar un objeto que implemente la interfaz <Link href="/api/IWidgetStore">IWidgetStore</Link>,
-esencialmente si se espera trabajar con ssr.
+Also, BeyondJS defines a structure for state management.
+The object that manages the state must be made available through the createWidgetStore method of the widget controller.
+This method must return an object that implements the <Link href="/api/IWidgetStore">IWidgetStore</Link> interface,
+essentially if working with ssr is expected.

@@ -1,8 +1,6 @@
-import { Link, ELink, NextLinks, DocHeader, BeyondJS, Title, Subtitle } from "@beyond/docs/components/html";
-import { Code, CodeBox } from "@beyond/docs/code";
+import { Link, ELink, NextLinks, DocHeader, BeyondJS, Title, Subtitle } from '@beyond/docs/components/html';
+import { Code, CodeBox } from '@beyond/docs/code';
 
--   toJSON: Se ejecuta unicamente en el servidor. Es el encargado de serializar
-    el store y mandarlo al cliente para hidratar el contenido.
--   hydrate: Prepara el store en el cliente y recibe lo que toJSON envia.
--   fetch: Permite agregar lógica para componer los datos del store en su instancia inicial.
-    es una funcion asincronica cuando estas en el servidor.,
+-   toJSON: Only runs on the server. It is responsible for serializing the store and sending it to the client to hydrate the content.
+-   hydrate: Prepares the store on the client and receives what toJSON sends.
+-   fetch: Allows adding logic to compose the data of the store in its initial instance. It is an asynchronous function when you are on the server.
