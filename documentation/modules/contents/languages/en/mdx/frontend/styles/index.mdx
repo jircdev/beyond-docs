@@ -1,14 +1,13 @@
-import { Title } from "@beyond/docs/components/html";
-import { Code } from "@beyond/docs/code";
-import { Link, ELink } from "@beyond/docs/components/html";
+import { Link, ELink, NextLinks, DocHeader, BeyondJS, Title, Subtitle } from "@beyond/docs/components/html";
+import { Code, CodeBox } from "@beyond/docs/code";
 
-<Title>Estilos en el template</Title>
+<DocHeader pretitle="Widgets" title="Estilos en el template" />
 
-El manejo de estilos en el sistema de Template de BeyondJS se realiza por medio de la configuración del procesador de estilos sass, esta configuración se realiza en dos niveles básicamente:
+The handling of styles in the BeyondJS template system is done through the configuration of the sass style processor. This configuration is carried out at two basic levels:
 
 **template.json**
 
-<Code>
+<CodeBox title="template.json">
 {`
 {
   "application": {
@@ -29,19 +28,19 @@ El manejo de estilos en el sistema de Template de BeyondJS se realiza por medio 
 
 `}
 
-</Code>
+</CodeBox>
 
-El código anterior, es la configuración por defecto de la plantilla de los proyectos web. Básicamente se está configurando el procesador sass para las plantillas de aplicación y global. A continuación se describe la finalidad de ambas.
+The above code is the default configuration for web project templates. Essentially, it's setting up the Sass processor for both the application and global templates. The purpose of each is described below.
 
-En esta página se asume que el template se encuentra en una carpeta con dicho nombre en la raiz del proyecto, si se hizo un cambio en la configuración por defecto deberá considerarse la ubicación configurada.
+This page assumes that the template is located in a folder with that name at the root of the project. If the default configuration has been changed, the configured location should be considered.
 
-**template.application**
+<Title tag="h3" text="template.application" />
 
-La propiedad application representa al archivo styles.css incluido en los proyectos con plataforma web. Está contemplada para agregar algún estilo general del documento y la definición de <ELink to="https://developer.mozilla.org/en-US/docs/Web/CSS/--*">propiedades personalizadas</ELink> para que esten disponibles en todos los widgets.
+The application property represents the `styles.css` file included in web platform projects. It is intended for adding general document styles and custom property definitions that are available to all widgets.
 
-Las **propiedades personalizadas** son los únicos valores de estilos que pueden ser compartidos entre los widgets ya que estos se incluyen por medio de Componentes Web con Shadow DOM.
+Custom properties are the only style values that can be shared between widgets because they are included via web components with Shadow DOM.
 
-La configuración por defecto de estilos para template.application, incluye todos los archivos scss que se encuentren en el directorio `./template/application` adentro del proyecto.
+The default style configuration for `template.application` includes all .scss files found in the `./template/application` directory within the project.
 
 Estos son:
 
@@ -52,13 +51,12 @@ Estos son:
 -   ./custom-properties/material-design.scss: incluye las propiedades css del sistema de colores de material design.
 -   ./custom-properties/definition.scss: incluye la definición de las propiedades personalizadas css que integra el uso de los mixins definidos en los archivos `dark.scss` y `light.scss`
 
-El programador puede editar o agregar cualquier archivo adicional de estilos y este será integrado de forma automática debido a que en la configuración se tiene agregado un "\*" que indica que todos los archivos dentro de la carpeta deben ser procesados.
+The programmer can edit or add any additional style files and they will be automatically integrated because the configuration has added a "\*" which indicates that all files within the folder should be processed.
 
 **template.global**
 
-La propiedad global representa al archivo global.css que a diferencia del styles.css, tiene como finalidad compartir estilos que el desarrollador considere globales y por tanto deban poder ser compartidos por todos los widgets. Para lograr esto, el archivo final es incluido dentro de los estilos de cada widget.
+The global property represents the global.css file, which unlike styles.css, is intended to share styles that the developer considers global and therefore should be able to be shared by all widgets. To achieve this, the final file is included within the styles of each widget.
 
-El igual que con la propiedad application, por defecto se incluyen todos los archivos que se encuentren adentro de la carpeta /global y de base sólo viene incluido un archivo`styles.scss`
+Just like with the application property, by default all files found inside the /global folder are included and by default only one file styles.scss is included.
 
--   <Link href="/docs/estyles/modules">Estilo en los módulos</Link>
--   <Link href="/docs/template">Template</Link>
+<NextLinks items={["styles/modules", "docs/template"]} />

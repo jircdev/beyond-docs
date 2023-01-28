@@ -1,0 +1,19 @@
+import { Title, Subtitle } from "@beyond/docs/components/html";
+
+All bundles automatically expose an hmr object that allows the developer to subscribe to code changes and thus persist the state of the project in which it is, optimizing the development process, since it avoids the need to repeat the flows again to reach the current state.
+
+To explain it better, let's suppose that a database element filtering logic is being performed in a backend module, this module performs the following steps:
+
+-   Performs the login against the database.
+-   Performs two database queries.
+-   It returns the available information for the programmer to work with it.
+-   It generates a data structure in which all the consulted information is integrated to be returned to the client.
+
+The developer's change subscription with hmr allows him to focus on the last point without having to repeat the first three for each change, which means a very high optimization in testing time.
+
+The implementation of hmr is responsible for automatically replacing the content of a file at the same time it is changed, leaving immediately available the update of the same, without the need for any additional action and also, the programmer can subscribe to these changes to define what to do from them, offering the versatility to run functions automatically to each change.
+
+<Subtitle>Events</Subtitle>
+
+-   change
+-   change:[processor-name]

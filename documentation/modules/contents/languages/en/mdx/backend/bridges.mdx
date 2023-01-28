@@ -1,0 +1,88 @@
+import { NextLinks, Link, ELink, DocHeader, Title, Subtitle, BeyondJS } from '@beyond/docs/components/html';
+import { CodeBox, Code } from '@beyond/docs/code';
+
+<DocHeader pretitle="Backend" title="Bridges" />
+
+Bridges in BeyondJS are a powerful tool that
+allows you to optimize your development to the maximum.
+
+A bridge is a special type of Bundle that allows you to create code on the server-side that BeyondJS generates in
+server-side code and BeyondJS automatically generates an API mode object.
+API mode object. This way, you can consume the exported methods remotely via websockets.
+remotely via websockets.
+
+You can import the bundle from another service or from a code
+client code and have direct access to the defined methods, with built-in data typing and
+data typing and validations built in. This means that you only need to
+only need to write the code once, saving you time and effort in your
+time and effort in your development.
+
+> Of course, the generated api only has the specification of the methods and the websocket connection to the bridge.
+> the websocket connection to the bridge, the logic is encapsulated in the code
+> server.
+
+In this section of the documentation you will learn how to create and consume > bridges in BeyondJS, as well as how to create and consume
+bridges in BeyondJS, as well as recommendations and examples to get the most out of this tool.
+to get the most out of this tool.
+
+<Title tag="h2" text="Create a bridge" />
+
+Are you ready to get the most out of BeyondJS and optimize your projects with bridges?
+Here we'll show you a step-by-step tutorial on how to create a bridge
+step-by-step tutorial to create a bridge and export your methods easily and quickly!
+and fast!
+
+<Title tag="h4" text="Module creation" />
+
+To give context to the process, let's imagine that you are
+coding in a package whose name is "awesome-api".
+
+1. Make sure you are in the root of your project at the level of the `package.json` file.
+   `package.json`.
+
+2. Open the terminal and execute the command `beyond add module`.
+
+    This command is interactive, which means that it requires a > console with interactive capabilities for its correct execution.
+
+    > console with interactive functionalities for its correct execution.
+    > If you do not have an interactive console, it is recommended to > create the module using the Workspace.
+    > create the module using the <BeyondJS/> Workspace or.
+    > manually <Link href="/docs/modules/creation">following the steps detailed in the documentation.</Link>.
+
+3. The command will prompt for the subpath, this is the name of the module
+   which will be used to export it later.
+4. select `bridge` as the type of bundle to create.
+
+<Title tag="h4" text="Bridge code" />
+
+Once created, open the `.ts` file of the module and create the object with the methods you want to export.
+object with the methods you want to export.
+In order for <BeyondJS/> to generate the client-side bridge you must
+export the object by adding the
+magic /\*bundle\*/ after the "exports" keyword.
+
+Your bridge code should look similar to the following:
+
+<CodeBox title="bridge.ts">
+	{`export /*actions*/ /*bundle*/ class Auth {
+    // métodos y definiciones
+}`}
+</CodeBox>
+
+In the example code, we show how to export a class to be instantiated as a bridge.
+instantiated as a bridge. However, it is possible to export an already instantiated
+object or a flat object directly as a bridge.
+This is done by adding the corresponding magic comments
+(/\*bundle\*/ /\*actions\*/) to the export expression. The process of
+import and use of the bridge remains the same, regardless of whether or not you are
+whether you are working with a class or an object.
+
+<Title tag="h4" text="Module import" />
+
+To use your methods in other modules, import the bridge
+using the bare-specifier, i.e., using the package name
+followed by the corresponding subpath. As shown below:
+
+<Code>{`import {auth} from 'awesome-api/auth';`}</Code>
+
+<NextLinks items={['backend/debug', 'backend/ssrserver']} />

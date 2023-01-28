@@ -1,73 +1,73 @@
-import { DocHeader, BeyondJS, Subtitle, Pretitle, NextLinks, Title, Link, ELink } from "@beyond/docs/components/html";
-import { Code } from "@beyond/docs/code";
+import { DocHeader, BeyondJS, Subtitle, Pretitle, NextLinks, Title, Link, ELink } from '@beyond/docs/components/html';
+import { Code, CodeBox } from '@beyond/docs/code';
 
-<DocHeader pretitle="Tutorial" title="Proyecto Web con Backend" />
+<DocHeader pretitle="Tutorial" title="Web proyect width Backend Integration" />
 
-<Title tag="h4">Antes de Empezar</Title>
+<Title tag="h4">Before you start</Title>
 
-> Este tutorial busca el flujo principal de desarrollo con **BeyondJS** y
-> demostrar de manera clara los
-> beneficios que este ofrece. El propósito de este tutorial es que los
-> usuarios/programadores puedan aprender mientras practican, por tanto, los
-> conceptos que definen la estructura de **BeyondJS** son abordados de forma general,
-> focalizando en hacer un ejercicio rápido, conciso y claro. Para mayor entendimiento de
-> los algunos conceptos, es necesario acceder a las secciones correspondientes
-> en la documentación.
+> This tutorial looks at the main flow of development with **BeyondJS** and.
+> demonstrate in a clear way the
+> benefits it offers. The purpose of this tutorial is so that users/programmers can learn
+> users/programmers can learn while practicing, therefore, the > concepts that define the **BeyondJS** framework.
+> concepts that define the structure of **BeyondJS** are addressed in a general way,
+> focusing on making a quick, concise and clear exercise. For a better understanding of
+> some concepts, it is necessary to access the corresponding sections > in the documentation.
+> in the documentation.
 
 <Title tag="h3" text="Prerequisitos" />
 
-Para ejecutar el presente tutorial se requiere:
+To run this tutorial you need:
 
--   Tener instalado Node.js 16.x
--   tener conocimientos básicos sobre la consola de comandos.
+-   To have Node.js 16.x installed.
+-   have basic knowledge of the command console.
 
-Adicionalmente, se recomienda usar <ELink href="https://code.visualstudio.com/">vscode</ELink> para
-poder seguir el tutorial paso a paso. Sin embargo se puede utilizar cualquier otro editor.
+Additionally, it is recommended to use <ELink href="https://code.visualstudio.com/">vscode</ELink> to follow the tutorial step by step.
+to follow the tutorial step by step. However any other editor can be used.
 
-<Title tag="h2" text="Empezando" />
+<Title tag="h2" text="Getting started" />
 
-Lo primero que realizaremos es crear nuestro proyecto. Para ello debemos abrir la consola de comandos
-en la carpeta en la que deseemos y ejecutar el siguiente comando:
+The first thing we will do is to create our project. To do this we must open the command console
+in the folder where we want and execute the following command:
 
 <Code>npx @beyond-js/create-package</Code>
 
-Este comando es interactivo y solicitará algunos datos para definir nuestro paquete o proyecto.
-Los datos que pide son los siguientes:
+This command is interactive and will request some data to define our package or project.
+The data requested are the following:
 
--   Package specifier: Corresponde al nombre de nuestro paquete, para efectos de este tutorial
-    nuestro paquete se llamará: 'beyond-web-tutorial'.
--   Package type: Corresponde al tipo de proyecto a crear, seleccionaremos `web-backend` que contiene
-    los paquetes para implementar una conexión entre un servicio node y nuestro proyecto web por medio de websockets,
-    como vermos más adelante.
-    ondJS de manera local y generar la estructura inicial de nuestro proyecto.
--   Preguntará si deseamos instalar las dependencias, seleccionamos que sí.
+-   Package specifier: It corresponds to the name of our package, for the purposes of this tutorial
+    our package will be called: 'beyond-web-tutorial'.
+-   Package type: It corresponds to the type of project to create, we will select `web-backend` which contains
+    the packages to implement a connection between a node service and our web project through websockets,
+    as we will see later.
+    OndJS locally and generate the initial structure of our project.
+-   It will ask if we want to install the dependencies, we select yes.
 
-¡Listo! nuestro proyecto se ha creado. A continuación abriremos nuestro editor de texto en el directorio
-donde ejecutamos el comando
+Ready! our project has been created. Next we will open our text editor in the directory
+directory where we execute the command
 
 <Code>code .</Code>
 
-Al abrirlo podremos ver que tenemos la siguiente estructura:
+When we open it we can see that we have the following structure:
 
--   **beyond.json:** Archivo para manejar el servidor de desarrollo, gestionado por BeyondJS.
--   **packages.json:** Este archivo registra los proyectos a los que el DevServer tiene acceso,
-    generalmente es gestionado de forma directa por <BeyondJS/>.
--   **beyond-js-tutorial**: La carpeta de nuestro paquete y proyecto.
+-   **beyond.json:** File to manage the development server, managed by BeyondJS.
+-   **packages.json:** This file records the projects that the DevServer has access to,
+    usually managed directly by <BeyondJS/>.
+-   **beyond-js-tutorial**: The folder of our package and project.
 
-    -   **package.json**: Archivo del paquete javascript.
-    -   **/modules:** Carpeta en donde se crean los módulos del proyecto por defecto. Este valor es configurable, puedes leer más de ello en la sección de <Link href="/docs/projects/json">Configuración de Proyectos.</Link>
-    -   **template:** Esta carpeta contiene todos los elementos necesarios para definir el template general del proyecto.
+    -   **package.json**: javascript package file.
+    -   **/modules:** Folder where the modules of the project are created by default. This value is configurable, you can read more about it in the <Link href="/docs/projects/json">Project Configuration section.</Link>.
+    -   **template:** This folder contains all the elements needed to define the overall project template.
 
-        -   **template.json:** Archivo que permite realizar ajustes en la configuración del template del proyecto.
+        -   **template.json:** File that allows you to make adjustments to the project template configuration.
 
-> Si deseas puedes conocer las diferencias sobre los tipos de proyectos
-> en <Link href="/docs/packages/types"> la sección correspondiente de la documentación.</Link>
+> If you wish you can learn about the differences between project types
+> in <Link href="/docs/packages/types"> the corresponding section of the documentation.</Link>.
 
-A continuación, debemos iniciar <BeyondJS/>, para ello ejecutamos el siguiente comando:
+Next, we must start <BeyondJS/>, for this we run the following command:
 
 <Code language="shel">beyond run</Code>
 
-Al ejecutarlo, debe aparecer el siguiente mensaje en la consola de comandos:
+When executed, the following message should appear in the command console:
 
 ```
 Follow the link to manage your packages with the workspace:
@@ -75,8 +75,8 @@ https://workspace.beyondjs.com?port=4000
 
 ```
 
-¡Listo! Ya podemos acceder a nuestro proyecto en <ELink href="http://localhost:6500/">http://localhost:6500/</ELink>
+Done! We can now access our project at <ELink href="http://localhost:6500/">http://localhost:6500/</ELink>.
 
-A continuación vamos a crear nuestro primer módulo.
+Next we are going to create our first module.
 
-<NextLinks items={["tutorial/first-module", "tutorial/backend"]} />
+<NextLinks items={['tutorial/first-module', 'tutorial/backend']} />

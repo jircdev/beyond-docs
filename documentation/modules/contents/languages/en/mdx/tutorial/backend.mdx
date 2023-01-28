@@ -1,41 +1,41 @@
-import { DocHeader, BeyondJS, Title, ELink, NextLinks, Subtitle, Link } from "@beyond/docs/components/html";
-import { Code, CodeBox } from "@beyond/docs/code";
+import { DocHeader, PreTitle, Title, BeyondJS, NextLinks, Link, Subtitle, ELink } from "@beyond/docs/components/html";
+import { Code, InlineCode, CodeBox } from "@beyond/docs/code";
 
-<DocHeader title="Código Backend" pretitle="Tutorial" />
+<DocHeader pretitle="Tutorial" title="Backend Code" />
 
-A continuación, crearemos el código Backend para nuestro módulo.
-Se tratará de una API simple que verificará si los datos ingresados son válidos o no.
-Notarás la sencillez con la que se puede implementar una conexión WebSocket entre un cliente y un servidor
-y cómo todo funciona con HMR sin necesidad de reiniciar ningún servicio.
+Next, we will create the Backend code for our module.
+This will be a simple API that will check if the data entered is valid or not.
+You will notice how simple it is to implement a WebSocket connection between a client and server
+and how everything works with HMR without the need to restart any services.
 
 <Title tag="h2" text="Creando módulo Bridge" />
 
-Lo primero que haremos será crear un nuevo módulo de tipo Bridge.
+The first thing we will do is to create a new Bridge module.
 
-Para comenzar, crearemos un nuevo módulo de tipo Bridge. Abrimos la consola en la carpeta del
-proyecto (donde se encuentra el archivo `package.json`) y ejecutamos el siguiente comando:
+To begin, we will create a new Bridge module. We open the console in the
+project folder (where the `package.json` file is located) and execute the following command:
 
 <Code>beyond add module</Code>
 
-El cómando nos solicitará los siguientes datos:
+The command will ask for the following data:
 
--   **subpath**: agregaremos "auth". Este valor corresponde al subpath del
-    módulo y tiene relación directa con el valor del entry point "exports" en el `package.json`
--   **about**: "Módulo backend para validar inicio de sesión".
+-   **subpath**: we will add "auth". This value corresponds to the subpath of the
+    module and it is directly related to the value of the entry point "exports" in the `package.json`.
+-   about\*\*: "Backend module to validate login".
 
-Una vez ejecutado el comando, podremos ver que se ha creado nuestro módulo en el directorio modules/auth de nuestro proyecto.
+Once the command is executed, we will be able to see that our module has been created in the modules/auth directory of our project.
 
-<Title tag="h3" text="Estructura del Bridge" />
+<Title tag="h3" text="Bridge structure" />
 
 #### `module.json`
 
-Este es el archivo de configuración de nuestro módulo. Todos los módulos en <BeyondJS/>
-poseen uno.
+This is the configuration file for our module. All the modules in <BeyondJS/>
+have one.
 
 <CodeBox title="auth/module.json">
     {`{
   "name": "auth",
-  "description": "Modulo backend para validar inicio de sesion",
+  "description": "backend module to validate login",
   "bridge": {
     "path": "bridge",
     "files": [
@@ -48,15 +48,15 @@ poseen uno.
 }`}
 </CodeBox>
 
-En este caso, se presenta un archivo de configuración para un módulo de BeyondJS llamado "auth".
-En este archivo se especifica que el módulo es de tipo "bridge", y que todos los archivos de esa
-carpeta formarán parte del bundle. Además, también se indica que el módulo es compatible con todas las plataformas.
+In this case, a configuration file for a BeyondJS module called "auth" is presented.
+This file specifies that the module is of type "bridge", and that all files in this folder will be part of the bundle.
+folder will be part of the bundle. In addition, it also states that the module is cross-platform compatible.
 
-#### Archivo index.ts
+#### File index.ts
 
 <CodeBox title="bridge/index.ts">
 
-{`//your code here
+{`///your code here
 
 export /*actions*/ /*bundle*/
 class Bridge {
@@ -66,21 +66,21 @@ class Bridge {
 
 </CodeBox>
 
-En el archivo index.ts del bridge, se incluyen dos comentarios especiales,
-los cuales son importantes para la funcionalidad del módulo.
+In the bridge index.ts file, two special comments are included,
+which are important for the functionality of the module.
 
-El primer comentario, {`/\*actions\*/`}, indica que el módulo contiene métodos que serán consumidos a
-través de una conexión WebSocket desde un proyecto cliente u otro servicio.
+The first comment, {`//\*actions*/`}, indicates that the module contains methods that will be consumed through a WebSocket connection from a client project or another service.
+through a WebSocket connection from a client project or other service.
 
-El segundo comentario, {`/\*bundle\*/`}, indica que el objeto del archivo podrá ser consumido desde
-otro módulo y debe ser agregado en los exports del archivo package.json.
+The second comment, {`/\/\*bundle\*/`}, indicates that the object in the file may be consumed from
+another module and must be added in the exports of the package.json file.
 
-<Title tag="h3" text="Lógica Backend" />
+<Title tag="h3" text="Backend Logic" />
 
-En el archivo `bridge/index.tx` agregaremos un objeto `data` que nos servirá de "base de datos" para el ejemplo.
+In the `bridge/index.tx` file we will add a `data` object that will serve as the "database" for the example.
 Este archivo poseerá los valores del usuario y la clave válidos.
 
-También agregaremos un método login que reciba los parametros usuario y clave para verificar si los datos pasados son válidos o no.
+We will also add a login method that will receive the user and password parameters to verify if the passed data are valid or not.
 
 <Code>
 {`
@@ -110,26 +110,26 @@ class Auth {
 
 </Code>
 
-Parece simple ¿Verdad? ¡Acá está lo importante!
+Sounds simple, doesn't it? Here's the important part!
 
-Al crear un bundle de tipo Bridge <BeyondJS/> crea de forma automática el código cliente
-para conectarnos al backend y consumir la API provista.
+When you create a bundle of type Bridge <BeyondJS/> it automatically creates the client code
+to connect to the backend and consume the provided API.
 
-Ahora solo necesitamos importar el bundle en nuestro módulo home e integrar la l´gocia de validación.
+Now we just need to import the bundle into our home module and integrate the validation link.
 
-<Title tag="h2" text="Integración en el módulo cliente" />
+<Title tag="h2" text="Client module integration" />
 
-Ahora importamos el módulo `auth` desde el componente principal de nuestro módulo home `home`.
+Now we import the `auth` module from the main component of our home module `home`.
 
 <CodeBox title="home/ts/views/index.tsx">{`import {Auth} from "beyond-js-tutorial/home/bridge";`}</CodeBox>
 
-Algunos puntos a destacar de la línea de código anterior.
+Some points to highlight from the previous line of code.
 
--   El import se realiza por medio del Bare Identifier del módulo, el cúal corresponde al nombre del proyecto y el subpath del módulo.
--   La importación de módulos está basada en ESM, pero por compatibilidad con navegadores que aún no soportan
-    los importmaps, actualmente BeyondJS hace uso de SystemJS.
+-   The import is done by means of the Bare Identifier of the module, which corresponds to the name of the project and the subpath of the module.
+-   The import of modules is based on ESM, but for compatibility with browsers that do not yet support
+    importmaps, currently BeyondJS makes use of SystemJS.
 
-Ahora agreguemos la función `onSubmit` al formulario y la lógica para integrar el cliente y el backend.
+Now let's add the `onSubmit` function to the form and the logic to integrate the client and the backend.
 
 <CodeBox title="home/ts/viewes/index.tsx">
 
@@ -192,23 +192,24 @@ export /\*page\*/ function View(): JSX.Element {
 
 </CodeBox>
 
-Es tiempo de probar nuestro formulario.
-Si agregamos los datos correctos, podremos ver que en la consola del navegador aparece el mensaje que
-indica que los datos fueron validados y se puede iniciar sesión, si por el contrario,
-agregamos datos incorrectos, podremos ver como aparece el mensaje de error
-"Invalid data" el cual actualizamos en la variable de estado del componente.
+It is time to test our form.
+If we add the correct data, we will be able to see in the browser console the message that the data was validated and you can log in.
+that the data was validated and you can log in, if on the contrary,
+If we add incorrect data, we will be able to see how the error message "Invalid data" appears.
+"Invalid data" which we update in the component status variable.
 
-#### Resumen:
+<Title tag="h4" text="Summary" />{" "}
 
--   Creamos un módulo con un widget de tipo page.
--   Creamos una conexión con un backend node por medio del bundle bridge.
--   Repasamos la estructura de resolución de módulos para importar el bridge Auth y poder agregar la validación de inicio de sesión.
--   Ahora solo nos falta redireccionar al usuario a una pantalla de bienvenida.
+-   We create a module with a widget of type page.
+-   We create a connection with a backend node through the bundle bridge.
+-   We reviewed the module resolution structure to import the Auth bridge and to be able to add the login validation.
+-   Now we just need to redirect the user to a welcome screen.
 
-> ##### ¡Ya te conectaste al Backend!
+> ##### You are now connected to the Backend!
 >
-> Es importante recalcar que en el código anterior realizamos ya una integración de forma directa entre el paquete que
-> consume y el paquete que provee la información. Puedes leer detenicamente toda esta información
-> en <Link href="docs/modules/bridges"/>la sección dedicada a Bridges de esta documentación
+> It is important to emphasize that in the previous code we have already made a direct integration between the package that
+>
+> > consumes and the package that provides the information. You can read all this information in detail
+> > in <Link href="docs/modules/bridges"/>the Bridges section of this documentation.
 
 <NextLinks items={["tutorial/routing"]} />

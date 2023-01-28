@@ -1,14 +1,14 @@
 import {
-    Title,
-    Subtitle,
-    ObjectProperty,
-    ItemProperty,
-    DocHeader,
-    Link,
-    ELink,
-    Table,
-} from "@beyond/docs/components/html";
-import { Code } from "@beyond/docs/code";
+	Title,
+	Subtitle,
+	ObjectProperty,
+	ItemProperty,
+	DocHeader,
+	Link,
+	ELink,
+	Table,
+} from '@beyond/docs/components/html';
+import { Code, CodeBox } from '@beyond/docs/code';
 
 <DocHeader id="intro" pretitle="Fundamentos" title="Distribuciones" />
 
@@ -28,7 +28,7 @@ del entry point `development`.
 Un ejemplo de una distribución es:
 
 <Code>
-    {` {
+	{` {
     "name": "web",
     "platform": "web",
     "environment": "development",
@@ -56,10 +56,10 @@ Un ejemplo de una distribución es:
     actualmente soporta las siguientes propiedades:
 
     -   <ItemProperty type="string" optional label="compiler">
-            acepta los valores `ts` y `transpiler`.
+        	acepta los valores `ts` y `transpiler`.
         </ItemProperty>
 
 -   <ItemProperty type="string" optional label="backend">
-        Esta propiedad es requerida si el paquete utiliza una conexión con un backend por medio de websockets. Puedes
-        leer más acerca de esto en la <Link href="/bridges">sección de Bridges</Link> .
+    	Esta propiedad es requerida si el paquete utiliza una conexión con un backend por medio de websockets. Puedes
+    	leer más acerca de esto en la <Link href="/bridges">sección de Bridges</Link> .
     </ItemProperty>

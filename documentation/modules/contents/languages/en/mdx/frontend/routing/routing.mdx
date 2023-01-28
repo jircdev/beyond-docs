@@ -1,21 +1,23 @@
 import { Link, ELink, NextLinks, DocHeader, BeyondJS, Title, Subtitle } from "@beyond/docs/components/html";
 import { Code, CodeBox } from "@beyond/docs/code";
 
-<DocHeader pretitle="Widgets" title="Controladores" />
+<DocHeader pretitle="Widgets" title="Controllers" />
 
-BeyondJS tiene un manejo de rutas simple y potente al mismo tiempo. Para la mayoría de los casos,
-las URLs pueden ser definidas en la configuración de
-los <Link href="/widgets/pages">widgets de tipo page</Link>, por medio de la propiedad URL, pero pueden existir casos donde se requiera alguna configuración más avanzada.
+BeyondJS has simple yet powerful path handling. For most of the cases,
+URLs can be defined in the configuration of the `module.json` file.
 
-Nota: Esta sección cubre la documentación del objeto routing. Si deseas aprender acerca del manejo de parametros en la url de una página, puedes leer sobre ello <Link href="/docs/widgets/page">en la sección de Widgets de tipo Page.</Link>
+<Link href="/widgets/pages">widgets of type page</Link>, via the URL property, but there may be cases where some more
+advanced configuration is required.
 
-<Title tag="h2" text="Objeto `routing`" />
+> Note: This section covers the documentation of the routing object. If you want to learn about handling parameters in the url of a page,
+> you can read about it <Link href="/docs/widgets/page">in the Page type widgets section.</Link>.
 
-El objeto `routing` gestiona el histórico del navegador y se encarga de manejar
-la compatibilidad para proyectos web y móviles. Ofrece una API que permite
-trabajar con el histórico y manipularlo.
+<Title tag="h2" text="Object `routing`" />
 
-Es disponibilizado por el paquete `@beyond-js/kernel` y se importa de la siguiente forma:
+The `routing` object manages the browser history and is responsible for handling compatibility for web and mobile projects.
+It offers an API that allows you to work with the history and manipulate it.
+
+It is made available by the `@beyond-js/kernel` package and is imported as follows:
 
 <Code>
 {`
@@ -24,26 +26,17 @@ import {routing}  from   "@beyond-js/kernel/routing";
 
 </Code>
 
-El objeto `routing` de <BeyondJS/> existe para cubrir los siguientes escenarios:
+The `routing` object in <BeyondJS/> exists to cover the following scenarios:
 
--   Disponibilizar al programador una API simple para hacer tratamientos complejos de las URLs,
-    como validaciones, redireccionamientos y manejo de variables.
--   Identificar el flujo e histórico de navegación del usuario adentro del aplicativo.
-    El objeto history del navegador tiene un tratamiento muy limitado del mismo y sólo permite
-    acceder al número de navegaciones existentes. BeyondJS por su parte, maneja un histórico detallado.
--   Debido a que las aplicaciones híbridas realizadas con JavaScript, resuelven el manejo
-    de archivos por medio de un protocolo distinto a las aplicaciones accedidas desde un navegador,
-    <BeyondJS /> realiza un tratamiento del mismo para abstraer al programador de ello y garantizar el mismo
-    comportamiento sin importar la plataforma en que se trabaje.
+-   To provide the programmer with a simple API for complex URL handling, such as validations, redirections, and variable management.
+-   To identify the user's navigation flow and history within the application. The browser's history object has a very limited treatment of this and only allows access to the number of existing navigations. BeyondJS, on the other hand, manages a detailed history.
+-   Because hybrid applications made with JavaScript handle file management through a protocol different from applications accessed from a browser, <BeyondJS /> handles this to abstract the programmer from it and ensure the same behavior regardless of the platform being worked on.
 
 <Title tag="h2" text="Navegación" />
 
-Con la finalidad de mantener compatibilidad con las APIs Conocidas,
-el objeto Routing tiene métodos homólogos a los métodos de la API del historial del navegador y
-básicamente cubren las mismas necesidades, pero a la vez, se encargan de unificar los comportamientos
-entre las plataformas y actualizar los elementos del histórico de BeyondJS.
+In order to maintain compatibility with known APIs, the Routing object has analogous methods to the methods of the browser's history API and basically cover the same needs, but at the same time, they are responsible for unifying behaviors between platforms and updating the elements of BeyondJS's history.
 
-Los métodos disponibles son:
+The available methods are:
 
 **routing.pushState**
 
@@ -57,7 +50,7 @@ routing.pushState('/home', [{state}]);
 
 **routing.replaceState**
 
-Modifica la URL actual sin agregar nuevos elementos en el histórico.
+Records a new item in the history.
 
 <Code>
     {`
@@ -65,28 +58,27 @@ routing.replaceState('/home', [{state}]);
 `}
 </Code>
 
-Tiene la misma interfaz que el método pushState del objeto history de la API Web y
-adicional se encarga de actualizar el histórico de BeyondJS.
+It has the same interface as the pushState method of the history object of the Web API and
+additionally it is responsible for updating BeyondJS's history.
 
-<Subtitle>Sobreescritura de rutas</Subtitle>
+<Subtitle>Route Overriding</Subtitle>
 
 **routing.redirect**
 
-Generalmente, aunque puede haber más, existen dos contextos típicos en los cuales
-es necesario darle tratamiento a las URLs:
+Generally, although there may be more, there are two typical contexts in which
+it is necessary to handle URLs:
 
--   Cuando se requiere manejar URLs amigables.
--   Cuando es necesario validar permisos de acceso y, en caso de que quien intenta entrar a
-    la URL no los tenga, se pretenda hacer una redirección a un flujo determinado.
+-   When friendly URLs are required.
+-   When it is necessary to validate access permissions and, in case the person trying to enter the
+    URL does not have them, try to redirect to a specific flow.
 
-Para este tipo de casos, se puede definir una función asincrona `redirect`
-como propiedad del objeto routing. Esta función recibe un objeto
-de tipo <Link href="/api/uri">{`<URI>`}</Link> que tiene una propiedad pathname
-la cual representa la ruta actual.
+For these cases, an asynchronous function `redirect`
+can be defined as a property of the routing object. This function receives an object
+of type <Link href="/api/uri">{`<URI>`}</Link> which has a pathname property
+which represents the current route.
 
-La función redirect puede retornar undefined o un string. Si retorna undefined el flujo de
-navegación seguirá sin interrupción. Si se devuelve un string el mismo será tomado
-como la URL final y BeyondJS realizará la redirección a la URL retornada.
+The redirect function can return undefined or a string. If it returns undefined the navigation flow will continue without interruption. If a string is returned, it will be taken
+as the final URL and BeyondJS will redirect to the returned URL.
 
 <Code>
 {`
@@ -98,16 +90,16 @@ routing.redirect = async function redirect(uri): Promise[string] {
 
 </Code>
 
-En el ejemplo anterior, cualquier ruta recibida es redireccionada a /.
+In the previous example, any received route is redirected to /.
 
-<Subtitle>Manejo de urls no encontradas.</Subtitle>
+<Subtitle>Handling of not found URLs.</Subtitle>
 
-El objeto routing posee una propiedad `missing` que puede definirse como una función asincrona
-y retorna el nombre del widget que se desee mostrar en caso de que la url solicitada no sea encontrada.
+The routing object has a `missing` property that can be defined as an asynchronous function
+and returns the name of the widget you want to display if the requested URL is not found.
 
-Un ejemplo típico de uso es querer implementar una pantalla 404 para una página no encontrada.
+A typical use case is wanting to implement a 404 screen for a page not found.
 
-Una implementación básica puede ser la siguiente:
+A basic implementation can be as follows:
 
 <Code>
 {`
@@ -119,4 +111,4 @@ routing.missing = async (pathname: String) => {
 
 </Code>
 
-En el ejemplo anterior, se esta retornando el nombre de un widget, BeyondJS validará que el widget exista cuando la URL no se consiga y lo mostrará como página de error.
+In the previous example, the name of a widget is being returned, BeyondJS will validate that the widget exists when the URL is not found and will display it as an error page.

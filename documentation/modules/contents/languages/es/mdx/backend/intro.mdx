@@ -1,0 +1,113 @@
+import { NextLinks, Link, ELink, DocHeader, Title, Subtitle, BeyondJS } from "@beyond/docs/components/html";
+import { Code, CodeBox } from "@beyond/docs/code";
+
+<DocHeader pretitle="Backend" title="Programación Backend" />
+
+Con <BeyondJS/>, desarrollar paquetes, aplicaciones o librerías backend para Deno,
+Node o Bun es una tarea sencilla y potente. <BeyondJS/> te permite trabajar de forma
+natural y sin mayores configuraciones para crear código con funcionalidades para cada
+plataforma y distribuirlo con facilidad.
+
+No necesitas herramientas de terceros,
+ya que <BeyondJS/> trabaja directamente sobre los estándares de Node.js y NPM,
+generando el código final para ser consumido por los estándares de resolución
+de módulos como ESM, CJS, AMD o SJS. Con <BeyondJS/> tendrás un control completo
+sobre tu código y podrás distribuirlo de manera más eficaz.
+
+Para crear un paquete que pueda ser ejecutado en un engine como Node o Deno,
+solo se requiere especificar en el
+`package.json` la distribución correspondiente.
+
+<CodeBox title="package.json" language="json">
+
+{`"deployment": {
+    "distributions": [
+      {
+        "name": "init-backend",
+        "environment": "development",
+        "platform": "backend",
+        "ports": {
+          "bundles": "7070",
+          "http": "7073",
+          "inspect": "7072"
+        }
+      }
+    ]
+  }`}
+
+</CodeBox>
+
+Este código configura el DevServer para ejecutar el código de un servicio
+Node o Bun en entorno de desarrollo. A continuación explicamos algunos detalles:
+
+-   El valor 'backend' de 'platform' indica que se trata de código que será ejecutado en entornos
+    de código backend como Node o Bun,
+    además de ser compatible con Deno mediante configuraciones adicionales.
+-   La entrada 'ports' define tres valores de puertos, incluyendo el puerto
+    `bundles` que es utilizado por el DevServer para retornar los paquetes cuando
+    el entorno de ejecución los requiera, y el puerto `inspect` que permite utilizar
+    herramientas de depuración como el debugger de VSCode o navegadores como Chrome o Edge.
+    Esto es esencial para trabajar de manera eficiente con HMR, una de las características
+    más poderosas de <BeyondJS/>
+
+<Title tag="h2" text="Formato de empaquetamiento" />
+
+Aunque la experiencia de desarrollo para el
+programador es el estándar de EcmaScript Modules (ESM),
+el DevServer de BeyondJS genera los bundles para plataformas
+Backend en el formato de CommonJS por defecto.
+Esto se debe a la gran cantidad de paquetes que
+utilizan este formato y a que Node.js aún no brinda soporte
+completo para el código con formato EcmaScript.
+
+Sin embargo, modificar el formato de empaquetamiento es
+sumamente sencillo. Sólo debes agregar una propiedad
+"bundles" en la distribución para indicar el modo en el
+que se espera que se generen los bundles.
+
+Por ejemplo, si deseas trabajar con Deno y que los bundles
+de tu paquete puedan ser consumidos con "http imports",
+sólo debes agregar el siguiente punto de entrada a la
+distribución en el package.json:
+
+<Code language="json">
+
+{`"bundles": {
+    "mode": "esm"
+}`}
+
+</Code>
+
+Con este ajuste en el `package.json`, el DevServer automatizará el proceso
+de empaquetado del código sin necesidad de reiniciar ningún servicio,
+ya que lo hace en tiempo real.
+
+<CodeBox title="package.json" language="json">
+
+{`"deployment": {
+    "distributions": [
+      {
+        "name": "init-backend",
+        "environment": "development",
+        "platform": "backend",
+        "bundles": {
+            "mode": "esm"
+        }
+        "ports": {
+          "bundles": "7070",
+          "http": "7073",
+          "inspect": "7072"
+        }
+      }
+    ]
+  }`}
+
+</CodeBox>
+
+De este modo, la distribución en el `package.json` quedaria de la siguiente forma:
+Además, el DevServer de <BeyondJS/>
+ofrece la posibilidad de configurar múltiples distribuciones
+y probar el empaquetamiento del código simultáneamente,
+lo que es altamente eficiente en términos de tiempo y productividad
+para desarrolladores que buscan crear paquetes que sean consumidos
+por cualquier entorno (¡tambien para quienes no!).

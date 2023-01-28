@@ -1,42 +1,42 @@
-import { Title, Subtitle } from "@beyond/docs/components/html";
-import { Code } from "@beyond/docs/code";
-import { Link } from "@beyond/docs/components/html";
+import { Title, Subtitle } from '@beyond/docs/components/html';
+import { Code, CodeBox } from '@beyond/docs/code';
+import { Link } from '@beyond/docs/components/html';
 
-<Title>Procesadores</Title>
+<Title>Processors</Title>.
 
-Muchas de las herramientas o lenguajes utilizados en el entorno web requieren un procesamiento previo para ser interpretados por los navegadores o entornos de ejecución, este es el trabajo que realizan los procesadores.
+Many of the tools or languages used in the web environment require prior processing to be interpreted by browsers or runtime environments, this is the work done by processors.
 
-BeyondJS ofrece una serie de procesadores integrados, que permiten utilizar las principales tecnologías de la industria web y brinda soporte para que puedan integrarse nuevos procesadores en caso de que se requiera.
+BeyondJS offers a series of integrated processors, which allow you to use the main technologies of the web industry and provides support for new processors can be integrated if required.
 
-BeyondJS trabaja distinto a empaquetadores como Webpack o Parcel. No necesita evaluar el arbol de dependencias de un proyecto, ni aplicar técnicas para separación de código o tree shaking. Gracias a su naturaleza módular y por medio de los procesadores, el empaquetado de código se hace a nivel de bundles.
+BeyondJS works differently from packagers such as Webpack or Parcel. It does not need to evaluate the dependency tree of a project, nor does it need to apply tree shaking techniques. Thanks to its modular nature and through processors, code packaging is done at the bundle level.
 
-Los procesadores son componentes de BeyondJS que permiten interpretar, parsear, transpilar o compilar código (según sea el caso) de los lenguajes o tecnologías utilizadas en un <Link href="/docs/bundles">Bundle.</Link>
+Processors are BeyondJS components that allow to interpret, parse, transpile or compile code (as the case may be) from the languages or technologies used in a <Link href="/docs/bundles">Bundle.</Link>.
 
-<Subtitle>Procesadores existentes</Subtitle>
+<Subtitle>Existing processors</Subtitle>.
 
--   **ts:** permite trabajar con typescript y archivos `tsx` para react.
--   **sass:** brinda soporte para trabajar con archivos SASS de extensión .scss
--   **vue:** Brinda soporte para trabajar con archivos single-file-components de vue.
--   **svelte:** Permite trabajar con archivos single-file-component de svelte
+-   **ts:** allows working with typescript and `tsx` files for react.
+-   sass:\*\* provides support for working with SASS files with .scss extension.
+-   vue:\*\* Provides support for working with single-file-components files for vue.
+-   svelte:\*\* Provides support for working with svelte single-file-component files.
 
-<Subtitle>Propiedades</Subtitle>
+<Subtitle>Properties</Subtitle>.
 
-Todos los procesadores cuentan con las siguientes propiedades:
+All processors have the following properties:
 
--   **path** (string) optional: Permite definir el directorio en donde se encuentran los archivos del procesador. Si se agrega un valor, el mismo es interpretado como un directorio de posición relativa a la ubicación del module.json definido.
+-   **path** (string) optional: Allows to define the directory where the processor files are located. If a value is added, it is interpreted as a directory relative to the location of the defined module.json.
 
--   **files** (array) optional: Permite definir la lista de archivos o carpetas incluidos en el procesador. Si la propiedad path se encuentra definida, los archivos serán buscados adentro del directorio especificado, caso contrario, serán buscados de forma relativa a la ubicación del module.json. Se puede pasar como valor de la propiedad un arreglo con una entrada \*, de esta forma se estaría indicando que se incluyen todos los archivos en el directorio especificado.
+-   files\*\* (array) optional: Allows defining the list of files or folders included in the processor. If the path property is defined, the files will be searched inside the specified directory, otherwise, they will be searched relative to the location of the module.json. It is possible to pass as value of the property an array with an entry \*, this way it would be indicating that all the files in the specified directory are included.
 
-<Subtitle>Ejemplos</Subtitle>
+<Subtitle>Examples</Subtitle>.
 
-El siguiente ejemplo, corresponde a la definición de un bundle de tipo code, a continuación explicamos el detalle:
+The following example corresponds to the definition of a code type bundle, the details are explained below:
 
--   El bundle hace uso de dos procesadores: sass y ts.
--   El procesador sass incluye todos los archivos en el directorio /code/scss el cual es relativo a la ubicación del archivo module.json.
--   El procesador ts sólo incluye el archivo component.ts el cúal se encuentra en el directorio /code/ts relativo a la ubicación del archivo module.json.
+-   The bundle makes use of two processors: sass and ts.
+-   The sass processor includes all the files in the /code/scss directory which is relative to the location of the module.json file.
+-   The ts processor only includes the component.ts file which is located in the /code/ts directory relative to the location of the module.json file.
 
 <Code>
-    {`
+	{`
 {
   "name": "icons",
   "code": {

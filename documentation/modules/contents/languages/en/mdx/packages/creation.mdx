@@ -1,22 +1,22 @@
-import { NextLinks, Link, ELink, DocHeader, Title, Subtitle, BeyondJS } from "@beyond/docs/components/html";
-import { Code } from "@beyond/docs/code";
+import { NextLinks, Link, ELink, DocHeader, Title, Subtitle, BeyondJS } from '@beyond/docs/components/html';
+import { Code, CodeBox } from '@beyond/docs/code';
 
-<DocHeader pretitle="Basics" title="Paquetes" />
+<DocHeader pretitle="Basics" title="Packages" />
 
-En <BeyondJS/> los proyectos o aplicaciones son manejados como un paquete javascript que puede ser publicado en NPM de forma directa si se desea.
+In <BeyondJS/> projects or applications are handled as a javascript package that can be published to NPM directly if desired.
 
-El archivo `package.json` tiene una función similar al de cualquier proyecto de npm,
-ya que es donde se definen las dependencias y configuraciones del proyecto. Sin embargo, <BeyondJS/> agrega un conjunto de entry points adicionales
-al package.json, que le permiten a los desarrolladores gestionar los paquetes de forma universal y poder posteriormente ejecutarlos y publicarlos
-en cualquier plataforma.
+The `package.json` file has a similar function to that of any npm project,
+in that it is where the project dependencies and settings are defined. However, <BeyondJS/> adds a set of additional entry points
+to the package.json, which allow developers to manage packages universally and then be able to run and publish them on any platform.
+on any platform.
 
-> En este documento se explica como funciona la creación de paquetes.
-> Puedes leer en detalle todas las opciones de configuración que gestiona <BeyondJS/> sobre los paquetes
-> en <Link href="/docs/packages/json">la sección del `package.json`</Link>.
+> This document explains how package creation works.
+> You can read in detail all the configuration options that <BeyondJS/> manages over the packages.
+> in <Link href="/docs/packages/json">the `package.json`</Link> section.
 
-En resumen, el package.json en BeyondJS es un archivo fundamental para la configuración y gestión de proyectos.
-Además de las funciones comunes de un package.json, BeyondJS agrega entry points adicionales que permiten gestionar los paquetes de forma universal,
-definir distribuciones, especificar rutas de los paquetes, configurar templates, establecer idiomas soportados y definir parámetros globales del proyecto.
+In summary, the package.json in BeyondJS is a fundamental file for project configuration and management.
+In addition to the common functions of a package.json, BeyondJS adds additional entry points that allow you to manage packages universally,
+define distributions, specify package paths, configure templates, set supported languages and define global project parameters.
 
 <Title tag="h2" text="Crear un paquete" />
 
@@ -43,26 +43,27 @@ Puedes crear paquetes directamente desde el BeyondJS Workspace, para hacerlo deb
 -   Acceder a <ELink href="https://workspace.beyondjs.com"> https://workspace.beyondjs.com</ELink> y crear el proyecto por medio de su interfaz gráfica.
     Puedes leer más acerca de cómo funciona el Workspace en la <Link href="/docs/workspace">sección de BeyondJS Workspace</Link>.
 
-<Title tag="h3" text="Creación manual" />
+<Title tag="h3" text="Manual creation" />
 
-Puedes crear los paquetes de forma manual, para ello sólo debes crear un package.json con su estructura mínima, la cúal debe incluir
-el nombre del paquete.
+You can create the packages manually, for this you only have to create a package.json with its minimal structure, which must include
+the package name.
 
 <Code name="package.json">
-    {`{
+	{`{
  "name": "package-name",
 }`}
 </Code>
 
-Además, tendrás que crear el archivo `beyond.json` para que el DevServer de <BeyondJS/> pueda reconocerlo. El archivo debe tener la siguiente estrucutra
+In addition, you will need to create the `beyond.json` file so that the <BeyondJS/> DevServer can recognize it. The file must have the following structure
 
-<Code name="beyond.json">
-    {`{
+<CodeBox title="beyond.json">
+	{`{
     "applications": ["./project.json"]
 }`}
-</Code>
+</CodeBox>
 
-> Puedes crear el package.json con herramientas de terceros cómo NPM o Yarn, luego registrarlos en el archivo `beyond.json`. Debes asegurarte
-> de tener las propiedades del paquete que <BeyondJS/> requiere.
+> You can create the package.json with third party tools like NPM or Yarn, then register them in the `beyond.json` file. You must make sure
+> that you have the package properties that <BeyondJS/> requires.
+> Además, tendrás que crear el archivo `beyond.json` para que el DevServer de <BeyondJS/> pueda reconocerlo. El archivo debe tener la siguiente estrucutra
 
-<NextLinks items={["packages/distributions", "packages/json"]} />
+<NextLinks items={['packages/distributions', 'packages/json']} />

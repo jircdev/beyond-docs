@@ -2,7 +2,9 @@
     "name": "contents/en",
     "code": {
         "mdx": {
-            "path": "mdx",
+            "files": ["*"]
+        },
+        "ts": {
             "files": ["*"]
         }
     }

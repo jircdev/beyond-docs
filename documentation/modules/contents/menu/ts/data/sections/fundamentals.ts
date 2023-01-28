@@ -2,17 +2,5 @@ import { structureItems } from "../structure-item";
 
 export const fundamentals = {
     id: "fundamentals",
-    children: structureItems([
-        "cli",
-        "bare-specifiers",
-        "modular",
-        "universal",
-        "dev-server",
-        "distributions",
-        "foundations/hmr",
-        "foundations/bee",
-        "foundations/extend",
-        // 'multilanguage',
-        // 'glossary',
-    ]),
+    children: structureItems(["cli", "bare-specifiers", "modular", "universal", "dev-server", "foundations/hmr"]),
 };

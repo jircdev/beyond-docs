@@ -1,70 +1,75 @@
-@use "~template/sass/mixins";
+@use '~template/sass/mixins';
 
 .home {
-    .main__home__content {
-        position: relative;
-        padding: 0 0 5rem 0;
-        z-index: 5;
-    }
+	.main__home__content {
+		position: relative;
+		padding: 0 0 5rem 0;
+		z-index: 5;
+	}
+
+	app-home-header {
+		display: grid;
+		min-height: 100vh;
+	}
 }
 
 svg path#svg--background {
-    fill: var(--app-bg-svg-secondary-color);
+	fill: var(--app-bg-svg-secondary-color);
 }
 
 a {
-    color: var(--app-link-color);
-    cursor: pointer;
-    transition: all 200ms linear;
-    text-decoration: none;
-    position: relative;
+	color: var(--app-link-color);
+	cursor: pointer;
+	transition: all 200ms linear;
+	text-decoration: none;
+	position: relative;
 
-    &:not(.link-more) {
-        text-decoration: underline;
-    }
+	&:not(.link-more) {
+		text-decoration: underline;
+	}
 
-    &:hover {
-        color: var(--app-link-hover-color);
-    }
+	&:hover {
+		color: var(--app-link-hover-color);
+	}
 }
 
 .banner__icons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 1rem;
 
-    .beyond-icon {
-        height: 45px;
-        width: 45px;
-        @include mixins.set-media("mobile", false, max) {
-            height: 50px;
-            width: 50px;
-        }
-    }
+	.beyond-icon {
+		height: 45px;
+		width: 45px;
+		@include mixins.set-media('mobile', false, max) {
+			height: 50px;
+			width: 50px;
+		}
+	}
 }
 
 .mv-200 {
-    margin: 14rem auto;
-    @include mixins.set-media("desktop", false, min) {
-        margin: 7rem auto;
-    }
+	margin: 14rem auto;
+	@include mixins.set-media('desktop', false, min) {
+		margin: 7rem auto;
+	}
 }
 
 .page__footer {
-    padding: 2rem;
-    border-top: 1px solid var(--app-element-border-color-1);
-    width: calc(100% - 2rem * 2);
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    font-size: 0.75rem;
-    flex-wrap: wrap;
-    margin: auto;
-    .app__logo {
-        height: 1.3rem;
-        img {
-            height: 100%;
-        }
-    }
+	padding: 2rem;
+	border-top: 1px solid var(--app-element-border-color-1);
+	width: calc(100% - 2rem * 2);
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	font-size: 0.75rem;
+	flex-wrap: wrap;
+	margin: auto;
+	.app__logo {
+		height: 1.3rem;
+		img {
+			height: 100%;
+		}
+	}
 }

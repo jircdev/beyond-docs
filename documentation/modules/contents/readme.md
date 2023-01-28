@@ -6,7 +6,7 @@ Imports to add in mdx file.
 
 ```
 import { NextLinks, Link, ELink, DocHeader, Title, Subtitle, BeyondJS } from "@beyond/docs/components/html";
-import { Code } from "@beyond/docs/code";
+import { Code, CodeBox } from "@beyond/docs/code";
 ```
 
 ## Export mdx file.

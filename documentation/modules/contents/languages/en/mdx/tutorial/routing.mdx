@@ -1,43 +1,41 @@
-import { NextLinks, DocHeader, BeyondJS, Subtitle, Title, Link } from "@beyond/docs/components/html";
-import { Code, CodeBox } from "@beyond/docs/code";
+import { NextLinks, DocHeader, BeyondJS, Subtitle, Title, Link } from '@beyond/docs/components/html';
+import { Code, CodeBox } from '@beyond/docs/code';
 
 <DocHeader pretitle="Tutorial" title="Routing" />
 
-Ahora, crearemos una nueva página a la cual el cliente será redirigido luego de iniciar sesión.
+Now, let's create a new page to which the client will be redirected after logging in.
 
-<Title tag="h2" text="Módulo de redirección" />
-
-Desde la consola, ubicados en la carpeta raíz del proyecto,
-volveremos a ejecutar el comando de creación de un módulo:
+<Title tag="h2" text="Redirection Module" />
+From the console, located in the root folder of the project, we will run the module creation command again:
 
 <Code>beyond add module</Code>
 
-Agregaremos los siguientes valores en la consola de comando:
+We will add the following values in the command console:
 
--   `Package subpath`: lo nombrarémos "welcome".
+Package subpath: we will name it "welcome".
 
--   `Package type` : seleccionaremos "page".
--   `web component name`: colocaremos `app-welcome`.Los nombres de los componentes web deben contener
-    dos palabras y estar separados por guiones.
--   `page url`: agregamos "/welcome"
--   `styles`: indicamos que si,
--   `multilanguage`: indicamos que no.
+-   "Package type" : we will select "page".
+-   "web component name": we will put `app-welcome`. Web component names must contain
+    two words and be separated by dashes.
+-   "page url": we add "/welcome"
+-   "styles": we indicate yes,
+-   "multilanguage": we indicate no.
 
-Ahora, nos dirigiremos al módulo y agregaremos un mensaje sencillo que diga "¡Bienvenido!" con el estilo que deseemos.
+Now, we will go to the module and add a simple message that says "Welcome!" with the style we want.
 
 <Title tag="h2" text="Navegación" />
 
-¡Prepárate para dar un gran salto en tu aplicación al redirigir a tu módulo de
-bienvenida tras iniciar sesión! Lo primero que debemos hacer es importar el objeto "routing" de Beyond,
-para poder utilizar el poderoso método pushState que nos permitirá navegar a la página de bienvenida.
+Get ready to make a big leap in your application by redirecting to your welcome module after login.
+module after login! The first thing we need to do is to import the "routing" object from Beyond,
+so we can use the powerful pushState method that will allow us to navigate to the welcome page.
 
 <CodeBox title="home/views/index.tsx">{`import { routing } from '@beyond-js/kernel/routing';`}</CodeBox>
 
-Y en la función `onSubmit`, agregaremos la siguiente línea para que todo funcione a la perfección:
+And in the `onSubmit` function, we will add the following line so that everything works perfectly:
 
 <Code>{`routing.pushState('/welcome');`}</Code>
 
-De esta manera, nuestra función `onSubmit` quedaría así:
+Thus, our `onSubmit` function would look like this:
 
 <CodeBox title="home/views/index.tsx">
 {`const onSubmit = async (event) => {
@@ -59,42 +57,41 @@ De esta manera, nuestra función `onSubmit` quedaría así:
 
  </CodeBox>
 
-Con estos simples pasos, estarás redirigiendo a tus usuarios a la página de bienvenida.
-Pero eso no es todo, BeyondJS también se encarga de registrar el historial de navegación del usuario,
-permitiendo una gestión avanzada de funcionalidades que van más allá de las posibilidades de la API del navegador.
-¡Imagina poder identificar los registros de páginas anteriores y tener acceso a ellos en cualquier momento!
-BeyondJs te permite hacerlo, dándote un control total sobre la experiencia de navegación de tus usuarios.
+With these simple steps, you will be redirecting your users to the welcome page.
+But that's not all, BeyondJS also takes care of recording the user's browsing history,
+allowing advanced management functionalities that go beyond the possibilities of the browser's API.
+Imagine being able to identify the logs of previous pages and have access to them at any time!
+BeyondJs allows you to do so, giving you full control over your users' browsing experience.
 
-> <BeyondJS /> es una herramienta poderosa que provee un objeto de enrutamiento para interactuar con la API de
-> navegación. Este objeto envuelve la función pushState del navegador y agrega lógica para hacer la navegación posible
-> en distintos entornos. Si desea obtener más información sobre cómo utilizar el enrutamiento en <BeyondJS />, puede
-> visitar la sección de <Link href="/docs/frontend/routing">Enrutamiento</Link>.
+> <BeyondJS /> is a powerful tool that provides a routing object to interact with the browser API. navigation. This
+> object wraps the browser's pushState function and adds logic to make navigation possible > > in different
+> environments. in different environments. If you would like to learn more about how to use routing in <BeyondJS />, you
+> can. visit the <Link href="/docs/frontend/routing">Routing</Link> section.
 
-Ahora es necesario recargar la página para hacer pruebas, esto se debe a que las urls de la aplicación se
-registran al principio de la carga del proyecto.
+Now it is necessary to reload the page for testing, this is because the application urls are
+registered at the beginning of the project load.
 
-Si probamos nuestro formulario podremos ver que aparece un error si los datos son invalidos y que
-se ininicia y redirecciona a nuestra pantalla de welcome si los datos ingresados son correctos.
+If we test our form we will be able to see that an error appears if the data is invalid and that
+it starts and redirects to our welcome screen if the data entered is correct.
 
 <Title tag="h3" text="Repaso de aprendizaje" />
+With this last step, we end the complete tutorial, which consisted of 4 fundamental parts:
 
-Con este último paso, finalizamos el tutorial completo, que ha constado de 4 partes fundamentales:
+-   In the first part, we dealt with starting and installing the project and creating the main package.
+-   In the second part, we showed how to create the first module and how to use it in the application.
+-   In the third part, it was explained how to create a bridge in the backend to connect through a WebSocket connection and integrate it from the backend.
+    WebSocket connection and integrate it from the client.
+-   Finally, in the fourth part, it was demonstrated how to use the
+    routing object of <BeyondJS /> to navigate to a new page.
 
--   En la primera parte, se abordó el inicio e instalación del proyecto y la creación del paquete principal.
--   En la segunda parte, se enseñó cómo crear el primer módulo y cómo utilizarlo en la aplicación.
--   En la tercera parte, se explicó cómo crear un bridge en el backend para conectarse mediante una conexión
-    WebSocket e integrarlo desde el cliente.
--   Por último, en la cuarta parte, se mostró cómo utilizar el objeto de
-    enrutamiento de <BeyondJS /> para navegar a una nueva página.
+In addition, there are some additional points worth noting:
 
-Además, hay algunos puntos adicionales que vale la pena destacar:
+-   The modules created are standalone bundles and no packers are required to use them.
+-   A WebSocket connection between client and server was implemented with a typed API that verifies that the methods and parameters passed match the
+    and parameters passed match their definition in the backend.
+-   The magic comment `//\*bundle\*/` was used to define which object should be exposed to be consumed in another bundle.
+-   The magic comment `//\*actions\*/` was used in the bridge bundle to define that the object should generate a client api, which should be consumed in another bundle.
+    a client api, which is handled by <BeyondJS/> automatically.
+-   The created code can be packaged for a hybrid application.
 
--   Los módulos creados son bundles independientes y no se requieren empaquetadores para su uso
--   Se implementó una conexión WebSocket entre cliente y servidor con una API tipada que verifica que los metodos
-    y parametros pasados coincidan con su definición en el backend.
--   El comentario mágico `/\*bundle\*/` se utilizó para definir que objeto debe ser expuesto para ser consumido en otro bundle.
--   El comentario mágico `/\*actions\*/` se utilizó en el bundle de tipo bridge para definir que el objeto deberia generar
-    una api cliente, la cúal es gestionada por <BeyondJS/> de forma automática.
--   El código creado puede ser empaquetado para una aplicación hibrida.
-
-<NextLinks items={["backend", "frontend"]} />
+<NextLinks items={['backend', 'frontend']} />

@@ -1,5 +1,5 @@
-import { NextLinks, Link, ELink, DocHeader, Title, Subtitle, BeyondJS } from "@beyond/docs/components/html";
-import { Code } from "@beyond/docs/code";
+import { NextLinks, Link, ELink, DocHeader, Title, Subtitle, BeyondJS } from '@beyond/docs/components/html';
+import { Code, CodeBox } from '@beyond/docs/code';
 
 <DocHeader pretitle="Basics" title="Paquetes" />
 
@@ -49,7 +49,7 @@ Puedes crear los paquetes de forma manual, para ello sólo debes crear un packag
 el nombre del paquete.
 
 <Code name="package.json">
-    {`{
+	{`{
  "name": "package-name",
 }`}
 </Code>
@@ -57,7 +57,7 @@ el nombre del paquete.
 Además, tendrás que crear el archivo `beyond.json` para que el DevServer de <BeyondJS/> pueda reconocerlo. El archivo debe tener la siguiente estrucutra
 
 <Code name="beyond.json">
-    {`{
+	{`{
     "applications": ["./project.json"]
 }`}
 </Code>
@@ -65,4 +65,4 @@ Además, tendrás que crear el archivo `beyond.json` para que el DevServer de <B
 > Puedes crear el package.json con herramientas de terceros cómo NPM o Yarn, luego registrarlos en el archivo `beyond.json`. Debes asegurarte
 > de tener las propiedades del paquete que <BeyondJS/> requiere.
 
-<NextLinks items={["packages/distributions", "packages/json"]} />
+<NextLinks items={['packages/distributions', 'packages/json']} />

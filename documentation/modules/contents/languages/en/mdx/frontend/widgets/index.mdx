@@ -3,76 +3,63 @@ import { Code, CodeBox } from "@beyond/docs/code";
 
 <DocHeader pretitle="Frontend" title="Widgets" />
 
-Los widgets de <BeyondJS/> son una característica clave porque ofrecen una manera
-fácil y eficiente de implementar soluciones en <BeyondJS/> utilizando su librería
-favorita (como React, Vue o Svelte) y provee una API simple para
-integrar nuevas librerías existentes. Esto significa que la curva de aprendizaje es mínima
-y se basa en entender el concepto
-de <ELink to="https://micro-frontends.org/">micro-frontends</ELink>.
+The widgets of <BeyondJS/> are a key feature because they offer an easy and efficient way to implement solutions in <BeyondJS/> using your favorite library (such as React, Vue or Svelte) and provides a simple API for
+integrating new existing libraries. This means that the learning curve is minimal
+and is based on understanding the concept
+of <ELink to="https://micro-frontends.org/">micro-frontends</ELink>.
 
-Su arquitectura está diseñada para ser compatibles de forma directa con
-Micro frontends y cargar las dependencias de forma dinámica y a demanda,
-lo que optimiza los tiempos de carga,permite una mejor experiencia de usuario y
-en todo el proceso de desarrollo, pues los paquetes no se ven afectados por su crecimiento.
+Their architecture is designed to be directly compatible with
+Micro frontends and load dependencies dynamically and on demand,
+which optimizes load times, allows for a better user experience and
+throughout the development process, as packages are not affected by their growth.
 
-Para lograrlo, los Widgets se encapsulan
-en <ELink to="https://developer.mozilla.org/en-US/docs/Web/Web_Components">Componentes
-Web </ELink> que utilizan shadow DOM para encapsular su contenido y pueden definir
-propiedades y métodos que pueden ser accedidos a través de la API del DOM.
+To achieve this, the Widgets are encapsulated
+in <ELink to="https://developer.mozilla.org/en-US/docs/Web/Web_Components">Web Components </ELink> that use shadow DOM to encapsulate their content and can define
+properties and methods that can be accessed through the DOM API.
 
-Estas características se
-combinan con la posibilidad de integrar diferentes stacks tecnológicos en un mismo proyecto,
-lo que le da a los desarrolladores la posibilidad de evaluar _qué_ tecnología es más conveniente
-para desarrollar funcionalidades específicas sin tener que pensar en _qué_ tecnología utilizar
-para todo un proyecto.
+These features are
+combined with the possibility of integrating different technology stacks in the same project,
+giving developers the ability to evaluate _what_ technology is more convenient
+for developing specific functionality without having to think about _what_ technology to use
+for an entire project.
 
-Actualmente <BeyondJS/> brinda soporte para trabajar con las librerias
-de renderizado <ELink to="https://reactjs.org/">React</ELink>
-, <ELink to="https://vuejs.org/">Vue</ELink>
-y <ELink to="https://svelte.dev/">Svelte</ELink>. Tambien permite
-la integración nuevas librerías o herramientas de forma simple.
+Currently, <BeyondJS/> supports working with rendering libraries <ELink to="https://reactjs.org/">React</ELink>, <ELink to="https://vuejs.org/">Vue</ELink> and <ELink to="https://svelte.dev/">Svelte</ELink>. It also allows for easy integration of new libraries or tools.
 
-<Title tag="h2" text="Estructura" />
+<Title tag="h2" text="Structure" />
+Widgets in <BeyondJS /> are treated as a type of <Link href="/docs/modules/bundles">Bundle</Link>, which provides the
+possibility to define the types of processors that should be included.
 
-Los Widgets en <BeyondJS/> son tratados como un tipo
-de <Link href="/docs/modules/bundles">Bundle</Link>, lo que brinda la posibilidad
-de definir los tipos de procesadores que deben incluirse.
+Their basic structure consists of the following elements:
 
-Su estructura básica consta de los siguientes elementos:
+-   `module.json`: Configuration file of the module/bundle, which can be generated automatically with the command `beyond add module`.
+-   A Controller object that is responsible for registering the Widget in the DOM, mounting it and unmounting it. We will talk about it in more detail later.
+-   Interface and logic files of the widget defined by the programmer, which can be created in React, Vue or Svelte.
 
--   `module.json`: Archivo de configuración del módulo/bundle, que se puede generar
-    de forma automática con el comando `beyond add module`.
--   Un objeto Controller que es el encargado de registrar el Widget en el DOM,
-    montarlo y desmontarlo. Hablaremos de él en detalle más adelante.
--   Archivos de interfaz y lógica del widget definidos por el programador,
-    que pueden crearse en React, Vue o Svelte.
+<Title tag="h3" text="Types of Widgets" />
+By default, there are three types of Widgets in <BeyondJS />:
 
-<Title tag="h3" text="Tipos de Widgets" />
-
-Por defecto, existen tres tipos de Widgets en <BeyondJS/>:
-
--   Widget: Es el widget por defecto, sin un tipo específico.
-    Simplemente representa un Micro frontend o Componente Web con
-    capacidad de encapsular su contenido y cargarlo a demanda.
--   Layout: Son contenedores de Páginas y Widgets,
+-   Widget: It is the default widget, without a specific type.
+    It simply represents a Micro frontend or Web Component with
+    the ability to encapsulate its content and load it on demand.
+-   Layout: They are containers of Pages and Widgets,
 
 <Title tag="h2" text="Crear un Widget" />
 
-En <BeyondJS/>, puedes crear Widgets y cualquier tipo de Bundle mediante el uso del
-CLI (Interfaz de línea de comando) con el comando `beyond add module`. Para obtener más
-información sobre este proceso, te recomendamos revisar la <Link href="/docs/cli">sección de
-comandos de la documentación</Link> de <BeyondJS/>.
+<Title tag="h2" text="Creating a Widget" />
 
-A continuación se explicará en detalle la estructura de un widget de tipo página,
-con un "Hola mundo", con la intención de tener un entendimiento conciso y
-rápido del comportamiento y la naturalidad con la que se programa en <BeyondJS/>. El código se puede copiar y pegar para ver su comportamiento.
+In <BeyondJS />, you can create Widgets and any type of Bundle using the CLI (Command Line Interface) with the
+command `beyondadd module`. To get more information about this process, we recommend you review
+the <Link href="/docs/cli"> command section of the documentation </Link> of <BeyondJS />.
 
-> Puedes seguir un flujo más completo en nuestro <Link href="/docs/tutorials/web">tutorial web</Link>.
+The structure of a page-type widget will be explained in detail below,
+with a "Hello world", with the intention of having a concise and
+fast understanding of the behavior and naturalness with which it is programmed in <BeyondJS/>. The code can be copied and pasted to see its behavior.
+
+> You can follow a more complete flow in our <Link href="/docs/tutorials/web">web tutorial</Link>.
 
 <Title tag="h4" text="Configuración" />
 
-Los widgets en <BeyondJS/> son definidos mediante la configuración del bundle en
-el archivo `module.json`, como el que se muestra a continuación.
+Widgets in <BeyondJS/> are defined by configuring the bundle in the module.json file, as shown below.
 
 <CodeBox title="module.json">
 {`{
@@ -94,24 +81,24 @@ el archivo `module.json`, como el que se muestra a continuación.
 
 </CodeBox>
 
-La estructura de configuración del bundle `widget` es:
+Widgets in <BeyondJS/> are defined by configuring the bundle in the `module.json` file, as shown below.
 
--   `is`: Es opcional, debe agregarse si se desea especificar que el widget es de tipo `page` o `layout`.
--   `route`: para indicar la URL de acceso.
--   `element`: Es un objeto que permite definir las propiedades del componente web, este objeto puede tener
-    las siguientes entradas:
+The `widget` bundle configuration structure is as follows:
 
-    -   `attrs`: `strings[]`: Recibe un arreglo de strings con los atributos que deseen definirse en el
-        componente web.
-    -   name: Nombre del componente web a crear.
+-   `is`: Optional, should be added if you want to specify that the widget is of type `page` or `layout`.
+-   `route`: To indicate the access URL.
+-   `element`: Is an object that allows you to define the properties of the web component, this object can have the following entries:
 
--   processors: Puede recibir cómo propiedad cualquier procesador existente que desee utilizarse.
+    -   `attrs`: `strings[]`: Receives an array of strings with the attributes that you want to define in the web component.
+    -   name: Name of the web component to create.
+
+-   processors: Can receive as property any existing processor you want to use.
 
 <Title tag="h4" text="Controller" />
 
-El controlador es el encargado de definir qué objeto principal se va a renderizar y realizar las tareas necesarias para cargar nuestro componente web.
+The controller is responsible for defining which main object is going to be rendered and performing the necessary tasks to load our web component.
 
-Ejemplo:
+Example:
 
 <CodeBox title="controller.ts">
 {`import {PageReactWidgetController} from '@beyond-js/react-widgets/page';
@@ -125,27 +112,27 @@ class Controller extends PageReactWidgetController {
 }`}
 </CodeBox>
 
-En el ejemplo anterior se muestra la estructura básica de un widget de tipo Page, que se diferencia del resto principalmente por el objeto del cual extiende el controlador.
+The basic structure of a Page type widget is shown in the previous example, which mainly differs from the rest by the object from which the controller extends.
 
-A continuación explicamos en detalle los puntos importantes:
+In the following, we explain in detail the important points:
 
--   La importación de `PageReactWidgetController` de la librería de <BeyondJS/>,
-    que provee controladores que gestionan el ciclo de vida de los widgets.
-    -El método `get Widget` es obligatorio y debe retornar el componente u objeto
-    que se espera renderice el widget.
+-   Importing `PageReactWidgetController` from the <BeyondJS/> library,
+    which provides controllers that manage the life cycle of the widgets.
 
-    Es importante tener en cuenta que el ciclo de vida de un widget se compone
-    de diferentes fases como la carga, el renderizado y la descarga, y el controlador
-    es el encargado de manejar estas fases. Además, es posible tener diferentes tipos
-    de controladores para diferentes tipos de widgets.
-    Para obtener más información sobre cómo funciona el controlador,
-    consulte la <Link href="/docs/widgets/controllers">sección del Objeto Controlador </Link>
-    en nuestra documentación.
+-   The `getWidget` method is mandatory and must return the component or object
+    that the widget is expected to render.
+
+    It is important to keep in mind that the life cycle of a widget is composed
+    of different phases such as loading, rendering and unloading, and the controller
+    is in charge of handling these phases. Additionally, it is possible to have different types
+    of controllers for different types of widgets.
+    For more information on how the controller works,
+    see the <Link href="/docs/widgets/controllers">Controller Object section</Link>
+    in our documentation.
 
 <Title tag="h4" text="View" />
 
-En este ejemplo, En este ejemplo, se muestra cómo se utiliza React
-y lo que se presenta a continuación es un componente típico de esta librería.
+In this example, it demonstrates how React is used and what is shown below is a typical component from this library.
 
 <CodeBox title="./ts/view.tsx">
 {`import * as React from "react";
@@ -160,9 +147,6 @@ export function View(props): JSX.Element {
 `}
 </CodeBox>
 
-El componente principal del widget recibe un conjunto de propiedades que
-brindan al desarrollador el entorno necesario para tener una experiencia de desarrollo
-fluida y sin obstáculos en proyectos con microfrontends de diferentes naturalezas
-que comparten información y elementos propios del proyecto.
+In this example, the main component of the widget receives a set of properties that provide the developer with the necessary environment for a smooth and unobstructed development experience in projects with microfrontends of different natures that share information and project-specific elements.
 
 <NextLinks items={["widgets/creation", "widgets/page"]} />

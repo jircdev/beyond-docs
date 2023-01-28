@@ -1,40 +1,40 @@
 import { Link, ELink, NextLinks, DocHeader, BeyondJS, Title, Subtitle } from "@beyond/docs/components/html";
 import { Code, CodeBox } from "@beyond/docs/code";
 
-<DocHeader pretitle="Frontend" title="Template de un proyecto" />
+<DocHeader pretitle="Frontend" title="Template of a project" />
 
-BeyondJS brinda una arquitectura simple pero robusta para el manejo de plantillas en los proyectos, la cual cuenta con las siguientes caracteristicas:
+BeyondJS provides a simple but robust architecture for managing templates in projects, which has the following features:
 
--   **Estilos:** Soporte integrado de preprocesadores LESS y SASS.
--   **Propiedades CSS:** estructura básica de variables que permite trabajar con los componentes web eficientemente.
--   **Estilo global:** Hoja de estilo global para el proyecto.
--   **Sobreescritura:** Esto es una característica especial que permite redefinir estilos y textos de módulos existentes sin necesidad de tocar el código original.
--   **Separación de código:** Manejo independiente de los archivos de estilos con proceso automatizado para la generación de archivos finales independientes y optimizados.
--   **Light & Dark Theme** integrados.
+-   **Styles:** Integrated support for LESS and SASS preprocessors.
+-   **CSS Properties:** Basic variable structure that allows for efficient web component work.
+-   **Global style:** Global stylesheet for the project.
+-   **Overwriting:** This is a special feature that allows for redefining styles and texts of existing modules without having to touch the original code.
+-   **Code separation:** Independent management of style files with automated process for generating independent and optimized final files.
+-   **Light & Dark Theme** built in.
 
-<Subtitle>Configuración</Subtitle>
+<Title tag="h2" text="Configuration" />
 
-La configuración de la plantilla, al igual que todos los elementos en BeyondJS, se maneja por medio de un archivo de configuración, cuyo nombre, por convención es template.json y se ubica en la carpeta template en la raiz del proyecto. Sin embargo, tanto el nombre como la ubicación son valores configurables en el <Link href="/project/config">project.json.</Link>
+The template configuration, like all elements in BeyondJS, is handled through a configuration file, whose name, by convention, is template.json and is located in the template folder in the root of the project. However, both the name and location are configurable values in the <Link href="/project/config">project.json.</Link>
 
-La plantilla puede ser manejada desde el <Link href="/docs/workspace">Workspace</Link> y cuando se crea un proyecto ya viene configurada la estructura por defecto para su manejo.
+The template can be managed from the <Link href="/docs/workspace">Workspace</Link> and when a project is created, the default structure is already configured for its management.
 
-A continuación se explican las propiedades de configuración
+Below are the configuration properties explained
 
-Las propiedades application y global reciben los mismos parametros de configuración, pero tienen fines distintos.
+The application and global properties receive the same configuration parameters, but they have different purposes.
 
-**template.application**
+<Title tag="h4" txt="template.application" />
 
-La propiedad de configuración application representa al archivo de estilos generales del proyecto y tiene como foco principal ser el lugar en donde se definan las propiedades css personalizadas y cualquier estilo que se requiera aplicar al documento general, externo a los widgets.
+The application configuration property represents the general styles file of the project and its main focus is to be the place where custom CSS properties and any styles that need to be applied to the general document, external to the widgets, are defined.
 
-Las **custom properties** juegan un papel importante en el manejo de los widgets. Los componentes webs con Shadow DOM no se ven afectados por los estilos generales del sitio web en donde están incluidos. Sin embargo, las propiedades css si pueden ser accedidas y utilizadas.
+**Custom properties** play an important role in managing the widgets. Web components with Shadow DOM are not affected by the general styles of the website where they are included. However, CSS properties can be accessed and used.
 
-El manejo de estilos puede verse en detalle en la sección de <Link href="/docs/styles/template">Estilos en la plantilla.</Link>
+Handling styles can be seen in detail in the <Link href="/docs/styles/template">Styles in the template</Link> section.
 
-**template.global**
+<Title tag="h4" txt="template.global" />
 
-Tiene como finalidad suministrar al desarrollador la posibilidad de compartir código entre widgets. Los archivos agregados en la configuración de global, son compilados en un archivo de nombre global.css, que es incluido en el shadow dom de cada widget para que tengan acceso a los estilos.
+It aims to provide the developer with the possibility of sharing code between widgets. The files added in the global configuration are compiled into a file named global.css, which is included in the shadow dom of each widget so they have access to the styles.
 
-<Subtitle>Parametros de configuración</Subtitle>
+<Title tag="h3" text="Parametros de configuración" />
 
 <Code>
     {`
@@ -55,10 +55,8 @@ Tiene como finalidad suministrar al desarrollador la posibilidad de compartir c�
   `}
 </Code>
 
-Cómo se puede ver en el código anterior, la configuración de ambas propiedades funciona igual, reciben un objeto con las siguientes propiedades:
+As it can be seen in the above code, the configuration of both properties works the same, they receive an object with the following properties:
 
-Cómo se puede ver en el código anterior, se puede definir tres propiedades
-
--   **processor:** Procesador a utilizar. Soporta sass y less
--   **path:** Directorio donde se encuentran los archivos, sino se define se buscaran todos los archivos relativos a la ubicación del archivo de configuración.
--   **files:** el \* indica que se debe tomar en cuenta cualquier archivo adentro del path definido. Si se específican archivos por nombre, sólo se tomara en cuenta los archivos indicados.
+-   **processor:** Processor to use. It supports sass and less
+-   **path:** Directory where the files are located, if not defined it will look for all files relative to the location of the configuration file.
+-   **files:** The \* indicates that any file inside the defined path should be taken into account. If files are specified by name, only the indicated files will be taken into account.

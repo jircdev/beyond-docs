@@ -1,57 +1,59 @@
 {
-    "version": 1,
-    "scope": "beyond",
-    "name": "docs",
-    "title": "Beyond Docs",
-    "description": "Beyond documentation site",
-    "template": "template/template.json",
-    "languages": {
-        "default": "en",
-        "supported": ["en", "es"]
-    },
-    "params": {},
-    "modules": {
-        "path": "./modules"
-    },
-    "libraries": {
-        "imports": ["@beyond/ui"]
-    },
-    "deployment": {
-        "distributions": [
-            {
-                "name": "web",
-                "platform": "web",
-                "environment": "development",
-                "ports": {
-                    "bundles": 3500
-                },
-                "default": true,
-                "backend": "backend"
-            },
-            {
-                "name": "web-dist",
-                "platform": "web",
-                "environment": "development",
-                "ports": {
-                    "bundles": 3900
-                },
-                "default": true,
-                "backend": "backend",
-                "ts": {
-                    "compiler": "tsc"
-                }
-            },
-            {
-                "name": "backend",
-                "platform": "backend",
-                "ports": {
-                    "bundles": 4600
-                },
-                "environment": "development"
-            }
-        ]
-    },
-    "static": {
-        "includes": ["./images", "favicon.png", "./static"]
-    }
+	"version": 1,
+	"scope": "beyond",
+	"name": "docs",
+	"title": "Beyond Docs",
+	"description": "Beyond documentation site",
+	"template": "template/template.json",
+	"languages": {
+		"default": "en",
+		"supported": ["en", "es"]
+	},
+	"params": {},
+	"modules": {
+		"path": "./modules"
+	},
+	"libraries": {
+		"imports": ["@beyond/ui"]
+	},
+	"deployment": {
+		"distributions": [
+			{
+				"name": "web",
+				"platform": "web",
+				"environment": "development",
+				"ports": {
+					"bundles": 3500
+				},
+				"default": true,
+				"backend": "backend"
+			},
+			{
+				"name": "web-dist",
+				"platform": "web",
+				"environment": "production",
+				"minify": {
+					"css": true,
+					"js": true
+				},
+				"ports": {
+					"bundles": 3600
+				},
+
+				"backend": "backend"
+			},
+
+			{
+				"name": "backend",
+				"platform": "backend",
+				"ports": {
+					"bundles": 4600
+				},
+				"environment": "development"
+			}
+		]
+	},
+	"static": {
+		"includes": ["./images", "favicon.png", "./static"]
+	}
 }

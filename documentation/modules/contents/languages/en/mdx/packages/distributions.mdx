@@ -1,34 +1,34 @@
 import {
-    Title,
-    Subtitle,
-    ObjectProperty,
-    ItemProperty,
-    DocHeader,
-    Link,
-    ELink,
-    Table,
-} from "@beyond/docs/components/html";
-import { Code } from "@beyond/docs/code";
+	Title,
+	Subtitle,
+	ObjectProperty,
+	ItemProperty,
+	DocHeader,
+	Link,
+	ELink,
+	Table,
+} from '@beyond/docs/components/html';
+import { Code, CodeBox } from '@beyond/docs/code';
 
-<DocHeader id="intro" pretitle="Fundamentos" title="Distribuciones" />
+<DocHeader id="intro" pretitle="Fundamentals" title="Distributions" />
 
-Las Distribuciones son una funcionalidad que permite definir el comportamiento
-que debe tener el DevServer de BeyondJS en el entorno de desarrollo y las caracteristicas para el
-empaquetado del proyecto durante el proceso de despliegue
+Distributions are a feature that allows you to define the behavior of the BeyondJS DevServer in your
+that the BeyondJS DevServer should have in the development environment and the characteristics for the
+packaging of the project during the deployment process.
 
-> Al crear un nuevo proyecto, este viene con una distribución configurada de forma predeterminada.
-> En este documento se describen en detalle todas las opciones de configuración de las distribuciones,
-> necesarias para trabajar con diferentes entornos de ejecución o tipos de resolución de módulos.
+> When a new project is created, it comes with a distribution configured by default.
+> This document describes in detail all the configuration options of the distributions,
+> necessary to work with different execution environments or module resolution types.
 
-<Title id="definition" tag="h2" text="Definición" />
+<Title id="definition" tag="h2" text="Definition" />
 
-Las distribuciones se definen en el archivo `project.json`, en la propiedad `distirbutions`
-del entry point `development`.
+The distributions are defined in the `project.json` file, in the `distirbutions` property of the `development` entry point.
+property of the `development` entry point.
 
-Un ejemplo de una distribución es:
+An example of a distribution is:
 
 <Code>
-    {` {
+	{` {
     "name": "web",
     "platform": "web",
     "environment": "development",
@@ -39,27 +39,27 @@ Un ejemplo de una distribución es:
 `}
 </Code>
 
-<Title id="properties" tag="h2" text="Propiedades" />
+<Title id="properties" tag="h2" text="Properties" />
 
--   <ObjectProperty type="string">name</ObjectProperty> Nombre identificador de la distribución.
--   <ObjectProperty type="string">platform</ObjectProperty> identificador de la plataforma que utiliza la distribución. Puede
-    ver los identificadores de plataformas en la <Link href="/platforms">sección de Plataformas</Link>
+-   <ObjectProperty type="string">name</ObjectProperty> Name identifier of the distribution.
+-   <ObjectProperty type="string">platform</ObjectProperty> identifier of the platform used by the distribution. You can
+    see the platform identifiers in the <Link href="/platforms">platforms section</Link>.
 
--   <ObjectProperty type="string">environment</ObjectProperty> soporta los valores `deployment` y `production`.
+-   <ObjectProperty type="string">environment</ObjectProperty> supports `deployment` and `production` values.
 
-    -   <ObjectProperty type="object">ports</ObjectProperty> recibe un objeto con las siguientes propiedades :
-    -   <ObjectProperty type="number">bundles</ObjectProperty> puerto en el que el DevServer devolverá los bundles.
-    -   <ObjectProperty type="number">http</ObjectProperty> Puerto para conectar debuggers o inspectores de código. Puede
-        leer más sobre inspección remota en <Link href="/remote-inspection">sección de inspección remota.</Link>
+    -   <ObjectProperty type="object">ports</ObjectProperty> receives an object with the following properties :
+    -   <ObjectProperty type="number">bundles</ObjectProperty> port on which the DevServer will return bundles.
+    -   <ObjectProperty type="number">http</ObjectProperty> port to connect debuggers or code inspectors. You can read more
+        about remote inspection in <Link href="/remote-inspection">remote-inspection section.</Link>.
 
--   <ObjectProperty type="object">ts</ObjectProperty> Objeto manejado para gestionar configuraciones del compilador typescript,
-    actualmente soporta las siguientes propiedades:
+-   <ObjectProperty type="object">ts</ObjectProperty> Object handled to manage typescript compiler configurations, currently
+    supports the following properties:
 
     -   <ItemProperty type="string" optional label="compiler">
-            acepta los valores `ts` y `transpiler`.
+        	accepts `ts` and `transpiler` values.
         </ItemProperty>
 
 -   <ItemProperty type="string" optional label="backend">
-        Esta propiedad es requerida si el paquete utiliza una conexión con un backend por medio de websockets. Puedes
-        leer más acerca de esto en la <Link href="/bridges">sección de Bridges</Link> .
+    	This property is required if the package uses a connection to a backend via websockets. You can read more about
+    	this in the <Link href="/bridges">Bridges</Link> section.
     </ItemProperty>

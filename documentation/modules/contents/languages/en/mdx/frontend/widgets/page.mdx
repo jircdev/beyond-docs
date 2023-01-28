@@ -1,21 +1,17 @@
 import { NextLinks, DocHeader, BeyondJS, Subtitle, Title, Link } from "@beyond/docs/components/html";
 import { Code, CodeBox } from "@beyond/docs/code";
 
-<DocHeader pretitle="Widgets" title="Páginas" />
+<DocHeader pretitle="Widgets" title="Pages" />
 
-Los widgets de tipo page representan una página web accesible por
-URL. <BeyondJS/> los identifica y los inicializa en el DOM cuando se recibe una solicitud por URL.
+Widgets of type 'page' represent a web page accessible by URL. <BeyondJS/> identifies and initializes them in the DOM when a URL request is received.
 
-El bundle de tipo page recibe los siguientes valores adicionales en la configuración agregada
-en el `module.json`
+The 'page' bundle receives the following additional values in the configuration added in the 'module.json'
 
--   `is`: el valor debe ser `page`.
--   `route`: Define la ruta o url de la página y se explica en detalle más adelante.
--   `layout`: Es opcional, debe agregarse si se desea que la página esté contenida
-    en un layout específico.
+-   `is`: the value must be `page`.
+-   `route`: Defines the route or url of the page and is explained in detail later.
+-   `layout`: It is optional, it should be added if you want the page to be contained in a specific layout.
 
-En base a lo anterior, el siguiente es el ejemplo de un `module.json` válido
-para páginas.
+Based on the above, the following is an example of a valid 'module.json' for pages.
 
 <CodeBox title="module.json">
 {`{
@@ -37,52 +33,39 @@ para páginas.
 `}
 
 </CodeBox>
-
 <Title tag="h2" text="PageWidgetController" />
 
-Las páginas deben heredar del controlador `PageWidgetController`.
+Pages must inherit from the `PageWidgetController` controller.
 
-El Objeto `PageWidgetController` controller gestiona el registro de url
-para el manejo de enrutamientos de <BeyondJS/> y es disponibilizado por el paquete de widgets
-que se utilice en el proyecto.
+The `PageWidgetController` object manages the registration of URLs for handling <BeyondJS/> routing and is provided by the widget package used in the project.
 
-> La implementación de las páginas se realiza mediante controladores específicos
-> para cada librería, como PageReactWidgetController para React, `PageVueWidgetController`
-> para Vue, y `PageSvelteWidgetController` para Svelte. Estos controladores se encuentran en
-> paquetes independientes, que deben ser instalados en el proyecto según la librería que se
-> esté utilizando. Por ejemplo, para utilizar la funcionalidad de las páginas en un proyecto de
-> React, se debe instalar el paquete `@beyond-js/react-widgets` y utilizar el controlador
-> `PageReactWidgetController`. Esto permite una mayor flexibilidad y facilidad de uso al
-> agregar soporte para nuevas librerías en el futuro.
+> Page implementation is done through specific controllers for each library, such as `PageReactWidgetController` for React, `PageVueWidgetController` for Vue, and `PageSvelteWidgetController` for Svelte. These controllers are found in separate packages, which must be installed in the project according to the library being used. For example, to use page functionality in a React project, the package `@beyond-js/react-widgets` must be installed and the controller `PageReactWidgetController` used. This allows for greater flexibility and ease of use when adding support for new libraries in the future.
 
-<Title tag="h2" text="Métodos" />
+<Title tag="h2" text="Methods" />
 
-El `PageWidgetController` contiene los mismos métodos que el objeto `WidgetController`, pero además
-agrega los siguientes métodos, propios para el tratamiento de páginas:
+The `PageWidgetController` contains the same methods as the `WidgetController` object, but also adds the following methods specific to page handling:
 
--   `hide` [void] [optional]: Se ejecuta cuando ha sido renderizada y se oculta,
-    esto sucede cuando se navega de una URL a otra.
--   `show` [void] [optional]: Se ejecuta cada vez que se accede a la URL y la \
-     página se muestra en el navegador.
+-   `hide` [void] [optional]: Executed when rendered and hidden, this occurs when navigating from one URL to another.
+-   `show` [void] [optional]: Executed every time the URL is accessed and the page is displayed in the browser.
 
-<Title tag="h2" text="Enrutamiento" />
+<Title tag="h2" text="Routing" />
 
-Cómo se indicó al principio del documento, la ruta de la página se define
-por medio de la propiedad `route` del widget, en el archivo `module.json`.
+As indicated at the beginning of the document, the page route is defined
+by the `route` property of the widget, in the `module.json` file.
 
-> Las configuraciones de los archivos `module.json` son gestionadas
-> de forma automática por <BeyondJS/> cuando se utilizan herramientas cómo el CLI
-> o el BeyondJS Workspace.
+> The configurations of the `module.json` files are managed
+> automatically by <BeyondJS/> when using tools such as the CLI
+> or the BeyondJS Workspace.
 
-Las urls tienen un sistema simple pero poderoso para manejar variables
-que permitan trabajar con URLs dinámicas. Lo único que se necesita es
-definir las variables que se esperan recibir en la url haciendo uso
-de la sintaxis propia de template-strings de JavaScript.
+URLs have a simple but powerful system for handling variables
+that allow for working with dynamic URLs. All that is needed is
+to define the variables that are expected to be received in the URL using
+JavaScript's template-string syntax.
 
-Para ejemplificarlo, supongamos que se tiene una página de módificación
-de datos de un usuario y se necesita manejar el id por medio de la URL.
+To illustrate this, let's say we have a page for modifying
+user data and we need to handle the ID through the URL.
 
-La propiedad route del widget tendría el siguiente valor:
+The route property of the widget would have the following value:
 
 <Code>
     {`
@@ -90,21 +73,21 @@ La propiedad route del widget tendría el siguiente valor:
 `}
 </Code>
 
-Las siguientes urls coincirian con la ruta creada:
+The following URLs would match the created route:
 
 -   `/user/edit/1`
 -   `/user/edit/any-value`
 
-Asimismo, <BeyondJS/> disponibiliza un objeto `uri` cómo propiedad del Controlador y además,
-este objeto es pasado al Componente de Renderizado como `props`.
+Also, <BeyondJS/> provides an `uri` object as a property of the Controller and also,
+this object is passed to the Render Component as `props`.
 
-Estas propiedades, quedan disponibles en el objeto `uri` disponible como propiedad en
-el controller del widget y podria ser accedido desde el
-controlador de la siguiente forma:
+These properties, are available on the `uri` object available as a property in
+the widget controller and could be accessed from the
+controller in the following way:
 
-<CodeBox title="controller.js">{`this.uri.vars.get('userId');`}</CodeBox>
+<CodeBox title="controller.ts">{`this.uri.vars.get('userId');`}</CodeBox>
 
-La forma de acceder al objeto uri desde los componentes de vista, puede variar
-según el comportamiento de las librerias que se utilice.
+The way to access the uri object from the view components can vary
+depending on the behavior of the libraries used.
 
 <NextLinks items={["widgets/layouts", "routing"]} />

@@ -1,0 +1,88 @@
+import { NextLinks, Link, ELink, DocHeader, Title, Subtitle, BeyondJS } from "@beyond/docs/components/html";
+import { CodeBox, Code } from "@beyond/docs/code";
+
+<DocHeader pretitle="Backend" title="Bridges" />
+
+Los bridges en BeyondJS son una herramienta poderosa que
+te permite optimizar tu desarrollo al máximo.
+
+Un bridge es un tipo especial de Bundle que te permite crear código en
+el lado del servidor y que BeyondJS genera automáticamente un objeto
+de modo API. De esta manera, puedes consumir los métodos exportados de
+forma remota a través de websockets.
+
+Puedes importar el bundle desde otro servicio o desde un código
+cliente y tener acceso directo a los métodos definidos, con tipado
+de datos y validaciones integradas. Esto significa que sólo es
+necesario escribir el código una vez, lo que te permite ahorrar
+tiempo y esfuerzo en tu desarrollo.
+
+> Por supuesto, la api generada sólo posee la especificación de los metodos y
+> la conexión websocket al bridge, la lógica queda encapsulada en el código
+> servidor.
+
+En esta sección de la documentación aprenderás cómo crear y consumir
+bridges en BeyondJS, así como recomendaciones y ejemplos para sacar
+el máximo provecho de esta herramienta.
+
+<Title tag="h2" text="Crear un bridge" />
+
+¿Estás listo para sacar el máximo provecho de BeyondJS y
+optimizar tus proyectos con bridges? ¡Aquí te mostraremos un tutorial
+paso a paso para crear un bridge y exportar tus métodos de forma fácil
+y rápida!
+
+<Title tag="h4" text="Creación del módulo" />
+
+Para darle contexto al proceso, imaginaremos que estás
+codificando en un paquete cuyo nombre es "awesome-api"
+
+1. Asegurate de estar en la raiz de tu proyecto a la altura del archivo
+   `package.json`.
+
+2. Abre la terminal y ejecuta el comando `beyond add module`.
+
+    > Este comando es interactivo, lo que significa que requiere una
+    > consola con funcionalidades interactivas para su correcta ejecución.
+    > Si no cuentas con una consola interactiva, se recomienda
+    > crear el módulo usando el Workspace de <BeyondJS/> o
+    > manualmente <Link href="/docs/modules/creation">siguiendo los pasos detallados en la
+    > documentación.</Link>
+
+3. El comando preguntará por el subpath, este es el nombre del módulo
+   que servirá para exportarlo posteriormente.
+4. seleccionamos `bridge` como el tipo de bundle a crear.
+
+<Title tag="h4" text="Código del Bridge" />
+
+Una vez creado, abre el archivo `.ts` del módulo y crea el
+objeto con los métodos que desees exportar.
+Para que <BeyondJS/> pueda generar el bridge del lado cliente debes
+exportar el objeto agregando los comentarios
+mágicos /\*bundle\*//\*actions\*/ despues de la palabra clave "exports"
+
+El código de tu bridge deberia verse similar al siguiente:
+
+<CodeBox title="bridge.ts">
+    {`export /*actions*/ /*bundle*/ class Auth {
+    // métodos y definiciones
+}`}
+</CodeBox>
+
+En el código de ejemplo, se muestra cómo exportar una clase para ser
+instanciada como un bridge. Sin embargo, es posible exportar un objeto
+ya instanciado o un objeto plano directamente como un bridge.
+Esto se hace agregando los comentarios mágicos correspondientes
+(/\*bundle\*//\*actions\*/) a la expresión de exportación. El proceso de
+importación y uso del bridge sigue siendo el mismo, independientemente
+de si se está trabajando con una clase o un objeto.
+
+<Title tag="h4" text="Importación del módulo" />
+
+Para utilizar tus métodos en otros módulos, importa el bridge
+usando el bare-specifier, es decir, utilizando el nombre del paquete
+seguido del subpath correspondiente. Cómo se muestra a continuación:
+
+<Code>{`import {auth} from 'awesome-api/auth';`}</Code>
+
+<NextLinks items={["backend/debug", "backend/ssrserver"]} />

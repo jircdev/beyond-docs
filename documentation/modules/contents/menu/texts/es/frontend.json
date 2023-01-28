@@ -1,0 +1,17 @@
+{
+	"es": {
+		"/docs/frontend/intro": "Paquetes de Frontend",
+		"/docs/styles/template": "Plantilla",
+		"/docs/styles/modules": "Módulos",
+		"/docs/styles/themes": "Tema claro y oscuro",
+		"/docs/styles/imports": "Importando",
+		"/docs/template": "Sistema de Plantilla",
+		"/docs/widgets": "Introducción",
+		"/docs/widgets/controllers": "Controladores",
+		"/docs/widgets/page": "Páginas",
+		"/docs/widgets/layout": "Diseños",
+		"/docs/widgets/rendering": "Renderizado",
+		"/docs/routing": "Enrutamiento",
+		"/docs/state/management": "Gestión de Estado"
+	}
+}

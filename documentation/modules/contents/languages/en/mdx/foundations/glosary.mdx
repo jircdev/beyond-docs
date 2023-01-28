@@ -1,0 +1,12 @@
+import { Title, Subtitle, DocHeader } from '@beyond/docs/components/html';
+import { Code, CodeBox } from '@beyond/docs/code';
+
+<DocHeader title="Glossary of terms" pretitle="Foundations" />
+
+<Subtitle>EAC</Subtitle>
+
+("External Array Configuration") Objects whose properties are EAC can expect two values, an array or a string. If a string is passed, BeyondJS takes the value as a relative path to the location of the external configuration file. Configuration array that can be in a separate file and whose elements are of type EOC.
+
+<Subtitle>EOC</Subtitle>.
+
+("External Object Configuration") Configuration object that can be included directly as a value or referenced as an external file. Objects whose properties are EOC can expect two values: an object or a text string. If the property has a string value, BeyondJS takes the value as a relative path to the location of the external configuration file.

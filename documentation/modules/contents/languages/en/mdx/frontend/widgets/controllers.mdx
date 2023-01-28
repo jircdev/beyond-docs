@@ -3,32 +3,17 @@ import { Code, CodeBox } from "@beyond/docs/code";
 
 <DocHeader pretitle="Widgets" title="Controladores" />
 
-Los controladores en <BeyondJS/> son los encargados de gestionar
-el ciclo de vida de los Widgets. Estos permiten crear un ecosistema rico y apropiado
-para las exigencias de las aplicaciones actuales y proveen una API que permite
-una configuración simple para comportamientos sofisticados cómo
-elegir el tipo de Renderizado que se desea utilizar, que puede variar
-entre Renderizado Estático, Renderizado Cliente o Renderizado del lado del
-servidor también conocido cómo SSR.
+Controllers in <BeyondJS/> are responsible for managing the lifecycle of widgets. These allow creating a rich and appropriate ecosystem for the demands of current applications and provide an API that allows for simple configuration for sophisticated behaviors such as choosing the type of rendering to use, which can vary between Static Rendering, Client Rendering, or Server-side Rendering, also known as SSR.
 
-BeyondJS provee unos controladores bases para los distintos tipos de renderizado
-y estos son extendidos por los paquetes que posibilitan la posibilidad de
-trabajar con librerias de renderizado.
+BeyondJS provides base controllers for the different types of rendering, and these are extended by the packages that enable the possibility of working with rendering libraries.
 
-> El presente documento aplica para cualquiera de las librerias, solo se requiere
-> reemplazar la importación y el nombre del Controlador exportado, pero la interfaz es
-> la misma. Por convención y en Pro de un simple entendimiento, los controladores de
-> cada paquete sólo agregan como prefijo el nombre de la libreria a los Controladores.
+> This document applies to any of the libraries, only the import and the exported controller name needs to be replaced, but the interface is the same. For convention and for the sake of simple understanding, the controllers of each package only add the library name as a prefix to the Controllers.
 
 <Title tag="h2" text="WidgetController" />
 
-> Si haces uso del CLI o el Workspace para crear tus paquetes, el manejo de estas
-> dependencias es realizado de forma automática. Esta documentación está hecha con la intención
-> de que quien la lea pueda entender bien la forma extensible de <BeyondJS/>
+> If you use the CLI or the Workspace to create your packages, the management of these dependencies is done automatically. This documentation is intended for the reader to understand the extendable way of <BeyondJS/>
 
-Para utilizar los widgets de <BeyondJS/> es necesario tener el paquete `@beyond-js/widgets`
-instalado y a partir de ello, instalar alguno de los siguientes paquetes
-según la libreria que se desee utilizar:
+To use the widgets of <BeyondJS/> it is necessary to have the package `@beyond-js/widgets` installed, and from there, install one of the following packages according to the library you want to use:
 
 -   <ELink href="https://www.npmjs.com/package/@beyond-js/react-widgets">`@beyond-js/react-widgets`</ELink>
 -   <ELink href="https://www.npmjs.com/package/@beyond-js/svelte-widgets">`@beyond-js/svelte-widgets`</ELink>
@@ -36,11 +21,11 @@ según la libreria que se desee utilizar:
 
 <Title tag="h2" text="WidgetController" />
 
-> `ReactWidgetController` en `react-widgets`.
+> `ReactWidgetController` in `react-widgets`.
 
-> `VueWidgetController` en `vue-widgets`
+> `VueWidgetController` in `vue-widgets`
 
-> `SvelteWidgetController` en `svelte-widgets`.
+> `SvelteWidgetController` in `svelte-widgets`.
 
 La implementación del controlador es requerida para el funcionamiento de los Widgets.
 La estructura es la siguiente:
@@ -60,23 +45,23 @@ class Controller extends LibraryWidgetController {
 
 </Code>
 
-el getter `Widget` debe definirse y retornar un componente a renderizar, compatible
-con la libreria de vista que se esté usando.
+The `Widget` getter must be defined and return a component to render, compatible
+with the view library that is being used.
 
-<Title tag="h4" text="Métodos" />
+<Title tag="h4" text="Methods" />
 
--   `initialise` : Permite agregar lógica a ejecutarse
-    previo al montado del componente web en el DOM HTML y se ejecuta una única vez.
--   `createStore` : Propiedad requerida si se desea implementar SSR.
-    Permite agregar lógica para el manejo del Estado del widget,
-    debe retornar un objeto con
-    la interfaz <Link href="/docs/api/IwidgetStore">IWidgetStore</Link>.
+-   `initialise` : Allows adding logic to be executed
+    prior to web component mounting in the HTML DOM and executed only once.
+-   `createStore` : Property required if SSR is to be implemented.
+    Allows adding logic for handling the widget state,
+    must return an object with
+    the interface <Link href="/docs/api/IwidgetStore">IWidgetStore</Link>.
 
--   `mount`: Es similar al método initialise, la diferencia es que este método se ejecuta
-    cada vez que el componente es montado en el DOM, mientras que el método initialise sólo
-    se ejecuta al momento en el que se monta el componente por primera vez.
+-   `mount`: It is similar to the initialise method, the difference is that this method is executed
+    each time the component is mounted in the DOM, while the initialise method only
+    executed at the time when the component is first mounted.
 
--   `unmount`: Permite ejecutar lógica cuando el componente va a ser desmontado del Documento.
--   `disconnect`: Es el evento disconnect del Componente Web, se ejecuta cuando el componente es eliminado del dom.
+-   `unmount`: Allows executing logic when the component is going to be unmounted from the Document.
+-   `disconnect`: It is the disconnect event of the Web Component, executed when the component is removed from the dom.
 
 <NextLinks items={["widgets/page", "widgets/layout"]} />

@@ -1,0 +1,57 @@
+import { Link, ELink, Title, Subtitle, DocHeader } from '@beyond/docs/components/html';
+import { Code, CodeBox } from '@beyond/docs/code';
+
+<DocHeader id="intro" pretitle="Fundamentals" title="DevServer" />
+
+> In this document we will see what Beyond's Dev Server is, how it works and how to set it up.
+
+<img src="/images/dev-server.jpg" alt="BeyondJS dev server" />
+
+BeyondJS provides a dev server that is responsible for providing pre-packaged code from modules for use in the environment
+environment in which you are working. Its main function is to return the code in the required module resolution system format and to provide a seamless and consistent experience.
+provide a seamless and homogeneous experience in the code creation process.
+
+In addition, the DevServer allows you to run multiple projects simultaneously,
+which is very useful in case of working on several projects at the same time, such as cases where you work with client applications and microservices that connect with each other.
+that are connected to each other.
+
+The developer programs using EcmaScript Modules syntax, and the DevServer takes care of transpiling the code to the required format
+and make it immediately available for use in the environment in which it is being programmed.
+
+The module resolution systems supported by the BeyondJS DevServer are:
+
+-   CommonJs (CJS).
+-   EcmaScript Modules (ESM).
+-   SystemJS (SJS).
+-   Asynchronous Module Definition (AMD).
+
+The code of the projects is packaged based on the defined modules, each module generates an independent bundle, which optimizes
+the loading and maintenance process, since the start-up and development speed is kept efficient by not impacting the project's growth on it.
+
+<Subtitle text="Configuration" />
+
+The behavior of the DevServer, is defined through the configuration of distributions.
+
+The distributions are configurations that allow to define how the packages are to be treated in the development environment.
+
+The programmer can configure inspection ports, type of module resolution or typescript compiler behavior, among other things.
+
+By default, BeyondJS projects come with a distribution already created, but as many as the programmer considers necessary can be added.
+
+<Code>
+	{` {
+    "name": "web",
+    "platform": "web",
+    "environment": "development",
+    "ports": {
+        "bundles": 3500
+    }
+},
+`}
+</Code>
+
+A project or package supports multiple distributions configured at the same time, this provides the possibility of
+validate the behavior of the code under different scenarios in a simple way and to integrate Backend and Frontend functionalities in the same project.
+project.
+
+> To read more about distributions, you can go to the <Link href="/distributions">Distributions section</Link>.

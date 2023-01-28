@@ -1,9 +1,9 @@
-import { Title, Subtitle, DocHeader } from "@beyond/docs/components/html";
-import { Code } from "@beyond/docs/code";
+import { NextLinks, DocHeader, BeyondJS, Subtitle, Title, Link } from "@beyond/docs/components/html";
+import { Code, CodeBox } from "@beyond/docs/code";
 
-<Title>Configuración de módulos</Title>
+<Title>Module configuration</Title>.
 
-El archivo de configuración de módulos es el module.json
+The module configuration file is module.json.
 
 <Code>
 {`
@@ -34,10 +34,10 @@ El archivo de configuración de módulos es el module.json
 
 </Code>
 
-Las propiedades de configuración son:
+The configuration properties are:
 
--   **name** [string] : Define el nombre del módulo, necesario para que los elementos puedan ser importados.
--   **platforms** [array] : Define las plataformas soportadas por el módulo. Los valores soportados son los identificadores de las <Link href="/concepts/platforms">plataformas</Link> existentes.
+-   **name** [string] : Defines the name of the module, necessary for the elements to be imported.
+-   platforms\*\* [array] : Defines the platforms supported by the module. The supported values are the identifiers of the existing <Link href="/concepts/platforms">platforms</Link>.
 
 <Code>
 {`
@@ -52,5 +52,4 @@ Las propiedades de configuración son:
 
 -   [bundle] <Link href="/module#bundle">[bundle]</Link> : Refiere al nombre identificador del tipo de bundle que se desea agregar en el módulo. Un módulo puede poseer uno o varios bundles. Cada bundle recibe un objeto de configuración con los procesadores que utiliza y alguna variación inherita del tipo de bundle agregado.
 
--   <Link href="/docs/bundles">Bundles</Link>
--   <Link href="/docs/widgets">Widgets</Link>
+<NextLinks items={["backend", "widgets"]} />

@@ -1,0 +1,23 @@
+import { NextLinks, Link, ELink, DocHeader, Title, Subtitle, BeyondJS } from '@beyond/docs/components/html';
+import { Code, CodeBox } from '@beyond/docs/code';
+
+<DocHeader pretitle="Backend" title="BEE" />
+
+BEEs are processes managed by BeyondJS. They behave like a node service,
+with the difference that they are managed
+by Beyond's main service, which analyzes, reviews and compiles changes in real time to make them available in BeyondJS.
+changes in real time to make available in
+memory a new version of the bundles with the code changes applied through HMR,
+providing the opportunity to
+access to the updated code functionality, without the need to restart the node process.
+
+The real time update in the Node process offers advantages in execution time because it avoids all the resource load that implies stopping the whole process and restarting it, this can be applied to in-memory values or database connections, to mention examples. BeyondJS detects changes in a file or <Link href="/docs/modules#internal-modules">Internal-module</Link>, updates the change, performs a new bundle build on the fly and drops the new version.
+
+The operation flow of the Bee is as follows:\*\* \*\* 1.
+
+1. Beyond raises the service.
+2. A review of the dependency tree of the bundles is performed (note that this is at the bundle level and not internal modules).
+3. The processed code is loaded in memory and whatchers are added to detect changes.
+4. If there is a change in a file, the change is detected and that code segment is replaced.
+
+\*\*Dynamic imports are not loaded when the BEE is lifted, but are requested on demand.

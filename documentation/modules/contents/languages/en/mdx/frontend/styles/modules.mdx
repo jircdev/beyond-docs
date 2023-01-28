@@ -1,14 +1,14 @@
-import { Title } from "@beyond/docs/components/html";
-import { Code } from "@beyond/docs/code";
-import { Link, ELink } from "@beyond/docs/components/html";
+import { Title } from '@beyond/docs/components/html';
+import { Code, CodeBox } from '@beyond/docs/code';
+import { Link, ELink } from '@beyond/docs/components/html';
 
-<Title>Estilos en el módulo</Title>
+<HeaderDoc title="Estilos en el módulo" pretitle="Frontend" />
 
-Para agregar estilos en un módulo/bundle creado, debe agregarse el <Link href="/docs/processors">procesador</Link> SASS.
+To add styles in a created module/bundle, the <Link href="/docs/processors">SASS processor</Link> must be added.
 
-Si se usa el workspace para la creación de proyectos, el procesador sass es incluido por defecto en los bundles de tipo code y widget de cualquier tipo.
+If the workspace is used for project creation, the SASS processor is included by default in code and widget bundles of any type.
 
-La configuración estandar de un procesador sass es la siguiente:
+The standard configuration of a SASS processor is the following:
 
 **module.json**
 
@@ -27,6 +27,6 @@ La configuración estandar de un procesador sass es la siguiente:
 
 </Code>
 
-En la configuración anterior, se está definiendo que en el módulo existe una carpeta sass, con ubicación relativa al archivo module.json y que todos los archivos de esta carpeta deben ser tomados en cuenta como archivos de estilo.
+In the above configuration, it is being defined that in the module there is a sass folder, with a location relative to the module.json file and that all files in this folder must be taken into account as style files.
 
-El bundle contenedor del procesador se encarga de insertar los estilos en el DOM cuando el elemento es renderizado, de esta forma, no es requerido hacer imports con semántica de JavaScript de archivos externos en nuestro código.
+The processor's container bundle is responsible for inserting the styles into the DOM when the element is rendered, in this way, it is not required to make external file imports with JavaScript semantics in our code.

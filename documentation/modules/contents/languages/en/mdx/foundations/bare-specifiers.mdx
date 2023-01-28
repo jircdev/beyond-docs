@@ -1,0 +1,30 @@
+import { Title, Subtitle, DocHeader } from '@beyond/docs/components/html';
+import { Code, CodeBox } from '@beyond/docs/code';
+
+<DocHeader id="intro" pretitle="Fundamentals" title="Modular Structure" />
+
+A bare specifier is a way to specify a module in JavaScript for import without specifying the entire file.
+Instead of putting the full path to the file, you specify only the name of the package or module as it is defined
+in the package.json file and the module system takes care of finding and loading the correct corresponding file.
+
+For example in the following code
+
+<Code>{`import {someFunction} from 'my-module';`}</Code>
+
+In this case, `my-module` is the name of the package or module being imported and `someFunction` is the name of the specific function being imported.a
+function being imported.
+
+The use of square brackets ``{}` }` indicates that a specific function is being imported rather than the entire module (destructuring).
+
+BeyondJS makes use of the bare specifiers to manage the import and export of packages and modules in your projects and
+manages their processing so that the code can be worked in the same way in any environment.
+
+Currently import maps are not supported in a standardized way by browsers.
+BeyondJS uses the SystemJS module system that provides support for import maps,
+which allows you to specify the module path instead of using absolute paths.
+
+In addition, BeyondJS automates import map generation and SystemJS configuration so developers don't have to worry about it.
+developers don't have to worry about it.
+
+This way, programmers can continue to use the EcmaScript standard for importing modules, even in environments
+where it is not natively supported.

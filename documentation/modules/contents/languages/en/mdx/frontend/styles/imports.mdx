@@ -5,9 +5,9 @@ import { Code, CodeBox } from "@beyond/docs/code";
 
 <Title tag="h4" text="node_modules" />
 
-Si se requiere incluir un archivo de estilos de alguna libreria instalada en node_modules, se puede importar de forma no relativa, desde el archivo del módulo en el que se requiera, haciendo uso del caracter ~ seguido de la ruta del paquete en la carpeta node_modules.
+If it is necessary to include a stylesheet from a library installed in node_modules, it can be imported non-relatively, from the module file where it is required, by using the ~ character followed by the package path in the node_modules folder.
 
-De esta forma, supongamos que se desea trabajar con bootstrap, podriamos importarlo de la siguiente forma:
+In this way, let's suppose that we want to work with bootstrap, we could import it in the following way:
 
 <Code>
     {`
@@ -15,7 +15,7 @@ De esta forma, supongamos que se desea trabajar con bootstrap, podriamos importa
     `}
 </Code>
 
-De la misma forma, si se requiere importar un archivo especifico dentro de la libreria, como el de_variables.scss, puede importarse de forma directa:
+Similarly, if it is necessary to import a specific file within the library, such as \_variables.scss, it can be imported directly:
 
 <Code>
     {`
@@ -25,9 +25,9 @@ De la misma forma, si se requiere importar un archivo especifico dentro de la li
 
 <Title tag="h4" text="Importación de estilos de un bundle" />
 
-La importación de módulos de estilo es considerada en BeyondJS como una importación no relativa, por tanto sigue las mismas reglas de importación de un archivo existente en una libreria de npm, pero la ruta de inclusión en este caso, sigue la estructura de nombres de los módulos realizados con el framework, que como hemos visto antes, puede estar compuesta por @scope/name, donde el scope es opcional.
+The importation of style modules is considered in BeyondJS as a non-relative import, therefore it follows the same import rules as a file existing in an npm library, but the inclusion path in this case follows the module name structure made with the framework, which as we have seen before, can be composed of @scope/name, where scope is optional.
 
-Para ejemplificarlo, imaginemos que se tiene un módulo llamado form, que incluye un bundle code, el cúal define componentes de un formulario y se requiere importar los estilos desde otro módulo. En el módulo, se creo un archivosass que define estilos para los labels, cuyo nombre es labels.scss. La línea de importación sería:
+To illustrate this, let's imagine that we have a module called form, which includes a bundle code, which defines components of a form and it is necessary to import the styles from another module. In the module, a sass file was created that defines styles for labels, whose name is labels.scss. The import line would be:
 
 <Code>
     {`

@@ -2,7 +2,6 @@ import * as React from "react";
 import { hmr, ContentsPage } from "@beyond/docs/contents-data";
 
 export function Page(props): JSX.Element {
-    console.log(0.1, props);
     const { uri, component } = props;
     const content = uri.vars.get("content");
     const [hmrChanged, setHmr] = React.useState(performance.now());

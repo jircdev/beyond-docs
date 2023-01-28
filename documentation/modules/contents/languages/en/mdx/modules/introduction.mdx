@@ -1,27 +1,27 @@
-import { NextLinks, Link, ELink, DocHeader, Title, Subtitle, BeyondJS } from "@beyond/docs/components/html";
-import { Code } from "@beyond/docs/code";
+import { NextLinks, Link, ELink, DocHeader, Title, Subtitle, BeyondJS } from '@beyond/docs/components/html';
+import { Code, CodeBox } from '@beyond/docs/code';
 
 <DocHeader pretitle="Basics" title="Modules" />
 
-En <BeyondJS/>, los módulos son la unidad básica de desarrollo y se dividen en dos conceptos:
-Módulos Internos y Módulos.
+In <BeyondJS/>, modules are the basic unit of development and are divided into two concepts:
+Internal Modules and Modules.
 
-Los Módulos Internos representan el concepto de módulos JavaScript tradicionales,
-es decir, archivos con tareas independientes y un scope propio.
-Sin embargo, los desarrolladores tienen la capacidad de definir si estos
-módulos internos son accesibles para ser utilizados por otros módulos internos o
-no mediante el uso de un comentario especial llamado`/*bundle*/`.
+Internal Modules represent the concept of traditional JavaScript modules,
+i.e. files with independent tasks and their own scope.
+However, developers have the ability to define whether these internal modules are accessible to be used by the developers.
+internal modules are accessible to be used by other internal modules or not by using a special comment
+not by using a special comment named`/*bundle*/`.
 
-Por otro lado, los Módulos en BeyondJS son una unidad más grande de desarrollo que
-se compone de varios módulos internos, así como de otros recursos como estilos,
-imágenes y texto. BeyondJS empaqueta estos módulos en un archivo único según
-el tipo de procesador utilizado.
+On the other hand, Modules in BeyondJS are a larger unit of development that is composed of several internal modules.
+consists of several internal modules, as well as other resources such as styles, images and text,
+images and text. BeyondJS packages these modules into a single file depending on the type of
+the type of processor used.
 
-Para ilustrar esto, tomemos como ejemplo un módulo "login" que se compone de
-los siguientes elementos:
+To illustrate this, let's take as an example a "login" module that consists of.
+the following elements:
 
--   Un archivo `auth.ts` con un objeto Auth que sirve de modelo y
-    permite realizar la llamada para el inicio de sesión
+-   An `auth.ts` file with an Auth object that serves as a model and
+    allows the login call to be made
 
 <Code>
 
@@ -44,8 +44,8 @@ export /_bundle_/ class Auth {
 
 </Code>
 
--   Un archivo `user.ts` con un objeto User que expone
-    la información del usuario en caso de que inicie sesión
+-   A `user.ts` file with a User object that exposes
+    the user's information in case he/she logs in.
 
 <Code>
 
@@ -67,25 +67,23 @@ export /*bundle*/ class User {
 
 </Code>
 
--   Un archivo de estilos `styles.scss` y
--   un componente de interfaz gráfica `form.tsx`.
+-   A styles file `styles.scss` and
+-   a graphical interface component `form.tsx`.
 
-Basándonos en EcmaScript, los archivos auth.ts, user.ts y form.tsx
-son módulos independientes que exponen un objeto. Sin embargo,
-en términos de funcionalidad, el módulo de la aplicación se compone de estos
-archivos en su totalidad.
+Based on EcmaScript, the files auth.ts, user.ts and form.tsx
+are independent modules that expose an object. However,
+in terms of functionality, the application module is composed of these files in their entirety.
+files in their entirety.
 
-Por lo tanto, <BeyondJS/> conceptualiza los módulos como un conjunto de archivos
-definidos en un archivo module.json, donde todos los elementos dentro de este
-módulo pueden ser utilizados entre sí. Además, el programador puede definir
-exactamente qué elementos exportar a un módulo externo, como en el ejemplo
-del objeto "user", que es exportado mediante el comentario mágico /_bundle_/.
+Therefore, <BeyondJS/> conceptualizes modules as a set of files defined in a module.js file.
+defined in a module.json file, where all elements within this module can be used with each other.
+module can be used with each other. In addition, the programmer can define
+exactly which elements to export to an external module, as in the "user" object example, which is
+of the "user" object, which is exported via the magic comment /_bundle_/.
 
-<BeyondJS /> empaqueta los módulos como bundles independientes. Puedes obtener más información sobre esto en la sección
-de creación de módulos.
+<BeyondJS /> packages the modules as separate bundles. You can learn more about this in the module creation section.
 
-Como desarrollador, es probable que sólo te interese que otros módulos puedan
-consumir la vista del formulario y el objeto User para acceder a los datos del usuario.
+As a developer, you're probably only interested in other modules being able to
+consume the form view and the User object to access user data.o.
 
--   <Link href="/docs/modules/creation">Crear de módulos</Link>
--   <Link href="/docs/bundles">Bundles</Link>
+<NextLinks items={['modules/creation', 'bundles']} />

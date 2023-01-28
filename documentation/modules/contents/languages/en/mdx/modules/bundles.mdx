@@ -3,13 +3,13 @@ import { CodeBox, Code } from "@beyond/docs/code";
 
 <DocHeader pretitle="Modules" title="Bundles" />
 
-En BeyondJS, los bundles son conjuntos de archivos y configuraciones que se utilizan para organizar y
-estructurar el código de una aplicación. Cada bundle puede contener uno o varios archivos de diferentes tipos,
-como código JavaScript, estilos CSS, imágenes, etc. Los bundles también pueden contener configuraciones
-para procesadores de código, como TypeScript o Sass.
+In BeyondJS, bundles are sets of files and configurations that are used to organize and
+structure the code of an application. Each bundle can contain one or more files of different types,
+such as JavaScript code, CSS styles, images, etc. Bundles can also contain configurations
+for code processors, such as TypeScript or Sass.
 
-Los bundles son definidos como propiedades del archivo `module.json`. Por ejemplo,
-el siguiente código define un bundle de tipo `code`
+Bundles are defined as properties of the `module.json` file. For example,
+the following code defines a bundle of type `code`.
 
 <Code>
     {`
@@ -31,54 +31,55 @@ el siguiente código define un bundle de tipo `code`
 `}
 </Code>
 
-Es importante tener en cuenta que un módulo puede contener más de un bundle,
-para ello solo es necesario agregar otra propiedad con el nombre del bundle adicional.
-Sin embargo, un módulo no puede contener dos bundles del mismo tipo.
+It is important to note that a module can contain more than one bundle,
+for this it is only necessary to add another property with the name of the additional bundle.
+However, a module cannot contain two bundles of the same type.
 
-> Los bundles reciben procesadores como valores. Los procesadores son objetos que indican
-> el tipo de archivos a procesar y su ubicación. BeyondJS permite la definición o agregación de
-> nuevos procesadores, lo que hace que el concepto de procesadores sea extensible. Puedes revisar la sección
-> de procesadores para ver una lista de los procesadores predeterminados.
+> The bundles receive processors as values. Processors are objects that indicate
+> the type of files to be processed and their location. BeyondJS allows for the definition or aggregation of.
+> new processors, which makes the concept of processors extensible. You can check the section
+> of processors for a list of the default processors.
 
-<Title tag="h3" text="Definición de bundles" />
+<Title tag="h3" text="Bundles definition" />
 
-Imagina que necesitas crear la interfaz de un formulario de registro.
-El formulario de registro podría dividirse en dos capas:
+Imagine you need to create the interface of a registration form.
+The registration form could be divided into two layers:
 
--   la interfaz de usuario basada en el código HTML y los estilos de la pantalla.
--   La lógica asociada a validaciones y funcionalidades.
+-   the user interface based on HTML code and the screen styles.
+-   The logic associated with validations and functionalities.
 
-Para llevar a cabo el desarrollo, es necesario crear algunos archivos en Typescript
-que incluyan la lógica y elementos de la interfaz, así como otros archivos de estilo.
-En <BeyondJS/>, esto implica trabajar con al menos dos procesadores básicos:
-TypeScript y Sass. El primero genera código JavaScript y el segundo genera código CSS.
+To carry out the development, it is necessary to create some files in Typescript
+that include the logic and elements of the interface, as well as other style files.
+In <BeyondJS/>, this involves working with at least two basic processors:
+Typescript and Sass. The former generates JavaScript code and the latter generates CSS code.
 
-Como se explicó anteriormente, la posibilidad de que un bundle genere uno o varios
-archivos finales depende de los procesadores incluidos en su empaquetamiento.
-Si sólo se necesita crear código JavaScript, se genera un único archivo.
-Si, por el contrario, se necesita también código CSS, se generan dos archivos.
+As explained above, the ability of a bundle to generate one or several
+final files depends on the processors included in its packaging.
+If only JavaScript code needs to be created, a single file is generated.
+If, on the other hand, CSS code is also needed, two files are generated.
 
-<Title tag="h2" text="Bundles Transversales" />
-Los bundles transversales, se definen igual que el resto de bundles, pero tienen una particularidad que ofrece ventajas productivas:
-el código de un bundle transversal es compilado en un archivo único.
+<Title tag="h2" text="Traversal Bundles" />
+The transversal bundles, are defined the same as the other bundles, but have a particularity that offers productive advantages:
+the code of a traversal bundle is compiled into a single file.
 
-BeyondJS los ubica, integra y unifica en un único bundle o archivo final. Los bundle de tipo start son un ejemplo claro de ello, permiten al programador definir la lógica que desea sea ejecutada en el arranque de la aplicación.
+BeyondJS places, integrates and unifies them in a single bundle or final file. Start bundles are a clear example of this, allowing the programmer to define the logic to be executed at application startup.
 
-<Title tag="h2" text="Tipos de bundle" />
+<Title tag="h2" text="Bundle types" />
 
--   **Widget**: Contienen el código de un web-component.
-    Las páginas y los layouts son manejados como widgets. Puedes leer más acerca de este tipo de bundle en
-    <Link href="/widgets">La sección de Widgets.</Link>
--   **Code**: Bundle que permite crear funcionalidades diversas para ser consumidas desde otro bundle o módulo. Soporta la integración de múltiples procesadores.
--   **TS (Typescript)**: sólo soporta el procesador para manejo de archivos typescript.
--   **Bridge**: bundle de código backend, que genera código cliente y disponibiliza la conexión websocket para conectar el cliente y el backend.
--   **Backend**: sólo soporta código que va a ser ejecutado en entornos de ejecución cómo **Node** o **Deno**.
--   **Vue**: Bundle específico para manejo de módulos con el Framework Vue.
--   **Svelte**: específico para manejo de código Svelte y su estructura de single file component.
--   **Start**: Bundle transversal, útil si se requiere ejecutar lógica en el arranque del aplicativo.
--   **Txt-start**: Bundle transversal, que  
-     permite manejar textos multilenguajes
-    requeridos en el arranque del
-    aplicativo.
+-   **Widget**: They contain the code of a web-component.
+    Pages and layouts are handled as widgets. You can read more about this bundle type at.
+    {" "}
+    <Link href="/widgets">The Widgets section.</Link>.
+-   **Code**: Bundle that allows you to create various functionalities to be consumed from another bundle or module. Supports multi-processor integration.
+-   TS (Typescript)\*\*: only supports the processor for handling typescript files.
+-   Bridge\*\*: backend code bundle, which generates client code and provides the websocket connection to connect the client and the backend.
+-   Backend**: only supports code to be executed in execution environments such as **Node** or **Deno\*\*.
+-   Vue\*\*: Bundle specific for module management with the Vue Framework.
+-   Svelte\*\*: specific for Svelte code management and its single file component structure.
+-   Start\*\*: Transversal Bundle, useful if it is required to execute logic when starting the application.
+-   Text-start\*\*: Transversal Bundle, which  
+     allows to handle multi-language texts
+    required at application start-up.
+    application start-up.
 
 <NextLinks items={["modules/processors", "frontend/widgets"]} />

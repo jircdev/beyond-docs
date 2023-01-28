@@ -1,52 +1,43 @@
 import * as React from 'react';
-import {BeyondModal} from "@beyond/ui/modal";
-import {beyond} from '@beyond-js/kernel/core';
+import { BeyondModal } from '@beyond/ui/modal';
+import { beyond } from '@beyond-js/kernel/core';
 
 interface IDisabled {
-    disabled?: boolean
+	disabled?: boolean;
 }
 
-export function LanguagesModal({onClose}) {
-    const [selected, setSelected] = React.useState(undefined);
-    const onConfirm = event => {
-        console.log(2, 'selected', selected);
-        beyond.languages.current = selected;
-        onClose();
-    }
-    const onClick = event => {
-        const lang = event.currentTarget.dataset.language;
-        setSelected(lang);
-    }
-    const disabled: IDisabled = {};
-    if (!selected) disabled.disabled = true;
-    return (
-        <>
-            <BeyondModal show className="modal-languages" onClose={onClose}>
-                <ul className="languages-list">
-                    <li onClick={onClick}
-                        className={`${selected === 'en' ? ' item-selected' : ''}`} data-language="en">
-                        <span className="current-name">
-                            English
-                        </span>
-                        English
-                    </li>
-                    <li onClick={onClick}
-                        className={`${selected === 'es' ? ' item-selected' : ''}`}
-                        data-language="es">
-                        <span className="current-name">
-                            Spanish
-                        </span>
-                        Español
-                    </li>
-                </ul>
-                <div className="actions">
-                    <button
-                        {...disabled} onClick={onConfirm} className="btn btn-primary ">
-                        Confirm
-                    </button>
-                </div>
-
-            </BeyondModal>
-        </>
-    )
+export function LanguagesModal({ onClose }) {
+	const [selected, setSelected] = React.useState(undefined);
+	const onConfirm = (event) => {
+		beyond.languages.current = selected;
+		window.setTimeout(() => globalThis.location.reload(), 100);
+		onClose();
+	};
+	const onClick = (event) => {
+		const lang = event.currentTarget.dataset.language;
+		setSelected(lang);
+	};
+	const disabled: IDisabled = {};
+	if (!selected) disabled.disabled = true;
+	return (
+		<>
+			<BeyondModal show className="modal-languages" onClose={onClose}>
+				<ul className="languages-list">
+					<li onClick={onClick} className={`${selected === 'en' ? ' item-selected' : ''}`} data-language="en">
+						<span className="current-name">English</span>
+						English
+					</li>
+					<li onClick={onClick} className={`${selected === 'es' ? ' item-selected' : ''}`} data-language="es">
+						<span className="current-name">Spanish</span>
+						Español
+					</li>
+				</ul>
+				<div className="actions">
+					<button {...disabled} onClick={onConfirm} className="btn btn-primary ">
+						Confirm
+					</button>
+				</div>
+			</BeyondModal>
+		</>
+	);
 }

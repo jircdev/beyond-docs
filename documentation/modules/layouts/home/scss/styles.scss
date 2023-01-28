@@ -1,12 +1,30 @@
-
 .layout-container {
-  height: 100vh;
-  overflow: hidden;
+	height: 100vh;
+	overflow: hidden;
 }
 
-
-
 .home-page {
-  //padding: 1.5rem;
+	//padding: 1.5rem;
+}
 
+.app__preloader {
+	background-color: var(--app-preload-bg);
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	position: absolute;
+	display: grid;
+	place-items: center;
+	z-index: 15;
+	transition: all 300ms ease-in;
+
+	.beyond-element-spinner {
+		height: 5rem;
+		width: 5rem;
+	}
+	&.hide {
+		opacity: 0;
+		transition: all 300ms ease-in;
+	}
 }

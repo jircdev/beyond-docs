@@ -1,0 +1,36 @@
+import { Title, Subtitle, DocHeader, Link } from '@beyond/docs/components/html';
+import { Code, CodeBox } from '@beyond/docs/code';
+
+<DocHeader id="intro" pretitle="Fundamentals" title="Modular Structure" />
+
+Modular architecture is key in BeyondJS, it allows the programmer to develop decoupled projects by breaking them down
+into smaller parts that receive minimal configuration and are not affected by project growth.
+
+For imports, BeyondJS makes use of bare specifiers, which allows to define module paths in a simpler and more efficient way.
+easier and more efficient way.
+
+In addition, BeyondJS offers a broader module concept compared to EcmaScript.
+A BeyondJS module can be composed of several ESM modules, and you can easily define
+which parts are accessible from outside the module, known as "internal modules". This allows for better
+control and organization of the code in your project.
+
+> Internal modules are a powerful and simple concept of BeyondJS, you can read in detail
+> about them in the <Link href="/concepts/modules">Modules</Link> section.
+
+The structure of modules is defined by `module.json` configuration files,
+with a structure like the following:
+
+<Code>
+{`
+{
+"name": "start-backend",
+"bundle": "start",
+"platforms": "backend",
+"ts": {
+"files": "*"
+}
+`}
+
+</Code>
+
+You can read more about creating modules in the <Link href="/concepts/modules">Modules section</Link>.

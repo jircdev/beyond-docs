@@ -1,46 +1,42 @@
-import { Link, ELink, DocHeader, Title, Subtitle, BeyondJS } from "@beyond/docs/components/html";
-import { Code } from "@beyond/docs/code";
+import { Link, ELink, DocHeader, Title, Subtitle, BeyondJS } from '@beyond/docs/components/html';
+import { Code } from '@beyond/docs/code';
 
-<DocHeader pretitle="Introducción" title="BeyondJS Cli" />
+<DocHeader pretitle='Introducción' title='BeyondJS Cli' />
 
-BeyondJS provee la siguiente lista de comandos para trabajar desde la consola de tu preferencia:
+BeyondJS provides the following list of commands for working from the console of your preference:
 
-<Title tag="h4" text="run" />
+<Title tag='h4' text='Run' />
 
 <Code>{`beyond run [--workspace port]`}</Code>
 
-El comando `run` inicializa el DevServer de <BeyondJS/> y habilita la conexión con
-el <Link href="/workspace">BeyondJS Workspace</Link>, lo que facilita el proceso de depuración y gestión de paquetes.
-Es necesario ejecutarlo para comenzar a trabajar con <BeyondJS/>.
+The `run` command initializes the <BeyondJS/> DevServer and enables connection with
+the <Link href="/workspace">BeyondJS Workspace</Link>, which facilitates the debugging and package
+management process. It is necessary to run it to start working with <BeyondJS/>.
 
 ##### Parametros:
 
--   --workspace: Es opcional. Este parametro define el puerto de conexión websocket para que el
-    <Link href="/workspace"> Workspace</Link> pueda obtener información acerca de los paquetes disponibles en el DevServer.
-    sino es pasado, <BeyondJS /> tomará por defecto el puerto 4000. A partir de la instalación, sólo es necesario ir a la
-    carpeta en donde se desee crear el o los proyectos e inicializar BeyondJS desde la línea de comandos de la siguiente
-    forma:
+-   --workspace: Optional. This parameter defines the websocket connection port so that
+    the <Link href='/workspace'>Workspace</Link> can obtain information about the packages available
+    on the DevServer. If
+    not passed, <BeyondJS /> will take the default port 4000.
 
-<Title tag="h4" text="add package" />
+<Title tag='h4' text='add package' />
 
 <Code>{`beyond add package`}</Code>
 
-"El comando add package permite crear un nuevo paquete y agregarlo al DevServer.
-Al ejecutarlo, se abre una consola interactiva donde se pueden definir las características del paquete, como por ejemplo:
+"The 'add package' command allows you to create a new package and add it to the DevServer.
+When executed, it opens an interactive console where you can define the package's features, such as:
 
--   Tipo de paquete: se puede elegir entre las opciones web, backend, web-backend, node, express.
-    Para obtener más información sobre los diferentes tipos de proyectos, consulta la
-    sección <Link href="/packages/create">creación de paquetes</Link>."
+-   Package type: you can choose from options such as web, backend, web-backend, node, express. For more information on the different project types, see the <Link href="/packages/create">Creating Packages</Link> section."
 
-<Title tag="h4" text="add module" />
+<Title tag='h4' text='add module' />
 
-El comando `add module` permite agregar módulos a un paquete existente. Al ejecutarlo permite definir las caracteristicas
-del mismo por medio de la consola interactiva.
+The `add module` command allows you to add modules to an existing package. When executed, it allows you to define the module's characteristics through the interactive console.
 
 <Code>{`beyond add module [subpath]]`}</Code>
 
-<Title tag="h4" text="--version" />
+<Title tag='h4' text='--version' />
 
-Permite verificar la versión de <BeyondJS /> instalada.
+Allows you to check the version of <BeyondJS /> installed.
 
 <Code>{`beyond --version`}</Code>

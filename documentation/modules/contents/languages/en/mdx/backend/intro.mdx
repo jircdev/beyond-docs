@@ -1,0 +1,112 @@
+import { NextLinks, Link, ELink, DocHeader, Title, Subtitle, BeyondJS } from "@beyond/docs/components/html";
+import { Code, CodeBox } from "@beyond/docs/code";
+
+<DocHeader pretitle="Backend" title="Backend Programming" />
+
+With <BeyondJS/>, developing packages, applications or backend libraries for Deno,
+Node or Bun is a simple and powerful task. <BeyondJS/> allows you to work naturally and without major
+without major configurations to create code with functionality for each platform and distribute it easily.
+platform and distribute it with ease.
+
+You don't need third-party tools,
+because <BeyondJS/> works directly on Node.js and NPM standards,
+generating the final code to be consumed by module resolution standards such as ESM, CJS, CJS
+module standards such as ESM, CJS, AMD or SJS. With <BeyondJS/> you will have complete control
+over your code and you will be able to distribute it more efficiently.
+
+To create a package that can be executed in an engine such as Node or Deno,
+you only need to specify in the
+`package.json` the corresponding distribution.
+
+<CodeBox title="package.json" language="json">
+
+{`"deployment": {
+    "distributions": [
+      {
+        "name": "init-backend",
+        "environment": "development",
+        "platform": "backend",
+        "ports": {
+          "bundles": "7070",
+          "http": "7073",
+          "inspect": "7072"
+        }
+      }
+    ]
+  }`}
+
+</CodeBox>
+
+This code configures the DevServer to execute the code of a Node or Bun service in development environment.
+Node or Bun service in development environment. Some details are explained below:
+
+-   The 'backend' value of 'platform' indicates that this is code that will be executed in backend code environments
+    backend code environments such as Node or Bun,
+    as well as being compatible with Deno through additional configurations.
+-   The 'ports' entry defines three ports values, including the port
+    port `bundles` which is used by the DevServer to return packets when required by the execution environment, and
+    the runtime environment requires them, and the `inspect` port which allows debugging tools such as debug to be used.
+    debugging tools such as the VSCode debugger or browsers such as Chrome or Edge.
+    This is essential for working efficiently with HMR, one of the most powerful features of <BeyondJS/>.
+
+<Title tag="h2" text="Packaging format" />
+
+Although the development experience for the
+programmer is the standard EcmaScript Modules (ESM),
+BeyondJS DevServer generates the bundles for Backend platforms in the CommonJS format.
+Backend platforms in the CommonJS format by default.
+This is due to the large number of bundles that use this format and that Node
+this format and because Node.js does not yet provide full support for the Ecma
+support for EcmaScript formatted code.
+
+However, modifying the packaging format is extremely easy.
+extremely simple. You just need to add a
+"bundles" property in the distribution to indicate the way in which the bundles are expected to be
+you expect the bundles to be generated.
+
+For example, if you want to work with Deno and you want the bundles
+bundles of your package can be consumed with "http imports",
+you just need to add the following entry point to the distribution in the package.json
+distribution in the package.json:
+
+<Code language="json">
+
+{`"bundles": {
+    "mode": "esm"
+}`}
+
+</Code>
+
+With this setting in the `package.json`, the DevServer will automate the process of packaging the
+packaging of the code without the need to restart any service,
+since it does it in real time.
+
+<CodeBox title="package.json" language="json">
+
+{`"deployment": {
+    "distributions": [
+      {
+        "name": "init-backend",
+        "environment": "development",
+        "platform": "backend",
+        "bundles": {
+            "mode": "esm"
+        }
+        "ports": {
+          "bundles": "7070",
+          "http": "7073",
+          "inspect": "7072"
+        }
+      }
+    ]
+  }`}
+
+</CodeBox>
+
+Thus, the distribution in the `package.json` would look like this:
+In addition, the DevServer of <BeyondJS/>
+DevServer offers the possibility to set up multiple distributions
+and test the packaging of the code simultaneously,
+which is highly efficient in terms of time and productivity for developers looking to create
+for developers looking to create packages that are consumed by any environment (including
+by any environment (as well as those who don't!).

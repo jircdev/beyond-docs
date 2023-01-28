@@ -13,5 +13,14 @@
 
 <body>
 
+    <script>
+        const container = document.querySelector('html');
+        performance.mark('start');
+        const key = '__beyond-mode';
+        const defaultTheme = window?.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        
+        const userTheme = window?.localStorage.getItem(key) ?? defaultTheme;
+        container.setAttribute('data-beyond-mode', userTheme);
+    </script>
 </body>
 </html>

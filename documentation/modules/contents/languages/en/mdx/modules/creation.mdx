@@ -1,13 +1,13 @@
 import { NextLinks, Link, ELink, DocHeader, Title, Subtitle, BeyondJS } from "@beyond/docs/components/html";
 import { CodeBox, Code } from "@beyond/docs/code";
 
-<DocHeader pretitle="Basics" title="Creación de módulos" />
+<DocHeader pretitle="Basics" title="Module creation" />
 
-> En esta página se asume que ya se ha leído
-> la <Link href="/modules/intro">introducción sobre módulos en la documentación.</Link>
+> This page assumes that you have already read.
+> the <Link href="/modules/intro">introduction about modules in the documentation.</Link>.
 
-Los módulos se configuran a través de un objeto JSON que se guarda en un archivo
-llamado `module.json`. La estructura básica de este archivo es la siguiente:
+Modules are configured via a JSON object which is stored in a file
+called `module.json`. The basic structure of this file is as follows:
 
 <CodeBox title="module.json" language="json">
 
@@ -21,33 +21,33 @@ llamado `module.json`. La estructura básica de este archivo es la siguiente:
 
 </CodeBox>
 
-> Para crear un módulo, es necesario tener previamente un paquete creado.
+> To create a module, it is necessary to have previously created a package.
 
-Como se puede ver en el ejemplo anterior, el archivo `module.json`
-puede contener las siguientes propiedades:
+As you can see in the example above, the `module.json` file
+can contain the following properties:
 
--   `name`: es el nombre del módulo.
--   `platfoms`: es una lista que indica las plataformas para las
-    que está disponible el bundle. Si no se especifica, se considera que el
-    bundle es compatible con todas las plataformas.
--   `[bundleName]`: se utiliza para especificar el tipo de bundle que se desea
-    crear en el módulo. Un módulo puede contener múltiples bundles, simplemente
-    agregando más propiedades con el nombre de cada bundle adicional.
-    l valor de esta propiedad es un objeto que contiene la configuración del bundle,
-    y las propiedades dentro de este objeto varían dependiendo del tipo de bundle
-    que se está agregando. Para obtener más información sobre los diferentes
-    tipos de bundles y su configuración, consulta la sección de bundles de la documentación.
+-   `name`: is the name of the module.
+-   `platfoms`: is a list indicating the platforms for which the bundle is available.
+    the bundle is available for. If not specified, the bundle is considered to be compatible with all platforms.
+    bundle is considered to be compatible with all platforms.
+-   `[bundleName]`: is used to specify the type of bundle you want to create in the module.
+    to create in the module. A module can contain multiple bundles by simply
+    adding more properties with the name of each additional bundle.
+    he value of this property is an object containing the bundle configuration,
+    and the properties within this object vary depending on the type of bundle being added.
+    being added. For more information on the different types of bundles and their
+    bundle types and their configuration, see the bundle section of the documentation.
 
-<Title tag="h3" text="Ejemplo de configuración" />
+<Title tag="h3" text="Configuration example" />
 
-Recordando el ejemplo definido en la introducción, que tenía las siguientes características:
+Recalling the example defined in the introduction, which had the following characteristics:
 
--   Un archivo auth.ts con un objeto Auth que sirve de modelo y permite realizar la llamada para el inicio de sesión.
--   Un archivo user.ts con un objeto User que expone la información del usuario en caso de que inicie sesión.
--   Un archivo de estilos styles.scss
--   Un componente de interfaz gráfica form.tsx.
+-   An auth.ts file with an Auth object that serves as a template and allows to make the call for login.
+-   A user.ts file with a User object that exposes the user's information in case he/she logs in.
+-   A styles.scss style file
+-   A graphical interface component form.tsx.
 
-El `module.json` para este módulo podría definirse de la siguiente forma:
+The `module.json` for this module could be defined as follows:
 
 <Code title="module.json" language="json">
 {`
@@ -68,9 +68,9 @@ El `module.json` para este módulo podría definirse de la siguiente forma:
 
 </Code>
 
-En el ejemplo anterior, se está creando un módulo de nombre first-module, con un bundle code que contiene un procesador sass y un procesador ts que procesan código Sass y Typescript respectivamente y que será empaquetado para plataforma web.
+In the previous example, a module named first-module is being created, with a bundle code that contains a sass processor and a ts processor that process Sass and Typescript code respectively and that will be packaged for web platform.
 
-Un módulo puede contener varios bundles, estos se definen como propiedades del objeto de configuración del módulo y un módulo pureciben como valor un objeto de configuración que aparte de los procesadores, puede recibir algunas propiedades adicionales según el tipo de bundle. Puedes leer más en detalle sobre esto
-en <Link href="/docs/bundles">La sección de bundles.</Link>
+A module can contain several bundles, these are defined as properties of the module configuration object and a module pureciben as value a configuration object that apart from the processors, can receive some additional properties depending on the type of bundle. You can read more in detail about this
+in <Link href="/docs/bundles">The bundles section.</Link>.
 
 <NextLinks items={["modules/bundles", "modules/processors"]} />

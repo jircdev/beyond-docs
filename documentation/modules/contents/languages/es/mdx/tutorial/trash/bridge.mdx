@@ -1,5 +1,5 @@
-import { DocHeader, BeyondJS, ELink, NextLinks, Subtitle, Link } from "@beyond/docs/components/html";
-import { Code } from "@beyond/docs/code";
+import { DocHeader, BeyondJS, ELink, NextLinks, Subtitle, Link } from '@beyond/docs/components/html';
+import { Code, CodeBox } from '@beyond/docs/code';
 
 <DocHeader pretitle="Tutorial" title="Código Bridge" />
 Como mencionamos antes, en esta parte generalmente cada proyecto tiene su propia lógica para la validación de sesión. La
@@ -8,7 +8,7 @@ nuestro código cliente con el backend node. Esto lo agregaremos en el archivo b
 de crear.
 
 <Code>
-    {`
+	{`
 const data = {
     user: 'admin',
     password: '123456.'
