@@ -32,7 +32,7 @@
 				},
 				{
 					"title": "Widgets",
-					"description": "With rendering on the server, on the client or hybrid in each component.",
+					"description": "With Island Architecture and rendering on the server, on the client or hybrid in each component.",
 					"icon": "widgets"
 				}
 			]

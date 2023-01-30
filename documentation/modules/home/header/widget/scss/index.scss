@@ -1,9 +1,10 @@
 @import '~template/sass/mixins/set-media';
 
 .home__header {
-	padding: 15rem 0 4rem 0;
+	padding: 4rem 0 2rem;
 	position: relative;
 	margin-top: 0px;
+	display: flex;
 	flex-direction: column;
 	justify-items: center;
 	align-items: center;

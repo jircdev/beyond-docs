@@ -1,0 +1,32 @@
+.page-section.container.universal__section {
+	grid-template-columns: 50% 50%;
+	overflow: visible;
+	position: relative;
+	padding: 10rem 0;
+
+	picture {
+		width: 100%;
+		height: 100%;
+	}
+	picture svg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 120%;
+		width: 120%;
+		left: -45%;
+	}
+	@media (max-width: 800px) {
+		grid-template-columns: 1fr;
+		position: relative;
+		padding: 2rem 0;
+
+		picture svg {
+			display: grid;
+			height: 130%;
+			width: 130%;
+			left: -20%;
+			position: relative;
+		}
+	}
+}
