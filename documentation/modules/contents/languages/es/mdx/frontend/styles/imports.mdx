@@ -1,5 +1,5 @@
-import { Link, ELink, NextLinks, DocHeader, BeyondJS, Title, Subtitle } from "@beyond/docs/components/html";
-import { Code, CodeBox } from "@beyond/docs/code";
+import { Link, ELink, NextLinks, DocHeader, BeyondJS, Title, Subtitle } from '@beyond/docs/components/html';
+import { Code, CodeBox } from '@beyond/docs/code';
 
 <DocHeader pretitle="Widgets" title="Importación de archivos de estilo" />
 
@@ -10,7 +10,7 @@ Si se requiere incluir un archivo de estilos de alguna libreria instalada en nod
 De esta forma, supongamos que se desea trabajar con bootstrap, podriamos importarlo de la siguiente forma:
 
 <Code>
-    {`
+	{`
     @import ~bootstrap/sass/bootstrap.scss;
     `}
 </Code>
@@ -18,7 +18,7 @@ De esta forma, supongamos que se desea trabajar con bootstrap, podriamos importa
 De la misma forma, si se requiere importar un archivo especifico dentro de la libreria, como el de_variables.scss, puede importarse de forma directa:
 
 <Code>
-    {`
+	{`
     @import ~bootstrap/sass/variables.scss;
     `}
 </Code>
@@ -30,7 +30,9 @@ La importación de módulos de estilo es considerada en BeyondJS como una import
 Para ejemplificarlo, imaginemos que se tiene un módulo llamado form, que incluye un bundle code, el cúal define componentes de un formulario y se requiere importar los estilos desde otro módulo. En el módulo, se creo un archivosass que define estilos para los labels, cuyo nombre es labels.scss. La línea de importación sería:
 
 <Code>
-    {`
+	{`
     @import ~@scope/project-name/form/sass/scss/label.scss;
      `}
 </Code>
+
+<NextLinks items={['styles/modules', 'styles/themes']} />

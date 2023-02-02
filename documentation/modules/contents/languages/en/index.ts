@@ -41,6 +41,7 @@ import { default as Distributions1 } from './mdx/packages/distributions.mdx';
 import { default as PackagesJson1 } from './mdx/packages/json.mdx';
 import { default as PackagesPublish1 } from './mdx/packages/publish.mdx';
 import { default as PackagesBeyondjs1 } from './mdx/packages/beyond.mdx';
+import { default as PackagesDependencies1 } from './mdx/packages/dependencies.mdx';
 //modules
 import { default as ModulesIntroduction1 } from './mdx/modules/introduction.mdx';
 import { default as ModulesBundles1 } from './mdx/modules/bundles.mdx';
@@ -65,9 +66,10 @@ import { default as WidgetsLayout1 } from './mdx/frontend/widgets/layout.mdx';
 import { default as WidgetsPage1 } from './mdx/frontend/widgets/page.mdx';
 import { default as WidgetsObject1 } from './mdx/frontend/widgets/object.mdx';
 import { default as WidgetsRendering1 } from './mdx/frontend/widgets/rendering.mdx';
+import { default as AddRenderingEngine1 } from './mdx/frontend/widgets/add-rendering-engine.mdx';
 
 import { default as Routing1 } from './mdx/frontend/routing/routing.mdx';
-import { default as Templates1 } from './mdx/frontend/template/index.mdx';
+import { default as Templates1 } from './mdx/frontend/styles/index.mdx';
 import { default as Styles1 } from './mdx/frontend/styles/index.mdx';
 import { default as StylesModules1 } from './mdx/frontend/styles/modules.mdx';
 import { default as StylesThemes1 } from './mdx/frontend/styles/themes.mdx';
@@ -95,6 +97,7 @@ export /*bundle*/ const PackagesDistributions = Distributions1;
 export /*bundle */ const PackagesJson = PackagesJson1;
 export /*bundle */ const PackagesPublish = PackagesPublish1;
 export /*bundle */ const PackagesBeyondjs = PackagesBeyondjs1;
+export /*bundle */ const PackagesDependencies = PackagesDependencies1;
 // modules
 export /*bundle */ const ModulesIntroduction = ModulesIntroduction1;
 export /*bundle */ const ModulesCreation = ModulesCreation1;
@@ -118,6 +121,7 @@ export /*bundle*/ const WidgetsLayout = WidgetsLayout1;
 export /*bundle*/ const WidgetsPage = WidgetsPage1;
 export /*bundle*/ const WidgetsRendering = WidgetsRendering1;
 export /*bundle*/ const Routing = Routing1;
+export /*bundle*/ const AddRenderingEngine = AddRenderingEngine1;
 
 //styles
 
@@ -126,7 +130,7 @@ export /*bundle */ const StylesModules = StylesModules1;
 export /*bundle */ const StylesThemes = StylesThemes1;
 export /*bundle */ const StylesImports = StylesImports1;
 export /*bundle */ const Template = Templates1;
-
+export /*bundle */ const StylesTemplate = Templates1;
 // Foundations
 const /*bundle*/ BareSpecifiers = BareSpecifier1;
 export /*bundle*/ const Modular = Modular1;

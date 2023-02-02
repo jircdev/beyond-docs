@@ -32,6 +32,7 @@ export /*bundle*/ function ContentsPage({ contentId, component }) {
 			setUpdated(performance.now());
 		};
 		Components.hmr.on('change', onChange);
+		document.querySelector('body').scrollTo({ top: 0, behavior: 'auto' });
 		setSections(Array.from(items));
 		return () => Components.hmr.on('change', onChange);
 	}, []);

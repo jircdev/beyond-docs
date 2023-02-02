@@ -1,16 +1,18 @@
-import { Link, ELink, NextLinks, DocHeader, BeyondJS, Title, Subtitle } from "@beyond/docs/components/html";
-import { Code, CodeBox } from "@beyond/docs/code";
+import { Link, ELink, NextLinks, DocHeader, BeyondJS, Title, Subtitle } from '@beyond/docs/components/html';
+import { Code, CodeBox } from '@beyond/docs/code';
 
-<DocHeader pretitle="Widgets" title="Importación de archivos de estilo" />
+<DocHeader pretitle="Widgets" title="Importing style files" />
 
 <Title tag="h4" text="node_modules" />
 
-If it is necessary to include a stylesheet from a library installed in node_modules, it can be imported non-relatively, from the module file where it is required, by using the ~ character followed by the package path in the node_modules folder.
+If it is necessary to include a stylesheet from a library installed in node_modules,
+it can be imported non-relatively, from the module file where it is required, by using the `~`
+character followed by the package path in the `node_modules` folder.
 
 In this way, let's suppose that we want to work with bootstrap, we could import it in the following way:
 
 <Code>
-    {`
+	{`
     @import ~bootstrap/sass/bootstrap.scss;
     `}
 </Code>
@@ -18,19 +20,21 @@ In this way, let's suppose that we want to work with bootstrap, we could import 
 Similarly, if it is necessary to import a specific file within the library, such as \_variables.scss, it can be imported directly:
 
 <Code>
-    {`
+	{`
     @import ~bootstrap/sass/variables.scss;
     `}
 </Code>
 
-<Title tag="h4" text="Importación de estilos de un bundle" />
+<Title tag="h4" text="Importing styles from a bundle" />
 
 The importation of style modules is considered in BeyondJS as a non-relative import, therefore it follows the same import rules as a file existing in an npm library, but the inclusion path in this case follows the module name structure made with the framework, which as we have seen before, can be composed of @scope/name, where scope is optional.
 
 To illustrate this, let's imagine that we have a module called form, which includes a bundle code, which defines components of a form and it is necessary to import the styles from another module. In the module, a sass file was created that defines styles for labels, whose name is labels.scss. The import line would be:
 
 <Code>
-    {`
+	{`
     @import ~@scope/project-name/form/sass/scss/label.scss;
      `}
 </Code>
+
+<NextLinks items={['styles/modules', 'styles/themes']} />

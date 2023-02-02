@@ -1,24 +1,23 @@
-import { structureItems } from "../structure-item";
+import { structureItems } from '../structure-item';
 
-const styles = ["styles/template", "styles/modules", "styles/themes", "styles/imports"];
+const styles = ['styles/template', 'styles/themes', 'styles/modules', 'styles/imports'];
 const widgets = [
-    "widgets",
-    "widgets/controllers",
-    "widgets/page",
-    "widgets/layout",
-    "widgets/rendering",
-    "/widgets/add-rendering-engine",
+	'widgets',
+	'widgets/controllers',
+	'widgets/page',
+	'widgets/layout',
+	'widgets/rendering',
+	'widgets/add-rendering-engine',
 ];
 
 const general = structureItems([
-    ["widgets", structureItems(widgets)],
-    "template",
-    "routing",
+	['widgets', structureItems(widgets)],
+	'routing',
 
-    "backend",
-    ["styles", structureItems(styles)],
+	'backend',
+	['styles', structureItems(styles)],
 ]);
 export const frontend = {
-    id: "frontend",
-    children: general,
+	id: 'frontend',
+	children: general,
 };

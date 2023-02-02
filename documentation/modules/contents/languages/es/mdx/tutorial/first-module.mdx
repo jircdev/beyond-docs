@@ -1,5 +1,5 @@
-import { DocHeader, PreTitle, Title, BeyondJS, NextLinks, Link, Subtitle, ELink } from "@beyond/docs/components/html";
-import { Code, InlineCode, CodeBox } from "@beyond/docs/code";
+import { DocHeader, PreTitle, Title, BeyondJS, NextLinks, Link, Subtitle, ELink } from '@beyond/docs/components/html';
+import { Code, InlineCode, CodeBox } from '@beyond/docs/code';
 
 <DocHeader pretitle="Tutorial" title="Primer módulo" />
 
@@ -7,7 +7,6 @@ Como se puede observar, el proyecto cuenta con dos módulos creados: el Home, qu
 
 La estructura del módulo `home` es la siguiente:
 
--   `widget`: carpeta donde se encuentra el código del componente page.
 -   `ts`:
     -   `controller.ts`: objeto controlador del componente, necesario para montar el WebComponent en el navegador.
     -   `views`
@@ -54,9 +53,9 @@ function View(): JSX.Element {
                     </div>
                 }
                 <label>User: </label>
-                <input onChange={handleChange} type="text" name="username"/>
+                <input onChange={handleChange} placeholder="username" type="text" name="username" />
                 <label>Password</label>
-                <input onChange={handleChange} type="password" name="password"/>
+                <input onChange={handleChange} type="password" name="password" placeholder="****" />
                 <div className="form__actions">
                     <button {...formDisabled}>Login</button>
                 </div>
@@ -178,4 +177,4 @@ Puedes navegar el código CSS y JS generados de forma independiente accediendo a
 
 Ahora viene la mejor parte: conectarnos con websocket a un servicio en node.
 
-<NextLinks items={["tutorial/backend"]} />
+<NextLinks items={['tutorial/backend']} />

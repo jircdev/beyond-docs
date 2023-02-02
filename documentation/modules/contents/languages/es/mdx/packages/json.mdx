@@ -3,6 +3,7 @@ import {
 	Subtitle,
 	ObjectProperty,
 	ItemProperty,
+	BeyondJS,
 	DocHeader,
 	Link,
 	ELink,
@@ -11,6 +12,8 @@ import {
 import { Code, CodeBox } from '@beyond/docs/code';
 
 <DocHeader pretitle="Packages" title="package.json" />
+
+En <BeyondJS/>, el archivo `package.json` es esencial para cualquier aplicación. Este archivo contiene información importante, incluidas las dependencias necesarias para su ejecución, scripts de inicio, información sobre el autor y otros metadatos. Beyond.js agrega un conjunto de propiedades adicionales que se utilizan para controlar y personalizar el comportamiento de la aplicación. En esta sección, exploraremos estas propiedades adicionales y cómo se utilizan en Beyond.js.
 
 -   **name** string: string Es el nombre para identificar el proyecto, sigue el estándar de npm, por tanto, sólo puede contener caracteres seguros para URLs, sin puntos o guiones bajos.
 
@@ -30,4 +33,6 @@ import { Code, CodeBox } from '@beyond/docs/code';
 
 -   **deployment** <Link href="/glossary#eoc">EOC</Link> optional: Objeto que permite realizar las configuraciones de los entornos de desarrollo, las cuales son definidas por medio de la entrada deployment
 
--   **Deployment** <Link href="/glossary#eac">EAC</Link> optional: Objeto que permite realizar las configuraciones de los entornos de desarrollo, las cuales son definidas por medio de la entrada distributions. Las distribuciones pueden agregarse desde la funcionalidad del workspace para ello o de forma manual. Para entender cómo funcionan puedes dirigirte a la <Link href="/project/distributions">Sección de distribuciones.</Link>
+-   **Deployment** <Link href="/glossary#eac">EAC</Link> Objeto que permite realizar las configuraciones de los entornos de desarrollo, las cuales son definidas por medio de la entrada distributions. Las distribuciones pueden agregarse desde la funcionalidad del workspace para ello o de forma manual. Para entender cómo funcionan puedes dirigirte a la <Link href="/project/distributions">Sección de distribuciones.</Link>
+
+-   **libraries** object: Permite importar proyectos internos. Puedes leer más en la <Link href="packages/dependencies">sección de dependencias</Link>

@@ -1,5 +1,5 @@
-import { DocHeader, BeyondJS, Title, ELink, NextLinks, Subtitle, Link } from "@beyond/docs/components/html";
-import { Code, CodeBox } from "@beyond/docs/code";
+import { DocHeader, BeyondJS, Title, ELink, NextLinks, Subtitle, Link } from '@beyond/docs/components/html';
+import { Code, CodeBox } from '@beyond/docs/code';
 
 <DocHeader title="Código Backend" pretitle="Tutorial" />
 
@@ -19,7 +19,7 @@ proyecto (donde se encuentra el archivo `package.json`) y ejecutamos el siguient
 
 El cómando nos solicitará los siguientes datos:
 
--   **subpath**: agregaremos "auth". Este valor corresponde al subpath del
+-   **subpath**: agregaremos "api/auth". Este valor corresponde al subpath del
     módulo y tiene relación directa con el valor del entry point "exports" en el `package.json`
 -   **about**: "Módulo backend para validar inicio de sesión".
 
@@ -33,8 +33,8 @@ Este es el archivo de configuración de nuestro módulo. Todos los módulos en <
 poseen uno.
 
 <CodeBox title="auth/module.json">
-    {`{
-  "name": "auth",
+	{`{
+  "name": "api/auth",
   "description": "Modulo backend para validar inicio de sesion",
   "bridge": {
     "path": "bridge",
@@ -82,7 +82,7 @@ Este archivo poseerá los valores del usuario y la clave válidos.
 
 También agregaremos un método login que reciba los parametros usuario y clave para verificar si los datos pasados son válidos o no.
 
-<Code>
+<CodeBox title="bridge/index.ts">
 {`
 
 interface IData {
@@ -94,7 +94,7 @@ const data: IData = {
 \tuser: 'beyondjs',
 \tpassword: 'B3yondJS'
 }
-export /\*actions\*/\*bundle\*/
+export /\*actions\*/\/\*bundle\*/
 class Auth {
 \tasync login(user :string, password: string) {
 \t\tif (user !== data.user || password !== data.password) {
@@ -108,7 +108,7 @@ class Auth {
 
 `}
 
-</Code>
+</CodeBox>
 
 Parece simple ¿Verdad? ¡Acá está lo importante!
 
@@ -121,7 +121,7 @@ Ahora solo necesitamos importar el bundle en nuestro módulo home e integrar la 
 
 Ahora importamos el módulo `auth` desde el componente principal de nuestro módulo home `home`.
 
-<CodeBox title="home/ts/views/index.tsx">{`import {Auth} from "beyond-js-tutorial/home/bridge";`}</CodeBox>
+<CodeBox title="home/ts/views/index.tsx">{`import {Auth} from "@beyond-js/tutorial/api/auth";`}</CodeBox>
 
 Algunos puntos a destacar de la línea de código anterior.
 
@@ -131,11 +131,11 @@ Algunos puntos a destacar de la línea de código anterior.
 
 Ahora agreguemos la función `onSubmit` al formulario y la lógica para integrar el cliente y el backend.
 
-<CodeBox title="home/ts/viewes/index.tsx">
+<CodeBox title="home/ts/views/index.tsx">
 
 {`
 import \* as React from "react";
-import { Auth } from "@testing/login/auth";
+import {Auth} from "@beyond-js/tutorial/api/auth";
 
 interface IForm {
 \tdisabled?: boolean;
@@ -211,4 +211,4 @@ agregamos datos incorrectos, podremos ver como aparece el mensaje de error
 > consume y el paquete que provee la información. Puedes leer detenicamente toda esta información
 > en <Link href="docs/modules/bridges"/>la sección dedicada a Bridges de esta documentación
 
-<NextLinks items={["tutorial/routing"]} />
+<NextLinks items={['tutorial/routing']} />

@@ -1,16 +1,11 @@
-import { Title } from '@beyond/docs/components/html';
+import { Link, ELink, NextLinks, DocHeader, BeyondJS, Title, Subtitle } from '@beyond/docs/components/html';
 import { Code, CodeBox } from '@beyond/docs/code';
-import { Link, ELink } from '@beyond/docs/components/html';
 
-<Title>Estilos en el módulo</Title>
+<DocHeader pretitle="Frontend" title="Estilos en el módulo" />
 
-Para agregar estilos en un módulo/bundle creado, debe agregarse el <Link href="/docs/processors">procesador</Link> SASS.
+Agregar estilos a un módulo/bundle requiere el uso de SASS como <Link href="/docs/processors">procesador</Link>. En un proyecto creado con workspace, SASS está incluido por defecto en los bundles de code y widget. La configuración estándar de SASS es:
 
-Si se usa el workspace para la creación de proyectos, el procesador sass es incluido por defecto en los bundles de tipo code y widget de cualquier tipo.
-
-La configuración estandar de un procesador sass es la siguiente:
-
-**module.json**
+<Title tag="h2" text="`module.json`" />
 
 <Code>
 {`
@@ -27,6 +22,6 @@ La configuración estandar de un procesador sass es la siguiente:
 
 </Code>
 
-En la configuración anterior, se está definiendo que en el módulo existe una carpeta sass, con ubicación relativa al archivo module.json y que todos los archivos de esta carpeta deben ser tomados en cuenta como archivos de estilo.
+La configuración indica que en el módulo hay una carpeta sass, ubicada relativamente al archivo `module.json` y que todos sus archivos son considerados estilos. El bundle con el procesador inserta los estilos en el DOM durante el renderizado, evitando la necesidad de hacer imports externos en el código JavaScript.
 
-El bundle contenedor del procesador se encarga de insertar los estilos en el DOM cuando el elemento es renderizado, de esta forma, no es requerido hacer imports con semántica de JavaScript de archivos externos en nuestro código.
+<NextLinks items={['modules/processors', 'styles/template']} />

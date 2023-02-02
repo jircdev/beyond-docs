@@ -12,21 +12,23 @@ From the console, located in the root folder of the project, we will run the mod
 
 We will add the following values in the command console:
 
-Package subpath: we will name it "welcome".
-
--   "Package type" : we will select "page".
--   "web component name": we will put `app-welcome`. Web component names must contain
+-   **Package subpath**: we will name it "welcome".
+-   **Package type** : we will select "page".
+-   **web component name**: we will put `app-welcome`. Web component names must contain
     two words and be separated by dashes.
--   "page url": we add "/welcome"
--   "styles": we indicate yes,
--   "multilanguage": we indicate no.
+-   **page url**: we add "/welcome"
+-   **About**: Welcome page
+-   **styles**: we indicate yes.
+-   **multilanguage**: we indicate no.
 
-Now, we will go to the module and add a simple message that says "Welcome!" with the style we want.
+In the next step, we will head over to the view file of the module (`welcome/ts/views/index.tsx`)
+and in the component's return statement, add a "Welcome!" message with the desired styling.
 
-<Title tag="h2" text="Navegación" />
+<Title tag="h2" text="Navigation" />
 
-Get ready to make a big leap in your application by redirecting to your welcome module after login.
-module after login! The first thing we need to do is to import the "routing" object from Beyond,
+Get ready to make a big leap in your application by redirecting to your welcome
+module after login! The first thing we need to do is to import the "routing" object from
+`@beyond-js/kernel` package,
 so we can use the powerful pushState method that will allow us to navigate to the welcome page.
 
 <CodeBox title="home/views/index.tsx">{`import { routing } from '@beyond-js/kernel/routing';`}</CodeBox>
@@ -57,11 +59,9 @@ Thus, our `onSubmit` function would look like this:
 
  </CodeBox>
 
-With these simple steps, you will be redirecting your users to the welcome page.
-But that's not all, BeyondJS also takes care of recording the user's browsing history,
-allowing advanced management functionalities that go beyond the possibilities of the browser's API.
-Imagine being able to identify the logs of previous pages and have access to them at any time!
-BeyondJs allows you to do so, giving you full control over your users' browsing experience.
+With these simple steps, you will redirect your users to the welcome page. BeyondJS also manages the user's browsing history, providing advanced management functionalities beyond the browser's API.
+
+Imagine having access to previous page logs at any time! BeyondJS gives you full control over the user's browsing experience, enabling you to identify these logs and access them whenever you need to.
 
 > <BeyondJS /> is a powerful tool that provides a routing object to interact with the browser API. navigation. This
 > object wraps the browser's pushState function and adds logic to make navigation possible > > in different
@@ -74,7 +74,7 @@ registered at the beginning of the project load.
 If we test our form we will be able to see that an error appears if the data is invalid and that
 it starts and redirects to our welcome screen if the data entered is correct.
 
-<Title tag="h3" text="Repaso de aprendizaje" />
+<Title tag="h3" text="Learning review" />
 With this last step, we end the complete tutorial, which consisted of 4 fundamental parts:
 
 -   In the first part, we dealt with starting and installing the project and creating the main package.
@@ -89,9 +89,9 @@ In addition, there are some additional points worth noting:
 -   The modules created are standalone bundles and no packers are required to use them.
 -   A WebSocket connection between client and server was implemented with a typed API that verifies that the methods and parameters passed match the
     and parameters passed match their definition in the backend.
--   The magic comment `//\*bundle\*/` was used to define which object should be exposed to be consumed in another bundle.
--   The magic comment `//\*actions\*/` was used in the bridge bundle to define that the object should generate a client api, which should be consumed in another bundle.
+-   The magic comment `/*bundle*/` was used to define which object should be exposed to be consumed in another bundle.
+-   The magic comment `/*actions*/` was used in the bridge bundle to define that the object should generate a client api, which should be consumed in another bundle.
     a client api, which is handled by <BeyondJS/> automatically.
 -   The created code can be packaged for a hybrid application.
 
-<NextLinks items={['backend', 'frontend']} />
+<NextLinks items={['backend', 'frontend/intro']} />

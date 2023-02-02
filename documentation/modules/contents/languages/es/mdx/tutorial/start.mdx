@@ -29,17 +29,20 @@ poder seguir el tutorial paso a paso. Sin embargo se puede utilizar cualquier ot
 Lo primero que realizaremos es crear nuestro proyecto. Para ello debemos abrir la consola de comandos
 en la carpeta en la que deseemos y ejecutar el siguiente comando:
 
-<Code>npx @beyond-js/create-package</Code>
+> Advertencia: los comandos de BeyondJS en el CLI son interactivos y requieren una consola compatible para su correcto funcionamiento. Asegúrate de tener una consola actualizada antes de utilizarlos.
+
+<Code>npx @beyond-js/create-package@latest</Code>
 
 Este comando es interactivo y solicitará algunos datos para definir nuestro paquete o proyecto.
 Los datos que pide son los siguientes:
 
--   Package specifier: Corresponde al nombre de nuestro paquete, para efectos de este tutorial
-    nuestro paquete se llamará: 'beyond-web-tutorial'.
--   Package type: Corresponde al tipo de proyecto a crear, seleccionaremos `web-backend` que contiene
+-   ** Package specifier**: Corresponde al nombre de nuestro paquete, para efectos de este tutorial
+    nuestro paquete se llamará: '@beyond-js/tutorial'.
+-   **Title**: "Tutorial Web de BeyondJS"
+-   **About**: Puedes agregar cualquier texto o ignorarlo y avanzar.
+-   **Package type**: Corresponde al tipo de proyecto a crear, seleccionaremos `web-backend` que contiene
     los paquetes para implementar una conexión entre un servicio node y nuestro proyecto web por medio de websockets,
-    como vermos más adelante.
-    ondJS de manera local y generar la estructura inicial de nuestro proyecto.
+    como vermos más adelante. BeyondJS lo instalará de manera local y var a generar la estructura inicial de nuestro proyecto.
 -   Preguntará si deseamos instalar las dependencias, seleccionamos que sí.
 
 ¡Listo! nuestro proyecto se ha creado. A continuación abriremos nuestro editor de texto en el directorio
@@ -52,10 +55,11 @@ Al abrirlo podremos ver que tenemos la siguiente estructura:
 -   **beyond.json:** Archivo para manejar el servidor de desarrollo, gestionado por BeyondJS.
 -   **packages.json:** Este archivo registra los proyectos a los que el DevServer tiene acceso,
     generalmente es gestionado de forma directa por <BeyondJS/>.
--   **beyond-js-tutorial**: La carpeta de nuestro paquete y proyecto.
+-   **tutorial**: La carpeta de nuestro paquete y proyecto.
 
     -   **package.json**: Archivo del paquete javascript.
-    -   **/modules:** Carpeta en donde se crean los módulos del proyecto por defecto. Este valor es configurable, puedes leer más de ello en la sección de <Link href="/docs/projects/json">Configuración de Proyectos.</Link>
+    -   **/modules:** Carpeta en donde se crean los módulos del proyecto por defecto. Este valor es configurable,
+        puedes leer más de ello en la sección de <Link href="/docs/packages/json">Configuración de Paquetes.</Link>
     -   **template:** Esta carpeta contiene todos los elementos necesarios para definir el template general del proyecto.
 
         -   **template.json:** Archivo que permite realizar ajustes en la configuración del template del proyecto.
@@ -65,7 +69,7 @@ Al abrirlo podremos ver que tenemos la siguiente estructura:
 
 A continuación, debemos iniciar <BeyondJS/>, para ello ejecutamos el siguiente comando:
 
-<Code language="shel">beyond run</Code>
+<Code language="shel">beyond run --workspace 4000</Code>
 
 Al ejecutarlo, debe aparecer el siguiente mensaje en la consola de comandos:
 
@@ -75,7 +79,7 @@ https://workspace.beyondjs.com?port=4000
 
 ```
 
-¡Listo! Ya podemos acceder a nuestro proyecto en <ELink href="http://localhost:6500/">http://localhost:6500/</ELink>
+¡Listo! Ya podemos acceder a nuestro proyecto en <ELink href="http://localhost:6510/">http://localhost:6510/</ELink>
 
 A continuación vamos a crear nuestro primer módulo.
 

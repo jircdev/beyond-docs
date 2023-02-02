@@ -7,6 +7,7 @@ const packages = [
 	'packages/json',
 	'packages/publish',
 	'packages/beyondjs',
+	'packages/dependencies',
 	'deployment',
 ];
 const modules = ['modules/introduction', 'modules/creation', 'modules/bundles', 'modules/processors'];

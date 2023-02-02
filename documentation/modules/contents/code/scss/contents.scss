@@ -1,82 +1,82 @@
-@import "~template/sass/mixins/set-media";
+@import '~template/sass/mixins/set-media';
 
 code *,
 pre * {
-    font-size: 14px;
+	font-size: 14px;
 }
 
 .inline-code,
 code.inline,
 span.inline {
-    display: inline-flex;
-    padding: 0 5px;
-    color: var(--accent-color);
+	display: inline-flex;
+	padding: 0 5px;
+	color: var(--accent-color);
 
-    &:before {
-        content: "`";
-    }
+	&:before {
+		content: '`';
+	}
 
-    &:after {
-        content: "`";
-    }
+	&:after {
+		content: '`';
+	}
 }
 
 .page__main-content {
-    padding: 2rem;
-    position: relative;
-    @include set-media("small-screen", false, max) {
-        margin-top: 1rem;
-        padding: 0;
-    }
+	padding: 2rem;
+	position: relative;
+	@include set-media('small-screen', false, max) {
+		margin-top: 1rem;
+		padding: 0;
+	}
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        color: var(--text-title-color);
-        @media (min-width: 800px) {
-            max-width: 70%;
-        }
-    }
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		color: var(--text-title-color);
+		@media (min-width: 800px) {
+			max-width: 70%;
+		}
+	}
 
-    .border-icon {
-        margin: 3px;
-        border: 1px solid var(--color-gray-20);
-    }
+	.border-icon {
+		margin: 3px;
+		border: 1px solid var(--color-gray-20);
+	}
 
-    p,
-    ul,
-    li,
-    a {
-        &:not(pre, code) {
-            font-size: 1rem;
-            line-height: 1.8rem;
-        }
-    }
+	p,
+	ul,
+	li,
+	a {
+		&:not(pre, code) {
+			font-size: 1rem;
+			line-height: 1.8rem;
+		}
+	}
 
-    ul {
-        padding-left: 30px;
-    }
+	ul {
+		padding-left: 30px;
+	}
 
-    p,
-    .content {
-        &:first-letter {
-            text-transform: uppercase;
-            //padding-left: 30px;
-        }
-    }
+	p,
+	.content {
+		&:first-letter {
+			// text-transform: uppercase;
+			//padding-left: 30px;
+		}
+	}
 
-    .beyond-element-image {
-        box-shadow: var(--shadow-4);
-    }
+	.beyond-element-image {
+		box-shadow: var(--shadow-4);
+	}
 
-    .beyond {
-        color: var(--primary);
-    }
+	.beyond {
+		color: var(--primary);
+	}
 
-    a {
-        color: var(--primary);
-    }
+	a {
+		color: var(--primary);
+	}
 }

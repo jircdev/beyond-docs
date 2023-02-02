@@ -1,0 +1,58 @@
+import {
+	Title,
+	Subtitle,
+	ObjectProperty,
+	ItemProperty,
+	DocHeader,
+	Link,
+	ELink,
+	BeyondJS,
+	Table,
+} from '@beyond/docs/components/html';
+import { Code, CodeBox } from '@beyond/docs/code';
+
+<DocHeader pretitle="Packages" title="Dependencias" />
+
+Las dependencias en <BeyondJS />, se manejan de forma similar a como se hace en JavaScript, a través del archivo `package.json`.
+Sin embargo, <BeyondJS /> introduce un concepto de dependencias avanzado que permite integrar paquetes que no están
+publicados en NPM como dependencias de otros paquetes. Una vez incluidos, estos paquetes son tratados de la misma manera
+que cualquier otra dependencia definida en las entradas dependencies o devDependencies del `package.json`.
+
+Para agregar un paquete local como dependencia, primero debe estar incluido como proyecto en el DevServer. Esto significa que debe estar registrado en el archivo `beyond.json` y debe incluirse un punto de entrada libraries en el archivo `package.json`.
+
+La estructura es la siguiente:
+
+<CodeBox title="package.json">
+	{`"libraries": {
+    "imports": [
+      "packageName1",
+      "packageName2",...
+    ]
+}`}
+</CodeBox>
+
+La entrada libraries en el `package.json` acepta un objeto que contiene una propiedad "imports" que recibe un arreglo de cadenas de texto. Las entradas de este arreglo deben corresponder al nombre exacto de los paquetes que se quieren incluir.
+
+Como ejemplo, supongamos que tenemos los paquetes "@my-packages/a" y "@my-packages/b" y que el paquete "b" depende de "a".
+
+Para incluir estos paquetes como dependencias, debemos seguir dos pasos:
+
+1. Asegurarnos de que ambos paquetes estén incluidos en el archivo `beyond.json`.
+
+<CodeBox title="beyond.json">
+	{`{
+        "applications: ["./a/package.json", './b/package.json']
+    }`}
+</CodeBox>
+
+> La propiedad "applications" en el `package.json` puede aceptar tanto un arreglo como una cadena de texto. Si se proporciona una cadena, <BeyondJS/> interpretará que la lista de aplicaciones se encuentra en un archivo separado con el nombre especificado en dicha cadena.
+
+2. grega la entrada `libraries.imports` en el archivo package.json e incluye el paquete @my-packages/a como un elemento en el arreglo definido como valor.
+
+<CodeBox title="b/`package.json`">
+	{`"libraries": {
+    "imports": [
+      "@my-packages/a",
+    ]
+}`}
+</CodeBox>

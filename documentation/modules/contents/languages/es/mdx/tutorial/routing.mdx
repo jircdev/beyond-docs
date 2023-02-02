@@ -1,5 +1,5 @@
-import { NextLinks, DocHeader, BeyondJS, Subtitle, Title, Link } from "@beyond/docs/components/html";
-import { Code, CodeBox } from "@beyond/docs/code";
+import { NextLinks, DocHeader, BeyondJS, Subtitle, Title, Link } from '@beyond/docs/components/html';
+import { Code, CodeBox } from '@beyond/docs/code';
 
 <DocHeader pretitle="Tutorial" title="Routing" />
 
@@ -14,14 +14,14 @@ volveremos a ejecutar el comando de creación de un módulo:
 
 Agregaremos los siguientes valores en la consola de comando:
 
--   `Package subpath`: lo nombrarémos "welcome".
-
--   `Package type` : seleccionaremos "page".
--   `web component name`: colocaremos `app-welcome`.Los nombres de los componentes web deben contener
+-   **Package subpath**: lo nombrarémos "welcome".
+-   **Package type** : seleccionaremos "page".
+-   **web component name**: colocaremos `app-welcome`.Los nombres de los componentes web deben contener
     dos palabras y estar separados por guiones.
--   `page url`: agregamos "/welcome"
--   `styles`: indicamos que si,
--   `multilanguage`: indicamos que no.
+-   **page url**: agregamos "/welcome".
+-   **About**: Welcome page.
+-   **styles**: indicamos que si.
+-   **multilanguage**: indicamos que no.
 
 Ahora, nos dirigiremos al módulo y agregaremos un mensaje sencillo que diga "¡Bienvenido!" con el estilo que deseemos.
 
@@ -59,11 +59,9 @@ De esta manera, nuestra función `onSubmit` quedaría así:
 
  </CodeBox>
 
-Con estos simples pasos, estarás redirigiendo a tus usuarios a la página de bienvenida.
-Pero eso no es todo, BeyondJS también se encarga de registrar el historial de navegación del usuario,
-permitiendo una gestión avanzada de funcionalidades que van más allá de las posibilidades de la API del navegador.
-¡Imagina poder identificar los registros de páginas anteriores y tener acceso a ellos en cualquier momento!
-BeyondJs te permite hacerlo, dándote un control total sobre la experiencia de navegación de tus usuarios.
+Con estos simples pasos, redirigirás a tus usuarios a la página de bienvenida. BeyondJS también se encarga de registrar el historial de navegación del usuario, brindando funcionalidades avanzadas de gestión más allá de las posibilidades de la API del navegador.
+
+magina tener acceso a los registros de las páginas previas en cualquier momento. BeyondJS te brinda un control total sobre la experiencia de navegación de tus usuarios, permitiéndote identificar estos registros y acceder a ellos cuando sea necesario.
 
 > <BeyondJS /> es una herramienta poderosa que provee un objeto de enrutamiento para interactuar con la API de
 > navegación. Este objeto envuelve la función pushState del navegador y agrega lógica para hacer la navegación posible
@@ -97,4 +95,4 @@ Además, hay algunos puntos adicionales que vale la pena destacar:
     una api cliente, la cúal es gestionada por <BeyondJS/> de forma automática.
 -   El código creado puede ser empaquetado para una aplicación hibrida.
 
-<NextLinks items={["backend", "frontend"]} />
+<NextLinks items={['backend', 'frontend']} />

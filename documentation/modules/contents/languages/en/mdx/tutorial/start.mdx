@@ -7,40 +7,46 @@ import { Code, CodeBox } from '@beyond/docs/code';
 
 > This tutorial looks at the main flow of development with **BeyondJS** and.
 > demonstrate in a clear way the
-> benefits it offers. The purpose of this tutorial is so that users/programmers can learn
-> users/programmers can learn while practicing, therefore, the > concepts that define the **BeyondJS** framework.
-> concepts that define the structure of **BeyondJS** are addressed in a general way,
+> benefits it offers. The purpose of this tutorial is so that users/programmers can learn while practicing,
+> therefore, the concepts that define the structure of **BeyondJS** are addressed in a general way,
 > focusing on making a quick, concise and clear exercise. For a better understanding of
-> some concepts, it is necessary to access the corresponding sections > in the documentation.
+> some concepts, it is necessary to access the corresponding sections
 > in the documentation.
 
-<Title tag="h3" text="Prerequisitos" />
+<Title tag="h3" text="Prerequisites" />
 
 To run this tutorial you need:
 
 -   To have Node.js 16.x installed.
--   have basic knowledge of the command console.
+-   Have basic knowledge of the command console.
 
 Additionally, it is recommended to use <ELink href="https://code.visualstudio.com/">vscode</ELink> to follow the tutorial step by step.
-to follow the tutorial step by step. However any other editor can be used.
+However any other editor can be used.
 
 <Title tag="h2" text="Getting started" />
 
 The first thing we will do is to create our project. To do this we must open the command console
 in the folder where we want and execute the following command:
 
-<Code>npx @beyond-js/create-package</Code>
+> Warning: BeyondJS CLI commands are interactive and require a compatible console for proper functionality. Make sure to have an updated console before using them.
+
+<Code>npx @beyond-js/create-package@latest</Code>
 
 This command is interactive and will request some data to define our package or project.
 The data requested are the following:
 
--   Package specifier: It corresponds to the name of our package, for the purposes of this tutorial
-    our package will be called: 'beyond-web-tutorial'.
--   Package type: It corresponds to the type of project to create, we will select `web-backend` which contains
+-   **Package specifier**: It corresponds to the name of our package, for the purposes of this tutorial
+    our package will be called: `@beyond-js/tutorial`.
+-   **Title**: "BeyondJS Web Tutorial"
+-   **About**: You can add any text or skip it and move forward.
+-   **Package type**: we will select `web-backend`. It corresponds to the type of project to create, which contains
     the packages to implement a connection between a node service and our web project through websockets,
     as we will see later.
-    OndJS locally and generate the initial structure of our project.
--   It will ask if we want to install the dependencies, we select yes.
+
+    BeyondJS will install it locally and generates the initial structure of our project.
+
+-   **Install dependencies**: we select yes. You can select no, but you will need to install npm dependencies
+    manualy from the console.
 
 Ready! our project has been created. Next we will open our text editor in the directory
 directory where we execute the command
@@ -50,22 +56,23 @@ directory where we execute the command
 When we open it we can see that we have the following structure:
 
 -   **beyond.json:** File to manage the development server, managed by BeyondJS.
--   **packages.json:** This file records the projects that the DevServer has access to,
+-   **packages.json:** This fil records the projects that the DevServer has access to,
     usually managed directly by <BeyondJS/>.
--   **beyond-js-tutorial**: The folder of our package and project.
+-   **tutorial**: The folder of our package and project.
 
     -   **package.json**: javascript package file.
-    -   **/modules:** Folder where the modules of the project are created by default. This value is configurable, you can read more about it in the <Link href="/docs/projects/json">Project Configuration section.</Link>.
+    -   **/modules:** Folder where the modules of the project are created by default. This value is configurable,
+        you can read more about it in the <Link href="/docs/packages/json">Package Configuration section</Link>.
     -   **template:** This folder contains all the elements needed to define the overall project template.
 
         -   **template.json:** File that allows you to make adjustments to the project template configuration.
 
-> If you wish you can learn about the differences between project types
-> in <Link href="/docs/packages/types"> the corresponding section of the documentation.</Link>.
+> You can learn about the differences between project types
+> in <Link href="/docs/packages/types"> the relevant section of the documentation</Link> if you wish.
 
 Next, we must start <BeyondJS/>, for this we run the following command:
 
-<Code language="shel">beyond run</Code>
+<Code language="shell">beyond run --workspace 4000</Code>
 
 When executed, the following message should appear in the command console:
 
@@ -75,7 +82,7 @@ https://workspace.beyondjs.com?port=4000
 
 ```
 
-Done! We can now access our project at <ELink href="http://localhost:6500/">http://localhost:6500/</ELink>.
+Done! We can now access our project at <ELink href="http://localhost:6510/">http://localhost:6510/</ELink>.
 
 Next we are going to create our first module.
 

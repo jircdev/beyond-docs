@@ -5,20 +5,18 @@ import {
 	ItemProperty,
 	DocHeader,
 	Link,
+	BeyondJS,
 	ELink,
 	Table,
+	NextLinks,
 } from '@beyond/docs/components/html';
 import { Code, CodeBox } from '@beyond/docs/code';
 
-<DocHeader id="intro" pretitle="Fundamentos" title="Distribuciones" />
+<DocHeader id="intro" pretitle="Paquetes" title="Distribuciones" />
 
-Las Distribuciones son una funcionalidad que permite definir el comportamiento
-que debe tener el DevServer de BeyondJS en el entorno de desarrollo y las caracteristicas para el
-empaquetado del proyecto durante el proceso de despliegue
+Las Distribuciones son una funcionalidad que permite definir el comportamiento que debe tener el DevServer de BeyondJS en el entorno de desarrollo y las caracteristicas para el empaquetado del proyecto durante el proceso de despliegue
 
-> Al crear un nuevo proyecto, este viene con una distribución configurada de forma predeterminada.
-> En este documento se describen en detalle todas las opciones de configuración de las distribuciones,
-> necesarias para trabajar con diferentes entornos de ejecución o tipos de resolución de módulos.
+> Al crear un nuevo proyecto, este viene con una distribución configurada de forma predeterminada. En este documento se describen en detalle todas las opciones de configuración de las distribuciones, necesarias para trabajar con diferentes entornos de ejecución o tipos de resolución de módulos.
 
 <Title id="definition" tag="h2" text="Definición" />
 
@@ -46,11 +44,12 @@ Un ejemplo de una distribución es:
     ver los identificadores de plataformas en la <Link href="/platforms">sección de Plataformas</Link>
 
 -   <ObjectProperty type="string">environment</ObjectProperty> soporta los valores `deployment` y `production`.
+-   <ObjectProperty type="object">ports</ObjectProperty> recibe un objeto con las siguientes propiedades :
 
-    -   <ObjectProperty type="object">ports</ObjectProperty> recibe un objeto con las siguientes propiedades :
-    -   <ObjectProperty type="number">bundles</ObjectProperty> puerto en el que el DevServer devolverá los bundles.
-    -   <ObjectProperty type="number">http</ObjectProperty> Puerto para conectar debuggers o inspectores de código. Puede
-        leer más sobre inspección remota en <Link href="/remote-inspection">sección de inspección remota.</Link>
+        -   <ObjectProperty type="number">bundles</ObjectProperty> puerto en el que el DevServer devolverá los bundles.
+        -   <ObjectProperty type="number">http</ObjectProperty> Este puerto lo requiere <BeyondJS /> en proyectos que deban ser
+            renderizados con SSR o proyectos backend que utilicen el paquete `@beyond-js/bee` para poder interactuar con el DevServer.
+        -   <ObjectProperty type="number">inspect</ObjectProperty> Puerto para conectar debuggers o inspectores de código.
 
 -   <ObjectProperty type="object">ts</ObjectProperty> Objeto manejado para gestionar configuraciones del compilador typescript,
     actualmente soporta las siguientes propiedades:
@@ -60,6 +59,121 @@ Un ejemplo de una distribución es:
         </ItemProperty>
 
 -   <ItemProperty type="string" optional label="backend">
-    	Esta propiedad es requerida si el paquete utiliza una conexión con un backend por medio de websockets. Puedes
-    	leer más acerca de esto en la <Link href="/bridges">sección de Bridges</Link> .
+    	Esta propiedad se utiliza cuando el paquete es un proyecto que se conecta con un servicio node de tipo backend.
+    	Puedes leer más acerca de esto en la <Link href="/bridges">sección de Bridges</Link> .
     </ItemProperty>
+
+A continuación se muestran una lista de ejemplos con las configuraciones esenciales de las distribuciones para tener un mejor entendimiento
+
+<Title tag="h4" text="Paquetes Web" />
+
+La distribución web se configura para el manejo de proyectos web, moviles o de escritorio.
+
+<CodeBox title="package.json">
+	{`  "deployment": {
+    "distributions": [
+       {
+        "name": "web",
+        "platform": "web",
+        "environment": "development",
+        "ports": {
+          "bundles": 6500
+        }
+      }
+    ]
+  }`}
+</CodeBox>
+
+<Title tag="h4" text="Paquetes Backend" />
+
+Puedes crear proyectos backend con tres tipos de plataformas **node**, **deno** y **backend**.
+
+Todas representan un script que puede ser ejecutado como servicio en un entorno de ejecución Node o Deno (se debe utilizar la plataforma definida para cada caso).
+
+<BeyondJS /> utiliza la plataforma para identificar la forma en que debe empaquetarse el código.
+
+> La distribución backend en BeyondJS es un servicio de Node.js que permite conectarse a otros servicios o clientes a través de WebSockets.
+
+> Gracias a los bundles de tipo bridge, el desarrollo de la funcionalidad backend se facilita mediante la generación automática de una API con tipado de datos y soporte para HMR en entornos de desarrollo. Esto brinda a los programadores la capacidad de crear y consumir fácilmente métodos definidos en el backend.
+
+La configuración de estas distribuciones se realiza de la siguiente forma, teniendo en cuenta que los valores como "name" y los puertos de configuración, son definidos por el desarrollador y que el valor de la plataforma dependerá
+de la finalidad del paquete y el entorno a utilizar.
+
+<CodeBox title="package.json">
+	{`  "deployment": {
+    "distributions": [
+      {
+        "name": "backend",
+        "platform": "backend",
+        "environment": "development",
+        "ports": {
+          "bundles": 6580,
+          "http": 6581,
+          "inspect": 6582
+        }
+      }
+    ]
+  }`}
+</CodeBox>
+
+<Title tag="h4" text="Configuración Web y Backend" />
+
+En proyectos en donde se requiera interacción cliente y servidor, se puede agregar la configuración de ambas distribuciones e interactuar en simultaneo con el Dev Server de <BeyondJS/> para tener una experiencia eficiente y homogenea en el desarrollo.
+
+Para hacerlo, es necesario agregar ambas distribuciones y especificar **en la distribución web la propiedad "backend" que debe llevar cómo valor el nombre que se le haya colocado a la distribución backend**.
+
+<CodeBox title="package.json">
+	{`"deployment": {
+    "distributions": [
+      {
+        "name": "web",
+        "platform": "web",
+        "environment": "development",
+        "backend": "backend",
+        "ports": {
+          "bundles": 6510
+        }
+      },
+      {
+        "name": "backend",
+        "platform": "backend",
+        "environment": "development",
+        "ports": {
+          "bundles": 6511,
+          "http": 6512,
+          "inspect": 6513
+        }
+      }
+    ]
+  }
+`}
+</CodeBox>
+
+<Title tag="h3" text="Formato de resolución de módulos" />
+
+El formato de resolución de módulos en <BeyondJS/> se establece automáticamente en función del tipo de distribución. No obstante, los desarrolladores pueden modificarlos según sus necesidades agregando la propiedad 'bundles' en la configuración de la distribución.
+
+La propiedad 'bundles' es un objeto que incluye una propiedad 'mode', cuyo valor determina el tipo de resolución de módulos.
+
+Los valores aceptados para 'mode' son: 'amd', 'sjs', 'esm', 'cjs'.
+
+Ejemplo:
+
+<CodeBox title="package.json">
+	{`  "deployment": {
+    "distributions": [
+      {
+        "name": "web",
+        "platform": "web",
+        "bundles": {
+            "mode": "esm"
+        },
+        "ports": {
+          "bundles": 6580
+        }
+      }
+    ]
+  }`}
+</CodeBox>
+
+<NextLinks items={['backend', 'frontend/intro']} />

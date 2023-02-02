@@ -1,25 +1,26 @@
-import { DocHeader, PreTitle, Title, BeyondJS, NextLinks, Link, Subtitle, ELink } from "@beyond/docs/components/html";
-import { Code, InlineCode, CodeBox } from "@beyond/docs/code";
+import { DocHeader, PreTitle, Title, BeyondJS, NextLinks, Link, Subtitle, ELink } from '@beyond/docs/components/html';
+import { Code, InlineCode, CodeBox } from '@beyond/docs/code';
 
 <DocHeader pretitle="Tutorial" title="First module" />
 
-As you can see, the project has two modules created: the `home` module, which corresponds to the base URL of the project, and the `start-backend` module, which will be discussed later.
+As observed, the project comprises two modules: the `home` module,
+serves as the foundation for the project's base URL, and the `start-backend` module, which will be further discussed in due course.
 
 The structure of the `home` module is as follows:
 
--   `widget`: folder where the code of the page component is located.
 -   `ts`:
     -   `controller.ts`: controller object of the component, necessary to mount the WebComponent in the browser.
     -   `views`: `index.tsx`.
         -   index.tsx`: react component that renders the page.
--   scss`: folder to add styles to the module.
+-   `scss`: folder to add styles to the module.
 -   `module.json`: module configuration file (where the type of bundles and processors to be used are defined).
 
 Let's get to work! With the structure clear, the next thing is to create the login form and add some styles, before continuing with the connection to the backend node.
 
 <Title tag="h2" text="Form Creation" />
 
-If you've worked with React, what comes next is the part you probably know best, with a few minor differences. Next, we will edit our `index.tsx` file to create a login form and the basic functionality to update the status.
+If you've worked with React, what comes next is the part you probably know best, with a few minor differences.
+Next, we will edit our `index.tsx` file to create a login form and the basic functionality to update the status.
 
 <CodeBox title="index.tsx" language="jsx">
 {`
@@ -54,9 +55,9 @@ function View(): JSX.Element {
                     </div>
                 }
                 <label>User: </label>
-                <input onChange={handleChange} type="text" name="username"/>
+                <input onChange={handleChange} placeholder="username" type="text" name="username" />
                 <label>Password</label>
-                <input onChange={handleChange} type="password" name="password"/>
+                <input onChange={handleChange} type="password" name="password" placeholder="****" />
                 <div className="form__actions">
                     <button {...formDisabled}>Login</button>
                 </div>
@@ -157,7 +158,9 @@ There are two key points that are important to note so far to understand the val
 
 #### The page is a microfrontend.
 
-You can verify this if you open the code parser, you may notice a `<app-home/>` tag that encapsulates the content of the module created.
+To confirm this, examine the code parser and you will discover a `<app-home/>`
+tag that encompasses the content of the established module. With this, implementing solutions using the
+island architecture can be effortlessly achieved without the need for complicated configurations.
 
 #### The module is packaged independently.
 
@@ -169,12 +172,10 @@ You can browse the independently generated CSS and JS code by accessing:
 -   CSS bundle: <ELink href="http://localhost:6510/home.css">http://localhost:6510/home.css</ELink>
 -   JS bundle: <ELink href="http://localhost:6510/home.js">http://localhost:6510/home.js</ELink>
 
-> The code bundled in the development environment does not have optimizations to be able to do.
-> debug easily if necessary. In the deployment process, the bundles are generated
-> also independently but with the necessary optimizations for a productive environment.
-> In addition, <BeyondJS/> can also generate the module type declarations. You can read
-> about this in <Link href="/docs/modules/bundles">the bundles section</Link>.
+The code in the development environment isn't optimized for debugging purposes.
+In production, the code is bundled and optimized separately. BeyondJS can also generate the necessary
+module type declarations. Refer to <Link href="/docs/modules/bundles">the bundles section</Link> for more information.
 
 Now comes the best part: connecting with websocket to a service in node.
 
-<NextLinks items={["tutorial/backend"]} />
+<NextLinks items={['tutorial/backend']} />

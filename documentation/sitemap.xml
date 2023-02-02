@@ -1,0 +1,405 @@
+<url>
+  <loc>https://beyondjs.com/docs/backend</loc>
+  <xhtml:link rel="alternate" hreflang="es" href="https://beyondjs.com/docs/backend"/>
+  <lastmod>2023-02-02</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>https://beyondjs.com/docs/backend</loc>
+  <xhtml:link rel="alternate" hreflang="en" href="https://beyondjs.com/docs/backend"/>
+  <lastmod>2023-02-02</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.9</priority>
+</url>
+
+<url>
+  <loc>https://beyondjs.com/docs/backend/intro</loc>
+  <xhtml:link rel="alternate" hreflang="es" href="https://beyondjs.com/docs/backend/intro"/>
+  <lastmod>2023-02-02</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://beyondjs.com/docs/backend/intro</loc>
+  <xhtml:link rel="alternate" hreflang="en" href="https://beyondjs.com/docs/backend/intro"/>
+  <lastmod>2023-02-02</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>1</priority>
+</url>
+
+<url>
+  <loc>https://beyondjs.com/docs/backend/bridges</loc>
+  <xhtml:link rel="alternate" hreflang="es" href="https://beyondjs.com/docs/backend/bridges"/>
+  <lastmod>2023-02-02</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>1</priority>
+</url>
+<url>
+  <loc>https://beyondjs.com/docs/backend/bridges</loc>
+  <xhtml:link rel="alternate" hreflang="en" href="https://beyondjs.com/docs/backend/bridges"/>
+  <lastmod>2023-02-02</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+   <loc>https://www.beyondjs.com/docs/dev-server</loc>
+   
+   <lastmod>2023-02-02</lastmod>
+   <changefreq>daily</changefreq>
+   <priority>0.8</priority>
+</url>
+<url>
+   <loc>https://www.beyondjs.com/docs/ssr</loc>
+   <lastmod>2023-02-02</lastmod>
+   <changefreq>daily</changefreq>
+   <priority>0.8</priority>
+</url>
+<url>
+   <loc>https://www.beyondjs.com/docs/multilanguage</loc>
+   <lastmod>2023-02-02</lastmod>
+   <changefreq>daily</changefreq>
+   <priority>0.8</priority>
+</url>
+<url>
+   <loc>https://www.beyondjs.com/docs/glossary</loc>
+   <lastmod>2023-02-02</lastmod>
+   <changefreq>daily</changefreq>
+   <priority>0.8</priority>
+</url>
+<url>
+   <loc>https://www.beyondjs.com/docs/api/uri</loc>
+   <lastmod>2023-02-02</lastmod>
+   <changefreq>daily</changefreq>
+   <priority>0.8</priority>
+</url>
+<url>
+   <loc>https://www.beyondjs.com/docs/foundations/hmr</loc>
+   <lastmod>2023-02-02</lastmod>
+   <changefreq>daily</changefreq>
+   <priority>0.8</priority>
+</url>
+<url>
+   <loc>https://www.beyondjs.com/docs/bare-specifiers</loc>
+   <lastmod>2023-02-02</lastmod>
+   <changefreq>daily</changefreq>
+   <priority>0.8</priority>
+</url>
+<url>
+   <loc>https://www.beyondjs.com/docs/modular</loc>
+   <lastmod>2023-02-02</lastmod>
+   <changefreq>daily</changefreq>
+   <priority>0.8</priority>
+</url>
+<url>
+   <loc>https://www.beyondjs.com/docs/universal</loc>
+   <lastmod>2023-02-02</lastmod>
+   <changefreq>daily</changefreq>
+   <priority>0.8</priority>
+</url>
+<url>
+   <loc>https://www.beyondjs.com/docs/api/BeyondWidget</loc>
+   <lastmod>2023-02-02</lastmod>
+   <changefreq>daily</changefreq>
+   <priority>0.8</priority>
+</url>
+<url>
+   <loc>https://www.beyondjs.com/docs/api/IWidgetStore</loc>
+   <lastmod>2023-02-02</lastmod>
+</url>  
+
+
+Inglés:
+
+<url>
+  <loc>https://beyondjs.com/docs/frontend/intro</loc>
+  <lastmod>2023-02-02</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://beyondjs.com/docs/styles/template</loc>
+  <lastmod>2023-02-02</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://beyondjs.com/docs/styles/modules</loc>
+  <lastmod>2023-02-02</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://beyondjs.com/docs/styles/themes</loc>
+  <lastmod>2023-02-02</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://beyondjs.com/docs/styles/imports</loc>
+  <lastmod>2023-02-02</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://beyondjs.com/docs/template</loc>
+  <lastmod>2023-02-02</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://beyondjs.com/docs/widgets</loc>
+  <lastmod>2023-02-02</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://beyondjs.com/docs/widgets/controllers</loc>
+  <lastmod>2023-02-02</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://beyondjs.com/docs/widgets/page</loc>
+  <lastmod>2023-02-02</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://beyondjs.com/docs/widgets/layout</loc>
+  <lastmod>2023-02-02</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.8</priority>
+</url>
+
+
+<url>
+  <loc>https://beyondjs.com/docs/modules/introduction</loc>
+  <xhtml:link rel="alternate" hreflang="en" href="https://beyondjs.com/docs/modules/introduction"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://beyondjs.com/docs/modules/introduction"/>
+  <lastmod>2023-02-02</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://beyondjs.com/docs/modules/creation</loc>
+  <xhtml:link rel="alternate" hreflang="en" href="https://beyondjs.com/docs/modules/creation"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://beyondjs.com/docs/modules/creation"/>
+  <lastmod>2023-02-02</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://beyondjs.com/docs/modules/config</loc>
+  <xhtml:link rel="alternate" hreflang="en" href="https://beyondjs.com/docs/modules/config"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://beyondjs.com/docs/modules/config"/>
+  <lastmod>2023-02-02</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://beyondjs.com/docs/modules/bundles</loc>
+  <xhtml:link rel="alternate" hreflang="en" href="https://beyondjs.com/docs/modules/bundles"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://beyondjs.com/docs/modules/bundles"/>
+  <lastmod>2023-02-02</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://beyondjs.com/docs/modules/processors</loc>
+  <xhtml:link rel="alternate" hreflang="en" href="https://beyondjs.com/docs/modules/processors"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://beyondjs.com/docs/modules/procesors"/>
+  <lastmod>2023-02-02</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://beyondjs.com/docs/packages/create</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://beyondjs.com/docs/packages/create"/>
+  <xhtml:link rel="alternate" hreflang="es" href="https://beyondjs.com/docs/packages/create"/>
+  <lastmod>2023-02-02</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://beyondjs.com/</loc>
+  <lastmod>2023-02-02</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>1.0</priority>
+  <xhtml:link rel="alternate" hreflang="en" href="https://beyondjs.com/" />
+</url>
+
+<url>
+  <loc>https://beyondjs.com/docs/intro</loc>
+  <lastmod>2023-02-02</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.9</priority>
+  <xhtml:link rel="alternate" hreflang="en" href="https://beyondjs.com/docs/intro" />
+</url>
+
+<url>
+  <loc>https://beyondjs.com/docs/quick-start</loc>
+  <lastmod>2023-02-02</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.9</priority>
+  <xhtml:link rel="alternate" hreflang="en" href="https://beyondjs.com/docs/quick-start" />
+</url>
+
+<url>
+  <loc>https://beyondjs.com/docs/cli</loc>
+  <lastmod>2023-02-02</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.9</priority>
+  <xhtml:link rel="alternate" hreflang="en" href="https://beyondjs.com/docs/cli" />
+</url>
+
+<url>
+  <loc>https://beyondjs.com/docs/workspace</loc>
+  <lastmod>2023-02-02</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.9</priority>
+  <xhtml:link rel="alternate" hreflang="en" href="https://beyondjs.com/docs/workspace" />
+</url>
+
+<url>
+  <loc>https://beyondjs.com/concepts</loc>
+  <lastmod>2023-02-02</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.9</priority>
+  <xhtml:link rel="alternate" hreflang="en" href="https://beyondjs.com/concepts" />
+</url>
+
+<url>
+  <loc>https://beyondjs.com/docs/deployment</loc>
+  <lastmod>2023-02-02</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.9</priority>
+  <xhtml:link rel="alternate" hreflang="en" href="https://beyondjs.com/docs/deployment" />
+</url>
+
+<url>
+  <loc>https://beyondjs.com/getting-start</loc>
+  <lastmod>2023-02-02</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.9</priority>
+  <xhtml:link rel="alternate" hreflang="en" href="https://beyondjs.com/docs/getting-start" />
+ <xhtml:link rel="alternate" hreflang="es" href="https://beyondjs.com/docs/getting-start" />
+</url>
+
+<url>
+  <loc>https://beyondjs.com//docs/state/management</loc>
+  <lastmod>2023-02-02</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.9</priority>
+  <xhtml:link rel="alternate" hreflang="en" href="https://beyondjs.com/docs//docs/state/management" />
+ <xhtml:link rel="alternate" hreflang="es" href="https://beyondjs.com/docs//docs/state/management" />
+</url>
+
+<url>
+  <loc>https://beyondjs.com/docs/widgets/rendering</loc>
+  <lastmod>2023-02-02</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.9</priority>
+  <xhtml:link rel="alternate" hreflang="en" href="https://beyondjs.com/docs/docs/widgets/rendering" />
+ <xhtml:link rel="alternate" hreflang="es" href="https://beyondjs.com/docs/docs/widgets/rendering" />
+</url>
+
+<url>
+  <loc>https://beyondjs.com/docs/widgets/rendering</loc>
+  <lastmod>2023-02-02</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.9</priority>
+  <xhtml:link rel="alternate" hreflang="en" href="https://beyondjs.com/docs/docs/widgets/rendering" />
+ <xhtml:link rel="alternate" hreflang="es" href="https://beyondjs.com/docs/docs/widgets/rendering" />
+</url>
+
+<url>
+  <loc>https://beyondjs.com/docs/widgets/create</loc>
+  <lastmod>2023-02-02</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.9</priority>
+  <xhtml:link rel="alternate" hreflang="en" href="https://beyondjs.com/docs/docs/packages/create" />
+ <xhtml:link rel="alternate" hreflang="es" href="https://beyondjs.com/docs/docs/packages/create" />
+</url>
+
+<url>
+  <loc>https://beyondjs.com/docs/packages/json</loc>
+  <lastmod>2023-02-02</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.9</priority>
+  <xhtml:link rel="alternate" hreflang="en" href="https://beyondjs.com/docs/docs/packages/json" />
+ <xhtml:link rel="alternate" hreflang="es" href="https://beyondjs.com/docs/docs/packages/json" />
+</url>
+
+<url>
+  <loc>https://beyondjs.com/docs/packages/import</loc>
+  <lastmod>2023-02-02</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.9</priority>
+  <xhtml:link rel="alternate" hreflang="en" href="https://beyondjs.com/docs/docs/packages/import" />
+ <xhtml:link rel="alternate" hreflang="es" href="https://beyondjs.com/docs/docs/packages/import" />
+</url>
+
+
+<url>
+  <loc>https://beyondjs.com/docs/packages/dependencies</loc>
+  <lastmod>2023-02-02</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.9</priority>
+  <xhtml:link rel="alternate" hreflang="en" href="https://beyondjs.com/docs/docs/packages/dependencies" />
+ <xhtml:link rel="alternate" hreflang="es" href="https://beyondjs.com/docs/docs/packages/dependencies" />
+</url>
+
+<url>
+  <loc>https://beyondjs.com/docs/intro</loc>
+  <lastmod>2023-02-02</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.9</priority>
+  <xhtml:link rel="alternate" hreflang="en" href="https://beyondjs.com/docs/docs/intro" />
+ <xhtml:link rel="alternate" hreflang="es" href="https://beyondjs.com/docs/docs/intro" />
+</url>
+
+<url>
+  <loc>https://beyondjs.com/docs/tutorial/types</loc>
+  <lastmod>2023-02-02</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.9</priority>
+  <xhtml:link rel="alternate" hreflang="en" href="https://beyondjs.com/docs/docs/tutorial/types" />
+ <xhtml:link rel="alternate" hreflang="es" href="https://beyondjs.com/docs/docs/tutorial/types" />
+</url>
+
+<url>
+  <loc>https://beyondjs.com/docs/tutorial/backend</loc>
+  <lastmod>2023-02-02</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.9</priority>
+  <xhtml:link rel="alternate" hreflang="en" href="https://beyondjs.com/docs/docs/tutorial/backend" />
+ <xhtml:link rel="alternate" hreflang="es" href="https://beyondjs.com/docs/docs/tutorial/backend" />
+</url>
+<url>
+  <loc>https://beyondjs.com/docs/tutorial/bridge</loc>
+  <lastmod>2023-02-02</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.9</priority>
+  <xhtml:link rel="alternate" hreflang="en" href="https://beyondjs.com/docs/docs/tutorial/bridge" />
+ <xhtml:link rel="alternate" hreflang="es" href="https://beyondjs.com/docs/docs/tutorial/bridge" />
+</url>
+<url>
+  <loc>https://beyondjs.com/docs/tutorial/routing</loc>
+  <lastmod>2023-02-02</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.9</priority>
+  <xhtml:link rel="alternate" hreflang="en" href="https://beyondjs.com/docs/docs/tutorial/routing" />
+ <xhtml:link rel="alternate" hreflang="es" href="https://beyondjs.com/docs/docs/tutorial/routing" />
+</url>
+
+<url>
+  <loc>https://beyondjs.com/docs/tutorial/first-module</loc>
+  <lastmod>2023-02-02</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.9</priority>
+  <xhtml:link rel="alternate" hreflang="en" href="https://beyondjs.com/docs/docs/tutorial/first-module" />
+ <xhtml:link rel="alternate" hreflang="es" href="https://beyondjs.com/docs/docs/tutorial/first-module" />
+</url>

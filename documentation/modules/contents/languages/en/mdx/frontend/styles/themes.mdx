@@ -1,21 +1,21 @@
-import { Title } from '@beyond/docs/components/html';
+import { Link, ELink, NextLinks, DocHeader, BeyondJS, Title, Subtitle } from '@beyond/docs/components/html';
 import { Code, CodeBox } from '@beyond/docs/code';
-import { Link } from '@beyond/docs/components/html';
 
-<Title>Light & Dark theme</Title>
+<DocHeader title="Light & Dark theme" pretitle="Frontend" />
 
-BeyondJS provides a simple mechanism to support light and dark theme, which consists of two parts.
+<BeyondJS /> provides a simple mechanism to support light and dark themes consisting of two parts.
 
--   The style template.
--   data-beyond-mode attribute.
+-   Styles template
+-   `data-beyond-mode` attribute.
 
-Themes in the template.
+<Title tag="h2" text="Themes in the template" />
 
-The application template is already configured to support the light and dark theme and provides a custom css property definition file for each theme. Then, in the definition.scss file you have the following code:
+The application template is configured to support both the
+Light and Dark themes and provides a custom style definition file for each theme.
 
-**definition.scss**
+In the `definition.scss` file, the following code is found:
 
-<Code>
+<CodeBox title="definition.scss">
 {`
 @use 'dark';
 @use 'light';
@@ -36,23 +36,15 @@ html[data-beyond-mode="dark"] {
 
 `}
 
-</Code>
+</CodeBox>
 
-The previous code makes the variables configured in the dark and light files available for each respective theme.
+The above code makes the configuration variables for the dark and light themes available in the corresponding files.
 
-In most cases, if a widget requires validating the theme that is being used, it may suffice to use the host-context selector to define it from a style file, as shown in the following example:
+<Title tag="h2" text=":host-context" />
 
-<Code>
-{`
-:host-context(html[data-beyond-mode]) {
-    //styles here...
-}
-
-`}
-
-</Code>
-
-There are some cases where it may be necessary for the widgets to dynamically know about the theme change, for this, the widgets object api can be used.
+In most cases, if a component requires knowledge of the
+theme in use, you can use the `:host-context` selector in a style file to define it, such as
+style file to define it, as illustrated in the following example:
 
 <Code>
 {`
@@ -64,6 +56,22 @@ There are some cases where it may be necessary for the widgets to dynamically kn
 
 </Code>
 
-The above line adds the data-beyond-mode attribute with the value dark to all existing widgets.
+> ::host-context is a CSS selector that allows selecting an element based on the context of the host element.
+> It enables setting styles on an element that depends on its context on the page,
+> instead of its own content or structure.
+> It is used with the syntax :host-context(selector).
+
+In some cases, components may require dynamically knowing the theme change. In these cases, the widgets object API can be used.
+
+<Code>
+{`
+import { widgets } from '@beyond-js/widgets/render';
+
+widgets.attributes.add('data-beyond-mode', theme);
+`}
+
+</Code>
+
+The previous line adds to all existing widgets the attribute `data-beyond-mode` with the value dark.
 
 <NextLinks items={['template', 'widgets']} />

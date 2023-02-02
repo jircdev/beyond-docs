@@ -1,0 +1,49 @@
+import {
+	Title,
+	Subtitle,
+	ObjectProperty,
+	ItemProperty,
+	DocHeader,
+	Link,
+	ELink,
+	BeyondJS,
+	Table,
+} from '@beyond/docs/components/html';
+import { Code, CodeBox } from '@beyond/docs/code';
+
+<DocHeader pretitle="Packages" title="Dependencias" />
+
+Dependencies in <BeyondJS />, are handled similarly to how they are handled in JavaScript, through the `package.json` file. However, <BeyondJS /> introduces an advanced dependency concept that allows you to integrate packages that are not published in NPM as dependencies. published in NPM as dependencies of other packages. Once included, these packages are treated in the same manner as any other dependency defined in the dependencies or devDependencies entries of `package.json`.
+
+To add a local package as a dependency, it must first be included as a project in the DevServer. This means that it must be registered in the `beyond.json` file and a libraries entry point must be included in the `package.json` file.
+
+The structure is as follows:
+
+<CodeBox title="package.json">
+	{`"libraries": {
+    "imports": [
+      "packageName1",
+      "packageName2",...
+    ]
+}`}
+</CodeBox>
+
+The libraries entry in the `package.json` accepts an object containing an `imports` property that receives an array of strings. The entries in this array must correspond to the exact name of the packages you want to include.
+
+As an example, suppose we have the packages "@my-packages/a" and "@my-packages/b" and package "b" depends on "a".
+
+To include these packages as dependencies, we must follow two steps:
+
+1. make sure that both packages are included in the `beyond.json` file.
+
+> The `applications` property in the `package.json` can accept either an array or a string. If a string is provided, <BeyondJS/> will interpret that the list of applications is in a separate file with the name specified in that string.
+
+2. Add the `libraries.imports` entry in the package.json file and include the `@my-packages/a` package as an item in the array defined as the value.
+
+<CodeBox title="b/`package.json`">
+	{`"libraries": {
+    "imports": [
+      "@my-packages/a",
+    ]
+}`}
+</CodeBox>
