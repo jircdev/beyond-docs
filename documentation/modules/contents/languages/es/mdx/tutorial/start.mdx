@@ -1,4 +1,14 @@
-import { DocHeader, BeyondJS, Subtitle, Pretitle, NextLinks, Title, Link, ELink } from '@beyond/docs/components/html';
+import {
+	BeyondImage,
+	DocHeader,
+	BeyondJS,
+	Subtitle,
+	Pretitle,
+	NextLinks,
+	Title,
+	Link,
+	ELink,
+} from '@beyond/docs/components/html';
 import { Code, CodeBox } from '@beyond/docs/code';
 
 <DocHeader pretitle="Tutorial" title="Proyecto Web con Backend" />
@@ -22,21 +32,25 @@ Para ejecutar el presente tutorial se requiere:
 -   tener conocimientos básicos sobre la consola de comandos.
 
 Adicionalmente, se recomienda usar <ELink href="https://code.visualstudio.com/">vscode</ELink> para
-poder seguir el tutorial paso a paso. Sin embargo se puede utilizar cualquier otro editor.
+poder seguir el tutorial paso a paso. Sin embargo, se puede utilizar cualquier otro editor.
 
 <Title tag="h2" text="Empezando" />
 
-Lo primero que realizaremos es crear nuestro proyecto. Para ello debemos abrir la consola de comandos
-en la carpeta en la que deseemos y ejecutar el siguiente comando:
+Lo primero que haremos será abrir el editor en la carpeta donde queramos mannejar nuestros proyectos.
 
-> Advertencia: los comandos de BeyondJS en el CLI son interactivos y requieren una consola compatible para su correcto funcionamiento. Asegúrate de tener una consola actualizada antes de utilizarlos.
+<Code>code .</Code>
+
+Ahora, podemos abrir el terminal integrado con `ctrl + shift + C` (or `cmd + backtick`) y ejecutar allí el siguiente comando
+para crear nuestro proyecto y paquete:
 
 <Code>npx @beyond-js/create-package@latest</Code>
 
-Este comando es interactivo y solicitará algunos datos para definir nuestro paquete o proyecto.
+> Advertencia: los comandos de BeyondJS en el CLI son interactivos y requieren una consola compatible para su correcto funcionamiento. Asegúrate de tener una consola actualizada antes de utilizarlos.
+
+Este comando es interactivo y solicita algunos datos para definir nuestro paquete o proyecto.
 Los datos que pide son los siguientes:
 
--   ** Package specifier**: Corresponde al nombre de nuestro paquete, para efectos de este tutorial
+-   **Package specifier**: Corresponde al nombre de nuestro paquete, para efectos de este tutorial
     nuestro paquete se llamará: '@beyond-js/tutorial'.
 -   **Title**: "Tutorial Web de BeyondJS"
 -   **About**: Puedes agregar cualquier texto o ignorarlo y avanzar.
@@ -47,8 +61,6 @@ Los datos que pide son los siguientes:
 
 ¡Listo! nuestro proyecto se ha creado. A continuación abriremos nuestro editor de texto en el directorio
 donde ejecutamos el comando
-
-<Code>code .</Code>
 
 Al abrirlo podremos ver que tenemos la siguiente estructura:
 
@@ -69,17 +81,18 @@ Al abrirlo podremos ver que tenemos la siguiente estructura:
 
 A continuación, debemos iniciar <BeyondJS/>, para ello ejecutamos el siguiente comando:
 
-<Code language="shel">beyond run --workspace 4000</Code>
+<Code language="shell">beyond run --workspace 4000</Code>
 
 Al ejecutarlo, debe aparecer el siguiente mensaje en la consola de comandos:
 
-```
-Follow the link to manage your packages with the workspace:
-https://workspace.beyondjs.com?port=4000
-
-```
+<Code language="shell">
+	{`Follow the link to manage your packages with the workspace:
+https://workspace.beyondjs.com?port=4000`}
+</Code>
 
 ¡Listo! Ya podemos acceder a nuestro proyecto en <ELink href="http://localhost:6510/">http://localhost:6510/</ELink>
+
+<BeyondImage src="/images/tutorial/first-page.png" alt="your first page with BeyondJS" />
 
 A continuación vamos a crear nuestro primer módulo.
 

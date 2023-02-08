@@ -21,9 +21,10 @@ El cómando nos solicitará los siguientes datos:
 
 -   **subpath**: agregaremos "api/auth". Este valor corresponde al subpath del
     módulo y tiene relación directa con el valor del entry point "exports" en el `package.json`
--   **about**: "Módulo backend para validar inicio de sesión".
-
-Una vez ejecutado el comando, podremos ver que se ha creado nuestro módulo en el directorio modules/auth de nuestro proyecto.
+-   **type**: seleccionaremos "bridge".
+-   **About**: Optional description: Backend logic for authentication and client API.
+-   **multilanguage**: no.
+    Una vez ejecutado el comando, podremos ver que se ha creado nuestro módulo en el directorio api/auth de nuestro proyecto.
 
 <Title tag="h3" text="Estructura del Bridge" />
 
@@ -115,7 +116,7 @@ Parece simple ¿Verdad? ¡Acá está lo importante!
 Al crear un bundle de tipo Bridge <BeyondJS/> crea de forma automática el código cliente
 para conectarnos al backend y consumir la API provista.
 
-Ahora solo necesitamos importar el bundle en nuestro módulo home e integrar la l´gocia de validación.
+Ahora solo necesitamos importar el bundle en nuestro módulo home e integrar la lógica de validación.
 
 <Title tag="h2" text="Integración en el módulo cliente" />
 

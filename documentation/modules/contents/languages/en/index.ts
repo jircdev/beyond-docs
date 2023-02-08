@@ -10,8 +10,10 @@ import {
 	Link,
 	NextLinks,
 	ELink,
+	BeyondImage,
 	UnderConstruction,
 } from '@beyond/docs/components/html';
+
 import { Code, InlineCode } from '@beyond/docs/code';
 
 import { default as Intro1 } from './mdx/starting/intro.mdx';

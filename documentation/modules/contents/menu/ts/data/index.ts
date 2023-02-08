@@ -1,18 +1,17 @@
-import { starting } from './sections/starting';
-import { basics } from './sections/basics';
-import { fundamentals } from './sections/fundamentals';
-import { backend } from './sections/backend';
-import { frontend } from './sections/frontend';
-import { api } from './sections/api';
+import { starting } from "./sections/starting";
+import { basics } from "./sections/basics";
+import { fundamentals } from "./sections/fundamentals";
+import { backend } from "./sections/backend";
+import { frontend } from "./sections/frontend";
+import { api } from "./sections/api";
 
 export const Menu = [
-	starting,
-	basics,
-	backend,
-	frontend,
-	fundamentals,
+    starting,
+    basics,
+    backend,
+    frontend,
+    fundamentals,
 
-	// config,
-	// api
+    // config,
+    // api
 ];
-console.log(Menu);

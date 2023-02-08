@@ -1,5 +1,7 @@
-.docs__info {
-    padding: 2rem;
-    background: var(--app-surface-notes);
-    margin-bottom: 2rem;
+.docs__info,
+blockquote {
+	padding: 2rem;
+	background: var(--app-surface-notes);
+	margin: 2rem 0;
+	border-radius: var(--border-radius-base);
 }

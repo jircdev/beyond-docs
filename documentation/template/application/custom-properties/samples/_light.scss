@@ -1,0 +1,57 @@
+@mixin properties() {
+    --surface: #fff;
+
+    --primary: #ff8056;
+
+    
+    
+    --primary-dark: #e36152;
+    --primary-light: #ffa789;
+    --primary-accent: #ffa789;
+    --text-on-primary: #fff;
+
+    --accent-color: var(--primary);
+    //secondary colors
+    --secondary: #121f36;
+    --secondary-dark: #121f36;
+    --secondary-light: #313c50;
+    --secondary-accent: #424f6e;
+    --text-on-secondary: #ffffff;
+
+    //background
+    --text-color: #000;
+    --text-title-color: var(--secondary-dark);
+    --text-second-color: var(--gray-dark);
+    --text-hover-color: var(--primary);
+
+    --bg-element: var(--gray-light);
+    --element-border-color: var(--gray-light);
+    --separator-color: var(--gray-darker);
+
+    /**
+    Nuevas
+    */
+
+    --error: #ba1a1a;
+    --error-container: #ffdad6;
+    --on-error: #ffffff;
+    --on-error-container: #410002;
+
+    --background: #f8fdff;
+    --on-background: #001f25;
+    --surface: #f8fdff;
+
+    --on-surface: #001f25;
+    --surface-variant: #dde3ea;
+    --on-surface-variant: #41474d;
+    --outline: #72787e;
+
+    --inverse-on-surface: #d6f6ff;
+    --inverse-surface: #00363f;
+    --inverse-primary: #8ccdff;
+    --shadow: #000000;
+
+    --surface-tint: #006493;
+    --outline-variant: #c1c7ce;
+    --scrim: #000000;
+}

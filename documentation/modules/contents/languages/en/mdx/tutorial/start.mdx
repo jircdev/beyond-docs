@@ -1,7 +1,17 @@
-import { DocHeader, BeyondJS, Subtitle, Pretitle, NextLinks, Title, Link, ELink } from '@beyond/docs/components/html';
+import {
+	BeyondImage,
+	DocHeader,
+	BeyondJS,
+	Subtitle,
+	Pretitle,
+	NextLinks,
+	Title,
+	Link,
+	ELink,
+} from '@beyond/docs/components/html';
 import { Code, CodeBox } from '@beyond/docs/code';
 
-<DocHeader pretitle="Tutorial" title="Web proyect width Backend Integration" />
+<DocHeader pretitle="Tutorial" title="Web project width Backend Integration" />
 
 <Title tag="h4">Before you start</Title>
 
@@ -25,12 +35,16 @@ However any other editor can be used.
 
 <Title tag="h2" text="Getting started" />
 
-The first thing we will do is to create our project. To do this we must open the command console
-in the folder where we want and execute the following command:
+The first thing we will do is opening our editor in the folder of our workspace.
 
-> Warning: BeyondJS CLI commands are interactive and require a compatible console for proper functionality. Make sure to have an updated console before using them.
+<Code>code .</Code>
+
+Now, we can open the integrated terminal using `ctrl + shift + C` (or `cmd + backtick` in mac) and run
+there the following command to create our project and package:
 
 <Code>npx @beyond-js/create-package@latest</Code>
+
+> Warning: BeyondJS CLI commands are interactive and require a compatible console for proper functionality. Make sure to have an updated console before using them.
 
 This command is interactive and will request some data to define our package or project.
 The data requested are the following:
@@ -50,8 +64,6 @@ The data requested are the following:
 
 Ready! our project has been created. Next we will open our text editor in the directory
 directory where we execute the command
-
-<Code>code .</Code>
 
 When we open it we can see that we have the following structure:
 
@@ -76,11 +88,13 @@ Next, we must start <BeyondJS/>, for this we run the following command:
 
 When executed, the following message should appear in the command console:
 
-```
-Follow the link to manage your packages with the workspace:
+<Code language="shell" clipboard={false}>
+	{`Follow the link to manage your packages with the workspace:
 https://workspace.beyondjs.com?port=4000
+`}
+</Code>
 
-```
+<BeyondImage src="/images/tutorial/first-page.png" alt="your first page with BeyondJS" />
 
 Done! We can now access our project at <ELink href="http://localhost:6510/">http://localhost:6510/</ELink>.
 

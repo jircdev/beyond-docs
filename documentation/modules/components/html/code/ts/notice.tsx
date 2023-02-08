@@ -1,10 +1,11 @@
 import * as React from 'react';
-import {Link} from "@beyond/ui/link";
+import { Link } from '@beyond/ui/link';
 
-export /*bundle*/ function Notice({text, link: [href, link]}) {
-    return (
-        <div className="block__note">
-            {text} <Link href={href}>{link}</Link>
-        </div>
-    )
+export /*bundle*/ function Notice({ text, className, link: [href, link] }) {
+	const cls = `block__note${className ? ` ${className}` : ''}`;
+	return (
+		<div className={cls}>
+			{text} <Link href={href}>{link}</Link>
+		</div>
+	);
 }

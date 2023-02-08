@@ -1,4 +1,15 @@
-import { DocHeader, PreTitle, Title, BeyondJS, NextLinks, Link, Subtitle, ELink } from '@beyond/docs/components/html';
+import {
+	DocHeader,
+	PreTitle,
+	Title,
+	BeyondImage,
+	BeyondJS,
+	NextLinks,
+	Link,
+	Subtitle,
+	Info,
+	ELink,
+} from '@beyond/docs/components/html';
 import { Code, InlineCode, CodeBox } from '@beyond/docs/code';
 
 <DocHeader pretitle="Tutorial" title="Primer módulo" />
@@ -11,7 +22,7 @@ La estructura del módulo `home` es la siguiente:
     -   `controller.ts`: objeto controlador del componente, necesario para montar el WebComponent en el navegador.
     -   `views`
         -   `index.tsx`: componente react que renderiza la página.
--   `scss`: carpeta para agregar estilos al módulo.
+-   `sass`: carpeta para agregar estilos al módulo.
 -   `module.json`: archivo de configuración del módulo (donde se define el tipo de bundles y procesadores a utilizar).
 
 ¡Manos a la obra! Con la estructura clara, lo siguiente es crear el formulario de inicio de sesión y agregar algunos estilos, antes de continuar con la conexión al backend node.
@@ -19,6 +30,11 @@ La estructura del módulo `home` es la siguiente:
 <Title tag="h2" text="Creación del Formulario" />
 
 Si has trabajado con React, lo que viene es la parte que probablemente conozcas mejor, con algunas pequeñas diferencias. A continuación, editaremos nuestro archivo `index.tsx` para crear un formulario de inicio de sesión y la funcionalidad básica para actualizar el estado.
+
+<Info className="noti">
+	💡 ¡Aprovecha la eficiencia de trabajo con <BeyondJS /> que incluye Hot Module Replacement (HMR) tanto en el
+	frontend como en el backend! ¡Disfruta de la comodidad de probar mientras codificas!
+</Info>
 
 <CodeBox title="index.tsx" language="jsx">
 {`
@@ -28,7 +44,7 @@ interface IForm {
 disabled?: boolean;
 }
 
-export /*page*/
+export /*bundle*/
 function View(): JSX.Element {
     const defaultValues = {username: '', password: '', fetching: false};
     const [values, setValues] = React.useState(defaultValues);
@@ -78,7 +94,7 @@ A continuación, vamos a nuestro archivo `styles.scss` y agreguemos algo de esti
 
 <CodeBox title="styles.scss">
 {`
-.page\_\_container {
+.page__container {
   display: flex;
   padding: 20px;
   height: 100%;
@@ -150,6 +166,10 @@ Expliquemos un poco el código anterior:
 -   Agregamos estilo básico al formulario, los inputs, el botón de envío y
     para manejar un mensaje de error.
 -   Custom properties: las custom properties utilizadas son una estructura básica para el manejo de variables incluidas por BeyondJS en el [Template del proyecto](/frontend/template).
+
+##### El resultado deberia verse así:
+
+<BeyondImage src="/images/tutorial/login.jpg" alt="tutorial login with beyondjs react and websocket" />
 
 <Title tag="h3" text="Entendiendo la estructura de BeyondJS" />
 

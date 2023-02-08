@@ -1,0 +1,32 @@
+/**
+ * color-palette - Generates a palette of shades for a specified primary color
+ *
+ * @param {color} $primary-color - The primary color for the palette
+ * @param {string} $color-name - The name for the color palette
+ * @param {integer} $intensity - The base intensity for the color palette (default: 40)
+ *
+ * Usage:
+ *   @include color-palette(#38B6FF, "primary", 40);
+ */
+@mixin color-palette($primary-color, $color-name, $intensity: 40) {
+    // Set the base intensity for the color palette
+    $base-intensity: $intensity;
+
+    // Generates lighter shades of the color
+    @for $i from 1 through 10 {
+        $shade: $base-intensity + ($i * 10);
+        $shade-name: "#{$color-name}-#{$shade}";
+        #{$shade-name} {
+            background-color: lighten($primary-color, $shade);
+        }
+    }
+
+    // Generates darker shades of the color
+    @for $i from 1 through 10 {
+        $shade: $base-intensity - ($i * 10);
+        $shade-name: "#{$color-name}-#{$shade}";
+        #{$shade-name} {
+            background-color: darken($primary-color, $shade);
+        }
+    }
+}

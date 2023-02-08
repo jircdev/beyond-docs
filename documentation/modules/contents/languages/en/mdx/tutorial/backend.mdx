@@ -23,8 +23,8 @@ The command will ask for the following data:
 
 -   **subpath**: we will add "api/auth". This value corresponds to the subpath of the
     module and it is directly related to the value of the entry point "exports" in the `package.json`.
--   **about**: "Backend module to validate login".
--   **styles**: no.
+-   **type**: we will select "bridge".
+-   **About**: Descripción opcional: Lógica del backend para autenticación y API del cliente.
 -   **multilanguage**: no.
 
 Once the command is executed, we will be able to see that our module has been created in the modules/auth directory of our project.
@@ -121,7 +121,19 @@ Sounds simple, doesn't it? Here's the important part!
 When you create a bundle of type Bridge <BeyondJS/> it automatically creates the client code
 to connect to the backend and consume the provided API.
 
-Now we just need to import the bundle into our home module and integrate the validation link.
+Creating a Bridge type package in <BeyondJS/> gives you an incredible advantage: it automatically generates the client code to connect to the backend and consume its API. That easy!
+
+<BeyondJS /> also offers a seamless websocket integration. When creating a "bridge" package, the client API is generated
+with a websocket connection in an independent package that is included in the client code. This way, you can keep your
+backend code on the NodeJS server without worrying about the connection with the client. Now we just need to import the
+bundle into our home module and integrate the validation link.
+
+You can see both bundles generated in:
+
+-   <ELink href="http://localhost:6510/api/auth.js">http://localhost:6510/api/auth.js</ELink>
+-   <ELink href="http://localhost:6511/api/auth.js">http://localhost:6511/api/auth.js</ELink>
+
+> The default port for the web distribution in a web-backend project is 6510, while 6511 is the default port for the node distribution. As you know, <BeyondJS/> is a DevServer that generates the bundles and delivers them to any JavaScript runtime, including Browser, Deno, Bun, or Node.js
 
 <Title tag="h2" text="Client module integration" />
 

@@ -61,7 +61,7 @@ De esta manera, nuestra función `onSubmit` quedaría así:
 
 Con estos simples pasos, redirigirás a tus usuarios a la página de bienvenida. BeyondJS también se encarga de registrar el historial de navegación del usuario, brindando funcionalidades avanzadas de gestión más allá de las posibilidades de la API del navegador.
 
-magina tener acceso a los registros de las páginas previas en cualquier momento. BeyondJS te brinda un control total sobre la experiencia de navegación de tus usuarios, permitiéndote identificar estos registros y acceder a ellos cuando sea necesario.
+imagina tener acceso a los registros de las páginas previas en cualquier momento. BeyondJS te brinda un control total sobre la experiencia de navegación de tus usuarios, permitiéndote identificar estos registros y acceder a ellos cuando sea necesario.
 
 > <BeyondJS /> es una herramienta poderosa que provee un objeto de enrutamiento para interactuar con la API de
 > navegación. Este objeto envuelve la función pushState del navegador y agrega lógica para hacer la navegación posible
@@ -90,8 +90,8 @@ Además, hay algunos puntos adicionales que vale la pena destacar:
 -   Los módulos creados son bundles independientes y no se requieren empaquetadores para su uso
 -   Se implementó una conexión WebSocket entre cliente y servidor con una API tipada que verifica que los metodos
     y parametros pasados coincidan con su definición en el backend.
--   El comentario mágico `/\*bundle\*/` se utilizó para definir que objeto debe ser expuesto para ser consumido en otro bundle.
--   El comentario mágico `/\*actions\*/` se utilizó en el bundle de tipo bridge para definir que el objeto deberia generar
+-   El comentario mágico `/*bundle*/` se utilizó para definir que objeto debe ser expuesto para ser consumido en otro bundle.
+-   El comentario mágico `/*actions*/` se utilizó en el bundle de tipo bridge para definir que el objeto deberia generar
     una api cliente, la cúal es gestionada por <BeyondJS/> de forma automática.
 -   El código creado puede ser empaquetado para una aplicación hibrida.
 
