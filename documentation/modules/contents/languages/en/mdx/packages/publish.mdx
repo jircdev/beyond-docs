@@ -1,4 +1,24 @@
-import { Link, ELink, DocHeader, Title, Subtitle, UnderConstruction, BeyondJS } from '@beyond/docs/components/html';
+import { Link, ELink, DocHeader, Title, Subtitle, BeyondJS } from '@beyond/docs/components/html';
 import { Code, CodeBox } from '@beyond/docs/code';
 
-<UnderConstruction />
+<DocHeader pretitle="Packages" title="Publish on NPM" />
+
+To publish a package in NPM you must currently add an npm distribution in the `package.json`.
+The distribution must contain a `platforms` property with an object indicating the platforms you want to compile and the distribution associated with this platform.
+to this platform.
+
+### Example
+
+<Code>
+{`
+{
+  "name": "npm",
+  "npm": {
+    "platforms": {
+      "web": "web"
+    }
+  }
+}
+`}
+
+</Code>

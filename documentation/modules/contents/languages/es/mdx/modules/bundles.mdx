@@ -1,5 +1,13 @@
-import { NextLinks, Link, ELink, DocHeader, Title, Subtitle, BeyondJS } from "@beyond/docs/components/html";
-import { CodeBox, Code } from "@beyond/docs/code";
+import {
+	NextLinks,
+	Link,
+	ELink,
+	DocHeader,
+	Title,
+	Subtitle,
+	BeyondJS,
+} from '@beyond/docs/components/html';
+import { CodeBox, Code } from '@beyond/docs/code';
 
 <DocHeader pretitle="Modules" title="Bundles" />
 
@@ -12,20 +20,22 @@ Los bundles son definidos como propiedades del archivo `module.json`. Por ejempl
 el siguiente código define un bundle de tipo `code`
 
 <Code>
-    {`
-  "name": "icons",
-  "code": {
-    "ts": {
-      "path": "ts",
-      "files": [
-        "*"
-      ]
-    },
-    "mdx": {
-      "path: "ts/mdx",
-      "files": [
-        "*"
-      ]
+	{`
+  {
+    "name": "icons",
+    "code": {
+      "ts": {
+        "path": "ts",
+        "files": [
+          "*"
+        ]
+      },
+      "mdx": {
+        "path": "ts/mdx",
+        "files": [
+          "*"
+        ]
+      }
     }
   }
 `}
@@ -59,8 +69,8 @@ Si sólo se necesita crear código JavaScript, se genera un único archivo.
 Si, por el contrario, se necesita también código CSS, se generan dos archivos.
 
 <Title tag="h2" text="Bundles Transversales" />
-Los bundles transversales, se definen igual que el resto de bundles, pero tienen una particularidad que ofrece ventajas productivas:
-el código de un bundle transversal es compilado en un archivo único.
+Los bundles transversales, se definen igual que el resto de bundles, pero tienen una particularidad que
+ofrece ventajas productivas: el código de un bundle transversal es compilado en un archivo único.
 
 BeyondJS los ubica, integra y unifica en un único bundle o archivo final. Los bundle de tipo start son un ejemplo claro de ello, permiten al programador definir la lógica que desea sea ejecutada en el arranque de la aplicación.
 
@@ -81,4 +91,4 @@ BeyondJS los ubica, integra y unifica en un único bundle o archivo final. Los b
     requeridos en el arranque del
     aplicativo.
 
-<NextLinks items={["modules/processors", "frontend/widgets"]} />
+<NextLinks items={['modules/processors', 'frontend/widgets']} />

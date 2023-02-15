@@ -1,5 +1,13 @@
-import { NextLinks, Link, ELink, DocHeader, Title, Subtitle, BeyondJS } from "@beyond/docs/components/html";
-import { CodeBox, Code } from "@beyond/docs/code";
+import {
+	NextLinks,
+	Link,
+	ELink,
+	DocHeader,
+	Title,
+	Subtitle,
+	BeyondJS,
+} from '@beyond/docs/components/html';
+import { CodeBox, Code } from '@beyond/docs/code';
 
 <DocHeader pretitle="Modules" title="Bundles" />
 
@@ -12,20 +20,22 @@ Bundles are defined as properties of the `module.json` file. For example,
 the following code defines a bundle of type `code`.
 
 <Code>
-    {`
-  "name": "icons",
-  "code": {
-    "ts": {
-      "path": "ts",
-      "files": [
-        "*"
-      ]
-    },
-    "mdx": {
-      "path: "ts/mdx",
-      "files": [
-        "*"
-      ]
+	{`
+  {
+    "name": "icons",
+    "code": {
+      "ts": {
+        "path": "ts",
+        "files": [
+          "*"
+        ]
+      },
+      "mdx": {
+        "path": "ts/mdx",
+        "files": [
+          "*"
+        ]
+      }
     }
   }
 `}
@@ -59,8 +69,8 @@ If only JavaScript code needs to be created, a single file is generated.
 If, on the other hand, CSS code is also needed, two files are generated.
 
 <Title tag="h2" text="Traversal Bundles" />
-The transversal bundles, are defined the same as the other bundles, but have a particularity that offers productive advantages:
-the code of a traversal bundle is compiled into a single file.
+The transversal bundles, are defined the same as the other bundles, but have a particularity that offers
+productive advantages: the code of a traversal bundle is compiled into a single file.
 
 BeyondJS places, integrates and unifies them in a single bundle or final file. Start bundles are a clear example of this, allowing the programmer to define the logic to be executed at application startup.
 
@@ -82,4 +92,4 @@ BeyondJS places, integrates and unifies them in a single bundle or final file. S
     required at application start-up.
     application start-up.
 
-<NextLinks items={["modules/processors", "frontend/widgets"]} />
+<NextLinks items={['modules/processors', 'frontend/widgets']} />

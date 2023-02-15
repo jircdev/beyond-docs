@@ -26,41 +26,46 @@ del entry point `development`.
 Un ejemplo de una distribución es:
 
 <Code>
-	{` {
+	{` 
+{
     "name": "web",
     "platform": "web",
     "environment": "development",
     "ports": {
         "bundles": 3500
     }
-},
+}
 `}
 </Code>
 
 <Title id="properties" tag="h2" text="Propiedades" />
 
 -   <ObjectProperty type="string">name</ObjectProperty> Nombre identificador de la distribución.
--   <ObjectProperty type="string">platform</ObjectProperty> identificador de la plataforma que utiliza la distribución. Puede
-    ver los identificadores de plataformas en la <Link href="/platforms">sección de Plataformas</Link>
+-   <ObjectProperty type="string">platform</ObjectProperty> identificador de la plataforma que utiliza
+    la distribución.{' '}
+
+> Puede ver los identificadores de plataformas en la <Link href="/platforms">sección de Plataformas</Link>
 
 -   <ObjectProperty type="string">environment</ObjectProperty> soporta los valores `deployment` y `production`.
--   <ObjectProperty type="object">ports</ObjectProperty> recibe un objeto con las siguientes propiedades :
+-   <ObjectProperty type="object">ports</ObjectProperty> recibe un objeto con las siguientes propiedades
+    :
 
         -   <ObjectProperty type="number">bundles</ObjectProperty> puerto en el que el DevServer devolverá los bundles.
         -   <ObjectProperty type="number">http</ObjectProperty> Este puerto lo requiere <BeyondJS /> en proyectos que deban ser
             renderizados con SSR o proyectos backend que utilicen el paquete `@beyond-js/bee` para poder interactuar con el DevServer.
         -   <ObjectProperty type="number">inspect</ObjectProperty> Puerto para conectar debuggers o inspectores de código.
 
--   <ObjectProperty type="object">ts</ObjectProperty> Objeto manejado para gestionar configuraciones del compilador typescript,
-    actualmente soporta las siguientes propiedades:
+-   <ObjectProperty type="object">ts</ObjectProperty> Objeto manejado para gestionar configuraciones
+    del compilador typescript, actualmente soporta las siguientes propiedades:
 
     -   <ItemProperty type="string" optional label="compiler">
         	acepta los valores `ts` y `transpiler`.
         </ItemProperty>
 
 -   <ItemProperty type="string" optional label="backend">
-    	Esta propiedad se utiliza cuando el paquete es un proyecto que se conecta con un servicio node de tipo backend.
-    	Puedes leer más acerca de esto en la <Link href="/bridges">sección de Bridges</Link> .
+    	Esta propiedad se utiliza cuando el paquete es un proyecto que se conecta con un servicio
+    	node de tipo backend. Puedes leer más acerca de esto en la{' '}
+    	<Link href="/bridges">sección de Bridges</Link> .
     </ItemProperty>
 
 A continuación se muestran una lista de ejemplos con las configuraciones esenciales de las distribuciones para tener un mejor entendimiento

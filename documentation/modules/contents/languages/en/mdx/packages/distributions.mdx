@@ -26,40 +26,45 @@ property of the `development` entry point.
 An example of a distribution is:
 
 <Code>
-	{` {
+	{` 
+{
     "name": "web",
     "platform": "web",
     "environment": "development",
     "ports": {
         "bundles": 3500
     }
-},
+}
 `}
 </Code>
 
 <Title id="properties" tag="h2" text="Properties" />
 
 -   <ObjectProperty type="string">name</ObjectProperty> Name identifier of the distribution.
--   <ObjectProperty type="string">platform</ObjectProperty> identifier of the platform used by the distribution. You can
-    see the platform identifiers in the <Link href="/platforms">platforms section</Link>.
+-   <ObjectProperty type="string">platform</ObjectProperty> identifier of the platform used by the distribution.
+    You can see the platform identifiers in the <Link href="/platforms">platforms section</Link>.
 
--   <ObjectProperty type="string">environment</ObjectProperty> supports `deployment` and `production` values.
+-   <ObjectProperty type="string">environment</ObjectProperty> supports `deployment` and `production`
+    values.
 
-    -   <ObjectProperty type="object">ports</ObjectProperty> receives an object with the following properties :
-    -   <ObjectProperty type="number">bundles</ObjectProperty> port on which the DevServer will return bundles.
-    -   <ObjectProperty type="number">http</ObjectProperty> port to connect debuggers or code inspectors. You can read more
-        about remote inspection in <Link href="/remote-inspection">remote-inspection section.</Link>.
+    -   <ObjectProperty type="object">ports</ObjectProperty> receives an object with the following properties
+        :
+    -   <ObjectProperty type="number">bundles</ObjectProperty> port on which the DevServer will return
+        bundles.
+    -   <ObjectProperty type="number">http</ObjectProperty> port to connect debuggers or code inspectors.
 
--   <ObjectProperty type="object">ts</ObjectProperty> Object handled to manage typescript compiler configurations, currently
-    supports the following properties:
+> You can read more about remote inspection in <Link href="/remote-inspection">remote-inspection section.</Link>
+
+-   <ObjectProperty type="object">ts</ObjectProperty> Object handled to manage typescript compiler configurations,
+    currently supports the following properties:
 
     -   <ItemProperty type="string" optional label="compiler">
         	accepts `ts` and `transpiler` values.
         </ItemProperty>
 
 -   <ItemProperty type="string" optional label="backend">
-    	This property is required if the package uses a connection to a backend via websockets. You can read more about
-    	this in the <Link href="/bridges">Bridges</Link> section.
+    	This property is required if the package uses a connection to a backend via websockets. You
+    	can read more about this in the <Link href="/bridges">Bridges</Link> section.
     </ItemProperty>
 
 <Title tag="h4" text="Web Packages" />

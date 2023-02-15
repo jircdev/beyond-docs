@@ -1,4 +1,12 @@
-import { NextLinks, Link, ELink, DocHeader, Title, Subtitle, BeyondJS } from '@beyond/docs/components/html';
+import {
+	NextLinks,
+	Link,
+	ELink,
+	DocHeader,
+	Title,
+	Subtitle,
+	BeyondJS,
+} from '@beyond/docs/components/html';
 import { Code, CodeBox } from '@beyond/docs/code';
 
 <DocHeader pretitle="Basics" title="Packages" />
@@ -18,30 +26,31 @@ In summary, the package.json in BeyondJS is a fundamental file for project confi
 In addition to the common functions of a package.json, BeyondJS adds additional entry points that allow you to manage packages universally,
 define distributions, specify package paths, configure templates, set supported languages and define global project parameters.
 
-<Title tag="h2" text="Crear un paquete" />
+<Title tag="h2" text="Creating a package" />
 
-Los paquetes en <BeyondJS/> pueden crearse de tres maneras:
+Packages in <BeyondJS/> can be created in three ways:
 
--   ejecutando el comando `beyond add package` en la consola de comandos.
--   Haciendo uso del BeyondJS Workspace.
--   Manualmente.
+-   By running the `beyond add package` command in the command console
+-   Using the BeyondJS Workspace.
+-   Manually.
 
-<Title tag="h3" text="Creación usando el CLI" />
+<Title tag="h3" text="Creating using the CLI" />
 
-Para Crear un proyecto por medio del cli sólo debes ejecutar el siguiente comando:
+To Create a project using the cli you only need to execute the following command:
 
-<Code>beyond add package.</Code>
+<Code>beyond add package</Code>
 
-> Para hacer uso del CLI de <BeyondJS/> debes tener <BeyondJS/> instalado de forma global. Puedes ver todos los comandos provistos
-> en <Link href="/docs/cli">la sección del cli</Link> de esta documentación.
+> To make use of the <BeyondJS/> CLI you must have <BeyondJS/> installed globally. You can see all the commands provided
+> in <Link href="/docs/cli">the cli</Link> section of this documentation.
 
-<Title tag="h3" text="Creación usando BeyondJS Workspace" />
+<Title tag="h3" text="Creation using BeyondJS Workspace" />
 
-Puedes crear paquetes directamente desde el BeyondJS Workspace, para hacerlo debes seguir los siguientes pasos:
+You can create packages directly from the BeyondJS Workspace, to do so you must follow the steps below:
 
--   Ejecutar <BeyondJS/> en la carpeta que desees gestionar tus proyectos.
--   Acceder a <ELink href="https://workspace.beyondjs.com"> https://workspace.beyondjs.com</ELink> y crear el proyecto por medio de su interfaz gráfica.
-    Puedes leer más acerca de cómo funciona el Workspace en la <Link href="/docs/workspace">sección de BeyondJS Workspace</Link>.
+-   Run <BeyondJS/> in the folder you want to manage your projects.
+-   Access <ELink href="https://workspace.beyondjs.com"> https://workspace.beyondjs.com</ELink> and create the project through its graphical interface.
+
+> You can read more about how the Workspace works in the <Link href="/docs/workspace">BeyondJS Workspace</Link> section.
 
 <Title tag="h3" text="Manual creation" />
 
@@ -49,15 +58,17 @@ You can create the packages manually, for this you only have to create a package
 the package name.
 
 <Code name="package.json">
-	{`{
- "name": "package-name",
+	{`
+{
+    "name": "package-name",
 }`}
 </Code>
 
 In addition, you will need to create the `beyond.json` file so that the <BeyondJS/> DevServer can recognize it. The file must have the following structure
 
 <CodeBox title="beyond.json">
-	{`{
+	{`
+{
     "applications": ["./project.json"]
 }`}
 </CodeBox>
