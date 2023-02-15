@@ -1,51 +1,50 @@
-@use "./pallete";
 @mixin properties() {
-    --surface: #101625;
-    --primary: #ff8056;
-    --primary-dark: #e36152;
-    --primary-light: #ffa789;
-    --primary-accent: #e36152;
-    --text-on-primary: #fff;
+	--surface: #101625;
+	--primary: #ff8056;
+	--primary-dark: #e36152;
+	--primary-light: #ffa789;
+	--primary-accent: #e36152;
+	--text-on-primary: #fff;
 
-    --accent-color: #ffa385;
-    //secondary colors
-    --secondary: #121f36;
-    --secondary-dark: #030405;
-    --secondary-darker: #0c1525;
-    --secondary-light: #617096;
-    --secondary-accent: #8e99bb;
+	--accent-color: #ffa385;
+	//secondary colors
+	--secondary: #121f36;
+	--secondary-dark: #030405;
+	--secondary-darker: #0c1525;
+	--secondary-light: #617096;
+	--secondary-accent: #8e99bb;
 
-    --text-on-secondary: #ffffff;
-    --text-color: rgba(255, 255, 255, 0.6);
-    --text-title-color: var(--text-on-primary);
-    --text-second-color: var(--gray-dark);
+	--text-on-secondary: #ffffff;
+	--text-color: rgba(255, 255, 255, 0.6);
+	--text-title-color: var(--text-on-primary);
+	--text-second-color: var(--gray-dark);
 
-    --text-hover-color: var(--primary);
-    --bg-element: var(--secondary-dark);
-    --element-border-color: var(--gray-light);
-    --separator-color: var(--gray-lighter);
+	--text-hover-color: var(--primary);
+	--bg-element: var(--secondary-dark);
+	--element-border-color: var(--gray-light);
+	--separator-color: var(--gray-lighter);
 
-    /**
+	/**
     Nuevas
     */
-    --md-sys-color-error: #ffb4ab;
-    --error-container: #93000a;
-    --on-error: #690005;
-    --on-error-container: #ffdad6;
-    --background: #001f25;
-    --on-background: #a6eeff;
-    --surface: #001f25;
-    --on-surface: #a6eeff;
-    --surface-variant: #41474d;
-    --on-surface-variant: #c1c7ce;
-    --outline: #8b9198;
-    --inverse-on-surface: #001f25;
-    --inverse-surface: #a6eeff;
-    --inverse-primary: #006493;
-    --shadow: #000000;
-    --surface-tint: #8ccdff;
-    --outline-variant: #41474d;
-    --scrim: #000000;
+	--md-sys-color-error: #ffb4ab;
+	--error-container: #93000a;
+	--on-error: #690005;
+	--on-error-container: #ffdad6;
+	--background: #001f25;
+	--on-background: #a6eeff;
+	--surface: #001f25;
+	--on-surface: #a6eeff;
+	--surface-variant: #41474d;
+	--on-surface-variant: #c1c7ce;
+	--outline: #8b9198;
+	--inverse-on-surface: #001f25;
+	--inverse-surface: #a6eeff;
+	--inverse-primary: #006493;
+	--shadow: #000000;
+	--surface-tint: #8ccdff;
+	--outline-variant: #41474d;
+	--scrim: #000000;
 
-    @include pallete.generate(#ff8056, "primary", 40);
+	@include pallete.generate(#ff8056, 'primary', 40);
 }
