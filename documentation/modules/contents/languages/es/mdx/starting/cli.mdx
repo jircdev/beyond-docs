@@ -1,9 +1,20 @@
-import { Link, ELink, DocHeader, Title, Subtitle, BeyondJS, NextLinks } from '@beyond/docs/components/html';
+import {
+	Link,
+	ELink,
+	DocHeader,
+	Title,
+	Subtitle,
+	BeyondJS,
+	NextLinks,
+} from '@beyond/docs/components/html';
 import { Code } from '@beyond/docs/code';
 
 <DocHeader pretitle="Fundamentos" title="BeyondJS Cli" />
 
 BeyondJS provee la siguiente lista de comandos para trabajar desde la consola de tu preferencia:
+
+> Se recomienda el uso del git bash en una versioan mayor a la `5.1.16` o en su defecto el bash que provea su
+> editor de codigo favorito, en este tutorial se uso el bash que provee vscode (En caso de no tenerlo configurado consulte <ELink href="https://stackoverflow.com/questions/65438333/how-to-add-git-bash-to-vscode">este link</ELink>)
 
 <Title tag="h4" text="run" />
 
@@ -16,8 +27,8 @@ Es necesario ejecutarlo para comenzar a trabajar con <BeyondJS/>.
 ##### Parametros:
 
 -   --workspace: Es opcional. Este parametro define el puerto de conexión websocket para que el
-    <Link href="/workspace"> Workspace</Link> pueda obtener información acerca de los paquetes disponibles en el DevServer.
-    sino es pasado, <BeyondJS /> tomará por defecto el puerto 4000.
+    <Link href="/workspace"> Workspace</Link> pueda obtener información acerca de los paquetes disponibles
+    en el DevServer. sino es pasado, <BeyondJS /> tomará por defecto el puerto 4000.
 
 <Title tag="h4" text="add package" />
 
@@ -35,7 +46,7 @@ Al ejecutarlo, se abre una consola interactiva donde se pueden definir las carac
 El comando `add module` permite agregar módulos a un paquete existente. Al ejecutarlo permite definir las caracteristicas
 del mismo por medio de la consola interactiva.
 
-<Code>{`beyond add module [subpath]]`}</Code>
+<Code>{`beyond add module [subpath]`}</Code>
 
 <Title tag="h4" text="--version" />
 

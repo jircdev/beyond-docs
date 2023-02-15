@@ -1,5 +1,13 @@
-import { Link, ELink, NextLinks, DocHeader, BeyondJS, Title, Subtitle } from "@beyond/docs/components/html";
-import { Code, CodeBox } from "@beyond/docs/code";
+import {
+	Link,
+	ELink,
+	NextLinks,
+	DocHeader,
+	BeyondJS,
+	Title,
+	Subtitle,
+} from '@beyond/docs/components/html';
+import { Code, CodeBox } from '@beyond/docs/code';
 
 <DocHeader pretitle="Frontend" title="Widgets" />
 
@@ -26,8 +34,8 @@ for an entire project.
 Currently, <BeyondJS/> supports working with rendering libraries <ELink to="https://reactjs.org/">React</ELink>, <ELink to="https://vuejs.org/">Vue</ELink> and <ELink to="https://svelte.dev/">Svelte</ELink>. It also allows for easy integration of new libraries or tools.
 
 <Title tag="h2" text="Structure" />
-Widgets in <BeyondJS /> are treated as a type of <Link href="/docs/modules/bundles">Bundle</Link>, which provides the
-possibility to define the types of processors that should be included.
+Widgets in <BeyondJS /> are treated as a type of <Link href="/docs/modules/bundles">Bundle</Link>,
+which provides the possibility to define the types of processors that should be included.
 
 Their basic structure consists of the following elements:
 
@@ -48,7 +56,7 @@ By default, there are three types of Widgets in <BeyondJS />:
 <Title tag="h2" text="Creating a Widget" />
 
 In <BeyondJS />, you can create Widgets and any type of Bundle using the CLI (Command Line Interface) with the
-command `beyondadd module`. To get more information about this process, we recommend you review
+command `beyond add module`. To get more information about this process, we recommend you review
 the <Link href="/docs/cli"> command section of the documentation </Link> of <BeyondJS />.
 
 The structure of a page-type widget will be explained in detail below,
@@ -149,4 +157,4 @@ export function View(props): JSX.Element {
 
 In this example, the main component of the widget receives a set of properties that provide the developer with the necessary environment for a smooth and unobstructed development experience in projects with microfrontends of different natures that share information and project-specific elements.
 
-<NextLinks items={["widgets/creation", "widgets/page"]} />
+<NextLinks items={['widgets/creation', 'widgets/page']} />
