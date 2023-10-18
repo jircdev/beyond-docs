@@ -1,6 +1,1 @@
-[
-  "/b-ui/project.json",
-  "/documentation/project.json",
-  "/borrar/project.json",
-  "/beyond-docs-components/package.json"
-]
+["/b-ui/project.json", "/documentation/project.json", "/borrar/project.json", "/beyond-docs-components/package.json"]

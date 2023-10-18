@@ -1,5 +1,5 @@
 {
-  "applications": "projects.json",
-  "bundles": {},
-  "libraries": []
+	"packages": "projects.json",
+	"bundles": {},
+	"libraries": []
 }

@@ -1,57 +1,94 @@
-import {
-	Link,
-	ELink,
-	DocHeader,
-	Title,
-	Subtitle,
-	BeyondJS,
-	NextLinks,
-} from '@beyond/docs/components/html';
+import { Link, DocHeader, Title, Subtitle, BeyondJS, NextLinks } from '@beyond/docs/components/html';
 import { Code } from '@beyond/docs/code';
 
-<DocHeader pretitle="Fundamentos" title="BeyondJS Cli" />
+<DocHeader pretitle="Fundamentos" title="BeyondJS CLI: Guía Exhaustiva de Comandos" />
 
-BeyondJS provee la siguiente lista de comandos para trabajar desde la consola de tu preferencia:
+## Introducción
 
-> Se recomienda el uso del git bash en una versioan mayor a la `5.1.16` o en su defecto el bash que provea su
-> editor de codigo favorito, en este tutorial se uso el bash que provee vscode (En caso de no tenerlo configurado consulte <ELink href="https://stackoverflow.com/questions/65438333/how-to-add-git-bash-to-vscode">este link</ELink>)
+BeyondJS ofrece un robusto conjunto de instrucciones de línea de comandos diseñadas para agilizar tu proceso de
+desarrollo. Esta guía elabora la funcionalidad, el uso y los parámetros que cada comando acepta. Comprender estos
+comandos es crucial para trabajar de manera eficiente con BeyondJS.
 
-<Title tag="h4" text="run" />
+## Resumen de Comandos
 
-<Code>{`beyond run [--workspace port]`}</Code>
+<Title tag="h4" text="beyond run" />
 
-El comando `run` inicializa el DevServer de <BeyondJS/> y habilita la conexión con
-el <Link href="/workspace">BeyondJS Workspace</Link>, lo que facilita el proceso de depuración y gestión de paquetes.
-Es necesario ejecutarlo para comenzar a trabajar con <BeyondJS/>.
+<Code>{`beyond run [--inspector puerto]`}</Code>
 
-##### Parametros:
+#### Descripción
 
--   --workspace: Es opcional. Este parametro define el puerto de conexión websocket para que el
-    <Link href="/workspace"> Workspace</Link> pueda obtener información acerca de los paquetes disponibles
-    en el DevServer. sino es pasado, <BeyondJS /> tomará por defecto el puerto 4000.
+El comando `beyond run` inicializa el Servidor de Desarrollo de BeyondJS (DevServer) y establece una conexión con el
 
-<Title tag="h4" text="add package" />
+<Link href="/workspace"> Espacio de Trabajo de BeyondJS</Link>. Esta integración simplifica las operaciones de
+depuración y gestión de paquetes, lo que lo convierte en un comando esencial para iniciar tu trabajo con BeyondJS.
+
+#### Parámetros
+
+-   `--inspector`: Opcional. Especifica el puerto WebSocket para que el <Link href="/workspace">Espacio de
+    Trabajo</Link> pueda obtener información sobre los paquetes disponibles en el DevServer. Si se omite este parámetro,
+    el puerto por defecto será 4000.
+
+<Title tag="h4" text="beyond add package" />
 
 <Code>{`beyond add package`}</Code>
 
-"El comando add package permite crear un nuevo paquete y agregarlo al DevServer.
-Al ejecutarlo, se abre una consola interactiva donde se pueden definir las características del paquete, como por ejemplo:
+#### Descripción
 
--   Tipo de paquete: se puede elegir entre las opciones web, backend, web-backend, node, express.
-    Para obtener más información sobre los diferentes tipos de proyectos, consulta la
-    sección <Link href="/packages/create">creación de paquetes</Link>."
+El comando `beyond add package` te permite crear un nuevo paquete e integrarlo en el DevServer. Al ejecutarlo, se activa
+una consola interactiva que te invita a especificar varios atributos del paquete.
 
-<Title tag="h4" text="add module" />
+#### Opciones
 
-El comando `add module` permite agregar módulos a un paquete existente. Al ejecutarlo permite definir las caracteristicas
-del mismo por medio de la consola interactiva.
+-   `Tipo de Paquete`: Selecciona entre `web`, `backend`, `web-backend`, `node`, `express`. Para un entendimiento
+    profundo de los diferentes tipos de proyectos, consulta la sección <Link href="/packages/create">'Creación de
+    Paquetes'</Link>.
 
-<Code>{`beyond add module [subpath]`}</Code>
+<Title tag="h4" text="beyond add module" />
 
-<Title tag="h4" text="--version" />
+<Code>{`beyond add module [subruta]`}</Code>
 
-Permite verificar la versión de <BeyondJS /> instalada.
+#### Descripción
+
+El comando `beyond add module` permite la adición de módulos a un paquete existente. Al ejecutar este comando, se activa
+una consola interactiva para definir las características del módulo.
+
+<Title tag="h4" text="beyond --version" />
 
 <Code>{`beyond --version`}</Code>
+
+#### Descripción
+
+Este comando facilita la verificación de la versión de BeyondJS instalada. Devuelve el número de versión, ayudándote a
+gestionar tu entorno de manera efectiva.
+
+<Title tag="h4" text="beyond build" />
+
+<Code>{`beyond build --pkg=[nombreDelPaquete] --distribution=[tuDistribución] --logs=[booleano]`}</Code>
+
+#### Descripción
+
+El comando `beyond build` permite la compilación de un proyecto para una distribución específica. Esto es
+particularmente útil para preparar tu proyecto para un entorno de producción. Al ejecutarse, el comando compilará el
+proyecto basándose en los parámetros proporcionados y generará registros según tu preferencia.
+
+#### Parámetros
+
+-   `--pkg`: Obligatorio. Define el identificador del paquete que será compilado. Por ejemplo, si tu paquete se llama
+    "@mi/paquete", ese sería el valor que especificarías aquí.
+
+-   `--distribution`: Obligatorio. Especifica el tipo de distribución que estás construyendo, como `web`, `backend`,
+    etc. Este parámetro informa a BeyondJS sobre el contexto en el que el proyecto debe operar.
+
+-   `--logs`: Opcional. Un indicador booleano para activar o desactivar la verbosidad de los registros de construcción.
+    Si se configura como `true`, se mostrarán registros detallados en la consola. Si se configura como `false` o se
+    omite, solo se mostrará información esencial.
+
+#### Uso de Ejemplo
+
+Para compilar una distribución web de un paquete llamado "@mi/paquete" y ver registros detallados:
+
+<Code>{`beyond build --pkg=@mi/paquete --distribution=web --logs=true`}</Code>
+
+<NextLinks items={['funciones-avanzadas', 'depuración']} />
 
 <NextLinks items={['widgets', 'backend']} />

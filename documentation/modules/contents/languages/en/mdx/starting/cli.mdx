@@ -1,54 +1,90 @@
-import {
-	NextLinks,
-	Link,
-	ELink,
-	DocHeader,
-	Title,
-	Subtitle,
-	BeyondJS,
-} from '@beyond/docs/components/html';
+import { Link, DocHeader, Title, Subtitle, BeyondJS, NextLinks } from '@beyond/docs/components/html';
 import { Code } from '@beyond/docs/code';
 
-<DocHeader pretitle="Fundamentals" title="Cli Commands" />
+<DocHeader pretitle="Fundamentals" title="BeyondJS CLI: Comprehensive Command Guide" />
 
-BeyondJS provides the following list of commands for working from the console of your preference:
+## Introduction
 
-> It is recommended the use of git bash in a version greater than `5.1.16` or in its defect the bash provided by your favorite code editor, in this tutorial we use the bash provided by vscode. In this tutorial we used the bash provided by vscode (In case you don't have it configured, see <ELink href="https://stackoverflow.com/questions/65438333/how-to-add-git-bash-to-vscode">this link</ELink>).
+BeyondJS offers a robust set of command-line instructions designed to streamline your development process. This guide
+elaborates on the functionality, usage, and parameters that each command accepts. Understanding these commands is
+crucial for working efficiently with BeyondJS.
 
-<Title tag="h4" text="Run" />
+## Command Summary
 
-<Code>{`beyond run [--workspace port]`}</Code>
+<Title tag="h4" text="beyond run" />
 
-The `run` command initializes the <BeyondJS/> DevServer and enables connection with
-the <Link href="/workspace">BeyondJS Workspace</Link>, which facilitates the debugging and package
-management process. It is necessary to run it to start working with <BeyondJS/>.
+<Code>{`beyond run [--inspector port]`}</Code>
 
-##### Parametros:
+#### Description
 
--   --workspace: Optional. This parameter defines the websocket connection port so that
-    the <Link href='/workspace'>Workspace</Link> can obtain information about the packages available
-    on the DevServer. If
-    not passed, <BeyondJS /> will take the default port 4000.
+The `beyond run` command initializes the BeyondJS Development Server (DevServer) and establishes a connection with the
 
-<Title tag="h4" text="add package" />
+<Link href="/workspace"> BeyondJS Workspace</Link>. This integration simplifies debugging and package management
+operations, making it an essential command for starting your work with BeyondJS.
+
+#### Parameters
+
+-   `--inspector`: Optional. Specifies the WebSocket port for the <Link href="/workspace">Workspace</Link> to obtain
+    information about the available packages on the DevServer. If this parameter is omitted, the default port will
+    be 4000.
+
+<Title tag="h4" text="beyond add package" />
 
 <Code>{`beyond add package`}</Code>
 
-"The 'add package' command allows you to create a new package and add it to the DevServer.
-When executed, it opens an interactive console where you can define the package's features, such as:
+#### Description
 
--   Package type: you can choose from options such as web, backend, web-backend, node, express. For more information on the different project types, see the <Link href="/packages/create">Creating Packages</Link> section."
+The `beyond add package` command allows you to create a new package and integrate it into the DevServer. Upon execution,
+an interactive console is activated, inviting you to specify various package attributes.
 
-<Title tag="h4" text="add module" />
+#### Options
 
-The `add module` command allows you to add modules to an existing package. When executed, it allows you to define the module's characteristics through the interactive console.
+-   `Package Type`: Choose between `web`, `backend`, `web-backend`, `node`, `express`. For a deeper understanding of the
+    different project types, consult the <Link href="/packages/create"> 'Package Creation' </Link> section.
+
+<Title tag="h4" text="beyond add module" />
 
 <Code>{`beyond add module [subpath]`}</Code>
 
-<Title tag="h4" text="--version" />
+#### Description
 
-Allows you to check the version of <BeyondJS /> installed.
+The `beyond add module` command allows the addition of modules to an existing package. Upon executing this command, an
+interactive console is activated to define the module's characteristics.
+
+<Title tag="h4" text="beyond --version" />
 
 <Code>{`beyond --version`}</Code>
 
-<NextLinks items={['frontend/intro', 'backend']} />
+#### Description
+
+This command facilitates the verification of the installed BeyondJS version. It returns the version number, helping you
+manage your environment effectively.
+
+<Title tag="h4" text="beyond build" />
+
+<Code>{`beyond build --pkg=[packageName] --distribution=[yourDistribution] --logs=[boolean]`}</Code>
+
+#### Description
+
+The `beyond build` command allows for the compilation of a specified project distribution. This is particularly useful
+for preparing your project for a production environment. Upon execution, the command will build the project based on the
+parameters provided and output logs based on your preference.
+
+#### Parameters
+
+-   `--pkg`: Required. Defines the identifier of the package that will be compiled. For instance, if your package is
+    named "@my/package", that would be the value you specify here.
+
+-   `--distribution`: Required. Specifies the type of distribution you are building, such as `web`, `backend`, etc. This
+    parameter informs BeyondJS about the context in which the project should operate.
+
+-   `--logs`: Optional. A boolean flag to toggle the verbosity of the build logs. If set to `true`, detailed logs will
+    be shown in the console. If set to `false` or omitted, only essential information will be displayed.
+
+#### Example Usage
+
+To build a web distribution of a package named "@my/package" and view detailed logs:
+
+<Code>{`beyond build --pkg=@my/package --distribution=web --logs=true`}</Code>
+
+<NextLinks items={['widgets', 'backend']} />
