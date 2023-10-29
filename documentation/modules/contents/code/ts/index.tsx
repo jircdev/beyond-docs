@@ -6,14 +6,16 @@ import * as Contents from '@beyond/docs/contents/esp';
 import * as ContentsEn from '@beyond/docs/contents/en';
 import { useState, useEffect } from 'react';
 import { RightAside } from './views/right-aside';
-import '@beyond/docs/missing.widget';
-import '@beyond/docs/under-construction.widget';
+
+// TODO: For some reason this fails now... Maybe something changed? Beyond Maybe?
+// import '@beyond/docs/under-construction.widget';
+// import '@beyond/docs/missing.widget';
 
 export /*bundle*/ function ContentsPage({ contentId, component }) {
 	const { current: lang } = beyond.languages;
 	// const ComponentToShow = contents[contentId][lang];
 
-	const replace = (text) => text.replace(text[0], text[0].toUpperCase());
+	const replace = text => text.replace(text[0], text[0].toUpperCase());
 	const Components = lang === 'es' ? Contents : ContentsEn;
 	const name = contentId.split('-').map(replace).join('');
 	const [Component, setComponent] = useState(Components[name]);
@@ -37,15 +39,15 @@ export /*bundle*/ function ContentsPage({ contentId, component }) {
 		return () => Components.hmr.on('change', onChange);
 	}, []);
 
-	if (!Component) {
-		return (
-			<main className="page__main-container">
-				<section className="page__main-content">
-					<app-under-construction />
-				</section>
-			</main>
-		);
-	}
+	// if (!Component) {
+	// 	return (
+	// 		<main className="page__main-container">
+	// 			<section className="page__main-content">
+	// 				<app-under-construction />
+	// 			</section>
+	// 		</main>
+	// 	);
+	// }
 
 	const Content = Components[name];
 
